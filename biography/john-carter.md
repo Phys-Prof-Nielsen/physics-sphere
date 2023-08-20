@@ -1,7 +1,5 @@
 # John Carter: The Physics Professor Who Defied Gravity
 
-## Biography:
-
 Prof. John Carter has spent his life unraveling the mysteries of the universe while occasionally defying a few laws of gravity himself. Born in the heart of New York City in 1975, his fascination with the physical world was evident from an early age.
 
 John's educational journey began with a bachelor's degree in physics from MIT, where he demonstrated an uncanny knack for theoretical physics and a penchant for challenging conventional wisdom. His undergraduate years were marked not only by academic excellence but also by his participation in a unique research project. John, inspired by his love for adventure, joined an expedition to Antarctica to study the magnetic anomalies of the South Pole. There, amid icy winds and stunning vistas, he made groundbreaking observations that would later contribute to advancements in geophysics.
