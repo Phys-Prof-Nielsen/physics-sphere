@@ -1,0 +1,35 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Preample
+  chapters:
+  - file: Preample/Motivation
+  - file: Preample/Structure
+  - file: Preample/Learning_Outcomes 
+- caption: Module D1 - First Steps to Doing Science
+  chapters:
+  - file: Module-D1/Scientific_Method
+  - file: Module-D1/Scientific_Notation
+  - file: Module-D1/Significant_Figures
+  - file: Module-D1/Unit_Conversion
+  - file: Module-D1/Quiz_D1
+- caption: Module D2 - Point Particle and its Motion
+  chapters:
+  - file: Module-D2/Point_Particle
+  - file: Module-D2/Linear_Momentum_Point_Particle
+- caption: Module D3 - Linear Impulse of Point Particle
+  chapters:
+  - file: Module-D3/Linear_Impulse_Point_Particle
+- caption: Module D4 - Linear Force on Point Particle
+  chapters:
+  - file: Module-D4/Linear_Force_Point_Particle
+  - file: Module-D4/Newton_Law
+- caption: Module D5 - Linear Kinetic Energy of Point Particle
+  chapters:
+  - file: Module-D5/Linear_Kinetic_Energy_Point_Particle
+  - file: Module-D5/Linear_Work_Point_Particle
+  - file: Module-D5/Work_Energy_Point_Particle
+  
