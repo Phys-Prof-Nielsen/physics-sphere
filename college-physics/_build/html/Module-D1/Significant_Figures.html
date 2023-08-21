@@ -1,0 +1,775 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Significant Figures &#8212; A Competency Approach to Introductory Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D1/Significant_Figures';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Units and Conversion" href="Unit_Conversion.html" />
+    <link rel="prev" title="Scientific Notation" href="Scientific_Notation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    A Competency Approach to Introductory Physics: A Compendium to the D Exam
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preample</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Preample/Motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preample/Structure.html">Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preample/Learning_Outcomes.html">Learning Outcomes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D1 - First Steps to Doing Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Scientific_Method.html">The Scientific Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Scientific_Notation.html">Scientific Notation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Significant Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unit_Conversion.html">Units and Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quiz_D1.html">Module D1 Quiz</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D2 - Point Particle and its Motion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D2/Point_Particle.html">Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D2/Linear_Momentum_Point_Particle.html">Linear Momentum: Point Particle</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D3 - Linear Impulse of Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D3/Linear_Impulse_Point_Particle.html">Impulse: Point Particle</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D4 - Linear Force on Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D4/Linear_Force_Point_Particle.html">Linear Force: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D4/Newton_Law.html">Newton’s Laws: Point Particle</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D5 - Linear Kinetic Energy of Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/Linear_Kinetic_Energy_Point_Particle.html">Linear Kinetic Energy: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/Linear_Work_Point_Particle.html">Linear Work: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/Work_Energy_Point_Particle.html">Work-Energy Theorem: Point Particle</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-D1/Significant_Figures.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Module-D1/Significant_Figures.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Significant Figures</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-accuracy-and-precission">A Note on Accuracy and Precission</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-rules">General Rules</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#significant-figures-multiplication-and-division">Significant Figures: Multiplication and Division</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4">Example 4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#significant-figure-addition-and-subtraction">Significant Figure: Addition and Subtraction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5">Example 5</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rounding">Rounding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tie-breaking-rules-in-rounding">Tie-Breaking Rules in Rounding</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8">Example 8</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="significant-figures">
+<h1>Significant Figures<a class="headerlink" href="#significant-figures" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><p>Actual measurements will always have uncertainties associated with them. For example, using a common ruler (see
+below) and use the centimeter (cm) scale to measure the diameter of the moon, we would say it is a little bit more
+than 8 cm. A confident person may estimate it to be 8.2 cm. If we include the millimeter (mm) scale as well, we can
+say that the diameter is somewhere between 8.1 cm and 8.2 cm. We may say it is 8.15 cm.
+<br>
+<img src="fig1.png" width="400"></p>
+<div class="alert alert-info">
+In reporting the measurement, we should include the measurable digit (cm in the first case and mm in the second
+case) as well as the one estimated position beyond the smallest measurable digit.
+</div>
+<p>In the example above, that would imply reporting the numbers as 8.2 cm and 8.15 cm, respectively, knowing that
+our uncertainties (or errors) are in the last digits.</p>
+<p>The above measurements does not state the uncertainty explicitly but it is suggested by the significant figures used.
+For example, 8.15 cm has three significant figures (we will see the rules later) in the reported value. This measurement tells us that we are correct to the first two number (8.1 cm), while the third digit is uncertain.</p>
+<div class="alert alert-danger">
+In the following, we will learn how to deal with significant numbers in arithmetic. It is important to understand
+that the adjustment for proper number of significant figures should take place at the end of our calculations.
+We do not adjust for significant figures prior to the final results.
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a-note-on-accuracy-and-precission">
+<h2>A Note on Accuracy and Precission<a class="headerlink" href="#a-note-on-accuracy-and-precission" title="Permalink to this heading">#</a></h2>
+<p>Is our measurement above accurate or precise? In layman term, these two words are often used interchangeable, but
+in science they have very different meanings. To best illustrate the difference, let us consider the figure below.
+<br>
+<img src="fig2.png" width="600"></p>
+<p>If we circulated an object and a severely flawed ruler in the class, we would get X students measurements,
+and we would expect the measurements to be close but way off the actual value: the result would be precise but not
+accurate. On the other hand, if the ruler was a high-quality ruler, we would expect both an accurate and precise
+result.</p>
+<p>If you want to gain a better understanding of uncertainty/errors, how these errors propagate in calculations, and
+accuracy vs. precision, I recommend you take courses in experimental physics and statistics (the figure below
+is to excite those of you who are into sexy statistical language and plots).
+<br>
+<img src="fig3.png" width="400"></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-success">
+A mathematician, a physicist and a statistician went hunting for deer. When they chanced upon one buck lounging
+about, the mathematician fired first, missing the buck's nose by a few inches. The physicist then tried his hand, and
+missed the tail by a wee bit. The statistician started jumping up and down saying "We got him! We got him!"
+<br>
+<br>
+A group of physicists were at a conference being held in Central Australia. As part of the conference entertainment,
+they were taken on a tour of the famous rock, Uluru. "This rock", announced the guide,"is 50,000,004 years old."
+The physicists - always impressed by precision in measurement - were astounded. "How do you know the age of the
+rock so precisely?" "Easy!", came the reply. "When I first came here, they told me it was 50 million years old. I've
+been working here for four years now."
+</div>
+<p>It should hopefully be quite obvious that the above are jokes. Simply adding the estimated age of the rock and the
+surpassed 4 years is faulty in terms of the age of the rock. In the following, we will see how we deal with significant numbers in terms of basic arithmetic operations.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="general-rules">
+<h2>General Rules<a class="headerlink" href="#general-rules" title="Permalink to this heading">#</a></h2>
+<p>Only measured numbers and numbers derived from measured numbers are subject to determination of significant
+figures. Mathematical number such as <span class="math notranslate nohighlight">\(\pi\)</span> and <span class="math notranslate nohighlight">\(e\)</span> have no influence in the determination of significant figures. The
+same goes for exact and counted numbers such as the number of hours in a day or number of people in a room etc.</p>
+<ul class="simple">
+<li><p>All non-zero digits are significant.</p></li>
+<li><p>Zeros placed between non-zero digits are significant.</p></li>
+<li><p>Leading zeros are not significant.</p></li>
+<li><p>Trailing zeros:</p>
+<ul>
+<li><p>Significant in numbers containing decimal point.</p></li>
+<li><p>If a number does not contain a decimal, then the significance of the trailing zero(s) must be determined in terms of the context of the number. If that cannot be determined, then they should not be considered significant.</p></li>
+</ul>
+</li>
+</ul>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<section id="example-1">
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Number</p></th>
+<th class="head"><p>Significant Figures</p></th>
+<th class="head text-right"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>123.45</p></td>
+<td><p>5</p></td>
+<td class="text-right"><p>All non-zero digits are significant.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>1001.013</p></td>
+<td><p>7</p></td>
+<td class="text-right"><p>All zeros are between non-zero digits, so they are significant.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>0.0025</p></td>
+<td><p>2</p></td>
+<td class="text-right"><p>Leading zeros are not significant.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>12.500</p></td>
+<td><p>5</p></td>
+<td class="text-right"><p>Trailing zeros after the decimal point are significant.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>100</p></td>
+<td><p>1</p></td>
+<td class="text-right"><p>The trailing zeros are before the non-existent decimal point and we have no information on how they were measured or otherwise obtained. Hence, we must be conservative and assume they are not significant.</p></td>
+</tr>
+</tbody>
+</table>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="significant-figures-multiplication-and-division">
+<h2>Significant Figures: Multiplication and Division<a class="headerlink" href="#significant-figures-multiplication-and-division" title="Permalink to this heading">#</a></h2>
+<p>Significant figures in a result obtained through multiplication and/or division is equal to the number of significant
+figures of the factor with the smallest number of significant figures.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="example-2">
+<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[ 12.50 \times 2.0 = 25 \]</div>
+<p>The smallest number of significant figures of the the two factors is 2 (from the 2.0 factor), so the answer must
+be reported to no more than 2 significant figures.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="example-3">
+<h3>Example 3<a class="headerlink" href="#example-3" title="Permalink to this heading">#</a></h3>
+<p><strong>Special Case Examples: Determine Significant Figures From Context</strong></p>
+<p>Say we take two exact numbers <span class="math notranslate nohighlight">\(10\)</span> and <span class="math notranslate nohighlight">\(20\)</span> and multiply them: <span class="math notranslate nohighlight">\(10 \times 20 = 200\)</span>. Since they are both exact
+numbers, they have no influence on the number of significant numbers of the result. Hence, the result will
+be exact as well.</p>
+<p>Now, let us say that someone provided us with two measured numbers, <span class="math notranslate nohighlight">\(10\)</span> and <span class="math notranslate nohighlight">\(20\)</span>, and both were measured
+to 2 significant figures. Then the answer would be still be <span class="math notranslate nohighlight">\(200\)</span>, but now the significant figures would
+be 2.</p>
+<p>Finally, the values could have been reported as <span class="math notranslate nohighlight">\(10\)</span> with 2 significant figures and <span class="math notranslate nohighlight">\(20\)</span> measured to 1 significant
+figure. In this case, the answer is still <span class="math notranslate nohighlight">\(200\)</span>, but now reported to only 1 significant figure.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="example-4">
+<h3>Example 4<a class="headerlink" href="#example-4" title="Permalink to this heading">#</a></h3>
+<p>In this example, we will assume that the number <span class="math notranslate nohighlight">\(100\)</span> is exact.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Number</p></th>
+<th class="head"><p>Significant Figures</p></th>
+<th class="head text-right"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>100 x 2 = 200</p></td>
+<td><p>1</p></td>
+<td class="text-right"><p>2 has one significant figure.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>100 x 2.0 = 200</p></td>
+<td><p>2</p></td>
+<td class="text-right"><p>2.0 has two significant figures.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>100 x 2.00 = 200</p></td>
+<td><p>3</p></td>
+<td class="text-right"><p>2.00 has three significant figures.</p></td>
+</tr>
+</tbody>
+</table>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="significant-figure-addition-and-subtraction">
+<h2>Significant Figure: Addition and Subtraction<a class="headerlink" href="#significant-figure-addition-and-subtraction" title="Permalink to this heading">#</a></h2>
+<p>In this case, it is not the number of significant figures in the terms that matter, but instead it is the location of the significant figures. The calculated result should be reported to the location of the least significant decimal point.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="example-5">
+<h3>Example 5<a class="headerlink" href="#example-5" title="Permalink to this heading">#</a></h3>
+<p>Which one is correct?
+$<span class="math notranslate nohighlight">\( 12.1 + 7.22 + 8.300 = 27.620 \)</span><span class="math notranslate nohighlight">\(
+or 
+\)</span><span class="math notranslate nohighlight">\( 12.1 + 7.22 + 8.300 = 27.6 \)</span>$</p>
+<p>We can add <b>leading zeros</b> to the last two numbers without changing the significance
+of these numbers: <span class="math notranslate nohighlight">\(7.22 \rightarrow 07.22\)</span> and <span class="math notranslate nohighlight">\(8.300 \rightarrow 08.300\)</span>. However, we cannot add <b>trailing zeros</b> to <span class="math notranslate nohighlight">\(12.1\)</span> and <span class="math notranslate nohighlight">\(7.22\)</span> without changing the significance of the numbers! Hence, our answer must be <span class="math notranslate nohighlight">\(27.6\)</span></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="rounding">
+<h2>Rounding<a class="headerlink" href="#rounding" title="Permalink to this heading">#</a></h2>
+<p>Although this is known to the most of us (I hope), let us take an example to illustrate the concept.</p>
+<p>Let us round the number 12.5678 to four significant figures. The number to the right of “6” is not significant and
+since it is greater than 5, we add one to the “6” to obtain <span class="math notranslate nohighlight">\(12.57\)</span> as our answer.</p>
+<p>We are custom to the rule that if the number to the right is greater than 5 or if it is 5 followed by a non-zero digit
+then we add 1 to round up. If it is less than 5, then we leave it number as is.</p>
+<section id="tie-breaking-rules-in-rounding">
+<h3>Tie-Breaking Rules in Rounding<a class="headerlink" href="#tie-breaking-rules-in-rounding" title="Permalink to this heading">#</a></h3>
+<p>In the above example, if we wanted the number rounded to 2 significant figures,
+then it would 13 according to the above standard rule.</p>
+<p>However, if the number was 12.5 instead, and we still wanted it to 2 significant figures, then we need a tie-break rule. The most common rule is known as “round half up” and it is the rule we will stick to in this class. Under this rule, 12.5 is rounded to 13 whereas -12.5 is rounded to -12.
+The last result reveals a common mistake that most people unaware of rounding schemes do, as they would round
+-12.5 to -13 instead of -12.</p>
+<p>Other tie-breaking rules exists such as: round-half down, round half toward/away zero, and round half to even/odd,
+and stochastic rounding. If you are into computer science, you may have heard of functions such as floor/ceil etc. for
+rounding numbers. The <em>IEEE Standard for Floating-Point Arithmetic</em> use the round to half even rounding scheme.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="example-8">
+<h3>Example 8<a class="headerlink" href="#example-8" title="Permalink to this heading">#</a></h3>
+<p>Let us try the scientific notation on the ambiguous numbers that we saw earlier in example 4.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Number</p></th>
+<th class="head"><p>Significant Figures</p></th>
+<th class="head text-right"><p>Scientific Notation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>100 x 2 = 200</p></td>
+<td><p>1</p></td>
+<td class="text-right"><p>2 x 10<span class="math notranslate nohighlight">\(^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>100 x 2.0 = 200</p></td>
+<td><p>2</p></td>
+<td class="text-right"><p>2.0 x 10<span class="math notranslate nohighlight">\(^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>100 x 2.00 = 200</p></td>
+<td><p>3</p></td>
+<td class="text-right"><p>2.00 x 10<span class="math notranslate nohighlight">\(^2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>We can see that the leading factor (the coeffcient) shows the correct number of significant numbers and the
+ambiguity is gone.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><p style="color:red">Representing numbers in scientific notation removes the ambiguity that may occur in communicating numbers where the number of significant figures may be ambiguous.
+Scientific notation rocks! If we can just get the rest of the 99.99% of the worlds population to use this notation we
+would be better off!</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Module-D1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Scientific_Notation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Scientific Notation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Unit_Conversion.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Units and Conversion</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-accuracy-and-precission">A Note on Accuracy and Precission</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-rules">General Rules</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#significant-figures-multiplication-and-division">Significant Figures: Multiplication and Division</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4">Example 4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#significant-figure-addition-and-subtraction">Significant Figure: Addition and Subtraction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5">Example 5</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rounding">Rounding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tie-breaking-rules-in-rounding">Tie-Breaking Rules in Rounding</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8">Example 8</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kim Nielsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
