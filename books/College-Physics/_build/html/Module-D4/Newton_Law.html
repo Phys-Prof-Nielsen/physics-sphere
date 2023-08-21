@@ -1,0 +1,613 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Newton’s Laws: Point Particle &#8212; A Competency Approach to Introductory Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D4/Newton_Law';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Linear Kinetic Energy: Point Particle" href="../Module-D5/Linear_Kinetic_Energy_Point_Particle.html" />
+    <link rel="prev" title="Linear Force: Point Particle" href="Linear_Force_Point_Particle.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    A Competency Approach to Introductory Physics: A Compendium to the D Exam
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preample</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Preample/Motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preample/Structure.html">Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preample/Learning_Outcomes.html">Learning Outcomes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D1 - First Steps to Doing Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/Scientific_Method.html">The Scientific Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/Scientific_Notation.html">Scientific Notation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/Significant_Figures.html">Significant Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/Unit_Conversion.html">Units and Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/Quiz_D1.html">Module D1 Quiz</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D2 - Point Particle and its Motion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D2/Point_Particle.html">Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D2/Linear_Momentum_Point_Particle.html">Linear Momentum: Point Particle</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D3 - Linear Impulse of Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D3/Linear_Impulse_Point_Particle.html">Impulse: Point Particle</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D4 - Linear Force on Point Particle</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Linear_Force_Point_Particle.html">Linear Force: Point Particle</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Newton’s Laws: Point Particle</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D5 - Linear Kinetic Energy of Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/Linear_Kinetic_Energy_Point_Particle.html">Linear Kinetic Energy: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/Linear_Work_Point_Particle.html">Linear Work: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/Work_Energy_Point_Particle.html">Work-Energy Theorem: Point Particle</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-D4/Newton_Law.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Module-D4/Newton_Law.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Newton’s Laws: Point Particle</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-first-two-laws-point-particle">1. Newton’s First Two Laws:  Point Particle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-third-law">2. Newton’s Third Law</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="newton-s-laws-point-particle">
+<h1>Newton’s Laws: Point Particle<a class="headerlink" href="#newton-s-laws-point-particle" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="newton-s-first-two-laws-point-particle">
+<h2>1. Newton’s First Two Laws:  Point Particle<a class="headerlink" href="#newton-s-first-two-laws-point-particle" title="Permalink to this heading">#</a></h2>
+<p>We can proceed to write the relationship between the net force (cause) and the change in momentum (effect) in a form that is most likely more familiar to you, but also simplified due to certain assumptions. We will start with the <b>Impulse-Momentum Theorem</b> where we introduced the concept of net average force (I will omit the “av” subscript now with the understanding that we are dealing with an average force):</p>
+<div class="math notranslate nohighlight">
+\[ \Delta p_x = f_{{net}_x}\Delta t \]</div>
+<p>and solve for the force:</p>
+<div class="math notranslate nohighlight">
+\[ f_{{net}_x} = \frac{\Delta p_x}{\Delta t} \]</div>
+<p>We will now manipulate this equation according to the rules of algebra. Writing the momentum in terms of mass and velocity:</p>
+<div class="math notranslate nohighlight">
+\[ f_{{net}_x} = \frac{\Delta (mv_x)}{\Delta t} \]</div>
+<p>and write out the difference in the numerator:</p>
+<div class="math notranslate nohighlight">
+\[ f_{{net}_x} = \frac{mv_{x_f} - mv_{x_i}}{\Delta t}\]</div>
+<p>Here, we do not need to have a subscript on the mass since a change in mass makes no sense for a point particle.
+If we follow the logic that a point particle have constant mass (or we can make the assumption that mass is constant), then this reduces to</p>
+<div class="math notranslate nohighlight">
+\[ f_{{net}_x} = m\frac{\left(v_{x_f} - v_{x_i}\right)}{\Delta t} = m\frac{\Delta v_x}{\Delta t}\]</div>
+<p>The fraction <span class="math notranslate nohighlight">\(\frac{\Delta v_x}{\Delta t}\)</span> is representing <b>the rate of change of velocity</b> and is termed the <b>acceleration</b> of the object. With that in mind and let <span class="math notranslate nohighlight">\(a_x\)</span> represent the acceleration, we get</p>
+<div class="alert alert-success">
+<b>Newtons 2nd Law (N2)</b>
+<div class="math notranslate nohighlight">
+\[ f_{{net}_x} = ma_x \tag{1}\]</div>
+</div>
+<p><b>which is the most famous version of Newton’s 2nd law, but it only applies to a point particle with constant mass</b>.</p>
+<p>Another common way of writing Newton’s second law is</p>
+<div class="math notranslate nohighlight">
+\[ \sum f_x = ma_x \]</div>
+<div class="alert alert-danger">
+The acceleration is calculated over a time interval $\Delta t$ based on to velocities. However, we do not know the <b>instantaneous</b> acceleration at a given time during the time interval. Instead, we can only say something about the <b>average</b> acceleration across the interval. Similarly, the force is the <b>average</b> net force acting on the particle during this time interval. To gain knowledge of the instantaneous acceleration and force, we must use calculus.
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
+<p><b>Problem</b>:
+A particle of mass 0.5 kg is subject to a net average force according to <span class="math notranslate nohighlight">\(F_{x,net} = +80.0\)</span> N. The particle is initially moving with a velocity of +2.0 m/s in the positive x-direction.
+<ol>
+<li> Find the average acceleration of the particle during the time period from t = 0 s to t = 5 s.
+<li> What is the final velocity of the particle?
+<li> What is the final speed of the particle?
+<li> What is the instantaenous acceleration at <span class="math notranslate nohighlight">\(t = 3.0\)</span> s?
+</ol></p>
+<p><b>Methodology</b>:
+Using the force-acceleration version of Newton’s 2nd law, we apply a plug and chuck approch to find the acceleration. From the acceleration, we can obtain the final velocity as we are given the elapsed time and the initial velocity. The speed is simply the magnitude of the velocity since we are restricted to 1D motion. The last question is a conceptual question as we cannot tell anything about the instantaneous acceleration with the information given.</p>
+<p><b>Solution</b>:<br>
+Part (1)<br>
+Using Newton’s 2nd law (N2), we obtain for the acceleration (dropping the <i>net</i> subscript):</li></p>
+<div class="math notranslate nohighlight">
+\[ a_x = \frac{f_x}{m} = \frac{+80.0}{0.5} = 160~\textrm{m/s}^2\]</div>
+<p>Part (2)<br>
+Using the definition of acceleration, we have</p>
+<div class="math notranslate nohighlight">
+\[a_x = \frac{\Delta v_x}{\Delta t} = \frac{v_{2x} - v_{1x}}{\Delta t} \]</div>
+<p>Solving for the final velocity (state 2 or event 2):</p>
+<div class="math notranslate nohighlight">
+\[ v_{2x} = v_{1x} + a_x \Delta t \]</div>
+<p>Now we insert our numbers and obtain:
+$<span class="math notranslate nohighlight">\( v_{2x} = (+2.0) + (160)(5) = +802~\textrm{m/s} \)</span>$</p>
+<p>Part (3)<br>
+Since we are moving in a straight line in 1D, the speed is simply the magnitude of the velocity:</p>
+<div class="math notranslate nohighlight">
+\[ v = 802~\textrm{m/s} \]</div>
+<p>Part (4)<br>
+We would have to use calculus and have more information than given to say something about the instantaneous acceleration.</p>
+<p><b>Answers</b>:
+While we have calculated the answers, we have not considered the levels of significant figures to provide the answers. As provided, we assume the times are exact, while the mass is given to 1 significant figure. Hence, the solutions should also be given to 1 significant figure as they are obtained through multiplication/division of the mass.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\require{color}
+\colorbox{lightgreen}{\(a_x = 200~\textrm{m/s}^2\)}\\
+\colorbox{lightgreen}{\(v_{2x} = +800~\textrm{m/s}\)}\\
+\colorbox{lightgreen}{\(v = 800~\textrm{m/s}\)}\\
+\colorbox{lightgreen}{\(\textrm{Can't tell}\)}
+\end{align*}\]</div>
+<p><b>Evaluation</b>:
+In this problem, we have to be careful with the significant figures. Although we can’t say anything about the instantaneous acceleration at <span class="math notranslate nohighlight">\(t = 3\)</span> s, we know that the average acceleration between <span class="math notranslate nohighlight">\(t = 0\)</span> s and <span class="math notranslate nohighlight">\(t = 5\)</span> is <span class="math notranslate nohighlight">\(a_x = 200~\textrm{m/s}^2\)</span>. Given that information, our best guess (assuming a constant profile) would be<span class="math notranslate nohighlight">\(a_x = 200~\textrm{m/s}^2\)</span>.</p>
+<hr style="height:2px"></section>
+</section>
+<section id="newton-s-third-law">
+<h2>2. Newton’s Third Law<a class="headerlink" href="#newton-s-third-law" title="Permalink to this heading">#</a></h2>
+<p>Newton’s third law is known as the <b>law of action and re-action</b> and details how individual forces acting as pairs on on separate interacting objects relate. We will postpone this law until PHASE C, where we will discuss individual forces from interactions.</p>
+<hr style="height:2px"></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Module-D4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Linear_Force_Point_Particle.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Linear Force: Point Particle</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Module-D5/Linear_Kinetic_Energy_Point_Particle.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Linear Kinetic Energy: Point Particle</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-first-two-laws-point-particle">1. Newton’s First Two Laws:  Point Particle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-third-law">2. Newton’s Third Law</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kim Nielsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
