@@ -1,0 +1,28 @@
+[
+    {
+        "question": "Which answer is appropriate scientific notion for 334.57",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "3.3457E2",
+                "correct": true,
+                "feedback": "You got this!."            
+            },
+            {
+                "answer": "33.4E1",
+                "correct": false,
+                "feedback": "What a pity! The number to the left of the decimal point must be between 1-9."               
+            },
+            {
+                "answer": "0.33457E3",
+                "correct": false,
+                "feedback": "Aww! Close, but the leading number must be between 1 and 9."                
+            },
+            {
+                "answer": "3.34E2",
+                "correct": false,
+                "feedback": "That sucks! The number to the left of the decimal point must be between 1-9."                 
+            }
+        ]
+    }
+]

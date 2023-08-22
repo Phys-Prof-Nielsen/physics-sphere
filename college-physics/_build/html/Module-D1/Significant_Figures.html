@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Significant Figures &#8212; A Competency Approach to Introductory Physics</title>
+    <title>D1.3 Significant Figures &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Units and Conversion" href="Unit_Conversion.html" />
-    <link rel="prev" title="Scientific Notation" href="Scientific_Notation.html" />
+    <link rel="prev" title="D1.2 Scientific Notation" href="Scientific_Notation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,9 +166,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D1 - First Steps to Doing Science</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Scientific_Method.html">The Scientific Method</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Scientific_Notation.html">Scientific Notation</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Significant Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Scientific_Method.html">D1.1 The Scientific Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Scientific_Notation.html">D1.2 Scientific Notation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">D1.3 Significant Figures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Unit_Conversion.html">Units and Conversion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Quiz_D1.html">Module D1 Quiz</a></li>
 </ul>
@@ -374,7 +374,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Significant Figures</h1>
+    <h1>D1.3 Significant Figures</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -384,26 +384,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-accuracy-and-precission">A Note on Accuracy and Precission</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-rules">General Rules</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#significant-figures-multiplication-and-division">Significant Figures: Multiplication and Division</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4">Example 4</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#significant-figure-addition-and-subtraction">Significant Figure: Addition and Subtraction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5">Example 5</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rounding">Rounding</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-1-motivation">D1.3.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-accuracy-and-precission">1.3.2 A Note on Accuracy and Precission</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-3-general-rules">D1.3.3 General Rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-4-significant-figures-multiplication-and-division">D1.3.4 Significant Figures: Multiplication and Division</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-1-3-5-significant-figure-addition-and-subtraction">D.1.3.5 Significant Figure: Addition and Subtraction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-1-3-6-rounding">D.1.3.6 Rounding</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tie-breaking-rules-in-rounding">Tie-Breaking Rules in Rounding</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8">Example 8</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-7-scientific-notation-to-the-rescue">D1.3.7 Scientific Notation to the Rescue</a></li>
 </ul>
             </nav>
         </div>
@@ -415,9 +405,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="significant-figures">
-<h1>Significant Figures<a class="headerlink" href="#significant-figures" title="Permalink to this heading">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><p>Actual measurements will always have uncertainties associated with them. For example, using a common ruler (see
+  <section class="tex2jax_ignore mathjax_ignore" id="d1-3-significant-figures">
+<h1>D1.3 Significant Figures<a class="headerlink" href="#d1-3-significant-figures" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d1-3-1-motivation">
+<h2>D1.3.1 Motivation<a class="headerlink" href="#d1-3-1-motivation" title="Permalink to this heading">#</a></h2>
+<p>Actual measurements will always have uncertainties associated with them. For example, using a common ruler (see
 below) and use the centimeter (cm) scale to measure the diameter of the moon, we would say it is a little bit more
 than 8 cm. A confident person may estimate it to be 8.2 cm. If we include the millimeter (mm) scale as well, we can
 say that the diameter is somewhere between 8.1 cm and 8.2 cm. We may say it is 8.15 cm.
@@ -436,8 +428,9 @@ In the following, we will learn how to deal with significant numbers in arithmet
 that the adjustment for proper number of significant figures should take place at the end of our calculations.
 We do not adjust for significant figures prior to the final results.
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a-note-on-accuracy-and-precission">
-<h2>A Note on Accuracy and Precission<a class="headerlink" href="#a-note-on-accuracy-and-precission" title="Permalink to this heading">#</a></h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="a-note-on-accuracy-and-precission">
+<h2>1.3.2 A Note on Accuracy and Precission<a class="headerlink" href="#a-note-on-accuracy-and-precission" title="Permalink to this heading">#</a></h2>
 <p>Is our measurement above accurate or precise? In layman term, these two words are often used interchangeable, but
 in science they have very different meanings. To best illustrate the difference, let us consider the figure below.
 <br>
@@ -450,7 +443,8 @@ result.</p>
 accuracy vs. precision, I recommend you take courses in experimental physics and statistics (the figure below
 is to excite those of you who are into sexy statistical language and plots).
 <br>
-<img src="fig3.png" width="400"></p>
+<img src="fig3.png" width="400">
+<a class="reference external" href="https://en.wikipedia.org/wiki/Accuracy_and_precision">From Wikipedia: Accuracy and precision</a></p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-success">
 A mathematician, a physicist and a statistician went hunting for deer. When they chanced upon one buck lounging
 about, the mathematician fired first, missing the buck's nose by a few inches. The physicist then tried his hand, and
@@ -466,8 +460,8 @@ been working here for four years now."
 <p>It should hopefully be quite obvious that the above are jokes. Simply adding the estimated age of the rock and the
 surpassed 4 years is faulty in terms of the age of the rock. In the following, we will see how we deal with significant numbers in terms of basic arithmetic operations.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="general-rules">
-<h2>General Rules<a class="headerlink" href="#general-rules" title="Permalink to this heading">#</a></h2>
+<section id="d1-3-3-general-rules">
+<h2>D1.3.3 General Rules<a class="headerlink" href="#d1-3-3-general-rules" title="Permalink to this heading">#</a></h2>
 <p>Only measured numbers and numbers derived from measured numbers are subject to determination of significant
 figures. Mathematical number such as <span class="math notranslate nohighlight">\(\pi\)</span> and <span class="math notranslate nohighlight">\(e\)</span> have no influence in the determination of significant figures. The
 same goes for exact and counted numbers such as the number of hours in a day or number of people in a room etc.</p>
@@ -483,8 +477,10 @@ same goes for exact and counted numbers such as the number of hours in a day or 
 </li>
 </ul>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-<section id="example-1">
-<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h3>
+<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
+<header>
+<h3> Example 1</h3>
+    </header>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Number</p></th>
@@ -515,21 +511,25 @@ same goes for exact and counted numbers such as the number of hours in a day or 
 </tr>
 </tbody>
 </table>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-</section>
-<section id="significant-figures-multiplication-and-division">
-<h2>Significant Figures: Multiplication and Division<a class="headerlink" href="#significant-figures-multiplication-and-division" title="Permalink to this heading">#</a></h2>
+<section id="d1-3-4-significant-figures-multiplication-and-division">
+<h2>D1.3.4 Significant Figures: Multiplication and Division<a class="headerlink" href="#d1-3-4-significant-figures-multiplication-and-division" title="Permalink to this heading">#</a></h2>
 <p>Significant figures in a result obtained through multiplication and/or division is equal to the number of significant
 figures of the factor with the smallest number of significant figures.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="example-2">
-<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this heading">#</a></h3>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
+<header>
+<h3> Example 2</h3>
+    </header>
 <div class="math notranslate nohighlight">
 \[ 12.50 \times 2.0 = 25 \]</div>
 <p>The smallest number of significant figures of the the two factors is 2 (from the 2.0 factor), so the answer must
 be reported to no more than 2 significant figures.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="example-3">
-<h3>Example 3<a class="headerlink" href="#example-3" title="Permalink to this heading">#</a></h3>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
+<header>
+<h3> Example 3</h3>
+    </header>
 <p><strong>Special Case Examples: Determine Significant Figures From Context</strong></p>
 <p>Say we take two exact numbers <span class="math notranslate nohighlight">\(10\)</span> and <span class="math notranslate nohighlight">\(20\)</span> and multiply them: <span class="math notranslate nohighlight">\(10 \times 20 = 200\)</span>. Since they are both exact
 numbers, they have no influence on the number of significant numbers of the result. Hence, the result will
@@ -539,9 +539,11 @@ to 2 significant figures. Then the answer would be still be <span class="math no
 be 2.</p>
 <p>Finally, the values could have been reported as <span class="math notranslate nohighlight">\(10\)</span> with 2 significant figures and <span class="math notranslate nohighlight">\(20\)</span> measured to 1 significant
 figure. In this case, the answer is still <span class="math notranslate nohighlight">\(200\)</span>, but now reported to only 1 significant figure.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="example-4">
-<h3>Example 4<a class="headerlink" href="#example-4" title="Permalink to this heading">#</a></h3>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
+<header>
+<h3> Example 4</h3>
+    </header>
 <p>In this example, we will assume that the number <span class="math notranslate nohighlight">\(100\)</span> is exact.</p>
 <table class="table">
 <thead>
@@ -565,23 +567,28 @@ figure. In this case, the answer is still <span class="math notranslate nohighli
 </tr>
 </tbody>
 </table>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-</section>
-<section id="significant-figure-addition-and-subtraction">
-<h2>Significant Figure: Addition and Subtraction<a class="headerlink" href="#significant-figure-addition-and-subtraction" title="Permalink to this heading">#</a></h2>
+<section id="d-1-3-5-significant-figure-addition-and-subtraction">
+<h2>D.1.3.5 Significant Figure: Addition and Subtraction<a class="headerlink" href="#d-1-3-5-significant-figure-addition-and-subtraction" title="Permalink to this heading">#</a></h2>
 <p>In this case, it is not the number of significant figures in the terms that matter, but instead it is the location of the significant figures. The calculated result should be reported to the location of the least significant decimal point.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="example-5">
-<h3>Example 5<a class="headerlink" href="#example-5" title="Permalink to this heading">#</a></h3>
-<p>Which one is correct?
-$<span class="math notranslate nohighlight">\( 12.1 + 7.22 + 8.300 = 27.620 \)</span><span class="math notranslate nohighlight">\(
-or 
-\)</span><span class="math notranslate nohighlight">\( 12.1 + 7.22 + 8.300 = 27.6 \)</span>$</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
+<header>
+<h3> Example 5</h3>
+    </header>
+<p>Which one is correct?<br></p>
+<div class="math notranslate nohighlight">
+\[ 12.1 + 7.22 + 8.300 = 27.620 \]</div>
+<p>or
+<br></p>
+<div class="math notranslate nohighlight">
+\[ 12.1 + 7.22 + 8.300 = 27.6 \]</div>
 <p>We can add <b>leading zeros</b> to the last two numbers without changing the significance
-of these numbers: <span class="math notranslate nohighlight">\(7.22 \rightarrow 07.22\)</span> and <span class="math notranslate nohighlight">\(8.300 \rightarrow 08.300\)</span>. However, we cannot add <b>trailing zeros</b> to <span class="math notranslate nohighlight">\(12.1\)</span> and <span class="math notranslate nohighlight">\(7.22\)</span> without changing the significance of the numbers! Hence, our answer must be <span class="math notranslate nohighlight">\(27.6\)</span></p>
+of these numbers: <span class="math notranslate nohighlight">\(7.22 \rightarrow 07.22\)</span> and <span class="math notranslate nohighlight">\(8.300 \rightarrow 08.300\)</span>. However, we cannot add <b>trailing zeros</b> to <span class="math notranslate nohighlight">\(12.1\)</span> and <span class="math notranslate nohighlight">\(7.22\)</span> without changing the significance of the numbers! Hence, our answer must be <span class="math notranslate nohighlight">\(27.6\)</span> since 12.1 is only reported to the tenth decimal place.</p>
+<div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-</section>
-<section id="rounding">
-<h2>Rounding<a class="headerlink" href="#rounding" title="Permalink to this heading">#</a></h2>
+<section id="d-1-3-6-rounding">
+<h2>D.1.3.6 Rounding<a class="headerlink" href="#d-1-3-6-rounding" title="Permalink to this heading">#</a></h2>
 <p>Although this is known to the most of us (I hope), let us take an example to illustrate the concept.</p>
 <p>Let us round the number 12.5678 to four significant figures. The number to the right of “6” is not significant and
 since it is greater than 5, we add one to the “6” to obtain <span class="math notranslate nohighlight">\(12.57\)</span> as our answer.</p>
@@ -598,9 +605,15 @@ The last result reveals a common mistake that most people unaware of rounding sc
 and stochastic rounding. If you are into computer science, you may have heard of functions such as floor/ceil etc. for
 rounding numbers. The <em>IEEE Standard for Floating-Point Arithmetic</em> use the round to half even rounding scheme.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="example-8">
-<h3>Example 8<a class="headerlink" href="#example-8" title="Permalink to this heading">#</a></h3>
-<p>Let us try the scientific notation on the ambiguous numbers that we saw earlier in example 4.</p>
+</section>
+<section id="d1-3-7-scientific-notation-to-the-rescue">
+<h2>D1.3.7 Scientific Notation to the Rescue<a class="headerlink" href="#d1-3-7-scientific-notation-to-the-rescue" title="Permalink to this heading">#</a></h2>
+<p>We saw in Example 4 how a number with different significant figures can have the same representation and all information about of its significance is lost withouth knowing the context. Scientif notation is the representation of a number that allows us to represent both number and significant figures at once.</p>
+<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
+<header>
+<h3> Example 6</h3>
+    </header>
+Let us try the scientific notation on the ambiguous numbers that we saw earlier in example 4.
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Number</p></th>
@@ -625,11 +638,11 @@ rounding numbers. The <em>IEEE Standard for Floating-Point Arithmetic</em> use t
 </table>
 <p>We can see that the leading factor (the coeffcient) shows the correct number of significant numbers and the
 ambiguity is gone.</p>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><p style="color:red">Representing numbers in scientific notation removes the ambiguity that may occur in communicating numbers where the number of significant figures may be ambiguous.
 Scientific notation rocks! If we can just get the rest of the 99.99% of the worlds population to use this notation we
 would be better off!</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -669,7 +682,7 @@ would be better off!</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Scientific Notation</p>
+        <p class="prev-next-title">D1.2 Scientific Notation</p>
       </div>
     </a>
     <a class="right-next"
@@ -699,26 +712,16 @@ would be better off!</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-accuracy-and-precission">A Note on Accuracy and Precission</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-rules">General Rules</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#significant-figures-multiplication-and-division">Significant Figures: Multiplication and Division</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4">Example 4</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#significant-figure-addition-and-subtraction">Significant Figure: Addition and Subtraction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5">Example 5</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rounding">Rounding</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-1-motivation">D1.3.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-accuracy-and-precission">1.3.2 A Note on Accuracy and Precission</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-3-general-rules">D1.3.3 General Rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-4-significant-figures-multiplication-and-division">D1.3.4 Significant Figures: Multiplication and Division</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-1-3-5-significant-figure-addition-and-subtraction">D.1.3.5 Significant Figure: Addition and Subtraction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-1-3-6-rounding">D.1.3.6 Rounding</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tie-breaking-rules-in-rounding">Tie-Breaking Rules in Rounding</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8">Example 8</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-7-scientific-notation-to-the-rescue">D1.3.7 Scientific Notation to the Rescue</a></li>
 </ul>
   </nav></div>
 
