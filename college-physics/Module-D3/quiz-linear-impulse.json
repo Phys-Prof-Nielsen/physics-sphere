@@ -68,7 +68,7 @@
         ]
     },
     {
-        "question": "A 1.5 kg particle is traveling at a velocity of -2.0 m/s initially. Some time later, it is traveling at -0.5 m/s. The impulse was?",
+        "question": "A 1.5 kg particle is traveling at a velocity of -2.0 m/s initially. Some time later, it is traveling at -0.5 m/s. The impulse was (in kgm/s)?",
         "type": "numeric",
         "answers": [
             {
