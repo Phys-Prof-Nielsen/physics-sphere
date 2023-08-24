@@ -15,7 +15,7 @@ parts:
   - file: Module-D1/Scientific_Notation
   - file: Module-D1/Significant_Figures
   - file: Module-D1/Unit_Conversion
-  - file: Module-D1/Quiz_D1
+  - file: Module-D1/problemsD1
 - caption: Module D2 - Point Particle and its Motion
   chapters:
   - file: Module-D2/Point_Particle
