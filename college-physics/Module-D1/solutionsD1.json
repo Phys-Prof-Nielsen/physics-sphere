@@ -1,6 +1,6 @@
 [
     {
-        "question": "Problem D1.1: Earth's radius",
+        "question": "Problem D1.1.1: Earth's radius",
         "type": "numeric",
         "answers": [
             {
@@ -30,7 +30,7 @@
         ]
     },
     {
-        "question": "Problem D1.2: Speed of sound",
+        "question": "Problem D1.1.2: Speed of sound",
         "type": "numeric",
         "answers": [
             {
@@ -60,7 +60,7 @@
         ]
     },
     {
-        "question": "Problem D1.3: Acceleration of gravity on top of Mt. Everest",
+        "question": "Problem D1.1.3: Acceleration of gravity on top of Mt. Everest",
         "type": "numeric",
         "answers": [
             {
@@ -90,7 +90,7 @@
         ]
     },
     {
-        "question": "Problem D1.4: Density of water",
+        "question": "Problem D1.1.4: Density of water",
         "type": "numeric",
         "answers": [
             {
@@ -120,7 +120,7 @@
         ]
     },
     {
-        "question": "Problem D2: Balloon Volume",
+        "question": "Problem D1.2: Balloon Volume",
         "type": "numeric",
         "answers": [
             {
@@ -150,7 +150,7 @@
         ]
     },
     {
-        "question": "Problem D2: Balloon Surface Area",
+        "question": "Problem D1.2: Balloon Surface Area",
         "type": "numeric",
         "answers": [
             {
@@ -180,7 +180,7 @@
         ]
     },
     {
-        "question": "Problem D3.1: Syringe units of oxycodone",
+        "question": "Problem D1.3.1: Syringe units of oxycodone",
         "type": "numeric",
         "answers": [
             {
@@ -210,7 +210,7 @@
         ]
     },
     {
-        "question": "Problem D3.2: 30-unit syringe ok?",
+        "question": "Problem D1.3.2: 30-unit syringe ok?",
         "type": "multiple_choice",
         "answers": [
             {
@@ -226,7 +226,7 @@
         ]
     },
     {
-        "question": "Problem D3.3: mL of robinul",
+        "question": "Problem D1.3.3: mL of robinul",
         "type": "numeric",
         "answers": [
             {
@@ -256,7 +256,7 @@
         ]
     },
     {
-        "question": "Problem D4.1: ratio of width to length",
+        "question": "Problem D1.4.1: ratio of width to length",
         "type": "numeric",
         "answers": [
             {
@@ -286,7 +286,7 @@
         ]
     },
     {
-        "question": "Problem D4.2: Difference between length and width",
+        "question": "Problem D1.4.2: Difference between length and width",
         "type": "numeric",
         "answers": [
             {
@@ -316,7 +316,7 @@
         ]
     },
     {
-        "question": "Problem D4.3: Perimeter of rectangle",
+        "question": "Problem D1.4.3: Perimeter of rectangle",
         "type": "numeric",
         "answers": [
             {
@@ -346,7 +346,7 @@
         ]
     },
     {
-        "question": "Problem D4.4: Area of rectangle",
+        "question": "Problem D1.4.4: Area of rectangle",
         "type": "numeric",
         "answers": [
             {
@@ -376,7 +376,7 @@
         ]
     },
     {
-        "question": "Problem D5: Radius of barrell",
+        "question": "Problem D1.5: Radius of barrell",
         "type": "numeric",
         "answers": [
             {
