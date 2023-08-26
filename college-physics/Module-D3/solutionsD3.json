@@ -5,14 +5,14 @@
         "answers": [
             {
                 "type": "value",
-                "value": -1.8E3,
+                "value": -1.9E3,
                 "correct": true,
                 "feedback": "Correct."
             },
             {
                 "type": "range",
                 "range": [
-                    -1.80001E3,
+                    -1.90001E3,
                     999E6
                 ],
                 "correct": false,
@@ -22,7 +22,7 @@
                 "type": "range",
                 "range": [
                     -99999,
-                    -1.79999E3
+                    -1.89999E3
                 ],
                 "correct": false,
                 "feedback": "False. Try again."
