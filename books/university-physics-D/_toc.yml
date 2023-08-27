@@ -29,6 +29,7 @@ parts:
   chapters:
   - file: Module-D4/Linear_Force_Point_Particle
   - file: Module-D4/Newton_Law
+  - file: Module-D4/problemsD4
 - caption: Module D5 - Linear Kinetic Energy of Point Particle
   chapters:
   - file: Module-D5/Linear_Kinetic_Energy_Point_Particle
