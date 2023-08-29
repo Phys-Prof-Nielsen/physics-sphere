@@ -35,4 +35,5 @@ parts:
   - file: Module-D5/Linear_Kinetic_Energy_Point_Particle
   - file: Module-D5/Linear_Work_Point_Particle
   - file: Module-D5/Work_Energy_Point_Particle
+  - file: Module-D5/problemsD5
   
