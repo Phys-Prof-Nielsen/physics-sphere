@@ -1,0 +1,37 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Preample
+  chapters:
+  - file: Preample/Motivation
+  - file: Preample/Structure
+  - file: Preample/Learning_Outcomes 
+#- caption: Module C1 - Review of Required Trigonometry
+#  chapters:
+#  - file: Module-C1/Scientific_Method
+
+- caption: Module C2 - Vectors
+  chapters:
+  - file: Module-C2/Review_trigonometry
+  - file: Module-C2/Introduction_to_vectors
+  - file: Module-C2/Position_vector
+  - file: Module-C2/problemsC2
+#- caption: Module D3 - Linear Impulse of Point Particle
+#  chapters:
+#  - file: Module-D3/Linear_Impulse_Point_Particle
+#  - file: Module-D3/problemsD3
+#- caption: Module D4 - Linear Force on Point Particle
+#  chapters:
+#  - file: Module-D4/Linear_Force_Point_Particle
+#  - file: Module-D4/Newton_Law
+#  - file: Module-D4/problemsD4
+#- caption: Module D5 - Linear Kinetic Energy of Point Particle
+ # chapters:
+#  - file: Module-D5/Linear_Kinetic_Energy_Point_Particle
+#  - file: Module-D5/Linear_Work_Point_Particle
+#  - file: Module-D5/Work_Energy_Point_Particle
+#  - file: Module-D5/problemsD5
+  
