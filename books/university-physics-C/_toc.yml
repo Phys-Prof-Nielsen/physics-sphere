@@ -18,6 +18,8 @@ parts:
   - file: Module-C2/Review_trigonometry
   - file: Module-C2/Introduction_to_vectors
   - file: Module-C2/Position_vector
+  - file: Module-C2/Analytic_vector
+  - file: Module-C2/Addition_vectors_analytic
   - file: Module-C2/problemsC2
 #- caption: Module D3 - Linear Impulse of Point Particle
 #  chapters:
