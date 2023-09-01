@@ -174,6 +174,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Multiplication_scalar_geometrical.html">C2.6 Multiplication of a Vector by a Scalar: Geometric Approach</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Displacement_vector.html">C2.7 Concept of Displacement Vector</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Addition_vectors_geometrical.html">C2.8 Addition of Vectors: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unit_vectors.html">C2.9 Unit Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dot_product.html">C2.10 Dot Product</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problemsC2.html">C2.X Problems</a></li>
 </ul>
 
@@ -423,7 +425,7 @@ Consider the addition of two vectors: <span class="math notranslate nohighlight"
 <b>Box 1</b><br>
  Consider the addition of two vectors:<br> 
     <br>
-<p><span class="math notranslate nohighlight">\(\vec{A} = \begin{bmatrix} -1  \\ 5 \\ 12  \end{bmatrix}\)</span> and <span class="math notranslate nohighlight">\(\vec{B} = \begin{bmatrix} -2  \\ 6 \\ -4  \end{bmatrix}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\vec{A} = \begin{bmatrix} -1.0  \\ 5.0 \\ 12  \end{bmatrix}\)</span> and <span class="math notranslate nohighlight">\(\vec{B} = \begin{bmatrix} -2.0  \\ 6.0 \\ -4.0  \end{bmatrix}\)</span>.</p>
 <br>
 <p>Calculate <span class="math notranslate nohighlight">\(\vec{A} + \vec{B}\)</span> and <span class="math notranslate nohighlight">\(\vec{A} - \vec{B}\)</span></p>
 </div>
@@ -443,12 +445,12 @@ Consider the addition of two vectors: <span class="math notranslate nohighlight"
     </header>
 <p><b>Problem</b>
 <br>
-Consider the multiplication <span class="math notranslate nohighlight">\(5\times \vec{A}\)</span> where <span class="math notranslate nohighlight">\(\vec{A} = \begin{bmatrix} 2  \\ 3 \\ 4  \end{bmatrix}\)</span>.</p>
+Consider the multiplication <span class="math notranslate nohighlight">\(5\times \vec{A}\)</span> where <span class="math notranslate nohighlight">\(\vec{A} = \begin{bmatrix} 2.0  \\ 3.0 \\ 4.0  \end{bmatrix}\)</span>.</p>
 <p>We distribute the multiplication through all components:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}5\times \vec{A} =  5\times \begin{bmatrix} 2  \\ 3 \\ 4  \end{bmatrix}\end{split}\]</div>
+\[\begin{split}5\times \vec{A} =  5\times \begin{bmatrix} 2.0  \\ 3.0 \\ 4.0  \end{bmatrix}\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}5\times \vec{A} =  \begin{bmatrix} (5)(2)  \\ (5)(3) \\ (5)(4)  \end{bmatrix}\end{split}\]</div>
+\[\begin{split}5\times \vec{A} =  \begin{bmatrix} (5)(2.0)  \\ (5)(3.0) \\ (5)(4.0)  \end{bmatrix}\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}5\times \vec{A} = \begin{bmatrix} 10  \\ 15 \\ 20  \end{bmatrix}\end{split}\]</div>
 </div>
@@ -465,9 +467,9 @@ Consider the multiplication <span class="math notranslate nohighlight">\(5\times
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><p><b>Comment</b>: The two vectors in Box 2 are examples of unit vectors.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
     <b>Box 3</b><br>
-<p>An ant is positioned at an initial point <span class="math notranslate nohighlight">\(P = (2,2)\)</span> in a 2D reference system where there are two vectors called: <span class="math notranslate nohighlight">\(\vec{e}_x = \begin{bmatrix} 1  \\ 0  \end{bmatrix}\)</span> and <span class="math notranslate nohighlight">\(\vec{e}_y = \begin{bmatrix} 0  \\ 1  \end{bmatrix}\)</span>.
+<p>An ant is positioned at an initial point <span class="math notranslate nohighlight">\(P = (2.0,2.0)\)</span> in a 2D reference system where there are two vectors called: <span class="math notranslate nohighlight">\(\vec{e}_x = \begin{bmatrix} 1  \\ 0  \end{bmatrix}\)</span> and <span class="math notranslate nohighlight">\(\vec{e}_y = \begin{bmatrix} 0  \\ 1  \end{bmatrix}\)</span>.
 <br></p>
-<p>The ant decides to walk 4 times the length of <span class="math notranslate nohighlight">\(\vec{e}_x\)</span> in the same direction as <span class="math notranslate nohighlight">\(\vec{e}_x\)</span> and 5 times the length of <span class="math notranslate nohighlight">\(\vec{e}_y\)</span>, but in opposite direction of <span class="math notranslate nohighlight">\(\vec{e}_y\)</span>.</p>
+<p>The ant decides to walk 4.0 times the length of <span class="math notranslate nohighlight">\(\vec{e}_x\)</span> in the same direction as <span class="math notranslate nohighlight">\(\vec{e}_x\)</span> and 5.0 times the length of <span class="math notranslate nohighlight">\(\vec{e}_y\)</span>, but in opposite direction of <span class="math notranslate nohighlight">\(\vec{e}_y\)</span>.</p>
 <ol class="arabic simple">
 <li><p>Make a sketch (by hand is ok) of the ant’s initial position vector in a traditional xy coordinate system.</p></li>
 <li><p>In the same reference frame, make a sketch of the ant’s displacement.</p></li>

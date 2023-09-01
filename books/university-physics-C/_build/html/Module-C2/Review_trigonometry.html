@@ -174,6 +174,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Multiplication_scalar_geometrical.html">C2.6 Multiplication of a Vector by a Scalar: Geometric Approach</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Displacement_vector.html">C2.7 Concept of Displacement Vector</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Addition_vectors_geometrical.html">C2.8 Addition of Vectors: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unit_vectors.html">C2.9 Unit Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dot_product.html">C2.10 Dot Product</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problemsC2.html">C2.X Problems</a></li>
 </ul>
 
@@ -456,7 +458,7 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="output text_html"><div id="VqNbxvkPzCEM" data-shufflequestions="False" data-shuffleanswers="True" data-numquestions="1000000"><style>
+<div class="output text_html"><div id="AcMkTxogvjlf" data-shufflequestions="False" data-shuffleanswers="True" data-numquestions="1000000"><style>
 :root {
     --medium-slate-blue: #6f78ffff;
     --orange-pantone: #f75c03ff;
@@ -584,7 +586,7 @@ document.write(`
 }
 
 
-</style><script type="text/Javascript">questionsVqNbxvkPzCEM=[{"question": "A right-angle triangle has an adjacent side of 2.5 m and an opposite side of 1.5 m. What is the length of the hypotenuse?", "type": "multiple_choice", "answers": [{"answer": "2.9 m", "correct": true, "feedback": "Hooray!"}, {"answer": "8.5 m", "correct": false, "feedback": "Oops, forgot to take the square root."}, {"answer": "2.8 m", "correct": false, "feedback": "Better luck next time."}, {"answer": "2.0 m", "correct": false, "feedback": "Think you messed up which side is what."}]}, {"question": "In a right-angle triangle, the adjacent side is 3.4 cm and the hypotenuse is 5.6 cm as reported in respect to an angle A. Find the angle A.", "type": "multiple_choice", "answers": [{"answer": "53 degrees", "correct": true, "feedback": "That's right!"}, {"answer": "37 degrees", "correct": false, "feedback": "Try again."}, {"answer": "17 degrees", "correct": false, "feedback": "try and use cosine function."}, {"answer": "72 degrees", "correct": false, "feedback": "try and use cosine function."}]}];
+</style><script type="text/Javascript">questionsAcMkTxogvjlf=[{"question": "A right-angle triangle has an adjacent side of 2.5 m and an opposite side of 1.5 m. What is the length of the hypotenuse?", "type": "multiple_choice", "answers": [{"answer": "2.9 m", "correct": true, "feedback": "Hooray!"}, {"answer": "8.5 m", "correct": false, "feedback": "Oops, forgot to take the square root."}, {"answer": "2.8 m", "correct": false, "feedback": "Better luck next time."}, {"answer": "2.0 m", "correct": false, "feedback": "Think you messed up which side is what."}]}, {"question": "In a right-angle triangle, the adjacent side is 3.4 cm and the hypotenuse is 5.6 cm as reported in respect to an angle A. Find the angle A.", "type": "multiple_choice", "answers": [{"answer": "53 degrees", "correct": true, "feedback": "That's right!"}, {"answer": "37 degrees", "correct": false, "feedback": "Try again."}, {"answer": "17 degrees", "correct": false, "feedback": "try and use cosine function."}, {"answer": "72 degrees", "correct": false, "feedback": "try and use cosine function."}]}];
     //var mydiv=document.getElementById("testDIV");//console.log(mydiv);// Make a random ID
 function makeid(length) {
     var result           = [];
@@ -1038,7 +1040,7 @@ function show_questions (json, mydiv) {
 }
 
         {
-        show_questions(questionsVqNbxvkPzCEM, VqNbxvkPzCEM);
+        show_questions(questionsAcMkTxogvjlf, AcMkTxogvjlf);
         }
         </script>
         </div></div>
