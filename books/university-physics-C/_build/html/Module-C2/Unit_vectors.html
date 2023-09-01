@@ -378,7 +378,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-9-2-scaling">C2.9.2 Scaling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-vector-representation-in-2d">Unit Vector Representation in 2D</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-analytic-representation-and-scaling">2D Analytic Representation and Scaling</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-geometrical-representation-adnd-scaling">2D Geometrical Representation adnd Scaling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-geometrical-representation-and-scaling">2D Geometrical Representation and Scaling</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-9-3-final-notes">C2.9.3 Final Notes</a><ul class="nav section-nav flex-column">
@@ -453,7 +453,7 @@ very useful to define a vector with a length of 1 unit. We call such a vector fo
 <header>
 <h3> Example 1</h3>
     </header>
-Consider the vector $\vec{A} = \begin{bmatrix} 2  \\ 5  \end{bmatrix}$. We identify $A_x = 2$ and $A_y = 5$. Hence, we can express the vector in terms of the unit vectors as
+<p>Consider the vector <span class="math notranslate nohighlight">\(\vec{A} = \begin{bmatrix} 2  \\ 5  \end{bmatrix}\)</span>. We identify <span class="math notranslate nohighlight">\(A_x = 2\)</span> and <span class="math notranslate nohighlight">\(A_y = 5\)</span>. Hence, we can express the vector in terms of the unit vectors as</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \vec{A} = 2\begin{bmatrix} 1  \\ 0  \end{bmatrix} + 5\begin{bmatrix} 0  \\ 1  \end{bmatrix}\end{split}\]</div>
 <p>or</p>
@@ -469,8 +469,8 @@ Consider the vector $\vec{A} = \begin{bmatrix} 2  \\ 5  \end{bmatrix}$. We ident
 <p>Let us try and expand it to 3D: Write the following vector in terms of the unit vectors <span class="math notranslate nohighlight">\(\hat{e}_x\)</span>, <span class="math notranslate nohighlight">\(\hat{e}_y\)</span>, and <span class="math notranslate nohighlight">\(\hat{e}_z\)</span>: <span class="math notranslate nohighlight">\(\vec{A} = \begin{bmatrix} -1  \\ 4 \\ -3  \end{bmatrix}\)</span></p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="d-geometrical-representation-adnd-scaling">
-<h3>2D Geometrical Representation adnd Scaling<a class="headerlink" href="#d-geometrical-representation-adnd-scaling" title="Permalink to this heading">#</a></h3>
+<section id="d-geometrical-representation-and-scaling">
+<h3>2D Geometrical Representation and Scaling<a class="headerlink" href="#d-geometrical-representation-and-scaling" title="Permalink to this heading">#</a></h3>
 <p>For the 2D geometrical approach, we will illustrate it through our beloved Python code from previous notes. First, let us just plot the unti vectors so we can visualize how they look like.</p>
 <p>The code below is the first code we had in the mentioned notes. I have added a grid for improved visulization by adding <em>ax.grid()</em> to the code. I also added a line in the code to make sure that the aspect ratio between the x- and y-axis is 1. Otherwise, the unit vectors appear to be different sizes since the units are not of the same length along the two axis. This is done by adding <em>ax.set_aspect(‘equal’, adjustable=’box’)</em> to the code. You can try to see what happens if we do not use that line of code (comment it out by putting # in front of that line).</p>
 <div class="cell tag_hide-input docutils container">
@@ -699,7 +699,7 @@ Consider the vector $\vec{A} = \begin{bmatrix} 2  \\ 5  \end{bmatrix}$. We ident
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-9-2-scaling">C2.9.2 Scaling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-vector-representation-in-2d">Unit Vector Representation in 2D</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-analytic-representation-and-scaling">2D Analytic Representation and Scaling</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-geometrical-representation-adnd-scaling">2D Geometrical Representation adnd Scaling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-geometrical-representation-and-scaling">2D Geometrical Representation and Scaling</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-9-3-final-notes">C2.9.3 Final Notes</a><ul class="nav section-nav flex-column">
