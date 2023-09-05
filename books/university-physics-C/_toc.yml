@@ -26,10 +26,10 @@ parts:
   - file: Module-C2/Unit_vectors
   - file: Module-C2/Dot_product
   - file: Module-C2/problemsC2
-#- caption: Module D3 - Linear Impulse of Point Particle
-#  chapters:
-#  - file: Module-D3/Linear_Impulse_Point_Particle
-#  - file: Module-D3/problemsD3
+- caption: Module C3 - Linear Momentum of Point Particle
+  chapters:
+  - file: Module-C3/Linear_momentum_point_particle
+  - file: Module-C3/problemsC3
 #- caption: Module D4 - Linear Force on Point Particle
 #  chapters:
 #  - file: Module-D4/Linear_Force_Point_Particle
