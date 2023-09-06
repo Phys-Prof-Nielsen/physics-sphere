@@ -1,0 +1,647 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Newton’s Laws &#8212; A Competency Approach to Introductory Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-C4/Module 10/Newton_s Laws';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/university-physics-C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/university-physics-C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    A Competency Approach to Introductory Physics: A Compendium to the C Exam
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preample</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Preample/Motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Preample/Structure.html">Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Preample/Learning_Outcomes.html">Learning Outcomes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C2 - Vectors</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Review_trigonometry.html">C2.1 Review of Required Trigonometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Introduction_to_vectors.html">C2.2 Introduction to Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Position_vector.html">C.2.3 Position Vector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Analytic_vector.html">C2.4 Analytic Representation of a Vector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Addition_vectors_analytic.html">C2.5 Basic Vector Arithmetic: Analytic Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Multiplication_scalar_geometrical.html">C2.6 Multiplication of a Vector by a Scalar: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Displacement_vector.html">C2.7 Concept of Displacement Vector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Addition_vectors_geometrical.html">C2.8 Addition of Vectors: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Unit_vectors.html">C2.9 Unit Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Dot_product.html">C2.10 Dot Product</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/problemsC2.html">C2.X Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C3 - Linear Momentum of Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C3/Linear_momentum_point_particle.html">C3.1 Linear Momentum: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C3/problemsC3.html">C3.2 Problems</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-C4/Module 10/Newton_s Laws.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Module-C4/Module 10/Newton_s Laws.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Newton’s Laws</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-1st-law-law-of-inertia">Newton’s 1st Law: Law of Inertia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-2nd-law">Newton’s 2nd Law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-3rd-law-action-and-re-action">Newton’s 3rd Law: Action and Re-action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Solution</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="newton-s-laws">
+<h1>Newton’s Laws<a class="headerlink" href="#newton-s-laws" title="Permalink to this heading">#</a></h1>
+<hr style="border:1px solid gray"> </hr><p>Based on observational data Newton established his three law’s of motion and the law of gravity. We now know that the true behavior of nature are more complex, and Newton’s laws are representations of these complex theories as we restrict ourselves to disucssions involving <em>everyday</em> interactions, also known as the <strong>classical limit</strong>.</p>
+<p>In this classical regime, Newton’s laws are truly remarkable as they allow for a wide variety of not only explanining observed phenomena but also allow for future predictions due to their deterministic form.</p>
+<p>We will mostly focus on applying Newton’s 2nd law and at times employ the 1st and 3rd laws as conceptual tools.</p>
+<img src="newton.jpg" width="300">
+<hr style="border:1px solid gray"> </hr><section id="newton-s-1st-law-law-of-inertia">
+<h2>Newton’s 1st Law: Law of Inertia<a class="headerlink" href="#newton-s-1st-law-law-of-inertia" title="Permalink to this heading">#</a></h2>
+<br>
+<div class="alert alert-success">
+<center><b>An object that is not interacting with anything will remain in its same state of motion</b></center>.
+</div>
+<img src="rock.jpg" width="400">
+<p>This is a conceptual law that can be expressed in many forms. Another way of saying is: if an object is at rest it will remain at rest unless a net external force (or unbalanced force) is acting on it. If an object is moving with some momentum it will remain moving with that momentum unless a net external force (or unbalanced force) is acting on it.</p>
+<p>I prefer to use the word “interaction” here as it may help identify individual forces when we try to apply Newton’s laws. So, try and get in your mind that an interaction implies that forces are present.</p>
+<div class="alert alert-success">
+This law also holds true for rotational motion, in which case we replace net force with net torque. 
+</div>
+<div class="alert alert-danger">
+It is possible for the net force to be zero but the net torque to be non-zero. Similarly, it is possible for the net force to ne non-zero but the net torque to be zero. 
+</div>
+<hr style="border:1px solid gray"> </hr></section>
+<section id="newton-s-2nd-law">
+<h2>Newton’s 2nd Law<a class="headerlink" href="#newton-s-2nd-law" title="Permalink to this heading">#</a></h2>
+<p>Newton’s 2nd law is the tool to quantify the first law.</p>
+<p>For linear motion, we have
+<br></p>
+<div class="alert alert-success">
+$$\vec{F}_{net} = \frac{d\vec{p}}{dt} $$
+</div>
+<p>If the mass is constant, this reduces to</p>
+<div class="math notranslate nohighlight">
+\[\vec{F}_{net} = m\vec{a} \]</div>
+<p>Similarly, for rotational motion</p>
+<div class="alert alert-success">
+$$\vec{\tau}_{net} = \frac{d\vec{L}}{dt} $$
+</div>
+<p>and with constant moment of inertia, we have</p>
+<div class="math notranslate nohighlight">
+\[\vec{\tau}_{net} = I\vec{\alpha} \]</div>
+<hr style="border:1px solid gray"> </hr></section>
+<section id="newton-s-3rd-law-action-and-re-action">
+<h2>Newton’s 3rd Law: Action and Re-action<a class="headerlink" href="#newton-s-3rd-law-action-and-re-action" title="Permalink to this heading">#</a></h2>
+<p>This law states that two interaction objects will experience the same force in magnitude but in opposite directions.</p>
+<div class="alert alert-success">
+For two objects interacting, object 1 will exert a force $\vec{F}_{12}$ on object 2 and object 2 will exert a force $\vec{F}_{21}$ on object 2 such that<br> 
+    <br>
+    $$\vec{F}_{12} = -\vec{F}_{21}$$   
+</div>
+<img src="action.jpg" width="400">
+<p>We used this law to show that the Center of Mass motion of a system only depends on the <em>external forces</em> acting on the object.</p>
+<div class="alert alert-danger">
+    The action and re-action forces acts on two <i>different</i> objects and does therefore not appear as a pair of forces when applying Newton's 2nd law on a single object. 
+</div>
+<img src="dwight.jpg" width="400">
+<p>This law was actually shown, even before modern physics, to not hold true of all systems. For example, in electricity and magnetism the interaction between charged particles does not obey this law. Instead, if we take the fields themselves into account, then the discrepancy is solved (the reason is that the fields themselves carry momentum).</p>
+<p>For our purposes, we will also extend this law to the rotational case and we have that for every torque there is a counter torque.</p>
+<hr style="border:1px solid gray"> </hr></section>
+<section id="example-1">
+<h2>Example 1<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h2>
+<p>Consider an object of mass <span class="math notranslate nohighlight">\(M = 5.0\)</span> kg subject to forces as shown in the figure. The magnitudes of the applied forces are: <span class="math notranslate nohighlight">\(F_1 = 10.0\)</span> N, <span class="math notranslate nohighlight">\(F_2 = 3.0\)</span> N, <span class="math notranslate nohighlight">\(F_3 = 3.0\)</span> N, and <span class="math notranslate nohighlight">\(F_4 = 5.0\)</span> N, where <span class="math notranslate nohighlight">\(\vec{F}_1\)</span> makes an angle of <span class="math notranslate nohighlight">\(\theta = 15^\circ\)</span> with respect to the horizontal. Find the acceleration of this object.</p>
+<img src="fig1.png" width="300">
+<section id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h3>
+<p>Before we can apply Newton’s 2nd law, we must establish a reference frame such that we can assign positive (negative) values to our force components. We have freedom to choose such a frame and in this problem, I have chosen a standard xy-reference system with the origin located as shown.</p>
+<p>We now apply Newton’s 2nd law (constant mass):</p>
+<div class="math notranslate nohighlight">
+\[ \vec{F}_{net} = M\vec{A} \]</div>
+<p>This is a vector equation and we can cast it into component form:</p>
+<div class="math notranslate nohighlight">
+\[ F_{net,x} = MA_x \]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[ F_{net,y} = MA_y \]</div>
+<p>which we can solve separately. These equations tells us that only the x-components of the forces contributes to the acceleration in the x-direction and similarly for the the y-components.</p>
+<p><strong>x-component</strong>
+We only add the x-components together here. In this case, <span class="math notranslate nohighlight">\(\vec{F}_3\)</span> and <span class="math notranslate nohighlight">\(\vec{F}_4\)</span> does not contribute, while <span class="math notranslate nohighlight">\(\vec{F}_2\)</span> is directed in the negative x-direction and only part of <span class="math notranslate nohighlight">\(\vec{F}_1\)</span> contributes. Since we know the angle that <span class="math notranslate nohighlight">\(\vec{F}_1\)</span> makes with the positive x-axis, we can use trigonometry to find its x-component. In this case, it is a cosine component. Summing up the forces:</p>
+<div class="math notranslate nohighlight">
+\[ +F_{1}\cos\theta - F_2 = MA_x \]</div>
+<p>Solving for the acceleration:</p>
+<div class="math notranslate nohighlight">
+\[ A_x = \frac{+F_{1}\cos\theta - F_2}{M} \]</div>
+<p>and inserting values to get:</p>
+<div class="math notranslate nohighlight">
+\[ A_x = \frac{(10.0)\cos(15^\circ) - (3.0)}{(5.0)}  = 1.3~\textrm{m/s}^2\]</div>
+<p><strong>y-component</strong>
+In a similar way, we get</p>
+<div class="math notranslate nohighlight">
+\[ -F_{1}\sin\theta  - F_3 + F_4 = MA_y \]</div>
+<p>Solving for the acceleration:</p>
+<div class="math notranslate nohighlight">
+\[ A_y = \frac{-F_{1}\sin\theta - F_3 + F_4}{M} \]</div>
+<p>and inserting values to get:</p>
+<div class="math notranslate nohighlight">
+\[ A_y = \frac{-(10.0)\sin(15^\circ) - (3.0) + (5.0)}{(5.0)}  = -0.12~\textrm{m/s}^2\]</div>
+<p>We conclude that the object is acceleration in the positive x-direction at a rate of <span class="math notranslate nohighlight">\(A_x = 1.3~\textrm{m/s}^2\)</span> and in the negative y-direction at a rate of <span class="math notranslate nohighlight">\(0.12~\textrm{m/s}^2\)</span>.</p>
+<p>The acceleration is</p>
+<div class="math notranslate nohighlight">
+\[\vec{A} = (1.3~\textrm{m/s}^2)~\hat{i} + (-0.12~\textrm{m/s}^2)\hat{j} \]</div>
+<p>Since we now know the acceleration of the object, we can say something about its velocity and position provided we have proper initial information such as initial velocity and initial position.</p>
+<hr style="border:1px solid gray"> </hr></section>
+</section>
+<section id="example-2">
+<h2>Example 2<a class="headerlink" href="#example-2" title="Permalink to this heading">#</a></h2>
+<p>Consider a solid cylinder of mass <span class="math notranslate nohighlight">\(M = 2.0\)</span> kg and radius <span class="math notranslate nohighlight">\(R = 0.3\)</span> m. Two forces of equal magnitude of <span class="math notranslate nohighlight">\(15\)</span> N are applied as shown in the figure. The cylinder has its long axis along the z-direction, so the figure illustrate the xy-plane. The z-axis is positive into the screen. Find angular acceleration of the cylinder about the z-axis.</p>
+<img src="fig2.png" width="300">
+<section id="id1">
+<h3>Solution<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>We must find the net torque acting on the object. A positivbe torque (in the +z direction) will correspond to a clockwise rotation so I added a directed arc element to illustrate that clockwise rotation is considered positive in this case. We then see that <span class="math notranslate nohighlight">\(\vec{F}_1\)</span> will cause a rotation in the positive direction and likewise for <span class="math notranslate nohighlight">\(\vec{F}_2\)</span>. Hence, both applied forces will cause positive torques. We could also use the right-hand rule by using the directed line segment from the z-axis to the point of interaction.</p>
+<p>In the following, we will use:</p>
+<p><strong>Moment of inertia of a cylinder</strong>
+$<span class="math notranslate nohighlight">\( I = \frac{1}{2}MR^2 \)</span>$</p>
+<p><strong>Magnitude of torque due to a force</strong>
+$<span class="math notranslate nohighlight">\( \tau = rF\sin\theta \)</span>$</p>
+<p>In our case, <span class="math notranslate nohighlight">\(r\)</span> is the magnitude of the directed line segment from the z-axis to the point of interaction and we can identify that as the radius R for both forces. The angle between this directed line segment and the applied force is in both cases 90<span class="math notranslate nohighlight">\(^\circ\)</span>.</p>
+<p>Adding up the individual torques:</p>
+<div class="math notranslate nohighlight">
+\[ +\tau_1 + \tau_2 = I\alpha \]</div>
+<div class="math notranslate nohighlight">
+\[ r_{1}F_{1}\sin\theta_1 + r_{2}F_{2}\sin\theta_2 = I\alpha \]</div>
+<p>Replacing the variable names with the ones identified:</p>
+<div class="math notranslate nohighlight">
+\[ RF_{1}\sin\theta_1 + RF_{2}\sin\theta_2 = \frac{1}{2}MR^2\alpha \]</div>
+<p>Now solve for the angular acceleration:</p>
+<div class="math notranslate nohighlight">
+\[ \alpha = \frac{RF_{1}\sin\theta_1 + RF_{2}\sin\theta_2}{\frac{1}{2}MR^2} \]</div>
+<p>and inserting our values:</p>
+<div class="math notranslate nohighlight">
+\[ \alpha = \frac{(0.3)(15)\sin(90^\circ) + (0.3)(15)\sin(90^\circ)}{\frac{(1)}{(2)}(2.0)(0.3)^2} = +100~\textrm{rad/s}^2\]</div>
+<p>The cylinder is rotating in a positive direction (clockwise) and increasing its angular speed at a rate of 100 rad/s<span class="math notranslate nohighlight">\(^2\)</span>.</p>
+<div class="alert alert-info">
+NOTE: We see that the forces add up to zero and the Center of Mass of the cylinder does not have any linear acceleration. The cylinder is purely rotating. This is an example of having zero net force but non-zero net torque.
+</div></section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Module-C4/Module 10"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-1st-law-law-of-inertia">Newton’s 1st Law: Law of Inertia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-2nd-law">Newton’s 2nd Law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-3rd-law-action-and-re-action">Newton’s 3rd Law: Action and Re-action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Solution</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kim Nielsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

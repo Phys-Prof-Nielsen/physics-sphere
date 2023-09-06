@@ -1,0 +1,672 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Rotational Force - Point Particle Part 2 &#8212; A Competency Approach to Introductory Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-C4/Module 9/Rotational Force - Point Particle Part 2';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/university-physics-C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/university-physics-C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    A Competency Approach to Introductory Physics: A Compendium to the C Exam
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preample</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Preample/Motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Preample/Structure.html">Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Preample/Learning_Outcomes.html">Learning Outcomes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C2 - Vectors</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Review_trigonometry.html">C2.1 Review of Required Trigonometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Introduction_to_vectors.html">C2.2 Introduction to Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Position_vector.html">C.2.3 Position Vector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Analytic_vector.html">C2.4 Analytic Representation of a Vector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Addition_vectors_analytic.html">C2.5 Basic Vector Arithmetic: Analytic Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Multiplication_scalar_geometrical.html">C2.6 Multiplication of a Vector by a Scalar: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Displacement_vector.html">C2.7 Concept of Displacement Vector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Addition_vectors_geometrical.html">C2.8 Addition of Vectors: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Unit_vectors.html">C2.9 Unit Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/Dot_product.html">C2.10 Dot Product</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C2/problemsC2.html">C2.X Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C3 - Linear Momentum of Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C3/Linear_momentum_point_particle.html">C3.1 Linear Momentum: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module-C3/problemsC3.html">C3.2 Problems</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-C4/Module 9/Rotational Force - Point Particle Part 2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Module-C4/Module 9/Rotational Force - Point Particle Part 2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Rotational Force - Point Particle Part 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#net-torque-in-terms-of-net-force">1. Net Torque in terms of Net Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torque-due-to-individual-forces">2. Torque due to Individual Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">3. Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lever-arm">4. The Lever Arm</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="rotational-force-point-particle-part-2">
+<h1>Rotational Force - Point Particle Part 2<a class="headerlink" href="#rotational-force-point-particle-part-2" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<p>If you recall, we have to approaches to define the angular momentum of a point particle :</p>
+<ol class="arabic">
+<li><div class="math notranslate nohighlight">
+\[\vec{L} = I\vec{\omega}_z \tag{1} \]</div>
+</li>
+</ol>
+<br>
+2. $$\vec{L} = \vec{r} \times \vec{p} \tag{2}$$
+<p>In the <em>Rotational Force: Point Particle Part 1</em>, we showed how we could define the net torque on a point particle by using Equation (1). In this note, we will see how we can use Equation (2) to define the torque, and realize a major difference in the two approaches.</p>
+<hr class="docutils" />
+<section id="net-torque-in-terms-of-net-force">
+<h2>1. Net Torque in terms of Net Force<a class="headerlink" href="#net-torque-in-terms-of-net-force" title="Permalink to this heading">#</a></h2>
+<p>We will start with Equation (3) from <em>Rotational Force: Point Particle Part 1</em> notes, but in vector form:</p>
+<div class="alert alert-success">
+    $$  \vec{\tau}_{net} = \frac{d\vec{L}}{dt} \tag{3}$$
+</div>
+<p>If we insert Equation (2) into the above equation, we have</p>
+<div class="math notranslate nohighlight">
+\[  \vec{\tau}_{net} = \frac{d\vec{\vec{r} \times \vec{p}}}{dt}\]</div>
+<p>Apply the product rule for derivatives:</p>
+<div class="math notranslate nohighlight">
+\[  \vec{\tau}_{net} = \vec{r} \times \frac{d\vec{p}}{dt} + \frac{d\vec{r}}{dt}\times \vec{p}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\frac{d\vec{r}}{dt} = \vec{v}\)</span> and <span class="math notranslate nohighlight">\(\vec{p} = m\vec{v}\)</span>, the second term on the right side is a cross-product between the same velocity vector and is therefore zero. We then have</p>
+<div class="math notranslate nohighlight">
+\[  \vec{\tau}_{net} = \vec{r} \times \frac{d\vec{p}}{dt}\]</div>
+<p>The derivaitve is simply the net force acting on the particle:</p>
+<div class="alert alert-success">
+$$  \vec{\tau}_{net} = \vec{r} \times \vec{F}_{net} \tag{4}$$
+    </div>
+<p>Equation (4) is useful when we have direct knowledge about the net force applied to the particle instead of knowledge of its change in motion. However, Equation (4) goes beyond the net force as we will see in the next section.</p>
+</section>
+<hr class="docutils" />
+<section id="torque-due-to-individual-forces">
+<h2>2. Torque due to Individual Forces<a class="headerlink" href="#torque-due-to-individual-forces" title="Permalink to this heading">#</a></h2>
+<p>Let us write Equation (4) slightlit different using summation notation:</p>
+<div class="math notranslate nohighlight">
+\[  \vec{\tau}_{net} = \vec{r} \times \sum_{i=1}^{N}\vec{F}_{i} \]</div>
+<p>where we are summing over each indiviual force acting on the particle. We can distribut the cross product:</p>
+<div class="math notranslate nohighlight">
+\[  \vec{\tau}_{net} =  \sum_{i=1}^{N}\vec{r} \times\vec{F}_{i} \]</div>
+<p>The term we are summing over can be interpretated as the torque due to a single force acting on the particle:</p>
+<div class="math notranslate nohighlight">
+\[  \vec{\tau}_{net} =  \sum_{i=1}^{N}\vec{\tau}_{i} \]</div>
+<p>and we identify the <strong>torque acting on a point particle due to a single force</strong> as</p>
+<div class="alert alert-success">
+$$  \vec{\tau} =  \vec{r} \times\vec{F} \tag{5}$$
+</div>
+<div class="alert alert-info">
+    It is very important to understand the difference between Equations (4) and (5). They look very similar but their meanings are different!
+    </div>
+<div class="alert alert-danger">
+    The vecor $\vec{r}$ is the directed line segment from a point of interest (poi) to the point where the force is acting. In some cases it is the position vector, in other cases it is not. We say: <b>the torque about the point of interest</b>
+    </div>
+<div class="alert alert-info">
+    The point of interest is often referred to as the <b>pivot point</b>.
+    </div>
+</section>
+<hr class="docutils" />
+<section id="examples">
+<h2>3. Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="example-1">
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h3>
+<p>A point particle is located at <span class="math notranslate nohighlight">\(x = 3.0\)</span> m and a force <span class="math notranslate nohighlight">\(F = 2.0\)</span> N is acting on the particle in a direction of the positive x-axis as shown in the Figure below.</p>
+<img src="fig2.png" width="400">
+<p>Find the torque on the particle around the orgin due to the applied force.</p>
+<section id="solution">
+<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h4>
+<p>First, we recognize that the position vector is the directed line segment from the POI to the point of interaction. We also recognize that the position vector and force vector are parallel. Using the geometric definition of the cross product, we have for the magnitude of the torque:</p>
+<div class="math notranslate nohighlight">
+\[ |\vec{\tau}| = |\vec{r}||\vec{F}|\sin\theta \]</div>
+<p>Inserting our numbers:</p>
+<div class="math notranslate nohighlight">
+\[ |\vec{\tau}| = (3.0)(2.0)\sin(0^\circ) = 0~\textrm{Nm}\]</div>
+<p>There is no torque, and the particle will not experience an angular acceleration due to this force, but will simply experience a linear acceleration.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="example-2">
+<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this heading">#</a></h3>
+<p>Consider the same particle as in Example 1, but now the direction of the applide force is along the +y-direction.
+<img src="fig3.png" width="300"></p>
+<p>In this case, we have for the magnitude of the torque around the origin:</p>
+<div class="math notranslate nohighlight">
+\[ |\vec{\tau}| = |\vec{r}||\vec{F}|\sin\theta \]</div>
+<p>Inserting our numbers:</p>
+<div class="math notranslate nohighlight">
+\[ |\vec{\tau}| = (3.0)(2.0)\sin(90^\circ) = 6.0~\textrm{Nm}\]</div>
+<p>The direction is obtained by using the right-hand rule and yields a torque in the direction of the positive z-axis. Our final answer is:</p>
+<div class="math notranslate nohighlight">
+\[ \vec{\tau} = (6.0~\textrm{Nm})~\hat{k} \]</div>
+<p>NOTE: the torque is along the z-axis since the particle will experience a change in rotational motion around the z-axis (its motin is in the xy-plane, rotating around the z-axis).</p>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 1</b><br>
+A point particle is located at $x = 3.0$ m and a force $F = 2.0$ N is acting on the particle. The force is directed as shown in Example 2 above.
+    <ol>
+        <li> Find the torque on the particle due to the force around the point x = 3.0 m.
+        <li> Find the torque on the particle due to the force around the point y = 4.0 m.
+        <li> Find the torque on the particle due to the force around the point (x,y) = (1.0 m, 1.0 m).
+    </ol>
+</div>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 2</b><br>
+A point particle is located at $(x,y,z) = (3.0,2.0,-1.0)$ m and a force $\vec{F} = (0.0 ,2.0,3.0)$ N is acting on the particle. 
+    <ol>
+        <li> Find the torque on the particle due to the force around the origin.
+        <li> Find the torque on the particle due to the force around the point y = 4.0 m.
+        <li> Find the torque on the particle due to the force around the point (x,y) = (1.0 m, 1.0 m).
+    </ol>
+</div>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 3</b><br>
+A point particle is located at a position given by $\vec{r}$ and subject to a force $\vec{F}$ in the three scenarios shown below.
+<img src="fig4.png" width="600">
+Rank the torque around the origin from smallest to largest.
+ </div> 
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 3</b><br>
+A point particle is located at a position given by $\vec{r}$ and subject to a force $\vec{F}$ in the three scenarios shown below.
+<img src="fig5.png" width="600">
+Rank the torque around the origin from smallest to largest.
+ </div> 
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 4</b><br>
+The four forces shown all have the same magnitude: F1 = F2 = F3 = F4. Which force produces the greatest torque about the point O (marked by the blue dot)?
+<img src="fig6.png" width="300" style="background-color:black">
+ </div> 
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 5</b><br>
+Which of the four forces shown here produces a torque about O that is directed out of the plane of the drawing?
+<img src="fig6.png" width="300" style="background-color:black">
+ </div> 
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-lever-arm">
+<h2>4. The Lever Arm<a class="headerlink" href="#the-lever-arm" title="Permalink to this heading">#</a></h2>
+<p>In engineering, the torque is sometimes referred to as the <strong>moment</strong>, but this is not the time to ridicule engineers. Another term that is often used in engineering and may be familar to you is the <strong>lever arm</strong>. The lever arm is the <strong>perpendicular vector component directed line segment from the pivot point (or POI) to the point of interaction</strong>. If we denote <span class="math notranslate nohighlight">\(\vec{r}_\perp\)</span> as the lever arm, then the magnitude of the torque around a pivot point acting on a particle due to an interaction <span class="math notranslate nohighlight">\(\vec{F}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[ \tau = r_\perp F \]</div>
+<p>since the angle between the two vectors is <span class="math notranslate nohighlight">\(90^\circ\)</span>.</p>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 6</b><br>
+A force F acts on the particle shown, which dashed line represents the magnitude of the lever arm component vector for the force about
+point O?
+<img src="fig7.png" width="300" style="background-color:gray">
+ </div> 
+<hr class="docutils" />
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Module-C4/Module 9"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#net-torque-in-terms-of-net-force">1. Net Torque in terms of Net Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torque-due-to-individual-forces">2. Torque due to Individual Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">3. Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lever-arm">4. The Lever Arm</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kim Nielsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
