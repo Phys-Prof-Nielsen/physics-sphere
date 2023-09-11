@@ -33,8 +33,9 @@ parts:
 - caption: Module C4 - Linear Force on Point Particle
   chapters:
   - file: Module-C4/Impulse-momentum
-#  - file: Module-D4/Newton_Law
-#  - file: Module-D4/problemsD4
+  - file: Module-C4/Newtons-laws
+  - file: Module-C4/Fundamental-interactions
+  - file: Module-C4/solving-strategy
 #- caption: Module D5 - Linear Kinetic Energy of Point Particle
  # chapters:
 #  - file: Module-D5/Linear_Kinetic_Energy_Point_Particle
