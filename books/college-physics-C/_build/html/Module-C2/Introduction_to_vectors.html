@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>C2.2 Introduction to Vectors &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -69,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="C.2.3 Position Vector" href="Position_vector.html" />
     <link rel="prev" title="C2.1 Review of Required Trigonometry" href="Review_trigonometry.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -186,6 +185,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C4 - Linear Force on Point Particle</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Module-C4/Impulse-momentum.html">C4.1 Impulse-Momentum Theorem: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C4/Newtons-laws.html">C4.2 Newton’s Laws: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C4/Fundamental-interactions.html">C4.3 Fundamental Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C4/solving-strategy.html">C4.4 Newton’s Laws: Solving Strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C4/problemsC4.html">C4.X Problems</a></li>
 </ul>
 
     </div>
@@ -395,9 +398,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="c2-2-introduction-to-vectors">
-<h1>C2.2 Introduction to Vectors<a class="headerlink" href="#c2-2-introduction-to-vectors" title="Permalink to this heading">#</a></h1>
+<h1>C2.2 Introduction to Vectors<a class="headerlink" href="#c2-2-introduction-to-vectors" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="scalars-vs-vectors">
-<h2>2.2.1 Scalars vs. Vectors<a class="headerlink" href="#scalars-vs-vectors" title="Permalink to this heading">#</a></h2>
+<h2>2.2.1 Scalars vs. Vectors<a class="headerlink" href="#scalars-vs-vectors" title="Permalink to this headline">#</a></h2>
 <p>A <b>scalar</b> in physics is a quantity that can be described by a <span style="color:red">number only</span> (and in most cases an associated unit). Examples are:</p>
 <ul class="simple">
 <li><p>Distance: a car traveled 50 miles.</p></li>
@@ -417,7 +420,7 @@ document.write(`
 <p>It can be advantageous to visualize a vector in a geometric sense. In this case, we will say that a vector is a <span style="color:red">directed line segment</span>.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="beyond-scalars-and-vectors">
-<h2>2.2.2. Beyond Scalars and Vectors<a class="headerlink" href="#beyond-scalars-and-vectors" title="Permalink to this heading">#</a></h2>
+<h2>2.2.2. Beyond Scalars and Vectors<a class="headerlink" href="#beyond-scalars-and-vectors" title="Permalink to this headline">#</a></h2>
 <p>While the above definition of a vector appears straightforward, it is because you are not been provided all the information. In fact, you are only being provided enough information that is needed to succeed in PHYS2210 and we will try to not scare you too much.</p>
 <img src="C2-truth.jpeg"  width="400"/>
 <p>Ok, if you want a little bit of the truth: a vector can be characterized as either <i>covariant</i> or <i>contravariant</i> depending on how it transforms under a coordinate transform from one coordinate basis to another. This is some hot stuff and typically covered in a course such as <i>differential geometry</i>. The issue is not important when dealing with rectangular coordinate systems such as our standard cartesian <span class="math notranslate nohighlight">\(xyz\)</span>-system (there is no distinction between covariant and contravariant components), but becomes essential in non-orthogonal coordinate transformations (for example: spherical). Fields such as quantum mechanics and general relatively, and even advanced classical Newtonian mechanics, will need an understanding of these concepts.</p>
@@ -430,7 +433,7 @@ document.write(`
 <p><span style="color:red">I strongly recommend taking courses in Linear and Abstract Algebra as well as Differential Geometry to learn more about vectors</span>.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="geometrical-representation-of-a-vector">
-<h2>2.2.3. Geometrical Representation of a Vector<a class="headerlink" href="#geometrical-representation-of-a-vector" title="Permalink to this heading">#</a></h2>
+<h2>2.2.3. Geometrical Representation of a Vector<a class="headerlink" href="#geometrical-representation-of-a-vector" title="Permalink to this headline">#</a></h2>
 <p>In a very concise form: <span style="color:red">a vector is a directed line segment</span>. Consider two points, A and B, with a line drawn from A (initial point) to B (terminal point). We can specify the direction of the line segment with an arrowhead.</p>
 <p>The length of the line represents the magnitude of the vector and the arrowhead indicates the direction. A vector is usually represented in the text as a letter with an arrow above: <span class="math notranslate nohighlight">\(\vec{A}\)</span>.
 <br>
@@ -438,7 +441,7 @@ document.write(`
 <img src="C2-fig1.png"  width="200"/></p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="vectors-characterized-by-magnitude-and-direction-only">
-<h2>2.2.4. Vectors Characterized by Magnitude and Direction Only<a class="headerlink" href="#vectors-characterized-by-magnitude-and-direction-only" title="Permalink to this heading">#</a></h2>
+<h2>2.2.4. Vectors Characterized by Magnitude and Direction Only<a class="headerlink" href="#vectors-characterized-by-magnitude-and-direction-only" title="Permalink to this headline">#</a></h2>
 <p>Two vectors with the same lengths and directions are identical as a vector is uniquely characterized by those two parameters.<br></p>
 <p><img src="C2-fig2.png"  width="300"/><br></p>
 <p>Above, the vectors <span class="math notranslate nohighlight">\(\vec{A}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span> are the same vector since they have the same magnitude and direction despite the fact that they in different locations.</p>
