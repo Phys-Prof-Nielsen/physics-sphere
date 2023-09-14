@@ -37,6 +37,11 @@ parts:
   - file: Module-C4/Fundamental-interactions
   - file: Module-C4/solving-strategy
   - file: Module-C4/problemsC4
+- caption: Module C5 - Equations of Kinematics - Average
+  chapters:
+  - file: Module-C5/Average-speed-velocity
+  - file: Module-C5/Average-acceleration
+
 #- caption: Module D5 - Linear Kinetic Energy of Point Particle
  # chapters:
 #  - file: Module-D5/Linear_Kinetic_Energy_Point_Particle
