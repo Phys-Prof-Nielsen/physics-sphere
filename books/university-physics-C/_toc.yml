@@ -41,6 +41,8 @@ parts:
   chapters:
   - file: Module-C5/Average-speed-velocity
   - file: Module-C5/Average-acceleration
+  - file: Module-C5/Equations-kinematics
+
 
 #- caption: Module D5 - Linear Kinetic Energy of Point Particle
  # chapters:
