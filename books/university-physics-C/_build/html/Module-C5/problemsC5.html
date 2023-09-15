@@ -457,6 +457,7 @@ We will be using Toricelli’s equation of motion (using z as the vertical coord
 <li><p>If the block starts from rest, what is the speed of the block after being pulled a distance of 5.0 m?</p></li>
 <li><p>How long time did it take to pull it a distance of 5.0 m?</p></li>
 </ol>
+<p><a class="reference external" href="https://youtu.be/osQuyibIRYs?si=02zMpJbx5U88ESWr">Video Solution</a></p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -465,18 +466,18 @@ We will be using Toricelli’s equation of motion (using z as the vertical coord
 </summary>
 <div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
+<span class="c1">#part 1</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">)</span>
 <span class="n">fn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fn&#39;</span><span class="p">)</span>
 
-<span class="n">m</span> <span class="o">=</span> <span class="mf">2.0</span>
-<span class="n">fp</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">2.5</span>
+<span class="n">fp</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
-<span class="n">angle</span> <span class="o">=</span> <span class="mf">30.0</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.20</span>
 
-<span class="n">eq1</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span> <span class="o">+</span> <span class="n">fp</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span>  <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span>
-<span class="n">eq2</span> <span class="o">=</span> <span class="n">fn</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span> <span class="o">-</span> <span class="n">fp</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span> <span class="o">-</span><span class="n">fp</span> <span class="o">+</span> <span class="n">mu</span><span class="o">*</span><span class="n">fn</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">fn</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span>
 
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">ax</span><span class="p">,</span><span class="n">fn</span><span class="p">))</span>
 
@@ -491,7 +492,7 @@ We will be using Toricelli’s equation of motion (using z as the vertical coord
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{ax: 2.73993649053891, fn: 19.4914184222507}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{ax: -1.56200000000000, fn: 24.5250000000000}
 </pre></div>
 </div>
 </div>
@@ -505,20 +506,17 @@ We will be using Toricelli’s equation of motion (using z as the vertical coord
 </summary>
 <div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">fp</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fp&#39;</span><span class="p">)</span>
-<span class="n">fn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fn&#39;</span><span class="p">)</span>
+<span class="c1">#part 2</span>
+<span class="n">vx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;vx&#39;</span><span class="p">)</span>
 
-<span class="n">m</span> <span class="o">=</span> <span class="mf">2.0</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="mf">0.0</span>
-<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
-<span class="n">angle</span> <span class="o">=</span> <span class="mf">30.0</span>
+<span class="n">v0x</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="mf">2.838</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">5.0</span>
 
-<span class="n">eq1</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span> <span class="o">+</span> <span class="n">fp</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span>  <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span>
-<span class="n">eq2</span> <span class="o">=</span> <span class="n">fn</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span> <span class="o">-</span> <span class="n">fp</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">vx</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">v0x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">ax</span><span class="o">*</span><span class="n">dx</span>
 
-<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">fp</span><span class="p">,</span><span class="n">fn</span><span class="p">))</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">vx</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
 </pre></div>
@@ -531,7 +529,44 @@ We will be using Toricelli’s equation of motion (using z as the vertical coord
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{fp: 11.3276122815005, fn: 22.6552245630009}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-5.32728824074688, 5.32728824074688]
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1">#part 3</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;dt&#39;</span><span class="p">)</span>
+
+<span class="n">v0x</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">vx</span> <span class="o">=</span> <span class="mf">5.327</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="mf">2.838</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">dt</span> <span class="o">-</span> <span class="p">(</span><span class="n">vx</span> <span class="o">-</span> <span class="n">v0x</span><span class="p">)</span><span class="o">/</span><span class="n">ax</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">dt</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.87702607470049]
 </pre></div>
 </div>
 </div>
