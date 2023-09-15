@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>C2.4 Analytic Representation of a Vector &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="C2.5 Basic Vector Arithmetic: Analytic Approach" href="Addition_vectors_analytic.html" />
     <link rel="prev" title="C.2.3 Position Vector" href="Position_vector.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -197,6 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="../Module-C5/Average-acceleration.html">C5.2 Average Acceleration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-C5/Equations-kinematics.html">C5.3 Equations of Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C5/problemsC5.html">C5.X Problems</a></li>
 </ul>
 
     </div>
@@ -406,13 +408,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="c2-4-analytic-representation-of-a-vector">
-<h1>C2.4 Analytic Representation of a Vector<a class="headerlink" href="#c2-4-analytic-representation-of-a-vector" title="Permalink to this headline">#</a></h1>
+<h1>C2.4 Analytic Representation of a Vector<a class="headerlink" href="#c2-4-analytic-representation-of-a-vector" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="c2-4-1-motivation">
-<h2>C2.4.1 Motivation<a class="headerlink" href="#c2-4-1-motivation" title="Permalink to this headline">#</a></h2>
+<h2>C2.4.1 Motivation<a class="headerlink" href="#c2-4-1-motivation" title="Permalink to this heading">#</a></h2>
 <p>In most cases in this class, we are using vectors to quantify physical objects and thus require an analytic approach.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="c2-4-2-vector-components">
-<h2>C2.4.2 Vector Components<a class="headerlink" href="#c2-4-2-vector-components" title="Permalink to this headline">#</a></h2>
+<h2>C2.4.2 Vector Components<a class="headerlink" href="#c2-4-2-vector-components" title="Permalink to this heading">#</a></h2>
 <p>Consider a vector <span class="math notranslate nohighlight">\(\vec{A}\)</span> in a 2D reference frame as shown in the figure below. If we project the two end points of the vector (or arrow) onto the x and y-axis, respectively, then the directed line segments of the projections are the <span style="color:red">components</span> of <span class="math notranslate nohighlight">\(\vec{A}\)</span>. We can write them as <span class="math notranslate nohighlight">\(A_x\)</span> and <span class="math notranslate nohighlight">\(A_y\)</span>.</p>
 <img src="C2-fig6.png"  width="500"/>
 <p>We can now describe the vector <span class="math notranslate nohighlight">\(\vec{A}\)</span> through its components (or in component form):</p>
@@ -427,7 +429,7 @@ document.write(`
 <p>When we discuss unit vectors, we will see one more way of writing a vector.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="magnitude-of-a-vector">
-<h2>2. Magnitude of a Vector<a class="headerlink" href="#magnitude-of-a-vector" title="Permalink to this headline">#</a></h2>
+<h2>2. Magnitude of a Vector<a class="headerlink" href="#magnitude-of-a-vector" title="Permalink to this heading">#</a></h2>
 <p>Since the two projected components and the length of the vector itself form a right-angle triangle, we calculate the
 magnitude of the vector by applying the Pythagorean theorem:</p>
 <div class="math notranslate nohighlight">
@@ -450,7 +452,7 @@ Side-note: in linear algebra this is called a norm or a metric. These are cool t
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="c2-4-3-direction-of-a-vector">
-<h2>C2.4.3 Direction of a Vector<a class="headerlink" href="#c2-4-3-direction-of-a-vector" title="Permalink to this headline">#</a></h2>
+<h2>C2.4.3 Direction of a Vector<a class="headerlink" href="#c2-4-3-direction-of-a-vector" title="Permalink to this heading">#</a></h2>
 <p>Above, we saw how we can find the magnitude of a vector if we have knowledge of the vector components. In order to fully describe the vector, we still need to find its direction. The direction can be provided through an angle measured with respect to some reference line. If we draw the vector and its components, we can identify a right-angle triangle and apply trigonometric functions to specify an angle.</p>
 <img src="C2-fig9.png"  width="200"/>
 <p>The relation between the angle <span class="math notranslate nohighlight">\(\theta\)</span> and the components <span class="math notranslate nohighlight">\(A_x\)</span> (adjacent side) and <span class="math notranslate nohighlight">\(A_y\)</span> (opposite side) is</p>
