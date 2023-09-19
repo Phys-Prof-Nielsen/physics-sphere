@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>C5.X Problems &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="C5.4 Projectile Motion" href="Projectile-motion.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -409,7 +410,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="c5-x-problems">
-<h1>C5.X Problems<a class="headerlink" href="#c5-x-problems" title="Permalink to this headline">#</a></h1>
+<h1>C5.X Problems<a class="headerlink" href="#c5-x-problems" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C5.1</h2>
     </header>
 <p>A car accelerates from rest at a constant rate of 3.0 m/s<span class="math notranslate nohighlight">\(^2\)</span> for 10.0 seconds. Calculate its final velocity and the distance it travels during this time.</p>
@@ -453,7 +454,7 @@ We will be using Toricelli’s equation of motion (using z as the vertical coord
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 </div>
 <section id="problem-c5-3">
-<h2>Problem C5.3<a class="headerlink" href="#problem-c5-3" title="Permalink to this headline">#</a></h2>
+<h2>Problem C5.3<a class="headerlink" href="#problem-c5-3" title="Permalink to this heading">#</a></h2>
 <p>A block with a mass of 2.5 kg is being pulled across a horizontal surface. The coefficient of friction between the block and the surface is 0.20. The pulling force is 12 N and parallel to the surface.</p>
 <ol class="arabic simple">
 <li><p>Use Newton’s 2nd law to find the acceleration of the block.</p></li>
@@ -577,7 +578,7 @@ We will be using Toricelli’s equation of motion (using z as the vertical coord
 </div>
 </section>
 <section id="problem-c5-4">
-<h2>Problem C5.4<a class="headerlink" href="#problem-c5-4" title="Permalink to this headline">#</a></h2>
+<h2>Problem C5.4<a class="headerlink" href="#problem-c5-4" title="Permalink to this heading">#</a></h2>
 <p>A 2.0 kg box is being pulled up a 15<span class="math notranslate nohighlight">\(^\circ\)</span> incline by a 15 N pulling force that is parallel to the incline. The coefficient of friction between the box and the surface is 0.25.</p>
 <ol class="arabic simple">
 <li><p>Use Newton’s 2nd law to find the acceleration of the block.</p></li>
@@ -587,7 +588,7 @@ We will be using Toricelli’s equation of motion (using z as the vertical coord
 </ol>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="problem-c5-5">
-<h2>Problem C5.5<a class="headerlink" href="#problem-c5-5" title="Permalink to this headline">#</a></h2>
+<h2>Problem C5.5<a class="headerlink" href="#problem-c5-5" title="Permalink to this heading">#</a></h2>
 <p>Consider two blocks A and B connected by a massless rope and a massless disk as shown in the Figure.</p>
 <img src="P-C5.5.png" width="400">
 <p>Block A has a mass of 2.0 kg and is placed on the table top. The coefficient of kinetic friction between the block and the table surface is 0.30. Block B has a mass of 1.5 kg. The blocks are held in place until <span class="math notranslate nohighlight">\(t = 0\)</span> s when they are released.</p>
@@ -599,9 +600,140 @@ We will be using Toricelli’s equation of motion (using z as the vertical coord
 <li><p>What is the speed of block B right before it hits the floor?</p></li>
 <li><p>What should the static friction be to prevent the system from accelerating?</p></li>
 </ol>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1">#values giving</span>
+<span class="n">mA</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">mB</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.30</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="c1">#unknowns</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="n">fn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fn&#39;</span><span class="p">)</span>
+<span class="n">ft</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ft&#39;</span><span class="p">)</span>
+
+<span class="c1">#coupled equations</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">a</span> <span class="o">-</span> <span class="n">ft</span> <span class="o">+</span> <span class="n">mu</span><span class="o">*</span><span class="n">fn</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">fn</span> <span class="o">-</span> <span class="n">mA</span><span class="o">*</span><span class="n">g</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">mB</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="n">ft</span> <span class="o">-</span> <span class="n">mB</span><span class="o">*</span><span class="n">g</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">),(</span><span class="n">a</span><span class="p">,</span><span class="n">fn</span><span class="p">,</span><span class="n">ft</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{a: 2.52257142857143, fn: 19.6200000000000, ft: 10.9311428571429}
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">dy</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.2</span>
+<span class="n">ay</span> <span class="o">=</span> <span class="o">-</span><span class="mf">9.81</span>
+<span class="n">v0y</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">dy</span> <span class="o">-</span> <span class="n">v0y</span><span class="o">*</span><span class="n">t</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">ay</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-0.494619366829498, 0.494619366829498]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.4946</span>
+<span class="n">ay</span> <span class="o">=</span> <span class="o">-</span><span class="mf">9.81</span>
+<span class="n">v0y</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">vy</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;vy&#39;</span><span class="p">)</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">vy</span> <span class="o">-</span> <span class="n">v0y</span> <span class="o">-</span> <span class="n">ay</span><span class="o">*</span><span class="n">dt</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">vy</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-4.85202600000000]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1">#values giving</span>
+<span class="n">mA</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">mB</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.30</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="c1">#unknowns</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">)</span>
+<span class="n">fn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fn&#39;</span><span class="p">)</span>
+<span class="n">ft</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ft&#39;</span><span class="p">)</span>
+
+<span class="c1">#coupled equations</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">a</span> <span class="o">-</span> <span class="n">ft</span> <span class="o">+</span> <span class="n">fs</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">fn</span> <span class="o">-</span> <span class="n">mA</span><span class="o">*</span><span class="n">g</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">mB</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="n">ft</span> <span class="o">-</span> <span class="n">mB</span><span class="o">*</span><span class="n">g</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">),(</span><span class="n">fs</span><span class="p">,</span><span class="n">fn</span><span class="p">,</span><span class="n">ft</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{fs: 14.7150000000000, ft: 14.7150000000000, fn: 19.6200000000000}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="problem-c5-6">
-<h2>Problem C5.6<a class="headerlink" href="#problem-c5-6" title="Permalink to this headline">#</a></h2>
+<h2>Problem C5.6<a class="headerlink" href="#problem-c5-6" title="Permalink to this heading">#</a></h2>
 <p>A UVU rocket had a little mishap and instead of being launched near vertically, it launched at an angle of 40.0<span class="math notranslate nohighlight">\(^\circ\)</span> with respect to the vertical at 32 m/s and the parachute failed to deploy. Assume no air drag.</p>
 <ol class="arabic simple">
 <li><p>What was the maximum altitude above the launch point?</p></li>
@@ -611,11 +743,11 @@ We will be using Toricelli’s equation of motion (using z as the vertical coord
 </ol>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="problem-c5-7">
-<h2>Problem C5.7<a class="headerlink" href="#problem-c5-7" title="Permalink to this headline">#</a></h2>
+<h2>Problem C5.7<a class="headerlink" href="#problem-c5-7" title="Permalink to this heading">#</a></h2>
 <p>An attempted UVU rocket launch turned into a missile testing event. The spectacular rocket was launched at an angle of 55.0<span class="math notranslate nohighlight">\(^\circ\)</span> with respect to the vertical and a launch velocity of 255 m/s. A distance of 4150.0 m  away was a moutain with a slope of 12.0<span class="math notranslate nohighlight">\(^\circ\)</span>. What vertical distance up the mountain did the rocket land?</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="problem-c5-8">
-<h2>Problem C5.8<a class="headerlink" href="#problem-c5-8" title="Permalink to this headline">#</a></h2>
+<h2>Problem C5.8<a class="headerlink" href="#problem-c5-8" title="Permalink to this heading">#</a></h2>
 <p>Consider two blocks A and B connected by a massless rope and two massless disks as shown in the Figure.</p>
 <img src="P-C5.8.png" width="400">
 <p>Block A has a mass of 2.0 kg and is placed on a frictionless table top. Block B has a mass of 1.5 kg. The blocks are held in place until <span class="math notranslate nohighlight">\(t = 0\)</span> s when they are released.</p>
