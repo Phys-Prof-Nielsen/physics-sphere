@@ -1044,7 +1044,56 @@ Vertical distance = 331.951719382340
 <li><p>If the initial distance between Block B and the floor is 1.2 m, how long time does it take to reach the floor?</p></li>
 <li><p>What is the speed of block B right before it hits the floor?</p></li>
 </ol>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#masses of blocks </span>
+<span class="n">mA</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">mB</span> <span class="o">=</span> <span class="mf">1.5</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="c1">#unknowns</span>
+<span class="n">aAx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;aAx&#39;</span><span class="p">)</span>
+<span class="n">aBy</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;aBy&#39;</span><span class="p">)</span>
+<span class="n">fTA</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fTA&#39;</span><span class="p">)</span>
+<span class="n">fTB</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fTB&#39;</span><span class="p">)</span>
+
+<span class="c1">#coordinate system steup:</span>
+<span class="c1"># x positive to the right</span>
+<span class="c1"># y positive downwards</span>
+
+<span class="c1">#N2 block A </span>
+<span class="c1">#x direction</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">aAx</span> <span class="o">-</span> <span class="n">fTA</span>
+<span class="c1">#y direction for block A is not needed to solve the problem</span>
+
+<span class="c1">#N2 block B</span>
+<span class="c1">#y direction</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">mB</span><span class="o">*</span><span class="n">aBy</span> <span class="o">+</span> <span class="n">fTB</span> <span class="o">-</span> <span class="n">mB</span><span class="o">*</span><span class="n">g</span>
+
+<span class="c1">#N2 disk (massless)</span>
+<span class="c1">#eq3 = mD*aDy + 2*fTA - fTB - mD*g if not massless</span>
+<span class="n">eq3</span> <span class="o">=</span>  <span class="mi">2</span><span class="o">*</span><span class="n">fTA</span> <span class="o">-</span> <span class="n">fTB</span>
+
+<span class="c1">#Equation of constrain for long rope gives us </span>
+<span class="c1">#the accelerations of the two objects are</span>
+<span class="n">eq4</span> <span class="o">=</span> <span class="n">aAx</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">aBy</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">,</span><span class="n">eq4</span><span class="p">),(</span><span class="n">aAx</span><span class="p">,</span> <span class="n">aBy</span><span class="p">,</span> <span class="n">fTA</span><span class="p">,</span> <span class="n">fTB</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{aAx: 3.09789473684211, aBy: 1.54894736842105, fTA: 6.19578947368421, fTB: 12.3915789473684}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
