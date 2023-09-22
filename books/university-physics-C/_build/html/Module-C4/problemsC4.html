@@ -962,6 +962,68 @@ Next, we assume conservation of momentum and ignore relativistic effects to dete
 <section id="problem-c4-7">
 <h2>Problem C4.7<a class="headerlink" href="#problem-c4-7" title="Permalink to this headline">#</a></h2>
 <p>A dog walker is enjoying a quiet stroll in a park with three dogs: Fisher, Jack, and Luke. The relaxing walk takes a turn for the worse as a squirrel runs across the path, a tennis ball appears out of nowhere, and another dog barks. Fisher pulls with a force of 75 N directed 24 degrees east of north, Jack pulls with a force of 55 N directed 35 degrees south of west, and Luke muster 18 N directed 58 degrees south of east. What is the magnitude and direction of the net force?</p>
+<p><a class="reference external" href="https://youtu.be/_sEe9b0V5ew">Video Solution</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#declare constants given</span>
+<span class="n">fF</span> <span class="o">=</span> <span class="mf">75.0</span>
+<span class="n">fJ</span> <span class="o">=</span> <span class="mf">55.0</span>
+<span class="n">fL</span> <span class="o">=</span> <span class="mf">18.0</span>
+<span class="n">angleF</span> <span class="o">=</span> <span class="mi">24</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span> <span class="c1">#angle in radians</span>
+<span class="n">angleJ</span> <span class="o">=</span> <span class="mi">35</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span> <span class="c1">#angle in radians</span>
+<span class="n">angleL</span> <span class="o">=</span> <span class="mi">58</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span> <span class="c1">#angle in radians</span>
+
+<span class="c1">#referece frame</span>
+<span class="c1">#standard: N positive and E postive</span>
+
+<span class="n">fx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fx&#39;</span><span class="p">)</span>
+<span class="n">fy</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fy&#39;</span><span class="p">)</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">fx</span> <span class="o">-</span> <span class="n">fF</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angleF</span><span class="p">)</span> <span class="o">-</span> <span class="n">fL</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angleL</span><span class="p">)</span> <span class="o">+</span> <span class="n">fJ</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angleJ</span><span class="p">)</span> 
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">fy</span> <span class="o">-</span> <span class="n">fF</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angleF</span><span class="p">)</span> <span class="o">+</span> <span class="n">fL</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angleL</span><span class="p">)</span> <span class="o">+</span> <span class="n">fJ</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angleJ</span><span class="p">)</span> 
+
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">fx</span><span class="p">,</span><span class="n">fy</span><span class="p">),</span> <span class="n">dic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">fx</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sol1</span><span class="p">[</span><span class="n">fx</span><span class="p">])</span>
+<span class="n">fy</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sol1</span><span class="p">[</span><span class="n">fy</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fx = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">fx</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fy = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">fy</span><span class="p">))</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">fx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">fy</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">fy</span><span class="o">/</span><span class="n">fx</span><span class="p">))</span><span class="o">*</span><span class="mf">180.0</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+
+<span class="c1">#since fx is negative, theta is cw from -x</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Direction is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; CW from the -x axis&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fx = -5.00956744901185
+fy = 8.19768115648484
+f = 9.607171403154299
+Direction is 58.57107858800425 CW from the -x axis
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="problem-c4-8">
 <h2>Problem C4.8<a class="headerlink" href="#problem-c4-8" title="Permalink to this headline">#</a></h2>
@@ -1024,7 +1086,9 @@ Next, we assume conservation of momentum and ignore relativistic effects to dete
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Part 1: {fp: 70.6320000000000, fn: 176.580000000000}
-Part 2: {fp: 111.042567981967, fn: 235.423595923570}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Part 2: {fp: 111.042567981967, fn: 235.423595923570}
 </pre></div>
 </div>
 </div>
@@ -1081,6 +1145,7 @@ Part 2: {fp: 111.042567981967, fn: 235.423595923570}
 <li><p>Calculate the acceleration of the block down the incline when a force of 5.0 N is applied horizontally on the block and resisting the motion of the block.</p></li>
 <li><p>What minimum force must be applied to keep the box from sliding down and what is the normal force in that situation?</p></li>
 </ol>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=jTJeCQSGH3w&amp;t=414s">Video Solution</a></p>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
