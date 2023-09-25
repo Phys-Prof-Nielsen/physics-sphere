@@ -46,7 +46,10 @@ parts:
   - file: Module-C5/problemsC5
 - caption: Module C6 - Work and Energy 
   chapters:
-  - file: Module-C6/Linear-work-particle  
+  - file: Module-C6/Linear-work-particle 
+  - file: Module-C6/Conservative-forces
+  - file: Module-C6/Potential-energy
+  - file: Module-C6/Conservation-energy
 #- caption: Module D5 - Linear Kinetic Energy of Point Particle
  # chapters:
 #  - file: Module-D5/Linear_Kinetic_Energy_Point_Particle
