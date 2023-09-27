@@ -66,6 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-C5/problemsC5';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="C6.1 Linear Work: Point Particle" href="../Module-C6/Linear-work-particle.html" />
     <link rel="prev" title="C5.4 Projectile Motion" href="Projectile-motion.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -199,6 +200,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Equations-kinematics.html">C5.3 Equations of Kinematics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Projectile-motion.html">C5.4 Projectile Motion</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">C5.X Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C6 - Work and Energy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-C6/Linear-work-particle.html">C6.1 Linear Work: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C6/Conservative-forces.html">C6.2 Conservative Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C6/Potential-energy.html">C6.3 Potential Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C6/Conservation-energy.html">C6.4 Conservation of Energy</a></li>
 </ul>
 
     </div>
@@ -918,11 +926,121 @@ We will be using Toricelli’s equation of motion (using z as the vertical coord
 <li><p>How far away from the launch point did the rocket land?</p></li>
 <li><p>How long time did it take the rocket to land measured from the launch time?</p></li>
 </ol>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#launch angle is measured from horizontal (and converted to radians)</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="p">(</span><span class="mf">90.0</span> <span class="o">-</span> <span class="mf">40.0</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
+<span class="n">v0</span> <span class="o">=</span> <span class="mf">32.0</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="c1">#part 1</span>
+<span class="n">hpeak</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;hpeak&#39;</span><span class="p">)</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">hpeak</span> <span class="o">-</span> <span class="p">(</span><span class="n">v0</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">g</span><span class="p">)</span>
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span><span class="n">hpeak</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Peak Altitude = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol1</span><span class="p">))</span>
+
+<span class="c1">#part 2</span>
+<span class="n">tpeak</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;tpeak&#39;</span><span class="p">)</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">tpeak</span> <span class="o">-</span> <span class="n">v0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span><span class="o">/</span><span class="n">g</span>
+<span class="n">sol2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq2</span><span class="p">,</span><span class="n">tpeak</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Time to peak altitude = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol2</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="c1">#part 3</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">r</span> <span class="o">-</span> <span class="p">(</span><span class="n">v0</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">angle</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">g</span>
+<span class="n">sol3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq3</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Range = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol3</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Peak Altitude = [30.6273122816243]
+Time to peak altitude = 2.49881979406802
+Range = 101.235741268337
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
 <section id="problem-c5-7">
 <h2>Problem C5.7<a class="headerlink" href="#problem-c5-7" title="Permalink to this heading">#</a></h2>
 <p>An attempted UVU rocket launch turned into a missile testing event. The spectacular rocket was launched at an angle of 55.0<span class="math notranslate nohighlight">\(^\circ\)</span> with respect to the vertical and a launch velocity of 255 m/s. A distance of 4150.0 m  away was a moutain with a slope of 12.0<span class="math notranslate nohighlight">\(^\circ\)</span>. What vertical distance up the mountain did the rocket land?</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#launch angle in radians</span>
+<span class="n">launch_angle</span> <span class="o">=</span> <span class="p">(</span><span class="mf">90.0</span><span class="o">-</span><span class="mf">55.0</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
+<span class="n">v0</span> <span class="o">=</span> <span class="mf">255.0</span>
+<span class="c1">#launch coordinates</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">y0</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="n">L</span> <span class="o">=</span> <span class="mf">4150.0</span>
+<span class="n">slope</span> <span class="o">=</span> <span class="mf">12.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
+
+<span class="c1">#unknowns</span>
+<span class="n">ym</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ym&#39;</span><span class="p">)</span>
+<span class="n">xm</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;xm&#39;</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+
+<span class="c1">#xm horizontal distance along the mountain</span>
+<span class="c1">#total horizontal distance from launch point</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">L</span> <span class="o">+</span> <span class="n">xm</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">ym</span>
+
+<span class="c1">#equations of projectile motion</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="p">(</span><span class="n">x0</span> <span class="o">+</span> <span class="n">v0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">launch_angle</span><span class="p">)</span><span class="o">*</span><span class="n">t</span> <span class="p">)</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="p">(</span><span class="n">y0</span> <span class="o">+</span> <span class="n">v0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">launch_angle</span><span class="p">)</span><span class="o">*</span><span class="n">t</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">#three unknowns but only two equations. </span>
+<span class="c1">#Third equation comes from the relationships between mountain coordites</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="p">(</span><span class="n">ym</span><span class="o">/</span><span class="n">xm</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">),(</span><span class="n">ym</span><span class="p">,</span><span class="n">xm</span><span class="p">,</span><span class="n">t</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vertical distance = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(331.951719382340, 1561.71005389930, 27.3439627144062)
+Vertical distance = 331.951719382340
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
 <section id="problem-c5-8">
 <h2>Problem C5.8<a class="headerlink" href="#problem-c5-8" title="Permalink to this heading">#</a></h2>
 <p>Consider two blocks A and B connected by a massless rope and two massless disks as shown in the Figure.</p>
@@ -935,7 +1053,89 @@ We will be using Toricelli’s equation of motion (using z as the vertical coord
 <li><p>If the initial distance between Block B and the floor is 1.2 m, how long time does it take to reach the floor?</p></li>
 <li><p>What is the speed of block B right before it hits the floor?</p></li>
 </ol>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#part 3</span>
+<span class="c1">#masses of blocks </span>
+<span class="n">mA</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">mB</span> <span class="o">=</span> <span class="mf">1.5</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="c1">#unknowns</span>
+<span class="n">aAx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;aAx&#39;</span><span class="p">)</span>
+<span class="n">aBy</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;aBy&#39;</span><span class="p">)</span>
+<span class="n">fTA</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fTA&#39;</span><span class="p">)</span>
+<span class="n">fTB</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fTB&#39;</span><span class="p">)</span>
+
+<span class="c1">#coordinate system steup:</span>
+<span class="c1"># x positive to the right</span>
+<span class="c1"># y positive downwards</span>
+
+<span class="c1">#N2 block A </span>
+<span class="c1">#x direction</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">aAx</span> <span class="o">-</span> <span class="n">fTA</span>
+<span class="c1">#y direction for block A is not needed to solve the problem</span>
+
+<span class="c1">#N2 block B</span>
+<span class="c1">#y direction</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">mB</span><span class="o">*</span><span class="n">aBy</span> <span class="o">+</span> <span class="n">fTB</span> <span class="o">-</span> <span class="n">mB</span><span class="o">*</span><span class="n">g</span>
+
+<span class="c1">#N2 disk (massless)</span>
+<span class="c1">#eq3 = mD*aDy + 2*fTA - fTB - mD*g if not massless</span>
+<span class="n">eq3</span> <span class="o">=</span>  <span class="mi">2</span><span class="o">*</span><span class="n">fTA</span> <span class="o">-</span> <span class="n">fTB</span>   <span class="c1">#since it is massless</span>
+
+<span class="c1">#Equation of constrain for long rope gives us </span>
+<span class="c1">#the accelerations of the two objects are</span>
+<span class="n">eq4</span> <span class="o">=</span> <span class="n">aAx</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">aBy</span>
+
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">,</span><span class="n">eq4</span><span class="p">),(</span><span class="n">aAx</span><span class="p">,</span> <span class="n">aBy</span><span class="p">,</span> <span class="n">fTA</span><span class="p">,</span> <span class="n">fTB</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 3: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol1</span><span class="p">))</span>
+<span class="c1">#part 4</span>
+<span class="n">y0</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">v0y</span> <span class="o">=</span> <span class="mf">0.0</span> 
+<span class="n">aBy</span> <span class="o">=</span> <span class="mf">1.5489</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">eq5</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">y0</span> <span class="o">-</span> <span class="n">v0y</span><span class="o">*</span><span class="n">t</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">aBy</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">sol2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq5</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 4: Time = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol2</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="c1">#part 5</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mf">1.245</span>
+
+<span class="n">vy</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;vy&#39;</span><span class="p">)</span>
+<span class="n">eq6</span> <span class="o">=</span> <span class="n">vy</span> <span class="o">-</span> <span class="n">v0y</span> <span class="o">-</span> <span class="n">aBy</span><span class="o">*</span><span class="n">t</span>
+<span class="n">sol3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq6</span><span class="p">,</span><span class="n">vy</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 5: speed = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol3</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Part 3: {aAx: 3.09789473684211, aBy: 1.54894736842105, fTA: 6.19578947368421, fTB: 12.3915789473684}
+Part 4: Time = 1.24478380955082
+Part 5: speed = 1.92838050000000
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -977,6 +1177,15 @@ We will be using Toricelli’s equation of motion (using z as the vertical coord
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">C5.4 Projectile Motion</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../Module-C6/Linear-work-particle.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">C6.1 Linear Work: Point Particle</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   

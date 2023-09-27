@@ -201,6 +201,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Projectile-motion.html">C5.4 Projectile Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problemsC5.html">C5.X Problems</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C6 - Work and Energy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-C6/Linear-work-particle.html">C6.1 Linear Work: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C6/Conservative-forces.html">C6.2 Conservative Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C6/Potential-energy.html">C6.3 Potential Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C6/Conservation-energy.html">C6.4 Conservation of Energy</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -401,8 +408,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c5-2-3-acceleration-in-2d">C5.2.3 Acceleration in 2D</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometrical-approach">Geometrical Approach</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analytic-approach">3.2 Analytic Approach</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4">Example 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analytic-approach">3.2 Analytic Approach</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
 </ul>
 </li>
@@ -453,7 +459,7 @@ We notice that since we are only given the speed, we can not determine the direc
 <p><b>Solution</b><br>
 In this case, we can deduce that the initial velocity is <span class="math notranslate nohighlight">\(\vec{v}_i = 0~\hat{j}\)</span> and the final velocity is <span class="math notranslate nohighlight">\(\vec{v}_f = 15~\hat{j}\)</span>, both in units of m/s. The average acceleration is</p>
 <div class="math notranslate nohighlight">
-\[ \vec{a}_{av} = \frac{(15 - 0)~\hat{i}}{5.0} = (3.0~\textrm{m/s}^2)~\hat{i}  \]</div>
+\[ \vec{a}_{av} = \frac{(15 - 0)~\hat{j}}{5.0} = (3.0~\textrm{m/s}^2)~\hat{}  \]</div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 1</b><br>
@@ -466,23 +472,27 @@ In this case, we can deduce that the initial velocity is <span class="math notra
 <p>Let us consider how it works out through the following scenarios:</p>
 <section id="scenario-1-and-2">
 <h3>Scenario 1 and 2<a class="headerlink" href="#scenario-1-and-2" title="Permalink to this heading">#</a></h3>
-<p>For <em>scenario 1</em>, we consider the top panel: an object is traveling in the positive direction (as indicated by velocity vectors in that direction) and we take two measurements of the velocity at points A and B. Since <span class="math notranslate nohighlight">\(\vec{v}_B\)</span> is longer than <span class="math notranslate nohighlight">\(\vec{v}_A\)</span>, we conclude that the object is speeding up (moving faster at point B than at point A). The change in velocity is
-$<span class="math notranslate nohighlight">\( \Delta\vec{v} = \vec{v}_B - \vec{v}_A &gt; 0 \)</span>$</p>
+<p>For <em>scenario 1</em>, we consider the top panel: an object is traveling in the positive direction (as indicated by velocity vectors in that direction) and we take two measurements of the velocity at points A and B. Since <span class="math notranslate nohighlight">\(\vec{v}_B\)</span> is longer than <span class="math notranslate nohighlight">\(\vec{v}_A\)</span>, we conclude that the object is speeding up (moving faster at point B than at point A). The change in velocity is</p>
+<div class="math notranslate nohighlight">
+\[ \Delta\vec{v} = \vec{v}_B - \vec{v}_A &gt; 0 \]</div>
 <p>and the acceleration is therefore also greater than zero. In common language: we are accelerating and speeding up. Mr. and Mrs. Layman are ok!
 <img src="C5-fig1.png"  width="600"/></p>
-<p>For <em>scenario 2</em>, we consider the bottom panel: an object is traveling in the positive direction (as indicated by velocity vectors in that direction) and we take two measurements of the velocity at points A and B. Since <span class="math notranslate nohighlight">\(\vec{v}_B\)</span> is shorter than <span class="math notranslate nohighlight">\(\vec{v}_A\)</span>, we conclude that the object is slowing down (moving slower at point B than at point A). The change in velocity is
-$<span class="math notranslate nohighlight">\( \Delta\vec{v} = \vec{v}_B - \vec{v}_A &lt; 0 \)</span>$</p>
+<p>For <em>scenario 2</em>, we consider the bottom panel: an object is traveling in the positive direction (as indicated by velocity vectors in that direction) and we take two measurements of the velocity at points A and B. Since <span class="math notranslate nohighlight">\(\vec{v}_B\)</span> is shorter than <span class="math notranslate nohighlight">\(\vec{v}_A\)</span>, we conclude that the object is slowing down (moving slower at point B than at point A). The change in velocity is</p>
+<div class="math notranslate nohighlight">
+\[ \Delta\vec{v} = \vec{v}_B - \vec{v}_A &lt; 0 \]</div>
 <p>and the acceleration is therefore also less than zero. In common language: we are decelerating and slowing down. Mr. and Mrs. Layman are ok again!</p>
 </section>
 <section id="scenario-3-and-4">
 <h3>Scenario 3 and 4<a class="headerlink" href="#scenario-3-and-4" title="Permalink to this heading">#</a></h3>
-<p>For <em>scenario 3</em>, we consider the top panel: an object is traveling in the negative direction (as indicated by velocity vectors in that direction) and we take two measurements of the velocity at points A and B. Since <span class="math notranslate nohighlight">\(\vec{v}_B\)</span> is longer than <span class="math notranslate nohighlight">\(\vec{v}_A\)</span>, we conclude that the object is speeding up (moving faster at point B than at point A). The change in velocity is
-$<span class="math notranslate nohighlight">\( \Delta\vec{v} = \vec{v}_B - \vec{v}_A &lt; 0 \)</span>$</p>
+<p>For <em>scenario 3</em>, we consider the top panel: an object is traveling in the negative direction (as indicated by velocity vectors in that direction) and we take two measurements of the velocity at points A and B. Since <span class="math notranslate nohighlight">\(\vec{v}_B\)</span> is longer than <span class="math notranslate nohighlight">\(\vec{v}_A\)</span>, we conclude that the object is speeding up (moving faster at point B than at point A). The change in velocity is</p>
+<div class="math notranslate nohighlight">
+\[ \Delta\vec{v} = \vec{v}_B - \vec{v}_A &lt; 0 \]</div>
 <p>since we have a longer, but negative vector subtracted by a shorter, negative vector.</p>
 <p>The acceleration is therefore also less than zero. In words: we are having a negative acceleration, but speeding up. A negative acceleration is typically what we refer to as deceleration, but now its meaning is wrong!
 <img src="C5-fig2.png"  width="600"/></p>
-<p>For <em>scenario 4</em>, we consider the bottom panel: an object is traveling in the negative direction (as indicated by velocity vectors in that direction) and we take two measurements of the velocity at points A and B. Since <span class="math notranslate nohighlight">\(\vec{v}_B\)</span> is shorter than <span class="math notranslate nohighlight">\(\vec{v}_A\)</span>, we conclude that the object is slowing down (moving slower at point B than at point A). The change in velocity is
-$<span class="math notranslate nohighlight">\( \Delta\vec{v} = \vec{v}_B - \vec{v}_A &gt; 0 \)</span>$</p>
+<p>For <em>scenario 4</em>, we consider the bottom panel: an object is traveling in the negative direction (as indicated by velocity vectors in that direction) and we take two measurements of the velocity at points A and B. Since <span class="math notranslate nohighlight">\(\vec{v}_B\)</span> is shorter than <span class="math notranslate nohighlight">\(\vec{v}_A\)</span>, we conclude that the object is slowing down (moving slower at point B than at point A). The change in velocity is</p>
+<div class="math notranslate nohighlight">
+\[ \Delta\vec{v} = \vec{v}_B - \vec{v}_A &gt; 0 \]</div>
 <p>since we have a shorter, but negative vector subtracted by a longer, negative vector.</p>
 <p>The acceleration is therefore also greater than zero. In words: we are having a positive acceleration, but slowing down. A positive acceleration is typically what we refer to speeding up in Layman’s term, but now its meaning is wrong!</p>
 <p>It all depends on choice of reference frame.</p>
@@ -527,9 +537,10 @@ It would be tempting to put the acceleration in the same direction as the final 
 <p>If we write out the changes in velocity, we have</p>
 <div class="math notranslate nohighlight">
 \[ \vec{a}_{av} = \frac{{v_x}_f - {v_x}_i}{\Delta t}~\hat{i} + \frac{{v_y}_f - {v_y}_i}{\Delta t}~\hat{j} \]</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="example-4">
-<h3>Example 4<a class="headerlink" href="#example-4" title="Permalink to this heading">#</a></h3>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 4</h3>
+    </header>
 <p>A particle is initially moving with a velocity of <span class="math notranslate nohighlight">\(\vec{v}_0 = 2.0~\hat{i} - 1.5~\hat{j}\)</span> and undergoes an acceleration during an elapsed time of 0.50 s to achieve a new velocity of <span class="math notranslate nohighlight">\(\vec{v} = 3.0~\hat{i} + 1.0~\hat{j}\)</span>. What was the average acceleration of the particle during this time frame? Assume velocity units in m/s.</p>
 <section id="solution">
 <h4>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h4>
@@ -538,6 +549,7 @@ It would be tempting to put the acceleration in the same direction as the final 
 \[ \vec{a}_{av} = \frac{(3.0) - (2.0)}{(0.5)}~\hat{i} + \frac{(1.0) - (-1.5)}{(0.5)}~\hat{j} \]</div>
 <div class="math notranslate nohighlight">
 \[ \vec{a}_{av} = (2.0~\textrm{m/s}^2)~\hat{i} + (5.0~\textrm{m/s}^2) ~\hat{j} \]</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 3</b><br>
 <p>A particle is initially moving with a velocity of <span class="math notranslate nohighlight">\(\vec{v}_i = 1.5~\hat{i} + 1.5~\hat{j} - 0.5~\hat{k}\)</span> and undergoes an acceleration during an elapsed time of 0.25 s to achieve a new velocity of <span class="math notranslate nohighlight">\(\vec{v}_f = -2.0~\hat{i} + 3.0~\hat{j} - 0.5~\hat{k}\)</span>. What was the average acceleration of the particle during this time frame? Assume velocity units in m/s and comment on your result (for example, is the particle accelerating in all directions?)</p>
@@ -635,8 +647,7 @@ It would be tempting to put the acceleration in the same direction as the final 
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c5-2-3-acceleration-in-2d">C5.2.3 Acceleration in 2D</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometrical-approach">Geometrical Approach</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analytic-approach">3.2 Analytic Approach</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4">Example 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analytic-approach">3.2 Analytic Approach</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
 </ul>
 </li>
