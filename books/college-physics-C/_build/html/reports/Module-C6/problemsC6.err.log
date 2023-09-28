@@ -1,0 +1,64 @@
+Traceback (most recent call last):
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import sympy as sym
+import numpy as np
+
+#values giving
+m = 60.0
+v1 = 12.0
+dy = 2.5
+theta = 35*np.pi/180.
+mu = 0.80
+g = 9.81
+
+#unknown
+vf = sym.Symbol('vf')
+
+#work done by friction
+#normal force
+fn = m*g*np.cos(theta)
+#force of friction
+ff = mu*fn
+#length of incline
+d = 2.5/np.sin(theta)
+#angle between friction and displacement vectors
+phi = 180.0*np.pi/180.0
+#work by friction
+wf = ff*d*np.cos(phi)
+
+
+#work-energy: k1 + u1 + w_NC = k2 + u2 
+eq1 = 0.5*m*v2**2 + m*g*dh - 0.5*m*v1**2 - wf
+
+sol = sym.solve(eq1,v2)
+
+print('Speed  at top = '+str(sol[1]))
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mIndexError[0m                                Traceback (most recent call last)
+Input [0;32mIn [5][0m, in [0;36m<cell line: 33>[0;34m()[0m
+[1;32m     29[0m eq1 [38;5;241m=[39m [38;5;241m0.5[39m[38;5;241m*[39mm[38;5;241m*[39mv2[38;5;241m*[39m[38;5;241m*[39m[38;5;241m2[39m [38;5;241m+[39m m[38;5;241m*[39mg[38;5;241m*[39mdh [38;5;241m-[39m [38;5;241m0.5[39m[38;5;241m*[39mm[38;5;241m*[39mv1[38;5;241m*[39m[38;5;241m*[39m[38;5;241m2[39m [38;5;241m-[39m wf
+[1;32m     31[0m sol [38;5;241m=[39m sym[38;5;241m.[39msolve(eq1,v2)
+[0;32m---> 33[0m [38;5;28mprint[39m([38;5;124m'[39m[38;5;124mSpeed  at top = [39m[38;5;124m'[39m[38;5;241m+[39m[38;5;28mstr[39m([43msol[49m[43m[[49m[38;5;241;43m1[39;49m[43m][49m))
+
+[0;31mIndexError[0m: list index out of range
+IndexError: list index out of range
+
