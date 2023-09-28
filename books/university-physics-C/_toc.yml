@@ -50,6 +50,7 @@ parts:
   - file: Module-C6/Conservative-forces
   - file: Module-C6/Potential-energy
   - file: Module-C6/Conservation-energy
+  - file: Module-C6/problemsC6
 #- caption: Module D5 - Linear Kinetic Energy of Point Particle
  # chapters:
 #  - file: Module-D5/Linear_Kinetic_Energy_Point_Particle
