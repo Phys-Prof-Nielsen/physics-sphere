@@ -1092,9 +1092,7 @@ Direction is 58.57107858800425 CW from the -x axis
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Part 1: {fp: 70.6320000000000, fn: 176.580000000000}
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Part 2: {fp: 111.042567981967, fn: 235.423595923570}
+Part 2: {fp: 111.042567981967, fn: 235.423595923570}
 </pre></div>
 </div>
 </div>
@@ -1346,6 +1344,56 @@ Coefficient of static friction = 0.267949192431123
 <li><p>Find the angle of the slope down which this box could move at a constant velocity. You can neglect air resistance in both parts.</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/6-problems">https://openstax.org/books/university-physics-volume-1/pages/6-problems</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">10.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.100</span>
+
+<span class="c1">#unknowns</span>
+<span class="n">fn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fn&#39;</span><span class="p">)</span>   <span class="c1">#normal force</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">)</span>   <span class="c1">#acceleration</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>   <span class="c1">#mass</span>
+
+<span class="c1">#reference frame: +down the ramp, +up and perpendicular to the ramp</span>
+
+<span class="c1">#part 1</span>
+<span class="c1">#N2:</span>
+<span class="n">eqX</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">mu</span><span class="o">*</span><span class="n">fn</span> 
+<span class="n">eqY</span> <span class="o">=</span> <span class="n">fn</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eqX</span><span class="p">,</span><span class="n">eqY</span><span class="p">),(</span><span class="n">fn</span><span class="p">,</span><span class="n">ax</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">ax</span><span class="p">]))</span>
+
+<span class="c1">#part 2</span>
+<span class="c1">#mu = tan(phi)</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">mu</span><span class="p">)</span><span class="o">*</span><span class="mf">180.0</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angle of slope = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">phi</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acceleration = 0.737392217207614
+Angle of slope = 5.710593137499643
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 
