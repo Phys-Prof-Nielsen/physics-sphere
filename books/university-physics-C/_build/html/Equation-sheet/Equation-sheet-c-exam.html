@@ -1,0 +1,719 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Equation Sheet for C Exam &#8212; A Competency Approach to Introductory Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Equation-sheet/Equation-sheet-c-exam';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="C6.X Problems" href="../Module-C6/problemsC6.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/university-physics-C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/university-physics-C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    A Competency Approach to Introductory Physics: A Compendium to the C Exam
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preample</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Preample/Motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preample/Structure.html">Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preample/Learning_Outcomes.html">Learning Outcomes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C2 - Vectors</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Review_trigonometry.html">C2.1 Review of Required Trigonometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Introduction_to_vectors.html">C2.2 Introduction to Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Position_vector.html">C.2.3 Position Vector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Analytic_vector.html">C2.4 Analytic Representation of a Vector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Addition_vectors_analytic.html">C2.5 Basic Vector Arithmetic: Analytic Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Multiplication_scalar_geometrical.html">C2.6 Multiplication of a Vector by a Scalar: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Displacement_vector.html">C2.7 Concept of Displacement Vector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Addition_vectors_geometrical.html">C2.8 Addition of Vectors: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Unit_vectors.html">C2.9 Unit Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Dot_product.html">C2.10 Dot Product</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/problemsC2.html">C2.X Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C3 - Linear Momentum of Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-C3/Linear_momentum_point_particle.html">C3.1 Linear Momentum: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C3/problemsC3.html">C3.2 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C4 - Linear Force on Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-C4/Impulse-momentum.html">C4.1 Impulse-Momentum Theorem: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C4/Newtons-laws.html">C4.2 Newton’s Laws: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C4/Fundamental-interactions.html">C4.3 Fundamental Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C4/solving-strategy.html">C4.4 Newton’s Laws: Solving Strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C4/problemsC4.html">C4.X Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C5 - Equations of Kinematics - Average</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-C5/Average-speed-velocity.html">C5.1 Average Speed and Velocity: Definitions</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../Module-C5/Average-acceleration.html">C5.2 Average Acceleration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C5/Equations-kinematics.html">C5.3 Equations of Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C5/Projectile-motion.html">C5.4 Projectile Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C5/problemsC5.html">C5.X Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C6 - Work and Energy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-C6/Linear-work-particle.html">C6.1 Linear Work: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C6/Conservative-forces.html">C6.2 Conservative Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C6/Potential-energy.html">C6.3 Potential Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C6/Conservation-energy.html">C6.4 Conservation of Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C6/problemsC6.html">C6.X Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Equation Sheet C Exam</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Equation Sheet for C Exam</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FEquation-sheet/Equation-sheet-c-exam.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Equation-sheet/Equation-sheet-c-exam.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Equation Sheet for C Exam</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#restrictions-assumptions">Restrictions/Assumptions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="equation-sheet-for-c-exam">
+<h1>Equation Sheet for C Exam<a class="headerlink" href="#equation-sheet-for-c-exam" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><p>These are the basic concepts and equations you will need for the C exam, not including mathematical tools such as trigonometry and dot product.</p>
+<section id="restrictions-assumptions">
+<h2>Restrictions/Assumptions<a class="headerlink" href="#restrictions-assumptions" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We are only considering point mass/particle objects.</p></li>
+<li><p>We are only using differences (quantities with <span class="math notranslate nohighlight">\(\Delta\)</span> in front), and quantities calculated from differences are <b>averages</b>. For example: <span class="math notranslate nohighlight">\(\vec{v} = \frac{\Delta \vec{r}}{\Delta t}\)</span> is the <b>average</b> velocity during the time interval <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Concept</p></th>
+<th class="head"><p>Equation</p></th>
+<th class="head"><p>Component Example</p></th>
+<th class="head text-right"><p>Comments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Point mass/particle</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-right"><p>An object where size and shape does not play a role in the dynamics of the object.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Inertial Mass</p></td>
+<td><p><span class="math notranslate nohighlight">\(m\)</span> <img width=250/></p></td>
+<td><p><img width=200/></p></td>
+<td class="text-right"><p>Resistance to a change in <b>linear</b> motion.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Position</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec{r}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x\)</span></p></td>
+<td class="text-right"><p>Location of an object specified with respect to a given reference frame.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Linear Displacement</p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta\vec{r}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta x\)</span></p></td>
+<td class="text-right"><p>Change in position between events 1 and 2. Can be either positive or negative.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Directed line segment <b>pointing</b> from location of event 1 to location of event 2.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Linear Path Length</p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta s\)</span></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Distance traveled between events 1 and 2. Not a vector and always positive.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Elapsed Time</p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta t\)</span></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Difference in time between events 1 and 2.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Average Linear Velocity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec{v} = \frac{\Delta \vec{r}}{\Delta t}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(v_x = \frac{\Delta x}{\Delta t}\)</span></p></td>
+<td class="text-right"><p>Linear displacement over an elapsed time interval. How fast an object is moving in a certain direction. Can be positive or negative.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Average Linear Speed</p></td>
+<td><p><span class="math notranslate nohighlight">\(v = \frac{\Delta s}{\Delta t}\)</span></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Linear path length between events 1 and 2 over an elapsed time interval. How fast an object is moving. Always positive.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Average Linear Acceleration</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec{a} = \frac{\Delta \vec{v}}{\Delta t}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_x = \frac{\Delta v_{x}}{\Delta t}\)</span></p></td>
+<td class="text-right"><p>Change in linear velocity over an elapsed time interval. Can be positive or negative.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>1st Derived Equation of Motion</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec{r} = \vec{r}_{0} + \vec{v}_{0}t + \frac{1}{2}\vec{a}t^2  \)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x = x_0 + v_{0x}t + \frac{1}{2}a_{x}t^2\)</span></p></td>
+<td class="text-right"><p>Change in linear velocity over an elapsed time interval. Can be positive or negative.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>2nd Derived Equation of Motion</p></td>
+<td><p><span class="math notranslate nohighlight">\(v_{x}^2 = v_{0x}^2 + 2a_{x}\Delta x\)</span></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Torrecilli’s Equation. Only valid for constant acceleration and not a vector equation.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Linear Momentum</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec{p} = m\vec{v}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(p_x = mv_x\)</span></p></td>
+<td class="text-right"><p>Definition of <b>linear motion</b> in x-direcion (or y or z). Can be positive or negative.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Change in Linear Momentum</p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta \vec{p} = \vec{p}_{2} - \vec{p}_{1}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta p_x = p_{2_{x}} - p_{1_{x}}\)</span></p></td>
+<td class="text-right"><p>Change in linear motion between events 1 and 2.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p></p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta \vec{p} = m\Delta \vec{v}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta p_x = m\Delta v_x\)</span></p></td>
+<td class="text-right"><p>Only true for a point particle or object that does not change mass between events 1 and 2.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Impulse</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec{j} = \vec{f}\Delta t\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\( j_x = f_{x}\Delta t\)</span></p></td>
+<td class="text-right"><p>Impulse delivered by a single force.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Impulse-Momentum Theorem</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec{j}_{net} = \Delta\vec{p}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\( j_{net,x} = \Delta p_x\)</span></p></td>
+<td class="text-right"><p>Impulse delivered by net force is the change in momentum of the particle.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p></p></td>
+<td><p><span class="math notranslate nohighlight">\( \vec{f}_{net}\Delta t = m\vec{v}_2 + m\vec{v}_1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\( f_{net,x}\Delta t =  mv_{2x} - mv_{1x} \)</span></p></td>
+<td class="text-right"><p>Cause and Effect: Cause (force) acting on an object through some time interval will change the motion (transfer momentum) of the object between events 1 and 2.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Average Linear Net Force</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec{f}_{net} = \frac{\Delta \vec{p}}{\Delta t}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f_{{net}_{x}} = \frac{\Delta p_{x}}{\Delta t}\)</span></p></td>
+<td class="text-right"><p>Cause and Effect: Cause (force) of change in motion (effect) between events 1 and 2.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Also known as Newton’s 2nd Law.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p></p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec{f}_{net} = m\vec{a}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f_{net_{x}} = ma_x\)</span></p></td>
+<td class="text-right"><p>Only true for a point particle or object that does not change mass between events 1 and 2.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Probably the one most people associate with Newton’s 2nd Law from everyday life.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Kinetic Energy</p></td>
+<td><p><span class="math notranslate nohighlight">\(k = \frac{1}{2}m\vec{v}\cdot\vec{v}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(k = \frac{1}{2}m\sqrt{v_{x}^2 + v_{y}^2}\)</span></p></td>
+<td class="text-right"><p>Measure of energy related to motion. Not a vector.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Mechanical Work</p></td>
+<td><p><span class="math notranslate nohighlight">\(w = \vec{f}\cdot\Delta\vec{r}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(w = f_{x}\Delta x + f_{y}\Delta y  \)</span></p></td>
+<td class="text-right"><p>Transfer of particle/system energy between events 1 and 2 due to force <span class="math notranslate nohighlight">\(\vec{f}\)</span>. Work is <strong>not</strong> energy, but transfer of energy.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Positive: Energy input to particle. Negative: Energy out from particle.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Work-Energy Theorem</p></td>
+<td><p><span class="math notranslate nohighlight">\(w_{net} = \Delta k\)</span></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Net energy transfer is changing the kinetic energy of a particle.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p></p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec{f}_{net}\cdot\Delta\vec{r} = \frac{1}{2}mv_{2}^2 - \frac{1}{2}mv_{1}^2\)</span></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Example working equation of work-energy theorem.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Conservative Force</p></td>
+<td><p><span class="math notranslate nohighlight">\(w_{closed~path} = 0\)</span></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Energy transfer along a closed path is zero if the force is conservative.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Potential Energy</p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta u = -w_C\)</span></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Only defined for conservative forces.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Gravitational Potential Energy</p></td>
+<td><p><span class="math notranslate nohighlight">\(u_g = mgh\)</span></p></td>
+<td><p></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(h\)</span> is some height above a reference point.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Mechanical Energy</p></td>
+<td><p><span class="math notranslate nohighlight">\(e = k + u\)</span></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Total mechanical energy.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Work-Energy Theorem Again</p></td>
+<td><p><span class="math notranslate nohighlight">\(w_{NC} = e_2 - e_1\)</span></p></td>
+<td><p></p></td>
+<td class="text-right"><p>Only non-conservative forces can change the mechanical energy of a particle.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Working Equation for Work-Energy</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{2}mv_{1}^2 + mgh_1 + w_{NC} = \frac{1}{2}mv_{2}^2 + mgh_2\)</span></p></td>
+<td><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Equation-sheet"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Module-C6/problemsC6.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">C6.X Problems</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#restrictions-assumptions">Restrictions/Assumptions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kim Nielsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
