@@ -51,10 +51,7 @@ parts:
   - file: Module-C6/Potential-energy
   - file: Module-C6/Conservation-energy
   - file: Module-C6/problemsC6
-#- caption: Module D5 - Linear Kinetic Energy of Point Particle
- # chapters:
-#  - file: Module-D5/Linear_Kinetic_Energy_Point_Particle
-#  - file: Module-D5/Linear_Work_Point_Particle
-#  - file: Module-D5/Work_Energy_Point_Particle
-#  - file: Module-D5/problemsD5
+- caption: Equation Sheet C Exam
+  chapters:
+  - file: Equation-sheet/Equation-sheet-c-exam
   
