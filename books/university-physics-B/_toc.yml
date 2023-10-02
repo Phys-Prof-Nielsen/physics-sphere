@@ -16,5 +16,9 @@ parts:
   - file: Module-B1/plots-constant-velocity
   - file: Module-B1/plots-constant-acceleration
   
+- caption: Module B2 - Basic Calculus
+  chapters:
+  - file: Module-B2/Introduction-derivative
+  - file: Module-B2/Rules-derivatives 
   
   
