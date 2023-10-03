@@ -21,5 +21,6 @@ parts:
   - file: Module-B2/Introduction-derivative
   - file: Module-B2/Rules-derivatives 
   - file: Module-B2/sympy-derivatives 
-  
+  - file: Module-B2/Instantaneous-velocity  
+  - file: Module-B2/Instantaneous-acceleration
   
