@@ -25,3 +25,4 @@ parts:
   - file: Module-B2/Instantaneous-acceleration
   - file: Module-B2/Integral-antiderivative
   - file: Module-B2/Integral-infinite-sum
+  - file: Module-B2/Integral-definite
