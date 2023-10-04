@@ -24,4 +24,4 @@ parts:
   - file: Module-B2/Instantaneous-velocity  
   - file: Module-B2/Instantaneous-acceleration
   - file: Module-B2/Integral-antiderivative
-  
+  - file: Module-B2/Integral-infinite-sum

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>B2.4 Instantaneous Velocity &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B2.5 Instantaneous Acceleration" href="Instantaneous-acceleration.html" />
     <link rel="prev" title="B2.3 Derivatives Using Symbolic Python" href="sympy-derivatives.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -170,7 +171,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="sympy-derivatives.html">B2.3 Derivatives Using Symbolic Python</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">B2.4 Instantaneous Velocity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Instantaneous-acceleration.html">B2.5 Instantaneous Acceleration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Integral-antiderivative.html">B2.6 Integrals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Integral-antiderivative.html">B2.6 Integrals - Antiderivative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Integral-infinite-sum.html">B2.7 Integrals - Infinite Sum</a></li>
 </ul>
 
     </div>
@@ -381,11 +383,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b2-4-instantaneous-velocity">
-<h1>B2.4 Instantaneous Velocity<a class="headerlink" href="#b2-4-instantaneous-velocity" title="Permalink to this headline">#</a></h1>
+<h1>B2.4 Instantaneous Velocity<a class="headerlink" href="#b2-4-instantaneous-velocity" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><p>In our notes on derivatives, we argued that the average slope of a graph between two points could be turned into the instantaneous slope at a single point <em>if</em> the spacing between the independent variable points (in physics, typically <span class="math notranslate nohighlight">\(\Delta x\)</span> or <span class="math notranslate nohighlight">\(\Delta t\)</span>) went towards zero. We can use this approach to define the instantaneous velocity at a given point.</p>
 <p>The instantaneous speed is actually easier to define in this case as compared to the average speed from previous note. We will get to the instantaneous speed in a little bit. This time, we will proceed with the velocity first.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b2-4-1-definition">
-<h2>B2.4.1 Definition<a class="headerlink" href="#b2-4-1-definition" title="Permalink to this headline">#</a></h2>
+<h2>B2.4.1 Definition<a class="headerlink" href="#b2-4-1-definition" title="Permalink to this heading">#</a></h2>
 <p>Since the average velocity is equivalent to the slope of the position vs. time graph, we will define the <strong>instantaneous velocity</strong> as</p>
 <div class="math notranslate nohighlight">
 \[ \vec{v} = \frac{d\vec{r} }{dt} \]</div>
@@ -393,7 +395,7 @@ document.write(`
 <p>The instantaneous velocity is the derivative of the position with respect to time.</p>
 </div>
 <section id="short-cut-for-cartesian-coordinates-only">
-<h3>Short-cut for Cartesian Coordinates Only<a class="headerlink" href="#short-cut-for-cartesian-coordinates-only" title="Permalink to this headline">#</a></h3>
+<h3>Short-cut for Cartesian Coordinates Only<a class="headerlink" href="#short-cut-for-cartesian-coordinates-only" title="Permalink to this heading">#</a></h3>
 <p>We can write the position vector as</p>
 <div class="math notranslate nohighlight">
 \[\vec{r} = x\hat{i} + y\hat{j} + z\hat{k} \]</div>
@@ -498,7 +500,7 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="b2-4-2-instantaneous-speed">
-<h2>B2.4.2 Instantaneous Speed<a class="headerlink" href="#b2-4-2-instantaneous-speed" title="Permalink to this headline">#</a></h2>
+<h2>B2.4.2 Instantaneous Speed<a class="headerlink" href="#b2-4-2-instantaneous-speed" title="Permalink to this heading">#</a></h2>
 <div class="alert alert-success">
 <p>The instantaneous speed is simply the magnitude of the instantaneous velocity vector.</p>
 </div>
@@ -588,7 +590,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/61601658c239a151e054aba097fd4c3e2f527a5285263ff45822f268cbc60685.png" src="../_images/61601658c239a151e054aba097fd4c3e2f527a5285263ff45822f268cbc60685.png" />
+<img alt="../_images/16edf53f9c5b0ceacebb2bd0ba1d0d8275b95df56819207fd00d0eb66509e7cf.png" src="../_images/16edf53f9c5b0ceacebb2bd0ba1d0d8275b95df56819207fd00d0eb66509e7cf.png" />
 </div>
 </div>
 <div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;"> 
