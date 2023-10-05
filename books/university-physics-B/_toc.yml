@@ -33,4 +33,5 @@ parts:
   - file: Module-B3/Equations-kinematics-general
   - file: Module-B3/Equations-kinematics-constant-velocity
   - file: Module-B3/Equations-kinematics-constant-acceleration
-  - file: Module-B3/Equations-kinematics-definite-approach   
+  - file: Module-B3/Equations-kinematics-definite-approach  
+  - file: Module-B3/problemsB3 
