@@ -27,6 +27,7 @@ parts:
   - file: Module-B2/Integral-infinite-sum
   - file: Module-B2/Integral-definite
   - file: Module-B2/Differentials
+  - file: Module-B2/sympy-integrals
   
 - caption: Module B3 - Equations of Kinematics
   chapters:
