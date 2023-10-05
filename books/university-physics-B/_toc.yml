@@ -31,4 +31,5 @@ parts:
 - caption: Module B3 - Equations of Kinematics
   chapters:
   - file: Module-B3/Equations-kinematics-general
-  
+  - file: Module-B3/Equations-kinematics-constant-velocity
+    
