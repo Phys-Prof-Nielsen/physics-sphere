@@ -2,4 +2,4 @@
 
 This is the first set of notes for the introductory physics cource. The notes
 covers material that is required to pass the B-level exam. This is work in progress
-and the notes may be cover all material required.
+and the notes may not cover all material required.
