@@ -1,0 +1,17 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Preample
+  chapters:
+  - file: Preample/Motivation
+  - file: Preample/Structure
+  - file: Preample/Learning_Outcomes 
+
+- caption: Module B1 - Discrete Systems and Differences
+  chapters:
+  - file: Module-B1/data
+  - file: Module-B1/plots-constant-velocity
+  - file: Module-B1/plots-constant-acceleration
