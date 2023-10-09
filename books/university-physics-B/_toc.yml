@@ -37,3 +37,8 @@ parts:
   - file: Module-B3/Equations-kinematics-constant-acceleration
   - file: Module-B3/Equations-kinematics-definite-approach  
   - file: Module-B3/problemsB3 
+  
+- caption: Module B4 - Linear Force
+  chapters:
+  - file: Module-B4/Impulse-momentum-theorem
+  - file: Module-B4/problemsB4
