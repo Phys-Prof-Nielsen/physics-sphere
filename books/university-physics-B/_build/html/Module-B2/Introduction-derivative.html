@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>B2.1 Introduction to the Derivative &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,9 +67,9 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="B2.2 Rules of Derivatives" href="Rules-derivatives.html" />
-    <link rel="prev" title="B1.3 Plots with Constant Acceleration" href="../Module-B1/plots-constant-acceleration.html" />
+    <link rel="prev" title="B1.4 Problems" href="../Module-B1/problemsB1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -162,6 +163,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B1/data.html">B1.1 Working with Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-B1/plots-constant-velocity.html">B1.2 Plots with Constant Velocities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-B1/plots-constant-acceleration.html">B1.3 Plots with Constant Acceleration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/problemsB1.html">B1.4 Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B2 - Basic Calculus</span></p>
 <ul class="current nav bd-sidenav">
@@ -399,9 +401,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b2-1-introduction-to-the-derivative">
-<h1>B2.1 Introduction to the Derivative<a class="headerlink" href="#b2-1-introduction-to-the-derivative" title="Permalink to this headline">#</a></h1>
+<h1>B2.1 Introduction to the Derivative<a class="headerlink" href="#b2-1-introduction-to-the-derivative" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b2-1-1-conceptual-approach-the-slope-of-a-graph">
-<h2>B2.1.1 Conceptual Approach: The slope of a graph<a class="headerlink" href="#b2-1-1-conceptual-approach-the-slope-of-a-graph" title="Permalink to this headline">#</a></h2>
+<h2>B2.1.1 Conceptual Approach: The slope of a graph<a class="headerlink" href="#b2-1-1-conceptual-approach-the-slope-of-a-graph" title="Permalink to this heading">#</a></h2>
 <p>Consider an arbitrary, smooth function <span class="math notranslate nohighlight">\(f(x)\)</span>. Take two data points <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(x + \Delta x\)</span> such that the two points are
 separated by <span class="math notranslate nohighlight">\(\Delta x\)</span> , and the corresponding function values are <span class="math notranslate nohighlight">\(f(x)\)</span> and <span class="math notranslate nohighlight">\(f(x + \Delta x)\)</span>. If we want to estimate the slope at point <span class="math notranslate nohighlight">\(x\)</span>, we can to an approximation say that the slope can be represented as a straight-line slope between the two data points. That slope is given by (remember: rise over run)</p>
 <div class="math notranslate nohighlight">
@@ -421,7 +423,7 @@ slope at point <span class="math notranslate nohighlight">\(x\)</span> compared 
 approximation for the slope of <span class="math notranslate nohighlight">\(f(x)\)</span> at <span class="math notranslate nohighlight">\(x\)</span>. The slopes of the straight lines are referred to as the <strong>average</strong> slope between two data points, whereas the actually slope at the given point is the <strong>instantaneous</strong> slope. The line tangent to the data point is the straight line passing through that point with a slope that is the instantaneous slope at that point.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b2-1-2-definition-of-the-derivative">
-<h2>B2.1.2 Definition of the Derivative<a class="headerlink" href="#b2-1-2-definition-of-the-derivative" title="Permalink to this headline">#</a></h2>
+<h2>B2.1.2 Definition of the Derivative<a class="headerlink" href="#b2-1-2-definition-of-the-derivative" title="Permalink to this heading">#</a></h2>
 <p>The derivative is a mathematical tool to obtain the instantaneous slope provided we know the analytical function
 <span class="math notranslate nohighlight">\(f(x)\)</span>. Based on the above reasoning, we will let <span class="math notranslate nohighlight">\(\Delta x\)</span> become really small, in fact, we will let it approach zero. We
 define the derivative as (read as: the derivative of <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span>)</p>
@@ -429,7 +431,7 @@ define the derivative as (read as: the derivative of <span class="math notransla
 \[ \frac{d}{dx}[f] = \lim_{\Delta x\to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} \]</div>
 <p><strong>In words, we may say that the derivative is the instantaneous change of function f at location x with respect to x</strong>.</p>
 <section id="warning">
-<h3>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">#</a></h3>
+<h3>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">#</a></h3>
 <div class="alert alert-danger">
 <p>We must point out that the <span class="math notranslate nohighlight">\(\frac{d}{dx}\)</span> is a mathematical operator and not a fraction. We
 read this as “the derivative of <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span>”.</p>
@@ -440,7 +442,7 @@ read this as “the derivative of <span class="math notranslate nohighlight">\(f
 <p>but I wrote it as <span class="math notranslate nohighlight">\( \frac{d}{dx}[f]\)</span> to enforce the notion that we are dealing with an operator <span class="math notranslate nohighlight">\(\frac{d}{dx}\)</span> acting on a function <span class="math notranslate nohighlight">\([f]\)</span>. In the future, we will often omit the <span class="math notranslate nohighlight">\([]\)</span> as it will be understood to be an operator acting on a function.</p>
 </section>
 <section id="other-notations">
-<h3>Other notations<a class="headerlink" href="#other-notations" title="Permalink to this headline">#</a></h3>
+<h3>Other notations<a class="headerlink" href="#other-notations" title="Permalink to this heading">#</a></h3>
 <p>The derivative is sometimes written as</p>
 <div class="math notranslate nohighlight">
 \[ f'(x) \]</div>
@@ -509,14 +511,14 @@ The instantanous slope of <span class="math notranslate nohighlight">\(f(x) = x^
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="b2-1-3-application-examples-momentum-and-force">
-<h2>B2.1.3 Application Examples: Momentum and Force<a class="headerlink" href="#b2-1-3-application-examples-momentum-and-force" title="Permalink to this headline">#</a></h2>
+<h2>B2.1.3 Application Examples: Momentum and Force<a class="headerlink" href="#b2-1-3-application-examples-momentum-and-force" title="Permalink to this heading">#</a></h2>
 <p>If a net force is applied to a particle its momentum will change. This is quantified through Newton’s 2nd law:</p>
 <div class="math notranslate nohighlight">
 \[ \vec{f} = \frac{d\vec{p}}{dt} \]</div>
 <p>The graphical implication is: <b>on a graph showing momentum vs. time, the slope represents the force</b>.</p>
 <p>Let us consider two cases here: one with a constant net force and one with a varying net force.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="case-1-constant-force">
-<h3>Case 1: Constant Force<a class="headerlink" href="#case-1-constant-force" title="Permalink to this headline">#</a></h3>
+<h3>Case 1: Constant Force<a class="headerlink" href="#case-1-constant-force" title="Permalink to this heading">#</a></h3>
 <p>In this case, the slope on a momentum vs. time graph must be constant (a straight line). Using the little Python script below, we can creat such an example graph.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -545,7 +547,7 @@ The instantanous slope of <span class="math notranslate nohighlight">\(f(x) = x^
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/242d9c2c6d63631794526f8382b602fcd91b20449e4295db98d92799702d5aee.png" src="../_images/242d9c2c6d63631794526f8382b602fcd91b20449e4295db98d92799702d5aee.png" />
+<img alt="../_images/589f4374e58453a768a4fc90f18b5e339cb5068dc8e41f16fcd3da0447458c1c.png" src="../_images/589f4374e58453a768a4fc90f18b5e339cb5068dc8e41f16fcd3da0447458c1c.png" />
 </div>
 </div>
 <p>What is the magnitude of the force acting on the object according to the momentum vs. time graph shown above? Since the force is represented by the slope, we can choose two points along the graph to evaluate the slope:</p>
@@ -553,7 +555,7 @@ The instantanous slope of <span class="math notranslate nohighlight">\(f(x) = x^
 \[ f_x = \frac{\Delta p_x}{\Delta t} = \frac{24 - 6}{8 - 2} = \frac{18}{6} = 3~\textrm{N}\]</div>
 </section>
 <section id="case-2-varying-force">
-<h3>Case 2: Varying Force<a class="headerlink" href="#case-2-varying-force" title="Permalink to this headline">#</a></h3>
+<h3>Case 2: Varying Force<a class="headerlink" href="#case-2-varying-force" title="Permalink to this heading">#</a></h3>
 <p>Let us consider a net momentum given by a magnitude of</p>
 <div class="math notranslate nohighlight">
 \[p_x(t) = 0.5t^3\]</div>
@@ -590,7 +592,7 @@ The instantanous slope of <span class="math notranslate nohighlight">\(f(x) = x^
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/ead7a4ff9a6fb9c19b88fbce6d7511e8f953604789bfa7c072bb43b96e41f0b7.png" src="../_images/ead7a4ff9a6fb9c19b88fbce6d7511e8f953604789bfa7c072bb43b96e41f0b7.png" />
+<img alt="../_images/a7b3067ffffdd452a25dad318ca103f9cb03caf54ee989a6e9d7d7efff619983.png" src="../_images/a7b3067ffffdd452a25dad318ca103f9cb03caf54ee989a6e9d7d7efff619983.png" />
 </div>
 </div>
 <p>We could approxiate the slope at <span class="math notranslate nohighlight">\(t = 5\)</span> by picking two points, say the values at <span class="math notranslate nohighlight">\(t = 2\)</span> s and <span class="math notranslate nohighlight">\(t = 8\)</span> s. However, we would get an even better approximation by picking the two points at <span class="math notranslate nohighlight">\(t = 4\)</span> s and <span class="math notranslate nohighlight">\(t = 6\)</span> s. Now that we know calculus, we recognize this approach as leading to the derivative, which is how the force and momentum are related. The magnitude of the force is</p>
@@ -639,12 +641,12 @@ The instantanous slope of <span class="math notranslate nohighlight">\(f(x) = x^
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Module-B1/plots-constant-acceleration.html"
+       href="../Module-B1/problemsB1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">B1.3 Plots with Constant Acceleration</p>
+        <p class="prev-next-title">B1.4 Problems</p>
       </div>
     </a>
     <a class="right-next"

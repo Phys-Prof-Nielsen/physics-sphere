@@ -15,6 +15,7 @@ parts:
   - file: Module-B1/data
   - file: Module-B1/plots-constant-velocity
   - file: Module-B1/plots-constant-acceleration
+  - file: Module-B1/problemsB1
   
 - caption: Module B2 - Basic Calculus
   chapters:
