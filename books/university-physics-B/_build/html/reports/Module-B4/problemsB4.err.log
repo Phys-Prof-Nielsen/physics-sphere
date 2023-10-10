@@ -1,0 +1,121 @@
+Traceback (most recent call last):
+  File "/Users/kim/anaconda3/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/kim/anaconda3/lib/python3.10/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/kim/anaconda3/lib/python3.10/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/kim/anaconda3/lib/python3.10/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/kim/anaconda3/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/Users/kim/anaconda3/lib/python3.10/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/Users/kim/anaconda3/lib/python3.10/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/kim/anaconda3/lib/python3.10/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import sympy as sym
+
+m = 2.25
+mu = 0.400
+t1 = 0.0
+t2 = 3.0
+x1 = 0.0
+v1x = 0.0
+g = 9.81
+
+
+# PART 1
+#integral variable
+t = sym.Symbol('t')
+
+#forces: standard coordinate system
+
+#gravity
+fgy = -m*g
+
+#normal
+fny = -fgy
+
+#friction 
+ffx = -mu*fn
+
+#push force
+fpx = 8.0*t**2 - 0.500*t**3
+
+#impulse: integral of force with respect to time
+
+ifgy = sym.integrate(fgy,(t,t1,t2))
+ifny = sym.integrate(fny,(t,t1,t2))
+iffx = sym.integrate(ffx,(t,t1,t2))
+ifpx = sym.integrate(fpx,(t,t1,t2))
+print('Part 1')
+print('Force of gravity impulse: '+ str(ifgy))
+print('Normal force impulse: '+ str(ifny))
+print('Force of friction impulse: '+ str(iffx))
+print('Push force impulse: '+ str(ifpx))
+print(' ')
+
+# PART 2: Use f_net = ma --> 0 = ma - f_net
+
+# x-direction
+ax = sym.Symbol('ax')
+eqx = m*ax - fpx - ffx
+solx = sym.solve(eqx,ax)
+print('Part 2')
+print('a_x = '+str(solx[0]))
+print(' ')
+ax = solx[0]
+
+# PART 3: integrate acceleration to find change in velocity, then add initial to get final
+dvx = sym.integrate(ax,(t,t1,t2))
+v2x = v1x + dvx
+print('Part 3')
+print('v2_x = '+str(v2x))
+print(' ')
+
+# PART 4
+#integrate acceleration to get velocity (start from rest)
+vx = sym.integrate(ax,t)
+#integrate velocity to get position  (start at x = 0)
+x = sym.integrate(vx,t)
+x = x.evalf(subs={t: 3.0})
+print('Part 4')
+print('x = '+ str(x))
+print(' ')
+
+# Part 5: only force is friction and it is constant
+# find acceleration and use kinematics equation to find time
+a = sym.Symbol('a')
+eq1 = m*a - ffx
+sol1 = sym.solve(eq1,a)
+a = sol1[0]
+dt = (0.0 - v2x)/a
+t = 3.0 + dt
+print('Part 5')
+print('Elapsed time: '+str(t))
+print(' ')
+
+# Part 6: find the additional distance after t = 3 s. 
+# acceleration is constant so we can use derived equation of kinematics
+dx = (0.0**2 - v2x**2)/(2*a)
+xf = x + dx
+print('Part 6')
+print('Final position = '+str(xf))
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[4], line 25[0m
+[1;32m     22[0m fny [38;5;241m=[39m [38;5;241m-[39mfgy
+[1;32m     24[0m [38;5;66;03m#friction [39;00m
+[0;32m---> 25[0m ffx [38;5;241m=[39m [38;5;241m-[39mmu[38;5;241m*[39m[43mfn[49m
+[1;32m     27[0m [38;5;66;03m#push force[39;00m
+[1;32m     28[0m fpx [38;5;241m=[39m [38;5;241m8.0[39m[38;5;241m*[39mt[38;5;241m*[39m[38;5;241m*[39m[38;5;241m2[39m [38;5;241m-[39m [38;5;241m0.500[39m[38;5;241m*[39mt[38;5;241m*[39m[38;5;241m*[39m[38;5;241m3[39m
+
+[0;31mNameError[0m: name 'fn' is not defined
+NameError: name 'fn' is not defined
+

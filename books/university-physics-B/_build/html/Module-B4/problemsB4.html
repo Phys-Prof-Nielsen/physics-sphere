@@ -492,17 +492,196 @@ document.write(`
     </header>
 <p>A helicopter with mass <span class="math notranslate nohighlight">\(2.35\times 10^4~\textrm{kg}\)</span> has a position (in meters) given by <span class="math notranslate nohighlight">\(\vec{r} = (0.020t^3)\hat{i} + (2.2t)\hat{j} + (-0.060t^2)\hat{k}\)</span>. Find the net force on the helicopter at  t = 3.0 s.</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/6-additional-problems">https://openstax.org/books/university-physics-volume-1/pages/6-additional-problems</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mf">2.35E4</span>
+<span class="c1">#independent variable</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+
+<span class="c1">#position</span>
+<span class="n">rx</span> <span class="o">=</span> <span class="mf">0.020</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">ry</span> <span class="o">=</span> <span class="mf">2.2</span><span class="o">*</span><span class="n">t</span>
+<span class="n">rz</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.060</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">rx</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ay</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">ry</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">az</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">rz</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">})</span>
+<span class="n">ay</span> <span class="o">=</span> <span class="n">ay</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">})</span>
+<span class="n">az</span> <span class="o">=</span> <span class="n">az</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">})</span>
+
+<span class="n">fx</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span>
+<span class="n">fy</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ay</span>
+<span class="n">fz</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">az</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fz</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Net force at 3 s = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Net force at 3 s = [8460.00000000000, 0, -2820.00000000000]
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B4.5</h2>
     </header>
-<p>A 2.25 kg box is moving across a horizontal floor. There is a coefficient of kinetic friction between the box and the floor of 0.400. A time-dependent applied pushing force of <span class="math notranslate nohighlight">\(f_x = 2.00t^2 - 0.500t^3\)</span> is applied over the time interval of <span class="math notranslate nohighlight">\(t = [0.00,3.00]\)</span> s. Assume the box is initially at rest and starting at <span class="math notranslate nohighlight">\(x = 0.00\)</span> m.</p>
+<p>A 2.25 kg box is moving across a horizontal floor. There is a coefficient of kinetic friction between the box and the floor of 0.400. A time-dependent applied pushing force of <span class="math notranslate nohighlight">\(f_x = 8.00t^2 - 0.500t^3\)</span> is applied over the time interval of <span class="math notranslate nohighlight">\(t = [0.00,3.00]\)</span> s. Assume the box is initially at rest and starting at <span class="math notranslate nohighlight">\(x = 0.00\)</span> m.</p>
 <ol class="arabic simple">
 <li><p>What are the impulses delivered by each forces acting on the box during the first 3 seconds?</p></li>
 <li><p>What is the net acceleration of the box during the first three seconds?</p></li>
 <li><p>What is the velocity of the box at t = 3.00 s?</p></li>
 <li><p>What is the position of the box at t = 3.00 s?</p></li>
-<li><p>After 3 s, the pushing force is no longer applied. How long time does it take the box to come to a stop?</p></li>
+<li><p>After 3 s, the pushing force is no longer applied. How long time from t = 0 s does it take the box to come to a stop?</p></li>
 <li><p>What is its position when it comes to a stop?</p></li>
 </ol>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mf">2.25</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.400</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">v1x</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+
+<span class="c1"># PART 1</span>
+<span class="c1">#integral variable</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+
+<span class="c1">#forces: standard coordinate system</span>
+
+<span class="c1">#gravity</span>
+<span class="n">fgy</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span><span class="o">*</span><span class="n">g</span>
+
+<span class="c1">#normal</span>
+<span class="n">fny</span> <span class="o">=</span> <span class="o">-</span><span class="n">fgy</span>
+
+<span class="c1">#friction </span>
+<span class="n">ffx</span> <span class="o">=</span> <span class="o">-</span><span class="n">mu</span><span class="o">*</span><span class="n">fny</span>
+
+<span class="c1">#push force</span>
+<span class="n">fpx</span> <span class="o">=</span> <span class="mf">8.0</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">0.500</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">3</span>
+
+<span class="c1">#impulse: integral of force with respect to time</span>
+
+<span class="n">ifgy</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">fgy</span><span class="p">,(</span><span class="n">t</span><span class="p">,</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">))</span>
+<span class="n">ifny</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">fny</span><span class="p">,(</span><span class="n">t</span><span class="p">,</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">))</span>
+<span class="n">iffx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">ffx</span><span class="p">,(</span><span class="n">t</span><span class="p">,</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">))</span>
+<span class="n">ifpx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">fpx</span><span class="p">,(</span><span class="n">t</span><span class="p">,</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 1&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Force of gravity impulse: &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ifgy</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Normal force impulse: &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ifny</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Force of friction impulse: &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">iffx</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Push force impulse: &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ifpx</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="c1"># PART 2: Use f_net = ma --&gt; 0 = ma - f_net</span>
+
+<span class="c1"># x-direction</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">)</span>
+<span class="n">eqx</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span> <span class="o">-</span> <span class="n">fpx</span> <span class="o">-</span> <span class="n">ffx</span>
+<span class="n">solx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eqx</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 2&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a_x = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">solx</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">solx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># PART 3: integrate acceleration to find change in velocity, then add initial to get final</span>
+<span class="n">dvx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">ax</span><span class="p">,(</span><span class="n">t</span><span class="p">,</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">))</span>
+<span class="n">v2x</span> <span class="o">=</span> <span class="n">v1x</span> <span class="o">+</span> <span class="n">dvx</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 3&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;v2_x = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v2x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="c1"># PART 4</span>
+<span class="c1">#integrate acceleration to get velocity (start from rest)</span>
+<span class="n">vx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="c1">#integrate velocity to get position  (start at x = 0)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">vx</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 4&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x = &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 5: only force is friction and it is constant</span>
+<span class="c1"># find acceleration and use kinematics equation to find time</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">a</span> <span class="o">-</span> <span class="n">ffx</span>
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">sol1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span> <span class="o">-</span> <span class="n">v2x</span><span class="p">)</span><span class="o">/</span><span class="n">a</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mf">3.0</span> <span class="o">+</span> <span class="n">dt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 5&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 6: find the additional distance after t = 3 s. </span>
+<span class="c1"># acceleration is constant so we can use derived equation of kinematics</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">v2x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<span class="n">xf</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">dx</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 6&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Final position = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">xf</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Part 1
+Force of gravity impulse: -66.2175000000000
+Normal force impulse: 66.2175000000000
+Force of friction impulse: -26.4870000000000
+Push force impulse: 61.8750000000000
+ 
+Part 2
+a_x = -0.222222222222222*t**3 + 3.55555555555556*t**2 - 3.924
+ 
+Part 3
+v2_x = 15.7280000000000
+ 
+Part 4
+x = 3.64200000000000
+ 
+Part 5
+Elapsed time: 7.00815494393476
+ 
+Part 6
+Final position = 35.1621304791030
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B4.5</h2>
     </header>
 <p>A UVU student has been tasked with pulling a 10.0 kg box full of research equipment up a slick rock hill in Capitol Reef National Park. The hill is sloped with an angle of <span class="math notranslate nohighlight">\(12.0^\circ\)</span> from the horizontal. There is a coefficient of friction between the rock surface and the box of 0.75. The student is optimistic at first but quickly runs out of stamina as evidenced by the measured pulling force (in N) of <span class="math notranslate nohighlight">\(f(t) = 225 - 5.00t\)</span> along the incline of the hill. The student and box starts out from rest.</p>
