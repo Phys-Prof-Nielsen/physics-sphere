@@ -41,4 +41,6 @@ parts:
 - caption: Module B4 - Linear Force
   chapters:
   - file: Module-B4/Impulse-momentum-theorem
+  - file: Module-B4/Newton-second-law
+  - file: Module-B4/Time-varying-force
   - file: Module-B4/problemsB4
