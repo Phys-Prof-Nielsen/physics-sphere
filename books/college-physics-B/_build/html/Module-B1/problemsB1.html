@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>B1.4 Problems &#8212; A Competency Approach to Introductory Physics</title>
+    <title>B1.5 Problems &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B1/problemsB1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="B1.3 Plots with Constant Acceleration" href="plots-constant-acceleration.html" />
+    <link rel="prev" title="B1.4 Plots with Force" href="plots-force.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,7 +162,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="data.html">B1.1 Working with Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plots-constant-velocity.html">B1.2 Plots with Constant Velocities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plots-constant-acceleration.html">B1.3 Plots with Constant Acceleration</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">B1.4 Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plots-force.html">B1.4 Plots with Force</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">B1.5 Problems</a></li>
 </ul>
 
     </div>
@@ -344,7 +345,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>B1.4 Problems</h1>
+    <h1>B1.5 Problems</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -358,8 +359,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="b1-4-problems">
-<h1>B1.4 Problems<a class="headerlink" href="#b1-4-problems" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="b1-5-problems">
+<h1>B1.5 Problems<a class="headerlink" href="#b1-5-problems" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B1.1</h2>
     </header>
 <p>Consider the plots below and assume all measurements are significant to two significant figures.</p>
@@ -466,6 +467,95 @@ document.write(`
     </header>
 <p>A police car waits in hiding slightly off the highway. A speeding car is spotted by the police car doing 40.0 m/s. At the instant the speeding car passes the police car, the police car accelerates from rest at 4.00 m/s<span class="math notranslate nohighlight">\(^2\)</span> to catch the speeding car. How long does it take the police car to catch the speeding car? Confirm your solution with a plot.</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/3-additional-problems">https://openstax.org/books/university-physics-volume-1/pages/3-additional-problems</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B1.5</h2>
+    </header>
+<p>A particle is subject to a net force shown on the graph below.</p>
+<ol class="arabic simple">
+<li><p>Find the momentum transfer to/from the particle due to this net force.</p></li>
+<li><p>If the particle has a mass of 0.40 kg and travels at +250.0 m/s at t = 5 s, what was its velocity at t = 0 s?</p></li>
+<li><p>What is its velocity at t = 8 s?</p></li>
+</ol>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">5.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="o">+</span> <span class="mf">3.0</span><span class="o">*</span><span class="n">t1</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">5.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span><span class="o">+</span><span class="mf">5.0</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t2</span><span class="p">))</span><span class="o">+</span><span class="mi">15</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$f_x$ (N)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span><span class="n">f1</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t2</span><span class="p">,</span><span class="n">f2</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/7de56df4f3f7abc3f0e36890b5174f0d68bc37c406f41009f1dd9594c9b73806.png" src="../_images/7de56df4f3f7abc3f0e36890b5174f0d68bc37c406f41009f1dd9594c9b73806.png" />
+</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B1.6</h2>
+    </header>
+<p>A particle is subject to a net force shown on the graph below.</p>
+<ol class="arabic simple">
+<li><p>Find the kinetic energy transfer to/from the particle due to this net force.</p></li>
+<li><p>If the particle has a mass of 0.50 kg and is at rest at t = 0 s, what is its speed at t = 10 s?</p></li>
+<li><p>What is its speed at t = 3 s?</p></li>
+</ol>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.0</span> <span class="o">+</span> <span class="mf">5.0</span><span class="o">*</span><span class="n">t1</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">3.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span><span class="o">+</span><span class="mf">4.0</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t2</span><span class="p">))</span><span class="o">+</span><span class="mi">15</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">3.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span><span class="o">+</span><span class="mf">7.0</span>
+<span class="n">f3</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">-</span> <span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">t3</span><span class="o">-</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$f_x$ (N)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span><span class="n">f1</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t2</span><span class="p">,</span><span class="n">f2</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t3</span><span class="p">,</span><span class="n">f3</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/cefc7a5b9a59b2fea654b4465dcfee6c8b9811c76475d8feef6d6dededab38c4.png" src="../_images/cefc7a5b9a59b2fea654b4465dcfee6c8b9811c76475d8feef6d6dededab38c4.png" />
+</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 
     <script type="text/x-thebe-config">
@@ -500,12 +590,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="plots-constant-acceleration.html"
+       href="plots-force.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">B1.3 Plots with Constant Acceleration</p>
+        <p class="prev-next-title">B1.4 Plots with Force</p>
       </div>
     </a>
 </div></div>
