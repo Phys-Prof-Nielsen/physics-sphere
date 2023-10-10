@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>B1.4 Plots with Force &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -69,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B1.5 Problems" href="problemsB1.html" />
     <link rel="prev" title="B1.3 Plots with Constant Acceleration" href="plots-constant-acceleration.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -165,6 +164,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="plots-constant-acceleration.html">B1.3 Plots with Constant Acceleration</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">B1.4 Plots with Force</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problemsB1.html">B1.5 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B2 - System of Particles</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/center-of-mass.html">B2.1 Center of Mass</a></li>
 </ul>
 
     </div>
@@ -379,37 +382,37 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b1-4-plots-with-force">
-<h1>B1.4 Plots with Force<a class="headerlink" href="#b1-4-plots-with-force" title="Permalink to this heading">#</a></h1>
+<h1>B1.4 Plots with Force<a class="headerlink" href="#b1-4-plots-with-force" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b1-4-1-essentials">
-<h2>B1.4.1 Essentials<a class="headerlink" href="#b1-4-1-essentials" title="Permalink to this heading">#</a></h2>
+<h2>B1.4.1 Essentials<a class="headerlink" href="#b1-4-1-essentials" title="Permalink to this headline">#</a></h2>
 <p>On our journey so far, we have seen force acting on a particle through time (impulse) and through position (work). Let us quickly summarize them here in component form:</p>
 <section id="impulse-by-a-single-force">
-<h3>Impulse by a single force<a class="headerlink" href="#impulse-by-a-single-force" title="Permalink to this heading">#</a></h3>
+<h3>Impulse by a single force<a class="headerlink" href="#impulse-by-a-single-force" title="Permalink to this headline">#</a></h3>
 <p>Momentum transfer by a single force acting on a particle through an elapsed time:</p>
 <div class="math notranslate nohighlight">
 \[ j_x = f_{x}\Delta t \tag{1}\]</div>
 </section>
 <section id="impulse-by-net-force">
-<h3>Impulse by net force<a class="headerlink" href="#impulse-by-net-force" title="Permalink to this heading">#</a></h3>
+<h3>Impulse by net force<a class="headerlink" href="#impulse-by-net-force" title="Permalink to this headline">#</a></h3>
 <p>The change in momentum (net momentum transfer) is</p>
 <div class="math notranslate nohighlight">
 \[ \Delta p_x = f_{net,x}\Delta t \tag{2}\]</div>
 </section>
 <section id="work-by-a-single-force">
-<h3>Work by a single force<a class="headerlink" href="#work-by-a-single-force" title="Permalink to this heading">#</a></h3>
+<h3>Work by a single force<a class="headerlink" href="#work-by-a-single-force" title="Permalink to this headline">#</a></h3>
 <p>Energy transfer by a single force acting on a particle through a distance:</p>
 <div class="math notranslate nohighlight">
 \[ w = f_{x}\Delta x \tag{3}\]</div>
 </section>
 <section id="work-by-net-force">
-<h3>Work by net force<a class="headerlink" href="#work-by-net-force" title="Permalink to this heading">#</a></h3>
+<h3>Work by net force<a class="headerlink" href="#work-by-net-force" title="Permalink to this headline">#</a></h3>
 <p>The change in kinetic energy is</p>
 <div class="math notranslate nohighlight">
 \[ \Delta k = f_{net,x}\Delta x \tag{4}\]</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="b1-4-2-graphical-representation-force-vs-time">
-<h2>B1.4.2 Graphical Representation: Force vs. Time<a class="headerlink" href="#b1-4-2-graphical-representation-force-vs-time" title="Permalink to this heading">#</a></h2>
+<h2>B1.4.2 Graphical Representation: Force vs. Time<a class="headerlink" href="#b1-4-2-graphical-representation-force-vs-time" title="Permalink to this headline">#</a></h2>
 <p>From Equations (1) and (2) we observe that multiplying force by elapsed time, we get the momentum transfer. This is reminescent of the relationships to obtain displacement from velocity and change in velocity from acceleration. Both of these could be obtained from a graph by considering the area from the velocity vs. time and acceleration vs. time graphs. We can extend this observation:</p>
 <div class="alert alert-success">
 <p>The area associated with a force vs. time graph is the impulse delivered to/from the particle.</p>
@@ -466,12 +469,12 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/258ab243fa78cd266c2e159f23a47fec3c67b1d98016e918bc8dcf676263f53c.png" src="../_images/258ab243fa78cd266c2e159f23a47fec3c67b1d98016e918bc8dcf676263f53c.png" />
+<img alt="../_images/5fa5188e3cf5a6ca77981194f9e2970a9e5b5941f4d874ed10013c75c94bbbba.png" src="../_images/5fa5188e3cf5a6ca77981194f9e2970a9e5b5941f4d874ed10013c75c94bbbba.png" />
 </div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b1-4-3-graphical-representation-force-vs-position">
-<h2>B1.4.3 Graphical Representation: Force vs. Position<a class="headerlink" href="#b1-4-3-graphical-representation-force-vs-position" title="Permalink to this heading">#</a></h2>
+<h2>B1.4.3 Graphical Representation: Force vs. Position<a class="headerlink" href="#b1-4-3-graphical-representation-force-vs-position" title="Permalink to this headline">#</a></h2>
 <p>From Equations (3) and (4) we observe that multiplying force by displacement, we get the energy transfer. Based on our experience above, we conclude</p>
 <div class="alert alert-success">
 <p>The area associated with a force vs. position graph is the work done on the particle.</p>
@@ -519,7 +522,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/b60de70a082125ea194e18ae5b3af3dce53e32a5b320f4da3e00efd656d86215.png" src="../_images/b60de70a082125ea194e18ae5b3af3dce53e32a5b320f4da3e00efd656d86215.png" />
+<img alt="../_images/c740f0e9bdd56bbee6edb22e428f71bcaf56e31fc3738e7a05a5bee61dbdbd24.png" src="../_images/c740f0e9bdd56bbee6edb22e428f71bcaf56e31fc3738e7a05a5bee61dbdbd24.png" />
 </div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">

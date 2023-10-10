@@ -17,3 +17,7 @@ parts:
   - file: Module-B1/plots-constant-acceleration
   - file: Module-B1/plots-force
   - file: Module-B1/problemsB1
+  
+- caption: Module B2 - System of Particles
+  chapters:
+  - file: Module-B2/center-of-mass
