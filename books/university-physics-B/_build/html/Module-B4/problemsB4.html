@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>B4.4 Problems &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="B4.3 Time-varying Force" href="Time-varying-force.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -387,7 +386,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b4-4-problems">
-<h1>B4.4 Problems<a class="headerlink" href="#b4-4-problems" title="Permalink to this heading">#</a></h1>
+<h1>B4.4 Problems<a class="headerlink" href="#b4-4-problems" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B4.1</h2>
     </header>
 <p>The amateur rocket engine is labeled according to its impulse and average thrust. One such engine has a thrust curve shown below. The rocket curve is copied from <a class="reference external" href="https://aerotech-rocketry.com/products/product_83b63096-bb03-e999-143a-548a10f8c58e">Aerotech</a> and you can get the answer from the link.</p>
@@ -485,7 +484,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/7de56df4f3f7abc3f0e36890b5174f0d68bc37c406f41009f1dd9594c9b73806.png" src="../_images/7de56df4f3f7abc3f0e36890b5174f0d68bc37c406f41009f1dd9594c9b73806.png" />
+<img alt="../_images/c74f4f34ca9152969abc5b2e68cb3e1b65dd7125be834be7875685eb8d162096.png" src="../_images/c74f4f34ca9152969abc5b2e68cb3e1b65dd7125be834be7875685eb8d162096.png" />
 </div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B4.4</h2>
@@ -543,7 +542,7 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B4.5</h2>
     </header>
-<p>A 2.25 kg box is moving across a horizontal floor. There is a coefficient of kinetic friction between the box and the floor of 0.400. A time-dependent applied pushing force of <span class="math notranslate nohighlight">\(f_x = 8.00t^2 - 0.500t^3\)</span> is applied over the time interval of <span class="math notranslate nohighlight">\(t = [0.00,3.00]\)</span> s. Assume the box is initially at rest and starting at <span class="math notranslate nohighlight">\(x = 0.00\)</span> m.</p>
+<p>A 2.25 kg box is moving across a horizontal floor. There is a coefficient of kinetic friction between the box and the floor of 0.400. A time-dependent applied pushing force of <span class="math notranslate nohighlight">\(f_x = 11 + 3.00t^2 - 0.500t^3\)</span> is applied over the time interval of <span class="math notranslate nohighlight">\(t = [0.00,3.00]\)</span> s. Assume the box is initially at rest and starting at <span class="math notranslate nohighlight">\(x = 0.00\)</span> m.</p>
 <ol class="arabic simple">
 <li><p>What are the impulses delivered by each forces acting on the box during the first 3 seconds?</p></li>
 <li><p>What is the net acceleration of the box during the first three seconds?</p></li>
@@ -586,7 +585,7 @@ document.write(`
 <span class="n">ffx</span> <span class="o">=</span> <span class="o">-</span><span class="n">mu</span><span class="o">*</span><span class="n">fny</span>
 
 <span class="c1">#push force</span>
-<span class="n">fpx</span> <span class="o">=</span> <span class="mf">8.0</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">0.500</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">fpx</span> <span class="o">=</span> <span class="mi">11</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">0.500</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">3</span>
 
 <span class="c1">#impulse: integral of force with respect to time</span>
 
@@ -661,22 +660,24 @@ document.write(`
 Force of gravity impulse: -66.2175000000000
 Normal force impulse: 66.2175000000000
 Force of friction impulse: -26.4870000000000
-Push force impulse: 61.8750000000000
+Push force impulse: 49.8750000000000
  
 Part 2
-a_x = -0.222222222222222*t**3 + 3.55555555555556*t**2 - 3.924
+a_x = -0.222222222222222*t**3 + 1.33333333333333*t**2 + 0.964888888888889
  
 Part 3
-v2_x = 15.7280000000000
+v2_x = 10.3946666666667
  
 Part 4
-x = 3.64200000000000
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 10.6420000000000
  
 Part 5
-Elapsed time: 7.00815494393476
+Elapsed time: 5.64899762147469
  
 Part 6
-Final position = 35.1621304791030
+Final position = 24.4097236380111
 </pre></div>
 </div>
 </div>
@@ -684,7 +685,7 @@ Final position = 35.1621304791030
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B4.6</h2>
     </header>
-<p>A UVU student has been tasked with pulling a 10.0 kg box full of research equipment up a slick rock hill in Capitol Reef National Park. The hill is sloped with an angle of <span class="math notranslate nohighlight">\(12.0^\circ\)</span> from the horizontal. There is a coefficient of friction between the rock surface and the box of 0.75. The student is optimistic at first but quickly runs out of stamina as evidenced by the measured pulling force (in N) of <span class="math notranslate nohighlight">\(f(t) = 72.3 - 0.02t\)</span> along the incline of the hill. The student and box starts out from rest.</p>
+<p>A UVU student has been tasked with pulling a 10.0 kg box full of research equipment up a slick rock hill in Capitol Reef National Park. The hill is sloped with an angle of <span class="math notranslate nohighlight">\(12.0^\circ\)</span> from the horizontal. There is a coefficient of friction between the rock surface and the box of 0.55. The student is optimistic at first but quickly runs out of stamina as evidenced by the measured pulling force (in N) of <span class="math notranslate nohighlight">\(f(t) = 74 - 0.07t\)</span> along the incline of the hill. The student and box starts out from rest.</p>
 <ol class="arabic simple">
 <li><p>How long time did it take before the net acceleration is zero?</p></li>
 <li><p>What is the speed of the box at that time?</p></li>
@@ -702,9 +703,10 @@ Final position = 35.1621304791030
 <div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import sympy as sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span> 
 
 <span class="n">m</span> <span class="o">=</span> <span class="mf">10.0</span>
-<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.75</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.55</span>
 <span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="mf">12.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
 <span class="n">t1</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -719,9 +721,9 @@ Final position = 35.1621304791030
 <span class="n">fgy</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
 <span class="n">fgx</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
 <span class="n">ffx</span> <span class="o">=</span> <span class="o">-</span><span class="n">mu</span><span class="o">*</span><span class="n">fny</span>
-<span class="n">fpx</span> <span class="o">=</span> <span class="mf">72.3</span> <span class="o">-</span> <span class="mf">0.02</span><span class="o">*</span><span class="n">t</span>
+<span class="n">fpx</span> <span class="o">=</span> <span class="mi">74</span> <span class="o">-</span> <span class="mf">0.07</span><span class="o">*</span><span class="n">t</span>
 
-<span class="n">eqx</span> <span class="o">=</span> <span class="n">ax</span> <span class="o">-</span> <span class="n">fpx</span> <span class="o">-</span> <span class="n">ffx</span>
+<span class="n">eqx</span> <span class="o">=</span> <span class="n">ax</span> <span class="o">-</span> <span class="n">fpx</span> <span class="o">-</span> <span class="n">ffx</span> <span class="o">-</span> <span class="n">fgx</span>
 <span class="n">eqy</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">-</span> <span class="n">fny</span> <span class="o">-</span> <span class="n">fgy</span>
 <span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eqx</span><span class="p">,</span><span class="n">eqy</span><span class="p">),(</span><span class="n">t</span><span class="p">,</span><span class="n">fny</span><span class="p">))</span>
 
@@ -732,7 +734,7 @@ Final position = 35.1621304791030
 <span class="k">del</span> <span class="n">ax</span>
 
 <span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">)</span>
-<span class="n">eqx</span> <span class="o">=</span> <span class="n">ax</span> <span class="o">-</span> <span class="n">fpx</span> <span class="o">-</span> <span class="n">ffx</span>
+<span class="n">eqx</span> <span class="o">=</span> <span class="n">ax</span> <span class="o">-</span> <span class="n">fpx</span> <span class="o">-</span> <span class="n">ffx</span> <span class="o">-</span> <span class="n">fgx</span>
 <span class="n">eqy</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">-</span> <span class="n">fny</span> <span class="o">-</span> <span class="n">fgy</span>
 <span class="n">sol2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eqx</span><span class="p">,</span><span class="n">eqy</span><span class="p">),(</span><span class="n">ax</span><span class="p">,</span><span class="n">fny</span><span class="p">))</span>
 
@@ -794,14 +796,16 @@ Final position = 35.1621304791030
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time to zero acceleration: 16.6395138005138
-Speed: 2.76873419517488
-Distance up incline: 30.7135939003778
-Time to exhaustion: 33.2790276010275
-Distance to breaking point: 61.4271878007556
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time to zero acceleration: 11.8272761883619
 </pre></div>
 </div>
-<img alt="../_images/25b1103015d0f187fbd88718ebe52ef92dd794c7dc3fa9ef9a1c0b1d3344594c.png" src="../_images/25b1103015d0f187fbd88718ebe52ef92dd794c7dc3fa9ef9a1c0b1d3344594c.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Speed: 4.89595617125276
+Distance up incline: 38.6038838956809
+Time to exhaustion: 23.6545523767239
+Distance to breaking point: 77.2077677913618
+</pre></div>
+</div>
+<img alt="../_images/5cfa6d1a5ef74a5a13015aee82926f2fcc536aaf24fafcc74999e9f3d4faebc3.png" src="../_images/5cfa6d1a5ef74a5a13015aee82926f2fcc536aaf24fafcc74999e9f3d4faebc3.png" />
 </div>
 </details>
 </div>
