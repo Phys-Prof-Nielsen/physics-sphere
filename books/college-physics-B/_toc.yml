@@ -22,3 +22,7 @@ parts:
   chapters:
   - file: Module-B2/center-of-mass
   - file: Module-B2/cm-dynamics
+  
+- caption: Module B3 - Rotational Kinematics
+  chapters:
+  - file: Module-B3/basic-relations
