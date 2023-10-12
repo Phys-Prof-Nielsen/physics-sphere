@@ -44,3 +44,8 @@ parts:
   - file: Module-B4/Newton-second-law
   - file: Module-B4/Time-varying-force
   - file: Module-B4/problemsB4
+  
+- caption: Module B5 - Work and Energy
+  chapters:
+  - file: Module-B5/Linear-work
+  - file: Module-B5/problemsB5
