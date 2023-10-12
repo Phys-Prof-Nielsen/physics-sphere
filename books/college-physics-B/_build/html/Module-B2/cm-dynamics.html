@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>B2.1 Center of Mass &#8212; A Competency Approach to Introductory Physics</title>
+    <title>B2.2 Center of Mass Dynamics &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -62,11 +62,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B2/center-of-mass';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B2/cm-dynamics';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="B2.2 Center of Mass Dynamics" href="cm-dynamics.html" />
-    <link rel="prev" title="B1.5 Problems" href="../Module-B1/problemsB1.html" />
+    <link rel="prev" title="B2.1 Center of Mass" href="center-of-mass.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -167,8 +166,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B2 - System of Particles</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">B2.1 Center of Mass</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cm-dynamics.html">B2.2 Center of Mass Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="center-of-mass.html">B2.1 Center of Mass</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">B2.2 Center of Mass Dynamics</a></li>
 </ul>
 
     </div>
@@ -240,7 +239,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-B2/center-of-mass.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-B2/cm-dynamics.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -270,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-B2/center-of-mass.ipynb" target="_blank"
+      <li><a href="../_sources/Module-B2/cm-dynamics.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -352,7 +351,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>B2.1 Center of Mass</h1>
+    <h1>B2.2 Center of Mass Dynamics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -362,12 +361,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-1-1-motivation">B2.1.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-1-2-mass-of-a-system">B2.1.2 Mass of a system</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-1-3-center-of-mass">B2.1.3 Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-1-4-linear-velocity-of-center-of-mass">B2.1.4 Linear Velocity of Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-1-5-linear-acceleration-of-center-of-mass">B2.1.5 Linear Acceleration of Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-1-6-center-of-mass-vs-center-of-gravity">B2.1.6 Center of Mass vs. Center of Gravity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-2-1-point-particle-vs-center-of-mass">B2.2.1 Point Particle vs. Center of Mass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-2-2-equations-for-cm">B2.2.2 Equations for CM</a></li>
 </ul>
             </nav>
         </div>
@@ -379,87 +374,37 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="b2-1-center-of-mass">
-<h1>B2.1 Center of Mass<a class="headerlink" href="#b2-1-center-of-mass" title="Permalink to this headline">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b2-1-1-motivation">
-<h2>B2.1.1 Motivation<a class="headerlink" href="#b2-1-1-motivation" title="Permalink to this headline">#</a></h2>
-<p>We are now moving into the regime of investigating extended objects, that is, objects where size and shape may play a role. This is in contrast to the point particle concept. In doing so, explaining the dynamics quickly becomes complicated as we keep track of individual particles making up an object.</p>
-<p>Fortunately, in many instances, we do not worry about the dynamics of each particle in an object but instead interested in the <strong>collective</strong> dynamics. The <strong>center of mass</strong> or <strong>CM</strong> is a key parameter to describe such collective behavior.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b2-1-2-mass-of-a-system">
-<h2>B2.1.2 Mass of a system<a class="headerlink" href="#b2-1-2-mass-of-a-system" title="Permalink to this headline">#</a></h2>
-<p>In a classical, or everyday life, the mass <span class="math notranslate nohighlight">\(M\)</span> of a discrete system of  <span class="math notranslate nohighlight">\(N\)</span> particles is the sum of the masses <span class="math notranslate nohighlight">\(m_i\)</span> of the individual particles</p>
-<div class="math notranslate nohighlight">
-\[ M = \displaystyle\sum_{i=1}^{N} m_i \]</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b2-1-3-center-of-mass">
-<h2>B2.1.3 Center of Mass<a class="headerlink" href="#b2-1-3-center-of-mass" title="Permalink to this headline">#</a></h2>
-<p>The center of mass of a concept describing the statistically weighted distribution of mass in a system. In plain words: if all the mass of a system was concentrated in a single spatial point, that point/position would the be center of mass.</p>
-<p>For a system of discrete objects the center of mass is defined as</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ \vec{R}_{CM} = \frac{\displaystyle\sum_{i=1}^{N} m_{i}\vec{r}_i}{\displaystyle\sum_{i=1}^{N} m_i} \]</div>
-</div>
-<p>It may be helpful to write out the summations</p>
-<div class="math notranslate nohighlight">
-\[ \vec{R}_{CM} = \frac{m_{1}\vec{r}_{1} + m_{2}\vec{r}_{2} + \dots + m_{N}\vec{r}_{N}}{m_{1} + m_{2} + \dots + m_{N}}\]</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
-<header>
-<h3> Example 1</h3>
-    </header>
-<p>Consider three point masses (<span class="math notranslate nohighlight">\(m_1 = m_2 = 1.00\)</span> kg and <span class="math notranslate nohighlight">\(m_3 = 2.00\)</span> kg) located at <span class="math notranslate nohighlight">\((x,y) = (1.0~\textrm{m},0.0~\textrm{m}),~(2.0~\textrm{m},0.0~\textrm{m})\)</span>, and <span class="math notranslate nohighlight">\((0.0~\textrm{m},2.0~\textrm{m})\)</span>, respectively. Find the center of mass of this system.</p>
-<p><strong>Solution</strong></p>
-<p>We have the individual masses and components of the particles, so we can plug into the equation defining the CM position vector:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \vec{R}_{CM} = \frac{(1.00)\left(\begin{bmatrix} 1.0  \\ 0.0  \end{bmatrix}\right) + (1.00)\left(\begin{bmatrix} 2.0  \\ 0.0  \end{bmatrix}\right) + (2.00)\left(\begin{bmatrix} 0.0  \\ 2.0  \end{bmatrix}\right)}{(1.0) + (1.0) + (2.0)} = \begin{bmatrix} 0.75~\textrm{m}  \\ 1.0~\textrm{m}  \end{bmatrix}\end{split}\]</div>
-</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
-<b>Box 1</b><br>
-<p>The water molecule consist of an oxygen atom (<span class="math notranslate nohighlight">\(m_{O} = 16\)</span> u) and two hydrogen atoms (<span class="math notranslate nohighlight">\(m_{H} = 1.0\)</span> u), where <span class="math notranslate nohighlight">\(u\)</span> is the atomic mass unit. The hydrogen atoms are  located at a distance of <span class="math notranslate nohighlight">\(d = 9.57\times 10^{-11}\)</span> m from the center of the oxygen atom and separated by an angle of <span class="math notranslate nohighlight">\(105^\circ\)</span>. Find the center of mass of the water molecule and make a sketch to illustrate its location.</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
-<b>Box 2</b><br>
-<p>A <span class="math notranslate nohighlight">\(2000.0\)</span> kg SUV is moving along a straight, flat highway at <span class="math notranslate nohighlight">\(+10.0\)</span> m/s. At a given instant a sedan, with a mass of <span class="math notranslate nohighlight">\(1000.0\)</span> kg and velocity of <span class="math notranslate nohighlight">\(+20.0\)</span> m/s, has its center of mass <span class="math notranslate nohighlight">\(40.0\)</span> m ahead of the center of mass of the SUV. Where is the center of mass of the system at this instant? Give your answer relative to the SUV.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="b2-2-center-of-mass-dynamics">
+<h1>B2.2 Center of Mass Dynamics<a class="headerlink" href="#b2-2-center-of-mass-dynamics" title="Permalink to this headline">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b2-2-1-point-particle-vs-center-of-mass">
+<h2>B2.2.1 Point Particle vs. Center of Mass<a class="headerlink" href="#b2-2-1-point-particle-vs-center-of-mass" title="Permalink to this headline">#</a></h2>
+<p>The CM is the position vector of an object where the object will <strong>behave like a point particle</strong> with a mass equal to that of the object.</p>
+<p>The implications of this is: <strong>the center of mass of an object will follow the same laws of physics as a point particle and everything we have discussed for a point particle can be applied to the CM concept of an object</strong>.</p>
+<div class="alert alert-danger">
+<p>In this process, we can only describe the dynamics of the CM location of the object. We can not say anything about the specific dynamics of the object itself. Is it rotating or not? Is it stretching or contracting? We can not tell from the linear CM dynamics.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b2-1-4-linear-velocity-of-center-of-mass">
-<h2>B2.1.4 Linear Velocity of Center of Mass<a class="headerlink" href="#b2-1-4-linear-velocity-of-center-of-mass" title="Permalink to this headline">#</a></h2>
-<p>The definitions and equations of kinematics can be applied to the CM as well. The linear velocity of the CM is</p>
-<div class="alert alert-success">
+<section id="b2-2-2-equations-for-cm">
+<h2>B2.2.2 Equations for CM<a class="headerlink" href="#b2-2-2-equations-for-cm" title="Permalink to this headline">#</a></h2>
+<p><strong>Linear Momentum</strong></p>
 <div class="math notranslate nohighlight">
-\[\vec{V}_{CM} = \frac{\displaystyle\sum_{i=1}^{N} m_{i}\vec{v}_i}{\displaystyle\sum_{i=1}^{N} m_i}\]</div>
-</div>
-<p>It may be helpful to write out the summations</p>
+\[ \vec{P} = M\vec{V} \]</div>
+<p><strong>Impulse</strong></p>
 <div class="math notranslate nohighlight">
-\[ \vec{V}_{CM} = \frac{m_{1}\vec{v}_{1} + m_{2}\vec{v}_{2} + \dots + m_{N}\vec{v}_{N}}{m_{1} + m_{2} + \dots + m_{N}}\]</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
-<b>Box 3</b><br>
-<p>A 2000.0 kg SUV is moving along a straight, flat highway at +10.0 m/s. A sedan, with a mass of 1000.0 kg and velocity of +20.0  m/s, has its center of mass 40.0 m ahead of the center of mass of the SUV.</p>
-<ol class="arabic simple">
-<li><p>Find the velocity of the center of mass relative to the SUV.</p></li>
-<li><p>Find the velocity of the center of mass relative to a stationary ground-based observer.</p></li>
-</ol>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b2-1-5-linear-acceleration-of-center-of-mass">
-<h2>B2.1.5 Linear Acceleration of Center of Mass<a class="headerlink" href="#b2-1-5-linear-acceleration-of-center-of-mass" title="Permalink to this headline">#</a></h2>
-<p>Similarly to velocity, the linear acceleration of the CM is</p>
-<div class="alert alert-success">
+\[ \vec{J} = \vec{F}\Delta t \]</div>
+<p><strong>Impulse-Momentum Theorem</strong></p>
 <div class="math notranslate nohighlight">
-\[\vec{A}_{CM} = \frac{\displaystyle\sum_{i=1}^{N} m_{i}\vec{a}_i}{\displaystyle\sum_{i=1}^{N} m_i}\]</div>
-</div>
-<p>It may be helpful to write out the summations</p>
+\[\Delta P = \vec{F}_{net}\Delta t \]</div>
+<p><strong>Kinetic Energy</strong></p>
 <div class="math notranslate nohighlight">
-\[ \vec{A}_{CM} = \frac{m_{1}\vec{a}_{1} + m_{2}\vec{a}_{2} + \dots + m_{N}\vec{a}_{N}}{m_{1} + m_{2} + \dots + m_{N}}\]</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b2-1-6-center-of-mass-vs-center-of-gravity">
-<h2>B2.1.6 Center of Mass vs. Center of Gravity<a class="headerlink" href="#b2-1-6-center-of-mass-vs-center-of-gravity" title="Permalink to this headline">#</a></h2>
-<p>We will often hear the term <strong>Center of Gravity</strong> (CG). For example, if you balance an object on your finger, the CG is located somewhere along a vertical line above your finger. Hence, when we disucss rotation and balanced objects, the CG plays an important role.</p>
-<p>Center of Mass is the average location of all the mass in an object. Similarly,</p>
-<div class="alert alert-success">
-<p>The Center of Gravity is the average location of the weight (or force of gravity) acting on an object.</p>
-</div>
-<p>For all our purposes, the CG and CM are the exact same location.</p>
-<p>When is that not the case? It will require a change in the gravitational field across the body. This happens for very large distances/objects (like satellites and our solar system) or when we are in very strong gravitational systems (like close to a smaller black hole).</p>
+\[ K = \frac{1}{2}MV^2 \]</div>
+<p><strong>Work</strong></p>
+<div class="math notranslate nohighlight">
+\[ W = \vec{F}\cdot\Delta \vec{R} \]</div>
+<p><strong>Work-Energy Theorem</strong></p>
+<div class="math notranslate nohighlight">
+\[ \Delta K = \vec{F}_{net}\cdot\vec{R} \]</div>
+<p>Similarly, all derived equations, including kinematics and potential energy, can be expressed by replacing the lower case letters representing particles with the upper case letters representing CM.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 
@@ -495,22 +440,13 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Module-B1/problemsB1.html"
+       href="center-of-mass.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">B1.5 Problems</p>
+        <p class="prev-next-title">B2.1 Center of Mass</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="cm-dynamics.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">B2.2 Center of Mass Dynamics</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -530,12 +466,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-1-1-motivation">B2.1.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-1-2-mass-of-a-system">B2.1.2 Mass of a system</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-1-3-center-of-mass">B2.1.3 Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-1-4-linear-velocity-of-center-of-mass">B2.1.4 Linear Velocity of Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-1-5-linear-acceleration-of-center-of-mass">B2.1.5 Linear Acceleration of Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-1-6-center-of-mass-vs-center-of-gravity">B2.1.6 Center of Mass vs. Center of Gravity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-2-1-point-particle-vs-center-of-mass">B2.2.1 Point Particle vs. Center of Mass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-2-2-equations-for-cm">B2.2.2 Equations for CM</a></li>
 </ul>
   </nav></div>
 

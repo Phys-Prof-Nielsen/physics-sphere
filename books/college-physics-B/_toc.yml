@@ -21,3 +21,4 @@ parts:
 - caption: Module B2 - System of Particles
   chapters:
   - file: Module-B2/center-of-mass
+  - file: Module-B2/cm-dynamics
