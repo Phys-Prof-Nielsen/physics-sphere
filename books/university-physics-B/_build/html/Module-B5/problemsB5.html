@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>B5.X Problems &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -65,9 +66,9 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B5/problemsB5';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="B5.1 Linear Work and Energy" href="Linear-work.html" />
+    <link rel="prev" title="B5.3 Spring Potential Energy" href="spring-potential-energy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -194,6 +195,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B5 - Work and Energy</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Linear-work.html">B5.1 Linear Work and Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spring-potential-energy.html">B5.3 Spring Potential Energy</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">B5.X Problems</a></li>
 </ul>
 
@@ -391,7 +393,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b5-x-problems">
-<h1>B5.X Problems<a class="headerlink" href="#b5-x-problems" title="Permalink to this headline">#</a></h1>
+<h1>B5.X Problems<a class="headerlink" href="#b5-x-problems" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B5.1</h2>
     </header>
 <p>A force <span class="math notranslate nohighlight">\(f_x = (-5.0x^2 + 7.0x)~\textrm{N}\)</span> acts on a particle. How much work does the force do on the particle as it moves from x = 2.0 m to x = 5.0 m?</p>
@@ -411,6 +413,93 @@ document.write(`
 Suppose a frictional force also acts on the particle. If the particle’s speed when it starts at x = -4.0 m
 is 0.0 m/s and when it arrives at x = 4.0 m is 9.0 m/s, how much work is done on it by the frictional force between x = -4.0 m and x = 4.0 m?</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-additional-problems">https://openstax.org/books/university-physics-volume-1/pages/8-additional-problems</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B5.5</h2>
+    </header>
+<p>A particle is subject to a net force shown on the graph below.</p>
+<ol class="arabic simple">
+<li><p>Find the kinetic energy transfer to/from the particle due to this net force.</p></li>
+<li><p>If the particle has a mass of 0.50 kg and is at rest at x = 0 m, what is its speed at x = 10 m?</p></li>
+<li><p>What is its speed at x = 3 m?</p></li>
+</ol>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.0</span> <span class="o">+</span> <span class="mf">5.0</span><span class="o">*</span><span class="n">t1</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">3.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span><span class="o">+</span><span class="mf">4.0</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t2</span><span class="p">))</span><span class="o">+</span><span class="mi">15</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">3.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span><span class="o">+</span><span class="mf">7.0</span>
+<span class="n">f3</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">-</span> <span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">t3</span><span class="o">-</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$f_x$ (N)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Position (m)&#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span><span class="n">f1</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t2</span><span class="p">,</span><span class="n">f2</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t3</span><span class="p">,</span><span class="n">f3</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/cfbb7cc8d20a529c58c1ecb5fcf2a011d10cc1ae7a89c6c282231db962c80fad.png" src="../_images/cfbb7cc8d20a529c58c1ecb5fcf2a011d10cc1ae7a89c6c282231db962c80fad.png" />
+</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B5.6</h2>
+    </header>
+<p>A bungee cord exerts a nonlinear elastic force of magnitude <span class="math notranslate nohighlight">\(f_x = k_{1}x + k_{2}x^3\)</span>, where x is the distance the cord is stretched, <span class="math notranslate nohighlight">\(k_1\)</span> = 204 N/m and <span class="math notranslate nohighlight">\(k_2\)</span> = −0.233 N/m<span class="math notranslate nohighlight">\(^3\)</span>. How much work must be done on the cord to stretch it 16.7 m?</p>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/7-problems">https://openstax.org/books/university-physics-volume-1/pages/7-problems</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B5.7</h2>
+    </header>
+<p>When a <span class="math notranslate nohighlight">\(3.0\)</span> kg block is pushed against a massless spring of force constant  <span class="math notranslate nohighlight">\(4.5\times 10^3\)</span> N/m, the spring is compressed <span class="math notranslate nohighlight">\(8.0\)</span> cm. The block is released, and it slides <span class="math notranslate nohighlight">\(2.0\)</span> m (from the point at which it is released) across a horizontal surface before friction stops it. What is the coefficient of kinetic friction between the block and the surface?</p>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/7-problems">https://openstax.org/books/university-physics-volume-1/pages/7-problems</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B5.8</h2>
+    </header>
+<p>A <span class="math notranslate nohighlight">\(5.00\times 10^5\)</span> kg subway train is brought to a stop from a speed of 0.500 m/s in 0.400 m by a large spring bumper at the end of its track. What is the spring constant k of the spring?</p>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-problems">https://openstax.org/books/university-physics-volume-1/pages/8-problems</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B5.9</h2>
+    </header>
+<p>A block of mass 500.0 g is attached to a spring of spring constant 80.0 N/m (see the following figure). The other end of the spring is attached to a support while the mass rests on a rough surface with a coefficient of friction of 0.200 that is inclined at angle of  30.0<span class="math notranslate nohighlight">\(^\circ\)</span>. The block is pushed along the surface till the spring compresses by 10.0 cm and is then released from rest.</p>
+<ol class="arabic simple">
+<li><p>How much potential energy was stored in the block-spring-support system when the block was just released?</p></li>
+<li><p>Determine the speed of the block when it crosses the point when the spring is neither compressed nor stretched. 3. Determine the position of the block where it just comes to rest on its way up the incline.</p></li>
+</ol>
+<img src="P-B5.9.png"  width="500"/>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-problems">https://openstax.org/books/university-physics-volume-1/pages/8-problems</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B5.10</h2>
+    </header>
+<p>An object of mass 10.0 kg is released at point A, slides to the bottom of the 30.0<span class="math notranslate nohighlight">\(^\circ\)</span> incline, then collides with a horizontal massless spring, compressing it a maximum distance of 0.75 m. (See below.) The spring constant is 500.0 N/m, the height of the incline is 2.00 m, and the horizontal surface is frictionless.</p>
+<ol class="arabic simple">
+<li><p>What is the speed of the object at the bottom of the incline?</p></li>
+<li><p>What is the work of friction on the object while it is on the incline?</p></li>
+<li><p>The spring recoils and sends the object back toward the incline. What is the speed of the object when it reaches the base of the incline?</p></li>
+<li><p>What vertical distance does it move back up the incline?</p></li>
+</ol>
+<img src="P-B5.10.png"  width="500"/>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-problems">https://openstax.org/books/university-physics-volume-1/pages/8-problems</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B5.11</h2>
+    </header>
+<p>Consider a block of mass 0.200 kg attached to a spring of spring constant 100.0 N/m. The block is placed on a frictionless table, and the other end of the spring is attached to the wall so that the spring is level with the table. The block is then pushed in so that the spring is compressed by 10.0 cm. Find the speed of the block as it crosses</p>
+<ol class="arabic simple">
+<li><p>the point when the spring is not stretched</p></li>
+<li><p>5.00 cm to the left of point in (a),</p></li>
+<li><p>5.00 cm to the right of point in (a).</p></li>
+</ol>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-problems">https://openstax.org/books/university-physics-volume-1/pages/8-problems</a></p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 
     <script type="text/x-thebe-config">
@@ -445,12 +534,12 @@ is 0.0 m/s and when it arrives at x = 4.0 m is 9.0 m/s, how much work is done on
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Linear-work.html"
+       href="spring-potential-energy.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">B5.1 Linear Work and Energy</p>
+        <p class="prev-next-title">B5.3 Spring Potential Energy</p>
       </div>
     </a>
 </div></div>
