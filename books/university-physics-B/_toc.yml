@@ -48,5 +48,6 @@ parts:
 - caption: Module B5 - Work and Energy
   chapters:
   - file: Module-B5/Linear-work
+  - file: Module-B5/work-energy-derivation
   - file: Module-B5/spring-potential-energy
   - file: Module-B5/problemsB5

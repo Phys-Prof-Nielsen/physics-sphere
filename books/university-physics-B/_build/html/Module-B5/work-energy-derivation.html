@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>B5.2 Deriving Work-Energy Theorem &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,8 +65,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B5/work-energy-derivation';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="B5.3 Spring Potential Energy" href="spring-potential-energy.html" />
+    <link rel="prev" title="B5.1 Linear Work and Energy" href="Linear-work.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -192,8 +193,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B4/problemsB4.html">B4.4 Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B5 - Work and Energy</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Linear-work.html">B5.1 Linear Work and Energy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">B5.2 Deriving Work-Energy Theorem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spring-potential-energy.html">B5.3 Spring Potential Energy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problemsB5.html">B5.X Problems</a></li>
 </ul>
@@ -403,13 +405,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b5-2-deriving-work-energy-theorem">
-<h1>B5.2 Deriving Work-Energy Theorem<a class="headerlink" href="#b5-2-deriving-work-energy-theorem" title="Permalink to this heading">#</a></h1>
+<h1>B5.2 Deriving Work-Energy Theorem<a class="headerlink" href="#b5-2-deriving-work-energy-theorem" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b5-2-1-motivation">
-<h2>B5.2.1 Motivation<a class="headerlink" href="#b5-2-1-motivation" title="Permalink to this heading">#</a></h2>
+<h2>B5.2.1 Motivation<a class="headerlink" href="#b5-2-1-motivation" title="Permalink to this headline">#</a></h2>
 <p>In Phases D and C we defined the work-energy theorem, but briefly mentioned that it can be derived from Newton’s 2nd law. We are now ready to do so. It should be noted, that Newton’s 2nd law could also be derived from the work-energy theorem. Which one is more fundamental is more of a philosophical question. To Newton, the interactions (forces) and the related change in motion was fundamental</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b5-2-2-derivation">
-<h2>B5.2.2  Derivation<a class="headerlink" href="#b5-2-2-derivation" title="Permalink to this heading">#</a></h2>
+<h2>B5.2.2  Derivation<a class="headerlink" href="#b5-2-2-derivation" title="Permalink to this headline">#</a></h2>
 <p>We will start with Newton’s second law for a point particle:</p>
 <div class="math notranslate nohighlight">
 \[ \vec{f}_{net} = m\vec{a} \]</div>
@@ -429,7 +431,21 @@ document.write(`
 <p>Now we need to investigate the product <span class="math notranslate nohighlight">\(\vec{v}\cdot d\vec{v} \)</span> a little closer. Recall that the magnitude of a vector squared is the product between the vector and itself:</p>
 <div class="math notranslate nohighlight">
 \[ v^2 = \vec{v}\cdot\vec{v} \]</div>
-<p>If we find the implicit derivative on both sides:</p>
+<p>The rules of differentials are the same as rules for derivatives. Using the chain rule on the left side (in implicit form) and product rule on the right side:</p>
+<div class="math notranslate nohighlight">
+\[ 2vdv = d\vec{v}\cdot\vec{v} + \vec{v}\cdot d\vec{v} = 2\vec{v}\cdot d\vec{v} \]</div>
+<p>We can insert this into Equation (1):</p>
+<div class="math notranslate nohighlight">
+\[ \vec{f}_{net}\cdot d\vec{r} = mvdv \]</div>
+<p>We can now integrate on both sides of the equation:</p>
+<div class="math notranslate nohighlight">
+\[ \int_{x_1}^{x_2}\vec{f}_{net}\cdot d\vec{r} = \int_{v_1}^{v_2}mvdv \]</div>
+<p>and we end up</p>
+<div class="math notranslate nohighlight">
+\[ \int_{x_1}^{x_2}\vec{f}_{net}\cdot d\vec{r} = \frac{1}{2}mv_{2}^2 - \frac{1}{2}mv_{1}^2 \]</div>
+<p>which is the <strong>work-energy theorem</strong>:</p>
+<div class="math notranslate nohighlight">
+\[ w_{net} = \Delta k \]</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 
@@ -464,6 +480,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Linear-work.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">B5.1 Linear Work and Energy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="spring-potential-energy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">B5.3 Spring Potential Energy</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
