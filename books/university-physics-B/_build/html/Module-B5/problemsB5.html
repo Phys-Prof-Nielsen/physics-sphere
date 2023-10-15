@@ -367,7 +367,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -383,6 +385,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-solutions">Detailed Solutions</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -476,7 +486,8 @@ is 0.0 m/s and when it arrives at x = 4.0 m is 9.0 m/s, how much work is done on
 <p>A block of mass 500.0 g is attached to a spring of spring constant 80.0 N/m (see the following figure). The other end of the spring is attached to a support while the mass rests on a rough surface with a coefficient of friction of 0.200 that is inclined at angle of  30.0<span class="math notranslate nohighlight">\(^\circ\)</span>. The block is pushed along the surface till the spring compresses by 10.0 cm and is then released from rest.</p>
 <ol class="arabic simple">
 <li><p>How much potential energy was stored in the block-spring-support system when the block was just released?</p></li>
-<li><p>Determine the speed of the block when it crosses the point when the spring is neither compressed nor stretched. 3. Determine the position of the block where it just comes to rest on its way up the incline.</p></li>
+<li><p>Determine the speed of the block when it crosses the point when the spring is neither compressed nor stretched.</p></li>
+<li><p>Determine the position of the block where it just comes to rest on its way up the incline.</p></li>
 </ol>
 <img src="P-B5.9.png"  width="500"/>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-problems">https://openstax.org/books/university-physics-volume-1/pages/8-problems</a></p>
@@ -500,7 +511,468 @@ is 0.0 m/s and when it arrives at x = 4.0 m is 9.0 m/s, how much work is done on
 <li><p>5.00 cm to the right of point in (a).</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-problems">https://openstax.org/books/university-physics-volume-1/pages/8-problems</a></p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="detailed-solutions">
+<h2>Detailed Solutions<a class="headerlink" href="#detailed-solutions" title="Permalink to this headline">#</a></h2>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Problem B5.9</p>
+<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
+<header>
+<h3> Problem B5.9</h3>
+    </header>
+<p><strong>Problem</strong><br></p>
+<p>A block of mass 500.0 g is attached to a spring of spring constant 80.0 N/m (see the following figure). The other end of the spring is attached to a support while the mass rests on a rough surface with a coefficient of friction of 0.200 that is inclined at angle of  30.0<span class="math notranslate nohighlight">\(^\circ\)</span>. The block is pushed along the surface till the spring compresses by 10.0 cm and is then released from rest.</p>
+<ol class="arabic simple">
+<li><p>How much potential energy was stored in the block-spring-support system when the block was just released?</p></li>
+<li><p>Determine the speed of the block when it crosses the point when the spring is neither compressed nor stretched.</p></li>
+<li><p>Determine the position of the block where it just comes to rest on its way up the incline.</p></li>
+</ol>
+<p><strong>Pseudo Solution</strong><br></p>
+<p>Part one is straightforward since we are given the spring constant and the distance the spring is compressed. The second part requires a little bit more consideration. We can use our beloved work-energy theorem as we must include the work done by friction. If we let <span class="math notranslate nohighlight">\(x\)</span> be the position along the surface away from equilibrium of the system, then the total distance friction does work is <span class="math notranslate nohighlight">\(x + 0.10\)</span>. That distance combined with the incline angle also allows us to evaluate the change in height to evaluate change in gravitational potential energy. A free-body diagram will allow us to find the frictional force. However, we have done this kind of problem multiple times by now and should know that the normal force is given by</p>
+<div class="math notranslate nohighlight">
+\[ f_N = mg\cos\theta \]</div>
+<p>from which we can determine the frictional force and work done by friction.</p>
+<p><strong>Solution</strong><br></p>
+<p><strong>Part 1</strong><br></p>
+<p>Let the compressed state be event 1, +x direction up the incline, x = 0 the equilibrium position of the system. Inserting given values into the equation for spring potential energy:</p>
+<div class="math notranslate nohighlight">
+\[ u_{s_1} = \frac{1}{2}kx_{1}^2 = (0.5)(80.0)(-0.100)^2 = 0.400~\textrm{J}\]</div>
+<p><strong>Part 2</strong><br></p>
+<p>Let the uncompressed/stretched state be event 2. The work-energy theorem tells us that</p>
+<div class="math notranslate nohighlight">
+\[ e_1 + w_{NC} = e_2 \]</div>
+<p>We can write it out using kinetic and potential energies and work:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{2}mv_{1}^2 + mgh_1 + \frac{1}{2}kx_{1}^2 + f_{f}\Delta r\cos\phi = \frac{1}{2}mv_{2}^2 + mgh_2 + \frac{1}{2}kx_{2}^2 \]</div>
+<p>We can reduce it by observing that the initial speed is zero, the final displacement from equilibrium is zero. We also notice that <span class="math notranslate nohighlight">\(\Delta r = \Delta x\)</span> and <span class="math notranslate nohighlight">\(\phi = 180^\circ\)</span>. For the height, it may make sense to set the height equal to zero at the equilibrium position for consistency, but it is certainly not required. After all, it is only the change in height that truly matters. If we choose this scenario, then the final height is zero while the intial height (position) will be negative:</p>
+<div class="math notranslate nohighlight">
+\[ mgh_1 + \frac{1}{2}kx_{1}^2 - f_{f}\Delta x = \frac{1}{2}mv_{2}^2 \]</div>
+<p>The initial height is</p>
+<div class="math notranslate nohighlight">
+\[ h_1 = -\Delta x\sin\theta\]</div>
+<p>The magnitude of the force of friction is</p>
+<div class="math notranslate nohighlight">
+\[ f_f = \mu mg\cos\theta \]</div>
+<p>We now have everything we need to solve the problem:</p>
+<div class="math notranslate nohighlight">
+\[ v_2 = 0.528~\textrm{m/s} \]</div>
+<p><strong>Part 3</strong><br></p>
+<p>Let the position in question be event 3 and we can proceed as in Part (2). We can choose our intial state to be either event 1 or event 2. I will choose event 2. In this case, the initial height is zero, the spring is intially uncompressed. The displacement along the inclince is</p>
+<div class="math notranslate nohighlight">
+\[ \Delta x = x_3 - 0 \]</div>
+<p>where <span class="math notranslate nohighlight">\(x_3\)</span> is the position from equilibrium at event 3 along the incline.</p>
+<p>At event 3, the speed is zero, the spring is stretched by <span class="math notranslate nohighlight">\(x\)</span> and the height above equilibrium is</p>
+<div class="math notranslate nohighlight">
+\[ h_3 = x_{3}\sin\theta \]</div>
+<p>We then have</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{2}mv_{2}^2 + f_{f}x_{3}\cos\phi =  mgh_3 + \frac{1}{2}kx_{3}^2 \]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(x_3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ x_3 = 1.74~\textrm{cm} \]</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># --------------------</span>
+<span class="c1"># Part 1</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">80.0</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.100</span>
+
+<span class="n">u_s1</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x1</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Spring potential energy: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">u_s1</span><span class="p">))</span>
+
+<span class="c1"># --------------------</span>
+<span class="c1"># Part 2</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">0.500</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">30.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.200</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">h2</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="mi">180</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
+
+<span class="n">dx_12</span> <span class="o">=</span> <span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span>
+<span class="n">h1</span> <span class="o">=</span> <span class="o">-</span><span class="n">dx_12</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">ff</span> <span class="o">=</span> <span class="n">mu</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> 
+<span class="n">wf_12</span> <span class="o">=</span> <span class="n">ff</span><span class="o">*</span><span class="n">dx_12</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
+
+<span class="c1"># unknown: event 2 speed</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v2&#39;</span><span class="p">)</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">h2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x2</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">h1</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">wf_12</span>
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span><span class="n">v2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Speed at equilibrium: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol1</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">sol1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># -----------------------------------------</span>
+<span class="c1"># Part 3</span>
+
+<span class="c1"># unknown: event 3 position</span>
+<span class="n">v3</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">x3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x3&#39;</span><span class="p">)</span>
+
+<span class="n">dx_23</span> <span class="o">=</span> <span class="n">x3</span> <span class="o">-</span> <span class="n">x2</span>
+<span class="n">h3</span> <span class="o">=</span> <span class="n">dx_23</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">wf_23</span> <span class="o">=</span> <span class="n">ff</span><span class="o">*</span><span class="n">dx_23</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
+
+<span class="n">eq2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v3</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">h3</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x3</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">h2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">wf_23</span>
+<span class="n">sol2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq2</span><span class="p">,</span><span class="n">x3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Position: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol2</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Spring potential energy: 0.4000000000000001
+Speed at equilibrium: 0.528366947826022
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Position: 0.0174482269721867
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="tip dropdown admonition">
+<p class="admonition-title">Problem B5.10</p>
+<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
+<header>
+<h3> Problem B5.10</h3>
+    </header>
+<p><strong>Problem</strong><br></p>
+<p>An object of mass 10.0 kg is released at point A, slides to the bottom of the 30.0<span class="math notranslate nohighlight">\(^\circ\)</span> incline, then collides with a horizontal massless spring, compressing it a maximum distance of 0.75 m. (See below.) The spring constant is 500.0 N/m, the height of the incline is 2.00 m, and the horizontal surface is frictionless.</p>
+<ol class="arabic simple">
+<li><p>What is the speed of the object at the bottom of the incline?</p></li>
+<li><p>What is the work of friction on the object while it is on the incline?</p></li>
+<li><p>The spring recoils and sends the object back toward the incline. What is the speed of the object when it reaches the base of the incline?</p></li>
+<li><p>What vertical distance does it move back up the incline?</p></li>
+</ol>
+<p><strong>Pseudo Solution</strong><br></p>
+<ol class="arabic simple">
+<li><p>Since the horizontal surface is frictionless mechanical energy must be conserved for motion along it. From the spring potential energy we can then find the kinetic energy and the corresponding speed prior to compressing the spring. This is the speed anywhere on the horizontal surface and at the bottom of the incline.</p></li>
+<li><p>There is friction along the incline and mechanical energy is not conserved. Since we know the mechanical energy at the bottom (all kinetic) and the mechanical energy at the top (all gravitational potential), we can find out how much was lost due to friction.</p></li>
+<li><p>Since the horizontal surface is frictionless and spring force is conservative, the speed along the incline must be the same moving towards the spring and away from the spring.</p></li>
+<li><p>From the work done by friction and the length of the incline (from trigonometry), we can find the frictional force. With that knowledge we can figure out how high the object makes it back up the incline.</p></li>
+</ol>
+<p><strong>Solution</strong><br></p>
+<p>We need to have some identifiers for each event. I will choose the following:</p>
+<ul class="simple">
+<li><p>Top of incline: event 1</p></li>
+<li><p>botton of incline moving down: event 2</p></li>
+<li><p>compressed spring: event 3</p></li>
+<li><p>botton of incline moving up: event 4</p></li>
+<li><p>final destination: event 5</p></li>
+</ul>
+<p><strong>Part 1</strong><br></p>
+<p>Setting up conservation of energy along a horizontal surface (this implies there is no change in gravational potential energy and it can be ignored). This involves events 2 (initial) and 3 (final):</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2}mv_{2}^2 + \frac{1}{2}kx_{2}^2 = \frac{1}{2}mv_{3}^2 + \frac{1}{2}kx_{3}^2\]</div>
+<p>With <span class="math notranslate nohighlight">\(x_2 = 0\)</span> and <span class="math notranslate nohighlight">\(v_3 = 0 \)</span>, we can solve for the initial speed:</p>
+<div class="math notranslate nohighlight">
+\[ v_2 = 5.3~\textrm{m/s} \]</div>
+<p><strong>Part 2</strong><br></p>
+<p>The amazing work-energy theorem, which now hopefully reside deep in both the concious and unconcious minds, tells us that</p>
+<div class="math notranslate nohighlight">
+\[ e_1 + w_{NC} = e_2 \]</div>
+<p>Since we are working on the incline plane, we can write it out:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{2}mv_{1}^2 + mgh_1 + w_f = \frac{1}{2}mv_{2}^2 + mgh_2 \]</div>
+<p>The initial speed is zero and the final height is zero, allowing us to solve for the work done by friction:</p>
+<div class="math notranslate nohighlight">
+\[ w_f = -56~\textrm{J} \]</div>
+<p><strong>Part 3</strong><br></p>
+<p>The horizontal surface is frictionless. This implies that the mechanical energy has the same value <strong>anywhere</strong> along that surface. It also implies that the kinetic coming off the incline must be the same as returning onto the incline. The speed is</p>
+<div class="math notranslate nohighlight">
+\[ v_4 = 5.3~\textrm{m/s} \]</div>
+<p><strong>Part 3</strong><br></p>
+<p>This part requires a little extra work. Again, we set up the work-energy theorem since there is work done by non-conservative force:</p>
+<div class="math notranslate nohighlight">
+\[ e_4 + w{NC} = e_5 \]</div>
+<p>The work done by a constant force (we have to assume the frictional force is constant) is</p>
+<div class="math notranslate nohighlight">
+\[ w_f = f_{f}\Delta r\cos\phi \]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi\)</span> is the angle between the frictional force and the displacement (in this case it is <span class="math notranslate nohighlight">\(180^\circ\)</span>). Inserting our known expressions:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{2}mv_{4}^2 + mgh_4 + f_{f}\Delta r\cos\phi = \frac{1}{2}mv_{5}^2 + mgh_5 \]</div>
+<p>We can find the frictional force from Part (2):</p>
+<div class="math notranslate nohighlight">
+\[ -56 = f_{f}\Delta r\cos\phi \]</div>
+<p>knowing that <span class="math notranslate nohighlight">\(\phi = 180^\circ\)</span> and the magnitude of the displacement is</p>
+<div class="math notranslate nohighlight">
+\[ \Delta r_{12} = \frac{2.0}{\sin(30.0)} \]</div>
+<p>where the subscript indicates it is the displacement taking place between events 1 and 2.</p>
+<p>The magnitude of the displacement between events 4 and 5 is</p>
+<div class="math notranslate nohighlight">
+\[ \Delta r_{45} = \frac{h_5}{\sin(30.0)} \]</div>
+<p>We now have all the information to solve for <span class="math notranslate nohighlight">\(h_5\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ h_5 = 1.1~\textrm{m} \]</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#mass</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="c1">#spring constant</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">500.0</span>
+<span class="c1"># event 2 compression</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="c1"># event 3 compression</span>
+<span class="n">x3</span> <span class="o">=</span> <span class="mf">0.75</span>
+<span class="c1">#event 3 speed</span>
+<span class="n">v3</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="c1"># event 1 height</span>
+<span class="n">h1</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="c1"># event 2 height</span>
+<span class="n">h2</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="c1">#acceleration of gravity</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<span class="c1"># event 1 speed</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="c1"># -----------------------------------------</span>
+<span class="c1"># PART 1</span>
+<span class="c1"># unknown: event 2 speed</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v2&#39;</span><span class="p">)</span>
+<span class="c1"># event 2 mechanical energy</span>
+<span class="n">e2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x2</span><span class="o">**</span><span class="mi">2</span>
+<span class="c1"># event 3 mechanical energy</span>
+<span class="n">e3</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v3</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x3</span><span class="o">**</span><span class="mi">2</span>
+<span class="c1">#equation to be solved: e2 = e3 or 0 = e3 - e2</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">e3</span> <span class="o">-</span> <span class="n">e2</span>
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span><span class="n">v2</span><span class="p">)</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">sol1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Speed at bottom of incline: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v2</span><span class="p">))</span>
+<span class="c1"># -----------------------------------------</span>
+
+<span class="c1"># -----------------------------------------</span>
+<span class="c1"># PART 2</span>
+<span class="c1"># unknown: work done by friction between events 1 and 2</span>
+<span class="n">wf_12</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;wf_12&#39;</span><span class="p">)</span>
+<span class="c1"># event 1 mechanical energy</span>
+<span class="n">e1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">h1</span>
+<span class="c1"># event 2 mechanical energy</span>
+<span class="n">e2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">h2</span>
+<span class="c1">#equation to be solved: e1 + wf = e2 or 0 = e2 - e1 - wf</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">e2</span> <span class="o">-</span> <span class="n">e1</span> <span class="o">-</span> <span class="n">wf_12</span>
+<span class="n">sol2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq2</span><span class="p">,</span><span class="n">wf_12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Work done by friction: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol2</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">wf_12</span> <span class="o">=</span> <span class="n">sol2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># -----------------------------------------</span>
+
+<span class="c1"># Part 3</span>
+<span class="n">v4</span> <span class="o">=</span> <span class="n">v2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Speed at bottom of incline: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v4</span><span class="p">))</span>
+<span class="c1"># -----------------------------------------</span>
+<span class="c1"># PART 4</span>
+<span class="c1"># unknowns: </span>
+<span class="c1"># final height</span>
+<span class="n">h5</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;h5&#39;</span><span class="p">)</span>
+<span class="c1"># force of friction</span>
+<span class="n">ff</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ff&#39;</span><span class="p">)</span>
+<span class="c1"># magnitude of displacement moving up</span>
+<span class="n">dr_45</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;dr_45&#39;</span><span class="p">)</span>
+<span class="c1"># work moving up</span>
+<span class="n">wf_45</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;wf_45&#39;</span><span class="p">)</span>
+
+
+<span class="c1">#the height at the bottom is the same moving down and up</span>
+<span class="n">h4</span> <span class="o">=</span> <span class="n">h2</span>
+<span class="c1"># incline angle</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">30.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
+<span class="c1"># speed at end</span>
+<span class="n">v5</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="c1"># angle between displacement and friction force</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="mf">180.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
+<span class="c1"># magnitude of displacement on the way down</span>
+<span class="n">dr_12</span> <span class="o">=</span> <span class="n">h1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="c1"># event 4 mechanical energy</span>
+<span class="n">e4</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v4</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">h4</span>
+<span class="c1"># event 5 mechanical energy</span>
+<span class="n">e5</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v5</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">h5</span>
+<span class="c1"># magnitude of frictional force</span>
+<span class="n">ff</span> <span class="o">=</span> <span class="n">wf_12</span><span class="o">/</span><span class="p">(</span><span class="n">dr_12</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">))</span>
+
+<span class="c1">#we have three unknowns: work by friction, final displacement, and final height...need three equations:</span>
+<span class="c1">#work done by friction</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">wf_45</span> <span class="o">-</span> <span class="n">ff</span><span class="o">*</span><span class="n">dr_45</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
+
+<span class="c1">#work-energy equation</span>
+<span class="n">eq4</span> <span class="o">=</span> <span class="n">e5</span> <span class="o">-</span> <span class="n">e4</span> <span class="o">-</span> <span class="n">wf_45</span>
+
+<span class="c1">#trigonometry</span>
+<span class="n">eq5</span> <span class="o">=</span> <span class="n">h5</span> <span class="o">-</span> <span class="n">dr_45</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="n">sol3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq3</span><span class="p">,</span><span class="n">eq4</span><span class="p">,</span><span class="n">eq5</span><span class="p">),</span><span class="n">h5</span><span class="p">,</span><span class="n">dr_45</span><span class="p">,</span> <span class="n">wf_45</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Final Height: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol3</span><span class="p">[</span><span class="n">h5</span><span class="p">]))</span>
+<span class="c1"># -----------------------------------------</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Speed at bottom of incline: 5.30330085889911
+Work done by friction: -55.5750000000000
+Speed at bottom of incline: 5.30330085889911
+Final Height: 1.11706881143878
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="tip dropdown admonition">
+<p class="admonition-title">Problem B5.11</p>
+<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
+<header>
+<h3> Problem B5.11</h3>
+    </header>
+<p><strong>Problem</strong><br></p>
+<p>Consider a block of mass 0.200 kg attached to a spring of spring constant 100.0 N/m. The block is placed on a frictionless table, and the other end of the spring is attached to the wall so that the spring is level with the table. The block is then pushed in so that the spring is compressed by 10.0 cm. Find the speed of the block as it crosses</p>
+<ol class="arabic simple">
+<li><p>the point when the spring is not stretched</p></li>
+<li><p>5.00 cm to the left of point in (a),</p></li>
+<li><p>5.00 cm to the right of point in (a).</p></li>
+</ol>
+<p><strong>Pseudo Solution</strong><br></p>
+<p>Since there are no non-conservative forces, the mechanical energy is conserved, that is:</p>
+<div class="math notranslate nohighlight">
+\[e_1 = e_2\]</div>
+<p>Hence, the sum of the kinetic and potential energies remains a constant:</p>
+<div class="math notranslate nohighlight">
+\[ k + u = ~\textrm{constant}\]</div>
+<p>Since we know the spring constant and its original compression at the location where the kinetica energy is zero, we can calculate the value of the mechanical energy. From that value, we can find the speed at any given position.</p>
+<p><strong>Solution</strong><br></p>
+<p>Find the mechanical energy at the endpoint (speed = 0 m/s):</p>
+<div class="math notranslate nohighlight">
+\[e_1 = k_1 + u_1 = (0) + (0.5)(100.0)(0.10)^2 = 0.500~\textrm{J}\]</div>
+<p>We can now proceed to find the speeds at any given positions:</p>
+<p><strong>Part 1</strong><br></p>
+<p>The displacement from equilibrium is <span class="math notranslate nohighlight">\(x = 0\)</span>. Let this position be event 2:</p>
+<div class="math notranslate nohighlight">
+\[ e_1 = e_2 \]</div>
+<p>From which we have</p>
+<div class="math notranslate nohighlight">
+\[ 0.500 = \frac{1}{2}mv_{2}^{2} + \frac{1}{2}kx_{2}^{2} \]</div>
+<p>Solving for the speed, we get:</p>
+<div class="math notranslate nohighlight">
+\[ v_2 = 2.24~\textrm{m/s} \]</div>
+<p><strong>Part 2</strong><br></p>
+<p>Assuming a positive x-direction to the right, we now have <span class="math notranslate nohighlight">\(x = -0.0500~\textrm{m}\)</span>. Let this position be event 3:</p>
+<div class="math notranslate nohighlight">
+\[ e_1 = e_3 \]</div>
+<p>From which we have</p>
+<div class="math notranslate nohighlight">
+\[ 0.500 = \frac{1}{2}mv_{3}^{2} + \frac{1}{2}kx_{3}^{2} \]</div>
+<p>Solving for the speed, we get:</p>
+<div class="math notranslate nohighlight">
+\[ v_3 = 1.94~\textrm{m/s} \]</div>
+<p><strong>Part 3</strong><br></p>
+<p>We now have <span class="math notranslate nohighlight">\(x = +0.0500~\textrm{m}\)</span>. Let this position be event 4. Based on symmetry considerations, we would conclude that the speed must be same as in Part 2. Let us do the calculation anyway:</p>
+<div class="math notranslate nohighlight">
+\[ e_1 = e_4 \]</div>
+<p>From which we have</p>
+<div class="math notranslate nohighlight">
+\[ 0.500 = \frac{1}{2}mv_{4}^{2} + \frac{1}{2}kx_{4}^{2} \]</div>
+<p>Solving for the speed, we get:</p>
+<div class="math notranslate nohighlight">
+\[ v_4 = 1.94~\textrm{m/s} \]</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1">#mass</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">0.200</span>
+<span class="c1">#spring constant</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">100.0</span>
+<span class="c1"># initial displacement</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="mf">0.10</span>
+<span class="c1">#initial speed </span>
+<span class="n">v1</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1">#initial mechanical energy</span>
+<span class="n">e1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x1</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Initial mechanical energy: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">e1</span><span class="p">))</span>
+
+<span class="c1">#Part 1</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v2&#39;</span><span class="p">)</span>
+<span class="c1">#equation to be solved: 0 = e1 - 0.5*m*v2**2 - 0.5*k*x2**aerå´njnnnnn nmm 2</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">e1</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v2</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x2</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span><span class="n">v2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Speed at x = 0: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol1</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="c1">#Part 2</span>
+<span class="n">x3</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.05</span>
+<span class="n">v3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v3&#39;</span><span class="p">)</span>
+<span class="c1">#equation to be solved: 0 = e1 - 0.5*m*v4**2 - 0.5*k*x4**2</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">e1</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v3</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x3</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">sol2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq2</span><span class="p">,</span><span class="n">v3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Speed at x = 0: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol2</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="c1">#Part 3</span>
+<span class="n">x4</span> <span class="o">=</span> <span class="o">+</span><span class="mf">0.05</span>
+<span class="n">v4</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v4&#39;</span><span class="p">)</span>
+<span class="c1">#equation to be solved: 0 = e1 - 0.5*m*v4**2 - 0.5*k*x4**2</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">e1</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v4</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x4</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">sol3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq3</span><span class="p">,</span><span class="n">v4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Speed at x = 0: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol3</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial mechanical energy: 0.5000000000000001
+Speed at x = 0: 2.23606797749979
+Speed at x = 0: 1.93649167310371
+Speed at x = 0: 1.93649167310371
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -551,6 +1023,20 @@ is 0.0 m/s and when it arrives at x = 4.0 m is 9.0 m/s, how much work is done on
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-solutions">Detailed Solutions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
