@@ -26,3 +26,5 @@ parts:
 - caption: Module B3 - Rotational Kinematics
   chapters:
   - file: Module-B3/basic-relations
+  - file: Module-B3/equations-kinematics
+  - file: Module-B3/problemsB3
