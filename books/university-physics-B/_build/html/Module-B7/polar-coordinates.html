@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; A Competency Approach to Introductory Physics</title>
+    <title>B7.3 Kinematics in Polar Coordinates &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -60,11 +61,15 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B7/polar-coordinates';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="B7.x Problems" href="problemsB7.html" />
+    <link rel="prev" title="B7.2 Rotational Equations of Kinematics" href="equations-kinematics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -201,9 +206,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B6/cm-dynamics.html">B6.2 Center of Mass Dynamics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B7 - Rotational Kinematics</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="basic-relations.html">B7.1 Rotational Kinematics - Basic Relationships</a></li>
 <li class="toctree-l1"><a class="reference internal" href="equations-kinematics.html">B7.2 Rotational Equations of Kinematics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">B7.3 Kinematics in Polar Coordinates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problemsB7.html">B7.x Problems</a></li>
 </ul>
 
@@ -388,7 +394,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>B7.3 Kinematics in Polar Coordinates</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -397,9 +403,32 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-1-motivation">B7.3.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-2-set-up">B7.3.2 Set Up</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-derivative-of-hat-r">Time Derivative of <span class="math notranslate nohighlight">\(\hat{r}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-derivative-of-hat-theta">Time Derivative of <span class="math notranslate nohighlight">\(\hat{\theta}\)</span></a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-3-velocity-vector-in-polar-coordinates">B7.3.3 Velocity Vector in Polar Coordinates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#radial-term">Radial Term</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-term">Angular Term</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#circular-motion">Circular Motion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-4-acceleration-vector-in-polar-coordinates">B7.3.4 Acceleration Vector in Polar Coordinates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Discussion</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#radial-terms">Radial Terms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Angular Term</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-5-special-case-uniform-circular-motion">B7.3.5 Special Case: Uniform Circular Motion</a></li>
+</ul>
             </nav>
         </div>
     </div>
@@ -410,125 +439,191 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                 
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
-
-
-<span class="c1"># function to draw vector</span>
-<span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">):</span> 
-    <span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v1</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> 
-                      <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="n">v2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v2</span><span class="p">[</span><span class="mi">1</span><span class="p">]]])</span>
-    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">array</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">],</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-
-<span class="c1"># enter the x- and y-values of two data points</span>
-<span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">ys</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="c1"># make them different colors in the plot</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
-
-<span class="c1"># Plot points</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
-
-<span class="c1"># Draw lines connecting points to axes</span>
-<span class="c1">#for x, y, c in zip(xs, ys, colors):</span>
-<span class="c1">#    ax.plot([x, x], [0, y], c=c, ls=&#39;--&#39;, lw=1.5, alpha=0.5)</span>
-<span class="c1">#    ax.plot([0, x], [y, y], c=c, ls=&#39;--&#39;, lw=1.5, alpha=0.5)</span>
-
-<span class="c1">#Set axes scales</span>
-<span class="n">xmin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
-<span class="n">xmax</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">ymin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
-<span class="n">ymax</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="n">xmin</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">xmax</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="n">ymin</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">ymax</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-
-<span class="c1"># By default there is a box around a plot. These lines are called spines.</span>
-<span class="c1"># Set bottom and left spines as x and y axes of coordinate system</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
-
-<span class="c1"># Remove top and right spines</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="c1"># Create labels and place them at the end of the axes</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=-</span><span class="mi">24</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">1.03</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=-</span><span class="mi">21</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># Create custom major ticks to determine position of tick labels</span>
-<span class="c1"># frequency of tick labels</span>
-<span class="n">ticks_frequency</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">x_ticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">ticks_frequency</span><span class="p">)</span>
-<span class="n">y_ticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">ticks_frequency</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">x_ticks</span><span class="p">[</span><span class="n">x_ticks</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">])</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">y_ticks</span><span class="p">[</span><span class="n">y_ticks</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">])</span>
-
-<span class="c1"># Create minor ticks placed at each integer to enable drawing of minor grid</span>
-<span class="c1"># lines: note that this has no effect if ticks_frequency=1</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">minor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">minor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Draw major and minor grid lines</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
-
-<span class="c1"># Draw arrows</span>
-<span class="n">arrow_fmt</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">markersize</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">clip_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">get_yaxis_transform</span><span class="p">(),</span> <span class="o">**</span><span class="n">arrow_fmt</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xaxis_transform</span><span class="p">(),</span> <span class="o">**</span><span class="n">arrow_fmt</span><span class="p">)</span>
-
-<span class="c1"># vector</span>
-<span class="n">draw</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
+  <section class="tex2jax_ignore mathjax_ignore" id="b7-3-kinematics-in-polar-coordinates">
+<h1>B7.3 Kinematics in Polar Coordinates<a class="headerlink" href="#b7-3-kinematics-in-polar-coordinates" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b7-3-1-motivation">
+<h2>B7.3.1 Motivation<a class="headerlink" href="#b7-3-1-motivation" title="Permalink to this heading">#</a></h2>
+<p>We saw in previous notes how we can relate <strong>linear tangential</strong> parameters to <strong>rotational</strong> parameters for <strong>circular</strong> motion. However, we also need to know radial parameters to fully describe rotational motion, and for that purpose we need the full treatment using polar coordinates. As an example, anytime we have circular motion, a radial force is required to change the direction of the object, otherwise it just moves in a straight line.</p>
+<p>In the following, we will show how the position, velocity, and acceleration vectors appear in polar coordinates.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="b7-3-2-set-up">
+<h2>B7.3.2 Set Up<a class="headerlink" href="#b7-3-2-set-up" title="Permalink to this heading">#</a></h2>
+<p>Consider the figure below.</p>
+<img src="B7-fig2.png"  width="600"/>
+<p>The blue vector represents a position vector <span class="math notranslate nohighlight">\(\vec{r}\)</span>. The two red vectors are the cartesian unit vectors <span class="math notranslate nohighlight">\(\hat{i}\)</span> and <span class="math notranslate nohighlight">\(\hat{j}\)</span>, while the green vectors are the polar unit vectors <span class="math notranslate nohighlight">\(\hat{r}\)</span> and <span class="math notranslate nohighlight">\(\hat{\theta}\)</span>. In contrast to the cartesian unit vectors, the polar unit vectors are changing directions depending on the position vector. The radial unit vector <span class="math notranslate nohighlight">\(\hat{r}\)</span> is always pointing in the radial direction away from the origin, and the angular unit vector <span class="math notranslate nohighlight">\(\hat{\theta}\)</span> is always pointing in the counterclockwise angular direction.</p>
+<p>The position vector is fully characterized by</p>
+<div class="math notranslate nohighlight">
+\[ \vec{r} = r\hat{r} \tag{1}\]</div>
+<p>This appears simpler than the cartesian version: <span class="math notranslate nohighlight">\(\vec{r} = x\hat{i} + y\hat{j}\)</span>, but do not be fooled. Whereas the cartesian unit vectors are constant, the <span class="math notranslate nohighlight">\(\hat{r}\)</span> unit vector is a function of <span class="math notranslate nohighlight">\(\theta\)</span> and it makes it a lot more complex as we will see.</p>
+<p>From the sketch on the right, we can write the polar unit vectors in terms of the cartesian unit vectors:
+<br></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+ \hat{r} &amp;=&amp; \cos\theta\hat{i} + \sin\theta\hat{j} \tag{2}
+\\
+ \hat{\theta} &amp;=&amp; -\sin\theta\hat{i} + \cos\theta\hat{j} \tag{3}
+\end{eqnarray*}\]</div>
+<p>In the following, we will need to know the time derivative of the polar unit vectors:</p>
+<section id="time-derivative-of-hat-r">
+<h3>Time Derivative of <span class="math notranslate nohighlight">\(\hat{r}\)</span><a class="headerlink" href="#time-derivative-of-hat-r" title="Permalink to this heading">#</a></h3>
+<p>We will be using the <em>dot</em> notation for time derivatives.</p>
+<p>Applying the sum, product, and chain rules on Equation(2):</p>
+<div class="math notranslate nohighlight">
+\[ \dot{\hat{r}} = -\dot{\theta}\sin\theta\hat{i} + \cos\theta\dot{\hat{i}} + \dot{\theta}\cos\theta\hat{j} + \cos\theta\dot{\hat{j}}\]</div>
+<p>Since the cartesian unit vectors are constants, their time-derivative is zero:</p>
+<div class="math notranslate nohighlight">
+\[ \dot{\hat{r}} = -\dot{\theta}\sin\theta\hat{i} + \dot{\theta}\cos\theta\hat{j} \]</div>
+<p>Pulling out the common factor of <span class="math notranslate nohighlight">\(\dot{\theta}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \dot{\hat{r}} = \dot{\theta}\left(-\sin\theta\hat{i} + \cos\theta\hat{j}\right) \]</div>
+<p>The term in the parenthesis is the same as <span class="math notranslate nohighlight">\(\hat{\theta}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \dot{\hat{r}} = \dot{\theta}\hat{\theta} \tag{4}\]</div>
+</section>
+<section id="time-derivative-of-hat-theta">
+<h3>Time Derivative of <span class="math notranslate nohighlight">\(\hat{\theta}\)</span><a class="headerlink" href="#time-derivative-of-hat-theta" title="Permalink to this heading">#</a></h3>
+<p>In a similar approach as above, we have</p>
+<div class="math notranslate nohighlight">
+\[ \dot{\hat{\theta}} = -\dot{\theta}\cos\theta\hat{i} -\sin\theta\dot{\hat{i}} - \dot{\theta}\sin\theta\hat{j} + \cos\theta\dot{\hat{j}}\]</div>
+<p>The terms with derivatives of cartesion unit vectors are zero:</p>
+<div class="math notranslate nohighlight">
+\[ \dot{\hat{\theta}} = -\dot{\theta}\cos\theta\hat{i} - \dot{\theta}\sin\theta\hat{j} \]</div>
+<p>Re-arranging:</p>
+<div class="math notranslate nohighlight">
+\[ \dot{\hat{\theta}} = -\dot{\theta}\left( \cos\theta\hat{i} + \sin\theta\hat{j}\right) \]</div>
+<p>and using the result from Equation (2):</p>
+<div class="math notranslate nohighlight">
+\[ \dot{\hat{\theta}} = -\dot{\theta}\hat{r} \tag{5}\]</div>
+<p>We are now ready to explore velocity and acceleration in polar coordinates.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="b7-3-3-velocity-vector-in-polar-coordinates">
+<h2>B7.3.3 Velocity Vector in Polar Coordinates<a class="headerlink" href="#b7-3-3-velocity-vector-in-polar-coordinates" title="Permalink to this heading">#</a></h2>
+<p>We take the time-derivate of the position vector in Equation (1):</p>
+<div class="math notranslate nohighlight">
+\[ \dot{\vec{r}} = \dot{r}\hat{r} + r\dot{\hat{r}} \]</div>
+<p>Insert Equation (4):</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ \dot{\vec{r}} = \dot{r}\hat{r} + r\dot{\theta}\hat{\theta} \tag{6}\]</div>
 </div>
+<section id="discussion">
+<h3>Discussion<a class="headerlink" href="#discussion" title="Permalink to this heading">#</a></h3>
+<section id="radial-term">
+<h4>Radial Term<a class="headerlink" href="#radial-term" title="Permalink to this heading">#</a></h4>
+<p>The radial term is the one associated with <span class="math notranslate nohighlight">\(\hat{r}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \vec{v}_r = \dot{r}\hat{r} \]</div>
+<p>This tells us that the radial velocity is the rate of change of the distance away from the origin. This is simply a straight line velocity as on object moves towards/away the origin in a straight line.</p>
+</section>
+<section id="angular-term">
+<h4>Angular Term<a class="headerlink" href="#angular-term" title="Permalink to this heading">#</a></h4>
+<p>The angular term is the one associated with <span class="math notranslate nohighlight">\(\hat{\theta}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \vec{v}_{\theta} = r\dot{\theta}\hat{\theta} \]</div>
+<p>We may recognise <span class="math notranslate nohighlight">\(\dot\theta\)</span> is the angular speed <span class="math notranslate nohighlight">\(\omega\)</span> and we can rewrite it as</p>
+<div class="math notranslate nohighlight">
+\[ \vec{v}_{\theta} = r\omega\hat{\theta} \]</div>
+<p>with a magnitude of</p>
+<div class="math notranslate nohighlight">
+\[ v_{\theta} = r\omega \]</div>
+<p>What a hoot: this is what we found as the tangential speed in the previous notes.</p>
+</section>
+<section id="circular-motion">
+<h4>Circular Motion<a class="headerlink" href="#circular-motion" title="Permalink to this heading">#</a></h4>
+<p>If we have circular motion, the radial component is zero and we are left with only the tangential velocity:</p>
+<div class="math notranslate nohighlight">
+\[ \vec{v} = r\dot\theta\hat{\theta}\]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+</section>
+<section id="b7-3-4-acceleration-vector-in-polar-coordinates">
+<h2>B7.3.4 Acceleration Vector in Polar Coordinates<a class="headerlink" href="#b7-3-4-acceleration-vector-in-polar-coordinates" title="Permalink to this heading">#</a></h2>
+<p>We take the time-derivate of the velocity vector in Equation (6) using the sum and product rules:</p>
+<div class="math notranslate nohighlight">
+\[ \ddot{\vec{r}} = \ddot{r}\hat{r} + \dot{r}\dot{\hat{r}} + \dot{r}\dot{\theta}\hat{\theta} + r\ddot{\theta}\hat{\theta} + r\dot{\theta}\dot{\hat{\theta}}\]</div>
+<p>Insert Equations (4) and (5):</p>
+<div class="math notranslate nohighlight">
+\[ \dot{\vec{r}} =  \ddot{r}\hat{r} + \dot{r}\dot{\theta}\hat{\theta} + \dot{r}\dot{\theta}\hat{\theta} + r\ddot{\theta}\hat{\theta} - r\dot{\theta}\dot{\theta}\hat{r} \]</div>
+<p>Re-arranging the terms:</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ \dot{\vec{r}} =  \left( \ddot{r} - r\dot{\theta}^2 \right)\hat{r} + \left( 2\dot{r}\dot{\theta} +  r\ddot{\theta} \right)\hat{\theta} \]</div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/df68b10c88af26e5a21a7a0be83a3e724b6aa1a000c3cf5f0ea6cfc6dc380d48.png" src="../_images/df68b10c88af26e5a21a7a0be83a3e724b6aa1a000c3cf5f0ea6cfc6dc380d48.png" />
+<section id="id1">
+<h3>Discussion<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<section id="radial-terms">
+<h4>Radial Terms<a class="headerlink" href="#radial-terms" title="Permalink to this heading">#</a></h4>
+<p>The radial terms are the ones associated with <span class="math notranslate nohighlight">\(\hat{r}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \vec{a}_r = \left( \ddot{r} - r\dot{\theta}^2 \right)\hat{r} \]</div>
+<p>We have two terms:</p>
+<p><em>Linear Acceleration</em></p>
+<p>The term</p>
+<div class="math notranslate nohighlight">
+\[ \ddot{r}\hat{r} \]</div>
+<p>is the <strong>linear acceleration</strong> as it describes the straigh line acceleration towards/away from the origin. For example, an object speeding up or slowing down as it moves towards/away in a straight line.</p>
+<p><em>Centripetal Acceleration</em></p>
+<p>The second radial term is</p>
+<div class="math notranslate nohighlight">
+\[- r\dot{\theta}^2\hat{r}\]</div>
+<p>and is known as the <strong>centripetal acceleration</strong>. Although in the radial direction, <strong>it does not change the radial speed of the object but causes it to change direction</strong>. This acceleration plays a major role in circular motion as we will see below. For now, it will be convenient to express it in different forms.</p>
+<p>We can write <span class="math notranslate nohighlight">\(\dot{\theta}\)</span> as <span class="math notranslate nohighlight">\(\omega\)</span> and the magnitude of the centripetal acceleration is then</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ a_c = r\omega^2 \]</div>
 </div>
+which is one useful expression for it. Another useful expression is to implement the tangental speed:
+<div class="math notranslate nohighlight">
+\[ v_{\theta} = r\omega \]</div>
+<p>and the centripetal acceleration becomes:</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ a_c = \frac{v_{\theta}^2}{r} \]</div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-
-<span class="c1"># function to draw vector</span>
-<span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">):</span> 
-    <span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v1</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> 
-                      <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="n">v2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v2</span><span class="p">[</span><span class="mi">1</span><span class="p">]]])</span>
-    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">array</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">],</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    
-    
-<span class="n">r</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">4.</span>
-
-<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;polar&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_rmax</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_rticks</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>  <span class="c1"># Less radial ticks</span>
-<span class="c1">#ax.scatter(theta, r)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;A position plot on a polar axis&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
-
-<span class="c1"># vector</span>
-<span class="n">draw</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-    
-    
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
+which is the form we will use the most in this course.
+</section>
+<section id="id2">
+<h4>Angular Term<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<p>The angular terms are the ones associated with <span class="math notranslate nohighlight">\(\hat{\theta}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \vec{a}_{\theta} = \left( 2\dot{r}\dot{\theta} +  r\ddot{\theta} \right)\hat{\theta} \]</div>
+<p><em>Tangential Acceleration</em></p>
+<p>The last term is the tangential acceleration:</p>
+<div class="math notranslate nohighlight">
+\[ r\ddot{\theta}\hat{\theta} \]</div>
+<p>as it is the term responsible for an object to rotate faster or slower. Using <span class="math notranslate nohighlight">\(\ddot{\theta} = \alpha\)</span> we have the magnitude as</p>
+<div class="math notranslate nohighlight">
+\[ r\alpha \]</div>
+<p>and recognize it as the tangential acceleration from previous notes.</p>
+<p><em>Coriolis Acceleration</em></p>
+<p>This term is known as the <strong>Coriolis acceleration</strong> and is the most complex of all the terms as it involves <strong>changes in both radial and angular velocity</strong>:</p>
+<div class="math notranslate nohighlight">
+\[2\dot{r}\dot{\theta}\hat{\theta}\]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+</section>
+<section id="b7-3-5-special-case-uniform-circular-motion">
+<h2>B7.3.5 Special Case: Uniform Circular Motion<a class="headerlink" href="#b7-3-5-special-case-uniform-circular-motion" title="Permalink to this heading">#</a></h2>
+<p>A very important case is uniform circular motion, that is, motion in a <strong>circular path with a constant speed</strong>.</p>
+<p>In this case we have</p>
+<div class="math notranslate nohighlight">
+\[ \dot{r} = 0 \]</div>
+<div class="math notranslate nohighlight">
+\[ \dot{theta} = 0 \]</div>
+<p>and the acceleration in polar coordinates reduces to</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ \dot{\vec{r}} =  - r\dot{\theta}^2\hat{r} \]</div>
 </div>
+<p>which is simply the <strong>centripetal acceleration</strong>. It is always directed towards the origin or the center of the circular motion: <strong>it is a center-seeking acceleration</strong>.</p>
+<p>It is more convenient to use it in the following form (magnitude):</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ a_c = \frac{v_{\theta}^2}{r} \]</div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/52fe2f395ac912db5ede5f8e9f7b3a9e27ff5ad9e15695ade5dc245b95111582.png" src="../_images/52fe2f395ac912db5ede5f8e9f7b3a9e27ff5ad9e15695ade5dc245b95111582.png" />
-</div>
-</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -561,6 +656,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="equations-kinematics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">B7.2 Rotational Equations of Kinematics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="problemsB7.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">B7.x Problems</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -578,9 +691,32 @@ document.write(`
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-1-motivation">B7.3.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-2-set-up">B7.3.2 Set Up</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-derivative-of-hat-r">Time Derivative of <span class="math notranslate nohighlight">\(\hat{r}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-derivative-of-hat-theta">Time Derivative of <span class="math notranslate nohighlight">\(\hat{\theta}\)</span></a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-3-velocity-vector-in-polar-coordinates">B7.3.3 Velocity Vector in Polar Coordinates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#radial-term">Radial Term</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-term">Angular Term</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#circular-motion">Circular Motion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-4-acceleration-vector-in-polar-coordinates">B7.3.4 Acceleration Vector in Polar Coordinates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Discussion</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#radial-terms">Radial Terms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Angular Term</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-5-special-case-uniform-circular-motion">B7.3.5 Special Case: Uniform Circular Motion</a></li>
+</ul>
   </nav></div>
 
 </div></div>
