@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>B6.1 Center of Mass &#8212; A Competency Approach to Introductory Physics</title>
+    <title>B6.1 Mass of System and Center of Mass &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -201,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B6 - System of Particles</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">B6.1 Center of Mass</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">B6.1 Mass of System and Center of Mass</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cm-dynamics.html">B6.2 Center of Mass Dynamics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B7 - Rotational Kinematics</span></p>
@@ -393,7 +393,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>B6.1 Center of Mass</h1>
+    <h1>B6.1 Mass of System and Center of Mass</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -405,10 +405,16 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-1-motivation">B6.1.1 Motivation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-2-mass-of-a-system">B6.1.2 Mass of a system</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-3-center-of-mass">B6.1.3 Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-4-linear-velocity-of-center-of-mass">B6.1.4 Linear Velocity of Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-5-linear-acceleration-of-center-of-mass">B6.1.5 Linear Acceleration of Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-6-center-of-mass-vs-center-of-gravity">B6.1.6 Center of Mass vs. Center of Gravity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-3-concept-of-density">B6.1.3 Concept of Density</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-object">1D Object</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2D Object</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3D Object</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-4-center-of-mass">B6.1.4 Center of Mass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-5-linear-velocity-of-center-of-mass">B6.1.5 Linear Velocity of Center of Mass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-6-linear-acceleration-of-center-of-mass">B6.1.6 Linear Acceleration of Center of Mass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-7-center-of-mass-vs-center-of-gravity">B6.1.7 Center of Mass vs. Center of Gravity</a></li>
 </ul>
             </nav>
         </div>
@@ -420,8 +426,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="b6-1-center-of-mass">
-<h1>B6.1 Center of Mass<a class="headerlink" href="#b6-1-center-of-mass" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="b6-1-mass-of-system-and-center-of-mass">
+<h1>B6.1 Mass of System and Center of Mass<a class="headerlink" href="#b6-1-mass-of-system-and-center-of-mass" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b6-1-1-motivation">
 <h2>B6.1.1 Motivation<a class="headerlink" href="#b6-1-1-motivation" title="Permalink to this headline">#</a></h2>
 <p>We are now moving into the regime of investigating extended objects, that is, objects where size and shape may play a role. This is in contrast to the point particle concept. In doing so, explaining the dynamics quickly becomes complicated as we keep track of individual particles making up an object.</p>
@@ -436,8 +442,112 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[ M = \int dm \]</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b6-1-3-center-of-mass">
-<h2>B6.1.3 Center of Mass<a class="headerlink" href="#b6-1-3-center-of-mass" title="Permalink to this headline">#</a></h2>
+<section id="b6-1-3-concept-of-density">
+<h2>B6.1.3 Concept of Density<a class="headerlink" href="#b6-1-3-concept-of-density" title="Permalink to this headline">#</a></h2>
+<p>The definition of mass used for example in chemistry is not based on physical principles (physics arrogance shining bright). Instead, it is based on common sense approach: <strong>a measure of how much matter there is in a substance</strong> and does <strong>not</strong> apply to a point particle.</p>
+<p>For example, if you are lifting a bucket of rocks with a total mass of 12 kg and add a rock with a mass of 1.5 kg, then the total mass is 13.5 kg, common sense, right? Yes, for macroscopic and every objects this makes sense.</p>
+<p>However, when we are dealing with objects in the quantum realm such as atoms and nuclei, we find that it does not work that way. For example, consider a Helium consisting of 2 protons, 2 neutrons, and 2 electrons. If we add the individual masses of these particles, we do <strong>not</strong> get the total mass of the Helium atom. Instead, the Helium atom has slight less mass due to conversion of mass to energy to bind the nucleons together. This was realized by Albert Einstein in 1905 and made famous through his <span class="math notranslate nohighlight">\(E = mc^2\)</span> equation.</p>
+<p>For the purpose of our class, we will deal with macroscopic objects and can take the common sense approach. In this approach, we will need to know how dense an object is, or its <strong>mass density</strong>. Depending on whether we are considering 1D, 2D, or 3D objects we can describe the mass through its mass density (linear, surface, volume) and its geometrical space (length, area, volume).</p>
+<p>Let us consider the three spatial extends separately.</p>
+<section id="d-object">
+<h3>1D Object<a class="headerlink" href="#d-object" title="Permalink to this headline">#</a></h3>
+<p>A 1D object is something that can be described by a length <span class="math notranslate nohighlight">\(L\)</span>. If we consider a straight line object like a rope straigthen out in the x-direction, then a small segment of the rope will have a length <span class="math notranslate nohighlight">\(dx\)</span>. The mass of that small segment is then the <strong>linear mass density</strong> (<span class="math notranslate nohighlight">\(\lambda\)</span>) of that segment times its length:</p>
+<div class="math notranslate nohighlight">
+\[ dm = \lambda dx \]</div>
+<p>and the mass of the rope is</p>
+<div class="math notranslate nohighlight">
+\[ M = \int_{x_1}^{x_2} \lambda dx \]</div>
+<p>where we integrate over a length of interest bounded by <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>.</p>
+<p>If the linear mass density is constant, then we have</p>
+<div class="math notranslate nohighlight">
+\[ M = \lambda L \]</div>
+<p>where <span class="math notranslate nohighlight">\(L\)</span> is the length of the object.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 1</h3>
+    </header>
+<p>A copper wire has a linear mass density of 30.0 g/m. To wire a house, a contractor used 300.0 m of this copper wire. How much mass does this amount of copper have?</p>
+<p><strong>Solution</strong></p>
+<p>In this case the linear mass density is constant, and the total mass is (converting from g to kg)</p>
+<div class="math notranslate nohighlight">
+\[ M = \lambda L = (30.0)(300.0) = 9.00~\textrm{kg} \]</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 2</h3>
+    </header>
+<p>A tapered copper wire of length <span class="math notranslate nohighlight">\(L\)</span> has a linear mass density giving by <span class="math notranslate nohighlight">\(\lambda (x) = (30.0~\textrm{g/m})(1-\frac{x}{L})\)</span>. If the length of the wire is exactly 100 m, what is its mass?</p>
+<p><strong>Solution</strong></p>
+<p>In this case the linear mass density is <strong>not</strong> constant and we must integrate across the wire to obtain the mass:</p>
+<div class="math notranslate nohighlight">
+\[ M = \int_{x = 0}^{x = L}\lambda(x)dx \]</div>
+<div class="math notranslate nohighlight">
+\[ M = \int_{x = 0}^{x = L}(30.0)(1-\frac{x}{L})dx \]</div>
+<div class="math notranslate nohighlight">
+\[ M = \int_{x = 0}^{x = L}(30.0)~dx - 30.0\int_{x = 0}^{x = L}\frac{x}{L}dx \]</div>
+<div class="math notranslate nohighlight">
+\[ M = 30.0\left[x\right]^{L}_{0} - 30.0\left[\frac{1}{2}\frac{x^2}{L}\right]^{L}_{0} \]</div>
+<p>Evaluating the limits and using <span class="math notranslate nohighlight">\(L = 100\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ M = (30.0)(100) - (30.0)\frac{(1)}{(2)}\frac{(100)^2}{(100)} \]</div>
+<div class="math notranslate nohighlight">
+\[ M = 1.50~\textrm{kg} \]</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="id1">
+<h3>2D Object<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>We can extend the 1D formulation above to the 2D case by introducing the <strong>area mass density</strong>: <span class="math notranslate nohighlight">\(\sigma\)</span>. The mass of an object with a small area element <span class="math notranslate nohighlight">\(dA\)</span> is then</p>
+<div class="math notranslate nohighlight">
+\[ dm = \sigma dA \]</div>
+<p>and the total mass of an object is</p>
+<div class="math notranslate nohighlight">
+\[ M = \int \sigma dA \]</div>
+<p>where we are integrating over some area.</p>
+<p>If the area mass density is constant, we have</p>
+<div class="math notranslate nohighlight">
+\[ M = \sigma A \]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 1</b><br>
+<img src="fig1.jpg" width="500">
+<p>After gaining confidence in 1D, let us move up to 2D. After getting a rope for our whip, we are now looking
+at a wheel of cheese. This is a big disk of cheese, in fact, so big that its diameter is much larger than its
+thickness and we can approximately say it is 2D. The cheese is full of holes and its density is (area mass density) <span class="math notranslate nohighlight">\(\sigma = 45.0\left(\frac{r}{R}\right)^2\)</span>, and the radius of
+the cheese is <span class="math notranslate nohighlight">\(R = 0.30\)</span> m. The unit of the density constant is kg/m<span class="math notranslate nohighlight">\(^2\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Consider a disk with surface area <span class="math notranslate nohighlight">\(A = \pi r^2\)</span>. Use the definition of the differential to show that the area
+differential is <span class="math notranslate nohighlight">\(dA = 2\pi rdr\)</span></p></li>
+<li><p>Calculate the mass of the cheese.</p></li>
+</ol>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="id2">
+<h3>3D Object<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p>Guess what? We can extend the 1D an 2D formulations above to the 3D case by introducing the <strong>volume mass density</strong>: <span class="math notranslate nohighlight">\(\rho\)</span>. The mass of an object with a small volume element <span class="math notranslate nohighlight">\(dV\)</span> is then</p>
+<div class="math notranslate nohighlight">
+\[ dm = \rho dV \]</div>
+<p>and the total mass of an object is</p>
+<div class="math notranslate nohighlight">
+\[ M = \int \rho dV \]</div>
+<p>where we are integrating over some volume.</p>
+<p>If the area mass density is constant, we have</p>
+<div class="math notranslate nohighlight">
+\[ M = \rho V \]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 2</b><br>
+<img src="fig2.jpg" width="500">
+<p>A bottle of wine goes with the cheese. We find a cylindrical bottle of wine with a radius of <span class="math notranslate nohighlight">\(R = 3.00\)</span> cm and height
+<span class="math notranslate nohighlight">\(H = 0.30\)</span> m. The density (volume) of the wine is <span class="math notranslate nohighlight">\(\rho = 998.0\left(\frac{h}{H}\right)^2\)</span>, with h = 0 m being the bottom of the
+wine bottle. The unit of the density constant is kg/m<span class="math notranslate nohighlight">\(^3\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Write down the volume of a cylinder.</p></li>
+<li><p>Find the volume differential in terms of the height differential.</p></li>
+<li><p>Find the total mass of the wine.</p></li>
+</ol>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="b6-1-4-center-of-mass">
+<h2>B6.1.4 Center of Mass<a class="headerlink" href="#b6-1-4-center-of-mass" title="Permalink to this headline">#</a></h2>
 <p>The center of mass of a concept describing the statistically weighted distribution of mass in a system. In plain words: if all the mass of a system was concentrated in a single spatial point, that point/position would the be center of mass.</p>
 <p>For a system of discrete objects the center of mass is defined as</p>
 <div class="alert alert-success">
@@ -454,7 +564,7 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
 <header>
-<h3> Example 1</h3>
+<h3> Example 3</h3>
     </header>
 <p>Consider three point masses (<span class="math notranslate nohighlight">\(m_1 = m_2 = 1.00\)</span> kg and <span class="math notranslate nohighlight">\(m_3 = 2.00\)</span> kg) located at <span class="math notranslate nohighlight">\((x,y) = (1.0~\textrm{m},0.0~\textrm{m}),~(2.0~\textrm{m},0.0~\textrm{m})\)</span>, and <span class="math notranslate nohighlight">\((0.0~\textrm{m},2.0~\textrm{m})\)</span>, respectively. Find the center of mass of this system.</p>
 <p><strong>Solution</strong></p>
@@ -462,16 +572,16 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \vec{R}_{CM} = \frac{(1.00)\left(\begin{bmatrix} 1.0  \\ 0.0  \end{bmatrix}\right) + (1.00)\left(\begin{bmatrix} 2.0  \\ 0.0  \end{bmatrix}\right) + (2.00)\left(\begin{bmatrix} 0.0  \\ 2.0  \end{bmatrix}\right)}{(1.0) + (1.0) + (2.0)} = \begin{bmatrix} 0.75~\textrm{m}  \\ 1.0~\textrm{m}  \end{bmatrix}\end{split}\]</div>
 </div><hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
-<b>Box 1</b><br>
+<b>Box 3</b><br>
 <p>The water molecule consist of an oxygen atom (<span class="math notranslate nohighlight">\(m_{O} = 16\)</span> u) and two hydrogen atoms (<span class="math notranslate nohighlight">\(m_{H} = 1.0\)</span> u), where <span class="math notranslate nohighlight">\(u\)</span> is the atomic mass unit. The hydrogen atoms are  located at a distance of <span class="math notranslate nohighlight">\(d = 9.57\times 10^{-11}\)</span> m from the center of the oxygen atom and separated by an angle of <span class="math notranslate nohighlight">\(105^\circ\)</span>. Find the center of mass of the water molecule and make a sketch to illustrate its location.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
-<b>Box 2</b><br>
+<b>Box 4</b><br>
 <p>A <span class="math notranslate nohighlight">\(2000.0\)</span> kg SUV is moving along a straight, flat highway at <span class="math notranslate nohighlight">\(+10.0\)</span> m/s. At a given instant a sedan, with a mass of <span class="math notranslate nohighlight">\(1000.0\)</span> kg and velocity of <span class="math notranslate nohighlight">\(+20.0\)</span> m/s, has its center of mass <span class="math notranslate nohighlight">\(40.0\)</span> m ahead of the center of mass of the SUV. Where is the center of mass of the system at this instant? Give your answer relative to the SUV.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b6-1-4-linear-velocity-of-center-of-mass">
-<h2>B6.1.4 Linear Velocity of Center of Mass<a class="headerlink" href="#b6-1-4-linear-velocity-of-center-of-mass" title="Permalink to this headline">#</a></h2>
+<section id="b6-1-5-linear-velocity-of-center-of-mass">
+<h2>B6.1.5 Linear Velocity of Center of Mass<a class="headerlink" href="#b6-1-5-linear-velocity-of-center-of-mass" title="Permalink to this headline">#</a></h2>
 <p>The definitions and equations of kinematics can be applied to the CM as well. The linear velocity of the CM is</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -494,8 +604,8 @@ document.write(`
 </ol>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b6-1-5-linear-acceleration-of-center-of-mass">
-<h2>B6.1.5 Linear Acceleration of Center of Mass<a class="headerlink" href="#b6-1-5-linear-acceleration-of-center-of-mass" title="Permalink to this headline">#</a></h2>
+<section id="b6-1-6-linear-acceleration-of-center-of-mass">
+<h2>B6.1.6 Linear Acceleration of Center of Mass<a class="headerlink" href="#b6-1-6-linear-acceleration-of-center-of-mass" title="Permalink to this headline">#</a></h2>
 <p>Similarly to velocity, the linear acceleration of the CM is</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -510,8 +620,8 @@ document.write(`
 \[ \vec{A}_{CM} = \frac{\int \vec{a}dm}{\int dm} \]</div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b6-1-6-center-of-mass-vs-center-of-gravity">
-<h2>B6.1.6 Center of Mass vs. Center of Gravity<a class="headerlink" href="#b6-1-6-center-of-mass-vs-center-of-gravity" title="Permalink to this headline">#</a></h2>
+<section id="b6-1-7-center-of-mass-vs-center-of-gravity">
+<h2>B6.1.7 Center of Mass vs. Center of Gravity<a class="headerlink" href="#b6-1-7-center-of-mass-vs-center-of-gravity" title="Permalink to this headline">#</a></h2>
 <p>We will often hear the term <strong>Center of Gravity</strong> (CG). For example, if you balance an object on your finger, the CG is located somewhere along a vertical line above your finger. Hence, when we disucss rotation and balanced objects, the CG plays an important role.</p>
 <p>Center of Mass is the average location of all the mass in an object. Similarly,</p>
 <div class="alert alert-success">
@@ -591,10 +701,16 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-1-motivation">B6.1.1 Motivation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-2-mass-of-a-system">B6.1.2 Mass of a system</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-3-center-of-mass">B6.1.3 Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-4-linear-velocity-of-center-of-mass">B6.1.4 Linear Velocity of Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-5-linear-acceleration-of-center-of-mass">B6.1.5 Linear Acceleration of Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-6-center-of-mass-vs-center-of-gravity">B6.1.6 Center of Mass vs. Center of Gravity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-3-concept-of-density">B6.1.3 Concept of Density</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-object">1D Object</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2D Object</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3D Object</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-4-center-of-mass">B6.1.4 Center of Mass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-5-linear-velocity-of-center-of-mass">B6.1.5 Linear Velocity of Center of Mass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-6-linear-acceleration-of-center-of-mass">B6.1.6 Linear Acceleration of Center of Mass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b6-1-7-center-of-mass-vs-center-of-gravity">B6.1.7 Center of Mass vs. Center of Gravity</a></li>
 </ul>
   </nav></div>
 
