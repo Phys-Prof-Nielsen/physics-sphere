@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>B7.x Problems &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="B7.4 Newton’s 2nd Law: Uniform Circular Motion" href="uniform-circular-motion.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -407,7 +406,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b7-x-problems">
-<h1>B7.x Problems<a class="headerlink" href="#b7-x-problems" title="Permalink to this heading">#</a></h1>
+<h1>B7.x Problems<a class="headerlink" href="#b7-x-problems" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.1</h2>
     </header>
 <p>An ultracentrifuge accelerates from rest to 100,000 rpm in 2.00 min.</p>
@@ -466,10 +465,100 @@ document.write(`
     </header>
 <p>A fairground ride spins its occupants inside a flying saucer-shaped container. If the horizontal circular path the riders follow has an 8.00 m radius, at how many revolutions per minute are the riders subjected to a centripetal acceleration equal to that of gravity?</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/4-problems">https://openstax.org/books/university-physics-volume-1/pages/4-problems</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mf">9.81</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">8.00</span>
+
+<span class="c1">#unknown variable: omega (angular speed)</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+
+<span class="c1">#equation to be solved: a = -rw^2 --&gt; 0 = a + Rw^2</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">R</span><span class="o">*</span><span class="n">w</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span><span class="n">w</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angular velocity in rad/s = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol1</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="n">w_rad</span> <span class="o">=</span> <span class="n">sol1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">w_rev</span> <span class="o">=</span> <span class="n">w_rad</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">60.0</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angular velocity in rev/min = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">w_rev</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Angular velocity in rad/s = 1.10736172951751
+Angular velocity in rev/min = 21.1490511652202
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.8</h2>
     </header>
 <p>What is the ideal banking angle for a gentle turn of 1.20-km radius on a highway with a 105 km/h speed limit (about 65 mi/h), assuming everyone travels at the limit?</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/6-problems">https://openstax.org/books/university-physics-volume-1/pages/6-problems</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="mf">105.0</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">1.20E3</span> <span class="c1">#in meters</span>
+
+<span class="c1">#convert speed from km/hr to m/s</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">v</span><span class="o">*</span><span class="p">(</span><span class="mf">1000.0</span><span class="o">/</span><span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="mf">3600.0</span><span class="p">)</span>
+
+<span class="c1">#unknown variables </span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;theta&#39;</span><span class="p">)</span>   <span class="c1">#banking angle</span>
+<span class="n">fn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fn&#39;</span><span class="p">)</span>   <span class="c1">#normal force</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>   <span class="c1">#mass</span>
+
+<span class="c1">#horizontal normal force provides the force for centripetal acceleration</span>
+<span class="c1">#vertical normal force is balanced by force of gravity</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">fn</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">R</span> <span class="o">+</span> <span class="n">fn</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">theta</span><span class="p">,</span><span class="n">fn</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ideal banking angle in degrees: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mf">180.0</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ideal banking angle in degrees: 4.13325026089175
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.9</h2>
     </header>
 <p>If a car takes a banked curve at less than the ideal speed, friction is needed to keep it from sliding toward the inside of the curve (a problem on icy mountain roads).</p>
@@ -478,6 +567,85 @@ document.write(`
 <li><p>What is the minimum coefficient of friction needed for a frightened driver to take the same curve at 20.0 km/h?</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/6-problems">https://openstax.org/books/university-physics-volume-1/pages/6-problems</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># PART 1</span>
+<span class="c1">#-------------------------</span>
+<span class="c1"># no friction</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">1.00E2</span> <span class="c1">#in meters</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">15.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>  <span class="c1">#converted to radians</span>
+
+<span class="c1">#unknown variables </span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">)</span>   <span class="c1">#speed</span>
+<span class="n">fn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fn&#39;</span><span class="p">)</span>   <span class="c1">#normal force</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>   <span class="c1">#mass</span>
+
+<span class="c1">#horizontal normal force provides the force for centripetal acceleration</span>
+<span class="c1">#vertical normal force is balanced by force of gravity</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">fn</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">R</span> <span class="o">+</span> <span class="n">fn</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">v</span><span class="p">,</span><span class="n">fn</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ideal speed in m/s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ideal speed in km/hr: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mf">3600.0</span><span class="o">/</span><span class="mf">1000.</span><span class="p">))</span>
+<span class="c1">#---------------------------</span>
+
+<span class="c1"># PART 1</span>
+<span class="c1">#-------------------------</span>
+<span class="c1">#with friction</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">1.00E2</span> <span class="c1">#in meters</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">15.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>  <span class="c1">#converted to radians</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mf">20.0</span>   <span class="c1">#km/hr</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="mf">20.0</span><span class="o">*</span><span class="p">(</span><span class="mf">1000.0</span><span class="o">/</span><span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="mf">3600.0</span><span class="p">)</span>   <span class="c1">#m/s</span>
+
+<span class="c1">#unknown variables </span>
+<span class="n">mu</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;mu&#39;</span><span class="p">)</span>   <span class="c1">#coefficient of friction</span>
+<span class="n">fn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fn&#39;</span><span class="p">)</span>   <span class="c1">#normal force</span>
+<span class="n">ff</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ff&#39;</span><span class="p">)</span>   <span class="c1">#friction force</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>   <span class="c1">#mass</span>
+
+<span class="c1">#horizontal normal force provides the force for centripetal acceleration</span>
+<span class="c1">#vertcial forces are balanced</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">fn</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span> <span class="o">+</span> <span class="n">ff</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">R</span> <span class="o">+</span> <span class="n">fn</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">-</span> <span class="n">ff</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">ff</span> <span class="o">-</span> <span class="n">fn</span><span class="o">*</span><span class="n">mu</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">),(</span><span class="n">v</span><span class="p">,</span><span class="n">fn</span><span class="p">,</span><span class="n">ff</span><span class="p">,</span><span class="n">mu</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Coefficient of friction: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">]))</span>
+<span class="c1">#---------------------------</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ideal speed in m/s: 16.2129009672832
+Ideal speed in km/hr: 58.3664434822194
+Coefficient of friction: 0.234510246558863
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.10</h2>
     </header>
 <p>A car rounds an unbanked curve of radius 65 m. If the coefficient of static friction between the road and car is 0.70, what is the maximum speed at which the car can traverse the curve without slipping?</p>
