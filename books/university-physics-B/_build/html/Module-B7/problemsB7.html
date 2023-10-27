@@ -456,11 +456,68 @@ document.write(`
     </header>
 <p>The angular acceleration of a rotating rigid body is given by <span class="math notranslate nohighlight">\(\alpha = (2.0 - 3.0t)~\textrm{rad/s}^2\)</span>. If the body starts rotating from rest at t = 0 s and at <span class="math notranslate nohighlight">\(\theta_0 = 0.15~\textrm{rad}\)</span>,</p>
 <ol class="arabic simple">
-<li><p>what is the angular velocity as a function of time?</p></li>
+<li><p>what is the angular speed as a function of time?</p></li>
 <li><p>Angular position as function of time?</p></li>
 <li><p>What angle does it rotate through in 10 s?</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/10-problems">https://openstax.org/books/university-physics-volume-1/pages/10-problems</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">w0</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">theta0</span> <span class="o">=</span> <span class="mf">0.15</span>
+
+<span class="c1">#integral variable</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+
+<span class="c1"># PART 1</span>
+<span class="c1">#-------------------</span>
+<span class="c1">#function to integrate</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="o">-</span> <span class="mf">0.3</span><span class="o">*</span><span class="n">t</span> 
+
+<span class="n">omega</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angular speed (in rad/s): &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">omega</span><span class="p">))</span>
+<span class="c1">#-------------------</span>
+
+<span class="c1"># PART 2</span>
+<span class="c1">#-------------------</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">omega</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angular position (in rad): &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">theta</span><span class="o">+</span><span class="n">theta0</span><span class="p">))</span>
+<span class="c1">#-------------------</span>
+
+<span class="c1"># PART 3</span>
+<span class="c1">#-------------------</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="mf">10.0</span>
+
+<span class="n">dtheta</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">omega</span><span class="p">,(</span><span class="n">t</span><span class="p">,</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angular distance (in rad): &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dtheta</span><span class="p">))</span>
+<span class="c1">#-------------------</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Angular speed (in rad/s): -0.15*t**2 + 2.0*t
+Angular position (in rad): -0.05*t**3 + 1.0*t**2 + 0.15
+Angular distance (in rad): 50.0000000000000
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.7</h2>
     </header>
 <p>A fairground ride spins its occupants inside a flying saucer-shaped container. If the horizontal circular path the riders follow has an 8.00 m radius, at how many revolutions per minute are the riders subjected to a centripetal acceleration equal to that of gravity?</p>
@@ -589,7 +646,7 @@ Angular velocity in rev/min = 10.5745255826101
 <span class="n">fn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fn&#39;</span><span class="p">)</span>   <span class="c1">#normal force</span>
 <span class="n">m</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>   <span class="c1">#mass</span>
 
-<span class="c1">#horizontal normal force provides the force for centripetal acceleration</span>
+<span class="c1">#horizontal forces provides the force for centripetal acceleration</span>
 <span class="c1">#vertical normal force is balanced by force of gravity</span>
 
 <span class="n">eq1</span> <span class="o">=</span> <span class="n">fn</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span>
@@ -617,8 +674,8 @@ Angular velocity in rev/min = 10.5745255826101
 <span class="n">ff</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ff&#39;</span><span class="p">)</span>   <span class="c1">#friction force</span>
 <span class="n">m</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>   <span class="c1">#mass</span>
 
-<span class="c1">#horizontal normal force provides the force for centripetal acceleration</span>
-<span class="c1">#vertcial forces are balanced</span>
+<span class="c1">#horizontal forces provides the force for centripetal acceleration</span>
+<span class="c1">#vertical forces are balanced</span>
 
 <span class="n">eq1</span> <span class="o">=</span> <span class="n">fn</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span> <span class="o">+</span> <span class="n">ff</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
 <span class="n">eq2</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">R</span> <span class="o">+</span> <span class="n">fn</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">-</span> <span class="n">ff</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
@@ -650,6 +707,54 @@ Coefficient of friction: 0.234510246558863
     </header>
 <p>A car rounds an unbanked curve of radius 65 m. If the coefficient of static friction between the road and car is 0.70, what is the maximum speed at which the car can traverse the curve without slipping?</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/6-problems">https://openstax.org/books/university-physics-volume-1/pages/6-problems</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">65.0</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.70</span>
+
+<span class="c1">#unknown variables </span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">)</span>   <span class="c1">#speed</span>
+<span class="n">fn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fn&#39;</span><span class="p">)</span>   <span class="c1">#normal force</span>
+<span class="n">ff</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ff&#39;</span><span class="p">)</span>   <span class="c1">#friction force</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>   <span class="c1">#mass</span>
+
+<span class="c1">#horizontal frictional force provides the force for centripetal acceleration</span>
+<span class="c1">#vertical forces are balanced</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">fn</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span> 
+<span class="n">eq2</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">R</span> <span class="o">+</span> <span class="n">ff</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">ff</span> <span class="o">-</span> <span class="n">fn</span><span class="o">*</span><span class="n">mu</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">),(</span><span class="n">v</span><span class="p">,</span><span class="n">fn</span><span class="p">,</span><span class="n">ff</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Speed: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span>
+<span class="c1">#---------------------------</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Speed: 21.1271152787123
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 
     <script type="text/x-thebe-config">
