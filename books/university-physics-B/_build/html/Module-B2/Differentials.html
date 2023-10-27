@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>B2.9 Differentials &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B2.10 Integrals Using Symbolic Python" href="sympy-integrals.html" />
     <link rel="prev" title="B2.8 Integrals - Definite Integrals" href="Integral-definite.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -209,6 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B7/basic-relations.html">B7.1 Rotational Kinematics - Basic Relationships</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-B7/equations-kinematics.html">B7.2 Rotational Equations of Kinematics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-B7/polar-coordinates.html">B7.3 Kinematics in Polar Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/uniform-circular-motion.html">B7.4 Newton’s 2nd Law: Uniform Circular Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-B7/problemsB7.html">B7.x Problems</a></li>
 </ul>
 
@@ -418,11 +420,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b2-9-differentials">
-<h1>B2.9 Differentials<a class="headerlink" href="#b2-9-differentials" title="Permalink to this headline">#</a></h1>
+<h1>B2.9 Differentials<a class="headerlink" href="#b2-9-differentials" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><p>The concept of differential is covered early in a first calculus course together with derivatives. However, it is a concept that is often not valued or given much importance as the focus are given to the mastodons of calculus: derivatives and integrals.</p>
 <p>Frankly, the vast majority of you will never even notice the importance of the differential in your fields. It is like the vast majority of the population go around their everyday life without knowing trigonometry and seem to be doing just fine. But just think about all the cool stuff they miss out on! Similarly, you can perform basic derivatives and integrals without having a solid understanding of the differential. Now, if you choose math or physics as your major, you will inevitably need a more proper understanding of the differential.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b2-9-1-difference">
-<h2>B2.9.1 Difference<a class="headerlink" href="#b2-9-1-difference" title="Permalink to this headline">#</a></h2>
+<h2>B2.9.1 Difference<a class="headerlink" href="#b2-9-1-difference" title="Permalink to this heading">#</a></h2>
 <p>We have defined the gab on the x-axis between two data data points as <span class="math notranslate nohighlight">\(\Delta x\)</span>. For example, we can say that <span class="math notranslate nohighlight">\(\Delta x = x_2 - x_1\)</span>. Similarly, the gab between to data points on the y-axis is <span class="math notranslate nohighlight">\(\Delta y = y_2 - y_1\)</span>. We call these gabs for <strong>differences</strong> and use
 the symbol <span class="math notranslate nohighlight">\(\Delta\)</span> to denote a difference: read as “a difference in _____”.</p>
 <div class="alert alert-success">
@@ -434,7 +436,7 @@ not zero). For example the ratio between the differences in some dependent funct
 \[ \textrm{slope} = \frac{\Delta f}{\Delta x} \]</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b2-9-2-differential">
-<h2>B2.9.2 Differential<a class="headerlink" href="#b2-9-2-differential" title="Permalink to this headline">#</a></h2>
+<h2>B2.9.2 Differential<a class="headerlink" href="#b2-9-2-differential" title="Permalink to this heading">#</a></h2>
 <p>The differential is very similar to the difference, but in some sense we can say that it is the connection between
 algebra and calculus in terms of change. We will consider a small change in x. We will avoid what we mean by small
 for now, but understand that it is in fact a number and give the it symbol <span class="math notranslate nohighlight">\(dx\)</span>.</p>
@@ -504,7 +506,7 @@ to change by <span class="math notranslate nohighlight">\(6xdx\)</span>.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="final-note">
-<h2>Final Note<a class="headerlink" href="#final-note" title="Permalink to this headline">#</a></h2>
+<h2>Final Note<a class="headerlink" href="#final-note" title="Permalink to this heading">#</a></h2>
 <p>Often, students in calculus go into a mode of memorization instead of understanding. I really want to emphasize the understanding and that is why I made this short note in differentials. We will see something called <strong>method of substitution</strong>, which is a very powerful method to solve integrals and the key to this method is the differential:
 <strong>how does a small change in something relate to a change in something else</strong>.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>

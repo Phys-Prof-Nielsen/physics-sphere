@@ -62,5 +62,6 @@ parts:
   - file: Module-B7/basic-relations
   - file: Module-B7/equations-kinematics
   - file: Module-B7/polar-coordinates
+  - file: Module-B7/uniform-circular-motion
   - file: Module-B7/problemsB7
   

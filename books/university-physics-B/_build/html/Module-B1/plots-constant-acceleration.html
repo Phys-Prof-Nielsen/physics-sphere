@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>B1.3 Plots with Constant Acceleration &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B1.4 Problems" href="problemsB1.html" />
     <link rel="prev" title="B1.2 Plots with Constant Velocities" href="plots-constant-velocity.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -209,6 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B7/basic-relations.html">B7.1 Rotational Kinematics - Basic Relationships</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-B7/equations-kinematics.html">B7.2 Rotational Equations of Kinematics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-B7/polar-coordinates.html">B7.3 Kinematics in Polar Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/uniform-circular-motion.html">B7.4 Newton’s 2nd Law: Uniform Circular Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-B7/problemsB7.html">B7.x Problems</a></li>
 </ul>
 
@@ -424,9 +426,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b1-3-plots-with-constant-acceleration">
-<h1>B1.3 Plots with Constant Acceleration<a class="headerlink" href="#b1-3-plots-with-constant-acceleration" title="Permalink to this headline">#</a></h1>
+<h1>B1.3 Plots with Constant Acceleration<a class="headerlink" href="#b1-3-plots-with-constant-acceleration" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b1-3-1-summary-from-previous-note">
-<h2>B1.3.1 Summary from Previous Note<a class="headerlink" href="#b1-3-1-summary-from-previous-note" title="Permalink to this headline">#</a></h2>
+<h2>B1.3.1 Summary from Previous Note<a class="headerlink" href="#b1-3-1-summary-from-previous-note" title="Permalink to this heading">#</a></h2>
 <p>In previous note, we considered position and velocity plots vs. time. We found the following:</p>
 <ol class="arabic simple">
 <li><p>The slope of the position vs. time graph is the average velocity between the data points used to calculate the slope.</p></li>
@@ -452,7 +454,7 @@ document.write(`
 </ol>
 </div></section>
 <section id="b1-3-2-zero-acceleration">
-<h2>B1.3.2 Zero Acceleration<a class="headerlink" href="#b1-3-2-zero-acceleration" title="Permalink to this headline">#</a></h2>
+<h2>B1.3.2 Zero Acceleration<a class="headerlink" href="#b1-3-2-zero-acceleration" title="Permalink to this heading">#</a></h2>
 <p>The simplest case we can have is an object experiencing zero acceleration (I guess it would be an object at rest, but it would be trivial as both acceleration and velocity would be zero and position would remain fixed).</p>
 <p>In this example, we will consider the kinematics of an object over a time interval <span class="math notranslate nohighlight">\(t = [0~\textrm{s},10~\textrm{s}]\)</span> with an initial velocity of 5.0 m/s and initial position of x = 20.0 m. We will start out plotting the acceleraion:</p>
 <div class="cell tag_hide-input docutils container">
@@ -484,7 +486,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/6e4d59f908c1dff91f445885330c8c41137b0db474d9131a4523ad07bfb3146c.png" src="../_images/6e4d59f908c1dff91f445885330c8c41137b0db474d9131a4523ad07bfb3146c.png" />
+<img alt="../_images/09e3c8f3001eeb449747f841fb8954b836508fefd416fb1369045fa99b1e6ea3.png" src="../_images/09e3c8f3001eeb449747f841fb8954b836508fefd416fb1369045fa99b1e6ea3.png" />
 </div>
 </div>
 <p>Not a very exciting graph as it is zero throughout the interval. The next step will be the velocity graph. We know the following:</p>
@@ -521,7 +523,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/7f59490d608b9a526ca7aef23474c76ebc58b28596568514867fbd7cfff8dfc4.png" src="../_images/7f59490d608b9a526ca7aef23474c76ebc58b28596568514867fbd7cfff8dfc4.png" />
+<img alt="../_images/9e0e45a88f0b7b9f8ff3d6b747e2214e85710cb8f89dd6b95108902c76d8390d.png" src="../_images/9e0e45a88f0b7b9f8ff3d6b747e2214e85710cb8f89dd6b95108902c76d8390d.png" />
 </div>
 </div>
 <p>The two graph does satisfy our the mathematical relationship between velocity and acceleration:</p>
@@ -572,7 +574,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/8920870541c81d3b8e78c93f1488871a116acff0ffc770267b6dbc5f745d8f53.png" src="../_images/8920870541c81d3b8e78c93f1488871a116acff0ffc770267b6dbc5f745d8f53.png" />
+<img alt="../_images/59dae7335ca2df474711ff44d97824c4fbc9f939042c96ef5652af2a653d32e9.png" src="../_images/59dae7335ca2df474711ff44d97824c4fbc9f939042c96ef5652af2a653d32e9.png" />
 </div>
 </div>
 <p>We now move onto the position graph. We know the following:</p>
@@ -612,7 +614,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/c4a01b046b2ba97c1b8f260be5f4d4887f515c563d404dd5e1489e33db6848d9.png" src="../_images/c4a01b046b2ba97c1b8f260be5f4d4887f515c563d404dd5e1489e33db6848d9.png" />
+<img alt="../_images/07dc649d1a9d0aafb1c41d763ea33ff20a816d90c1f9d881e24db9c5ac901b43.png" src="../_images/07dc649d1a9d0aafb1c41d763ea33ff20a816d90c1f9d881e24db9c5ac901b43.png" />
 </div>
 </div>
 <p>Just as was the case with the acceleration/velocity relationship, this graph does satisfy our the mathematical relationship between position and velocity:</p>
@@ -661,11 +663,11 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/b1899d771d6ab142a490fb50074499e568b4ca194835db3ea5a0f0cd074bcfcb.png" src="../_images/b1899d771d6ab142a490fb50074499e568b4ca194835db3ea5a0f0cd074bcfcb.png" />
+<img alt="../_images/5840c678f106ac0a6212db75372e2d9c27ac8331d052a8294868c4f3469670b5.png" src="../_images/5840c678f106ac0a6212db75372e2d9c27ac8331d052a8294868c4f3469670b5.png" />
 </div>
 </div>
 <section id="summary">
-<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h3>
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h3>
 <p>In conclusion:</p>
 <ul class="simple">
 <li><p>we see that a non-stationary object subject to a zero acceleration exhibit a straight line in a position vs. time plot, and a horizontal line in a velocity vs. time plot.</p></li>
@@ -677,7 +679,7 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="b1-3-3-non-zero-constant-acceleration">
-<h2>B1.3.3 Non-zero Constant Acceleration<a class="headerlink" href="#b1-3-3-non-zero-constant-acceleration" title="Permalink to this headline">#</a></h2>
+<h2>B1.3.3 Non-zero Constant Acceleration<a class="headerlink" href="#b1-3-3-non-zero-constant-acceleration" title="Permalink to this heading">#</a></h2>
 <p>The next simplest case we can have is an object experiencing a constant non-zero acceleration.</p>
 <p>In this example, we will consider the kinematics of an object over a time interval <span class="math notranslate nohighlight">\(t = [0~\textrm{s},10~\textrm{s}]\)</span> with an initial velocity of 5.00 m/s, initial position of x = 20.0 m, and a constant acceleration of 10.0 m/s<span class="math notranslate nohighlight">\(^2\)</span>. We will start out plotting the acceleraion:</p>
 <div class="cell tag_hide-input docutils container">
@@ -709,7 +711,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/9a276c950ddd85877a1adaada91fd068611902c8d31a16e4d532a138444de613.png" src="../_images/9a276c950ddd85877a1adaada91fd068611902c8d31a16e4d532a138444de613.png" />
+<img alt="../_images/4a849f1b6b45ce53e05010de333493aee294539211b1873882df1b04ae8028da.png" src="../_images/4a849f1b6b45ce53e05010de333493aee294539211b1873882df1b04ae8028da.png" />
 </div>
 </div>
 <p>The area bounded by the acceleration graph and the time axis is the <strong>change</strong> in velocity. The area is</p>
@@ -750,7 +752,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/262f4d56bf1bfc01434046802c5d94765351c07e877943b5f46bde7b771cb613.png" src="../_images/262f4d56bf1bfc01434046802c5d94765351c07e877943b5f46bde7b771cb613.png" />
+<img alt="../_images/b578086d82c2caf6059a24f1186c91b5e6e9647acb8ccd28970c554740e4ad6d.png" src="../_images/b578086d82c2caf6059a24f1186c91b5e6e9647acb8ccd28970c554740e4ad6d.png" />
 </div>
 </div>
 <p>The area under the velocity vs. time graph represents the displacement (or change in position):</p>
@@ -802,12 +804,12 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/89e17c64b3890d2e79b294221f2bc12d265c0ab5fcb13072dac978fd7742bf2e.png" src="../_images/89e17c64b3890d2e79b294221f2bc12d265c0ab5fcb13072dac978fd7742bf2e.png" />
+<img alt="../_images/baab120ed534dedfeaff55a6b0a546aa0a246aa477d928bb52c7dd616496b873.png" src="../_images/baab120ed534dedfeaff55a6b0a546aa0a246aa477d928bb52c7dd616496b873.png" />
 </div>
 </div>
 <p>The summary from previous case applies here as well. We can start from the position graph and, in principle, fully determine the velocy graph, and then the acceleration graph.</p>
 <section id="non-constant-acceleration">
-<h3>Non-constant Acceleration<a class="headerlink" href="#non-constant-acceleration" title="Permalink to this headline">#</a></h3>
+<h3>Non-constant Acceleration<a class="headerlink" href="#non-constant-acceleration" title="Permalink to this heading">#</a></h3>
 <p>The approaches from above are the same, however, we may have more difficulties with visualizing the graphs in the same manner as above. We are very familiar with horizontal, straight, and even parabolas, but after that we tend to struggle as it is not something we are used to.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
 <header>
@@ -854,7 +856,7 @@ Answer the following questions:</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/7833c6c1ea745c9a97782f29c3020f31aba9618bd053c2b57d90f208a2777c0e.png" src="../_images/7833c6c1ea745c9a97782f29c3020f31aba9618bd053c2b57d90f208a2777c0e.png" />
+<img alt="../_images/12c6a8343715cb88f36e594642bf2592db6d89d5e61ab91d901c64aed277798c.png" src="../_images/12c6a8343715cb88f36e594642bf2592db6d89d5e61ab91d901c64aed277798c.png" />
 </div>
 </div>
 <div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;"> 
@@ -914,7 +916,7 @@ Answer the following questions:</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/a53fbc59c430b920e87bb7e1797602b3c9e07c09ebcda7e8e6d2acd09a13880b.png" src="../_images/a53fbc59c430b920e87bb7e1797602b3c9e07c09ebcda7e8e6d2acd09a13880b.png" />
+<img alt="../_images/a641400b717f5dabf17e683592ece8b640a61c3094839382a5da8922fdf15049.png" src="../_images/a641400b717f5dabf17e683592ece8b640a61c3094839382a5da8922fdf15049.png" />
 </div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
@@ -959,7 +961,7 @@ Answer the following questions:</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/dcd117d88238333f7c47d80525943d2e38fc89b8ac621365fe64bf5deb35234d.png" src="../_images/dcd117d88238333f7c47d80525943d2e38fc89b8ac621365fe64bf5deb35234d.png" />
+<img alt="../_images/2abea7becbebdfc8e3b8bb7283356b679bdc780ec03dc8b33a447ef1608c04a8.png" src="../_images/2abea7becbebdfc8e3b8bb7283356b679bdc780ec03dc8b33a447ef1608c04a8.png" />
 </div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
@@ -1004,7 +1006,7 @@ Answer the following questions:</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/4f02e4d4484e8319e6f84df8d22a82c699288bf5a35bdeda7687eba3c6d4323c.png" src="../_images/4f02e4d4484e8319e6f84df8d22a82c699288bf5a35bdeda7687eba3c6d4323c.png" />
+<img alt="../_images/ccbf9b4fab91210f59f4a6992f72449bac9711592d48939be3ba2afaf1d8c1c5.png" src="../_images/ccbf9b4fab91210f59f4a6992f72449bac9711592d48939be3ba2afaf1d8c1c5.png" />
 </div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
