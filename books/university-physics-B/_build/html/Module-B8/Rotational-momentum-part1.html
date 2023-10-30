@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>B7.3 Kinematics in Polar Coordinates &#8212; A Competency Approach to Introductory Physics</title>
+    <title>B8.2 Rotational Momentum: Part 1 &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -62,11 +62,9 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B7/polar-coordinates';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B8/Rotational-momentum-part1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="B7.4 Newton’s 2nd Law: Uniform Circular Motion" href="uniform-circular-motion.html" />
-    <link rel="prev" title="B7.2 Rotational Equations of Kinematics" href="equations-kinematics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -205,16 +203,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B6/cm-dynamics.html">B6.2 Center of Mass Dynamics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B7 - Rotational Kinematics</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="basic-relations.html">B7.1 Rotational Kinematics - Basic Relationships</a></li>
-<li class="toctree-l1"><a class="reference internal" href="equations-kinematics.html">B7.2 Rotational Equations of Kinematics</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">B7.3 Kinematics in Polar Coordinates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uniform-circular-motion.html">B7.4 Newton’s 2nd Law: Uniform Circular Motion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="problemsB7.html">B7.x Problems</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/basic-relations.html">B7.1 Rotational Kinematics - Basic Relationships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/equations-kinematics.html">B7.2 Rotational Equations of Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/polar-coordinates.html">B7.3 Kinematics in Polar Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/uniform-circular-motion.html">B7.4 Newton’s 2nd Law: Uniform Circular Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/problemsB7.html">B7.x Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B8 - Rotational Momentum</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Module-B8/Moment-of-inertia.html">B8.1 Moment of Inertia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Moment-of-inertia.html">B8.1 Moment of Inertia</a></li>
 </ul>
 
     </div>
@@ -286,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-B7/polar-coordinates.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-B8/Rotational-momentum-part1.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -316,7 +314,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-B7/polar-coordinates.ipynb" target="_blank"
+      <li><a href="../_sources/Module-B8/Rotational-momentum-part1.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -398,7 +396,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>B7.3 Kinematics in Polar Coordinates</h1>
+    <h1>B8.2 Rotational Momentum: Part 1</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -408,31 +406,35 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-1-motivation">B7.3.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-2-set-up">B7.3.2 Set Up</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-derivative-of-hat-r">Time Derivative of <span class="math notranslate nohighlight">\(\hat{r}\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-derivative-of-hat-theta">Time Derivative of <span class="math notranslate nohighlight">\(\hat{\theta}\)</span></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">B8.2 Rotational Momentum: Part 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-point-object">1. Angular Momentum: Point Object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#x-axis">x-axis</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-3-velocity-vector-in-polar-coordinates">B7.3.3 Velocity Vector in Polar Coordinates</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#radial-term">Radial Term</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-term">Angular Term</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#circular-motion">Circular Motion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#y-axis">y-axis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-axis">z-axis</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-4-acceleration-vector-in-polar-coordinates">B7.3.4 Acceleration Vector in Polar Coordinates</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Discussion</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#radial-terms">Radial Terms</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Angular Term</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-system-of-particles">2. Angular Momentum: System of Particles</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Solution</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-5-special-case-uniform-circular-motion">B7.3.5 Special Case: Uniform Circular Motion</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-continuous-system">3. Angular Momentum: Continuous System</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solution</a></li>
 </ul>
+</li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -443,190 +445,171 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="b7-3-kinematics-in-polar-coordinates">
-<h1>B7.3 Kinematics in Polar Coordinates<a class="headerlink" href="#b7-3-kinematics-in-polar-coordinates" title="Permalink to this headline">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b7-3-1-motivation">
-<h2>B7.3.1 Motivation<a class="headerlink" href="#b7-3-1-motivation" title="Permalink to this headline">#</a></h2>
-<p>We saw in previous notes how we can relate <strong>linear tangential</strong> parameters to <strong>rotational</strong> parameters for <strong>circular</strong> motion. However, we also need to know radial parameters to fully describe rotational motion, and for that purpose we need the full treatment using polar coordinates. As an example, anytime we have circular motion, a radial force is required to change the direction of the object, otherwise it just moves in a straight line.</p>
-<p>In the following, we will show how the position, velocity, and acceleration vectors appear in polar coordinates.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b7-3-2-set-up">
-<h2>B7.3.2 Set Up<a class="headerlink" href="#b7-3-2-set-up" title="Permalink to this headline">#</a></h2>
-<p>Consider the figure below.</p>
-<img src="B7-fig2.png"  width="600"/>
-<p>The blue vector represents a position vector <span class="math notranslate nohighlight">\(\vec{r}\)</span>. The two red vectors are the cartesian unit vectors <span class="math notranslate nohighlight">\(\hat{i}\)</span> and <span class="math notranslate nohighlight">\(\hat{j}\)</span>, while the green vectors are the polar unit vectors <span class="math notranslate nohighlight">\(\hat{r}\)</span> and <span class="math notranslate nohighlight">\(\hat{\theta}\)</span>. In contrast to the cartesian unit vectors, the polar unit vectors are changing directions depending on the position vector. The radial unit vector <span class="math notranslate nohighlight">\(\hat{r}\)</span> is always pointing in the radial direction away from the origin, and the angular unit vector <span class="math notranslate nohighlight">\(\hat{\theta}\)</span> is always pointing in the counterclockwise angular direction.</p>
-<p>The position vector is fully characterized by</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="b8-2-rotational-momentum-part-1">
+<h1>B8.2 Rotational Momentum: Part 1<a class="headerlink" href="#b8-2-rotational-momentum-part-1" title="Permalink to this headline">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><p>Angular momentum, or rotational momentum, is the measure of rotational motion just as linear momentum is the measure of linear motion. We will first define angular momentum in a similar fashion as the linear counterpart, but we will quickly realize that the angular momentum is a beast compared to linear momemtum. We will make certain assumptions that will restrict its complexity and hopefully help us gain some confidence in those simpler scenarios. For a more rigorous discussion, you will need to take the course on classical mechanics.</p>
+<img src="Picture1.png" width="500">
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="angular-momentum-point-object">
+<h2>1. Angular Momentum: Point Object<a class="headerlink" href="#angular-momentum-point-object" title="Permalink to this headline">#</a></h2>
+<p>We defined the <strong>linear momentum</strong> in terms of its <strong>resistance to a change in linear motion</strong> and its <strong>linear velocity</strong> as</p>
 <div class="math notranslate nohighlight">
-\[ \vec{r} = r\hat{r} \tag{1}\]</div>
-<p>This appears simpler than the cartesian version: <span class="math notranslate nohighlight">\(\vec{r} = x\hat{i} + y\hat{j}\)</span>, but do not be fooled. Whereas the cartesian unit vectors are constant, the <span class="math notranslate nohighlight">\(\hat{r}\)</span> unit vector is a function of <span class="math notranslate nohighlight">\(\theta\)</span> and it makes it a lot more complex as we will see.</p>
-<p>From the sketch on the right, we can write the polar unit vectors in terms of the cartesian unit vectors:
-<br></p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{eqnarray*}
- \hat{r} &amp;=&amp; \cos\theta\hat{i} + \sin\theta\hat{j} \tag{2}
-\\
- \hat{\theta} &amp;=&amp; -\sin\theta\hat{i} + \cos\theta\hat{j} \tag{3}
-\end{eqnarray*}\]</div>
-<p>In the following, we will need to know the time derivative of the polar unit vectors:</p>
-<section id="time-derivative-of-hat-r">
-<h3>Time Derivative of <span class="math notranslate nohighlight">\(\hat{r}\)</span><a class="headerlink" href="#time-derivative-of-hat-r" title="Permalink to this headline">#</a></h3>
-<p>We will be using the <em>dot</em> notation for time derivatives.</p>
-<p>Applying the sum, product, and chain rules on Equation(2):</p>
+\[ \vec{p} = m\vec{v} \]</div>
+<p>It would be tempting to define the rotational (or angular momentum) as</p>
 <div class="math notranslate nohighlight">
-\[ \dot{\hat{r}} = -\dot{\theta}\sin\theta\hat{i} + \cos\theta\dot{\hat{i}} + \dot{\theta}\cos\theta\hat{j} + \cos\theta\dot{\hat{j}}\]</div>
-<p>Since the cartesian unit vectors are constants, their time-derivative is zero:</p>
-<div class="math notranslate nohighlight">
-\[ \dot{\hat{r}} = -\dot{\theta}\sin\theta\hat{i} + \dot{\theta}\cos\theta\hat{j} \]</div>
-<p>Pulling out the common factor of <span class="math notranslate nohighlight">\(\dot{\theta}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[ \dot{\hat{r}} = \dot{\theta}\left(-\sin\theta\hat{i} + \cos\theta\hat{j}\right) \]</div>
-<p>The term in the parenthesis is the same as <span class="math notranslate nohighlight">\(\hat{\theta}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[ \dot{\hat{r}} = \dot{\theta}\hat{\theta} \tag{4}\]</div>
-</section>
-<section id="time-derivative-of-hat-theta">
-<h3>Time Derivative of <span class="math notranslate nohighlight">\(\hat{\theta}\)</span><a class="headerlink" href="#time-derivative-of-hat-theta" title="Permalink to this headline">#</a></h3>
-<p>In a similar approach as above, we have</p>
-<div class="math notranslate nohighlight">
-\[ \dot{\hat{\theta}} = -\dot{\theta}\cos\theta\hat{i} -\sin\theta\dot{\hat{i}} - \dot{\theta}\sin\theta\hat{j} + \cos\theta\dot{\hat{j}}\]</div>
-<p>The terms with derivatives of cartesion unit vectors are zero:</p>
-<div class="math notranslate nohighlight">
-\[ \dot{\hat{\theta}} = -\dot{\theta}\cos\theta\hat{i} - \dot{\theta}\sin\theta\hat{j} \]</div>
-<p>Re-arranging:</p>
-<div class="math notranslate nohighlight">
-\[ \dot{\hat{\theta}} = -\dot{\theta}\left( \cos\theta\hat{i} + \sin\theta\hat{j}\right) \]</div>
-<p>and using the result from Equation (2):</p>
-<div class="math notranslate nohighlight">
-\[ \dot{\hat{\theta}} = -\dot{\theta}\hat{r} \tag{5}\]</div>
-<p>We are now ready to explore velocity and acceleration in polar coordinates.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-</section>
-<section id="b7-3-3-velocity-vector-in-polar-coordinates">
-<h2>B7.3.3 Velocity Vector in Polar Coordinates<a class="headerlink" href="#b7-3-3-velocity-vector-in-polar-coordinates" title="Permalink to this headline">#</a></h2>
-<p>We take the time-derivate of the position vector in Equation (1):</p>
-<div class="math notranslate nohighlight">
-\[ \dot{\vec{r}} = \dot{r}\hat{r} + r\dot{\hat{r}} \]</div>
-<p>Insert Equation (4):</p>
+\[ \vec{l} = I\vec{\omega} \]</div>
+<p>where <span class="math notranslate nohighlight">\(I\)</span> is the moment of inertia and is the particle’s <strong>resistance to a change rotational motion</strong> and <span class="math notranslate nohighlight">\(\omega\)</span> is its <strong>rotational velocity</strong>. This is in principle corret, but only if we consider the moment of inertia as a <strong>tensor</strong>. Since we are not ready to handle the truth on that matter, we will define the moment of inertia differently.</p>
+<p>Instead, we will first disucss the meaning of rotational motion as restricted to this course. We restrict our discussion to motion around a given axis. That implies that we consider the moment of inertia around that given axis as well as the <strong>components of rotational velocity</strong> around that given axis. We can then define the <strong>angular momentum components</strong> around the respective axis as</p>
 <div class="alert alert-success">
+$$ l_x = I_{x}\omega_{x} $$
 <div class="math notranslate nohighlight">
-\[ \dot{\vec{r}} = \dot{r}\hat{r} + r\dot{\theta}\hat{\theta} \tag{6}\]</div>
+\[ l_y = I_{y}\omega_{y} \]</div>
+<div class="math notranslate nohighlight">
+\[ l_z = I_{z}\omega_{z} \]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;/div&gt;
+</pre></div>
 </div>
-<section id="discussion">
-<h3>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">#</a></h3>
-<section id="radial-term">
-<h4>Radial Term<a class="headerlink" href="#radial-term" title="Permalink to this headline">#</a></h4>
-<p>The radial term is the one associated with <span class="math notranslate nohighlight">\(\hat{r}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[ \vec{v}_r = \dot{r}\hat{r} \]</div>
-<p>This tells us that the radial velocity is the rate of change of the distance away from the origin. This is simply a straight line velocity as on object moves towards/away the origin in a straight line.</p>
+<div class="alert alert-info">
+<li>This is only true when we that pure rotation around one of the principal axis.
+<li>The angular speeds are actually the angular components of the angular velocity and can thus be negative.
+<li>The angluar velocity components have units of rad/s in this equation.
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="example-1">
+<h2>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">#</a></h2>
+<p>A point particle of mass 0.5 kg is moving in a circular motion in the xy-plane with radius 0.5 m and an angular speed of 25 rad/s. What is its angular momentum around the three principal axes?</p>
+<section id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h3>
+<p>We will consider each principal axis separately. We note that the particle is rotating about the z-axis since it is confined to the xy-plane.</p>
+<section id="x-axis">
+<h4>x-axis<a class="headerlink" href="#x-axis" title="Permalink to this headline">#</a></h4>
+<p>The angular speed around the x-axis is zero: <span class="math notranslate nohighlight">\(l_x = 0\)</span></p>
 </section>
-<section id="angular-term">
-<h4>Angular Term<a class="headerlink" href="#angular-term" title="Permalink to this headline">#</a></h4>
-<p>The angular term is the one associated with <span class="math notranslate nohighlight">\(\hat{\theta}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[ \vec{v}_{\theta} = r\dot{\theta}\hat{\theta} \]</div>
-<p>We may recognise <span class="math notranslate nohighlight">\(\dot\theta\)</span> is the angular speed <span class="math notranslate nohighlight">\(\omega\)</span> and we can rewrite it as</p>
-<div class="math notranslate nohighlight">
-\[ \vec{v}_{\theta} = r\omega\hat{\theta} \]</div>
-<p>with a magnitude of</p>
-<div class="math notranslate nohighlight">
-\[ v_{\theta} = r\omega \]</div>
-<p>What a hoot: this is what we found as the tangential speed in the previous notes.</p>
 </section>
-<section id="circular-motion">
-<h4>Circular Motion<a class="headerlink" href="#circular-motion" title="Permalink to this headline">#</a></h4>
-<p>If we have circular motion, the radial component is zero and we are left with only the tangential velocity:</p>
+<section id="y-axis">
+<h3>y-axis<a class="headerlink" href="#y-axis" title="Permalink to this headline">#</a></h3>
+<p>The angular speed around the y-axis is zero: <span class="math notranslate nohighlight">\(l_y = 0\)</span></p>
+</section>
+<section id="z-axis">
+<h3>z-axis<a class="headerlink" href="#z-axis" title="Permalink to this headline">#</a></h3>
+<p>The moment of inertia about the z-axis is</p>
 <div class="math notranslate nohighlight">
-\[ \vec{v} = r\dot\theta\hat{\theta}\]</div>
+\[ I_z = md_z^2 = (0.5)(0.5)^2 = 0.125~\textrm{kgm$^2$} \]</div>
+<p>and the rotational momentum around the z-axis is then</p>
+<div class="math notranslate nohighlight">
+\[ l_z = I_{z}\omega_{z} = (0.125)(25) = 3~\textrm{kgm$^2$/s} \]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 1</b><br>
+A turntable disc is spinning at a rate of $5.0~\textrm{rev/s}$. There is a bug with a mass of 5.0 g on the turntable at location 8 cm from the center of the disc.
+    <ol>
+        <li> Convert the angular speed from rev/s to rad/s.
+            <li> Consider the bug to be point particle, what is its angular momentum around the rotation axis?
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 2</b><br>
+   <img src="lhc.jpg" width="300">
+<p>At full power, trillions of protons will race around the <a href="https://home.cern/science/accelerators/large-hadron-collider">Large Hadron Collider (LHC)</a> accelerator ring 11,245 times a second, travelling at 99.9999991<span class="math notranslate nohighlight">\(\%\)</span> the speed of light. The collider is contained in a circular tunnel, with a circumference of 26.7 kilometers. What is the angular momentum of a single proton (considered a point particle) around the axis of rotation? HINT: You will need to look up the mass of a proton.</p>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 </section>
-<section id="b7-3-4-acceleration-vector-in-polar-coordinates">
-<h2>B7.3.4 Acceleration Vector in Polar Coordinates<a class="headerlink" href="#b7-3-4-acceleration-vector-in-polar-coordinates" title="Permalink to this headline">#</a></h2>
-<p>We take the time-derivate of the velocity vector in Equation (6) using the sum and product rules:</p>
-<div class="math notranslate nohighlight">
-\[ \ddot{\vec{r}} = \ddot{r}\hat{r} + \dot{r}\dot{\hat{r}} + \dot{r}\dot{\theta}\hat{\theta} + r\ddot{\theta}\hat{\theta} + r\dot{\theta}\dot{\hat{\theta}}\]</div>
-<p>Insert Equations (4) and (5):</p>
-<div class="math notranslate nohighlight">
-\[ \ddot{\vec{r}} =  \ddot{r}\hat{r} + \dot{r}\dot{\theta}\hat{\theta} + \dot{r}\dot{\theta}\hat{\theta} + r\ddot{\theta}\hat{\theta} - r\dot{\theta}\dot{\theta}\hat{r} \]</div>
-<p>Re-arranging the terms:</p>
+<section class="tex2jax_ignore mathjax_ignore" id="angular-momentum-system-of-particles">
+<h1>2. Angular Momentum: System of Particles<a class="headerlink" href="#angular-momentum-system-of-particles" title="Permalink to this headline">#</a></h1>
+<p>This is a similar approach as for the linear case: we simply add the components together. Let us consider one component, say the z-component. The total angular momentum is</p>
 <div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ \ddot{\vec{r}} =  \left( \ddot{r} - r\dot{\theta}^2 \right)\hat{r} + \left( 2\dot{r}\dot{\theta} +  r\ddot{\theta} \right)\hat{\theta} \]</div>
-</div>
+$$ L_z = \sum_{i = 1}^{N}l_{i,z} $$
+    </div>
+<p>A similar relation hold for the x- and y-axis as well.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="example-2">
+<h2>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">#</a></h2>
+<p>Two particles are moving in circular motions but opposite directions. Particle A has a mass of 1.0 kg and is traveling in CCW direction with a rotational speed of 2.0 rad/s at a radius of 0.1 cm. Particle B has a mass of 0.25 kg and is traveling in CW direction with an angular speed of 5.0 rad/s at a radius of 0.5 cm. What is the rotational momentum of this system.</p>
 <section id="id1">
-<h3>Discussion<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
-<section id="radial-terms">
-<h4>Radial Terms<a class="headerlink" href="#radial-terms" title="Permalink to this headline">#</a></h4>
-<p>The radial terms are the ones associated with <span class="math notranslate nohighlight">\(\hat{r}\)</span>:</p>
+<h3>Solution<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Let us consider CCW direciton to be positive, that implies that particle A has a <strong>positive</strong> angular velocity component and particle B has a <strong>negative</strong> angular velocity component. We will also say that the particles are moving in the xy-plane and the angular momentum is therefore equivalent to finding the z-component.</p>
+<p>The total angular momemtum is</p>
 <div class="math notranslate nohighlight">
-\[ \vec{a}_r = \left( \ddot{r} - r\dot{\theta}^2 \right)\hat{r} \]</div>
-<p>We have two terms:</p>
-<p><em>Linear Acceleration</em></p>
-<p>The term</p>
+\[ L_z = l_{1,z} + l_{2,z} \]</div>
 <div class="math notranslate nohighlight">
-\[ \ddot{r}\hat{r} \]</div>
-<p>is the <strong>linear acceleration</strong> as it describes the straigh line acceleration towards/away from the origin. For example, an object speeding up or slowing down as it moves towards/away in a straight line.</p>
-<p><em>Centripetal Acceleration</em></p>
-<p>The second radial term is</p>
+\[ L_z = I_{1,z}\omega_{1,z} + I_{2,z}\omega_{2,z} \]</div>
 <div class="math notranslate nohighlight">
-\[- r\dot{\theta}^2\hat{r}\]</div>
-<p>and is known as the <strong>centripetal acceleration</strong>. Although in the radial direction, <strong>it does not change the radial speed of the object but causes it to change direction</strong>. This acceleration plays a major role in circular motion as we will see below. For now, it will be convenient to express it in different forms.</p>
-<p>We can write <span class="math notranslate nohighlight">\(\dot{\theta}\)</span> as <span class="math notranslate nohighlight">\(\omega\)</span> and the magnitude of the centripetal acceleration is then</p>
-<div class="alert alert-success">
+\[ L_z = m_{1}d_{1,z}^2\omega_{1,z} + m_{2}d_{2,z}^2\omega_{2,z} \]</div>
 <div class="math notranslate nohighlight">
-\[ a_c = r\omega^2 \]</div>
+\[ L_z = (1.0)(0.001)^2(2.0) + (0.25)(0.005)^2(-5.0) = 0.003~\textrm{kgm$^2$/s} \]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 2</b><br>
+A turntable disc is spinning at a rate of $5.0~\textrm{rev/s}$. There is a 5.0 g bug on the turntable at location 8 cm from the center of the disc. A second identical bug is positioned at a loction of 4 cm from the center of the disc. What is the magnitude of the angular momentum of the system of bugs? HINT: Remember to convert the angular speed to rad/s. 
 </div>
-which is one useful expression for it. Another useful expression is to implement the tangental speed:
-<div class="math notranslate nohighlight">
-\[ v_{\theta} = r\omega \]</div>
-<p>and the centripetal acceleration becomes:</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ a_c = \frac{v_{\theta}^2}{r} \]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 3</b><br>
+Two point objects A and B with masses 2.0 kg and 3.0 kg, respectively, are moving in circular motions with radii 0.5 m and 0.75 m, respectively. Object A is moving in a CW direction while object B is moving in a CCW direction. What is the angular momentum of this system?
 </div>
-which is the form we will use the most in this course.
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="angular-momentum-continuous-system">
+<h1>3. Angular Momentum: Continuous System<a class="headerlink" href="#angular-momentum-continuous-system" title="Permalink to this headline">#</a></h1>
+<p>Remember, a continuous system is a system where the number of point particles approaches infinity (in real applications: the number is too large to count). In this discussion, we must make another restriction on our continuous system as we will see.</p>
+<p>In this case, the angular momentum is (we consider only around one axis, but we can extrapolate the result to the other two axis as well)</p>
+<div class="math notranslate nohighlight">
+\[ L_z = \sum_{i = 1}^{\infty}l_{i,z} \]</div>
+<div class="math notranslate nohighlight">
+\[ L_z = \sum_{i = 1}^{\infty}I_{i,z}\omega_{i,z}\]</div>
+<p>Now, the infinite sum is over the individual products between the moment of inertia and angular velocity component. <strong>This is tricky</strong> unless we consider <strong>rigid objects</strong>. In a rigid object <strong>all particles must travel at the same angular speed</strong>. That implies that</p>
+<div class="math notranslate nohighlight">
+\[ \omega_{1,z} = \omega_{2,z} = \cdots \]</div>
+<p>We can then label the angular speeds for all the particles as <span class="math notranslate nohighlight">\(\omega_z\)</span> and pull it outside the summation:</p>
+<div class="math notranslate nohighlight">
+\[ L_z = \left(\sum_{i = 1}^{\infty}I_{i,z}\right)\omega_{z}\]</div>
+<p>The summation inside the parathensis is (in the limit <span class="math notranslate nohighlight">\(N \rightarrow \infty\)</span>) the moment of inertia of the continuous system:</p>
+<div class="alert alert-success">
+$$ L_z = I_z\omega_z $$
+    </div>
+<p>Hence, our rotational momentum for a continuous system appears similar in equation shape as for a point particle.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="example-3">
+<h2>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">#</a></h2>
+<p>A turntable disc with a mass of 10.0 kg and radius 15 cm is spinning at a rate of <span class="math notranslate nohighlight">\(8.0~\textrm{rad/s}\)</span>. What is the rotational momentum of the disc?</p>
 <section id="id2">
-<h4>Angular Term<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
-<p>The angular terms are the ones associated with <span class="math notranslate nohighlight">\(\hat{\theta}\)</span>:</p>
+<h3>Solution<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p>We will need to know the moment of inertia of a disc. From looking it up in a table in the textbook, we determine that the moment of inertia of a disc rotating about an axis through its center and perpendicular to the plane of the disc to be:</p>
 <div class="math notranslate nohighlight">
-\[ \vec{a}_{\theta} = \left( 2\dot{r}\dot{\theta} +  r\ddot{\theta} \right)\hat{\theta} \]</div>
-<p><em>Tangential Acceleration</em></p>
-<p>The last term is the tangential acceleration:</p>
+\[ I_{disc} = \frac{1}{2}MR^2 \]</div>
+<p>If we let the plane of the disc to be in the xy-plane, then the rotational momentum is along the z-axis and is:</p>
 <div class="math notranslate nohighlight">
-\[ r\ddot{\theta}\hat{\theta} \]</div>
-<p>as it is the term responsible for an object to rotate faster or slower. Using <span class="math notranslate nohighlight">\(\ddot{\theta} = \alpha\)</span> we have the magnitude as</p>
+\[ L_z = I_{z}\omega_{z} \]</div>
 <div class="math notranslate nohighlight">
-\[ r\alpha \]</div>
-<p>and recognize it as the tangential acceleration from previous notes.</p>
-<p><em>Coriolis Acceleration</em></p>
-<p>This term is known as the <strong>Coriolis acceleration</strong> and is the most complex of all the terms as it involves <strong>changes in both radial and angular velocity</strong>:</p>
+\[ L_z = \frac{1}{2}MR^2\omega_{z} \]</div>
 <div class="math notranslate nohighlight">
-\[2\dot{r}\dot{\theta}\hat{\theta}\]</div>
+\[ L_z = (0.5)(10.0)(0.15)^2(8.0) = 0.90~\textrm{kgm$^2$/s} \]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 4</b><br>
+A turntable disc with a mass of 10.0 kg and radius 15 cm is spinning at a rate of $8.0~\textrm{rad/s}$. There is a 5.0 g bug on the turntable at location 8 cm from the center of the disc. A second identical bug is positioned at a loction of 4 cm from the center of the disc. What is the magnitude of the angular momentum of the total system o(turntable and bugs)? HINT: the total angular momentum is the sum of individual momenta. 
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 5</b><br>
+A solid sphere of mass 5.0 kg and radius 5.0 cm is spinning at a rate of 20 rad/s around an axis through its center. What is the angular momentum of the sphere around the rotation axis?
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 6</b><br>
+    <img src="fig5.png" width="400">
+<p>A solid sphere of mass 5.0 kg and radius 5.0 cm is rotating at a rate of 20 rad/s around an axis that is shifted a distance of 25 cm away from the center of the sphere. What is the angular momentum of the sphere around this axis? HINT: Use the parallel axis theorem.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 7</b><br> 
+A solid sphere of mass 5.0 kg and radius 5.0 cm is attached to the end of a rod of mass 2.0 kg and length 0.5 m. The system is in the horizontal xy-plane and spinning around an axis perpendicalur to this plane and through the end point of the rod opposite to the sphere. If the system is rotating at a rate of 20 rad/s what is the angular momentum of the system around this axis? <br>
+    <br>
+    HINTS: Use the parallel axis theorem for the sphere, look up moment of inertia of a rod and choose the proper version, calculate the angualr momenta of both sphere and rod and add them together. 
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 8</b><br> 
+A fun demonstration of conservation of angular momentum is to sit in a rotating chair, put your arms out and start spinning around. Then move your arms in as observe how much faster you spin. A key element here is the change in distribution of mass, or the change moment of inertia, which is causing a significant change in angular momentum. We will discuss the topic of conservation of angular momentum in later module. 
+<p>For now, let us try and estimate the angular momentum of a person holding two dumbbells straight out from his/her torso. We will model the torso as a cylinder, ignore the mass of the arms, and assume the dumbbells are spherical.</p>
+<p>An typical torso modeled as a cylinder has a mass of 54 kg and radius of 13 cm and a typical arm length is 80 cm. Consider each dumbbell to have a mass of 5.0 kg.
+<ol>
+<li> What is the moment of inertia of the person + dumbbell?
+<li> If the rotation rate is 0.5 rev/s, what is the angular momentum of the person+dumbbell?
+</ol></p>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
-</section>
-<section id="b7-3-5-special-case-uniform-circular-motion">
-<h2>B7.3.5 Special Case: Uniform Circular Motion<a class="headerlink" href="#b7-3-5-special-case-uniform-circular-motion" title="Permalink to this headline">#</a></h2>
-<p>A very important case is uniform circular motion, that is, motion in a <strong>circular path with a constant speed</strong>.</p>
-<p>In this case we have</p>
-<div class="math notranslate nohighlight">
-\[ \dot{r} = 0 \]</div>
-<div class="math notranslate nohighlight">
-\[ \dot{\theta} = 0 \]</div>
-<p>and the acceleration in polar coordinates reduces to</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ \dot{\vec{r}} =  - r\dot{\theta}^2\hat{r} \]</div>
-</div>
-<p>which is simply the <strong>centripetal acceleration</strong>. It is always directed towards the origin or the center of the circular motion: <strong>it is a center-seeking acceleration</strong>.</p>
-<p>It is more convenient to use it in the following form (magnitude):</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ a_c = \frac{v_{\theta}^2}{r} \]</div>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -642,7 +625,7 @@ which is the form we will use the most in this course.
         },
         kernelOptions: {
             name: "python3",
-            path: "./Module-B7"
+            path: "./Module-B8"
         },
         predefinedOutput: true
     }
@@ -660,24 +643,6 @@ which is the form we will use the most in this course.
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="equations-kinematics.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">B7.2 Rotational Equations of Kinematics</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="uniform-circular-motion.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">B7.4 Newton’s 2nd Law: Uniform Circular Motion</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -696,31 +661,35 @@ which is the form we will use the most in this course.
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-1-motivation">B7.3.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-2-set-up">B7.3.2 Set Up</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-derivative-of-hat-r">Time Derivative of <span class="math notranslate nohighlight">\(\hat{r}\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-derivative-of-hat-theta">Time Derivative of <span class="math notranslate nohighlight">\(\hat{\theta}\)</span></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">B8.2 Rotational Momentum: Part 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-point-object">1. Angular Momentum: Point Object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#x-axis">x-axis</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-3-velocity-vector-in-polar-coordinates">B7.3.3 Velocity Vector in Polar Coordinates</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#radial-term">Radial Term</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-term">Angular Term</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#circular-motion">Circular Motion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#y-axis">y-axis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-axis">z-axis</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-4-acceleration-vector-in-polar-coordinates">B7.3.4 Acceleration Vector in Polar Coordinates</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Discussion</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#radial-terms">Radial Terms</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Angular Term</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-system-of-particles">2. Angular Momentum: System of Particles</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Solution</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-3-5-special-case-uniform-circular-motion">B7.3.5 Special Case: Uniform Circular Motion</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-continuous-system">3. Angular Momentum: Continuous System</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solution</a></li>
 </ul>
+</li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
