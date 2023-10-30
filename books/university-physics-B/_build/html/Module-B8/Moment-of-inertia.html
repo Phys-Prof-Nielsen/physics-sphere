@@ -475,17 +475,20 @@ document.write(`
 \[ i_z = md^2 \]</div>
 <p>This may seem like a trivial change, but it is extremely important for the understanding of the moment of inertia:</p>
 <div class="alert alert-danger">
-The distance $d$ is the perpendicular distance from the axis of interest to the point of interest.
+<p>The distance <span class="math notranslate nohighlight">\(d\)</span> is the perpendicular distance from the axis of interest to the point of interest.</p>
 </div>
 <p>We will now demonstrate why using <span class="math notranslate nohighlight">\(r\)</span> can lead to misunderstandings if we do not understand how to use the equation correctly! In the above figure, it was implied that the <span class="math notranslate nohighlight">\(xy\)</span>-plane was situated at <span class="math notranslate nohighlight">\(z = 0\)</span>. However, we could also consider the particle confined to a <span class="math notranslate nohighlight">\(xy\)</span>-plane where <span class="math notranslate nohighlight">\(z \neq 0\)</span>, as illustrated in the figure below:</p>
 <img src="fig5.png" width="500">
 <p>From this figure, it is evident that the magnitude of the position vector <span class="math notranslate nohighlight">\(r\)</span> is not equal to the distance <span class="math notranslate nohighlight">\(d\)</span>, which is the distance that is needed in the equation for the moment of inertia around the <span class="math notranslate nohighlight">\(z\)</span>-axis. Let us re-iterate the conceptual definition of the moment of inertia for this case:</p>
 <div class="alert alert-success">
-The moment of inertia around the $z$-axis for a point particle is the resistance to a change in rotational motion around the $z$-axis and is given by<br>
-    <br>
-$$ i_z = md^2 $$
-    <br>
-where $d$ is the perpendicular distance between the particle and the $z$-axis.
+<p>The moment of inertia around the <span class="math notranslate nohighlight">\(z\)</span>-axis for a point particle is the resistance to a change in rotational motion around the <span class="math notranslate nohighlight">\(z\)</span>-axis and is given by<br>
+<br></p>
+<div class="math notranslate nohighlight">
+\[ i_z = md^2 \]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;br&gt;
+</pre></div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(d\)</span> is the perpendicular distance between the particle and the <span class="math notranslate nohighlight">\(z\)</span>-axis.</p>
 </div>
 <p>This is another standard notation from some textbooks. I am somewhat happier with this notation using <span class="math notranslate nohighlight">\(d\)</span> instead of <span class="math notranslate nohighlight">\(r\)</span>. However, it often leads to a simplification of the moment of inertia and makes it simpler than should be allowed. Let us see why!</p>
 <p>Ok, so if a particle is rotating around the <span class="math notranslate nohighlight">\(z\)</span>-axis, then we can use the above equation. But what if it is rotating around the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis? This is an obvious question, and we can extend the above definition to account for those as well. We will project the position vector onto the three axis as shown below:</p>
@@ -493,11 +496,14 @@ where $d$ is the perpendicular distance between the particle and the $z$-axis.
 <p>In this figure, I included graphics to enforce the understanding that the moment of inertia is calculated <strong>around an axis of rotation</strong>. The projected components are <span class="math notranslate nohighlight">\(r_x\)</span>, <span class="math notranslate nohighlight">\(r_y\)</span>, and <span class="math notranslate nohighlight">\(r_z\)</span>, respectively, and the perpendicular distances are <span class="math notranslate nohighlight">\(d_x\)</span>, <span class="math notranslate nohighlight">\(d_y\)</span>, and <span class="math notranslate nohighlight">\(d_z\)</span>, respectively.</p>
 <p>We can now define the moments of inertia around the three axes:</p>
 <div class="alert alert-success">
-$$ i_x = md_x^2 \tag{1}$$
-    <br>
-$$ i_y = md_y^2 \tag{2}$$
-    <br>
-$$ i_z = md_z^2 \tag{3}$$
+<div class="math notranslate nohighlight">
+\[ i_x = md_x^2 \tag{1}\]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ i_y = md_y^2 \tag{2}\]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ i_z = md_z^2 \tag{3}\]</div>
 </div>
 <p>and it should be clear now why using <span class="math notranslate nohighlight">\(d\)</span> is better than using <span class="math notranslate nohighlight">\(r\)</span> and why it is better to use <span class="math notranslate nohighlight">\(d_x\)</span>, <span class="math notranslate nohighlight">\(d_y\)</span>, <span class="math notranslate nohighlight">\(d_z\)</span> instead of just <span class="math notranslate nohighlight">\(d\)</span>. We notice that the distances relate to the magnitude of the projected components as</p>
 <div class="math notranslate nohighlight">
@@ -582,14 +588,10 @@ i_{zx} &amp; i_{zy} &amp; i_{zz}
 <p>We identify the following distances for both masses: <span class="math notranslate nohighlight">\(r_x = 0.00\)</span> m and <span class="math notranslate nohighlight">\(r_y = r_z = 0.33\)</span> m. Inserting into equations (4) - (6) and label the masses <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span>, respectively (we could also name them <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> etc.):</p>
 <div class="math notranslate nohighlight">
 \[ I_x = \sum_{i = 1}^{2} m_{i}r_{i,x}^2 = m_{1}r_{1,x}^2 + m_{2}r_{2,x}^2 = (0.075)(0.00)^2 + (0.075)(0.00)^2 = 0.00~\textrm{kgm}^2\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;br&gt;
-</pre></div>
-</div>
+<br>
 <div class="math notranslate nohighlight">
 \[ I_y = \sum_{i = 1}^{2} m_{i}r_{i,y}^2 = m_{1}r_{1,y}^2 + m_{2}r_{2,y}^2 = (0.075)(0.33)^2 + (0.075)(0.33)^2 = 0.016~\textrm{kgm}^2\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;br&gt;
-</pre></div>
-</div>
+<br>
 <div class="math notranslate nohighlight">
 \[ I_z = \sum_{i = 1}^{2} m_{i}r_{i,z}^2 =  m_{1}r_{1,z}^2 + m_{2}r_{2,z}^2 = (0.075)(0.33)^2 + (0.075)(0.33)^2 = 0.016~\textrm{kgm}^2\]</div>
 <p><strong>Note</strong>: We recognize that there is no cost to start rotating around the <span class="math notranslate nohighlight">\(x\)</span> axis. This is a consequence of the assumption of point particles. In a realistic approach, they may be spherical and the moment of inertia around the <span class="math notranslate nohighlight">\(x\)</span> axis is not zero initially. We will see that in Example 4.</p>
@@ -626,7 +628,7 @@ i_{zx} &amp; i_{zy} &amp; i_{zz}
 <p><strong>Note</strong>: While this is small, it is not non-zero as in our previous example of the non-realistic baton.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-info">
-We may note that we are not yet able to calculate the moment of inertia for the baton around the $y$ or $z$ axes. That's next!
+<p>We may note that we are not yet able to calculate the moment of inertia for the baton around the <span class="math notranslate nohighlight">\(y\)</span> or <span class="math notranslate nohighlight">\(z\)</span> axes. That’s next!</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b8-1-6-the-parallel-axis-theorem">
