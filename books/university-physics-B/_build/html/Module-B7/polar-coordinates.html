@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>B7.3 Kinematics in Polar Coordinates &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B7.4 Newton’s 2nd Law: Uniform Circular Motion" href="uniform-circular-motion.html" />
     <link rel="prev" title="B7.2 Rotational Equations of Kinematics" href="equations-kinematics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -211,6 +212,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">B7.3 Kinematics in Polar Coordinates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uniform-circular-motion.html">B7.4 Newton’s 2nd Law: Uniform Circular Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problemsB7.html">B7.x Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B8 - Rotational Momentum</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B8/Moment-of-inertia.html">B8.1 Moment of Inertia</a></li>
 </ul>
 
     </div>
@@ -440,14 +445,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b7-3-kinematics-in-polar-coordinates">
-<h1>B7.3 Kinematics in Polar Coordinates<a class="headerlink" href="#b7-3-kinematics-in-polar-coordinates" title="Permalink to this headline">#</a></h1>
+<h1>B7.3 Kinematics in Polar Coordinates<a class="headerlink" href="#b7-3-kinematics-in-polar-coordinates" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b7-3-1-motivation">
-<h2>B7.3.1 Motivation<a class="headerlink" href="#b7-3-1-motivation" title="Permalink to this headline">#</a></h2>
+<h2>B7.3.1 Motivation<a class="headerlink" href="#b7-3-1-motivation" title="Permalink to this heading">#</a></h2>
 <p>We saw in previous notes how we can relate <strong>linear tangential</strong> parameters to <strong>rotational</strong> parameters for <strong>circular</strong> motion. However, we also need to know radial parameters to fully describe rotational motion, and for that purpose we need the full treatment using polar coordinates. As an example, anytime we have circular motion, a radial force is required to change the direction of the object, otherwise it just moves in a straight line.</p>
 <p>In the following, we will show how the position, velocity, and acceleration vectors appear in polar coordinates.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b7-3-2-set-up">
-<h2>B7.3.2 Set Up<a class="headerlink" href="#b7-3-2-set-up" title="Permalink to this headline">#</a></h2>
+<h2>B7.3.2 Set Up<a class="headerlink" href="#b7-3-2-set-up" title="Permalink to this heading">#</a></h2>
 <p>Consider the figure below.</p>
 <img src="B7-fig2.png"  width="600"/>
 <p>The blue vector represents a position vector <span class="math notranslate nohighlight">\(\vec{r}\)</span>. The two red vectors are the cartesian unit vectors <span class="math notranslate nohighlight">\(\hat{i}\)</span> and <span class="math notranslate nohighlight">\(\hat{j}\)</span>, while the green vectors are the polar unit vectors <span class="math notranslate nohighlight">\(\hat{r}\)</span> and <span class="math notranslate nohighlight">\(\hat{\theta}\)</span>. In contrast to the cartesian unit vectors, the polar unit vectors are changing directions depending on the position vector. The radial unit vector <span class="math notranslate nohighlight">\(\hat{r}\)</span> is always pointing in the radial direction away from the origin, and the angular unit vector <span class="math notranslate nohighlight">\(\hat{\theta}\)</span> is always pointing in the counterclockwise angular direction.</p>
@@ -465,7 +470,7 @@ document.write(`
 \end{eqnarray*}\]</div>
 <p>In the following, we will need to know the time derivative of the polar unit vectors:</p>
 <section id="time-derivative-of-hat-r">
-<h3>Time Derivative of <span class="math notranslate nohighlight">\(\hat{r}\)</span><a class="headerlink" href="#time-derivative-of-hat-r" title="Permalink to this headline">#</a></h3>
+<h3>Time Derivative of <span class="math notranslate nohighlight">\(\hat{r}\)</span><a class="headerlink" href="#time-derivative-of-hat-r" title="Permalink to this heading">#</a></h3>
 <p>We will be using the <em>dot</em> notation for time derivatives.</p>
 <p>Applying the sum, product, and chain rules on Equation(2):</p>
 <div class="math notranslate nohighlight">
@@ -481,7 +486,7 @@ document.write(`
 \[ \dot{\hat{r}} = \dot{\theta}\hat{\theta} \tag{4}\]</div>
 </section>
 <section id="time-derivative-of-hat-theta">
-<h3>Time Derivative of <span class="math notranslate nohighlight">\(\hat{\theta}\)</span><a class="headerlink" href="#time-derivative-of-hat-theta" title="Permalink to this headline">#</a></h3>
+<h3>Time Derivative of <span class="math notranslate nohighlight">\(\hat{\theta}\)</span><a class="headerlink" href="#time-derivative-of-hat-theta" title="Permalink to this heading">#</a></h3>
 <p>In a similar approach as above, we have</p>
 <div class="math notranslate nohighlight">
 \[ \dot{\hat{\theta}} = -\dot{\theta}\cos\theta\hat{i} -\sin\theta\dot{\hat{i}} - \dot{\theta}\sin\theta\hat{j} + \cos\theta\dot{\hat{j}}\]</div>
@@ -498,7 +503,7 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="b7-3-3-velocity-vector-in-polar-coordinates">
-<h2>B7.3.3 Velocity Vector in Polar Coordinates<a class="headerlink" href="#b7-3-3-velocity-vector-in-polar-coordinates" title="Permalink to this headline">#</a></h2>
+<h2>B7.3.3 Velocity Vector in Polar Coordinates<a class="headerlink" href="#b7-3-3-velocity-vector-in-polar-coordinates" title="Permalink to this heading">#</a></h2>
 <p>We take the time-derivate of the position vector in Equation (1):</p>
 <div class="math notranslate nohighlight">
 \[ \dot{\vec{r}} = \dot{r}\hat{r} + r\dot{\hat{r}} \]</div>
@@ -508,16 +513,16 @@ document.write(`
 \[ \dot{\vec{r}} = \dot{r}\hat{r} + r\dot{\theta}\hat{\theta} \tag{6}\]</div>
 </div>
 <section id="discussion">
-<h3>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">#</a></h3>
+<h3>Discussion<a class="headerlink" href="#discussion" title="Permalink to this heading">#</a></h3>
 <section id="radial-term">
-<h4>Radial Term<a class="headerlink" href="#radial-term" title="Permalink to this headline">#</a></h4>
+<h4>Radial Term<a class="headerlink" href="#radial-term" title="Permalink to this heading">#</a></h4>
 <p>The radial term is the one associated with <span class="math notranslate nohighlight">\(\hat{r}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ \vec{v}_r = \dot{r}\hat{r} \]</div>
 <p>This tells us that the radial velocity is the rate of change of the distance away from the origin. This is simply a straight line velocity as on object moves towards/away the origin in a straight line.</p>
 </section>
 <section id="angular-term">
-<h4>Angular Term<a class="headerlink" href="#angular-term" title="Permalink to this headline">#</a></h4>
+<h4>Angular Term<a class="headerlink" href="#angular-term" title="Permalink to this heading">#</a></h4>
 <p>The angular term is the one associated with <span class="math notranslate nohighlight">\(\hat{\theta}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ \vec{v}_{\theta} = r\dot{\theta}\hat{\theta} \]</div>
@@ -530,7 +535,7 @@ document.write(`
 <p>What a hoot: this is what we found as the tangential speed in the previous notes.</p>
 </section>
 <section id="circular-motion">
-<h4>Circular Motion<a class="headerlink" href="#circular-motion" title="Permalink to this headline">#</a></h4>
+<h4>Circular Motion<a class="headerlink" href="#circular-motion" title="Permalink to this heading">#</a></h4>
 <p>If we have circular motion, the radial component is zero and we are left with only the tangential velocity:</p>
 <div class="math notranslate nohighlight">
 \[ \vec{v} = r\dot\theta\hat{\theta}\]</div>
@@ -538,7 +543,7 @@ document.write(`
 </section>
 </section>
 <section id="b7-3-4-acceleration-vector-in-polar-coordinates">
-<h2>B7.3.4 Acceleration Vector in Polar Coordinates<a class="headerlink" href="#b7-3-4-acceleration-vector-in-polar-coordinates" title="Permalink to this headline">#</a></h2>
+<h2>B7.3.4 Acceleration Vector in Polar Coordinates<a class="headerlink" href="#b7-3-4-acceleration-vector-in-polar-coordinates" title="Permalink to this heading">#</a></h2>
 <p>We take the time-derivate of the velocity vector in Equation (6) using the sum and product rules:</p>
 <div class="math notranslate nohighlight">
 \[ \ddot{\vec{r}} = \ddot{r}\hat{r} + \dot{r}\dot{\hat{r}} + \dot{r}\dot{\theta}\hat{\theta} + r\ddot{\theta}\hat{\theta} + r\dot{\theta}\dot{\hat{\theta}}\]</div>
@@ -551,9 +556,9 @@ document.write(`
 \[ \ddot{\vec{r}} =  \left( \ddot{r} - r\dot{\theta}^2 \right)\hat{r} + \left( 2\dot{r}\dot{\theta} +  r\ddot{\theta} \right)\hat{\theta} \]</div>
 </div>
 <section id="id1">
-<h3>Discussion<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3>Discussion<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <section id="radial-terms">
-<h4>Radial Terms<a class="headerlink" href="#radial-terms" title="Permalink to this headline">#</a></h4>
+<h4>Radial Terms<a class="headerlink" href="#radial-terms" title="Permalink to this heading">#</a></h4>
 <p>The radial terms are the ones associated with <span class="math notranslate nohighlight">\(\hat{r}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ \vec{a}_r = \left( \ddot{r} - r\dot{\theta}^2 \right)\hat{r} \]</div>
@@ -584,7 +589,7 @@ which is one useful expression for it. Another useful expression is to implement
 which is the form we will use the most in this course.
 </section>
 <section id="id2">
-<h4>Angular Term<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
+<h4>Angular Term<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
 <p>The angular terms are the ones associated with <span class="math notranslate nohighlight">\(\hat{\theta}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ \vec{a}_{\theta} = \left( 2\dot{r}\dot{\theta} +  r\ddot{\theta} \right)\hat{\theta} \]</div>
@@ -604,7 +609,7 @@ which is the form we will use the most in this course.
 </section>
 </section>
 <section id="b7-3-5-special-case-uniform-circular-motion">
-<h2>B7.3.5 Special Case: Uniform Circular Motion<a class="headerlink" href="#b7-3-5-special-case-uniform-circular-motion" title="Permalink to this headline">#</a></h2>
+<h2>B7.3.5 Special Case: Uniform Circular Motion<a class="headerlink" href="#b7-3-5-special-case-uniform-circular-motion" title="Permalink to this heading">#</a></h2>
 <p>A very important case is uniform circular motion, that is, motion in a <strong>circular path with a constant speed</strong>.</p>
 <p>In this case we have</p>
 <div class="math notranslate nohighlight">

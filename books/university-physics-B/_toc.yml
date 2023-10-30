@@ -64,4 +64,6 @@ parts:
   - file: Module-B7/polar-coordinates
   - file: Module-B7/uniform-circular-motion
   - file: Module-B7/problemsB7
-  
+- caption: Module B8 - Rotational Momentum
+  chapters:
+  - file: Module-B8/Moment-of-inertia
