@@ -65,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B8/cross-product';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="B8.2 Rotational Momentum: Part 1" href="Rotational-momentum-part1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -211,9 +212,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B7/problemsB7.html">B7.x Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B8 - Rotational Momentum</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Moment-of-inertia.html">B8.1 Moment of Inertia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Rotational-momentum-part1.html">B8.2 Rotational Momentum: Part 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">B8.3 Cross Product</a></li>
 </ul>
 
     </div>
@@ -414,17 +416,14 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-3-geometrical-interpretation-of-cross-product">B8.3.3 Geometrical Interpretation of Cross Product</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analytic-definition">2. Analytic Definition</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-observations">3. Important Observations</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-4-analytic-definition">B8.3.4 Analytic Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-5-important-observations">B8.3.5 Important Observations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-projection">1. Importance of Projection</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direction-of-cross-product">2. Direction of cross product</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation">3. Interpretation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">4. Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-6-application">B8.3.6 Application</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torque">Torque</a></li>
 </ul>
             </nav>
@@ -617,8 +616,8 @@ $<span class="math notranslate nohighlight">\( |\vec{B}|\sin\theta \)</span>$, w
 \[ \textrm{Area} = |\vec{A}|~|\vec{B}|~\sin\theta \]</div>
 <p>Hence, we can conclude that the magnitude of the cross product between two vectors represents the area of the parallelogram spanned by the two vectors.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="analytic-definition">
-<h2>2. Analytic Definition<a class="headerlink" href="#analytic-definition" title="Permalink to this headline">#</a></h2>
+<section id="b8-3-4-analytic-definition">
+<h2>B8.3.4 Analytic Definition<a class="headerlink" href="#b8-3-4-analytic-definition" title="Permalink to this headline">#</a></h2>
 <p>Phew, this approach is mathematically straightforward but very tedious. So let us just take a deep breath and do it. It is like doing dishes.</p>
 <p>We will follow the distributive rules for vector algebra, which is similar to the ones for number algebra. We will be following the same appraoach as we did for the dot product:</p>
 <p>Consider the vectors</p>
@@ -660,9 +659,12 @@ $$
 We notice that the direction of the cross product is provided through the unit vectors while the magnitude is not stated explicitly. However, we can find the magnitude by using the pythagorean theorem.
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-<section id="example-3">
-<h3>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">#</a></h3>
+<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 3</h3>
+    </header>
 <p>Given two vectors with exact components: <span class="math notranslate nohighlight">\(\vec{A} = \begin{bmatrix} -1  \\ 4 \\ 3  \end{bmatrix}\)</span> and <span class="math notranslate nohighlight">\(\vec{B} = \begin{bmatrix} 2  \\ 5 \\ -2  \end{bmatrix}\)</span>, calculate the cross product between the two vectors.</p>
+<p><strong>Solution</strong></p>
 <p>We insert the components into the equation from above:</p>
 <div class="math notranslate nohighlight">
 \[\vec{A} \times \vec{B} = [(4)(-2) - (3)(5)]~\hat{i} 
@@ -680,20 +682,20 @@ We notice that the direction of the cross product is provided through the unit v
 + (-13)~\hat{k}
 \]</div>
 <p>Our answer is</p>
-<div class="alert alert-success">
-$\vec{A} \times \vec{B} = -23~\hat{i} 
+<div class="math notranslate nohighlight">
+\[\vec{A} \times \vec{B} = -23~\hat{i} 
 + 4~\hat{j}
 + -13~\hat{k}
-$ 
-    </div>
-<p>If we want to know the magnitude of this vector, we would square each component, add them together, and take the squareroot.</p>
+\]</div>
+<p>If we want to know the magnitude of this vector, we would apply the pythagorean theorem.</p>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 4</b><br>
-Given two vectors with exact components: $\vec{A} = \begin{bmatrix} 4  \\ 4 \\ 3  \end{bmatrix}$ and $\vec{B} = \begin{bmatrix} -2  \\ 5 \\ -2  \end{bmatrix}$, calculate the cross product between the two vectors and find the magnitude of the cross product.
+<p>Given two vectors with exact components: <span class="math notranslate nohighlight">\(\vec{A} = \begin{bmatrix} 4  \\ 4 \\ 3  \end{bmatrix}\)</span> and <span class="math notranslate nohighlight">\(\vec{B} = \begin{bmatrix} -2  \\ 5 \\ -2  \end{bmatrix}\)</span>, calculate the cross product between the two vectors and find the magnitude of the cross product.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 5</b><br>
-Given two vectors with exact components: $\vec{A} = \begin{bmatrix} 4  \\ 4 \\ 0  \end{bmatrix}$ and $\vec{B} = \begin{bmatrix} -2  \\ 5 \\ 0  \end{bmatrix}$.
+<p>Given two vectors with exact components: <span class="math notranslate nohighlight">\(\vec{A} = \begin{bmatrix} 4  \\ 4 \\ 0  \end{bmatrix}\)</span> and <span class="math notranslate nohighlight">\(\vec{B} = \begin{bmatrix} -2  \\ 5 \\ 0  \end{bmatrix}\)</span>.</p>
 <ol>
      <li>
 Calculate the cross product between the two vectors. </li>
@@ -709,62 +711,61 @@ Given two vectors with exact components: $\vec{A} = \begin{bmatrix} 4  \\ 0 \\ 4
 Can you without doing any calculations determine along which coordinate axis the cross product is?  
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-</section>
-<section id="important-observations">
-<h2>3. Important Observations<a class="headerlink" href="#important-observations" title="Permalink to this headline">#</a></h2>
+<section id="b8-3-5-important-observations">
+<h2>B8.3.5 Important Observations<a class="headerlink" href="#b8-3-5-important-observations" title="Permalink to this headline">#</a></h2>
 <section id="importance-of-projection">
 <h3>1. Importance of Projection<a class="headerlink" href="#importance-of-projection" title="Permalink to this headline">#</a></h3>
-<p>We notice that only the projected component of one vector <span style="color:red">perpendicular</span> to the other vector is important. The implication is that the cross product is zero for parallel vectors.</p>
+<p>We notice that only the projected component of one vector <strong>perpendicular</strong> to the other vector is important. The implication is that the cross product is zero for parallel vectors.</p>
 </section>
 <section id="direction-of-cross-product">
 <h3>2. Direction of cross product<a class="headerlink" href="#direction-of-cross-product" title="Permalink to this headline">#</a></h3>
-<p>The direction of the cross product is <span style="color:red">always perpendicular</span> to the plane containing the two vectors involved in calculalting the cross product.</p>
+<p>The direction of the cross product is <strong>always perpendicular</strong> to the plane containing the two vectors involved in calculalting the cross product.</p>
 </section>
 <section id="interpretation">
 <h3>3. Interpretation<a class="headerlink" href="#interpretation" title="Permalink to this headline">#</a></h3>
 <p>The magnitude of the cross product is a representation of the area of the parallelogram spanned by the two vectors.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 7</b><br>
-    Consider the three sketches. Based on the important observations, determine without calculation whether the cross product $\vec{A}\times\vec{B}$ will be: negative, zero, or positive. Consider the direction out of the screen to be positive and the direction into the screen to be negative. Under which circumstance would the cross product be zero?
+<p>Consider the three sketches. Based on the important observations, determine without calculation whether the cross product <span class="math notranslate nohighlight">\(\vec{A}\times\vec{B}\)</span> will be: negative, zero, or positive. Consider the direction out of the screen to be positive and the direction into the screen to be negative. Under which circumstance would the cross product be zero?</p>
 <img src="B8.3-fig5.png"  width="600"/>    
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 8</b><br>
-Apply <i>Important Observation 1</i> to the following problem: Consider the three sketches. Determine by inspection only, the ranking of the magnitude of the cross product $\vec{A}\times\vec{B}$  from smallest to largest.
+<p>Apply <strong>Important Observation 1</strong> to the following problem: Consider the three sketches. Determine by inspection only, the ranking of the magnitude of the cross product <span class="math notranslate nohighlight">\(\vec{A}\times\vec{B}\)</span>  from smallest to largest.</p>
 <img src="B8.3-fig6.png"  width="600"/>   
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
-<section id="applications">
-<h2>4. Applications<a class="headerlink" href="#applications" title="Permalink to this headline">#</a></h2>
+<section id="b8-3-6-application">
+<h2>B8.3.6 Application<a class="headerlink" href="#b8-3-6-application" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="torque">
 <h2>Torque<a class="headerlink" href="#torque" title="Permalink to this headline">#</a></h2>
 <p>We will see a few concepts in physics that are quantified through the cross product. The one we are most familiar with from everyday life is the torque (or rotational force), and perhaps this example will help put the cross product into a better perspective.</p>
 <p>The torque acting on an object by an applied force depends on the force and where the force is applied. For example, if you want to open a door, it is a lot easier to open it if you push on the opposite side of the hinges and push perpendicular to the door. Similarly, if you use a wrench to losen a nut, you should hold the wrench at the end opposite to the nut and apply a force perpendicular to the handle of the wrench.</p>
-<p>In the above examples, the distance from the hinges to the place on the door where you apply the force, and the distance from the nut to where you apply the force on the wrench, is called the <i>moment arm</i> or the <i>lever arm</i>.</p>
+<p>In the above examples, the distance from the hinges to the place on the door where you apply the force, and the distance from the nut to where you apply the force on the wrench, is called the <strong>moment arm</strong> or the <strong>lever arm</strong>.</p>
 <p>In general, the directed line segment from the point of rotation (e.g. the hinges or the nut) to the point of interaction (where the force is applied) is <span class="math notranslate nohighlight">\(\vec{r}_{F}\)</span> and the force is <span class="math notranslate nohighlight">\(\vec{F}\)</span>. The torque <span class="math notranslate nohighlight">\(\vec{\tau}\)</span> (greek later “tau”) is defined as</p>
 <div class="math notranslate nohighlight">
 \[ \vec{\tau} = \vec{r}_{F}\times\vec{F}\]</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 9</b><br>
 <p>A lug nut on a car wheel needs to be tighten. At first, you are using the lug wrench that came with the car. The lug wrench is 30 cm long. You are capable of supplying a force of 350 N. Since you know how to use a wrench, you apply the force perpendicular to the handle of the lug wrench and as far away from the nut (rotation point) as possible.</p>
-<ol>
-    <li>How much torque do you supply in units of Nm (Newton-meter)?</li>
-    <li>According to the manufaturer, it requires a torque of 80 foot-lbs (good ol' imperial units) which is equivalent of 108 Nm. Can you tighten the lug nut as required?</li>
-     <li>Since you are short of muscle power to tighten this nut, you can either call a friend or use your physics knowledge. Chosing the later, you grab a pipe to extend the length of the wrench by 15 cm. What is the maximum torque you can supply now?</li>  
-    </ol>
+<ol class="arabic simple">
+<li><p>How much torque do you supply in units of Nm (Newton-meter)?</p></li>
+<li><p>According to the manufaturer, it requires a torque of 80 foot-lbs (good ol’ imperial units) which is equivalent of 108 Nm. Can you tighten the lug nut as required?</p></li>
+<li><p>Since you are short of muscle power to tighten this nut, you can either call a friend or use your physics knowledge. Chosing the later, you grab a pipe to extend the length of the wrench by 15 cm. What is the maximum torque you can supply now?</p></li>
+</ol>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 10</b><br>
 <p>As part of a home improvement project, you are using a manual screw driver. In this process, you grab a screw driver with your <em>right</em> hand (this is important for this example, and I mean no offense to discriminate against left-hand people: I respect and love you).</p>
 <p>In order to tighten a screw you apply a force along the direction of your finger tips (you have to do that in order to use the screw driver, right!). The axis of rotation is along the screw driver and through its center. Your applied force of 30 N is a short distance from that axis, say 1 cm.</p>
-<ol>
-    <li>How much torque do you supply in units of Nm (Newton-meter)?</li>
-    <li>What direction is the torque?</li>
-     <li>If you answered down towards the screw in previous question, then you are right! It is in the direction of the thumb if you hold a screw driver in a normal manner with your right hand. This is another version of the right-hand rule!</li>  
-    </ol>
- Comment: When you are using your right-hand to tighten something, like a jar etc., the applied torque is pointing in the direction of your thumb provided you tighten something like most people would do :)
+<ol class="arabic simple">
+<li><p>How much torque do you supply in units of Nm (Newton-meter)?</p></li>
+<li><p>What direction is the torque?</p></li>
+<li><p>If you answered down towards the screw in previous question, then you are right! It is in the direction of the thumb if you hold a screw driver in a normal manner with your right hand. This is another version of the right-hand rule!</p></li>
+</ol>
+<p>Comment: When you are using your right-hand to tighten something, like a jar etc., the applied torque is pointing in the direction of your thumb provided you tighten something like most people would do :)</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
@@ -800,6 +801,15 @@ Apply <i>Important Observation 1</i> to the following problem: Consider the thre
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Rotational-momentum-part1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">B8.2 Rotational Momentum: Part 1</p>
+      </div>
+    </a>
 </div></div>
   
 </div>
@@ -825,17 +835,14 @@ Apply <i>Important Observation 1</i> to the following problem: Consider the thre
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-3-geometrical-interpretation-of-cross-product">B8.3.3 Geometrical Interpretation of Cross Product</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analytic-definition">2. Analytic Definition</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-observations">3. Important Observations</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-4-analytic-definition">B8.3.4 Analytic Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-5-important-observations">B8.3.5 Important Observations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-projection">1. Importance of Projection</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direction-of-cross-product">2. Direction of cross product</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation">3. Interpretation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">4. Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-6-application">B8.3.6 Application</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torque">Torque</a></li>
 </ul>
   </nav></div>

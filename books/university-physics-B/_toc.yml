@@ -68,3 +68,4 @@ parts:
   chapters:
   - file: Module-B8/Moment-of-inertia
   - file: Module-B8/Rotational-momentum-part1
+  - file: Module-B8/cross-product
