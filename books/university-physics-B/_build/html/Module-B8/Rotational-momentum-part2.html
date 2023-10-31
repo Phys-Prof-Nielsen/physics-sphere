@@ -1,0 +1,830 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Rotational Momentum: Part 2 &#8212; A Competency Approach to Introductory Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B8/Rotational-momentum-part2';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/university-physics-B.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/university-physics-B.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    A Competency Approach to Introductory Physics: A Compendium to the B Exam
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B1 - Discrete Systems and Differences</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/data.html">B1.1 Working with Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/plots-constant-velocity.html">B1.2 Plots with Constant Velocities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/plots-constant-acceleration.html">B1.3 Plots with Constant Acceleration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/problemsB1.html">B1.4 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B2 - Basic Calculus</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/Introduction-derivative.html">B2.1 Introduction to the Derivative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/Rules-derivatives.html">B2.2 Rules of Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/sympy-derivatives.html">B2.3 Derivatives Using Symbolic Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/Instantaneous-velocity.html">B2.4 Instantaneous Velocity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/Instantaneous-acceleration.html">B2.5 Instantaneous Acceleration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/Integral-antiderivative.html">B2.6 Integrals - Antiderivative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/Integral-infinite-sum.html">B2.7 Integrals - Infinite Sum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/Integral-definite.html">B2.8 Integrals - Definite Integrals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/Differentials.html">B2.9 Differentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/sympy-integrals.html">B2.10 Integrals Using Symbolic Python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B3 - Equations of Kinematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B3/Equations-kinematics-general.html">B3.1 Equations of Kinematics: General Position and Velocity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B3/Equations-kinematics-constant-velocity.html">B3.2 Equations of Kinematics: Constant Velocity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B3/Equations-kinematics-constant-acceleration.html">B3.3 Equations of Kinematics: Constant Acceleration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B3/Equations-kinematics-definite-approach.html">B3.4 Equations of Kinematics - Definite Integral Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B3/problemsB3.html">B3.5 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B4 - Linear Force</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B4/Impulse-momentum-theorem.html">B4.1 Impulse-Momentum Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B4/Newton-second-law.html">B4.2 Newton’s 2nd Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B4/Time-varying-force.html">B4.3 Time-varying Force</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B4/problemsB4.html">B4.4 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B5 - Work and Energy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B5/Linear-work.html">B5.1 Linear Work and Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B5/work-energy-derivation.html">B5.2 Deriving Work-Energy Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B5/spring-potential-energy.html">B5.3 Spring Potential Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B5/problemsB5.html">B5.X Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B6 - System of Particles</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B6/center-of-mass.html">B6.1 Mass of System and Center of Mass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B6/cm-dynamics.html">B6.2 Center of Mass Dynamics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B7 - Rotational Kinematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/basic-relations.html">B7.1 Rotational Kinematics - Basic Relationships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/equations-kinematics.html">B7.2 Rotational Equations of Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/polar-coordinates.html">B7.3 Kinematics in Polar Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/uniform-circular-motion.html">B7.4 Newton’s 2nd Law: Uniform Circular Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/problemsB7.html">B7.x Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B8 - Rotational Momentum</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Moment-of-inertia.html">B8.1 Moment of Inertia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rotational-momentum-part1.html">B8.2 Rotational Momentum: Part 1</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-B8/Rotational-momentum-part2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Module-B8/Rotational-momentum-part2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Rotational Momentum: Part 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Rotational Momentum: Part 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-as-a-cross-product">1. Angular Momentum as a Cross Product</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnitude">Magnitude</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direction">Direction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-considerations">Important Considerations</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">2. Examples</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4">Example 4</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-of-center-of-mass">3. Angular Momentum of Center of Mass</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5">Example 5</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-and-spin-angular-momentum">4. Orbital and Spin Angular Momentum</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-rotational-dynamics">5. Examples of Rotational Dynamics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clarification-point">6. Clarification Point</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rotational-impulse">7. Rotational Impulse</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-conceptual-questions">8. Quick Conceptual Questions</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="rotational-momentum-part-2">
+<h1>Rotational Momentum: Part 2<a class="headerlink" href="#rotational-momentum-part-2" title="Permalink to this headline">#</a></h1>
+<hr class="docutils" />
+<p>In Part 1, we saw that for an object moving around in the xy-plane had a component of angular momentum along the z-axis according to</p>
+<div class="math notranslate nohighlight">
+\[ L_z = I_{z}\omega_z \]</div>
+<p>or for a point particle</p>
+<div class="math notranslate nohighlight">
+\[ l_z = I_{z}\omega_z \]</div>
+<p>Similar relationships could be established for objects moving in the xz-plane and the yz-plane.</p>
+<p><strong>Remember, we are restricting our discussion on angular momentum to motions confined to one of these planes</strong>.</p>
+<p>While the above provide us with the component of the angular momentum along the z-direction, we should be aware that the angular momentum is a vector.</p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="angular-momentum-as-a-cross-product">
+<h1>1. Angular Momentum as a Cross Product<a class="headerlink" href="#angular-momentum-as-a-cross-product" title="Permalink to this headline">#</a></h1>
+<p>It turns out that we can write the angular momentum as a cross product as well. Let us consider the figure below</p>
+<img src="B8.4-fig1.png" width="500">
+<p>Here we have a point particle moving with mass <span class="math notranslate nohighlight">\(m\)</span>, moving in a circular motion tangential velocity <span class="math notranslate nohighlight">\(\vec{v}\)</span> in the xy-plane with z = 0, and position vector <span class="math notranslate nohighlight">\(\vec{r}\)</span>.</p>
+<p>We will evaluate the cross product between the position vector <span class="math notranslate nohighlight">\(\vec{r}\)</span> and the particle’s linear momentum <span class="math notranslate nohighlight">\(\vec{p}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \vec{r} \times \vec{p} \]</div>
+<p>Since <span class="math notranslate nohighlight">\(\vec{p} = m\vec{v} \)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[ \vec{r} \times m\vec{v} \]</div>
+<p>The mass <span class="math notranslate nohighlight">\(m\)</span> does not influence the cross product as it is an operation between two vectors and we can separate it outside a paranthesis:</p>
+<div class="math notranslate nohighlight">
+\[ m(\vec{r} \times \vec{v}) \]</div>
+<section id="magnitude">
+<h2>Magnitude<a class="headerlink" href="#magnitude" title="Permalink to this headline">#</a></h2>
+<p>We can write the cross producte in terms of the magnitudes of the two vectors and the angle between them:</p>
+<div class="math notranslate nohighlight">
+\[ m(rv\sin\theta) \]</div>
+<p>where <span class="math notranslate nohighlight">\(\sin\theta = 1\)</span> since the two vectors are perpendicular.</p>
+<p>The tangential speed can be written as <span class="math notranslate nohighlight">\(v = r\omega_z\)</span> since the particle is rotating around the z-axis and we then have:</p>
+<div class="math notranslate nohighlight">
+\[ m(r^2 \omega_z) \]</div>
+<p>We can readily identify <span class="math notranslate nohighlight">\(mr^2\)</span> as the moment of inertia aorund the z-axis of the point particle:</p>
+<div class="math notranslate nohighlight">
+\[ I_{z}\omega_z \]</div>
+<p>which we recognize as the magnitude of the angular momentum of the point particle around the z-axis.</p>
+</section>
+<section id="direction">
+<h2>Direction<a class="headerlink" href="#direction" title="Permalink to this headline">#</a></h2>
+<p>Using our right hand rule, we will determine that the direcion of the cross product <span class="math notranslate nohighlight">\(\vec{r}\times\vec{v}\)</span> is in the positive z-direction and we can assign the proper direction to our magnitude above.</p>
+<hr class="docutils" />
+<p>Encouraged by the above result, we may be inclined to claim another tool to calculate the angular momentum for a point particle</p>
+<div class="alert alert-success">
+$$ \vec{l} = \vec{r} \times \vec{p} \tag{1}$$
+    </div>
+</section>
+<hr class="docutils" />
+<section id="important-considerations">
+<h2>Important Considerations<a class="headerlink" href="#important-considerations" title="Permalink to this headline">#</a></h2>
+<p>The curious student may ask: <em>what if the particle is moving in the xy-plane but with z <span class="math notranslate nohighlight">\(\neq\)</span> 0?</em></p>
+<p>The answer to this question will illustrate how more complex the angular momentum is. The scenario is illustrated in the figure below:</p>
+<img src="B8.4-fig2.png" width="500">
+<p>To simplify the discussion, let us consider consider the instant where the particle is located at a position with y = 0 and view it as a 2D figure:</p>
+<img src="B8.4-fig3.png" width="300">
+<p>In this figure, the velocity is directed into the page (or screen) as indicated by the circle with a cross. Using the right-hand rule, the direction of the angular momentum is given by the green arrow (its magnitude is not to scale). <strong>We notice that this angular momentum is different from the one determined when the motion was in the xy-plane with  = 0</strong>. We can draw another schematic where the particle is on the opposite side of the circular motion:</p>
+<img src="B8.4-fig4.png" width="600">
+<p>It should be evident by now that the angular momentum is constantly changing directions through its x- and y-components, while the z-component remains constant. This is what we refer to as <strong>precession</strong> of the angular momentum.</p>
+<div class="alert alert-info">
+The angular momentum depends on the choice of origin if we choose the vector $\vec{r}$ to represent the position vector of the particle. We could also say that we choose to calculate the angular momentum around some point of interest (poi) and $\vec{r}$ is the directed line segment from that point to the instantaneous position of the particle. We can call that directed line segment for $\vec{r}_{poi}$. 
+    </div>
+<p>With this in mind, it is more descriptive to rewrite Equation (1) to define the angular momentum of a point particle as</p>
+<div class="alert alert-success">
+$$ \vec{l} = \vec{r}_{poi} \times \vec{p} \tag{2}$$
+</div>    
+<p>This distinction becomes more evident and important when we introduce the concept of torque.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="examples">
+<h1>2. Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h1>
+<p>It will probably be good to illustrate the above with a few examples.</p>
+<section id="example-1">
+<h2>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">#</a></h2>
+<p>Consider a particle moving in uniform circular motion (circular motion with constant speed) in the xy-plane and z = 0. The mass of the particle is 2.0 kg, its speed is 5.0 m/s, and the radius of the circular motion is 0.5 m. Let the particle travel in a CW direction. Find the angular momentum about the origin.</p>
+<img src="B8.4-fig5.png" width="400">
+<p>The magnitude of the angular momentum is given by</p>
+<div class="math notranslate nohighlight">
+\[ |\vec{l}| = |\vec{r}_{poi} \times \vec{p}| \]</div>
+<p>We observe that <span class="math notranslate nohighlight">\(\vec{r}_{poi} = \vec{r}\)</span>, <span class="math notranslate nohighlight">\(\vec{p} = m\vec{v}\)</span>, and the two vectors are perpendicular.</p>
+<p>If we write it out in terms of the geometric properties:</p>
+<div class="math notranslate nohighlight">
+\[ l = r_{poi}mv\sin\theta \]</div>
+<p>Now we can insert our numbers:</p>
+<div class="math notranslate nohighlight">
+\[ l = (0.5)(2.0)(5.0)\sin(90^\circ) = 5.0~\textrm{kgm$^2$/s} \]</div>
+<p>Using the right-hand rule, we determine that the direction is in the negative z-direction and our angular momentum is</p>
+<div class="alert alert-success">
+    $$ \vec{l} = [-5.0~\textrm{kgm$^2$/s}]\hat{k} $$
+</div>
+<p><strong>NOTE</strong>: In this example the radius of the circular motion and the magnitude of the position vector were the same. That is not always the case!</p>
+</section>
+<hr class="docutils" />
+<section id="example-2">
+<h2>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">#</a></h2>
+<p>Consider a particle moving in uniform circular motion (circular motion with constant speed) in the xy-plane and z = 2 m. The mass of the particle is 2.0 kg, its speed is 5.0 m/s, and the radius of the circular motion is 0.5 m. Let the particle travel in a CW direction. Find the magnitude of angular momentum about the origin.</p>
+<p>We will use the figure below to properly identify the proper values for our equation.</p>
+<img src="B8.4-fig6.png" width="600">
+<p>Since we are interested in the angular momentum around the origin, the position vector <span class="math notranslate nohighlight">\(\vec{r}\)</span> is our <span class="math notranslate nohighlight">\(\vec{r}_{poi}\)</span>.</p>
+<p>The magnitude of the angular momentum is</p>
+<div class="math notranslate nohighlight">
+\[ l = r_{poi}p\sin\theta \]</div>
+<p>The position and velocity vectors are perpendicular, but we must be careful with respect to <span class="math notranslate nohighlight">\(r\)</span>. In this case, <span class="math notranslate nohighlight">\(r\)</span> is the magnitude of the position vector and <strong>not</strong> the radius of the motion. We can find the magnitude of the position vector by using the Pythagorean theorem:</p>
+<div class="math notranslate nohighlight">
+\[ r_{poi} = r = \sqrt{(2)^2 + (0.5)^2} = 2.1~\textrm{m} \]</div>
+<p>The magnitude of the angular momentum is</p>
+<div class="math notranslate nohighlight">
+\[ l = (2.1)(2.0)(5.0)\sin(90^\circ) = 21~\textrm{kgm$^2$/s} \]</div>
+<p><strong>NOTE</strong>: The magnitude of the angular momentum is constant but its direction keeps changing and it does not make sense to ask about its general direction.</p>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 1</b><br>
+Find the direction of the angular momentum in the Example 2 at the instant that x = -0.5 m and y = 0.0 m (this is the instant shown on the sketch). HINT: write down the vectors in component form and calculate the cross product using the component method.
+</div>
+</section>
+<hr class="docutils" />
+<section id="example-3">
+<h2>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">#</a></h2>
+<p>Consider a particle moving in uniform circular motion (circular motion with constant speed) in the xy-plane and z = 2 m. The mass of the particle is 2.0 kg, its speed is 5.0 m/s, and the radius of the circular motion is 0.5 m. Let the particle travel in a CW direction. Find the angular momentum about point P.</p>
+<p>We will use the figure below to properly identify the proper values for our equation.</p>
+<img src="B8.4-fig7.png" width="600">
+<p>Since we are interested in the angular momentum around point P, our <span class="math notranslate nohighlight">\(\vec{r}_{poi}\)</span> is the directed line segment from P to the position of the particle as indicated by the red vector in the figure. We recognize that its magnitude is the same as the radius of the circular motion: <span class="math notranslate nohighlight">\(r_{poi} = 0.5\)</span> m.</p>
+<p>The magnitude of the angular momentum is</p>
+<div class="math notranslate nohighlight">
+\[ l = r_{poi}p\sin\theta \]</div>
+<p>The angle between <span class="math notranslate nohighlight">\(\vec{r}_{poi}\)</span> and <span class="math notranslate nohighlight">\(\vec{p}\)</span> is 90<span class="math notranslate nohighlight">\(^\circ\)</span> and we get</p>
+<div class="math notranslate nohighlight">
+\[ l = (0.5)(2.0)(5.0)\sin(90^\circ) = 5.0~\textrm{kgm$^2$/s} \]</div>
+<p>The right-hand rule tells us that the direction of the angular momentum is in the negative z-direction.</p>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 2</b><br>
+Consider a particle moving in uniform circular motion (circular motion with constant speed) in the xy-plane and z = 4 m. The mass of the particle is 1.0 kg, its speed is 7.0 m/s, and the radius of the circular motion is 0.2 m. Let the particle travel in a CCW direction. Find the angular momentum about point the following points:
+    <ol>
+        <li>Origin
+        <li>(x,y,z) = (0,0,2)
+        <li>(x,y,z) = (1,0,4)
+    </ol>
+</div>
+</section>
+<hr class="docutils" />
+<section id="example-4">
+<h2>Example 4<a class="headerlink" href="#example-4" title="Permalink to this headline">#</a></h2>
+<p>A particle of mass 2.0 kg is moving with a velocity (in units of m/s) given by <span class="math notranslate nohighlight">\(\vec{v} = 2.0~\hat{i} + 1.5~\hat{j}\)</span>. At a given instant, its position vector (in units of m) is <span class="math notranslate nohighlight">\(\vec{r} = 1.0~\hat{i} - 2.0~\hat{j}\)</span>. At this instant, what is its angular momentum about the origin?</p>
+<p>Since we are finding the angular momentum about the origin, our <span class="math notranslate nohighlight">\(\vec{r}_{poi} = \vec{r}\)</span> and we have</p>
+<div class="math notranslate nohighlight">
+\[ \vec{l} = \vec{r}_{poi} \times \vec{p} = \vec{r}_{poi} \times m\vec{v} = m(\vec{r}_{poi} \times \vec{v})\]</div>
+<p>Using our ugly component formula for cross product, we get</p>
+<div class="math notranslate nohighlight">
+\[ \vec{l} = m[(r_{x}v_{z} - r_{z}v_{y})~\hat{i} + (r_{z}v_{x} - r_{x}v_{z})~\hat{j} + (r_{x}v_{y} - r_{y}v_{x})~\hat{k}]\]</div>
+<p>Inserting our values, we have</p>
+<div class="math notranslate nohighlight">
+\[ \vec{l} = (2.0){[(1.0)(0) - (0)(1.5)]~\hat{i} + [(0)(2.0) - (1.0)(0)]~\hat{j} + [(1.0)(1.5) - (-2.0)(2.0))~\hat{k}]}\]</div>
+<div class="math notranslate nohighlight">
+\[ \vec{l} = (11~\textrm{kgm$^2$/s})~\hat{k}\]</div>
+<p><strong>NOTE</strong>: This approach will provide us with the direction and the magnitude can be found by applying the Pythagorean theorem. We also note that the particle is confined to motion in the xy-plane and a quick sketch of the vectors combined with the right-hand rule will confirm that the direction of the angular momentum indeed is in the positive z-direction.</p>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 3</b><br>
+A particle of mass 2.0 kg is moving with a velocity (in units of m/s) given by $\vec{v} = 2.0~\hat{i} + 1.5~\hat{j}$. At a given instant, its position vector (in units of m) is $\vec{r} = 1.0~\hat{i} - 2.0~\hat{j} + 3.0~\hat{k}$. At this instant, what is its angular momentum about the origin?
+</div>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 4</b><br>
+A particle of mass 2.0 kg is moving with a velocity (in units of m/s) given by $\vec{v} = 2.0~\hat{i} + 1.5~\hat{j}$. At a given instant, its position vector (in units of m) is $\vec{r} = 1.0~\hat{i} - 2.0~\hat{j} + 3.0~\hat{k}$. At this instant, what is its angular momentum about a point P located at (x,y,z) = (2,0,0)?<br>
+    <br>
+    HINT: You will need to find $\vec{r}_{poi}$.
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="angular-momentum-of-center-of-mass">
+<h1>3. Angular Momentum of Center of Mass<a class="headerlink" href="#angular-momentum-of-center-of-mass" title="Permalink to this headline">#</a></h1>
+<p>We can make a similar defintion for the angular momentum of center of mass of a system of particle or a solid object:</p>
+<div class="math notranslate nohighlight">
+\[ \vec{L}_{CM} = \vec{R}_{poi}\times \vec{P} \]</div>
+<p>where <span class="math notranslate nohighlight">\(\vec{R}_{poi}\)</span> is the directed line segment from the point of interest to the CM of the system/object and <span class="math notranslate nohighlight">\(\vec{P}\)</span> is the linear momentum of the center of mass system/object.</p>
+<hr class="docutils" />
+<section id="example-5">
+<h2>Example 5<a class="headerlink" href="#example-5" title="Permalink to this headline">#</a></h2>
+<p>Consider solid sphere of mass 5.0 kg moving in a uniform circular motion the xy-plane and z = 0 m. The distance from  the origin to the CM of the sphere is 2.0 m and the speed of the sphere is 30.0 m/s. What is the magnitude of angular momentum of the center of mass sytem?</p>
+<p>Here the magnitude of the <span class="math notranslate nohighlight">\(\vec{R}){poi}\)</span> is the same as the distance provided, and the magnitude of the CM angular momentum is</p>
+<div class="math notranslate nohighlight">
+\[ L_{CM} = (5.0)(2.0)(30.)\sin(90^\circ) = 3.0\times 10^2~\textrm{kgm$^2$/s} \]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="orbital-and-spin-angular-momentum">
+<h1>4. Orbital and Spin Angular Momentum<a class="headerlink" href="#orbital-and-spin-angular-momentum" title="Permalink to this headline">#</a></h1>
+<p>Consider Example 5: what is the sphere was also spinning around an axis through its own CM? An example of that is the angular momentum of the Earth about a point centered at the Sun. The Earth rotates around the Sun, which provides gives the Earth an angular momentum similar to the one we calculated in Example 5. We call the this the <strong>orbital angular momentum</strong>. In additiona, the Earth has an angular momentum associated with is spinning motion around its axis through its CM. We call this the <strong>spin angular momentum</strong>.</p>
+<p>We could write the <strong>total</strong> angular momentum of the Earth with respect to a point at the center of the Earth as</p>
+<div class="math notranslate nohighlight">
+\[ \vec{L} = \vec{L}_{orb} + \vec{L}_{spin} \]</div>
+<div class="math notranslate nohighlight">
+\[ \vec{L} = \vec{R}\times\vec{P} + I\vec{\omega} \]</div>
+<p>where <span class="math notranslate nohighlight">\(\vec{R}\)</span> is the directed line segment from the center of the Sun to the CM of the Earth, <span class="math notranslate nohighlight">\(\vec{P} = M_{Earth}\vec{V}_{Earth}\)</span> with <span class="math notranslate nohighlight">\(\vec{V}_{Earth}\)</span> being the tangential speed of the Earth, <span class="math notranslate nohighlight">\(I\)</span> is the moment of inertia of the Earth around an axis through its CM, and <span class="math notranslate nohighlight">\(\omega\)</span> is the rotational velocity of the Earth.</p>
+<img src="B8.4-fig8.png" width="600">
+<p>A similar analogy is made in quantum mechanics in respect to the electron orbiting the nucleus.</p>
+<img src="B8.4-fig9.png" width="600">
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 5</b><br>
+Estimate the total angular momentum of the Earth with respect to a point centered at the Sun.
+</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="examples-of-rotational-dynamics">
+<h1>5. Examples of Rotational Dynamics<a class="headerlink" href="#examples-of-rotational-dynamics" title="Permalink to this headline">#</a></h1>
+<p>To illustrate the complexity of rotatonal dynamics, I will show a few examples here. NOTE: we have not discussed rotational momentum in enough depth to be able to explain all the physics in these examples. When we discuss torque, we will re-visit some of these.</p>
+<p>The tippy top was one of Niels Bohr’s favorite physics toys. FYI: angular momentum plays a major role in quantum mechanics and explaining behaviors of atoms and molecules. Below is a picture of Niels Borh and Wolfgang Pauli observing a tippy top at the Niels Bohr Institute in Copenhagen. Bohr’s model of the atom greatly relied on what we call the <strong>orbital angular momentum</strong> while Wolfgang Pauli played a major role in formulating the spin concept in quantum mechanics which we refer as the <strong>spin angular momentum</strong>.</p>
+<img src="tippy_top.jpg" width="600">
+<p><a class="reference external" href="https://www.youtube.com/watch?v=ItuAtgvkIkM">Video: Tippy Top</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=1n-HMSCDYtM">Spinning Handle in Space</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=cquvA_IpEsA">Gyroscope</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=ty9QSiVC2g0">Bike Wheel Precession</a></p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="clarification-point">
+<h1>6. Clarification Point<a class="headerlink" href="#clarification-point" title="Permalink to this headline">#</a></h1>
+<p>There are a few common mistakes that students (and even professionals) are making. Some of them we have addressed above, but it does not hurt to repeat them here:</p>
+<ol class="arabic simple">
+<li><p>The vector <span class="math notranslate nohighlight">\(\vec{r}\)</span> in the cross product is the directed line segment from the point of interest to the position of the particle/object. It does not necessarily have to be the postion vector.</p></li>
+<li><p>The point of interest is sometimes explained as evaluating the angular momentum around a new origin. This does not have to be the case as an observer at a given origin i in principle free to evaluate the angular momentum around any given point. In most cases, the point of interest is the origin. The freedom to choose becomes essential in the disucssion of torque.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="rotational-impulse">
+<h1>7. Rotational Impulse<a class="headerlink" href="#rotational-impulse" title="Permalink to this headline">#</a></h1>
+<p>The rotational impulse is defined in a similar manner as the linear impulse as it is the <strong>change in rotational momentum</strong> or <strong>change in rotational motion</strong>:</p>
+<div class="alert alert-success">
+    $$\vec{J}_{rot} = \Delta\vec{L} $$
+</div>
+<p>We will talk more about this when we introduce the concept of torque, so put it in the back of your mind for now :)</p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="quick-conceptual-questions">
+<h1>8. Quick Conceptual Questions<a class="headerlink" href="#quick-conceptual-questions" title="Permalink to this headline">#</a></h1>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 6</b><br>
+A disc and a hoop with the same radii and same masses are spinning at the same rate around an axis through the CM and perpendicular to their plane. Which of the two has the greater angular momentum.
+</div>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 7</b><br>
+Is it possible for an object traveling in straight line motion to have non-zero angular momentum? 
+</div>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 8</b><br>
+A uniform sphere of mass $m$ and radius $r$ is spinning around an axis through its CM. Which of the following would have the most influence on a change in its angular momentum: a doubling of its mass or a doubling in its radius?
+</div>
+<hr class="docutils" />
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Module-B8"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Rotational Momentum: Part 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-as-a-cross-product">1. Angular Momentum as a Cross Product</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnitude">Magnitude</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direction">Direction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-considerations">Important Considerations</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">2. Examples</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4">Example 4</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-of-center-of-mass">3. Angular Momentum of Center of Mass</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5">Example 5</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-and-spin-angular-momentum">4. Orbital and Spin Angular Momentum</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-rotational-dynamics">5. Examples of Rotational Dynamics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clarification-point">6. Clarification Point</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rotational-impulse">7. Rotational Impulse</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-conceptual-questions">8. Quick Conceptual Questions</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kim Nielsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
