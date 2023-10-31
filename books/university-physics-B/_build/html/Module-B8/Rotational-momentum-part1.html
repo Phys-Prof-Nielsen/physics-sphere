@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>B8.2 Rotational Momentum: Part 1 &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -65,8 +66,9 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B8/Rotational-momentum-part1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="B8.1 Moment of Inertia" href="Moment-of-inertia.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -211,8 +213,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B7/problemsB7.html">B7.x Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B8 - Rotational Momentum</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Moment-of-inertia.html">B8.1 Moment of Inertia</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">B8.2 Rotational Momentum: Part 1</a></li>
 </ul>
 
     </div>
@@ -406,35 +409,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">B8.2 Rotational Momentum: Part 1</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-point-object">1. Angular Momentum: Point Object</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#x-axis">x-axis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-2-1-angular-momentum-point-particle">B8.2.1 Angular Momentum: Point Particle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-2-2-angular-momentum-system-of-particles">B8.2.2 Angular Momentum: System of Particles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-2-3-angular-momentum-continuous-system">B8.2.3 Angular Momentum: Continuous System</a></li>
 </ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#y-axis">y-axis</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-axis">z-axis</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-system-of-particles">2. Angular Momentum: System of Particles</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Solution</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-continuous-system">3. Angular Momentum: Continuous System</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solution</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -446,25 +424,25 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b8-2-rotational-momentum-part-1">
-<h1>B8.2 Rotational Momentum: Part 1<a class="headerlink" href="#b8-2-rotational-momentum-part-1" title="Permalink to this headline">#</a></h1>
+<h1>B8.2 Rotational Momentum: Part 1<a class="headerlink" href="#b8-2-rotational-momentum-part-1" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><p>Angular momentum, or rotational momentum, is the measure of rotational motion just as linear momentum is the measure of linear motion. We will first define angular momentum in a similar fashion as the linear counterpart, but we will quickly realize that the angular momentum is a beast compared to linear momemtum. We will make certain assumptions that will restrict its complexity and hopefully help us gain some confidence in those simpler scenarios. For a more rigorous discussion, you will need to take the course on classical mechanics.</p>
 <img src="Picture1.png" width="500">
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="angular-momentum-point-object">
-<h2>1. Angular Momentum: Point Object<a class="headerlink" href="#angular-momentum-point-object" title="Permalink to this headline">#</a></h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b8-2-1-angular-momentum-point-particle">
+<h2>B8.2.1 Angular Momentum: Point Particle<a class="headerlink" href="#b8-2-1-angular-momentum-point-particle" title="Permalink to this heading">#</a></h2>
 <p>We defined the <strong>linear momentum</strong> in terms of its <strong>resistance to a change in linear motion</strong> and its <strong>linear velocity</strong> as</p>
 <div class="math notranslate nohighlight">
 \[ \vec{p} = m\vec{v} \]</div>
 <p>It would be tempting to define the rotational (or angular momentum) as</p>
 <div class="math notranslate nohighlight">
-\[ \vec{l} = I\vec{\omega} \]</div>
-<p>where <span class="math notranslate nohighlight">\(I\)</span> is the moment of inertia and is the particle’s <strong>resistance to a change rotational motion</strong> and <span class="math notranslate nohighlight">\(\omega\)</span> is its <strong>rotational velocity</strong>. This is in principle corret, but only if we consider the moment of inertia as a <strong>tensor</strong>. Since we are not ready to handle the truth on that matter, we will define the moment of inertia differently.</p>
+\[ \vec{l} = i\vec{\omega} \]</div>
+<p>where <span class="math notranslate nohighlight">\(I\)</span> is the moment of inertia and is the particle’s <strong>resistance to a change rotational motion</strong> and <span class="math notranslate nohighlight">\(\omega\)</span> is its <strong>rotational velocity</strong>. This is in principle correct, but only if we consider the moment of inertia as a <strong>tensor</strong>. Since we are not ready to handle the truth on that matter, we will apply the moment of inertia differently.</p>
 <p>Instead, we will first disucss the meaning of rotational motion as restricted to this course. We restrict our discussion to motion around a given axis. That implies that we consider the moment of inertia around that given axis as well as the <strong>components of rotational velocity</strong> around that given axis. We can then define the <strong>angular momentum components</strong> around the respective axis as</p>
 <div class="alert alert-success">
-$$ l_x = I_{x}\omega_{x} $$
+$$ l_x = i_{x}\omega_{x} $$
 <div class="math notranslate nohighlight">
-\[ l_y = I_{y}\omega_{y} \]</div>
+\[ l_y = i_{y}\omega_{y} \]</div>
 <div class="math notranslate nohighlight">
-\[ l_z = I_{z}\omega_{z} \]</div>
+\[ l_z = i_{z}\omega_{z} \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;/div&gt;
 </pre></div>
 </div>
@@ -473,36 +451,29 @@ $$ l_x = I_{x}\omega_{x} $$
 <li>The angular speeds are actually the angular components of the angular velocity and can thus be negative.
 <li>The angluar velocity components have units of rad/s in this equation.
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="example-1">
-<h2>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">#</a></h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 1</h3>
+    </header>
 <p>A point particle of mass 0.5 kg is moving in a circular motion in the xy-plane with radius 0.5 m and an angular speed of 25 rad/s. What is its angular momentum around the three principal axes?</p>
-<section id="solution">
-<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h3>
+<p><strong>Solution</strong></p>
 <p>We will consider each principal axis separately. We note that the particle is rotating about the z-axis since it is confined to the xy-plane.</p>
-<section id="x-axis">
-<h4>x-axis<a class="headerlink" href="#x-axis" title="Permalink to this headline">#</a></h4>
 <p>The angular speed around the x-axis is zero: <span class="math notranslate nohighlight">\(l_x = 0\)</span></p>
-</section>
-</section>
-<section id="y-axis">
-<h3>y-axis<a class="headerlink" href="#y-axis" title="Permalink to this headline">#</a></h3>
 <p>The angular speed around the y-axis is zero: <span class="math notranslate nohighlight">\(l_y = 0\)</span></p>
-</section>
-<section id="z-axis">
-<h3>z-axis<a class="headerlink" href="#z-axis" title="Permalink to this headline">#</a></h3>
 <p>The moment of inertia about the z-axis is</p>
 <div class="math notranslate nohighlight">
 \[ I_z = md_z^2 = (0.5)(0.5)^2 = 0.125~\textrm{kgm$^2$} \]</div>
 <p>and the rotational momentum around the z-axis is then</p>
 <div class="math notranslate nohighlight">
 \[ l_z = I_{z}\omega_{z} = (0.125)(25) = 3~\textrm{kgm$^2$/s} \]</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 1</b><br>
-A turntable disc is spinning at a rate of $5.0~\textrm{rev/s}$. There is a bug with a mass of 5.0 g on the turntable at location 8 cm from the center of the disc.
-    <ol>
-        <li> Convert the angular speed from rev/s to rad/s.
-            <li> Consider the bug to be point particle, what is its angular momentum around the rotation axis?
+<p>A turntable disc is spinning at a rate of <span class="math notranslate nohighlight">\(5.0~\textrm{rev/s}\)</span>. There is a bug with a mass of 5.0 g on the turntable at location 8 cm from the center of the disc.</p>
+<ol class="arabic simple">
+<li><p>Convert the angular speed from rev/s to rad/s.</p></li>
+<li><p>Consider the bug to be point particle, what is its angular momentum around the rotation axis?</p></li>
+</ol>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 2</b><br>
@@ -510,20 +481,19 @@ A turntable disc is spinning at a rate of $5.0~\textrm{rev/s}$. There is a bug w
 <p>At full power, trillions of protons will race around the <a href="https://home.cern/science/accelerators/large-hadron-collider">Large Hadron Collider (LHC)</a> accelerator ring 11,245 times a second, travelling at 99.9999991<span class="math notranslate nohighlight">\(\%\)</span> the speed of light. The collider is contained in a circular tunnel, with a circumference of 26.7 kilometers. What is the angular momentum of a single proton (considered a point particle) around the axis of rotation? HINT: You will need to look up the mass of a proton.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="angular-momentum-system-of-particles">
-<h1>2. Angular Momentum: System of Particles<a class="headerlink" href="#angular-momentum-system-of-particles" title="Permalink to this headline">#</a></h1>
+<section id="b8-2-2-angular-momentum-system-of-particles">
+<h2>B8.2.2 Angular Momentum: System of Particles<a class="headerlink" href="#b8-2-2-angular-momentum-system-of-particles" title="Permalink to this heading">#</a></h2>
 <p>This is a similar approach as for the linear case: we simply add the components together. Let us consider one component, say the z-component. The total angular momentum is</p>
 <div class="alert alert-success">
-$$ L_z = \sum_{i = 1}^{N}l_{i,z} $$
+$$ L_z = \sum_{i = 1}^{N}l_{iz} $$
     </div>
 <p>A similar relation hold for the x- and y-axis as well.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="example-2">
-<h2>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">#</a></h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 2</h3>
+    </header>
 <p>Two particles are moving in circular motions but opposite directions. Particle A has a mass of 1.0 kg and is traveling in CCW direction with a rotational speed of 2.0 rad/s at a radius of 0.1 cm. Particle B has a mass of 0.25 kg and is traveling in CW direction with an angular speed of 5.0 rad/s at a radius of 0.5 cm. What is the rotational momentum of this system.</p>
-<section id="id1">
-<h3>Solution<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p><strong>Solution</strong></p>
 <p>Let us consider CCW direciton to be positive, that implies that particle A has a <strong>positive</strong> angular velocity component and particle B has a <strong>negative</strong> angular velocity component. We will also say that the particles are moving in the xy-plane and the angular momentum is therefore equivalent to finding the z-component.</p>
 <p>The total angular momemtum is</p>
 <div class="math notranslate nohighlight">
@@ -534,19 +504,18 @@ $$ L_z = \sum_{i = 1}^{N}l_{i,z} $$
 \[ L_z = m_{1}d_{1,z}^2\omega_{1,z} + m_{2}d_{2,z}^2\omega_{2,z} \]</div>
 <div class="math notranslate nohighlight">
 \[ L_z = (1.0)(0.001)^2(2.0) + (0.25)(0.005)^2(-5.0) = 0.003~\textrm{kgm$^2$/s} \]</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 2</b><br>
-A turntable disc is spinning at a rate of $5.0~\textrm{rev/s}$. There is a 5.0 g bug on the turntable at location 8 cm from the center of the disc. A second identical bug is positioned at a loction of 4 cm from the center of the disc. What is the magnitude of the angular momentum of the system of bugs? HINT: Remember to convert the angular speed to rad/s. 
+<p>A turntable disc is spinning at a rate of <span class="math notranslate nohighlight">\(5.0~\textrm{rev/s}\)</span>. There is a 5.0 g bug on the turntable at location 8 cm from the center of the disc. A second identical bug is positioned at a loction of 4 cm from the center of the disc. What is the magnitude of the angular momentum of the system of bugs? HINT: Remember to convert the angular speed to rad/s.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 3</b><br>
-Two point objects A and B with masses 2.0 kg and 3.0 kg, respectively, are moving in circular motions with radii 0.5 m and 0.75 m, respectively. Object A is moving in a CW direction while object B is moving in a CCW direction. What is the angular momentum of this system?
+<p>Two point objects A and B with masses 2.0 kg and 3.0 kg, respectively, are moving in circular motions with radii 0.5 m and 0.75 m, respectively. Object A is moving in a CW direction while object B is moving in a CCW direction. What is the angular momentum of this system?</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="angular-momentum-continuous-system">
-<h1>3. Angular Momentum: Continuous System<a class="headerlink" href="#angular-momentum-continuous-system" title="Permalink to this headline">#</a></h1>
+<section id="b8-2-3-angular-momentum-continuous-system">
+<h2>B8.2.3 Angular Momentum: Continuous System<a class="headerlink" href="#b8-2-3-angular-momentum-continuous-system" title="Permalink to this heading">#</a></h2>
 <p>Remember, a continuous system is a system where the number of point particles approaches infinity (in real applications: the number is too large to count). In this discussion, we must make another restriction on our continuous system as we will see.</p>
 <p>In this case, the angular momentum is (we consider only around one axis, but we can extrapolate the result to the other two axis as well)</p>
 <div class="math notranslate nohighlight">
@@ -563,12 +532,13 @@ Two point objects A and B with masses 2.0 kg and 3.0 kg, respectively, are movin
 <div class="alert alert-success">
 $$ L_z = I_z\omega_z $$
     </div>
-<p>Hence, our rotational momentum for a continuous system appears similar in equation shape as for a point particle.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="example-3">
-<h2>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">#</a></h2>
+<p>Hence, our rotational momentum for a continuous system appears similar in equation form as for a point particle.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 3</h3>
+    </header>
 <p>A turntable disc with a mass of 10.0 kg and radius 15 cm is spinning at a rate of <span class="math notranslate nohighlight">\(8.0~\textrm{rad/s}\)</span>. What is the rotational momentum of the disc?</p>
-<section id="id2">
-<h3>Solution<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p><strong>Solution</strong></p>
 <p>We will need to know the moment of inertia of a disc. From looking it up in a table in the textbook, we determine that the moment of inertia of a disc rotating about an axis through its center and perpendicular to the plane of the disc to be:</p>
 <div class="math notranslate nohighlight">
 \[ I_{disc} = \frac{1}{2}MR^2 \]</div>
@@ -579,37 +549,37 @@ $$ L_z = I_z\omega_z $$
 \[ L_z = \frac{1}{2}MR^2\omega_{z} \]</div>
 <div class="math notranslate nohighlight">
 \[ L_z = (0.5)(10.0)(0.15)^2(8.0) = 0.90~\textrm{kgm$^2$/s} \]</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 4</b><br>
-A turntable disc with a mass of 10.0 kg and radius 15 cm is spinning at a rate of $8.0~\textrm{rad/s}$. There is a 5.0 g bug on the turntable at location 8 cm from the center of the disc. A second identical bug is positioned at a loction of 4 cm from the center of the disc. What is the magnitude of the angular momentum of the total system o(turntable and bugs)? HINT: the total angular momentum is the sum of individual momenta. 
+<p>A turntable disc with a mass of 10.0 kg and radius 15 cm is spinning at a rate of <span class="math notranslate nohighlight">\(8.0~\textrm{rad/s}\)</span>. There is a 5.0 g bug on the turntable at location 8 cm from the center of the disc. A second identical bug is positioned at a loction of 4 cm from the center of the disc. What is the magnitude of the angular momentum of the total system (turntable and bugs)? HINT: the total angular momentum is the sum of individual momenta.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 5</b><br>
-A solid sphere of mass 5.0 kg and radius 5.0 cm is spinning at a rate of 20 rad/s around an axis through its center. What is the angular momentum of the sphere around the rotation axis?
+<p>A solid sphere of mass 5.0 kg and radius 5.0 cm is spinning at a rate of 20 rad/s around an axis through its center. What is the angular momentum of the sphere around the rotation axis?</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 6</b><br>
-    <img src="fig5.png" width="400">
+<img src="fig5.png" width="400">
 <p>A solid sphere of mass 5.0 kg and radius 5.0 cm is rotating at a rate of 20 rad/s around an axis that is shifted a distance of 25 cm away from the center of the sphere. What is the angular momentum of the sphere around this axis? HINT: Use the parallel axis theorem.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 7</b><br> 
-A solid sphere of mass 5.0 kg and radius 5.0 cm is attached to the end of a rod of mass 2.0 kg and length 0.5 m. The system is in the horizontal xy-plane and spinning around an axis perpendicalur to this plane and through the end point of the rod opposite to the sphere. If the system is rotating at a rate of 20 rad/s what is the angular momentum of the system around this axis? <br>
-    <br>
-    HINTS: Use the parallel axis theorem for the sphere, look up moment of inertia of a rod and choose the proper version, calculate the angualr momenta of both sphere and rod and add them together. 
+<p>A solid sphere of mass 5.0 kg and radius 5.0 cm is attached to the end of a rod of mass 2.0 kg and length 0.5 m. The system is in the horizontal xy-plane and spinning around an axis perpendicalur to this plane and through the end point of the rod opposite to the sphere. If the system is rotating at a rate of 20 rad/s what is the angular momentum of the system around this axis? <br>
+<br>
+HINTS: Use the parallel axis theorem for the sphere, look up moment of inertia of a rod and choose the proper version, calculate the angualr momenta of both sphere and rod and add them together.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 8</b><br> 
-A fun demonstration of conservation of angular momentum is to sit in a rotating chair, put your arms out and start spinning around. Then move your arms in as observe how much faster you spin. A key element here is the change in distribution of mass, or the change moment of inertia, which is causing a significant change in angular momentum. We will discuss the topic of conservation of angular momentum in later module. 
+<p>A fun demonstration of conservation of angular momentum is to sit in a rotating chair, put your arms out and start spinning around. Then move your arms in as observe how much faster you spin. A key element here is the change in distribution of mass, or the change moment of inertia, which is causing a significant change in angular momentum. We will discuss the topic of conservation of angular momentum in later module.</p>
 <p>For now, let us try and estimate the angular momentum of a person holding two dumbbells straight out from his/her torso. We will model the torso as a cylinder, ignore the mass of the arms, and assume the dumbbells are spherical.</p>
-<p>An typical torso modeled as a cylinder has a mass of 54 kg and radius of 13 cm and a typical arm length is 80 cm. Consider each dumbbell to have a mass of 5.0 kg.
-<ol>
-<li> What is the moment of inertia of the person + dumbbell?
-<li> If the rotation rate is 0.5 rev/s, what is the angular momentum of the person+dumbbell?
-</ol></p>
+<p>An typical torso modeled as a cylinder has a mass of 54 kg and radius of 13 cm and a typical arm length is 80 cm. Consider each dumbbell to have a mass of 5.0 kg.</p>
+<ol class="arabic simple">
+<li><p>What is the moment of inertia of the person + dumbbell?</p></li>
+<li><p>If the rotation rate is 0.5 rev/s, what is the angular momentum of the person+dumbbell?</p></li>
+</ol>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -643,6 +613,15 @@ A fun demonstration of conservation of angular momentum is to sit in a rotating 
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Moment-of-inertia.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">B8.1 Moment of Inertia</p>
+      </div>
+    </a>
 </div></div>
   
 </div>
@@ -661,35 +640,10 @@ A fun demonstration of conservation of angular momentum is to sit in a rotating 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">B8.2 Rotational Momentum: Part 1</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-point-object">1. Angular Momentum: Point Object</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#x-axis">x-axis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-2-1-angular-momentum-point-particle">B8.2.1 Angular Momentum: Point Particle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-2-2-angular-momentum-system-of-particles">B8.2.2 Angular Momentum: System of Particles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-2-3-angular-momentum-continuous-system">B8.2.3 Angular Momentum: Continuous System</a></li>
 </ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#y-axis">y-axis</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-axis">z-axis</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-system-of-particles">2. Angular Momentum: System of Particles</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Solution</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-continuous-system">3. Angular Momentum: Continuous System</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solution</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
