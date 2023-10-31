@@ -448,17 +448,18 @@ document.write(`
 <h2>B8.3.2 Geometrical Defintion<a class="headerlink" href="#b8-3-2-geometrical-defintion" title="Permalink to this headline">#</a></h2>
 <p>As the subtitle says, this definition relies on vector quantities we associate with the geometry of the vectors such as length and angle. We define the <strong>magnitude</strong> of the cross product between two vectors <span class="math notranslate nohighlight">\(\vec{A}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span> as</p>
 <div class="alert alert-success">
-$$ |\vec{A} \times \vec{B}| = AB\sin\theta $$
+<div class="math notranslate nohighlight">
+\[ |\vec{A} \times \vec{B}| = AB\sin\theta \]</div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are the magnitudes (or lengths) of the two vectors and <span class="math notranslate nohighlight">\(\theta\)</span> is the <strong>smallest</strong> angle between the two vectors, that is, <span class="math notranslate nohighlight">\(\theta \in [0^\circ,180^\circ]\)</span>. From the notation, it may be evident why it is called the cross product.</p>
 <div class="alert alert-danger">
-    Taking the cross product between two vectors results in a new vector that is <i>perpendicular</i> to the plane containing the two vectors $\vec{A}$ and $\vec{B}$.
+<p>Taking the cross product between two vectors results in a new vector that is <i>perpendicular</i> to the plane containing the two vectors <span class="math notranslate nohighlight">\(\vec{A}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span>.</p>
 </div>
 <div class="alert alert-danger">
-    The equation above <i>only</i> calculates the <i>magnitude</i> of the new vector, not its direction.
+<p>The equation above <strong>only</strong> calculates the <strong>magnitude</strong> of the new vector, not its direction.</p>
 </div>
 <div class="alert alert-danger">
-    The cross product is <i>not</i> commutative: $\vec{A} \times \vec{B} \neq \vec{B} \times \vec{A}$.
+<p>The cross product is <strong>not</strong> commutative: <span class="math notranslate nohighlight">\(\vec{A} \times \vec{B} \neq \vec{B} \times \vec{A}\)</span>.</p>
 </div>
 <section id="finding-the-direction-method-1-right-hand-rule">
 <h3>Finding the Direction: Method 1 :: Right-Hand Rule<a class="headerlink" href="#finding-the-direction-method-1-right-hand-rule" title="Permalink to this headline">#</a></h3>
@@ -649,14 +650,15 @@ $<span class="math notranslate nohighlight">\( |\vec{B}|\sin\theta \)</span>$, w
 \end{split}\]</div>
 <p>We should clean up this mess a little bit:</p>
 <div class="alert alert-success">
-$$\vec{A} \times \vec{B} = [(A_{y}B_{z}) - (A_{z}B_{y})]~\hat{i} 
+<div class="math notranslate nohighlight">
+\[\vec{A} \times \vec{B} = [(A_{y}B_{z}) - (A_{z}B_{y})]~\hat{i} 
 + [(A_{z}B_{x}) - (A_{x}B_{z})]~\hat{j}
 + [(A_{x}B_{y}) - (A_{y}B_{x})]~\hat{k}
-$$
+\]</div>
 </div>
 <p>Hence, if we know the components of the two vectors, we can simply insert them into this equation.</p>
 <div class="alert alert-info">
-We notice that the direction of the cross product is provided through the unit vectors while the magnitude is not stated explicitly. However, we can find the magnitude by using the pythagorean theorem.
+<p>We notice that the direction of the cross product is provided through the unit vectors while the magnitude is not stated explicitly. However, we can find the magnitude by using the pythagorean theorem.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 <div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
@@ -696,19 +698,16 @@ We notice that the direction of the cross product is provided through the unit v
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 5</b><br>
 <p>Given two vectors with exact components: <span class="math notranslate nohighlight">\(\vec{A} = \begin{bmatrix} 4  \\ 4 \\ 0  \end{bmatrix}\)</span> and <span class="math notranslate nohighlight">\(\vec{B} = \begin{bmatrix} -2  \\ 5 \\ 0  \end{bmatrix}\)</span>.</p>
-<ol>
-     <li>
-Calculate the cross product between the two vectors. </li>
-    <li>
-        Consider a traditional xyz-coordinate system. What direction is the cross product? </li>
-    <li> 
-        What plane does the vectors $\vec{A}$ and $\vec{B}$ lay in?</li>
-    </ol>
+<ol class="arabic simple">
+<li><p>Calculate the cross product between the two vectors.</p></li>
+<li><p>Consider a traditional xyz-coordinate system. What direction is the cross product?</p></li>
+<li><p>What plane does the vectors <span class="math notranslate nohighlight">\(\vec{A}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span> lay in?</p></li>
+</ol>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 6</b><br>
-Given two vectors with exact components: $\vec{A} = \begin{bmatrix} 4  \\ 0 \\ 4  \end{bmatrix}$ and $\vec{B} = \begin{bmatrix} -2  \\ 0 \\ 1  \end{bmatrix}$.
-Can you without doing any calculations determine along which coordinate axis the cross product is?  
+<p>Given two vectors with exact components: <span class="math notranslate nohighlight">\(\vec{A} = \begin{bmatrix} 4  \\ 0 \\ 4  \end{bmatrix}\)</span> and <span class="math notranslate nohighlight">\(\vec{B} = \begin{bmatrix} -2  \\ 0 \\ 1  \end{bmatrix}\)</span>.
+Can you without doing any calculations determine along which coordinate axis the cross product is?</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b8-3-5-important-observations">
