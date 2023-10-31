@@ -460,14 +460,14 @@ document.write(`
 <p>The angular speed around the y-axis is zero: <span class="math notranslate nohighlight">\(l_y = 0\)</span></p>
 <p>The moment of inertia about the z-axis is</p>
 <div class="math notranslate nohighlight">
-\[ I_z = md_z^2 = (0.5)(0.5)^2 = 0.125~\textrm{kgm$^2$} \]</div>
+\[ i_z = md_z^2 = (0.5)(0.5)^2 = 0.125~\textrm{kgm$^2$} \]</div>
 <p>and the rotational momentum around the z-axis is then</p>
 <div class="math notranslate nohighlight">
 \[ l_z = i_{z}\omega_{z} = (0.125)(25) = 3~\textrm{kgm$^2$/s} \]</div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 1</b><br>
-<p>A turntable disc is spinning at a rate of <span class="math notranslate nohighlight">\(5.0~\textrm{rev/s}\)</span>. There is a bug with a mass of 5.0 g on the turntable at location 8 cm from the center of the disc.</p>
+<p>A turntable disk is spinning at a rate of <span class="math notranslate nohighlight">\(5.0~\textrm{rev/s}\)</span>. There is a bug with a mass of 5.0 g on the turntable at location 8 cm from the center of the disk.</p>
 <ol class="arabic simple">
 <li><p>Convert the angular speed from rev/s to rad/s.</p></li>
 <li><p>Consider the bug to be point particle, what is its angular momentum around the rotation axis?</p></li>
@@ -506,11 +506,11 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 2</b><br>
-<p>A turntable disc is spinning at a rate of <span class="math notranslate nohighlight">\(5.0~\textrm{rev/s}\)</span>. There is a 5.0 g bug on the turntable at location 8 cm from the center of the disc. A second identical bug is positioned at a loction of 4 cm from the center of the disc. What is the magnitude of the angular momentum of the system of bugs? HINT: Remember to convert the angular speed to rad/s.</p>
+<p>A turntable disk is spinning at a rate of <span class="math notranslate nohighlight">\(5.0~\textrm{rev/s}\)</span>. There is a 5.0 g bug on the turntable at location 8 cm from the center of the disk. A second identical bug is positioned at a loction of 4 cm from the center of the disk. What is the magnitude of the angular momentum of the system of bugs? HINT: Remember to convert the angular speed to rad/s.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 3</b><br>
-<p>Two point objects A and B with masses 2.0 kg and 3.0 kg, respectively, are moving in circular motions with radii 0.5 m and 0.75 m, respectively. Object A is moving in a CW direction while object B is moving in a CCW direction. What is the angular momentum of this system?</p>
+<p>Two point objects A and B with masses 2.0 kg and 3.0 kg, respectively, are moving in circular motions with radii 0.5 m and 0.75 m, respectively. Object A is moving in a CW direction at 5.0 rad/s while object B is moving in a CCW direction at 8.0 rad/s. What is the angular momentum of this system?</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b8-2-3-angular-momentum-continuous-system">
@@ -524,35 +524,35 @@ document.write(`
 <p>Now, the infinite sum is over the individual products between the moment of inertia and angular velocity component. <strong>This is tricky</strong> unless we consider <strong>rigid objects</strong>. In a rigid object <strong>all particles must travel at the same angular speed</strong>. That implies that</p>
 <div class="math notranslate nohighlight">
 \[ \omega_{1,z} = \omega_{2,z} = \cdots \]</div>
-<p>We can then label the angular speeds for all the particles as <span class="math notranslate nohighlight">\(\omega_z\)</span> and pull it outside the summation:</p>
+<p>We can then label the angular speeds for all the particles as <span class="math notranslate nohighlight">\(\Omega_z\)</span> and pull it outside the summation:</p>
 <div class="math notranslate nohighlight">
-\[ L_z = \left(\sum_{i = 1}^{\infty}i_{i,z}\right)\omega_{z}\]</div>
+\[ L_z = \left(\sum_{i = 1}^{\infty}i_{i,z}\right)\Omega_{z}\]</div>
 <p>The summation inside the parathensis is (in the limit <span class="math notranslate nohighlight">\(N \rightarrow \infty\)</span>) the moment of inertia of the continuous system:</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
-\[ L_z = I_z\omega_z \]</div>
+\[ L_z = I_z\Omega_z \]</div>
 </div>
 <p>Hence, our rotational momentum for a continuous system appears similar in equation form as for a point particle.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
 <header>
 <h3> Example 3</h3>
     </header>
-<p>A turntable disc with a mass of 10.0 kg and radius 15 cm is spinning at a rate of <span class="math notranslate nohighlight">\(8.0~\textrm{rad/s}\)</span>. What is the rotational momentum of the disc?</p>
+<p>A turntable disk with a mass of 10.0 kg and radius 15 cm is spinning at a rate of <span class="math notranslate nohighlight">\(8.0~\textrm{rad/s}\)</span>. What is the rotational momentum of the disk?</p>
 <p><strong>Solution</strong></p>
-<p>We will need to know the moment of inertia of a disc. From looking it up in a table in the textbook, we determine that the moment of inertia of a disc rotating about an axis through its center and perpendicular to the plane of the disc to be:</p>
+<p>We will need to know the moment of inertia of a disk. From looking it up in a table in the textbook, we determine that the moment of inertia of a disk rotating about an axis through its center and perpendicular to the plane of the disk to be:</p>
 <div class="math notranslate nohighlight">
 \[ I_{disc} = \frac{1}{2}MR^2 \]</div>
-<p>If we let the plane of the disc to be in the xy-plane, then the rotational momentum is along the z-axis and is:</p>
+<p>If we let the plane of the disk to be in the xy-plane, then the rotational momentum is along the z-axis and is:</p>
 <div class="math notranslate nohighlight">
-\[ L_z = I_{z}\omega_{z} \]</div>
+\[ L_z = I_{z}\Omega_{z} \]</div>
 <div class="math notranslate nohighlight">
-\[ L_z = \frac{1}{2}MR^2\omega_{z} \]</div>
+\[ L_z = \frac{1}{2}MR^2\Omega_{z} \]</div>
 <div class="math notranslate nohighlight">
 \[ L_z = (0.5)(10.0)(0.15)^2(8.0) = 0.90~\textrm{kgm$^2$/s} \]</div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 4</b><br>
-<p>A turntable disc with a mass of 10.0 kg and radius 15 cm is spinning at a rate of <span class="math notranslate nohighlight">\(8.0~\textrm{rad/s}\)</span>. There is a 5.0 g bug on the turntable at location 8 cm from the center of the disc. A second identical bug is positioned at a loction of 4 cm from the center of the disc. What is the magnitude of the angular momentum of the total system (turntable and bugs)? HINT: the total angular momentum is the sum of individual momenta.</p>
+<p>A turntable disk with a mass of 10.0 kg and radius 15 cm is spinning at a rate of <span class="math notranslate nohighlight">\(8.0~\textrm{rad/s}\)</span>. There is a 5.0 g bug on the turntable at location 8 cm from the center of the disk. A second identical bug is positioned at a loction of 4 cm from the center of the disk. What is the magnitude of the angular momentum of the total system (turntable and bugs)? HINT: the total angular momentum is the sum of individual momenta.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 5</b><br>
