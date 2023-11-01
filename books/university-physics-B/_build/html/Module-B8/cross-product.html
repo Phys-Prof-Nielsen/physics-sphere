@@ -413,7 +413,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-1-introduction">B8.3.1 Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-2-geometrical-defintion">B8.3.2 Geometrical Defintion</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-2-geometrical-definition">B8.3.2 Geometrical Definition</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-direction-method-1-right-hand-rule">Finding the Direction: Method 1 :: Right-Hand Rule</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-direction-method-2-parallelogram">Finding the Direction: Method 2 :: Parallelogram</a></li>
 </ul>
@@ -447,8 +447,8 @@ document.write(`
 <p>The main difference between the cross and dot products is that the cross product returns a vector instead of a scalar.</p>
 <p>The cross product is a very important operation in physics. For example, angular momentum and torque are calculated using cross products. If you take the second semester of introductory physics you will see a lot more applications of the cross product.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b8-3-2-geometrical-defintion">
-<h2>B8.3.2 Geometrical Defintion<a class="headerlink" href="#b8-3-2-geometrical-defintion" title="Permalink to this headline">#</a></h2>
+<section id="b8-3-2-geometrical-definition">
+<h2>B8.3.2 Geometrical Definition<a class="headerlink" href="#b8-3-2-geometrical-definition" title="Permalink to this headline">#</a></h2>
 <p>As the subtitle says, this definition relies on vector quantities we associate with the geometry of the vectors such as length and angle. We define the <strong>magnitude</strong> of the cross product between two vectors <span class="math notranslate nohighlight">\(\vec{A}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span> as</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -554,6 +554,24 @@ document.write(`
 <b>Box 1</b><br>
 <p>A vector is directed along the positive x-axis and has a magnitude of 5. A second vector has a magnitude of 8 and is directed at an angle of 32<span class="math notranslate nohighlight">\(^\circ\)</span> above the positive x-axis. Find the cross product between the two vectors. Remember to specify <i>both</i> magnitude and direction.</p>
 </div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="b8-3-3-geometrical-interpretation-of-cross-product">
+<h2>B8.3.3 Geometrical Interpretation of Cross Product<a class="headerlink" href="#b8-3-3-geometrical-interpretation-of-cross-product" title="Permalink to this headline">#</a></h2>
+<p>While the cross product is a complex topic, we can associate a geometrical interpretation to it.</p>
+<div class="alert alert-info">
+<p>The magnitude of the cross product is the area of the parallelogram spanned by the two vectors in the cross product and the direction of the cross product provides the orientation of the parallelogram.</p>
+</div>
+<p>Ok, we can understand area of a parallelogram, but an orientation is just weird. In Calculus III as well as the second semester of this course we will see how to associate directions to areas etc. It is an extremely important concept at that point, so for now: just put it in the back of our mind and wait 🤓</p>
+<p>Let us see how we arrived at the above conclusion: consider the parallelogram spanned by the two vectors <span class="math notranslate nohighlight">\(\vec{A}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span>.</p>
+<img src="B8.3-fig3.png"  width="200"/>
+<p>If we make the projection of vector <span class="math notranslate nohighlight">\(\vec{B}\)</span> onto the y-axis (assuming the vectors are positioned in a traditional xy-coordinate system), then the length of the projection is
+$<span class="math notranslate nohighlight">\( |\vec{B}|\sin\theta \)</span>$, which is illustrated in the next figure:</p>
+<img src="B8.3-fig4.png"  width="300"/>
+<p>However, if we multiply this projection with the length of vector <span class="math notranslate nohighlight">\(\vec{A}\)</span>, then it is the same as the rule for finding the area of the parallelogram:</p>
+<div class="math notranslate nohighlight">
+\[ \textrm{Area} = |\vec{A}|~|\vec{B}|~\sin\theta \]</div>
+<p>Hence, we can conclude that the magnitude of the cross product between two vectors represents the area of the parallelogram spanned by the two vectors.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 2</b><br>
 <p>Find the cross product between <span class="math notranslate nohighlight">\(\hat{i}\)</span> and <span class="math notranslate nohighlight">\(\hat{k}\)</span>.</p>
@@ -601,24 +619,6 @@ document.write(`
 </tbody>
 </table>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-</section>
-<section id="b8-3-3-geometrical-interpretation-of-cross-product">
-<h2>B8.3.3 Geometrical Interpretation of Cross Product<a class="headerlink" href="#b8-3-3-geometrical-interpretation-of-cross-product" title="Permalink to this headline">#</a></h2>
-<p>While the cross product is a complex topic, we can associate a geometrical interpretation to it.</p>
-<div class="alert alert-info">
-<p>The magnitude of the cross product is the area of the parallelogram spanned by the two vectors in the cross product and the direction of the cross product provides the orientation of the parallelogram.</p>
-</div>
-<p>Ok, we can understand area of a parallelogram, but an orientation is just weird. In Calculus III as well as the second semester of this course we will see how to associate directions to areas etc. It is an extremely important concept at that point, so for now: just put it in the back of our mind and wait 🤓</p>
-<p>Let us see how we arrived at the above conclusion: consider the parallelogram spanned by the two vectors <span class="math notranslate nohighlight">\(\vec{A}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span>.</p>
-<img src="B8.3-fig3.png"  width="200"/>
-<p>If we make the projection of vector <span class="math notranslate nohighlight">\(\vec{B}\)</span> onto the y-axis (assuming the vectors are positioned in a traditional xy-coordinate system), then the length of the projection is
-$<span class="math notranslate nohighlight">\( |\vec{B}|\sin\theta \)</span>$, which is illustrated in the next figure:</p>
-<img src="B8.3-fig4.png"  width="300"/>
-<p>However, if we multiply this projection with the length of vector <span class="math notranslate nohighlight">\(\vec{A}\)</span>, then it is the same as the rule for finding the area of the parallelogram:</p>
-<div class="math notranslate nohighlight">
-\[ \textrm{Area} = |\vec{A}|~|\vec{B}|~\sin\theta \]</div>
-<p>Hence, we can conclude that the magnitude of the cross product between two vectors represents the area of the parallelogram spanned by the two vectors.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b8-3-4-analytic-definition">
 <h2>B8.3.4 Analytic Definition<a class="headerlink" href="#b8-3-4-analytic-definition" title="Permalink to this headline">#</a></h2>
@@ -840,7 +840,7 @@ Can you without doing any calculations determine along which coordinate axis the
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-1-introduction">B8.3.1 Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-2-geometrical-defintion">B8.3.2 Geometrical Defintion</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-3-2-geometrical-definition">B8.3.2 Geometrical Definition</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-direction-method-1-right-hand-rule">Finding the Direction: Method 1 :: Right-Hand Rule</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-direction-method-2-parallelogram">Finding the Direction: Method 2 :: Parallelogram</a></li>
 </ul>
