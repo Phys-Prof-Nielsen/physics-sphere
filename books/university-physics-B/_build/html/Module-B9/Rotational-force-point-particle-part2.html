@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>B7.4 Newton’s 2nd Law: Uniform Circular Motion &#8212; A Competency Approach to Introductory Physics</title>
+    <title>Rotational Force - Point Particle Part 2 &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -62,11 +62,9 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B7/uniform-circular-motion';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B9/Rotational-force-point-particle-part2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="B7.x Problems" href="problemsB7.html" />
-    <link rel="prev" title="B7.3 Kinematics in Polar Coordinates" href="polar-coordinates.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -205,12 +203,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B6/cm-dynamics.html">B6.2 Center of Mass Dynamics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B7 - Rotational Kinematics</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="basic-relations.html">B7.1 Rotational Kinematics - Basic Relationships</a></li>
-<li class="toctree-l1"><a class="reference internal" href="equations-kinematics.html">B7.2 Rotational Equations of Kinematics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="polar-coordinates.html">B7.3 Kinematics in Polar Coordinates</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">B7.4 Newton’s 2nd Law: Uniform Circular Motion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="problemsB7.html">B7.x Problems</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/basic-relations.html">B7.1 Rotational Kinematics - Basic Relationships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/equations-kinematics.html">B7.2 Rotational Equations of Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/polar-coordinates.html">B7.3 Kinematics in Polar Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/uniform-circular-motion.html">B7.4 Newton’s 2nd Law: Uniform Circular Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B7/problemsB7.html">B7.x Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B8 - Rotational Momentum</span></p>
 <ul class="nav bd-sidenav">
@@ -291,7 +289,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-B7/uniform-circular-motion.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-B9/Rotational-force-point-particle-part2.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -321,7 +319,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-B7/uniform-circular-motion.ipynb" target="_blank"
+      <li><a href="../_sources/Module-B9/Rotational-force-point-particle-part2.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -403,7 +401,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>B7.4 Newton’s 2nd Law: Uniform Circular Motion</h1>
+    <h1>Rotational Force - Point Particle Part 2</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -413,8 +411,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-4-1-newton-s-2nd-law-in-polar-coordinates">B7.4.1 Newton’s 2nd Law in Polar Coordinates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-4-2-uniform-circular-motion">B7.4.2 Uniform Circular Motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#net-torque-in-terms-of-net-force">1. Net Torque in terms of Net Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torque-due-to-individual-forces">2. Torque due to Individual Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">3. Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lever-arm">4. The Lever Arm</a></li>
 </ul>
             </nav>
         </div>
@@ -426,106 +433,165 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="b7-4-newton-s-2nd-law-uniform-circular-motion">
-<h1>B7.4 Newton’s 2nd Law: Uniform Circular Motion<a class="headerlink" href="#b7-4-newton-s-2nd-law-uniform-circular-motion" title="Permalink to this headline">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b7-4-1-newton-s-2nd-law-in-polar-coordinates">
-<h2>B7.4.1 Newton’s 2nd Law in Polar Coordinates<a class="headerlink" href="#b7-4-1-newton-s-2nd-law-in-polar-coordinates" title="Permalink to this headline">#</a></h2>
-<p>Newton’s 2nd law on a point particle states that</p>
-<div class="math notranslate nohighlight">
-\[ \sum \vec{f} = m\vec{a} \]</div>
-<p>In 2D cartesian coordinates we split that into components:</p>
-<div class="math notranslate nohighlight">
-\[ \sum f_x = ma_x \]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[ \sum f_y = ma_y \]</div>
-<p>and analyzed each components to obtain our answers.</p>
-<p>The process is similar in polar coordinates, but instead of <span class="math notranslate nohighlight">\(xy\)</span>-components we use <span class="math notranslate nohighlight">\(r\theta\)</span>-components:</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ \sum f_r = m\left( \ddot{r} - r\dot{\theta}^2 \right) \]</div>
-<div class="math notranslate nohighlight">
-\[ \sum f_{\theta} = m\left( 2\dot{r}\dot{\theta} +  r\ddot{\theta} \right) \]</div>
-</div>
-<p>where we used the radial and angular components of acceleration in polar coordinates.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b7-4-2-uniform-circular-motion">
-<h2>B7.4.2 Uniform Circular Motion<a class="headerlink" href="#b7-4-2-uniform-circular-motion" title="Permalink to this headline">#</a></h2>
-<p>We will now assume uniform circular motion, that is, the object in interest moves in a <strong>circular path with constant speed</strong>. The consequences are:</p>
-<ol class="arabic simple">
-<li><p>The radius of the motion is constant: <span class="math notranslate nohighlight">\(r = R\)</span></p></li>
-<li><p>the radial speed and acceleration are zero: <span class="math notranslate nohighlight">\(\dot{r} = \ddot{r} = 0\)</span></p></li>
-<li><p>The angular acceleration is zero: <span class="math notranslate nohighlight">\(\ddot{\theta} = 0 \)</span></p></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="rotational-force-point-particle-part-2">
+<h1>Rotational Force - Point Particle Part 2<a class="headerlink" href="#rotational-force-point-particle-part-2" title="Permalink to this headline">#</a></h1>
+<hr class="docutils" />
+<p>If you recall, we have to approaches to define the angular momentum of a point particle :</p>
+<ol class="arabic">
+<li><div class="math notranslate nohighlight">
+\[\vec{L} = I\vec{\omega}_z \tag{1} \]</div>
+</li>
 </ol>
-<p>Newton’s 2nd law then reduces to</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ \sum f_r = -mR\dot{\theta}^2 \]</div>
 <br>
-<div class="math notranslate nohighlight">
-\[ \sum f_{\theta} = 0 \]</div>
-</div>
-<p><strong>The only acceleration term that survived the assumptions is the centripetal acceleration</strong>.</p>
-<p>Since <span class="math notranslate nohighlight">\(\dot{\theta} = \omega\)</span> and <span class="math notranslate nohighlight">\(v_{\theta} = R\omega\)</span> where <span class="math notranslate nohighlight">\(v_{\theta}\)</span> is the <strong>tangential speed</strong>, we can write it in a more useful form as</p>
+2. $$\vec{L} = \vec{r} \times \vec{p} \tag{2}$$
+<p>In the <em>Rotational Force: Point Particle Part 1</em>, we showed how we could define the net torque on a point particle by using Equation (1). In this note, we will see how we can use Equation (2) to define the torque, and realize a major difference in the two approaches.</p>
+<hr class="docutils" />
+<section id="net-torque-in-terms-of-net-force">
+<h2>1. Net Torque in terms of Net Force<a class="headerlink" href="#net-torque-in-terms-of-net-force" title="Permalink to this headline">#</a></h2>
+<p>We will start with Equation (3) from <em>Rotational Force: Point Particle Part 1</em> notes, but in vector form:</p>
 <div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ \sum f_r = -m\frac{v_{\theta}^2}{R} \]</div>
-<br>
-<div class="math notranslate nohighlight">
-\[ \sum f_{\theta} = 0 \]</div>
+    $$  \vec{\tau}_{net} = \frac{d\vec{L}}{dt} \tag{3}$$
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
-<header>
-<h3> Example 1</h3>
-    </header>
-<p>A particle is moving in a uniform circular motion with a speed of 5.0 m/s and a radius of 0.20 m. What is its net acceleration?</p>
-<p><strong>Solution</strong></p>
-<p>Using polar coordinates, the net acceleration of a particle in uniform circular motion is simply the centripetal acceleration</p>
+<p>If we insert Equation (2) into the above equation, we have</p>
 <div class="math notranslate nohighlight">
-\[ \vec{a} = -\frac{v_{\theta}^2}{R}\hat{r} = -\frac{(5.0)^2}{(0.20)}\hat{r} = (-130~\textrm{m/s}^2)\hat{r} \]</div>
+\[  \vec{\tau}_{net} = \frac{d\vec{\vec{r} \times \vec{p}}}{dt}\]</div>
+<p>Apply the product rule for derivatives:</p>
+<div class="math notranslate nohighlight">
+\[  \vec{\tau}_{net} = \vec{r} \times \frac{d\vec{p}}{dt} + \frac{d\vec{r}}{dt}\times \vec{p}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\frac{d\vec{r}}{dt} = \vec{v}\)</span> and <span class="math notranslate nohighlight">\(\vec{p} = m\vec{v}\)</span>, the second term on the right side is a cross-product between the same velocity vector and is therefore zero. We then have</p>
+<div class="math notranslate nohighlight">
+\[  \vec{\tau}_{net} = \vec{r} \times \frac{d\vec{p}}{dt}\]</div>
+<p>The derivaitve is simply the net force acting on the particle:</p>
+<div class="alert alert-success">
+$$  \vec{\tau}_{net} = \vec{r} \times \vec{F}_{net} \tag{4}$$
+    </div>
+<p>Equation (4) is useful when we have direct knowledge about the net force applied to the particle instead of knowledge of its change in motion. However, Equation (4) goes beyond the net force as we will see in the next section.</p>
+</section>
+<hr class="docutils" />
+<section id="torque-due-to-individual-forces">
+<h2>2. Torque due to Individual Forces<a class="headerlink" href="#torque-due-to-individual-forces" title="Permalink to this headline">#</a></h2>
+<p>Let us write Equation (4) slightlit different using summation notation:</p>
+<div class="math notranslate nohighlight">
+\[  \vec{\tau}_{net} = \vec{r} \times \sum_{i=1}^{N}\vec{F}_{i} \]</div>
+<p>where we are summing over each indiviual force acting on the particle. We can distribut the cross product:</p>
+<div class="math notranslate nohighlight">
+\[  \vec{\tau}_{net} =  \sum_{i=1}^{N}\vec{r} \times\vec{F}_{i} \]</div>
+<p>The term we are summing over can be interpretated as the torque due to a single force acting on the particle:</p>
+<div class="math notranslate nohighlight">
+\[  \vec{\tau}_{net} =  \sum_{i=1}^{N}\vec{\tau}_{i} \]</div>
+<p>and we identify the <strong>torque acting on a point particle due to a single force</strong> as</p>
+<div class="alert alert-success">
+$$  \vec{\tau} =  \vec{r} \times\vec{F} \tag{5}$$
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
-<header>
-<h3> Example 2</h3>
-    </header>
-<p>Calculate the net radial force on the end of a 100.0 m (radius) wind turbine blade that is rotating at 0.50 rev/s. Assume the mass is 4.0 kg.</p>
-<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/6-problems">https://openstax.org/books/university-physics-volume-1/pages/6-problems</a></p>
-<p><strong>Solution</strong></p>
-<p>Since this is uniform circular motion we know that the net angular force is zero and the net radial force is given by</p>
+<div class="alert alert-info">
+    It is very important to understand the difference between Equations (4) and (5). They look very similar but their meanings are different!
+    </div>
+<div class="alert alert-danger">
+    The vecor $\vec{r}$ is the directed line segment from a point of interest (poi) to the point where the force is acting. In some cases it is the position vector, in other cases it is not. We say: <b>the torque about the point of interest</b>
+    </div>
+<div class="alert alert-info">
+    The point of interest is often referred to as the <b>pivot point</b>.
+    </div>
+</section>
+<hr class="docutils" />
+<section id="examples">
+<h2>3. Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h2>
+<hr class="docutils" />
+<section id="example-1">
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">#</a></h3>
+<p>A point particle is located at <span class="math notranslate nohighlight">\(x = 3.0\)</span> m and a force <span class="math notranslate nohighlight">\(F = 2.0\)</span> N is acting on the particle in a direction of the positive x-axis as shown in the Figure below.</p>
+<img src="B8.5-fig2.png" width="400">
+<p>Find the torque on the particle around the orgin due to the applied force.</p>
+<section id="solution">
+<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h4>
+<p>First, we recognize that the position vector is the directed line segment from the POI to the point of interaction. We also recognize that the position vector and force vector are parallel. Using the geometric definition of the cross product, we have for the magnitude of the torque:</p>
 <div class="math notranslate nohighlight">
-\[ \sum f_r = -m\frac{v_{\theta}^2}{R} \]</div>
-<p>In this case, we are given the angular speed (in rev/s) and it is more suitable to use the following form:</p>
+\[ |\vec{\tau}| = |\vec{r}||\vec{F}|\sin\theta \]</div>
+<p>Inserting our numbers:</p>
 <div class="math notranslate nohighlight">
-\[ \sum f_r = -mR\dot{\theta}^2 \]</div>
-<p>Inserting our numbers in remembering to convert revolutions to radians:</p>
+\[ |\vec{\tau}| = (3.0)(2.0)\sin(0^\circ) = 0~\textrm{Nm}\]</div>
+<p>There is no torque, and the particle will not experience an angular acceleration due to this force, but will simply experience a linear acceleration.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="example-2">
+<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">#</a></h3>
+<p>Consider the same particle as in Example 1, but now the direction of the applide force is along the +y-direction.
+<img src="B8.5-fig3.png" width="300"></p>
+<p>In this case, we have for the magnitude of the torque around the origin:</p>
 <div class="math notranslate nohighlight">
-\[ \sum f_r = -(4.0)(100.0)(0.50)^{2}\left(\frac{2\pi}{1}\right)^2 = -39~\textrm{N}\]</div>
-<p>The negative sign simply informs us that the force is directed towards the center of the circular motion.</p>
-<p><strong>The net radial force is sometimes called the centripetal force</strong>. I find this very misleading as it suggest it is an individual force due to some interaction. It is not an interaction force, it is a net force.</p>
+\[ |\vec{\tau}| = |\vec{r}||\vec{F}|\sin\theta \]</div>
+<p>Inserting our numbers:</p>
+<div class="math notranslate nohighlight">
+\[ |\vec{\tau}| = (3.0)(2.0)\sin(90^\circ) = 6.0~\textrm{Nm}\]</div>
+<p>The direction is obtained by using the right-hand rule and yields a torque in the direction of the positive z-axis. Our final answer is:</p>
+<div class="math notranslate nohighlight">
+\[ \vec{\tau} = (6.0~\textrm{Nm})~\hat{k} \]</div>
+<p>NOTE: the torque is along the z-axis since the particle will experience a change in rotational motion around the z-axis (its motin is in the xy-plane, rotating around the z-axis).</p>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 1</b><br>
+A point particle is located at $x = 3.0$ m and a force $F = 2.0$ N is acting on the particle. The force is directed as shown in Example 2 above.
+    <ol>
+        <li> Find the torque on the particle due to the force around the point x = 3.0 m.
+        <li> Find the torque on the particle due to the force around the point y = 4.0 m.
+        <li> Find the torque on the particle due to the force around the point (x,y) = (1.0 m, 1.0 m).
+    </ol>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
-<header>
-<h3> Example 3</h3>
-    </header>
-<p>The <strong>Globe of Death</strong> is used in motorcycle stunt shows, where motorcycles ride inside a hollow sphere. The figure below shows a cross-section of such a sphere. As a motorcycle is making a vertical circular motion, what would be the required minimum speed to make such a maneuver in a globe of radius 2.5 m? Ignore friction.</p>
-<img src="B7-fig3.png"  width="300"/>
-<p><strong>Solution</strong></p>
-<p>In princible, this is not a uniform circular motion as the motorcycle is not likely maintain the same speed through out the loop. We can still apply the concept to the instant the motorcycle is at the very top since there is no radial motion and the angular acceleration does not influence the radial motion in this case.</p>
-<p>Since we are dealing with N2, we start with a free-body-diagram (the sketch were given in the problem). We have two forces: gravity and normal. The normal force is required to maintain contact between the motorcycle and the sphere.</p>
-<img src="B7-fig4.png"  width="150"/>
-<p>The reference frame is our polar coordinate system centered at the sphere. The outward direction is positive by default. We then have</p>
-<div class="math notranslate nohighlight">
-\[ \sum F_r = -M\frac{V_{\theta}^2}{R} \]</div>
-<p>Inserting our forces and noticing that both forces are towards the center (negative):</p>
-<div class="math notranslate nohighlight">
-\[ - Mg - F_N = -M\frac{V_{\theta}^2}{R} \]</div>
-<p>where we used <span class="math notranslate nohighlight">\(F_g = Mg\)</span>.</p>
-<p>The minimum required speed is the speed at which the normal force is not zero. Setting the normal to zero and solving for the speed tells us that any speeds about that speed will provide contact:</p>
-<div class="math notranslate nohighlight">
-\[ V_{\theta} = \sqrt{gR} = \sqrt{(9.81)(2.5)} = 5.0~\textrm{m/s}\]</div>
-<p>Hence, the speed <strong>must</strong> be greater than 5.0 m/s.</p>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 2</b><br>
+A point particle is located at $(x,y,z) = (3.0,2.0,-1.0)$ m and a force $\vec{F} = (0.0 ,2.0,3.0)$ N is acting on the particle. 
+    <ol>
+        <li> Find the torque on the particle due to the force around the origin.
+        <li> Find the torque on the particle due to the force around the point y = 4.0 m.
+        <li> Find the torque on the particle due to the force around the point (x,y) = (1.0 m, 1.0 m).
+    </ol>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 3</b><br>
+A point particle is located at a position given by $\vec{r}$ and subject to a force $\vec{F}$ in the three scenarios shown below.
+<img src="B8.4-fig4.png" width="600">
+Rank the torque around the origin from smallest to largest.
+ </div> 
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 3</b><br>
+A point particle is located at a position given by $\vec{r}$ and subject to a force $\vec{F}$ in the three scenarios shown below.
+<img src="B8.5-fig5.png" width="600">
+Rank the torque around the origin from smallest to largest.
+ </div> 
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 4</b><br>
+The four forces shown all have the same magnitude: F1 = F2 = F3 = F4. Which force produces the greatest torque about the point O (marked by the blue dot)?
+<img src="B8.5-fig6.png" width="300" style="background-color:black">
+ </div> 
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 5</b><br>
+Which of the four forces shown here produces a torque about O that is directed out of the plane of the drawing?
+<img src="B8.5-fig6.png" width="300" style="background-color:black">
+ </div> 
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-lever-arm">
+<h2>4. The Lever Arm<a class="headerlink" href="#the-lever-arm" title="Permalink to this headline">#</a></h2>
+<p>In engineering, the torque is sometimes referred to as the <strong>moment</strong>, but this is not the time to ridicule engineers. Another term that is often used in engineering and may be familar to you is the <strong>lever arm</strong>. The lever arm is the <strong>perpendicular vector component directed line segment from the pivot point (or POI) to the point of interaction</strong>. If we denote <span class="math notranslate nohighlight">\(\vec{r}_\perp\)</span> as the lever arm, then the magnitude of the torque around a pivot point acting on a particle due to an interaction <span class="math notranslate nohighlight">\(\vec{F}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[ \tau = r_\perp F \]</div>
+<p>since the angle between the two vectors is <span class="math notranslate nohighlight">\(90^\circ\)</span>.</p>
+<hr class="docutils" />
+<div class="alert alert-warning">
+<b>Box 6</b><br>
+A force F acts on the particle shown, which dashed line represents the magnitude of the lever arm component vector for the force about
+point O?
+<img src="B8.5-fig7.png" width="300" style="background-color:gray">
+ </div> 
+<hr class="docutils" />
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -541,7 +607,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./Module-B7"
+            path: "./Module-B9"
         },
         predefinedOutput: true
     }
@@ -559,24 +625,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="polar-coordinates.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">B7.3 Kinematics in Polar Coordinates</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="problemsB7.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">B7.x Problems</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -595,8 +643,17 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-4-1-newton-s-2nd-law-in-polar-coordinates">B7.4.1 Newton’s 2nd Law in Polar Coordinates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b7-4-2-uniform-circular-motion">B7.4.2 Uniform Circular Motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#net-torque-in-terms-of-net-force">1. Net Torque in terms of Net Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torque-due-to-individual-forces">2. Torque due to Individual Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">3. Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lever-arm">4. The Lever Arm</a></li>
 </ul>
   </nav></div>
 
