@@ -33,3 +33,5 @@ parts:
   chapters:
   - file: Module-B4/Moment-of-inertia
   - file: Module-B4/cross-product
+  - file: Module-B4/Rotational-momentum-part1
+  
