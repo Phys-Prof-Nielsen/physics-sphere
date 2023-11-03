@@ -35,3 +35,4 @@ parts:
   - file: Module-B4/cross-product
   - file: Module-B4/Rotational-momentum-part1
   - file: Module-B4/Rotational-momentum-part2 
+  - file: Module-B4/problemsB4
