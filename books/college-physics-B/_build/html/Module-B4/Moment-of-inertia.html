@@ -1,0 +1,731 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>B4.1 Moment of Inertia &#8212; A Competency Approach to Introductory Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B4/Moment-of-inertia';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="B3.3 Problems" href="../Module-B3/problemsB3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/college-physics-B.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/college-physics-B.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    A Competency Approach to Introductory Physics: A Compendium to the B Exam
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B1 - Discrete Systems and Differences</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/data.html">B1.1 Working with Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/plots-constant-velocity.html">B1.2 Plots with Constant Velocities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/plots-constant-acceleration.html">B1.3 Plots with Constant Acceleration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/plots-force.html">B1.4 Plots with Force</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/problemsB1.html">B1.5 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B2 - System of Particles</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/center-of-mass.html">B2.1 Center of Mass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/cm-dynamics.html">B2.2 Center of Mass Dynamics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B3 - Rotational Kinematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B3/basic-relations.html">B3.1 Basic Relationships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B3/equations-kinematics.html">B3.2 Equations of Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B3/problemsB3.html">B3.3 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B4 - Rotational Momentum</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">B4.1 Moment of Inertia</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-B4/Moment-of-inertia.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Module-B4/Moment-of-inertia.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>B4.1 Moment of Inertia</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b4-1-1-short-intro">B4.1.1 Short Intro</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b4-1-2-conceptual-definition">B4.1.2 Conceptual Definition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation-of-experiment">Explanation of Experiment</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b4-1-3-qualitatively-definition-point-particle">B4.1.3 Qualitatively Definition: Point Particle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-1-4-qualitatively-definition-system-of-point-particles">B8.1.4 Qualitatively Definition: System of Point Particles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-1-5-qualitatively-definition-continuous-objects">B8.1.5 Qualitatively Definition: Continuous Objects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-1-6-the-parallel-axis-theorem">B8.1.6 The Parallel Axis Theorem</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="b4-1-moment-of-inertia">
+<h1>B4.1 Moment of Inertia<a class="headerlink" href="#b4-1-moment-of-inertia" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b4-1-1-short-intro">
+<h2>B4.1.1 Short Intro<a class="headerlink" href="#b4-1-1-short-intro" title="Permalink to this heading">#</a></h2>
+<p>We have previosly introduced the concept of mass and seen a few ways to define it such as a resistance to a <strong>change in linear motion</strong> (Newtonian definition) or amount of matter in a substance (more of a common sense approach). However, none of them are correct on the most fundamental level, where it is more a question of field interactions and it is still something we have difficulties explaining. One fact for sure: <strong>mass is an intrinsic property of field interactions and can be associated with any particles not traveling at the speed of light</strong>.</p>
+<p>Moment of inertia on the other hand, is <strong>not an intrinsic property of matter</strong> but depends both on mass and reference frame of observation.</p>
+<p>The approach to calculating the moment of inertia is significantly more complicated than many other physical parameters and an in-depth analysis of it is beyond the scope of this class. In the following, I will re-iterate what the textbook tells you, but also try and formulate it slightly different or approach it differently.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="b4-1-2-conceptual-definition">
+<h2>B4.1.2 Conceptual Definition<a class="headerlink" href="#b4-1-2-conceptual-definition" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Mass is a resistance to a change in linear motion</strong></p></li>
+<li><p><strong>Moment of inertia is a resistance to a change in rotational motion</strong></p></li>
+</ul>
+<p>By linear motion we imply straight-line motion or motion that can be divided into straight-line segments. In principle, an object traveling in a circle can be approximated as a large number of small straight-line segments, with the circular motion obtained when the number goes to infinity. Later on, we will refer to this as the <strong>orbital</strong> motion. An object can also undergo rotational motion without any straight-line segments, that can happen when an uniform object is spinning around an axis through its center (it is a lot more complicated than it sounds, and we will see why later). We will refer to this kind of rotational motion as <strong>intrinsic</strong> motion.</p>
+<div class="alert alert-info">
+<b>Experiment</b><br>
+<p>To get a hands-on feel of these two conceptual definitions, try the following experiments at home.</p>
+<ol class="arabic simple">
+<li><p>Find the following items: beach ball, baseball, tennis ball, and golf ball. Rank their masses from low to high. Then find their masses using a kitchen scale.</p></li>
+<li><p>Find a yard stick (or something similar). Attach a mass close to the end of the yard stick. Hold the yard stick by the end close to mass and hold it horizontally. Rotate the yard stick in the horizontal plane. Now flip the yard stick such that the mass is in the opposite end of your end and repeat.</p></li>
+</ol>
+</div><section id="explanation-of-experiment">
+<h3>Explanation of Experiment<a class="headerlink" href="#explanation-of-experiment" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>The typical rating is: beach ball, tennis ball, golf ball, and baseball. The ranking between the tennis ball and golf ball is the most difficult to assess since their masses and sizes are comparable. How do you determine it? Well, you may notice that with the tennis ball in one hand and the golf ball in the other hand, you start moving your hands up and down (in a linear fashion). Why? You are trying to assess their <b>resistance to a change in motion</b>. You are literally assessing the definition that Newton established for inertial mass. Where does the size come in? The size matter through pressure. We are not capable of sensing mass on our hand. Instead, there is an interaction (or force) acting on our hand. That force over the interaction area is known as pressure, and it is the pressure we are sensing. Since the golf ball has smaller contact area, we will sense it to be slightly more massive than the tennis ball. This observation is really emphasized by the beach ball, which is the most massive of all the objects, but since it has a large contact area, it is the object that exert the least amount of pressure and we sense that as being the least massive object.</p></li>
+<li><p>Moment of inertia is the resistance to a change in rotational motion and depends both on mass and the location of the mass with respect to an axis of rotation (in this case, an axis that is perpendicular to the plane of rotation and through your elbow or wrist depending on you how rotated it). The further away the mass is from this axis, the greater the moment of inertia and the greater resistance to a change in rotational motion. Could you feel that? You can also try and just hold the stick at rest horizontally. You will need to apply a greater force to prevent it from “falling” down if the mass is further away as compared to when it is close to your hand.</p></li>
+</ol>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="b4-1-3-qualitatively-definition-point-particle">
+<h2>B4.1.3 Qualitatively Definition: Point Particle<a class="headerlink" href="#b4-1-3-qualitatively-definition-point-particle" title="Permalink to this heading">#</a></h2>
+<p>We will consider a point particle at first. Let the point particle have a mass <span class="math notranslate nohighlight">\(m\)</span>. For the vast majority of problems associated with this course, the particle is confined to motion in a plane, say the <span class="math notranslate nohighlight">\(xy\)</span>-plane. In the figure below, we consider the particle at point <span class="math notranslate nohighlight">\(P\)</span> in the <span class="math notranslate nohighlight">\(xy\)</span>-plane and its location is described through its position vector <span class="math notranslate nohighlight">\(\vec{r}\)</span>.</p>
+<img src="fig3.png" width="300">
+<p>We define the moment of inertia around the <span class="math notranslate nohighlight">\(z\)</span>-axis of the particle as</p>
+<div class="math notranslate nohighlight">
+\[ i_z = mr^2 \]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the magnitude of the position vector. This is how it is commonly written in many textbooks, and it is in fact a horrible way of writing it as it leads to confusion and misunderstandings of the moment of inertia. We will see why in a little bit. Instead, let us remove the position vector label and label the distance from the origin (or even better <strong>the distance from the z-axis</strong>) as <span class="math notranslate nohighlight">\(d\)</span>:</p>
+<img src="fig4.png" width="300">
+<p>The only thing we did was to remove the position vector and label the distance between the <span class="math notranslate nohighlight">\(z\)</span>-axis and the particle by <span class="math notranslate nohighlight">\(d\)</span>. The moment of inertia of the particle around the <span class="math notranslate nohighlight">\(z\)</span>-axis is then</p>
+<div class="math notranslate nohighlight">
+\[ i_z = md^2 \]</div>
+<p>This may seem like a trivial change, but it is extremely important for the understanding of the moment of inertia:</p>
+<div class="alert alert-danger">
+<p>The distance <span class="math notranslate nohighlight">\(d\)</span> is the perpendicular distance from the axis of interest to the point of interest.</p>
+</div>
+<p>We will now demonstrate why using <span class="math notranslate nohighlight">\(r\)</span> can lead to misunderstandings if we do not understand how to use the equation correctly! In the above figure, it was implied that the <span class="math notranslate nohighlight">\(xy\)</span>-plane was situated at <span class="math notranslate nohighlight">\(z = 0\)</span>. However, we could also consider the particle confined to a <span class="math notranslate nohighlight">\(xy\)</span>-plane where <span class="math notranslate nohighlight">\(z \neq 0\)</span>, as illustrated in the figure below:</p>
+<img src="fig5.png" width="500">
+<p>From this figure, it is evident that the magnitude of the position vector <span class="math notranslate nohighlight">\(r\)</span> is not equal to the distance <span class="math notranslate nohighlight">\(d\)</span>, which is the distance that is needed in the equation for the moment of inertia around the <span class="math notranslate nohighlight">\(z\)</span>-axis. Let us re-iterate the conceptual definition of the moment of inertia for this case:</p>
+<div class="alert alert-success">
+<p>The moment of inertia around the <span class="math notranslate nohighlight">\(z\)</span>-axis for a point particle is the resistance to a change in rotational motion around the <span class="math notranslate nohighlight">\(z\)</span>-axis and is given by<br>
+<br></p>
+<div class="math notranslate nohighlight">
+\[ i_z = md^2 \]</div>
+<p>where <span class="math notranslate nohighlight">\(d\)</span> is the perpendicular distance between the particle and the <span class="math notranslate nohighlight">\(z\)</span>-axis.</p>
+</div>
+<p>This is another standard notation from some textbooks. I am somewhat happier with this notation using <span class="math notranslate nohighlight">\(d\)</span> instead of <span class="math notranslate nohighlight">\(r\)</span>. However, it often leads to a simplification of the moment of inertia and makes it simpler than should be allowed. Let us see why!</p>
+<p>Ok, so if a particle is rotating around the <span class="math notranslate nohighlight">\(z\)</span>-axis, then we can use the above equation. But what if it is rotating around the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis? This is an obvious question, and we can extend the above definition to account for those as well.</p>
+<p>We can now define the moments of inertia around the three axes:</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ i_x = md_x^2 \tag{1}\]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ i_y = md_y^2 \tag{2}\]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ i_z = md_z^2 \tag{3}\]</div>
+</div>
+<p>and it should be clear now why using <span class="math notranslate nohighlight">\(d\)</span> is better than using <span class="math notranslate nohighlight">\(r\)</span> and why it is better to use <span class="math notranslate nohighlight">\(d_x\)</span>, <span class="math notranslate nohighlight">\(d_y\)</span>, <span class="math notranslate nohighlight">\(d_z\)</span> instead of just <span class="math notranslate nohighlight">\(d\)</span>. We notice that the distances relate to the magnitude of the projected components as</p>
+<div class="math notranslate nohighlight">
+\[ d_y = \sqrt{r_x^2 + r_z^2} \]</div>
+<div class="math notranslate nohighlight">
+\[ d_x = \sqrt{r_y^2 + r_z^2} \]</div>
+<div class="math notranslate nohighlight">
+\[ d_z = \sqrt{r_x^2 + r_y^2} \]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 1</h3>
+    </header>
+<p>A particle with a mass <span class="math notranslate nohighlight">\(2.0\)</span> kg is moving in a circular motion around the <span class="math notranslate nohighlight">\(z\)</span>-axis with a perpendicular distance of 0.1 m from the <span class="math notranslate nohighlight">\(z\)</span>-axis. What is its moment of inertia around the <span class="math notranslate nohighlight">\(z\)</span>-axis?</p>
+<p><strong>Solution</strong></p>
+<p>This is a plug’n’chuck problem:</p>
+<div class="math notranslate nohighlight">
+\[i_z = md_z^2 = (2.0)(0.1)^2 = 0.02~\textrm{kgm}^2\]</div>
+<p><strong>NOTE</strong>: The fact that the particle was moving in a circular motion implied that the perpendicular distance remains constant and the moment of inertia is therefore a constant value.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 2</h3>
+    </header>
+<p>A particle with a mass <span class="math notranslate nohighlight">\(2.0\)</span> kg positioned at a point P given by the following position vector (in units of meter)</p>
+<div class="math notranslate nohighlight">
+\[ \vec{r} = 2.0~\hat{i} + 2.5~\hat{j} - 1.5~\hat{k} \]</div>
+<p>At this location, find the moment of inertia of the particle around the three axes.</p>
+<p><strong>Solution</strong></p>
+<p>In this case, we can identify the projected perpendicular distances in terms the magnitude of the components of position vector. Inserting into Equations (1)-(3)</p>
+<div class="math notranslate nohighlight">
+\[ i_x = md_x^2 = (2.0)[(2.5)^2 + (-1.5)^2] = 17~\textrm{kgm}^2\]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ i_y = md_y^2 = (2.0)[(2.0)^2 + (-1.5)^2] = 13~\textrm{kgm}^2\]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ i_z = md_z^2 = (2.0)[(2.0)^2 + (2.5)^2 ] = 21~\textrm{kgm}^2\]</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 1</b><br>
+<p>A particle with a mass <span class="math notranslate nohighlight">\(1.2\)</span> kg positioned at rest at a point P given by the following position vector (in units of meter)</p>
+<div class="math notranslate nohighlight">
+\[ \vec{r} = -2.0\hat{i} + 0.5~\hat{j} + 3.0~\hat{k} \]</div>
+<p>At this location, find the moment of inertia of the particle around the three axes. Around which axis will it be easiest to start rotating the particle? Around which axis would it be most difficult to start rotating the particle?</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="b8-1-4-qualitatively-definition-system-of-point-particles">
+<h2>B8.1.4 Qualitatively Definition: System of Point Particles<a class="headerlink" href="#b8-1-4-qualitatively-definition-system-of-point-particles" title="Permalink to this heading">#</a></h2>
+<p>If we have a system of <span class="math notranslate nohighlight">\(N\)</span> particles, the moment of inertia of the system is the sum of the individual moments of inertia:</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ I_x = \sum_{i = 1}^{N} m_{i}d_{i,x}^2 \tag{4}\]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ I_y = \sum_{i = 1}^{N} m_{i}d_{i,y}^2 \tag{5}\]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ I_z = \sum_{i = 1}^{N} m_{i}d_{i,y}^2 \tag{6}\]</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 3</h3>
+    </header>
+<img src="fig7.jpg" width="300">
+<p>A twirling baton has to masses positioned at each end and separated by 66 cm. We will assume the rod is massless and the end masses are point-like with masses of 75 g each. If we consider the baton along the <span class="math notranslate nohighlight">\(x\)</span>-axis with the <span class="math notranslate nohighlight">\(z\)</span>-axis going through the center of the rod and laying in the xy-plane, what are the moments of inertia around the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> axes?</p>
+<p><strong>Solution</strong></p>
+<p>We identify the following distances for both masses: <span class="math notranslate nohighlight">\(r_x = 0.00\)</span> m and <span class="math notranslate nohighlight">\(r_y = r_z = 0.33\)</span> m. Inserting into equations (4) - (6) and label the masses <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span>, respectively (we could also name them <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> etc.):</p>
+<div class="math notranslate nohighlight">
+\[ I_x = \sum_{i = 1}^{2} m_{i}r_{i,x}^2 = m_{1}r_{1,x}^2 + m_{2}r_{2,x}^2 = (0.075)(0.00)^2 + (0.075)(0.00)^2 = 0.00~\textrm{kgm}^2\]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ I_y = \sum_{i = 1}^{2} m_{i}r_{i,y}^2 = m_{1}r_{1,y}^2 + m_{2}r_{2,y}^2 = (0.075)(0.33)^2 + (0.075)(0.33)^2 = 0.016~\textrm{kgm}^2\]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ I_z = \sum_{i = 1}^{2} m_{i}r_{i,z}^2 =  m_{1}r_{1,z}^2 + m_{2}r_{2,z}^2 = (0.075)(0.33)^2 + (0.075)(0.33)^2 = 0.016~\textrm{kgm}^2\]</div>
+<p><strong>Note</strong>: We recognize that there is no cost to start rotating around the <span class="math notranslate nohighlight">\(x\)</span> axis. This is a consequence of the assumption of point particles. In a realistic approach, they may be spherical and the moment of inertia around the <span class="math notranslate nohighlight">\(x\)</span> axis is not zero initially. We will see that in Example 4.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 2</b><br>
+<p>Consider an olympic barbell with a length of 2.2 meters and assume it is massless (for now :)</p>
+<img src="fig8.jpg" width="300">
+<p>The barbell in the figure has a 45 lb (20.4 kg) bumber plate on each end. Assume the bumper plates are point-like and positioned at the very ends of the barbell. If the barbell is situated along the <span class="math notranslate nohighlight">\(x\)</span>-axis with the <span class="math notranslate nohighlight">\(z\)</span>-axis going through the CM of the barbell and in the <span class="math notranslate nohighlight">\(xy\)</span>-plane, what are the moments of inertia around the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> axes?</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="b8-1-5-qualitatively-definition-continuous-objects">
+<h2>B8.1.5 Qualitatively Definition: Continuous Objects<a class="headerlink" href="#b8-1-5-qualitatively-definition-continuous-objects" title="Permalink to this heading">#</a></h2>
+<p>Continuous objects are realistic objects and even the most basic objects such as rods, spheres, and cylinders, requires calculus learned in Calculus III to find their moments of inertia. Hence, I will not require you know how to calculate these the moments of inertia.</p>
+<p>Instead, I expect you can look the moments of inertia up in a table and apply them to a given problem. Below is a link showing the moments of inertia of the most common objects and the axis of which it is calculated about.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/List_of_moments_of_inertia">Wikipedie has an extensive list of moments of inertia that is sufficient for this course.</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 4</h3>
+    </header>
+<p>Let us now re-visit the baton problem again under certain conditions.</p>
+<img src="fig7.jpg" width="300">
+<p>A twirling baton has to masses positioned at each end and separated by 66 cm. The rod has a mass of 30 g and a radius of 0.0050 m. The end masses are spherical with masses of 75 g each and radius of 3.0 cm. The baton is situated such that its main axis is along the <span class="math notranslate nohighlight">\(x\)</span> axis. What is the moment of inertia around the <span class="math notranslate nohighlight">\(x\)</span>-axis?</p>
+<p><strong>Solution</strong></p>
+<p>The axis of interest is passing through the center of the spheres, so their moments of inertia are given by <span class="math notranslate nohighlight">\(I = \frac{2}{5}MR^2\)</span> while the axis runs through the rod along its long axis. This is the equivalent of the solid cylinder: <span class="math notranslate nohighlight">\(I = \frac{1}{2}MR^2\)</span>. Let is label the spheres by (1) and (2), and the rod by (3):</p>
+<div class="math notranslate nohighlight">
+\[ I_x = \sum_{i = 1}^{3} I_{ix} = I_{1x} + I_{2x} + I_{3x}\]</div>
+<div class="math notranslate nohighlight">
+\[ I_x = \frac{2}{5}M_{1}R_{1}^2 + \frac{2}{5}M_{2}R_{2}^2 + \frac{1}{2}M_{3}R_{3}^2 \]</div>
+<div class="math notranslate nohighlight">
+\[ I_x = \frac{(2)}{(5)}(0.075)(0.03)^2 + \frac{(2)}{(5)}(0.075)(0.03)^2 +\frac{(1)}{(2)}(0.030)(0.005)^2 \]</div>
+<div class="math notranslate nohighlight">
+\[ I_x = 5.4\times 10^{-5}~\textrm{kgm}^2\]</div>
+<p><strong>Note</strong>: While this is small, it is not non-zero as in our previous example of the non-realistic baton.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-info">
+<p>We may note that we are not yet able to calculate the moment of inertia for the baton around the <span class="math notranslate nohighlight">\(y\)</span> or <span class="math notranslate nohighlight">\(z\)</span> axes. That’s next!</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="b8-1-6-the-parallel-axis-theorem">
+<h2>B8.1.6 The Parallel Axis Theorem<a class="headerlink" href="#b8-1-6-the-parallel-axis-theorem" title="Permalink to this heading">#</a></h2>
+<p>The last piece of the puzzle!</p>
+<div class="alert alert-success">
+<p>If we know the moment of inertia around an axis through the <i>Center of Mass</i> (CM) of an object with mass M: <span class="math notranslate nohighlight">\(I_{CM}\)</span>, then the moment of inertia through <strong>any</strong> axis <strong>parallel</strong> to the axis through the CM is given by
+<br></p>
+<div class="math notranslate nohighlight">
+\[I = I_{CM} + MD^2\]</div>
+<p>where <span class="math notranslate nohighlight">\(D\)</span> is the distance between the two axes.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 5</h3>
+    </header>
+<p>Consider a sphere of mass 5.0 kg and radius 0.20 m. It is located at an exact position of <span class="math notranslate nohighlight">\((x,y,z) = (3,0,0)\)</span> with units in meters. Find the moment of inertia of the sphere around the <span class="math notranslate nohighlight">\(z\)</span>-axis.</p>
+<p><strong>Solution</strong></p>
+<p>First find the moment of inertia of the sphere about an axis through its CM and along the z-axis:</p>
+<div class="math notranslate nohighlight">
+\[ I = \frac{2}{5}MR^2 = \frac{(2)}{(5)}(5.0)(0.2)^2 = 0.08~\textrm{kgm}^2 \]</div>
+<p>Then we apply the <em>Parallel Axis Theorem</em> to find the moment of inertia around the <span class="math notranslate nohighlight">\(z\)</span>-axis. We recognize that the distance between an axis through the CM and parallel to the <span class="math notranslate nohighlight">\(z\)</span> axis and the <span class="math notranslate nohighlight">\(z\)</span>-axis is <span class="math notranslate nohighlight">\(D = 3.0\)</span> m:</p>
+<div class="math notranslate nohighlight">
+\[ I = I_{CM} + MD^2 = (0.08) + (5.0)(3.0)^2 = 45.08~\textrm{kgm}^2 \]</div>
+<p>If we consider significant figures, our answer is</p>
+<div class="math notranslate nohighlight">
+\[ I = 45~\textrm{kgm}^2 \]</div>
+<p><strong>Note</strong>: Think about which factor contributes most to this moment of inertia.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 3</b><br>
+<p>Consider an olympic barbell with a length of 2.2 meters, mass of 20 kg, and radius of 3.5 mm (we will assume it is uniform radius across the entire barbell).</p>
+<img src="fig8.jpg" width="300">
+<p>The barbell in the figure has a 45 lb (20.4 kg) bumber plate on each end. Assume the bumper plates are disk shaped with a radius of 45 cm and positioned at the very ends of the barbell. If the barbell is situated along the <span class="math notranslate nohighlight">\(x\)</span>-axis with the origin passing through its CM and in the xy-plane, what are the moments of inertia around the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> axes?</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Module-B4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Module-B3/problemsB3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">B3.3 Problems</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b4-1-1-short-intro">B4.1.1 Short Intro</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b4-1-2-conceptual-definition">B4.1.2 Conceptual Definition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation-of-experiment">Explanation of Experiment</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b4-1-3-qualitatively-definition-point-particle">B4.1.3 Qualitatively Definition: Point Particle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-1-4-qualitatively-definition-system-of-point-particles">B8.1.4 Qualitatively Definition: System of Point Particles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-1-5-qualitatively-definition-continuous-objects">B8.1.5 Qualitatively Definition: Continuous Objects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-1-6-the-parallel-axis-theorem">B8.1.6 The Parallel Axis Theorem</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kim Nielsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

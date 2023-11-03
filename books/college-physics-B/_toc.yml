@@ -28,3 +28,7 @@ parts:
   - file: Module-B3/basic-relations
   - file: Module-B3/equations-kinematics
   - file: Module-B3/problemsB3
+
+- caption: Module B4 - Rotational Momentum
+  chapters:
+  - file: Module-B4/Moment-of-inertia
