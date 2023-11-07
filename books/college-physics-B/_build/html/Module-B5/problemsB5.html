@@ -1,0 +1,745 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>B5.x Problems &#8212; A Competency Approach to Introductory Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B5/problemsB5';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="B5.3 Rotational Force - Extended Object" href="Rotational-force-extended-object.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/college-physics-B.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/college-physics-B.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    A Competency Approach to Introductory Physics: A Compendium to the B Exam
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B1 - Discrete Systems and Differences</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/data.html">B1.1 Working with Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/plots-constant-velocity.html">B1.2 Plots with Constant Velocities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/plots-constant-acceleration.html">B1.3 Plots with Constant Acceleration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/plots-force.html">B1.4 Plots with Force</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/problemsB1.html">B1.5 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B2 - System of Particles</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/center-of-mass.html">B2.1 Center of Mass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/cm-dynamics.html">B2.2 Center of Mass Dynamics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B3 - Rotational Kinematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B3/basic-relations.html">B3.1 Basic Relationships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B3/equations-kinematics.html">B3.2 Equations of Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B3/problemsB3.html">B3.3 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B4 - Rotational Momentum</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B4/Moment-of-inertia.html">B4.1 Moment of Inertia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B4/cross-product.html">B4.2 Cross Product</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B4/Rotational-momentum-part1.html">B4.3 Rotational Momentum: Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B4/Rotational-momentum-part2.html">B4.4 Rotational Momentum: Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B4/problemsB4.html">B4.x Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B5 - Rotational Force</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Rotational-force-point-particle-part1.html">B5.1 Rotational Force - Point Particle Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rotational-force-point-particle-part2.html">B5.2 Rotational Force - Point Particle Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rotational-force-extended-object.html">B5.3 Rotational Force - Extended Object</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">B5.x Problems</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-B5/problemsB5.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Module-B5/problemsB5.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>B5.x Problems</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="b5-x-problems">
+<h1>B5.x Problems<a class="headerlink" href="#b5-x-problems" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B5.1</h2>
+    </header>
+<p>The triceps muscle in the back of the upper arm extends the forearm. This muscle in a professional boxer exerts a force of <span class="math notranslate nohighlight">\(2.00\times 10^3~\textrm{N}\)</span> with an effective perpendicular lever arm of 3.00 cm, producing an angular acceleration of the forearm of 120 rad/s<span class="math notranslate nohighlight">\(^2\)</span>. What is the moment of inertia of the boxer’s forearm?</p>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-problems-exercises">https://openstax.org/books/college-physics-2e/pages/10-problems-exercises</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># T_net = I_z*A_z</span>
+<span class="c1"># assuming only the triceps muscle is contributing to the torque: T_F = RF</span>
+
+<span class="n">F</span> <span class="o">=</span> <span class="mf">2.00E3</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.0300</span>
+<span class="n">A_z</span> <span class="o">=</span> <span class="mi">120</span>
+
+<span class="n">T_net</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="n">F</span>
+<span class="n">I_z</span> <span class="o">=</span> <span class="n">T_net</span><span class="o">/</span><span class="n">A_z</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Moment of inertia: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">I_z</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Moment of inertia: 0.5
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B5.2</h2>
+    </header>
+<p>A soccer player extends her lower leg in a kicking motion by exerting a force with the muscle above the knee in the front of her leg. She produces an angular acceleration of 30.00 rad/s<span class="math notranslate nohighlight">\(^2\)</span> and her lower leg has a moment of inertia of  0.750 kgm<span class="math notranslate nohighlight">\(^2\)</span>. What is the force exerted by the muscle if its effective perpendicular lever arm is 1.90 cm?</p>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-problems-exercises">https://openstax.org/books/college-physics-2e/pages/10-problems-exercises</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#assuming only the quadriceps is contributing a torque</span>
+
+<span class="c1"># T_net = RFsin(theta) -- theta is 90</span>
+<span class="c1"># T_net = IA</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="mf">30.00</span>
+<span class="n">I</span> <span class="o">=</span> <span class="mf">0.750</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.0190</span>
+
+<span class="n">F</span> <span class="o">=</span> <span class="n">I</span><span class="o">*</span><span class="n">A</span><span class="o">/</span><span class="n">R</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Magnityude of force: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">F</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Magnityude of force: 1184.2105263157896
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B5.3</h2>
+    </header>
+<p>Suppose you exert a force of 180 N tangential to a 0.280-m-radius 75.0-kg grindstone (a solid disk).</p>
+<ol class="arabic simple">
+<li><p>What torque is exerted?</p></li>
+<li><p>What is the angular acceleration assuming negligible opposing friction?</p></li>
+<li><p>What is the angular acceleration if there is an opposing frictional force of 20.0 N exerted 1.50 cm from the axis?</p></li>
+</ol>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-problems-exercises">https://openstax.org/books/college-physics-2e/pages/10-problems-exercises</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Part 1</span>
+<span class="c1">#----------------</span>
+<span class="c1"># T = R*F*sin(theta)  - theta is 90</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.280</span>
+<span class="n">F</span> <span class="o">=</span> <span class="mf">180.0</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="n">F</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Torque: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>
+
+<span class="c1"># Part 2</span>
+<span class="c1">#----------------</span>
+<span class="c1"># T_net = IA</span>
+<span class="c1"># I_disk = 0.5*M*R^2</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mf">75.0</span>
+<span class="n">I</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">T</span><span class="o">/</span><span class="n">I</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Magnitude of angular acceleration: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+
+<span class="c1"># Part 3</span>
+<span class="c1">#--------------</span>
+<span class="c1"># applied force produce +torque and friction -torque:</span>
+<span class="n">R_f</span> <span class="o">=</span> <span class="mf">0.0150</span>
+<span class="n">Ff</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">Tf</span> <span class="o">=</span> <span class="n">R_f</span><span class="o">*</span><span class="n">Ff</span>
+
+<span class="n">T_net</span> <span class="o">=</span> <span class="n">T</span> <span class="o">-</span> <span class="n">Tf</span>
+<span class="n">A_net</span> <span class="o">=</span> <span class="n">T_net</span><span class="o">/</span><span class="n">I</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Magnitude of angular acceleration: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">A_net</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Torque: 50.400000000000006
+Magnitude of angular acceleration: 17.142857142857142
+Magnitude of angular acceleration: 17.040816326530614
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<h2>Problem B5.4</h2>
+    </header>
+<p>Consider the 12.0 kg motorcycle wheel shown in the Figure. Assume it to be approximately an annular ring with an inner radius of 0.280 m and an outer radius of 0.330 m. The motorcycle is on its center stand, so that the wheel can spin freely.</p>
+<ol class="arabic simple">
+<li><p>If the drive chain exerts a force of 2200 N at a radius of 5.00 cm, what is the angular acceleration of the wheel?</p></li>
+<li><p>What is the tangential acceleration of a point on the outer edge of the tire?</p></li>
+<li><p>How long, starting from rest, does it take to reach an angular velocity of 80.0 rad/s?</p></li>
+</ol>
+<img src="B5-p4.png" width="300">
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-problems-exercises">https://openstax.org/books/college-physics-2e/pages/10-problems-exercises</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Part 1</span>
+<span class="c1">#-------------</span>
+<span class="c1"># moment of inertia of an annular ring: I = 0.5*M*(R1^2 + R2^2) </span>
+<span class="n">M</span> <span class="o">=</span> <span class="mf">12.0</span>
+<span class="n">R1</span> <span class="o">=</span> <span class="mf">0.280</span>
+<span class="n">R2</span> <span class="o">=</span> <span class="mf">0.330</span>
+
+<span class="n">I</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="p">(</span><span class="n">R1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">R2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># normal force and force of gravity do not produce a torque about the pivot point here</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">F</span> <span class="o">=</span> <span class="mf">2200.0</span>
+
+<span class="n">T_net</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="n">F</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">T_net</span><span class="o">/</span><span class="n">I</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angular acceleration: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+
+<span class="c1"># Part 2</span>
+<span class="c1">#--------------</span>
+<span class="n">At</span> <span class="o">=</span> <span class="n">R2</span><span class="o">*</span><span class="n">A</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tangential acceleration: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">At</span><span class="p">))</span>
+
+<span class="c1"># Part 3</span>
+<span class="c1">#---------------</span>
+<span class="c1"># A = (Omega2 - Omega1)/(Delta t)</span>
+<span class="n">Omega1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">Omega2</span> <span class="o">=</span> <span class="mf">80.0</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">Omega2</span> <span class="o">-</span> <span class="n">Omega1</span><span class="p">)</span><span class="o">/</span><span class="n">A</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Time: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dt</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Angular acceleration: 97.8821854422495
+Tangential acceleration: 32.301121195942336
+Time: 0.8173090909090911
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B5.5</h2>
+    </header>
+<p>Zorch, an archenemy of Superman, decides to slow Earth’s rotation to once per 28.0 h by exerting an opposing force at and parallel to the equator. Superman is not immediately concerned, because he knows Zorch can only exert a force of <span class="math notranslate nohighlight">\(4.00\times 10^7\)</span> N (a little greater than a Saturn V rocket’s thrust). How long must Zorch push with this force to accomplish his goal? (This period gives Superman time to devote to other villains.)</p>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-problems-exercises">https://openstax.org/books/college-physics-2e/pages/10-problems-exercises</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#inital angular speed: 1 rev/24 hr</span>
+<span class="n">Omega1</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="mf">24.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="mf">3600.0</span><span class="p">)</span>
+<span class="n">Omega2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="mf">28.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="mf">3600.0</span><span class="p">)</span>
+
+<span class="c1">#torque is only due to Zorch:</span>
+<span class="n">R_E</span> <span class="o">=</span> <span class="mf">6378.0E6</span>
+<span class="n">F</span> <span class="o">=</span> <span class="mf">4.00E7</span>
+
+<span class="c1">#since Zorch is slowing it down, torque must be negative</span>
+<span class="n">T_net</span> <span class="o">=</span> <span class="o">-</span><span class="n">R_E</span><span class="o">*</span><span class="n">F</span>
+
+<span class="c1"># T_net = IA</span>
+<span class="c1">#I for a solid sphere: (2/5)MR^2</span>
+<span class="n">M_E</span> <span class="o">=</span> <span class="mf">5.972E24</span>
+
+<span class="n">I</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.0</span><span class="o">/</span><span class="mf">5.0</span><span class="p">)</span><span class="o">*</span><span class="n">M_E</span><span class="o">*</span><span class="n">R_E</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">T_net</span><span class="o">/</span><span class="n">I</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">Omega2</span> <span class="o">-</span> <span class="n">Omega1</span><span class="p">)</span><span class="o">/</span><span class="n">A</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Time: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dt</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time: 3.9570578533441e+21
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Module-B5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Rotational-force-extended-object.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">B5.3 Rotational Force - Extended Object</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kim Nielsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
