@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>B2.2 Center of Mass Dynamics &#8212; A Competency Approach to Introductory Physics</title>
+    <title>B5.3 Rotational Force - Extended Object &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -63,11 +63,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B2/cm-dynamics';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B5/Rotational-force-extended-object';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="B3.1 Basic Relationships" href="../Module-B3/basic-relations.html" />
-    <link rel="prev" title="B2.1 Center of Mass" href="center-of-mass.html" />
+    <link rel="prev" title="B5.2 Rotational Force - Point Particle Part 2" href="Rotational-force-point-particle-part2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -167,9 +166,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B1/problemsB1.html">B1.5 Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B2 - System of Particles</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="center-of-mass.html">B2.1 Center of Mass</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">B2.2 Center of Mass Dynamics</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/center-of-mass.html">B2.1 Center of Mass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B2/cm-dynamics.html">B2.2 Center of Mass Dynamics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B3 - Rotational Kinematics</span></p>
 <ul class="nav bd-sidenav">
@@ -186,10 +185,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B4/problemsB4.html">B4.x Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B5 - Rotational Force</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Module-B5/Rotational-force-point-particle-part1.html">B5.1 Rotational Force - Point Particle Part 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-B5/Rotational-force-point-particle-part2.html">B5.2 Rotational Force - Point Particle Part 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-B5/Rotational-force-extended-object.html">B5.3 Rotational Force - Extended Object</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Rotational-force-point-particle-part1.html">B5.1 Rotational Force - Point Particle Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rotational-force-point-particle-part2.html">B5.2 Rotational Force - Point Particle Part 2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">B5.3 Rotational Force - Extended Object</a></li>
 </ul>
 
     </div>
@@ -261,7 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-B2/cm-dynamics.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-B5/Rotational-force-extended-object.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +290,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-B2/cm-dynamics.ipynb" target="_blank"
+      <li><a href="../_sources/Module-B5/Rotational-force-extended-object.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -373,7 +372,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>B2.2 Center of Mass Dynamics</h1>
+    <h1>B5.3 Rotational Force - Extended Object</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -383,8 +382,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-2-1-point-particle-vs-center-of-mass">B2.2.1 Point Particle vs. Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-2-2-equations-for-cm">B2.2.2 Equations for CM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b5-3-1-motivation">B5.3.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b5-3-2-net-torque-in-terms-of-net-force">B5.3.2 Net Torque in terms of Net Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b5-3-3-torque-due-to-individual-forces">B5.3.3 Torque due to Individual Forces</a></li>
 </ul>
             </nav>
         </div>
@@ -396,37 +396,58 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="b2-2-center-of-mass-dynamics">
-<h1>B2.2 Center of Mass Dynamics<a class="headerlink" href="#b2-2-center-of-mass-dynamics" title="Permalink to this heading">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b2-2-1-point-particle-vs-center-of-mass">
-<h2>B2.2.1 Point Particle vs. Center of Mass<a class="headerlink" href="#b2-2-1-point-particle-vs-center-of-mass" title="Permalink to this heading">#</a></h2>
-<p>The CM is the position vector of an object where the object will <strong>behave like a point particle</strong> with a mass equal to that of the object.</p>
-<p>The implications of this is: <strong>the center of mass of an object will follow the same laws of physics as a point particle and everything we have discussed for a point particle can be applied to the CM concept of an object</strong>.</p>
-<div class="alert alert-danger">
-<p>In this process, we can only describe the dynamics of the CM location of the object. We can not say anything about the specific dynamics of the object itself. Is it rotating or not? Is it stretching or contracting? We can not tell from the linear CM dynamics.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="b5-3-rotational-force-extended-object">
+<h1>B5.3 Rotational Force - Extended Object<a class="headerlink" href="#b5-3-rotational-force-extended-object" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b5-3-1-motivation">
+<h2>B5.3.1 Motivation<a class="headerlink" href="#b5-3-1-motivation" title="Permalink to this heading">#</a></h2>
+<p>Real-life applications are associated with extended objects. We will restrict the discussion to solid objects.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="b5-3-2-net-torque-in-terms-of-net-force">
+<h2>B5.3.2 Net Torque in terms of Net Force<a class="headerlink" href="#b5-3-2-net-torque-in-terms-of-net-force" title="Permalink to this heading">#</a></h2>
+<p>For an extended object/system, we are considering the dynamics of the center of mass of the system, and it is defined in a similar manner as for a point particle:</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[  T_{net,z} = I_{z}A_{z} \tag{1}\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(I_z\)</span> is the moment of inertia about the z-axis and <span class="math notranslate nohighlight">\(A_z\)</span> is the <strong>rotational acceleration</strong> about the z-axis. Similarly,</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[  \vec{T}_{net} = \vec{R} \times \vec{F}_{net} \tag{2}\]</div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b2-2-2-equations-for-cm">
-<h2>B2.2.2 Equations for CM<a class="headerlink" href="#b2-2-2-equations-for-cm" title="Permalink to this heading">#</a></h2>
-<p><strong>Linear Momentum</strong></p>
+<section id="b5-3-3-torque-due-to-individual-forces">
+<h2>B5.3.3 Torque due to Individual Forces<a class="headerlink" href="#b5-3-3-torque-due-to-individual-forces" title="Permalink to this heading">#</a></h2>
+<p>We can define the individual torque in a similar way:</p>
+<div class="alert alert-success">
 <div class="math notranslate nohighlight">
-\[ \vec{P} = M\vec{V} \]</div>
-<p><strong>Impulse</strong></p>
+\[  \vec{T}_F =  \vec{R}_F \times\vec{F} \tag{3}\]</div>
+</div>
+<div class="alert alert-danger">
+<p>While the <span class="math notranslate nohighlight">\(\vec{r}\)</span> was the same for all forces acting on a point particle, the vector <span class="math notranslate nohighlight">\(\vec{R}_F\)</span> may be different for the various forces acting on the object.
+</div></p>
+<div class="alert alert-info">
+<p>The vecor <span class="math notranslate nohighlight">\(\vec{r}\)</span> is the directed line segment from a point of interest (poi) to the point where the force is acting. In some cases it is the position vector, in other cases it is not. We say: <strong>the torque about the point of interest</strong>
+</div></p>
+<div class="alert alert-info">
+<p>The point of interest is often referred to as the <strong>pivot point</strong>.
+</div></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 1</h3>
+    </header>
+<p>A force of 175 N is applied tangential to the edge of a uniform solid disk. The disk has a mass of 15 kg, radius of 0.10 m, and is mounted vertically on a frictionless horizontal axis through its center. What is the resulting magnitude of the angular acceleration of the disk?</p>
+<p><strong>Solution</strong></p>
+<p>There are three forces acting on the disk: the applied force, force of gravity, and normal force due to the axle. The pivot point is the center of the disk. The later two forces do not produce a torque about the pivot point and the only torque is due to the applied force.</p>
+<p>Using Newton’s 2nd law for rotational motion (let the disk be in the xy-plane):</p>
 <div class="math notranslate nohighlight">
-\[ \vec{J} = \vec{F}\Delta t \]</div>
-<p><strong>Impulse-Momentum Theorem</strong></p>
+\[ T_z = I_{z}A_z \]</div>
+<p>The moment of inertia for a uniform solid disk about an axis through its center is <span class="math notranslate nohighlight">\(I_z = \frac{1}{2}MR^2\)</span>. We use Equation (3) to find the torque due to the applied force. In this case, <span class="math notranslate nohighlight">\(R_F = R\)</span> and the angle between <span class="math notranslate nohighlight">\(\vec{R}_F\)</span> and <span class="math notranslate nohighlight">\(\vec{F}\)</span> is 90<span class="math notranslate nohighlight">\(^\circ\)</span>. With this in mind, the magnitude relates through</p>
 <div class="math notranslate nohighlight">
-\[\Delta P = \vec{F}_{net}\Delta t \]</div>
-<p><strong>Kinetic Energy</strong></p>
+\[ RF\sin\theta = \frac{1}{2}MR^2A_z \]</div>
+<p>Solving for the angular acceleration and inserting numbers:</p>
 <div class="math notranslate nohighlight">
-\[ K = \frac{1}{2}MV^2 \]</div>
-<p><strong>Work</strong></p>
-<div class="math notranslate nohighlight">
-\[ W = \vec{F}\cdot\Delta \vec{R} \]</div>
-<p><strong>Work-Energy Theorem</strong></p>
-<div class="math notranslate nohighlight">
-\[ \Delta K = \vec{F}_{net}\cdot\vec{R} \]</div>
-<p>Similarly, all derived equations, including kinematics and potential energy, can be expressed by replacing the lower case letters representing particles with the upper case letters representing CM.</p>
+\[ A_z = \frac{2F\sin\theta}{MR} = \frac{(2)(175)\sin(90)}{(15)(0.10)} = 230~\textrm{rad/s}^2\]</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 
@@ -443,7 +464,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./Module-B2"
+            path: "./Module-B5"
         },
         predefinedOutput: true
     }
@@ -462,22 +483,13 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="center-of-mass.html"
+       href="Rotational-force-point-particle-part2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">B2.1 Center of Mass</p>
+        <p class="prev-next-title">B5.2 Rotational Force - Point Particle Part 2</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="../Module-B3/basic-relations.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">B3.1 Basic Relationships</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -497,8 +509,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-2-1-point-particle-vs-center-of-mass">B2.2.1 Point Particle vs. Center of Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b2-2-2-equations-for-cm">B2.2.2 Equations for CM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b5-3-1-motivation">B5.3.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b5-3-2-net-torque-in-terms-of-net-force">B5.3.2 Net Torque in terms of Net Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b5-3-3-torque-due-to-individual-forces">B5.3.3 Torque due to Individual Forces</a></li>
 </ul>
   </nav></div>
 

@@ -41,3 +41,4 @@ parts:
   chapters:
   - file: Module-B5/Rotational-force-point-particle-part1
   - file: Module-B5/Rotational-force-point-particle-part2
+  - file: Module-B5/Rotational-force-extended-object
