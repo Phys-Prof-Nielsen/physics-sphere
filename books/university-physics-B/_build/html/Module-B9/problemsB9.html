@@ -429,6 +429,46 @@ document.write(`
 <li><p>What is the torque?</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/10-problems">https://openstax.org/books/university-physics-volume-1/pages/10-problems</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#----------------</span>
+<span class="c1"># Part 1</span>
+<span class="c1">#----------------</span>
+<span class="n">w0</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">w1</span> <span class="o">=</span> <span class="mf">200.0</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">5.0</span>
+
+<span class="n">alpha</span> <span class="o">=</span> <span class="p">(</span><span class="n">w1</span> <span class="o">-</span> <span class="n">w0</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angular acceleration: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">alpha</span><span class="p">))</span>
+
+<span class="c1">#----------------</span>
+<span class="c1"># Part 2</span>
+<span class="c1">#----------------</span>
+<span class="n">I</span> <span class="o">=</span> <span class="mf">50.0</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">I</span><span class="o">*</span><span class="n">alpha</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Angular acceleration: 40.0
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B9.2</h2>
     </header>
 <p>Suppose you exert a force of 180 N tangential to a 0.280 m radius, 75.0 kg grindstone (a solid disk).</p>
@@ -438,6 +478,60 @@ document.write(`
 <li><p>What is the magnitude of the angular acceleration if there is an opposing frictional force of 50.0 N exerted 1.50 cm from the axis?</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/10-problems">https://openstax.org/books/university-physics-volume-1/pages/10-problems</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#----------------</span>
+<span class="c1"># Part 1</span>
+<span class="c1">#----------------</span>
+<span class="n">F1</span> <span class="o">=</span> <span class="mf">180.0</span>
+<span class="n">R1</span> <span class="o">=</span> <span class="mf">0.280</span>
+
+<span class="n">T1</span> <span class="o">=</span> <span class="n">R1</span><span class="o">*</span><span class="n">F1</span>   <span class="c1">#angle is 90 degrees</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Torque: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">T1</span><span class="p">))</span>
+
+<span class="c1">#----------------</span>
+<span class="c1"># Part 2</span>
+<span class="c1">#----------------</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mf">75.0</span>
+
+<span class="n">I</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="n">R1</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">T1</span><span class="o">/</span><span class="n">I</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angular acceleration: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+
+<span class="c1">#----------------</span>
+<span class="c1"># Part 3</span>
+<span class="c1">#----------------</span>
+<span class="n">F2</span> <span class="o">=</span> <span class="mf">50.0</span>
+<span class="n">R2</span> <span class="o">=</span> <span class="mf">0.015</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="n">R2</span><span class="o">*</span><span class="n">F2</span>
+
+<span class="n">T_net</span> <span class="o">=</span> <span class="n">T1</span> <span class="o">-</span> <span class="n">T2</span>
+<span class="n">A_net</span> <span class="o">=</span> <span class="n">T_net</span><span class="o">/</span><span class="n">I</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angular acceleration: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">A_net</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Torque: 50.400000000000006
+Angular acceleration: 17.142857142857142
+Angular acceleration: 16.887755102040817
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B9.3</h2>
     </header>
 <p>A torque of 50.0 Nm is applied to a grinding wheel (I = 20.0 kgm<span class="math notranslate nohighlight">\(^2\)</span>) for 20.0 s.</p>
@@ -446,6 +540,49 @@ document.write(`
 <li><p>Through what angle does the wheel move while the torque is applied?</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/10-problems">https://openstax.org/books/university-physics-volume-1/pages/10-problems</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#----------------</span>
+<span class="c1"># Part 1</span>
+<span class="c1">#----------------</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mf">50.0</span>
+<span class="n">I</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">w0</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">T</span><span class="o">/</span><span class="n">I</span>
+<span class="n">w1</span> <span class="o">=</span> <span class="n">w0</span> <span class="o">+</span> <span class="n">A</span><span class="o">*</span><span class="n">dt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angular speed: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">w1</span><span class="p">))</span>
+
+<span class="c1">#----------------</span>
+<span class="c1"># Part 2</span>
+<span class="c1">#----------------</span>
+<span class="n">dtheta</span> <span class="o">=</span> <span class="n">w0</span><span class="o">*</span><span class="n">dt</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">dt</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angular distance (in radians): &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dtheta</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Angular speed: 50.0
+Angular distance (in radians): 500.0
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B9.4</h2>
     </header>
 <p>A uniform cylindrical grinding wheel of mass 50.0 kg and diameter 1.0 m is turned on by an electric motor. The friction in the bearings is negligible.</p>
@@ -454,6 +591,48 @@ document.write(`
 <li><p>A tool whose coefficient of kinetic friction with the wheel is 0.60 is pressed perpendicularly against the wheel with a force of 40.0 N. What torque must be supplied by the motor to keep the wheel rotating at a constant angular velocity?</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/10-problems">https://openstax.org/books/university-physics-volume-1/pages/10-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#----------------</span>
+<span class="c1"># Part 1</span>
+<span class="c1">#----------------</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mf">50.0</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">w0</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">w1</span> <span class="o">=</span> <span class="p">(</span><span class="mf">120.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="mf">60.0</span><span class="p">)</span> 
+<span class="n">dtheta</span> <span class="o">=</span> <span class="p">(</span><span class="mf">20.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+
+<span class="n">I</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="n">w1</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">w0</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">dtheta</span><span class="p">)</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">I</span><span class="o">*</span><span class="n">A</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Torque: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>
+
+<span class="c1">#----------------</span>
+<span class="c1"># Part 2</span>
+<span class="c1">#----------------</span>
+<span class="c1"># applied torque must counter the frictional torque </span>
+
+<span class="n">F2</span> <span class="o">=</span> <span class="mf">40.0</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.60</span>
+
+<span class="n">Ff</span> <span class="o">=</span> <span class="n">mu</span><span class="o">*</span><span class="n">F2</span>
+<span class="n">Tf</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="n">Ff</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Applied Torque: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">Tf</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Torque: 15.70796326794896
+Applied Torque: 24.0
+</pre></div>
+</div>
+</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B9.5</h2>
     </header>
 <p>A pulley of moment of inertia 2.0 kgm<span class="math notranslate nohighlight">\(^2\)</span> is mounted on a wall as shown in the following figure. Light strings are wrapped around two circumferences of the pulley and weights are attached. Assume the following data:  <span class="math notranslate nohighlight">\(r_1 = 50.0~\textrm{cm}\)</span>, <span class="math notranslate nohighlight">\(r_2 = 20.0~\textrm{cm}\)</span>, <span class="math notranslate nohighlight">\(m_1 = 1.0~\textrm{kg}\)</span>, and <span class="math notranslate nohighlight">\(m_2 = 2.0~\textrm{kg}\)</span>, what are</p>
@@ -463,6 +642,60 @@ document.write(`
 </ol>
 <img src="P9.4.png" width="300">
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/10-problems">https://openstax.org/books/university-physics-volume-1/pages/10-problems</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">I</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">R1</span> <span class="o">=</span> <span class="mf">0.500</span>
+<span class="n">R2</span> <span class="o">=</span> <span class="mf">0.200</span>
+<span class="n">M1</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">M2</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="c1">#unknowns</span>
+<span class="n">A1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span>
+<span class="n">A2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;A2&#39;</span><span class="p">)</span>
+<span class="n">F_T1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;F_T1&#39;</span><span class="p">)</span>
+<span class="n">F_T2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;F_T2&#39;</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+
+<span class="c1"># Positive up for 1, CW for pulley, down for 2</span>
+<span class="c1">#linear N2 on blocks</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">M1</span><span class="o">*</span><span class="n">A1</span> <span class="o">-</span> <span class="n">F_T1</span> <span class="o">+</span> <span class="n">M1</span><span class="o">*</span><span class="n">g</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">M2</span><span class="o">*</span><span class="n">A2</span> <span class="o">+</span> <span class="n">F_T2</span> <span class="o">-</span> <span class="n">M2</span><span class="o">*</span><span class="n">g</span>
+
+<span class="c1">#rotational N2 on pulley</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">I</span><span class="o">*</span><span class="n">A</span> <span class="o">+</span> <span class="n">F_T1</span><span class="o">*</span><span class="n">R1</span> <span class="o">-</span> <span class="n">F_T2</span><span class="o">*</span><span class="n">R2</span>
+
+<span class="c1">#relating accelerations</span>
+<span class="n">eq4</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">-</span> <span class="n">R1</span><span class="o">*</span><span class="n">A</span>
+<span class="n">eq5</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">-</span> <span class="n">R2</span><span class="o">*</span><span class="n">A</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">,</span><span class="n">eq4</span><span class="p">,</span><span class="n">eq5</span><span class="p">),(</span><span class="n">A1</span><span class="p">,</span><span class="n">A2</span><span class="p">,</span><span class="n">F_T1</span><span class="p">,</span><span class="n">F_T2</span><span class="p">,</span><span class="n">A</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{A1: -0.210515021459227, A2: -0.0842060085836910, F_T1: 9.59948497854077, F_T2: 19.7884120171674, A: -0.421030042918455}
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 
     <script type="text/x-thebe-config">
