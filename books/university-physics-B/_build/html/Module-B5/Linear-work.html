@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>B5.1 Linear Work and Energy &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -69,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B5.2 Deriving Work-Energy Theorem" href="work-energy-derivation.html" />
     <link rel="prev" title="B4.4 Problems" href="../Module-B4/problemsB4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -225,6 +224,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Module-B9/Rotational-force-point-particle-part1.html">B9.1 Rotational Force: Point Particle Part 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-B9/Rotational-force-point-particle-part2.html">B9.2 Rotational Force - Point Particle Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B9/problemsB9.html">B9.x Problems</a></li>
 </ul>
 
     </div>
@@ -449,9 +449,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b5-1-linear-work-and-energy">
-<h1>B5.1 Linear Work and Energy<a class="headerlink" href="#b5-1-linear-work-and-energy" title="Permalink to this heading">#</a></h1>
+<h1>B5.1 Linear Work and Energy<a class="headerlink" href="#b5-1-linear-work-and-energy" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b5-1-1-review">
-<h2>B5.1.1 Review<a class="headerlink" href="#b5-1-1-review" title="Permalink to this heading">#</a></h2>
+<h2>B5.1.1 Review<a class="headerlink" href="#b5-1-1-review" title="Permalink to this headline">#</a></h2>
 <p>The energy transfer (or work) done on a particle by a single force acting through a distance is</p>
 <div class="math notranslate nohighlight">
 \[ w = \vec{f}\cdot\Delta\vec{r} \]</div>
@@ -462,20 +462,20 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[ w = f\Delta r\cos\theta \]</div>
 <section id="conservative-forces">
-<h3>Conservative Forces<a class="headerlink" href="#conservative-forces" title="Permalink to this heading">#</a></h3>
+<h3>Conservative Forces<a class="headerlink" href="#conservative-forces" title="Permalink to this headline">#</a></h3>
 <p>Conservative forces are characterized by the fact that the work done is the negative of the change in potential energy:</p>
 <div class="math notranslate nohighlight">
 \[ \Delta u = -\vec{f}_{C}\cdot\Delta\vec{r} \tag{1}\]</div>
 <p>It may also be appropriate to refresh our memory what a conservative force is: <strong>the work done by a conservative force along a closed path is zero</strong>.</p>
 </section>
 <section id="non-conservative-forces">
-<h3>Non-conservative Forces<a class="headerlink" href="#non-conservative-forces" title="Permalink to this heading">#</a></h3>
+<h3>Non-conservative Forces<a class="headerlink" href="#non-conservative-forces" title="Permalink to this headline">#</a></h3>
 <p>Non-conservative forces are characterized by the fact that the work done is the change in mechanical energy:</p>
 <div class="math notranslate nohighlight">
 \[ \Delta e = \vec{f}_{NC}\cdot\Delta\vec{r} \tag{2}\]</div>
 </section>
 <section id="work-energy-theorem">
-<h3>Work-Energy Theorem<a class="headerlink" href="#work-energy-theorem" title="Permalink to this heading">#</a></h3>
+<h3>Work-Energy Theorem<a class="headerlink" href="#work-energy-theorem" title="Permalink to this headline">#</a></h3>
 <p>Finally, we have the <strong>work-energy theorem</strong>, which can be stated in short as</p>
 <div class="math notranslate nohighlight">
 \[ w_{net} = \Delta k \]</div>
@@ -485,17 +485,17 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="b5-1-2-position-varying-force-in-1d">
-<h2>B5.1.2  Position-varying Force in 1D<a class="headerlink" href="#b5-1-2-position-varying-force-in-1d" title="Permalink to this heading">#</a></h2>
+<h2>B5.1.2  Position-varying Force in 1D<a class="headerlink" href="#b5-1-2-position-varying-force-in-1d" title="Permalink to this headline">#</a></h2>
 <p>In previous module we saw, how we could apply the impulse-momentum theorem in terms of a force varying with time. Sometimes our forces are not known as a function of time, but instead as a function of position. In this scenario, the work-energy theorem is the concept/tool to use.</p>
 <p>For now we will restrict ourselves to 1D case. In Phase A we will expand to 2D and 3D but need some more calculus tools to do so. In the following, we have</p>
 <div class="math notranslate nohighlight">
 \[ \vec{f} \rightarrow \vec{f}(x) \]</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b5-1-3-calculus-forms">
-<h2>B5.1.3  Calculus Forms<a class="headerlink" href="#b5-1-3-calculus-forms" title="Permalink to this heading">#</a></h2>
+<h2>B5.1.3  Calculus Forms<a class="headerlink" href="#b5-1-3-calculus-forms" title="Permalink to this headline">#</a></h2>
 <p>In Equations (1) and (2) we simply replace the differences with differentials.</p>
 <section id="id1">
-<h3>Conservative Forces<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Conservative Forces<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>In 1D component form we have</p>
 <div class="math notranslate nohighlight">
 \[ du = -f_{Cx}dx \]</div>
@@ -517,7 +517,7 @@ document.write(`
 </div>
 </section>
 <section id="id2">
-<h3>Non-conservative Forces<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>Non-conservative Forces<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>In 1D component form we have</p>
 <div class="math notranslate nohighlight">
 \[ de = -f_{NCx}dx \]</div>
@@ -539,7 +539,7 @@ document.write(`
 </div>
 </section>
 <section id="general-work">
-<h3>General Work<a class="headerlink" href="#general-work" title="Permalink to this heading">#</a></h3>
+<h3>General Work<a class="headerlink" href="#general-work" title="Permalink to this headline">#</a></h3>
 <div class="alert alert-info">
 <p>We notice that the work done by either a conservative or non-conservative force has exactly the same form. It is only when we relate it to energies that there are differences. Hence, for the work only, it may be more convenient to drop the distinction between conservative vs. non-conservative:</p>
 <div class="math notranslate nohighlight">
@@ -657,7 +657,7 @@ It appears that the force is conservative and we will proceed by finding the pot
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/5f55d9444b8e75d6d7901debcb697d846915f91bfe31e46577f40f32bcf8a02b.png" src="../_images/5f55d9444b8e75d6d7901debcb697d846915f91bfe31e46577f40f32bcf8a02b.png" />
+<img alt="../_images/2ea78ed38164f7bd4901de970af1f9d75368ac1a26e436dc657a153310774765.png" src="../_images/2ea78ed38164f7bd4901de970af1f9d75368ac1a26e436dc657a153310774765.png" />
 </div>
 </div>
 <div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;"> 
@@ -705,7 +705,7 @@ It appears that the force is conservative and we will proceed by finding the pot
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/b44630f05de9d9881f4d3698fe1c01f870ea38eecd1bb431efcd78f251574218.png" src="../_images/b44630f05de9d9881f4d3698fe1c01f870ea38eecd1bb431efcd78f251574218.png" />
+<img alt="../_images/9ee1e99a9bfe67f5b81bbd55123f6c64417643c8f0556221ff96c6d178f34132.png" src="../_images/9ee1e99a9bfe67f5b81bbd55123f6c64417643c8f0556221ff96c6d178f34132.png" />
 </div>
 </div>
 <div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
@@ -715,16 +715,16 @@ It appears that the force is conservative and we will proceed by finding the pot
 </div><hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="b5-1-4-graphical-consequence">
-<h2>B5.1.4 Graphical Consequence<a class="headerlink" href="#b5-1-4-graphical-consequence" title="Permalink to this heading">#</a></h2>
+<h2>B5.1.4 Graphical Consequence<a class="headerlink" href="#b5-1-4-graphical-consequence" title="Permalink to this headline">#</a></h2>
 <section id="slope-considerations">
-<h3>Slope Considerations<a class="headerlink" href="#slope-considerations" title="Permalink to this heading">#</a></h3>
+<h3>Slope Considerations<a class="headerlink" href="#slope-considerations" title="Permalink to this headline">#</a></h3>
 <p>From</p>
 <div class="math notranslate nohighlight">
 \[ f_{Cx} = -\frac{du}{dx} \]</div>
 <p>we conclude that on a <strong>potential energy graph the negative of the slope is the conservative force</strong>.</p>
 </section>
 <section id="area-considerations">
-<h3>Area Considerations<a class="headerlink" href="#area-considerations" title="Permalink to this heading">#</a></h3>
+<h3>Area Considerations<a class="headerlink" href="#area-considerations" title="Permalink to this headline">#</a></h3>
 <p>Since we have</p>
 <div class="math notranslate nohighlight">
 \[ w = \int_{x_1}^{x_2}f_{x}dx \]</div>
@@ -736,7 +736,7 @@ It appears that the force is conservative and we will proceed by finding the pot
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="b5-1-5-work-energy-theorem">
-<h2>B5.1.5 Work-Energy Theorem<a class="headerlink" href="#b5-1-5-work-energy-theorem" title="Permalink to this heading">#</a></h2>
+<h2>B5.1.5 Work-Energy Theorem<a class="headerlink" href="#b5-1-5-work-energy-theorem" title="Permalink to this headline">#</a></h2>
 <p>The famed work-energy theorem does not change.</p>
 <div class="math notranslate nohighlight">
 \[ \frac{1}{2}mv_{1}^2 + u_1 + w_{NC} = \frac{1}{2}mv_{2}^2 + u_2 \]</div>
