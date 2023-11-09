@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>B2.7 Integrals - Infinite Sum &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B2.8 Integrals - Definite Integrals" href="Integral-definite.html" />
     <link rel="prev" title="B2.6 Integrals - Antiderivative" href="Integral-antiderivative.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -197,6 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B5/Linear-work.html">B5.1 Linear Work and Energy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-B5/work-energy-derivation.html">B5.2 Deriving Work-Energy Theorem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-B5/spring-potential-energy.html">B5.3 Spring Potential Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B5/Power.html">B5.4 Power</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-B5/problemsB5.html">B5.X Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B6 - System of Particles</span></p>
@@ -440,9 +442,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b2-7-integrals-infinite-sum">
-<h1>B2.7 Integrals - Infinite Sum<a class="headerlink" href="#b2-7-integrals-infinite-sum" title="Permalink to this headline">#</a></h1>
+<h1>B2.7 Integrals - Infinite Sum<a class="headerlink" href="#b2-7-integrals-infinite-sum" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b2-7-1-short-introduction">
-<h2>B2.7.1 Short Introduction<a class="headerlink" href="#b2-7-1-short-introduction" title="Permalink to this headline">#</a></h2>
+<h2>B2.7.1 Short Introduction<a class="headerlink" href="#b2-7-1-short-introduction" title="Permalink to this heading">#</a></h2>
 <p>We consider the integral of a dependent function <span class="math notranslate nohighlight">\(f(x)\)</span> with respect to its independent variable <span class="math notranslate nohighlight">\(x\)</span> and write it as</p>
 <div class="math notranslate nohighlight">
 \[ \int f(x)dx \]</div>
@@ -452,7 +454,7 @@ document.write(`
 <p>where <span class="math notranslate nohighlight">\(f(x)\)</span> is a function value (a number) obtained by evaluating the function at point <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(dx\)</span> is the <strong>differential</strong> of <span class="math notranslate nohighlight">\(x\)</span> (a really small number, whatever that means for now).</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b2-7-2-meaning-of-f-x-dx">
-<h2>B2.7.2 Meaning of <span class="math notranslate nohighlight">\(f(x)dx\)</span><a class="headerlink" href="#b2-7-2-meaning-of-f-x-dx" title="Permalink to this headline">#</a></h2>
+<h2>B2.7.2 Meaning of <span class="math notranslate nohighlight">\(f(x)dx\)</span><a class="headerlink" href="#b2-7-2-meaning-of-f-x-dx" title="Permalink to this heading">#</a></h2>
 <p>I will try and explain it through a graph, so let us do some Python magic here. As an illustrative example, I am plotting the function <span class="math notranslate nohighlight">\(f(x) = x^3\)</span>. I am also plotting the point <span class="math notranslate nohighlight">\(f_3 = 27\)</span>, and sketching in a <em>stepsize</em> <span class="math notranslate nohighlight">\(\Delta x\)</span> that I for now set as <span class="math notranslate nohighlight">\(\Delta x = 1\)</span> (the number is not necessarily important, I just randomly picked <span class="math notranslate nohighlight">\(1\)</span>).</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -496,7 +498,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/dbfbf6d887b537ce54802c3880d8afdf73f5702edb06519a47e2b230a022187b.png" src="../_images/dbfbf6d887b537ce54802c3880d8afdf73f5702edb06519a47e2b230a022187b.png" />
+<img alt="../_images/e4f4b20271b626ce0c537649d65414bf2ab5f214e24cd43896d2d0724fbc9733.png" src="../_images/e4f4b20271b626ce0c537649d65414bf2ab5f214e24cd43896d2d0724fbc9733.png" />
 </div>
 </div>
 <p>If we consider this sketch above, how would we interpretate <span class="math notranslate nohighlight">\(f(x)\Delta x\)</span>? Well, as values we have <span class="math notranslate nohighlight">\(f_3 = 27\)</span> and <span class="math notranslate nohighlight">\(\Delta x = 1\)</span>, so we must have <span class="math notranslate nohighlight">\(f(x)\Delta x = (27)(1) = 27\)</span> for that specific case. What does that number then represent? It looks like it is the area of the dotted rectangle with base = <span class="math notranslate nohighlight">\(\Delta x\)</span> and height = <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
@@ -543,7 +545,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/103d0024537ed81721054328a441e37bb72709ca906a24174239e12faf1f54bf.png" src="../_images/103d0024537ed81721054328a441e37bb72709ca906a24174239e12faf1f54bf.png" />
+<img alt="../_images/a459ff5449dc4fdfe858eb0cd29a2efc98bb00f03db9c1ecad499e275174856c.png" src="../_images/a459ff5449dc4fdfe858eb0cd29a2efc98bb00f03db9c1ecad499e275174856c.png" />
 </div>
 </div>
 <p>Now the product is <span class="math notranslate nohighlight">\(f(x)\Delta x = (27)(0.25) = 6.25\)</span>. The value changed but the conceptual representation did not: <strong>the product <span class="math notranslate nohighlight">\(f(x)\Delta x\)</span> represents an approximate area of a section between the graph and the x-axis</strong>.</p>
@@ -556,7 +558,7 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b2-7-3-the-approximate-area-under-a-function">
-<h2>B2.7.3 The Approximate Area Under a Function<a class="headerlink" href="#b2-7-3-the-approximate-area-under-a-function" title="Permalink to this headline">#</a></h2>
+<h2>B2.7.3 The Approximate Area Under a Function<a class="headerlink" href="#b2-7-3-the-approximate-area-under-a-function" title="Permalink to this heading">#</a></h2>
 <p>With the concept discussed above, we can extend this to consider a bunch of data points of the function. Let us try and see how that looks using the stepsize <span class="math notranslate nohighlight">\(\Delta x = 0.25\)</span>:</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -601,7 +603,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/691009edad516955fdc5a34d3646bdf2897cb31dcf24b22a2e21a44b99da68a3.png" src="../_images/691009edad516955fdc5a34d3646bdf2897cb31dcf24b22a2e21a44b99da68a3.png" />
+<img alt="../_images/d3ee1ce697347cc6b50cefcf346de4717c9aa589fbf55ae8da44b5e022b18ac6.png" src="../_images/d3ee1ce697347cc6b50cefcf346de4717c9aa589fbf55ae8da44b5e022b18ac6.png" />
 </div>
 </div>
 <p>We can probably without too much concern say that <strong>the sum of all rectangular areas approximately represents the total area bounded by the function <span class="math notranslate nohighlight">\(f(x)\)</span> and the x-axis</strong> between x = 0 and x = 5. In the language of mathematics, we will write it as</p>
@@ -672,7 +674,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/e4a380ab50fc64211411d3986d339292b3861ae9dff2dc8ca971b4655dded49b.png" src="../_images/e4a380ab50fc64211411d3986d339292b3861ae9dff2dc8ca971b4655dded49b.png" />
+<img alt="../_images/f7d1452bbaf85903cbb1c161ec43a73a73741ae81e385d10e1cb2b399b42078f.png" src="../_images/f7d1452bbaf85903cbb1c161ec43a73a73741ae81e385d10e1cb2b399b42078f.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Area = 36.0
 </pre></div>
 </div>
@@ -728,7 +730,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/ce73979e5ec87cf81faaf77ce276e47ec340bfdb228d5dacb8a50c3c837b9809.png" src="../_images/ce73979e5ec87cf81faaf77ce276e47ec340bfdb228d5dacb8a50c3c837b9809.png" />
+<img alt="../_images/c72a5c553947b4debc493db9ffa978077f674267ab3e63101670d7198d9bb86b.png" src="../_images/c72a5c553947b4debc493db9ffa978077f674267ab3e63101670d7198d9bb86b.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Area = 56.25
 </pre></div>
 </div>
@@ -777,7 +779,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7ea73636467c24f10a0d16c542ec4ad2e461e568606c37f5ca8cea3c393b73c0.png" src="../_images/7ea73636467c24f10a0d16c542ec4ad2e461e568606c37f5ca8cea3c393b73c0.png" />
+<img alt="../_images/539bff3db389692e5c6f3627e7ddd17d4ecbce50e9b5a04cb2797161dc5d6197.png" src="../_images/539bff3db389692e5c6f3627e7ddd17d4ecbce50e9b5a04cb2797161dc5d6197.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Area = 60.84000000000009
 </pre></div>
 </div>
@@ -799,7 +801,7 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b2-7-4-riemann-sum-and-numerical-integration">
-<h2>B2.7.4 Riemann Sum and Numerical Integration<a class="headerlink" href="#b2-7-4-riemann-sum-and-numerical-integration" title="Permalink to this headline">#</a></h2>
+<h2>B2.7.4 Riemann Sum and Numerical Integration<a class="headerlink" href="#b2-7-4-riemann-sum-and-numerical-integration" title="Permalink to this heading">#</a></h2>
 <p>The sum we applied above to estimate the area bounded between the function and the x-axis is known as the <strong>left Riemann sum</strong> and is probably the first introduction to integration you see in calculus. You will then be introduced to the <strong>right Riemann sum</strong> and <strong>middle Riemann sum</strong> before moving on to the integral. These Riemann sums are all examples of <strong>numerical integration</strong> and involves summing over a finite number of steps (or geometric shapes such as rectangles in our example). Some numerical approaches are better than others, in calculus you learn numerical approaches such as <strong>the midpoint rule</strong> and <strong>the trapezoidal rule</strong>.</p>
 <p>Numerical integration is extremely powerful as we can utilize it to evaluate the integral</p>
 <ul class="simple">
@@ -812,7 +814,7 @@ document.write(`
 <p>In fact, if you are programming a video game and using somewhat realisitic physics, you are already doing numerical integration!</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b2-7-5-the-definite-integral">
-<h2>B2.7.5 The Definite Integral<a class="headerlink" href="#b2-7-5-the-definite-integral" title="Permalink to this headline">#</a></h2>
+<h2>B2.7.5 The Definite Integral<a class="headerlink" href="#b2-7-5-the-definite-integral" title="Permalink to this heading">#</a></h2>
 <p>Ok, we are now ready to take the step into the integral as approached from a conceptual point of view. Above, we argued that the area bounded between the graph and the x-axis could be approximated by the sum (the left Riemann sum):</p>
 <div class="math notranslate nohighlight">
 \[ \textrm{Area} \sim \sum\limits_{n=0}^{N} f(x_n)\Delta x \]</div>
@@ -875,12 +877,12 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/d43c88cb95c54ca7e071b33964ce21c5354a20ba84011c9b5ab17b7107008fb9.png" src="../_images/d43c88cb95c54ca7e071b33964ce21c5354a20ba84011c9b5ab17b7107008fb9.png" />
+<img alt="../_images/3b345a57feaffc46a34778fdd94a8fa43e749929c6588ccb8d2b70cf3a8c5def.png" src="../_images/3b345a57feaffc46a34778fdd94a8fa43e749929c6588ccb8d2b70cf3a8c5def.png" />
 </div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b2-7-6-final-notes">
-<h2>B2.7.6 Final Notes<a class="headerlink" href="#b2-7-6-final-notes" title="Permalink to this headline">#</a></h2>
+<h2>B2.7.6 Final Notes<a class="headerlink" href="#b2-7-6-final-notes" title="Permalink to this heading">#</a></h2>
 <p>The objective of this note was simply to get the conceptual idea that the integral can be related to the area bounded between a function and the independent variable axis. This lead to the concept of the <strong>definite integral</strong>. We will see in the following note how we actually calculate it in an analytic way (you have seen here how we can do it in a numerical way).</p>
 <p>A few notes to consider before we move on:</p>
 <ul class="simple">

@@ -50,6 +50,7 @@ parts:
   - file: Module-B5/Linear-work
   - file: Module-B5/work-energy-derivation
   - file: Module-B5/spring-potential-energy
+  - file: Module-B5/Power
   - file: Module-B5/problemsB5
   
 - caption: Module B6 - System of Particles
