@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>B4.1 Moment of Inertia &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -69,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B4.2 Cross Product" href="cross-product.html" />
     <link rel="prev" title="B3.3 Problems" href="../Module-B3/problemsB3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -405,15 +404,15 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b4-1-moment-of-inertia">
-<h1>B4.1 Moment of Inertia<a class="headerlink" href="#b4-1-moment-of-inertia" title="Permalink to this heading">#</a></h1>
+<h1>B4.1 Moment of Inertia<a class="headerlink" href="#b4-1-moment-of-inertia" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b4-1-1-short-intro">
-<h2>B4.1.1 Short Intro<a class="headerlink" href="#b4-1-1-short-intro" title="Permalink to this heading">#</a></h2>
+<h2>B4.1.1 Short Intro<a class="headerlink" href="#b4-1-1-short-intro" title="Permalink to this headline">#</a></h2>
 <p>We have previosly introduced the concept of mass and seen a few ways to define it such as a resistance to a <strong>change in linear motion</strong> (Newtonian definition) or amount of matter in a substance (more of a common sense approach). However, none of them are correct on the most fundamental level, where it is more a question of field interactions and it is still something we have difficulties explaining. One fact for sure: <strong>mass is an intrinsic property of field interactions and can be associated with any particles not traveling at the speed of light</strong>.</p>
 <p>Moment of inertia on the other hand, is <strong>not an intrinsic property of matter</strong> but depends both on mass and reference frame of observation.</p>
 <p>The approach to calculating the moment of inertia is significantly more complicated than many other physical parameters and an in-depth analysis of it is beyond the scope of this class. In the following, I will re-iterate what the textbook tells you, but also try and formulate it slightly different or approach it differently.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b4-1-2-conceptual-definition">
-<h2>B4.1.2 Conceptual Definition<a class="headerlink" href="#b4-1-2-conceptual-definition" title="Permalink to this heading">#</a></h2>
+<h2>B4.1.2 Conceptual Definition<a class="headerlink" href="#b4-1-2-conceptual-definition" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><strong>Mass is a resistance to a change in linear motion</strong></p></li>
 <li><p><strong>Moment of inertia is a resistance to a change in rotational motion</strong></p></li>
@@ -427,7 +426,7 @@ document.write(`
 <li><p>Find a yard stick (or something similar). Attach a mass close to the end of the yard stick. Hold the yard stick by the end close to mass and hold it horizontally. Rotate the yard stick in the horizontal plane. Now flip the yard stick such that the mass is in the opposite end of your end and repeat.</p></li>
 </ol>
 </div><section id="explanation-of-experiment">
-<h3>Explanation of Experiment<a class="headerlink" href="#explanation-of-experiment" title="Permalink to this heading">#</a></h3>
+<h3>Explanation of Experiment<a class="headerlink" href="#explanation-of-experiment" title="Permalink to this headline">#</a></h3>
 <ol class="arabic simple">
 <li><p>The typical rating is: beach ball, tennis ball, golf ball, and baseball. The ranking between the tennis ball and golf ball is the most difficult to assess since their masses and sizes are comparable. How do you determine it? Well, you may notice that with the tennis ball in one hand and the golf ball in the other hand, you start moving your hands up and down (in a linear fashion). Why? You are trying to assess their <b>resistance to a change in motion</b>. You are literally assessing the definition that Newton established for inertial mass. Where does the size come in? The size matter through pressure. We are not capable of sensing mass on our hand. Instead, there is an interaction (or force) acting on our hand. That force over the interaction area is known as pressure, and it is the pressure we are sensing. Since the golf ball has smaller contact area, we will sense it to be slightly more massive than the tennis ball. This observation is really emphasized by the beach ball, which is the most massive of all the objects, but since it has a large contact area, it is the object that exert the least amount of pressure and we sense that as being the least massive object.</p></li>
 <li><p>Moment of inertia is the resistance to a change in rotational motion and depends both on mass and the location of the mass with respect to an axis of rotation (in this case, an axis that is perpendicular to the plane of rotation and through your elbow or wrist depending on you how rotated it). The further away the mass is from this axis, the greater the moment of inertia and the greater resistance to a change in rotational motion. Could you feel that? You can also try and just hold the stick at rest horizontally. You will need to apply a greater force to prevent it from “falling” down if the mass is further away as compared to when it is close to your hand.</p></li>
@@ -435,7 +434,7 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="b4-1-3-qualitatively-definition-point-particle">
-<h2>B4.1.3 Qualitatively Definition: Point Particle<a class="headerlink" href="#b4-1-3-qualitatively-definition-point-particle" title="Permalink to this heading">#</a></h2>
+<h2>B4.1.3 Qualitatively Definition: Point Particle<a class="headerlink" href="#b4-1-3-qualitatively-definition-point-particle" title="Permalink to this headline">#</a></h2>
 <p>We will consider a point particle at first. Let the point particle have a mass <span class="math notranslate nohighlight">\(m\)</span>. For the vast majority of problems associated with this course, the particle is confined to motion in a plane, say the <span class="math notranslate nohighlight">\(xy\)</span>-plane. In the figure below, we consider the particle at point <span class="math notranslate nohighlight">\(P\)</span> in the <span class="math notranslate nohighlight">\(xy\)</span>-plane and its location is described through its position vector <span class="math notranslate nohighlight">\(\vec{r}\)</span>.</p>
 <img src="fig3.png" width="300">
 <p>We define the moment of inertia around the <span class="math notranslate nohighlight">\(z\)</span>-axis of the particle as</p>
@@ -519,7 +518,7 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b8-1-4-qualitatively-definition-system-of-point-particles">
-<h2>B8.1.4 Qualitatively Definition: System of Point Particles<a class="headerlink" href="#b8-1-4-qualitatively-definition-system-of-point-particles" title="Permalink to this heading">#</a></h2>
+<h2>B8.1.4 Qualitatively Definition: System of Point Particles<a class="headerlink" href="#b8-1-4-qualitatively-definition-system-of-point-particles" title="Permalink to this headline">#</a></h2>
 <p>If we have a system of <span class="math notranslate nohighlight">\(N\)</span> particles, the moment of inertia of the system is the sum of the individual moments of inertia:</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -557,7 +556,7 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b8-1-5-qualitatively-definition-continuous-objects">
-<h2>B8.1.5 Qualitatively Definition: Continuous Objects<a class="headerlink" href="#b8-1-5-qualitatively-definition-continuous-objects" title="Permalink to this heading">#</a></h2>
+<h2>B8.1.5 Qualitatively Definition: Continuous Objects<a class="headerlink" href="#b8-1-5-qualitatively-definition-continuous-objects" title="Permalink to this headline">#</a></h2>
 <p>Continuous objects are realistic objects and even the most basic objects such as rods, spheres, and cylinders, requires calculus learned in Calculus III to find their moments of inertia. Hence, I will not require you know how to calculate these the moments of inertia.</p>
 <p>Instead, I expect you can look the moments of inertia up in a table and apply them to a given problem. Below is a link showing the moments of inertia of the most common objects and the axis of which it is calculated about.</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/List_of_moments_of_inertia">Wikipedie has an extensive list of moments of inertia that is sufficient for this course.</a></p>
@@ -585,7 +584,7 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b8-1-6-the-parallel-axis-theorem">
-<h2>B8.1.6 The Parallel Axis Theorem<a class="headerlink" href="#b8-1-6-the-parallel-axis-theorem" title="Permalink to this heading">#</a></h2>
+<h2>B8.1.6 The Parallel Axis Theorem<a class="headerlink" href="#b8-1-6-the-parallel-axis-theorem" title="Permalink to this headline">#</a></h2>
 <p>The last piece of the puzzle!</p>
 <div class="alert alert-success">
 <p>If we know the moment of inertia around an axis through the <i>Center of Mass</i> (CM) of an object with mass M: <span class="math notranslate nohighlight">\(I_{CM}\)</span>, then the moment of inertia through <strong>any</strong> axis <strong>parallel</strong> to the axis through the CM is given by
