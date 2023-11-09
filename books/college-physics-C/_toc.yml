@@ -50,6 +50,7 @@ parts:
   - file: Module-C6/Conservative-forces
   - file: Module-C6/Potential-energy
   - file: Module-C6/Conservation-energy
+  - file: Module-C6/Power
   - file: Module-C6/problemsC6
 - caption: Equation Sheet C Exam
   chapters:
