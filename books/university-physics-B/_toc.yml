@@ -84,4 +84,5 @@ parts:
   chapters:
   - file: Module-B10/rotational-work
   - file: Module-B10/work-energy-pure-rotation
+  - file: Module-B10/Power
   - file: Module-B10/problemsB10
