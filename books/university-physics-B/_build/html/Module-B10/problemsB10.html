@@ -440,7 +440,8 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="mf">12.0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="n">M</span> <span class="o">=</span> <span class="mf">12.0</span>
 <span class="n">R1</span> <span class="o">=</span> <span class="mf">0.280</span>
 <span class="n">R2</span> <span class="o">=</span> <span class="mf">0.330</span>
 <span class="n">omega</span> <span class="o">=</span> <span class="mf">120.0</span>
@@ -477,7 +478,8 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v_t</span> <span class="o">=</span> <span class="mf">20.0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="n">v_t</span> <span class="o">=</span> <span class="mf">20.0</span>
 <span class="n">R</span> <span class="o">=</span> <span class="mf">0.480</span>
 <span class="n">I</span> <span class="o">=</span> <span class="mf">0.500</span>
 
@@ -518,7 +520,8 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">M</span> <span class="o">=</span> <span class="mf">2.0</span>
 <span class="n">R</span> <span class="o">=</span> <span class="mf">0.50</span>
@@ -574,7 +577,8 @@ Kinetic energy: 621.7850772686296
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">M</span> <span class="o">=</span> <span class="mf">10.0</span>
 <span class="n">R</span> <span class="o">=</span> <span class="mf">0.120</span>
@@ -642,7 +646,9 @@ Number of turns: 294.5243112740431
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">omega1</span> <span class="o">=</span> <span class="mf">0.0</span>
 <span class="n">omega2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1000.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="mf">60.0</span><span class="p">)</span>
@@ -694,9 +700,11 @@ Power at t = 3 s: 104719.75511965976
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
 
-<span class="n">M</span> <span class="o">-</span> <span class="mf">1.0</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="mf">1.0</span>
 <span class="n">R</span> <span class="o">=</span> <span class="mf">0.50</span>
 <span class="n">D</span> <span class="o">=</span> <span class="mf">3.0</span>  
 <span class="n">Omega1</span> <span class="o">=</span> <span class="p">(</span><span class="mf">400.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="mf">60.0</span><span class="p">)</span>
@@ -714,7 +722,7 @@ Power at t = 3 s: 104719.75511965976
 <span class="n">Omega2</span> <span class="o">=</span> <span class="n">Omega1</span> <span class="o">+</span> <span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">I</span><span class="p">)</span>
 
 <span class="c1">#Power = T*omega</span>
-<span class="n">P</span> <span class="o">=</span> <span class="n">T</span><span class="o">*</span><span class="n">omega2</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">T</span><span class="o">*</span><span class="n">Omega2</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Power at 100 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">P</span><span class="p">))</span>
 </pre></div>
@@ -727,7 +735,7 @@ Power at t = 3 s: 104719.75511965976
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Power at 100 s: -47.12388980384689
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Power at 100 s: -16.624281196264036
 </pre></div>
 </div>
 </div>
@@ -749,7 +757,9 @@ Power at t = 3 s: 104719.75511965976
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
 <span class="n">R</span> <span class="o">=</span> <span class="mf">0.25</span>
 <span class="n">F</span> <span class="o">=</span> <span class="mf">40.0</span>
@@ -769,10 +779,10 @@ Power at t = 3 s: 104719.75511965976
 <span class="c1">#rotational work-energy theorem: W = dK</span>
 <span class="n">Omega1</span> <span class="o">=</span> <span class="mf">0.0</span>
 <span class="c1">#unknown</span>
-<span class="n">omega2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;omega2&#39;</span><span class="p">)</span>
+<span class="n">Omega2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;omega2&#39;</span><span class="p">)</span>
 
-<span class="n">eq</span> <span class="o">=</span> <span class="n">W</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">I</span><span class="o">*</span><span class="n">omega2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">I</span><span class="o">*</span><span class="n">omega1</span><span class="o">**</span><span class="mi">2</span>
-<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">omega2</span><span class="p">)</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">W</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">I</span><span class="o">*</span><span class="n">Omega2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">I</span><span class="o">*</span><span class="n">Omega1</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">Omega2</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 1: Angular velocity: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Comment: negative is CW rotation or into the plane shown in the figure.&#39;</span><span class="p">)</span>
@@ -792,7 +802,9 @@ Power at t = 3 s: 104719.75511965976
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Part 1: Angular velocity: -8.16496580927726
-Comment: negative is CW rotation or into the plane shown in the figure.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Comment: negative is CW rotation or into the plane shown in the figure.
 Part 2: Same...the disk do not care about the source of the force.
 </pre></div>
 </div>
