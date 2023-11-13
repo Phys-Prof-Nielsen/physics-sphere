@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-A1/Numerical-methods';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="A Competency Approach to Introductory Physics: A Compendium to the B Exam" href="../intro.html" />
+    <link rel="prev" title="A Competency Approach to Introductory Physics: A Compendium to the A Exam" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -152,7 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    A Competency Approach to Introductory Physics: A Compendium to the B Exam
+                    A Competency Approach to Introductory Physics: A Compendium to the A Exam
                 </a>
             </li>
         </ul>
@@ -439,8 +439,6 @@ be: how big is this error? We will provide a more rigorous approach next that wi
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
 \[ \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} \sim \left.\frac{df}{dx}\right |_{x = x_0} \tag{2}\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;/div&gt;
-</pre></div>
 </div>
 <p>Notice that we change the “=” to “~” since we are now approximating it. We also notice that this approximation is similar to the linearization in Equation (1). However, there is one important element that sets the two
 approaches apart. Whereas the error in the linearization was unknown,
@@ -517,7 +515,7 @@ Consider the following differential equation with the condition that <span class
 <div class="math notranslate nohighlight">
 \[ \left.\frac{dy}{dx}\right |_{x = x_i} \sim \frac{y_{i+1} - y_i}{x_{i+1}- x_i} \]</div>
 <p>In the numerical approach, we will start at our initial data point <span class="math notranslate nohighlight">\((y_0, x_0)
-= (0,0)\)</span> and progress towards <span class="math notranslate nohighlight">\(x = 5\)</span> in chosen steps of <span class="math notranslate nohighlight">\(\Delta x = x_{i+1} - x_i\)</span>. We call <span class="math notranslate nohighlight">\(\Delta x\)</span> the <span style="color:red">step size</span> and the process is called an <span style="color:red">iterative process</span>.</p>
+= (0,0)\)</span> and progress towards <span class="math notranslate nohighlight">\(x = 5\)</span> in chosen steps of <span class="math notranslate nohighlight">\(\Delta x = x_{i+1} - x_i\)</span>. We call <span class="math notranslate nohighlight">\(\Delta x\)</span> the <strong>step size</strong> and the process is called an <strong>iterative process</strong>.</p>
 <p>Note: in a computational physics
 course, we would learn more about how to make a proper choice regarding
 this step size to obtain the most accurate solution without jeopardizing computer speed, but it is beyond the scope of this course.</p>
@@ -534,35 +532,31 @@ this step size to obtain the most accurate solution without jeopardizing compute
 Let’s try and iterate it in the interval <span class="math notranslate nohighlight">\(x = [0,5]\)</span> in step sizes of 1:</p>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>x</p></th>
-<th class="head"><p></p></th>
-<th class="head"><p>y</p></th>
+<tr class="row-odd"><th class="text-left head"><p>x</p></th>
+<th class="text-left head"><p>y</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_0 = 0\)</span></p></td>
-<td><p>,</p></td>
-<td><p><span class="math notranslate nohighlight">\(y_0 = 0\)</span></p></td>
+<tr class="row-even"><td class="text-left"><p><img width=100/></p></td>
+<td class="text-left"><p><img width=600/></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_1 = 1\)</span></p></td>
-<td><p>,</p></td>
-<td><p><span class="math notranslate nohighlight">\(y_1 = y_0 + x_{0}^2\Delta t = 0 + (0)^2(1) = 0 \)</span></p></td>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(x_0 = 0\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(y_0 = 0\)</span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_2 = 2\)</span></p></td>
-<td><p>,</p></td>
-<td><p><span class="math notranslate nohighlight">\(y_2 = y_1 + x_{1}^2\Delta t = 0 + (1)^2(1) = 1 \)</span></p></td>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(x_1 = 1\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(y_1 = y_0 + x_{0}^2\Delta t = 0 + (0)^2(1) = 0 \)</span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_3 = 3\)</span></p></td>
-<td><p>,</p></td>
-<td><p><span class="math notranslate nohighlight">\(y_3 = y_2 + x_{2}^2\Delta t = 1 + (2)^2(1) = 5 \)</span></p></td>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(x_2 = 2\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(y_2 = y_1 + x_{1}^2\Delta t = 0 + (1)^2(1) = 1 \)</span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_4 = 4\)</span></p></td>
-<td><p>,</p></td>
-<td><p><span class="math notranslate nohighlight">\(y_4 = y_3 + x_{3}^2\Delta t = 5 + (3)^2(1) = 14 \)</span></p></td>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(x_3 = 3\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(y_3 = y_2 + x_{2}^2\Delta t = 1 + (2)^2(1) = 5 \)</span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_5 = 5\)</span></p></td>
-<td><p>,</p></td>
-<td><p><span class="math notranslate nohighlight">\(y_5 = y_4 + x_{4}^2\Delta t = 14 + (4)^2(1) = 30 \)</span></p></td>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(x_4 = 4\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(y_4 = y_3 + x_{3}^2\Delta t = 5 + (3)^2(1) = 14 \)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(x_5 = 5\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(y_5 = y_4 + x_{4}^2\Delta t = 14 + (4)^2(1) = 30 \)</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -572,27 +566,26 @@ Let’s try and iterate it in the interval <span class="math notranslate nohighl
 <p>A quick comparison between the analytical solution (42) and the numerical (30) will tell us that we are quite
 a bit off. However, we used a large step
 size (<span class="math notranslate nohighlight">\(\Delta x = 1\)</span>), and the function is changing
-significantly over this large step size. <span style="color:red">We
-should choice a step size over which the function is not varying significantly</span>. Let us try and repeat the process with a stepsize of <span class="math notranslate nohighlight">\(\Delta x = 0.1\)</span>:</p>
+significantly over this large step size. <strong>We
+should choice a step size over which the function is not varying significantly</strong>. Let us try and repeat the process with a stepsize of <span class="math notranslate nohighlight">\(\Delta x = 0.1\)</span>:</p>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>x</p></th>
-<th class="head"><p></p></th>
-<th class="head"><p>y</p></th>
+<tr class="row-odd"><th class="text-left head"><p>x</p></th>
+<th class="text-left head"><p>y</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_0 = 0\)</span></p></td>
-<td><p>,</p></td>
-<td><p><span class="math notranslate nohighlight">\(y_0 = 0\)</span></p></td>
+<tr class="row-even"><td class="text-left"><p><img width=100/></p></td>
+<td class="text-left"><p><img width=600/></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_1 = 0.1\)</span></p></td>
-<td><p>,</p></td>
-<td><p><span class="math notranslate nohighlight">\(y_1 = y_0 + x_{0}^2\Delta t = 0 + (0)^2(1) = 0 \)</span></p></td>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(x_0 = 0\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(y_0 = 0\)</span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_2 = 0.2\)</span></p></td>
-<td><p>,</p></td>
-<td><p><span class="math notranslate nohighlight">\(y_2 = y_1 + x_{1}^2\Delta t = 0 + (0.1)^2(1) = 0.01 \)</span></p></td>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(x_1 = 0.1\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(y_1 = y_0 + x_{0}^2\Delta t = 0 + (0)^2(1) = 0 \)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(x_2 = 0.2\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(y_2 = y_1 + x_{1}^2\Delta t = 0 + (0.1)^2(1) = 0.01 \)</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -748,7 +741,7 @@ should choice a step size over which the function is not varying significantly</
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">A Competency Approach to Introductory Physics: A Compendium to the B Exam</p>
+        <p class="prev-next-title">A Competency Approach to Introductory Physics: A Compendium to the A Exam</p>
       </div>
     </a>
 </div></div>
