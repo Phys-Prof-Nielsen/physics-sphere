@@ -491,6 +491,11 @@ computer script):</p>
 \[ \frac{f_{i+1} - f_i}{x_{i+1}- x_i} \sim \left.\frac{df}{dx}\right |_{x = x_i} \tag{3} \]</div>
 </div>
 <p>Equation (3) is the form we will implement as our numerical tool. While it would be great if you understand all the steps above, it is certainly not a requirement in this course. The applications are the essential and we will see some examples now.</p>
+<div class="alert alert-info">
+<p>Given a single data point <span class="math notranslate nohighlight">\([x_0, f(x_0)]\)</span> and a <strong>model</strong> for the derivative, we can make discrete <strong>linear</strong> steps to obtain a solution:</p>
+<div class="math notranslate nohighlight">
+\[ f_{i+1} = f_i + f_{i}'\Delta x\]</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
 <header>
 <h3> Example 1</h3>
