@@ -16,3 +16,6 @@ parts:
   - file: Module-A1/Uniform-circular-motion
   - file: Module-A1/problemsA1
   
+- caption: Module A2 - Numerical Method
+  chapters:
+  - file: Module-A2/Numerical-methods
