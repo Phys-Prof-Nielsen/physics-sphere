@@ -1,0 +1,15 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Preample
+  chapters:
+  - file: Preample/Motivation
+  - file: Preample/Structure
+  - file: Preample/Learning_Outcomes 
+
+- caption: Module A1 - Numerical Method
+  chapters:
+  - file: Module-A1/Numerical-methods
