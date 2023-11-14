@@ -15,3 +15,5 @@ parts:
   - file: Module-A1/Taylor-expansions
   - file: Module-A1/Numerical-methods
   - file: Module-A1/Numerical-methods-practice
+  - file: Module-A1/Project-1-Covid-19
+  
