@@ -13,3 +13,4 @@ parts:
 - caption: Module A1 - Numerical Method
   chapters:
   - file: Module-A1/Numerical-methods
+  - file: Module-A1/Numerical-methods-practice
