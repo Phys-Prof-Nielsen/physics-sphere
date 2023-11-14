@@ -358,17 +358,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a1-2-2-suggested-solving-strategies">A1.2.2 Suggested Solving Strategies</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strategy-a-equation-1">Strategy A: Equation 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strategy-b-equation-2">Strategy B: Equation 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">Step 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">Step 2</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">Step 3</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4">Step 4</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5">Step 5</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6">Step 6</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7">Step 7</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8">Step 8</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -437,75 +426,58 @@ where the index $i$ is a notation indicating that we have knowledge of the funct
 <div class="math notranslate nohighlight">
 \[ a(t) = vt + 1 \]</div>
 <p>in the positive x-direction. At <span class="math notranslate nohighlight">\(t = 0\)</span> s the velocity is <span class="math notranslate nohighlight">\(+1.00\)</span> m/s. Find the velocity at <span class="math notranslate nohighlight">\(t = 3\)</span> s.</p>
-</section>
-<section id="solution">
-<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h3>
+<p><strong>Solution</strong></p>
 <p>We will follow the suggested steps above:</p>
-<section id="step-1">
-<h4>Step 1<a class="headerlink" href="#step-1" title="Permalink to this heading">#</a></h4>
+<p><strong>Step 1</strong></p>
 <p>The derivative is not explicitly written out. However, the acceleration is the derivative of the velocity:</p>
 <div class="math notranslate nohighlight">
 \[ \frac{dv}{dt} = vt + 1 \]</div>
 <p>We have now identified the derivative.</p>
-</section>
-<section id="step-2">
-<h4>Step 2<a class="headerlink" href="#step-2" title="Permalink to this heading">#</a></h4>
+<p><strong>Step 2</strong></p>
 <p>In this step, we isolate the derivative on the left side of the equation. Well, that is alerady done:</p>
 <div class="math notranslate nohighlight">
 \[ \frac{dv}{dt} = vt + 1 \]</div>
-</section>
-<section id="step-3">
-<h4>Step 3<a class="headerlink" href="#step-3" title="Permalink to this heading">#</a></h4>
+<p><strong>Step 3</strong></p>
 <p>Here we replace the derivative with the finite difference approximation:</p>
 <div class="math notranslate nohighlight">
 \[ \frac{v_{i+1} - v_{i}}{\Delta t} = vt + 1 \]</div>
-</section>
-<section id="step-4">
-<h4>Step 4<a class="headerlink" href="#step-4" title="Permalink to this heading">#</a></h4>
+<p><strong>Step 4</strong></p>
 <p>We identify <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(t\)</span> as variables on the right side of the equation, and attach subscript <span class="math notranslate nohighlight">\(i\)</span> to both of them:</p>
 <div class="math notranslate nohighlight">
 \[ \frac{v_{i+1} - v_{i}}{\Delta t} = v_{i}t_{i} + 1 \]</div>
-</section>
-<section id="step-5">
-<h4>Step 5<a class="headerlink" href="#step-5" title="Permalink to this heading">#</a></h4>
+<p><strong>Step 5</strong></p>
 <p>Solve for the value to be updated (or the forward value):</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
 \[ v_{i+1} = v_{i} + (v_{i}t_{i} + 1)\Delta t \]</div>
 </div>
 <p>This is our <strong>iterative equation</strong>.</p>
-</section>
-<section id="step-6">
-<h4>Step 6<a class="headerlink" href="#step-6" title="Permalink to this heading">#</a></h4>
+<p><strong>Step 6</strong></p>
 <p>Assume we are doing this on paper first: choose <span class="math notranslate nohighlight">\(\Delta t = 1\)</span> s.</p>
-</section>
-<section id="step-7">
-<h4>Step 7<a class="headerlink" href="#step-7" title="Permalink to this heading">#</a></h4>
+<p><strong>Step 7</strong></p>
 <p>Our initial condition is <span class="math notranslate nohighlight">\((t_0, f_0) = (0, 1)\)</span>. Inserting into our iterative equation, we get:</p>
 <div class="math notranslate nohighlight">
 \[ v_{1} = v_{0} + (v_{0}t_{0} + 1)\Delta t \]</div>
 <div class="math notranslate nohighlight">
-\[ v_{1} = (1.00) + [(1.00)(0) + 1)](1) \]</div>
+\[ v_{1} = (1.00) + [(1.00)(0) + (1)](1) \]</div>
 <div class="math notranslate nohighlight">
 \[ v_{1} = 2.00~\textrm{m/s} \]</div>
-</section>
-<section id="step-8">
-<h4>Step 8<a class="headerlink" href="#step-8" title="Permalink to this heading">#</a></h4>
+<p><strong>Step 8</strong></p>
 <p>We repeat Step 7 until we reach our desired time:</p>
 <div class="math notranslate nohighlight">
 \[ v_{2} = v_{1} + (v_{1}t_{1} + 1)\Delta t \]</div>
 <div class="math notranslate nohighlight">
-\[ v_{2} = (2.00) + [(2.00)(1) + 1)](1) \]</div>
+\[ v_{2} = (2.00) + [(2.00)(1) + (1)](1) \]</div>
 <div class="math notranslate nohighlight">
 \[ v_{2} = 5.00~\textrm{m/s} \]</div>
 <div class="math notranslate nohighlight">
 \[ v_{3} = v_{2} + (v_{2}t_{2} + 1)\Delta t \]</div>
 <div class="math notranslate nohighlight">
-\[ v_{3} = (5.00) + [(5.00)(2) + 1)](1) \]</div>
+\[ v_{3} = (5.00) + [(5.00)(2) + (1)](1) \]</div>
 <div class="math notranslate nohighlight">
 \[ v_{3} = 16.0~\textrm{m/s} \]</div>
-<div class="alert alert-success">
-<p>At t = 3 s, the particle is moving with a velocity of 16.0 m/s in the positive x-direction.</p>
+<div class="alert alert-success">    
+At t = 3 s, the particle is moving with a velocity of 16.0 m/s in the positive x-direction.
 </div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
@@ -533,7 +505,6 @@ we are now writing it as two coupled first-order derivatives: <span class="math 
 {dt}\)</span> and <span class="math notranslate nohighlight">\(v = \frac{dx}{dt}\)</span> . Pretty cool, eh?</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-</section>
 </section>
 </section>
 
@@ -599,17 +570,6 @@ we are now writing it as two coupled first-order derivatives: <span class="math 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a1-2-2-suggested-solving-strategies">A1.2.2 Suggested Solving Strategies</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strategy-a-equation-1">Strategy A: Equation 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strategy-b-equation-2">Strategy B: Equation 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">Step 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">Step 2</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">Step 3</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4">Step 4</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5">Step 5</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6">Step 6</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7">Step 7</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8">Step 8</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
