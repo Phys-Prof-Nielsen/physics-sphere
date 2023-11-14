@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>A1.3 Numerical Methods - Practice &#8212; A Competency Approach to Introductory Physics</title>
+    <title>Realistic Projectile Motion Project 2: Artillery &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -63,10 +63,9 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-A1/Numerical-methods-practice';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-A1/Project-2-Artillery';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="A1.2 Numerical Integration: Finite Difference Methods" href="Numerical-methods.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -158,10 +157,10 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module A1 - Numerical Method</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Taylor-expansions.html">A1.1 Taylor Expansions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Numerical-methods.html">A1.2 Numerical Integration: Finite Difference Methods</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">A1.3 Numerical Methods - Practice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Numerical-methods-practice.html">A1.3 Numerical Methods - Practice</a></li>
 </ul>
 
     </div>
@@ -233,7 +232,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-A1/Numerical-methods-practice.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-A1/Project-2-Artillery.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -263,7 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-A1/Numerical-methods-practice.ipynb" target="_blank"
+      <li><a href="../_sources/Module-A1/Project-2-Artillery.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -345,7 +344,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>A1.3 Numerical Methods - Practice</h1>
+    <h1>Realistic Projectile Motion Project 2: Artillery</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -355,12 +354,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a1-3-1-finite-difference-method">A1.3.1 Finite Difference Method</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a1-3-2-suggested-solving-strategies">A1.3.2 Suggested Solving Strategies</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strategy-a-equation-1">Strategy A: Equation 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strategy-b-equation-2">Strategy B: Equation 2</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem">Problem</a></li>
 </ul>
             </nav>
         </div>
@@ -372,140 +366,35 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="a1-3-numerical-methods-practice">
-<h1>A1.3 Numerical Methods - Practice<a class="headerlink" href="#a1-3-numerical-methods-practice" title="Permalink to this heading">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a1-3-1-finite-difference-method">
-<h2>A1.3.1 Finite Difference Method<a class="headerlink" href="#a1-3-1-finite-difference-method" title="Permalink to this heading">#</a></h2>
-<p>In many real-life applications, we deal with differential equations that can not be solved through standard methods
-(for example through integration). Some examples are scenarios where acceleration (and/or velocity) is time and/or
-position dependent and we want to know something about velocity (and/or position). Other examples occur when
-we include frictional interactions in Netwon’s Laws, which in many cases we are left with problems that require numerical methods.</p>
-<p>We have explored one numerical integration method: the <strong>forward finite difference method</strong>. This method may be applicable
-when we are dealing with a first-order differential equation. In this case, the derivative is approximated through finite
-differences. Often our variable of interest <span class="math notranslate nohighlight">\(f\)</span> is a function of time <span class="math notranslate nohighlight">\(t\)</span> such that <span class="math notranslate nohighlight">\(f(t)\)</span>, then its derivative approximates as</p>
-<div class="alert alert-success">
+  <section class="tex2jax_ignore mathjax_ignore" id="realistic-projectile-motion-project-2-artillery">
+<h1>Realistic Projectile Motion Project 2: Artillery<a class="headerlink" href="#realistic-projectile-motion-project-2-artillery" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<p>In this project, you will use numerical methods to solve a realistic projectile motion problem. Please turn in <strong>one</strong> scientific report per group (Jupyter or PDF file through canvas) with all the information required.</p>
+<p>The groups are the MS TEAMS groups.</p>
+<p>You can follow/use the Project 1 Example report that I made as a template for this project.</p>
+<hr class="docutils" />
+<section id="problem">
+<h2>Problem<a class="headerlink" href="#problem" title="Permalink to this heading">#</a></h2>
+<p>Explosive cannon shells launched from a small howitzer is a common tool to prevent avalanche danger by intentionally triggering smaller avalanches in areas prone to serious avalanche danger.</p>
+<p><img alt="howitzer1.jpg" src="Module-A1/attachment:howitzer1.jpg" /></p>
+<p>Obviously, it is of great interest to make
+sure the cannon shell hits the target area. In fact, Utah is a dangeorus place to live:
+<a class="reference external" href="https://www.deseret.com/2005/3/29/19883755/shell-shocked-errant-avalanche-bomb-rips-pleasant-grove-home">Shell shocked: Errant avalanche bomb rips Pleasant Grove home</a></p>
+<p>Assume a muzzle velocity of 1000.0 m/s
+and a drag acceleration given by</p>
 <div class="math notranslate nohighlight">
-\[ \frac{df}{dt} \sim \frac{f_{i+1} - f_i}{t_{i+1}- t_i} = \frac{f_{i+1} - f_i}{\Delta t} \tag{1}\]</div>
-</div>
-<p>where the index <span class="math notranslate nohighlight">\(i\)</span> is a notation indicating that we have knowledge of the function values at some time <span class="math notranslate nohighlight">\(t_i\)</span> while the next “step” <span class="math notranslate nohighlight">\(t_{i+1}\)</span> is unknown but is what we want to solve for. Hence, this method is an iterative approach and is one example of a numerical integration. <strong>It requires an initial data point <span class="math notranslate nohighlight">\((t_i,f_i(t_i)\)</span> to start the iterative process</strong>.</p>
-<p><strong>Alternative Explanation</strong></p>
-<p>We are given a <strong>data point</strong> <span class="math notranslate nohighlight">\([x_0, f(x_0)]\)</span> and a <strong>model</strong> for the <strong>instantaneous slope</strong> <span class="math notranslate nohighlight">\(f'\)</span>. The <strong>iterative equation</strong> is</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ f_{i+1} = f_{i} + f_{i}'\Delta x \tag{2}\]</div>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="a1-3-2-suggested-solving-strategies">
-<h2>A1.3.2 Suggested Solving Strategies<a class="headerlink" href="#a1-3-2-suggested-solving-strategies" title="Permalink to this heading">#</a></h2>
-<section id="strategy-a-equation-1">
-<h3>Strategy A: Equation 1<a class="headerlink" href="#strategy-a-equation-1" title="Permalink to this heading">#</a></h3>
+\[ a_{drag} = -\frac{B}{m}v^2 \]</div>
+<p>where <span class="math notranslate nohighlight">\(\frac{B}{m} = 4.00\times 10^{-5}\)</span> m<span class="math notranslate nohighlight">\(^{-1}\)</span></p>
+<p>address the following objectives:</p>
 <ol class="arabic simple">
-<li><p>Identify the derivative in the equation presented.</p></li>
-<li><p>Isolate the derivative on one side of the equation.</p></li>
-<li><p>Replace the derivative: <span class="math notranslate nohighlight">\( \frac{df}{dt} \rightarrow \frac{f_{i+1} - f_i}{\Delta t} \)</span> according to Equation (1).</p></li>
-<li><p>On the other side of the equation, attach subscripts {i} on all the variables. We should know these values at some initial time (does not have to be zero).</p></li>
-<li><p>Solve the algebraic equation for <span class="math notranslate nohighlight">\(f_{i+1}\)</span>. This is our <strong>iterative equation</strong>.</p></li>
-<li><p>Choose a time step <span class="math notranslate nohighlight">\(\Delta t\)</span>. If solving on paper, choose <span class="math notranslate nohighlight">\(\Delta t = 1\)</span> unless otherwise stated. If using a computer to solve the numerical problem, we can choose a smaller step size. The rule of thumb is: <b>the function we are evaluating can not change considerably over one time step. If it does, we may expect large errors in the approximation</b>.</p></li>
-<li><p>Use the initial condition <span class="math notranslate nohighlight">\((t_0, f_0)\)</span> to calculate <span class="math notranslate nohighlight">\((t_1,f_1)\)</span> with <span class="math notranslate nohighlight">\(t_1 = t_0 + \Delta t\)</span>.</p></li>
-<li><p>Repeat step 7 as many times as needed.</p></li>
+<li><p>Without air drag, what is the maximum range and altitude of the shell?</p></li>
+<li><p>Including air drag, what is the maximum range and altitude of the shell?</p></li>
+<li><p>One thing we notice from addressing objectives (1) and (2), is the high altitude the shell is reaching. One may therefore consider potential effects of atmospheric density on the frictional force. The atmospheric density can be modeled by the adiabatic approximation
+$<span class="math notranslate nohighlight">\( \rho = \rho_{0}\left(1 - \frac{ay}{T_0} \right)^\alpha \)</span><span class="math notranslate nohighlight">\(
+Here \)</span>\rho_0<span class="math notranslate nohighlight">\( is the air density at sea level, \)</span>a = 6.5 \times 10^{−3}<span class="math notranslate nohighlight">\( K/m is the adiabatic lapse rate, \)</span>T_0<span class="math notranslate nohighlight">\( is the temperature at sea level (pick an appropriate value), and \)</span>\alpha = 2.5<span class="math notranslate nohighlight">\( for air. The modified drag acceleration then becomes a function of altitude (or y)
+\)</span><span class="math notranslate nohighlight">\( a_{drag} = \frac{\rho}{\rho_0}a_{drag}( y = 0) \)</span><span class="math notranslate nohighlight">\(
+where \)</span>a_{drag}( y = 0)$ is the original drag acceleration at sea le</p></li>
 </ol>
-</section>
-<section id="strategy-b-equation-2">
-<h3>Strategy B: Equation 2<a class="headerlink" href="#strategy-b-equation-2" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Identify the instantaneous slope given.</p></li>
-<li><p>Insert the instantaneous slope into Equation (2). This is our <strong>iterative equation</strong>.</p></li>
-<li><p>Choose a time step <span class="math notranslate nohighlight">\(\Delta t\)</span>. If solving on paper, choose <span class="math notranslate nohighlight">\(\Delta t = 1\)</span> unless otherwise stated. If using a computer to solve the numerical problem, we can choose a smaller step size. The rule of thumb is: <b>the function we are evaluating can not change considerably over one time step. If it does, we may expect large errors in the approximation</b>.</p></li>
-<li><p>Use the initial condition <span class="math notranslate nohighlight">\((t_0, f_0)\)</span> to calculate <span class="math notranslate nohighlight">\((t_1,f_1)\)</span> with <span class="math notranslate nohighlight">\(t_1 = t_0 + \Delta t\)</span>.</p></li>
-<li><p>Repeat step 5 as many times as needed.</p></li>
-</ol>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
-<header>
-<h3> Example 1</h3>
-    </header>
-<p>The acceleration of a particle is given by</p>
-<div class="math notranslate nohighlight">
-\[ a(t) = vt + 1 \]</div>
-<p>in the positive x-direction. At <span class="math notranslate nohighlight">\(t = 0\)</span> s the velocity is <span class="math notranslate nohighlight">\(+1.00\)</span> m/s. Find the velocity at <span class="math notranslate nohighlight">\(t = 3\)</span> s.</p>
-<p><strong>Solution</strong></p>
-<p>We will follow the suggested steps above:</p>
-<p><strong>Step 1</strong></p>
-<p>The derivative is not explicitly written out. However, the acceleration is the derivative of the velocity:</p>
-<div class="math notranslate nohighlight">
-\[ \frac{dv}{dt} = vt + 1 \]</div>
-<p>We have now identified the derivative.</p>
-<p><strong>Step 2</strong></p>
-<p>In this step, we isolate the derivative on the left side of the equation. Well, that is alerady done:</p>
-<div class="math notranslate nohighlight">
-\[ \frac{dv}{dt} = vt + 1 \]</div>
-<p><strong>Step 3</strong></p>
-<p>Here we replace the derivative with the finite difference approximation:</p>
-<div class="math notranslate nohighlight">
-\[ \frac{v_{i+1} - v_{i}}{\Delta t} = vt + 1 \]</div>
-<p><strong>Step 4</strong></p>
-<p>We identify <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(t\)</span> as variables on the right side of the equation, and attach subscript <span class="math notranslate nohighlight">\(i\)</span> to both of them:</p>
-<div class="math notranslate nohighlight">
-\[ \frac{v_{i+1} - v_{i}}{\Delta t} = v_{i}t_{i} + 1 \]</div>
-<p><strong>Step 5</strong></p>
-<p>Solve for the value to be updated (or the forward value):</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ v_{i+1} = v_{i} + (v_{i}t_{i} + 1)\Delta t \]</div>
-</div>
-<p>This is our <strong>iterative equation</strong>.</p>
-<p><strong>Step 6</strong></p>
-<p>Assume we are doing this on paper first: choose <span class="math notranslate nohighlight">\(\Delta t = 1\)</span> s.</p>
-<p><strong>Step 7</strong></p>
-<p>Our initial condition is <span class="math notranslate nohighlight">\((t_0, f_0) = (0, 1)\)</span>. Inserting into our iterative equation, we get:</p>
-<div class="math notranslate nohighlight">
-\[ v_{1} = v_{0} + (v_{0}t_{0} + 1)\Delta t \]</div>
-<div class="math notranslate nohighlight">
-\[ v_{1} = (1.00) + [(1.00)(0) + (1)](1) \]</div>
-<div class="math notranslate nohighlight">
-\[ v_{1} = 2.00~\textrm{m/s} \]</div>
-<p><strong>Step 8</strong></p>
-<p>We repeat Step 7 until we reach our desired time:</p>
-<div class="math notranslate nohighlight">
-\[ v_{2} = v_{1} + (v_{1}t_{1} + 1)\Delta t \]</div>
-<div class="math notranslate nohighlight">
-\[ v_{2} = (2.00) + [(2.00)(1) + (1)](1) \]</div>
-<div class="math notranslate nohighlight">
-\[ v_{2} = 5.00~\textrm{m/s} \]</div>
-<div class="math notranslate nohighlight">
-\[ v_{3} = v_{2} + (v_{2}t_{2} + 1)\Delta t \]</div>
-<div class="math notranslate nohighlight">
-\[ v_{3} = (5.00) + [(5.00)(2) + (1)](1) \]</div>
-<div class="math notranslate nohighlight">
-\[ v_{3} = 16.0~\textrm{m/s} \]</div>
-<div class="alert alert-success">    
-At t = 3 s, the particle is moving with a velocity of 16.0 m/s in the positive x-direction.
-</div>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
-<b>Box 1</b><br>
-<p>The acceleration of a particle is given by</p>
-<div class="math notranslate nohighlight">
-\[ a(t) = \frac{1}{v} + 1 \]</div>
-<p>in the positive x-direction. At <span class="math notranslate nohighlight">\(t = 0\)</span> s the velocity is <span class="math notranslate nohighlight">\(+1.00\)</span> m/s. Find the velocity at <span class="math notranslate nohighlight">\(t = 3\)</span> s.</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
-<b>Box 2</b><br>
-<p>The velocity and position of a particle traveling in the +x direction is all tangled up in a mathematical mess that we do not know who integrate:</p>
-<div class="math notranslate nohighlight">
-\[ v + xt = t + t^2 \]</div>
-<p>At <span class="math notranslate nohighlight">\(t = 0\)</span> s the position is <span class="math notranslate nohighlight">\(0.00\)</span> m. Find the position at <span class="math notranslate nohighlight">\(t = 3\)</span> s.</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
-<b>Box 3</b><br>
-<p>Consider the particle problem in Box 1. Find the position at t = 3 s if the initial velocity is the same as in Box 1 and the initial position is x = 0 m. <br></p>
-<p>HINT: We have already calculated the velocity. Remember that <span class="math notranslate nohighlight">\(v = \frac{dx}
-{dt}\)</span> , so we can apply the numerical
-method on this relationship to find the new position x at each time step. In principle, we have <span class="math notranslate nohighlight">\(a = \frac{d^{2}x}{
-dt^2}\)</span> , but
-we are now writing it as two coupled first-order derivatives: <span class="math notranslate nohighlight">\(a = \frac{dv}
-{dt}\)</span> and <span class="math notranslate nohighlight">\(v = \frac{dx}{dt}\)</span> . Pretty cool, eh?</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 </section>
 
@@ -540,15 +429,6 @@ we are now writing it as two coupled first-order derivatives: <span class="math 
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="Numerical-methods.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">A1.2 Numerical Integration: Finite Difference Methods</p>
-      </div>
-    </a>
 </div></div>
   
 </div>
@@ -567,12 +447,7 @@ we are now writing it as two coupled first-order derivatives: <span class="math 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a1-3-1-finite-difference-method">A1.3.1 Finite Difference Method</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a1-3-2-suggested-solving-strategies">A1.3.2 Suggested Solving Strategies</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strategy-a-equation-1">Strategy A: Equation 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strategy-b-equation-2">Strategy B: Equation 2</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem">Problem</a></li>
 </ul>
   </nav></div>
 
