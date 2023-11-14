@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>A1.2 Newton’s 2nd Law: Uniform Circular Motion &#8212; A Competency Approach to Introductory Physics</title>
+    <title>A2.2 Numerical Methods - Practice &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -62,11 +62,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-A1/Uniform-circular-motion';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-A2/Numerical-methods-practice';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="A1.x Problems" href="problemsA1.html" />
-    <link rel="prev" title="A1.1 Kinematics in Polar Coordinates" href="Polar-coordinates.html" />
+    <link rel="prev" title="A2.1 Numerical Integration: Finite Difference Methods" href="Numerical-methods.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -158,15 +157,15 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module A1 - Advanced Dynamics</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Polar-coordinates.html">A1.1 Kinematics in Polar Coordinates</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">A1.2 Newton’s 2nd Law: Uniform Circular Motion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="problemsA1.html">A1.x Problems</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-A1/Polar-coordinates.html">A1.1 Kinematics in Polar Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-A1/Uniform-circular-motion.html">A1.2 Newton’s 2nd Law: Uniform Circular Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-A1/problemsA1.html">A1.x Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module A2 - Numerical Method</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Module-A2/Numerical-methods.html">A2.1 Numerical Integration: Finite Difference Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-A2/Numerical-methods-practice.html">A2.2 Numerical Methods - Practice</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Numerical-methods.html">A2.1 Numerical Integration: Finite Difference Methods</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">A2.2 Numerical Methods - Practice</a></li>
 </ul>
 
     </div>
@@ -238,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-A1/Uniform-circular-motion.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-A2/Numerical-methods-practice.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -268,7 +267,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-A1/Uniform-circular-motion.ipynb" target="_blank"
+      <li><a href="../_sources/Module-A2/Numerical-methods-practice.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -350,7 +349,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>A1.2 Newton’s 2nd Law: Uniform Circular Motion</h1>
+    <h1>A2.2 Numerical Methods - Practice</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -360,8 +359,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a1-2-1-newton-s-2nd-law-in-polar-coordinates">A1.2.1 Newton’s 2nd Law in Polar Coordinates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a1-2-2-uniform-circular-motion">A1.2.2 Uniform Circular Motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a2-2-1-finite-difference-method">A2.2.1 Finite Difference Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a2-2-2-solving-strategy">A2.2.2 Solving Strategy</a></li>
 </ul>
             </nav>
         </div>
@@ -373,104 +372,92 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="a1-2-newton-s-2nd-law-uniform-circular-motion">
-<h1>A1.2 Newton’s 2nd Law: Uniform Circular Motion<a class="headerlink" href="#a1-2-newton-s-2nd-law-uniform-circular-motion" title="Permalink to this headline">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a1-2-1-newton-s-2nd-law-in-polar-coordinates">
-<h2>A1.2.1 Newton’s 2nd Law in Polar Coordinates<a class="headerlink" href="#a1-2-1-newton-s-2nd-law-in-polar-coordinates" title="Permalink to this headline">#</a></h2>
-<p>Newton’s 2nd law on a point particle states that</p>
-<div class="math notranslate nohighlight">
-\[ \sum \vec{f} = m\vec{a} \]</div>
-<p>In 2D cartesian coordinates we split that into components:</p>
-<div class="math notranslate nohighlight">
-\[ \sum f_x = ma_x \]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[ \sum f_y = ma_y \]</div>
-<p>and analyzed each components to obtain our answers.</p>
-<p>The process is similar in polar coordinates, but instead of <span class="math notranslate nohighlight">\(xy\)</span>-components we use <span class="math notranslate nohighlight">\(r\theta\)</span>-components:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="a2-2-numerical-methods-practice">
+<h1>A2.2 Numerical Methods - Practice<a class="headerlink" href="#a2-2-numerical-methods-practice" title="Permalink to this headline">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a2-2-1-finite-difference-method">
+<h2>A2.2.1 Finite Difference Method<a class="headerlink" href="#a2-2-1-finite-difference-method" title="Permalink to this headline">#</a></h2>
+<p>In many real-life applications, we deal with differential equations that can not be solved through standard methods
+(for example through integration). Some examples are scenarios where acceleration (and/or velocity) is time and/or
+position dependent and we want to know something about velocity (and/or position). Other examples occur when
+we include frictional interactions in Netwon’s Laws, which in many cases we are left with problems that require numerical methods.</p>
+<p>We have explored one numerical integration method: the <strong>forward finite difference method</strong>. This method may be applicable when we are dealing with a first-order differential equation. In this case, the <strong>instantaneous slope</strong> (or derivative) is approximated through finite differences. Often our variable of interest <span class="math notranslate nohighlight">\(f\)</span> is a function of time <span class="math notranslate nohighlight">\(t\)</span>. Examples are velocity and position.</p>
+<p>To solve the problem, we must have a known <strong>starting data point</strong> and a <strong>model of the instantaneous slope</strong>. We can then made successive linear approximations to obtain the answer at a given time (or position) by using the following <strong>iterative equation</strong>:</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
-\[ \sum f_r = m\left( a_r + a_c \right) \]</div>
-<div class="math notranslate nohighlight">
-\[ \sum f_{\theta} = m\left( a_{co} +  a_{t} \right) \]</div>
+\[ f_{i+1} = f_{i} + f_{i}'\Delta t \tag{1}\]</div>
 </div>
-<p>where we used the radial and angular components of acceleration in polar coordinates.</p>
+<p>where the index <span class="math notranslate nohighlight">\(i\)</span> is a notation indicating that we have knowledge of the function values at some time <span class="math notranslate nohighlight">\(t_i\)</span> while the next “step” <span class="math notranslate nohighlight">\(t_{i+1}\)</span> is unknown but is what we want to solve for. This method is an iterative approach and is one example of a numerical integration. <strong>It requires an initial data point <span class="math notranslate nohighlight">\((t_i,f_i(t_i)\)</span> to start the iterative process</strong>.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="a1-2-2-uniform-circular-motion">
-<h2>A1.2.2 Uniform Circular Motion<a class="headerlink" href="#a1-2-2-uniform-circular-motion" title="Permalink to this headline">#</a></h2>
-<p>We will now assume uniform circular motion, that is, the object in interest moves in a <strong>circular path with constant speed</strong>. The consequences are:</p>
+<section id="a2-2-2-solving-strategy">
+<h2>A2.2.2 Solving Strategy<a class="headerlink" href="#a2-2-2-solving-strategy" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
-<li><p>The radius of the motion is constant: <span class="math notranslate nohighlight">\(r = R\)</span></p></li>
-<li><p>the radial speed and acceleration are zero: <span class="math notranslate nohighlight">\(v_r = a_r = 0\)</span></p></li>
-<li><p>The angular acceleration is zero: <span class="math notranslate nohighlight">\(\alpha = 0 \)</span></p></li>
+<li><p>Identify the instantaneous slope given.</p></li>
+<li><p>Insert the instantaneous slope into Equation (1). This is our <strong>iterative equation</strong>.</p></li>
+<li><p>Choose a time step <span class="math notranslate nohighlight">\(\Delta t\)</span>. If solving on paper, choose <span class="math notranslate nohighlight">\(\Delta t = 1\)</span> unless otherwise stated. If using a computer to solve the numerical problem, we can choose a smaller step size. The rule of thumb is: <b>the function we are evaluating can not change considerably over one time step. If it does, we may expect large errors in the approximation</b>.</p></li>
+<li><p>Use the initial condition <span class="math notranslate nohighlight">\((t_0, f_0)\)</span> to calculate <span class="math notranslate nohighlight">\((t_1,f_1)\)</span> with <span class="math notranslate nohighlight">\(t_1 = t_0 + \Delta t\)</span>.</p></li>
+<li><p>Repeat step 5 as many times as needed.</p></li>
 </ol>
-<p>Newton’s 2nd law then reduces to</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ \sum f_r = -mR\omega^2 \]</div>
-<br>
-<div class="math notranslate nohighlight">
-\[ \sum f_{\theta} = 0 \]</div>
-</div>
-<p><strong>The only acceleration term that survived the assumptions is the centripetal acceleration</strong>.</p>
-<p>We can write it in a more useful form as</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ \sum f_r = -m\frac{v_{\theta}^2}{R} \]</div>
-<br>
-<div class="math notranslate nohighlight">
-\[ \sum f_{\theta} = 0 \]</div>
-</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
 <header>
 <h3> Example 1</h3>
     </header>
-<p>A particle is moving in a uniform circular motion with a speed of 5.0 m/s and a radius of 0.20 m. What is its net acceleration?</p>
-<p><strong>Solution</strong></p>
-<p>Using polar coordinates, the net acceleration of a particle in uniform circular motion is simply the centripetal acceleration</p>
+<p>The acceleration of a particle is given by</p>
 <div class="math notranslate nohighlight">
-\[ \vec{a} = -\frac{v_{\theta}^2}{R}\hat{r} = -\frac{(5.0)^2}{(0.20)}\hat{r} = (-130~\textrm{m/s}^2)\hat{r} \]</div>
+\[ a(t) = vt + 1 \]</div>
+<p>in the positive x-direction. At <span class="math notranslate nohighlight">\(t = 0\)</span> s the velocity is <span class="math notranslate nohighlight">\(+1.00\)</span> m/s. Find the velocity at <span class="math notranslate nohighlight">\(t = 3\)</span> s.</p>
+<p><strong>Solution</strong></p>
+<p>We will follow the suggested steps above:</p>
+<p><strong>Step 1</strong></p>
+<p>The acceleration is the instantaneous slope of the velocity vs time graph:</p>
+<p><strong>Step 2</strong></p>
+<p>Insert the slope into the iterative equation:</p>
+<div class="math notranslate nohighlight">
+\[ v_{i+1} = v_{i} + (v_{i}t_{i} + 1)\Delta t \]</div>
+<p><strong>Step 3</strong></p>
+<p>With the information given, a time step of <span class="math notranslate nohighlight">\(\Delta t = 1\)</span> s is suitable for calculations by hand.</p>
+<p><strong>Step 4</strong></p>
+<p>Our initial condition is <span class="math notranslate nohighlight">\((t_0, f_0) = (0, 1)\)</span>. Inserting into our iterative equation, we get:</p>
+<div class="math notranslate nohighlight">
+\[ v_{1} = v_{0} + (v_{0}t_{0} + 1)\Delta t \]</div>
+<div class="math notranslate nohighlight">
+\[ v_{1} = (1.00) + [(1.00)(0) + (1)](1) \]</div>
+<div class="math notranslate nohighlight">
+\[ v_{1} = 2.00~\textrm{m/s} \]</div>
+<p><strong>Step 5</strong></p>
+<p>We repeat Step 4 until we reach our desired time:</p>
+<div class="math notranslate nohighlight">
+\[ v_{2} = v_{1} + (v_{1}t_{1} + 1)\Delta t \]</div>
+<div class="math notranslate nohighlight">
+\[ v_{2} = (2.00) + [(2.00)(1) + (1)](1) \]</div>
+<div class="math notranslate nohighlight">
+\[ v_{2} = 5.00~\textrm{m/s} \]</div>
+<div class="math notranslate nohighlight">
+\[ v_{3} = v_{2} + (v_{2}t_{2} + 1)\Delta t \]</div>
+<div class="math notranslate nohighlight">
+\[ v_{3} = (5.00) + [(5.00)(2) + (1)](1) \]</div>
+<div class="math notranslate nohighlight">
+\[ v_{3} = 16.0~\textrm{m/s} \]</div>
+<div class="alert alert-success">    
+At t = 3 s, the particle is moving with a velocity of 16.0 m/s in the positive x-direction.
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
-<header>
-<h3> Example 2</h3>
-    </header>
-<p>Calculate the net radial force on the end of a 100.0 m (radius) wind turbine blade that is rotating at 0.50 rev/s. Assume the mass is 4.0 kg.</p>
-<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/6-problems">https://openstax.org/books/university-physics-volume-1/pages/6-problems</a></p>
-<p><strong>Solution</strong></p>
-<p>Since this is uniform circular motion we know that the net angular force is zero and the net radial force is given by</p>
-<div class="math notranslate nohighlight">
-\[ \sum f_r = -m\frac{v_{\theta}^2}{R} \]</div>
-<p>In this case, we are given the angular speed (in rev/s) and it is more suitable to use the following form:</p>
-<div class="math notranslate nohighlight">
-\[ \sum f_r = -mR\dot{\theta}^2 \]</div>
-<p>Inserting our numbers in remembering to convert revolutions to radians:</p>
-<div class="math notranslate nohighlight">
-\[ \sum f_r = -(4.0)(100.0)(0.50)^{2}\left(\frac{2\pi}{1}\right)^2 = -39~\textrm{N}\]</div>
-<p>The negative sign simply informs us that the force is directed towards the center of the circular motion.</p>
-<p><strong>The net radial force is sometimes called the centripetal force</strong>. I find this very misleading as it suggest it is an individual force due to some interaction. It is not an interaction force, it is a net force.</p>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
-<header>
-<h3> Example 3</h3>
-    </header>
-<p>The <strong>Globe of Death</strong> is used in motorcycle stunt shows, where motorcycles ride inside a hollow sphere. The figure below shows a cross-section of such a sphere. As a motorcycle is making a vertical circular motion, what would be the required minimum speed to make such a maneuver in a globe of radius 2.5 m? Ignore friction.</p>
-<img src="B7-fig3.png"  width="300"/>
-<p><strong>Solution</strong></p>
-<p>In princible, this is not a uniform circular motion as the motorcycle is not likely maintain the same speed through out the loop. We can still apply the concept to the instant the motorcycle is at the very top since there is no radial motion and the angular acceleration does not influence the radial motion in this case.</p>
-<p>Since we are dealing with N2, we start with a free-body-diagram (the sketch were given in the problem). We have two forces: gravity and normal. The normal force is required to maintain contact between the motorcycle and the sphere.</p>
-<img src="B7-fig4.png"  width="150"/>
-<p>The reference frame is our polar coordinate system centered at the sphere. The outward direction is positive by default. We then have</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 1</b><br>
+<p>The acceleration of a particle is given by</p>
 <div class="math notranslate nohighlight">
-\[ \sum F_r = -M\frac{V_{\theta}^2}{R} \]</div>
-<p>Inserting our forces and noticing that both forces are towards the center (negative):</p>
+\[ a(t) = \frac{1}{v} + 1 \]</div>
+<p>in the positive x-direction. At <span class="math notranslate nohighlight">\(t = 0\)</span> s the velocity is <span class="math notranslate nohighlight">\(+1.00\)</span> m/s. Find the velocity at <span class="math notranslate nohighlight">\(t = 3\)</span> s.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 2</b><br>
+<p>The velocity and position of a particle traveling in the +x direction is all tangled up in a mathematical mess that we do not know who integrate:</p>
 <div class="math notranslate nohighlight">
-\[ - Mg - F_N = -M\frac{V_{\theta}^2}{R} \]</div>
-<p>where we used <span class="math notranslate nohighlight">\(F_g = Mg\)</span>.</p>
-<p>The minimum required speed is the speed at which the normal force is not zero. Setting the normal to zero and solving for the speed tells us that any speeds about that speed will provide contact:</p>
-<div class="math notranslate nohighlight">
-\[ V_{\theta} = \sqrt{gR} = \sqrt{(9.81)(2.5)} = 5.0~\textrm{m/s}\]</div>
-<p>Hence, the speed <strong>must</strong> be greater than 5.0 m/s.</p>
+\[ v + xt = t + t^2 \]</div>
+<p>At <span class="math notranslate nohighlight">\(t = 0\)</span> s the position is <span class="math notranslate nohighlight">\(0.00\)</span> m. Find the position at <span class="math notranslate nohighlight">\(t = 3\)</span> s.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 3</b><br>
+<p>Consider the particle problem in Box 1. Find the position at t = 3 s if the initial velocity is the same as in Box 1 and the initial position is x = 0 m.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
@@ -488,7 +475,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./Module-A1"
+            path: "./Module-A2"
         },
         predefinedOutput: true
     }
@@ -507,22 +494,13 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Polar-coordinates.html"
+       href="Numerical-methods.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">A1.1 Kinematics in Polar Coordinates</p>
+        <p class="prev-next-title">A2.1 Numerical Integration: Finite Difference Methods</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="problemsA1.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">A1.x Problems</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -542,8 +520,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a1-2-1-newton-s-2nd-law-in-polar-coordinates">A1.2.1 Newton’s 2nd Law in Polar Coordinates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a1-2-2-uniform-circular-motion">A1.2.2 Uniform Circular Motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a2-2-1-finite-difference-method">A2.2.1 Finite Difference Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a2-2-2-solving-strategy">A2.2.2 Solving Strategy</a></li>
 </ul>
   </nav></div>
 

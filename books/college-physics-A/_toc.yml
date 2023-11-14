@@ -19,3 +19,4 @@ parts:
 - caption: Module A2 - Numerical Method
   chapters:
   - file: Module-A2/Numerical-methods
+  - file: Module-A2/Numerical-methods-practice
