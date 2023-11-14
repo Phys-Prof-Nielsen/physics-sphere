@@ -433,7 +433,8 @@ document.write(`
 \[ a_y = \frac{d^{2}y}{dt^2} \]</div>
 <p>Unfortunately, we have not learned about finite difference methods for second derivative, only first derivative. So what do we do? Well, we can convert each of the two second-order differential equations (DE) into two coupled first-order differential equations, giving us four equations to solve:</p>
 <div class="alert alert-success">
-$$ a_x = \frac{dv_x}{dt} \tag{1}$$
+<div class="math notranslate nohighlight">
+\[ a_x = \frac{dv_x}{dt} \tag{1}\]</div>
 <div class="math notranslate nohighlight">
 \[ a_y = \frac{dv_y}{dt} \tag{2}\]</div>
 <div class="math notranslate nohighlight">
@@ -722,7 +723,7 @@ $$ v_{x,i+1} = v_{x,i} - \frac{1}{2}\frac{\rho C_{D}A}{m}v_{i}v_{x,i}\Delta t $$
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>157710.47457780084
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/74/jtxzz5d9637f574hh5cmbq240000gn/T/ipykernel_95403/1728733566.py:62: UserWarning: Attempting to set identical low and high xlims makes transformation singular; automatically expanding.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/74/jtxzz5d9637f574hh5cmbq240000gn/T/ipykernel_95508/1728733566.py:62: UserWarning: Attempting to set identical low and high xlims makes transformation singular; automatically expanding.
   ax.set_xlim([0, np.max(x_arr)])
 </pre></div>
 </div>
