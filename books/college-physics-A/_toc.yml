@@ -20,3 +20,5 @@ parts:
   chapters:
   - file: Module-A2/Numerical-methods
   - file: Module-A2/Numerical-methods-practice
+  - file: Module-A2/Project-1-Covid-19
+  - file: Module-A2/Project-2-Artillery

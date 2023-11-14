@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>A1.1 Taylor Expansions &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -69,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="A1.2 Numerical Integration: Finite Difference Methods" href="Numerical-methods.html" />
     <link rel="prev" title="A Competency Approach to Introductory Physics: A Compendium to the A Exam" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -164,7 +163,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Numerical-methods.html">A1.2 Numerical Integration: Finite Difference Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Numerical-methods-practice.html">A1.3 Numerical Methods - Practice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Project-1-Covid-19.html">A1.4 Realistic Projectile Motion Project 1: Covid-19</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Project-2-Artillery.html">Realistic Projectile Motion Project 2: Artillery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project-2-Artillery.html">A1.5 Realistic Projectile Motion Project 2: Artillery</a></li>
 </ul>
 
     </div>
@@ -373,13 +372,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="a1-1-taylor-expansions">
-<h1>A1.1 Taylor Expansions<a class="headerlink" href="#a1-1-taylor-expansions" title="Permalink to this heading">#</a></h1>
+<h1>A1.1 Taylor Expansions<a class="headerlink" href="#a1-1-taylor-expansions" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a1-1-1-motivation">
-<h2>A1.1.1 Motivation<a class="headerlink" href="#a1-1-1-motivation" title="Permalink to this heading">#</a></h2>
+<h2>A1.1.1 Motivation<a class="headerlink" href="#a1-1-1-motivation" title="Permalink to this headline">#</a></h2>
 <p>Taylor expansions is a mathematical tool that is heavily utilized in the fields of physics and engineering. The topic is typically covered in Calculus II, but it is advantageous to illustrate the use of the expansions here in Physics I. We will not cover the rigorous mathematical treatment, but only show simple applications that will make our life easier in Physics I. Series expansions are often utilized when approximations may be required to solve a problem. With these expansions, we can justify our approximation and even gain information regarding the orders of magnitude of the ignored terms.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="a1-1-2-taylor-s-series">
-<h2>A1.1.2 Taylor’s Series<a class="headerlink" href="#a1-1-2-taylor-s-series" title="Permalink to this heading">#</a></h2>
+<h2>A1.1.2 Taylor’s Series<a class="headerlink" href="#a1-1-2-taylor-s-series" title="Permalink to this headline">#</a></h2>
 <p>A well-behaved function <span class="math notranslate nohighlight">\(f(x)\)</span> can be approximated by an infinite (and convergent) power series around a point <span class="math notranslate nohighlight">\(a\)</span></p>
 <div class="math notranslate nohighlight">
 \[ f(x) = f(a) + (x-a)\left.\frac{df}{dx}\right |_{x = a} + \frac{(x-a)^2}{2!}\left.\frac{d^{2}f}{dx^2}\right|_{x = a}
@@ -464,7 +463,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/8a3dc5c041e4ae50c2089ad7247637c4928cb9aa0f0e4a041da2178720603445.png" src="../_images/8a3dc5c041e4ae50c2089ad7247637c4928cb9aa0f0e4a041da2178720603445.png" />
+<img alt="../_images/909b3005f7f20f96dcb58b56e77219faa24a573decc4cc2ea582cd115253e33c.png" src="../_images/909b3005f7f20f96dcb58b56e77219faa24a573decc4cc2ea582cd115253e33c.png" />
 </div>
 </div>
 <div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">  
@@ -486,7 +485,7 @@ document.write(`
   </div>
   <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="a1-1-3-binomial-series">
-<h2>A1.1.3 Binomial Series<a class="headerlink" href="#a1-1-3-binomial-series" title="Permalink to this heading">#</a></h2>
+<h2>A1.1.3 Binomial Series<a class="headerlink" href="#a1-1-3-binomial-series" title="Permalink to this headline">#</a></h2>
 <p>In physics we are often presented with a function of the form <span class="math notranslate nohighlight">\(f(x) = (1 + x)^n\)</span>. The Taylor series of this function around a = 0 is known as the <strong>binomial series</strong>:</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
