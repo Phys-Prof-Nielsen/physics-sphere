@@ -373,6 +373,51 @@ document.write(`
 <li><p>What is the linear speed of the sphere at the bottom of the ramp?</p></li>
 <li><p>How many revolutions did the sphere perform before getting to the bottom?</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.25</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="p">(</span><span class="mf">12.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span><span class="p">)</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">3.5</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="c1">#------------</span>
+<span class="c1"># PART 1</span>
+<span class="c1">#------------</span>
+
+<span class="c1">#N2 linear</span>
+<span class="c1"># x positive down the ramp: from N2: Fg*sin(angle) - Ff = M*ax</span>
+<span class="n">Ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;Ax&#39;</span><span class="p">)</span>   <span class="c1">#CM linear acceleration</span>
+<span class="n">Ff</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;Ff&#39;</span><span class="p">)</span>   <span class="c1">#friction force (static)</span>
+<span class="n">Fg</span> <span class="o">=</span> <span class="n">M</span><span class="o">*</span><span class="n">g</span>
+<span class="n">Ffx</span> <span class="o">=</span> <span class="o">-</span><span class="n">Ff</span>
+<span class="n">Eq1</span> <span class="o">=</span> <span class="n">M</span><span class="o">*</span><span class="n">Ax</span> <span class="o">-</span> <span class="n">Fg</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">-</span> <span class="n">Ffx</span>
+
+<span class="c1"># N2 rotational</span>
+<span class="c1"># +z is out of the plane if x is to the right and down the incline</span>
+<span class="n">A_theta</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;A_theta&#39;</span><span class="p">)</span>   <span class="c1">#angular acceleration</span>
+<span class="n">I</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.0</span><span class="o">/</span><span class="mf">5.0</span><span class="p">)</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">Tfz</span> <span class="o">=</span> <span class="o">-</span><span class="n">R</span><span class="o">*</span><span class="n">Ff</span>
+<span class="n">Eq2</span> <span class="o">=</span> <span class="n">I</span><span class="o">*</span><span class="n">A_theta</span> <span class="o">-</span> <span class="n">Tfz</span>
+
+<span class="c1">#equation of constraint: Ax = -R*A_theta. (negative due to our choice of frame)</span>
+<span class="n">Eq3</span> <span class="o">=</span> <span class="n">Ax</span> <span class="o">+</span> <span class="n">R</span><span class="o">*</span><span class="n">A_theta</span>
+
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">Eq1</span><span class="p">,</span><span class="n">Eq2</span><span class="p">,</span><span class="n">Eq3</span><span class="p">),(</span><span class="n">Ax</span><span class="p">,</span><span class="n">Ff</span><span class="p">,</span><span class="n">A_theta</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sol1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{Ax: 1.45686691923016, Ff: 1.16549353538413, A_theta: -5.82746767692063}
+</pre></div>
+</div>
+</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem A2.2</h2>
     </header>
 <p>What is the moment of inertia of an object that rolls without slipping down a 2.00 m high incline starting from rest, and has a final velocity of 6.00 m/s? Express the moment of inertia as a multiple of <span class="math notranslate nohighlight">\(MR^2\)</span>, where <span class="math notranslate nohighlight">\(M\)</span> is the mass of the object and <span class="math notranslate nohighlight">\(R\)</span> is its radius.</p>
