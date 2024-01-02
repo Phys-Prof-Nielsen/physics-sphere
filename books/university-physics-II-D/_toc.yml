@@ -12,3 +12,4 @@ parts:
 - caption: Module D1 - Field and Charges
   chapters:
   - file: Module-D1/standard-model
+  - file: Module-D1/electric-point-charge
