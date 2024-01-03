@@ -15,3 +15,4 @@ parts:
   - file: Module-D1/electric-point-charge
   - file: Module-D1/conductors-insulators
   - file: Module-D1/coulombs-law
+  - file: Module-D1/electric-field
