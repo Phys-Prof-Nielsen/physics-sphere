@@ -425,8 +425,6 @@ document.write(`
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
 \[ F_E = qE \tag{1}\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;/div&gt;
-</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(E\)</span> is the magnitude of the <strong>electric field</strong> due to some charge/charge distribution and <span class="math notranslate nohighlight">\(q\)</span> is the electrical charge immersed in the field (analogy: Earth creating a gravitational field and the satellite immersed in the field and feeling a gravitational force due to the field interaction).</p>
 <div class="alert alert-success">
@@ -446,12 +444,12 @@ The direction of the electric field is defined as follows: the direction a <b>po
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1">#x,y = np.meshgrid(np.arange(-6,6,2),np.arange(-6,6,2))</span>
-
 <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mf">6.5</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mf">6.5</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 
+<span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
 
-<span class="n">u</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span> 
 <span class="n">v</span> <span class="o">=</span> <span class="n">y</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
@@ -467,12 +465,6 @@ The direction of the electric field is defined as follows: the direction a <b>po
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/74/jtxzz5d9637f574hh5cmbq240000gn/T/ipykernel_21992/4003814457.py:9: RuntimeWarning: invalid value encountered in divide
-  u = x/(x**2 + y**2)**1.5
-/var/folders/74/jtxzz5d9637f574hh5cmbq240000gn/T/ipykernel_21992/4003814457.py:10: RuntimeWarning: invalid value encountered in divide
-  v = y/(x**2 + y**2)**1.5
-</pre></div>
-</div>
 <img alt="../_images/04c72b3e7d7776f12c798ee81533ba38b601c95f50ad8a9b0fb54602a105d444.png" src="../_images/04c72b3e7d7776f12c798ee81533ba38b601c95f50ad8a9b0fb54602a105d444.png" />
 </div>
 </details>
@@ -490,10 +482,10 @@ The direction of the electric field is defined as follows: the direction a <b>po
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1">#x,y = np.meshgrid(np.arange(-6,6,2),np.arange(-6,6,2))</span>
-
 <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mf">6.5</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mf">6.5</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 
+<span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
 
 <span class="n">u</span> <span class="o">=</span> <span class="o">-</span><span class="n">x</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span>
 <span class="n">v</span> <span class="o">=</span> <span class="o">-</span><span class="n">y</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span>
@@ -511,12 +503,6 @@ The direction of the electric field is defined as follows: the direction a <b>po
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/74/jtxzz5d9637f574hh5cmbq240000gn/T/ipykernel_21992/1502008127.py:9: RuntimeWarning: invalid value encountered in divide
-  u = -x/(x**2 + y**2)**1.5
-/var/folders/74/jtxzz5d9637f574hh5cmbq240000gn/T/ipykernel_21992/1502008127.py:10: RuntimeWarning: invalid value encountered in divide
-  v = -y/(x**2 + y**2)**1.5
-</pre></div>
-</div>
 <img alt="../_images/663bb9793a3d90ee0f3f024309c6ec9dd1a4ddda5e3e9ee81304ad58b6ff6d67.png" src="../_images/663bb9793a3d90ee0f3f024309c6ec9dd1a4ddda5e3e9ee81304ad58b6ff6d67.png" />
 </div>
 </details>
