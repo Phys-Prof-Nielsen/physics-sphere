@@ -12,5 +12,6 @@ parts:
 - caption: Module D1 - Field and Charges
   chapters:
   - file: Module-D1/standard-model
-  - file: Module-D1/electric-point-Charges
+  - file: Module-D1/electric-point-charge
   - file: Module-D1/conductors-insulators
+  - file: Module-D1/coulombs-law
