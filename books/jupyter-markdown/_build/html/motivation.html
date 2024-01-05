@@ -157,6 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preample</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1 Motivation</a></li>
+
 </ul>
 
     </div>
@@ -358,7 +359,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -374,6 +377,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1 Motivation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cell">Markdown Cell</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -392,6 +405,9 @@ document.write(`
 <li><p>Embedded in Jupyter is the Python computer language, which is widely used in the scientific communities. With that comes tools for analysis, plotting, and even solving equations symbolically. Way cool!</p></li>
 </ul>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section class="tex2jax_ignore mathjax_ignore" id="markdown-cell">
+<h1>Markdown Cell<a class="headerlink" href="#markdown-cell" title="Permalink to this headline">#</a></h1>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -442,6 +458,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1 Motivation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cell">Markdown Cell</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
