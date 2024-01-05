@@ -390,6 +390,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-4-1-coulomb-s-law">D1.4.1 Coulomb’s Law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coulomb-s-law-in-vector-form">1.4.2 Coulomb’s Law in Vector Form</a></li>
 </ul>
             </nav>
         </div>
@@ -416,7 +417,7 @@ document.write(`
 <p>In summary, the magnitude of the force acting on charge 2 due to charge 1 was found to be:</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
-\[ F_{21} = \frac{kq_{1}q_{2}}{r^2} \tag{1}\]</div>
+\[ F = \frac{k|q_{1}||q_{2}|}{r^2} \tag{1}\]</div>
 </div>
 <p>and is known as <strong>Coulomb’s Law</strong>, and provided that</p>
 <div class="math notranslate nohighlight">
@@ -454,7 +455,7 @@ Coulomb's Law is only applicable to point charges or point-like objects!
 
 <span class="c1"># print answer</span>
 <span class="c1"># ------------</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the force is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">F</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; directed away from the proton.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the force is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">F</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N, directed away from the proton.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -465,7 +466,7 @@ Coulomb's Law is only applicable to point charges or point-like objects!
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The magnitude of the force is: 8.24467178147591e-08 directed away from the proton.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The magnitude of the force is: 8.24467178147591e-08 N, directed away from the proton.
 </pre></div>
 </div>
 </div>
@@ -530,6 +531,81 @@ Coulomb's Law is only applicable to point charges or point-like objects!
 </details>
 </div>
 </section>
+<section id="coulomb-s-law-in-vector-form">
+<h2>1.4.2 Coulomb’s Law in Vector Form<a class="headerlink" href="#coulomb-s-law-in-vector-form" title="Permalink to this heading">#</a></h2>
+<p>Depending on the problem we are presented with, it may be more appropriate to deploy Coulomb’s law in vector form:</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ \vec{F} = \frac{kq_{1}q_{2}}{r_{21}^2}\hat{r}_{21} \tag{2}\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{r}_{21}\)</span> is a unit vector of <span class="math notranslate nohighlight">\(\vec{r}_{21}\)</span>, which is the <strong>directed line segment from the source charge <span class="math notranslate nohighlight">\(q_1\)</span> to the test charge <span class="math notranslate nohighlight">\(q_2\)</span></strong>: <span class="math notranslate nohighlight">\(\vec{r}_{21} = \vec{r}_2 - \vec{r}_1\)</span>. This approach will provide us with the proper direction of the force for either positive or negative charge interactions.</p>
+<p>Alternatively, and often more useful, we can use the definition of the unit vector:</p>
+<div class="math notranslate nohighlight">
+\[ \hat{r}_{21} = \frac{\vec{r}_{21}}{r_{21}} \]</div>
+<p>to write Coulomb’s force as</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ \vec{F} = \frac{kq_{1}q_{2}}{r_{21}^3}\vec{r}_{21} \tag{3}\]</div>
+</div>
+<p>The later form is more applicable if we insert the actual position vectors for the source <span class="math notranslate nohighlight">\(\vec{r}_1\)</span> and the test <span class="math notranslate nohighlight">\(\vec{r}_2\)</span> charges:</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ \vec{F} = kq_{1}q_{2}\frac{\vec{r}_2 - \vec{r}_1}{|\vec{r}_2 - \vec{r}_1|^3} \tag{4}\]</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+    <b> Box 3 </b><br>
+<p>A 5.00 mC point charge is located at <span class="math notranslate nohighlight">\((x,y) = (2.00~\textrm{m}, 3.00~\textrm{m})\)</span>. A second point charge with a charge of 2.00 mC is located at <span class="math notranslate nohighlight">\((x,y) = (3.00~\textrm{m}, 1.50~\textrm{m})\)</span>. What is the force on the 2.00 mC charge due to the 5.00 mC point charge?</p>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Input parameters</span>
+<span class="c1"># ---------------</span>
+<span class="n">q1</span> <span class="o">=</span> <span class="mf">5.00E-3</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="mf">2.00E-3</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">8.99E9</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="mf">2.00</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="mf">3.00</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mf">3.00</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="mf">1.50</span>
+
+<span class="c1"># components of directed line segment from source charge (1) to test charge (2)</span>
+<span class="n">rx</span> <span class="o">=</span> <span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span>
+<span class="n">ry</span> <span class="o">=</span> <span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span>
+<span class="c1"># magnitiude of directed line segment from source charge (1) to test charge (2)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">rx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">ry</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># component form of Coulomb&#39;s law (Equation 3 in notes above)</span>
+<span class="n">Fx</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="o">*</span><span class="n">rx</span><span class="o">/</span><span class="n">r</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">Fy</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="o">*</span><span class="n">ry</span><span class="o">/</span><span class="n">r</span><span class="o">**</span><span class="mi">3</span>
+
+<span class="c1"># combine the components into an array (easier to print, that&#39;s all)</span>
+<span class="n">F</span> <span class="o">=</span> <span class="p">[</span><span class="n">Fx</span><span class="p">,</span><span class="n">Fy</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The force components are: [Fx, Fy] = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">F</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The force components are: [Fx, Fy] = [15343.86081250711, -23015.791218760663] N
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -600,6 +676,7 @@ Coulomb's Law is only applicable to point charges or point-like objects!
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-4-1-coulomb-s-law">D1.4.1 Coulomb’s Law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coulomb-s-law-in-vector-form">1.4.2 Coulomb’s Law in Vector Form</a></li>
 </ul>
   </nav></div>
 

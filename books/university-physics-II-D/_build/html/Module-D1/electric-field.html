@@ -545,12 +545,121 @@ The direction of the electric field is defined as follows: the direction a <b>po
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
     <b> Box 4 </b><br>
 <p>A ground-state electron in the hydrogen atom is most likely to be found at a distance of <span class="math notranslate nohighlight">\(5.29\times 10^{-11}\)</span> m from the nucleus (a proton). Assume the proton to be a point charge with a charge of <span class="math notranslate nohighlight">\(q = 1.602\times 10^{-19}\)</span> C.  In this naive approach, what is the electric field at the most probable electron location? (specify both magnitude and direction.)</p>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input parameters</span>
+<span class="c1"># ---------------</span>
+<span class="n">q</span> <span class="o">=</span> <span class="mf">1.602E-19</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">8.99E9</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">5.29E-11</span>
+
+<span class="c1"># E-field from point charge</span>
+<span class="c1"># --------------</span>
+<span class="n">E</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">q</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># direction</span>
+<span class="c1"># ---------</span>
+<span class="c1"># since the charge is positive it is away from the charge</span>
+
+<span class="c1"># print answer</span>
+<span class="c1"># ------------</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the electric field is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">E</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N/C, directed away from the proton.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The magnitude of the electric field is: 514648675497.872 N/C, directed away from the proton.
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
     <b> Box 5</b><br>
-<p>Consider two charged particles with charges <span class="math notranslate nohighlight">\(q_1 = +5.0\)</span> mC and <span class="math notranslate nohighlight">\(q_2 = -3.0\)</span> mC positioned at <span class="math notranslate nohighlight">\(x_1 = 0.0\)</span> m and <span class="math notranslate nohighlight">\(x_2 = 0.2\)</span> m, respectively. Consider a point <span class="math notranslate nohighlight">\(P\)</span> located at <span class="math notranslate nohighlight">\((x,y) = (0.5~\textrm{m},0.2~\textrm{m})\)</span>. Make a sketch showing the fields <span class="math notranslate nohighlight">\(\vec{E}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{E}_2\)</span> at point <span class="math notranslate nohighlight">\(P\)</span>. Be as exact as you can with directions and relative scale.</p>
+<p>Consider two charged particles with charges <span class="math notranslate nohighlight">\(q_1 = +5.0\)</span> mC and <span class="math notranslate nohighlight">\(q_2 = -3.0\)</span> mC positioned at <span class="math notranslate nohighlight">\(y = 0.0\)</span> m and at <span class="math notranslate nohighlight">\(x_1 = 0.0\)</span> m and <span class="math notranslate nohighlight">\(x_2 = 0.2\)</span> m, respectively. Consider a point <span class="math notranslate nohighlight">\(P\)</span> located at <span class="math notranslate nohighlight">\((x,y) = (3.5~\textrm{m},2.2~\textrm{m})\)</span>. Make a sketch showing the fields <span class="math notranslate nohighlight">\(\vec{E}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{E}_2\)</span> at point <span class="math notranslate nohighlight">\(P\)</span>. Be as exact as you can with directions and relative scale.</p>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">px</span><span class="p">,</span><span class="n">py</span><span class="p">,</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">):</span> 
+    
+    <span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">px</span><span class="p">,</span> <span class="n">py</span><span class="p">,</span> <span class="n">v1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v1</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> 
+                      <span class="p">[</span><span class="n">px</span><span class="p">,</span> <span class="n">py</span><span class="p">,</span> <span class="n">v2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v2</span><span class="p">[</span><span class="mi">1</span><span class="p">]]])</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">array</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y (m)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x (m)&#39;</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    
+
+<span class="c1"># Input parameters</span>
+<span class="c1"># ---------------</span>
+<span class="n">q1</span> <span class="o">=</span> <span class="mf">5.0E-3</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.0E-3</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">8.99E9</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mf">2.2</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">Px</span> <span class="o">=</span> <span class="mf">3.5</span>
+<span class="n">Py</span> <span class="o">=</span> <span class="mf">2.2</span>
+
+<span class="n">r1x</span> <span class="o">=</span> <span class="n">Px</span> <span class="o">-</span> <span class="n">x1</span>
+<span class="n">r1y</span> <span class="o">=</span> <span class="n">Py</span> <span class="o">-</span> <span class="n">y1</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">r1x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">r1y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">r2x</span> <span class="o">=</span> <span class="n">Px</span> <span class="o">-</span> <span class="n">x2</span>
+<span class="n">r2y</span> <span class="o">=</span> <span class="n">Py</span> <span class="o">-</span> <span class="n">y2</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">r2x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">r2y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># E-field components at point P from point charges 1 and 2</span>
+<span class="c1"># --------------</span>
+<span class="n">E1x</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">r1x</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">r1</span><span class="o">**</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">E1y</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">r1y</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">r1</span><span class="o">**</span><span class="mf">1.5</span><span class="p">)</span>
+
+<span class="n">E2x</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">q2</span><span class="o">*</span><span class="n">r2x</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">r2</span><span class="o">**</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">E2y</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">q2</span><span class="o">*</span><span class="n">r2y</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">r2</span><span class="o">**</span><span class="mf">1.5</span><span class="p">)</span>
+
+<span class="c1"># normalize: make E2 a unit vector</span>
+<span class="c1"># --------------------</span>
+<span class="n">n2x</span> <span class="o">=</span> <span class="n">E2x</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">E2x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">E2y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">n2y</span> <span class="o">=</span> <span class="n">E2y</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">E2x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">E2y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="n">n1x</span> <span class="o">=</span> <span class="n">E1x</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">E2x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">E2y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">n1y</span> <span class="o">=</span> <span class="n">E1y</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">E2x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">E2y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">draw</span><span class="p">(</span><span class="n">Px</span><span class="p">,</span><span class="n">Py</span><span class="p">,[</span><span class="n">n1x</span><span class="p">,</span><span class="n">n1y</span><span class="p">],[</span><span class="n">n2x</span><span class="p">,</span><span class="n">n2y</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/49e06fbb916275c4d9cb8d54f58c40895774a2eefc257b65c316c54d0f34463d.png" src="../_images/49e06fbb916275c4d9cb8d54f58c40895774a2eefc257b65c316c54d0f34463d.png" />
+</div>
+</div>
+<div class="alert alert-warning">
     <b> Box 6 </b><br>
 <p>In the scenario from Box 5. Find the <span class="math notranslate nohighlight">\(x\)</span>- and <span class="math notranslate nohighlight">\(y\)</span>-components of <span class="math notranslate nohighlight">\(\vec{E}_1\)</span> at point <span class="math notranslate nohighlight">\(P\)</span>.</p>
 </div>
