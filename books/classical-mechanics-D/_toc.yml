@@ -13,3 +13,4 @@ parts:
   chapters:
   - file: Module-D1/definitions
   - file: Module-D1/differential-form
+  - file: Module-D1/integral-form

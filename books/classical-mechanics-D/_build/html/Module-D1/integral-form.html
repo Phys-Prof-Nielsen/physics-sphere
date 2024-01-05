@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>D1.2 Kinematics - Differential Form &#8212; A Competency Approach to Classical Mechanics</title>
+    <title>D1.3 Kinematics - Integral Form &#8212; A Competency Approach to Classical Mechanics</title>
   
   
   
@@ -62,11 +62,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D1/differential-form';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D1/integral-form';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="D1.3 Kinematics - Integral Form" href="integral-form.html" />
-    <link rel="prev" title="D1.1 Kinematics Definitions" href="definitions.html" />
+    <link rel="prev" title="D1.2 Kinematics - Differential Form" href="differential-form.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -160,8 +159,8 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D1 - Kinematics in Cartesian Coordinates</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">D1.1 Kinematics Definitions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">D1.2 Kinematics - Differential Form</a></li>
-<li class="toctree-l1"><a class="reference internal" href="integral-form.html">D1.3 Kinematics - Integral Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differential-form.html">D1.2 Kinematics - Differential Form</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">D1.3 Kinematics - Integral Form</a></li>
 </ul>
 
     </div>
@@ -264,7 +263,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-D1/differential-form.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-D1/integral-form.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +293,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-D1/differential-form.ipynb" target="_blank"
+      <li><a href="../_sources/Module-D1/integral-form.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -376,7 +375,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>D1.2 Kinematics - Differential Form</h1>
+    <h1>D1.3 Kinematics - Integral Form</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -386,11 +385,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-1-motivation">D1.2.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-2-difference-vs-differential">D1.2.2 Difference vs. Differential</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-3-velocity">D1.2.3 Velocity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-4-acceleration">D1.2.4 Acceleration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-5-applications">D1.2.5 Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-1-motivation">D1.3.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-2-position">D1.3.2 Position</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-3-velocity">D1.3.3 Velocity</a></li>
 </ul>
             </nav>
         </div>
@@ -402,63 +399,50 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="d1-2-kinematics-differential-form">
-<h1>D1.2 Kinematics - Differential Form<a class="headerlink" href="#d1-2-kinematics-differential-form" title="Permalink to this headline">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d1-2-1-motivation">
-<h2>D1.2.1 Motivation<a class="headerlink" href="#d1-2-1-motivation" title="Permalink to this headline">#</a></h2>
-<p>We probably already know that Newton’s second law in fact is a second-order differential equation. As we progress further into the abyss of physics we start to realize that differentials start to play a more significant role, and physics starts to be described through differential calculus and differential geometry. So, let us take a quick review of the differential in 1D.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="d1-3-kinematics-integral-form">
+<h1>D1.3 Kinematics - Integral Form<a class="headerlink" href="#d1-3-kinematics-integral-form" title="Permalink to this headline">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d1-3-1-motivation">
+<h2>D1.3.1 Motivation<a class="headerlink" href="#d1-3-1-motivation" title="Permalink to this headline">#</a></h2>
+<p>The differential forms in previous section told us <strong>how stuff change on a local time scale</strong>, by <em>local</em> we imply an instantaneous change or over some very small time interval. Again, the concept of small is somewhat ambiguous. Integral form allows us to make prediction as it allows us to obtain <strong>general functions</strong> of position, velocity, acceleration, etc., as well as quantify changes in these parameters over any time scales. We say that differential calculus is <strong>local</strong> whereas integral calculus is <strong>global</strong>. You may have encountered that language in electricity when dealing with Maxwell’s equations: differential forms vs. integral forms.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="d1-2-2-difference-vs-differential">
-<h2>D1.2.2 Difference vs. Differential<a class="headerlink" href="#d1-2-2-difference-vs-differential" title="Permalink to this headline">#</a></h2>
-<p>We define the gab on the x-axis between two data data points as <span class="math notranslate nohighlight">\(\Delta x\)</span>. For example, we can say that <span class="math notranslate nohighlight">\(\Delta x = x_2 - x_1\)</span>. Similarly, the gab between to data points on the y-axis is <span class="math notranslate nohighlight">\(\Delta y = y_2 - y_1\)</span>. We call these gabs for <strong>differences</strong> and use the symbol <span class="math notranslate nohighlight">\(\Delta\)</span> to denote a difference: read as “a difference in _____”.</p>
+<section id="d1-3-2-position">
+<h2>D1.3.2 Position<a class="headerlink" href="#d1-3-2-position" title="Permalink to this headline">#</a></h2>
+<p>We defined the <strong>instantaneous</strong> velocity in terms of a <strong>differential equation</strong> through the position and time differentials</p>
 <div class="alert alert-success">
-<p>In all pratical applications, the difference is a number. It can be a small number, it can be a large number, there is no restrictions on it (unless you are dividing by it, then it can’t be zero of course).</p>
-</div>
-<p>Since differences are associated with numbers, we can create the ratio of differences (provided the denominator is
-not zero). For example the ratio between the differences in some dependent function <span class="math notranslate nohighlight">\(f\)</span> and its independent variable <span class="math notranslate nohighlight">\(x\)</span> is what we traditionally call the slope:</p>
 <div class="math notranslate nohighlight">
-\[ \textrm{slope} = \frac{\Delta f}{\Delta x} \]</div>
-<p>The <strong>differential</strong> is very similar to the difference, but in some sense we can say that it is the connection between
-algebra and calculus in terms of change. We will consider a small change in x. We will avoid what we mean by small
-for now, but understand that it is in fact a number and give it the symbol <span class="math notranslate nohighlight">\(dx\)</span>.</p>
+\[ d\vec{r} = \vec{v}dt \]</div>
+</div>
+<p>If we perform <strong>indefinite</strong> integration on both sides, we get</p>
+<div class="math notranslate nohighlight">
+\[ \vec{r} = \int\vec{v}dt + C\]</div>
+<p>Hence, we obtained a <strong>general global function representation</strong> for the position.</p>
+<p>If we are curious about the quantity of which the position changed (a.k.a. displacement) over the course of the elapsed time, we can perform the <strong>definite</strong> integration:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta\vec{r} = \int_{t_1}^{t_2}\vec{v}dt\]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="d1-3-3-velocity">
+<h2>D1.3.3 Velocity<a class="headerlink" href="#d1-3-3-velocity" title="Permalink to this headline">#</a></h2>
+<p>In a similar fashion, we have</p>
 <div class="alert alert-success">
-<p>While <span class="math notranslate nohighlight">\(dx\)</span> is considered a number, it is more of a mathematical concept as its meaning is truly a small number, in fact, so small that we will later let it approach zero, but then again…in math, what is a small number?</p>
+<div class="math notranslate nohighlight">
+\[ d\vec{v} = \vec{a}dt \]</div>
 </div>
-<p>What implications does it have for <span class="math notranslate nohighlight">\(df\)</span> vs. <span class="math notranslate nohighlight">\(\Delta f\)</span>? Let us find out. Let us use a figure to investigate
-properties of <span class="math notranslate nohighlight">\(dx\)</span> and let us just say that <span class="math notranslate nohighlight">\(dx = \Delta x\)</span>.</p>
-<img src="D1.2-fig1.png"  width="400"/>
-<p>The red line in the figure is the tangent line to the point <span class="math notranslate nohighlight">\([x, f(x)]\)</span> and is a straight line described by (remember how to write the equation of a straight line by using rise = slope times run?)</p>
+<p>If we perform <strong>indefinite</strong> integration on both sides, we get</p>
 <div class="math notranslate nohighlight">
-\[y_2 - y_1 = a(x_2 - x_1) \tag{1}\]</div>
-<p>Since we know the slope, <span class="math notranslate nohighlight">\(a\)</span>, is the derivative, and we want to use grown-up notation <span class="math notranslate nohighlight">\(y \rightarrow f\)</span> and consider small differences (aka differentials), we write Equation (1) as</p>
+\[ \vec{v} = \int\vec{a}dt + C\]</div>
+<p>Hence, we obtained a <strong>general global function representation</strong> for the velocity.</p>
+<p>If we are curious about the quantity of which the velocity changed over the course of the elapsed time, we can perform the <strong>definite</strong> integration:</p>
 <div class="math notranslate nohighlight">
-\[ df = \frac{df}{dx}dx \]</div>
-<p>Here, <span class="math notranslate nohighlight">\(df\)</span> is the rise of the red, straight line and <span class="math notranslate nohighlight">\(dx\)</span> is its run. We have used the derivative <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span> as the slope of the red line. We keep in mind, that this <strong>must</strong> be the slope evalutated at the point x.</p>
-<p>We notice from the figure that <span class="math notranslate nohighlight">\(df \neq \Delta f\)</span>.</p>
-<p>We use the term <strong>differential</strong> for <span class="math notranslate nohighlight">\(df\)</span> and the term <strong>difference</strong> for <span class="math notranslate nohighlight">\(\Delta f\)</span>. Only when <span class="math notranslate nohighlight">\(dx\)</span>
-approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)</span>. Key point: both <span class="math notranslate nohighlight">\(dx\)</span> and <span class="math notranslate nohighlight">\(df\)</span> can be assigned values and we can create the ratio (provided
-<span class="math notranslate nohighlight">\(dx \neq 0\)</span>):</p>
-<div class="math notranslate nohighlight">
-\[ \frac{df}{dx} \]</div>
-<p>which we can manipulate just like other ratios.</p>
-<p><strong>NOTE: although this ratio looks like the derivative, it is not! The derivative is not a ratio, but an operator, which should be read as “derivative of <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span>”</strong>. We could write the derivative better as</p>
-<div class="math notranslate nohighlight">
-\[ \frac{d}{dx}[f] \]</div>
-<p>to clearly distinguish it from the ratio of differentials.</p>
-<div class="alert alert-danger">
-<p>We often write the derivative as <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span> and the ratio of differentials as <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span> , and we must use the context of the problem/situation to find out if we are talking about one or the other. One is an operator while the other is simply a ratio between numbers (small numbers). This confusion disappears if we use the Lagrange notation for the derivative.</p>
-</div>
-<p>To find the differential of a function, we can use the above as a definition. To avoid the confusion between ratio of differentials and the derivative, it may be more suitable to utilize the Lagrange notation:</p>
-<div class="alert alert-success">
-<p>The differential of a function <span class="math notranslate nohighlight">\(f\)</span> with respect to its independent variable <span class="math notranslate nohighlight">\(x\)</span> is:</p>
-<div class="math notranslate nohighlight">
-\[ df = f'(x)dx \]</div>
-</div>
+\[ \Delta\vec{v} = \int_{t_1}^{t_2}\vec{a}dt\]</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 1</b><br>
-<p>The area of a circle is <span class="math notranslate nohighlight">\(A(r) = \pi r^2\)</span>. If we change the radius by a small amount <span class="math notranslate nohighlight">\(dr\)</span>, by how much will the area change?</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="cell tag_hide-input tag_hide-output docutils container">
+<p>A particle is moving in 1D with a velocity given by <span class="math notranslate nohighlight">\(\vec{v}_{z}(t) = [At^3 + B]~\hat{k}\)</span>, where A = 0.0050 m/s<span class="math notranslate nohighlight">\(^4\)</span> and B = 1.8 m/s. At t = 5.0 s, the particle is located at z = 30.0 m.</p>
+<ol class="arabic simple">
+<li><p>What is the particle’s general position function?</p></li>
+<li><p>What is the particle’s specific position function?</p></li>
+<li><p>Where was the particle at t = 1.00 s?</p></li>
+</ol>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
@@ -467,13 +451,47 @@ approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)<
 <div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span>
+<span class="c1"># PART 1</span>
+<span class="c1">#-------------------</span>
 
-<span class="c1"># dA = A&#39;*dr</span>
-<span class="n">A_prime</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">#declare our independent variable and assign a symbol to it</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The area will change by: dA = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">A_prime</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;dr&#39;</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="mf">0.0050</span>
+<span class="n">B</span> <span class="o">=</span> <span class="mf">1.8</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="mf">30.0</span>
+
+<span class="c1">#declare the dependent function f as a function of x</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">B</span>
+
+<span class="c1">#calculate the indefinite integral</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+
+<span class="c1">#display the function f and its antiderivative (integral)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;PART 1: NOTE: add a constant C to the answer since it is an indefinite integral&#39;</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;r(t) = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; + C&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="c1"># -------------</span>
+<span class="c1"># evaluate r(t=5.00) = 30.0 m = r2</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">r_5</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span> <span class="n">t2</span><span class="p">})</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">r2</span> <span class="o">-</span> <span class="n">r_5</span> <span class="o">-</span> <span class="n">C</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 2: r(t) = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; + &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">C</span><span class="p">))</span>
+
+<span class="c1"># Part 3</span>
+<span class="c1"># --------------</span>
+
+<span class="c1"># find displacement</span>
+<span class="n">dr</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">v</span><span class="p">,(</span><span class="n">t</span><span class="p">,</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">))</span>
+
+<span class="n">r1</span> <span class="o">=</span> <span class="n">r2</span> <span class="o">-</span> <span class="n">dr</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 3: Position at t = 0.00 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -484,35 +502,63 @@ approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)<
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The area will change by: dA = 2*pi*rdr
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PART 1: NOTE: add a constant C to the answer since it is an indefinite integral
+r(t) = 0.00125*t**4 + 1.8*t + C
+Part 2: r(t) = 0.00125*t**4 + 1.8*t + 20.2187500000000
+Part 3: Position at t = 0.00 s: 22.0200000000000 m.
 </pre></div>
 </div>
 </div>
 </details>
 </div>
-</section>
-<section id="d1-2-3-velocity">
-<h2>D1.2.3 Velocity<a class="headerlink" href="#d1-2-3-velocity" title="Permalink to this headline">#</a></h2>
-<p>We can define the <strong>instantaneous</strong> velocity in terms of a <strong>differential equation</strong> through the position and time differentials</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ d\vec{r} = \vec{v}dt \]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 2</b><br>
+<p>A rocket is starting from rest at t = 0 s and experiences a net acceleration of <span class="math notranslate nohighlight">\(\vec{a}(t) = [(4.0~\textrm{m/s}^5)~t^3]~\hat{k}\)</span> for 5 s.</p>
+<ol class="arabic simple">
+<li><p>What is the rocket’s velocity after 5 s?</p></li>
+<li><p>The speed of sound in air is 343 m/s. Is this rocket traveling supersonic after 5 s?</p></li>
+</ol>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1"># PART 1</span>
+<span class="c1">#-------------------</span>
+
+<span class="c1">#declare our independent variable and assign a symbol to it</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="c1">#declare the dependent function f as a function of x</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mf">4.0</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">3</span>
+
+<span class="c1"># definite integral</span>
+<span class="n">dv</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">a</span><span class="p">,(</span><span class="n">t</span><span class="p">,</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">))</span>
+
+<span class="n">v2</span><span class="o">=</span> <span class="n">v1</span> <span class="o">+</span> <span class="n">dv</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 1: Velocity at t = 5.00 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s.&#39;</span><span class="p">)</span>
+
+<span class="c1"># PART 2</span>
+<span class="c1">#----------------</span>
+<span class="n">v_sound</span> <span class="o">=</span> <span class="mf">343.0</span>
+
+<span class="k">if</span> <span class="n">v2</span> <span class="o">&gt;</span> <span class="n">v_sound</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 2: The rocket is supersonic after 5 s.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 2: The rocket is not supersonic after 5 s.&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
-<p>If we consider differences instead, then the velocity <strong>must</strong> be constant across the time interval (or consider the average velocity), and the above expression becomes a well-known kinematics equation from University Physics I:</p>
-<div class="math notranslate nohighlight">
-\[ \Delta \vec{r} = \vec{v}_{av}\Delta t \]</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="d1-2-4-acceleration">
-<h2>D1.2.4 Acceleration<a class="headerlink" href="#d1-2-4-acceleration" title="Permalink to this headline">#</a></h2>
-<p>Similarly, we define the <strong>instantaneous</strong> acceleration as</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ \vec{v} = \vec{a}dt \]</div>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="d1-2-5-applications">
-<h2>D1.2.5 Applications<a class="headerlink" href="#d1-2-5-applications" title="Permalink to this headline">#</a></h2>
-<p>We will utilize the differentials quite a bit in this course. For example, when we explore variable mass problems it is often convenient to solve the problems in differential form. Another example is how we obtain vectors under coordinate transformations. In the next section, we will see how we progress from the differential equations to the integral equations and you will realize you have been using differentials all along. The most infamous example is the “u substitution” used to integrate composite functions.</p>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Part 1: Velocity at t = 5.00 s: 625.000000000000 m/s.
+Part 2: The rocket is supersonic after 5 s.
+</pre></div>
+</div>
+</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 
@@ -548,22 +594,13 @@ approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)<
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="definitions.html"
+       href="differential-form.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">D1.1 Kinematics Definitions</p>
+        <p class="prev-next-title">D1.2 Kinematics - Differential Form</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="integral-form.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">D1.3 Kinematics - Integral Form</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -583,11 +620,9 @@ approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)<
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-1-motivation">D1.2.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-2-difference-vs-differential">D1.2.2 Difference vs. Differential</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-3-velocity">D1.2.3 Velocity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-4-acceleration">D1.2.4 Acceleration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-5-applications">D1.2.5 Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-1-motivation">D1.3.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-2-position">D1.3.2 Position</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-3-3-velocity">D1.3.3 Velocity</a></li>
 </ul>
   </nav></div>
 
