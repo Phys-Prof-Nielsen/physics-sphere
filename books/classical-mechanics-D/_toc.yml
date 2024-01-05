@@ -12,3 +12,4 @@ parts:
 - caption: Module D1 - Kinematics in Cartesian Coordinates
   chapters:
   - file: Module-D1/definitions
+  - file: Module-D1/differential-form
