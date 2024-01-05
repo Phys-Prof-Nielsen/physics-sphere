@@ -63,6 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'motivation';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction for Formatting Markdown Boxes in Jupyter" href="intro-formatting.html" />
     <link rel="prev" title="A Competency Approach to Jupyter: Markdown" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -157,6 +158,9 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preample</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1 Motivation</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="intro-formatting.html">Introduction for Formatting Markdown Boxes in Jupyter</a></li>
 
 </ul>
 
@@ -383,7 +387,13 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1 Motivation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cell">Markdown Cell</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-jupyter">2 Getting Jupyter</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#about-formatting">3 About Formatting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown">Markdown</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#html">HTML</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations">Equations</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -405,8 +415,33 @@ document.write(`
 <li><p>Embedded in Jupyter is the Python computer language, which is widely used in the scientific communities. With that comes tools for analysis, plotting, and even solving equations symbolically. Way cool!</p></li>
 </ul>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section class="tex2jax_ignore mathjax_ignore" id="markdown-cell">
-<h1>Markdown Cell<a class="headerlink" href="#markdown-cell" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="getting-jupyter">
+<h1>2 Getting Jupyter<a class="headerlink" href="#getting-jupyter" title="Permalink to this headline">#</a></h1>
+<p>While <a class="reference external" href="https://jupyter.org/">Jupyter</a> can be deployed directly from a web browser, I strongly recommend you install it on your computer if you are serious about learning it. The version I recommend to install comes as part of a scientific software package called <a class="reference external" href="https://www.anaconda.com/">Anaconda</a>, and it has all the python packages included that we will be using in our courses.</p>
+<p>There is an app to run Jupyter on iOS too called <a class="reference external" href="https://holzschu.github.io/Carnets_Jupyter/">Carnet</a>.</p>
+<p>In this compendium, I will show examples through the Jupyter Project webpage.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section class="tex2jax_ignore mathjax_ignore" id="about-formatting">
+<h1>3 About Formatting<a class="headerlink" href="#about-formatting" title="Permalink to this headline">#</a></h1>
+<section id="markdown">
+<h2>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">#</a></h2>
+<p>Jupyter is capable of utilizing various formatting (or languages). When we first start using Jupyter Notebook, we will see there are two basic formatting cells: Markdown and Code. The markdown cell is used to display regular text as well as equations similar. This may sound similar to using a word document, however, the difference is significant as the text can be formatted using <a class="reference external" href="https://en.wikipedia.org/wiki/Markdown">Markdown language</a>. This allows the user to have more control of the text formatting. Markdown is a basic text formatting language used in basic text editors, but is also supported in frequently used software such as ChatGPT, Microsoft Teams, and Discord.</p>
+<p>Here are some links that are useful for Markdown syntax:</p>
+<p><a class="reference external" href="https://www.markdownguide.org/">Markdown Guide</a>
+<a class="reference external" href="https://wordpress.com/support/markdown-quick-reference/">Wordpress Quick Guide</a>
+<a class="reference external" href="https://www.w3schools.io/file/markdown-introduction/">w3Schools Markdown</a></p>
+</section>
+<section id="html">
+<h2>HTML<a class="headerlink" href="#html" title="Permalink to this headline">#</a></h2>
+<p>While Markdown is easy to provide simple formatting it is limited to what can be done. Since Markdown is a superset of <a class="reference external" href="https://en.wikipedia.org/wiki/HTML">HTML</a>, it does allow for some HTML syntax to be programmed as well. HTML can augment the usage of the markdown cells by introducing color etc.</p>
+<p>For some basic introduction to HTML syntax:</p>
+<p><a class="reference external" href="https://www.w3schools.com/html/">w3School HTML Guide</a></p>
+</section>
+<section id="equations">
+<h2>Equations<a class="headerlink" href="#equations" title="Permalink to this headline">#</a></h2>
+<p>The markdown cell can be used to display professional equations. It does so through <a class="reference external" href="https://www.mathjax.org/">MathJax</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>, the later is the default standard for publishing in physics journals.</p>
+<p>In this compendium, I will provide examples on how to displace equations.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -449,6 +484,15 @@ document.write(`
         <p class="prev-next-title">A Competency Approach to Jupyter: Markdown</p>
       </div>
     </a>
+    <a class="right-next"
+       href="intro-formatting.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction for Formatting Markdown Boxes in Jupyter</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -468,7 +512,13 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1 Motivation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cell">Markdown Cell</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-jupyter">2 Getting Jupyter</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#about-formatting">3 About Formatting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown">Markdown</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#html">HTML</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations">Equations</a></li>
+</ul>
+</li>
 </ul>
 
   </nav></div>

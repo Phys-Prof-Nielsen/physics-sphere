@@ -7,5 +7,5 @@ parts:
 - caption: Preample
   chapters:
   - file: motivation
-#  - file: Preample/Structure
+  - file: intro-formatting
 #  - file: Preample/Learning_Outcomes 
