@@ -7,4 +7,5 @@ parts:
 - caption: 
   chapters:
   - file: motivation
+  - file: computational-tools
  

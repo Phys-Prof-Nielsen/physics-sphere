@@ -1,0 +1,1403 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>2 Computational Tools &#8212; A Competency Approach to Jupyter - Code</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'computational-tools';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="1 Introduction" href="motivation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/jupyter-code.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/jupyter-code.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    A Competency Approach to Jupyter: Code
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="motivation.html">1 Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2 Computational Tools</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcomputational-tools.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/computational-tools.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>2 Computational Tools</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-libraries">2.1 Python Libraries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">2.1.1 Numpy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sympy">2.1.2 Sympy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">2.1.3 Matplotlib</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-libraries">2.1.4 Working with Libraries</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudo-code-and-comments">2.2 Pseudo Code and Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solve-single-equation">2.3 Solve Single Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudo-code">Pseudo-code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solve-n-equations-and-n-unknowns">2.3 Solve N Equations and N Unknowns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1">Method 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2">Method 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Pseudo code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-derivatives">2.4 Finding Derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Example 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Pseudo Code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-indefinite-integrals">2.5 Finding Indefinite Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Example 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Pseudo Code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-definite-integrals">2.6 Finding Definite Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Example 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Pseudo Code</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="computational-tools">
+<h1>2 Computational Tools<a class="headerlink" href="#computational-tools" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="python-libraries">
+<h2>2.1 Python Libraries<a class="headerlink" href="#python-libraries" title="Permalink to this heading">#</a></h2>
+<p>The build-in Python compiler is a software that takes your written code and execute according to certain rules it has been programmed to perform. The compiler itself only understands a small number of commands and that’s where libraries comes in. Python libraries contains additional commands and functions that are often used in programming. Pythin is particularly suited for scientific analysis due to certain libraries containing functions used in scientific analysis. These functions are ever growing as more and more programmers and scientists are adding to them.</p>
+<p>We will specifically use the following libraries in the notes.</p>
+<section id="numpy">
+<h3>2.1.1 Numpy<a class="headerlink" href="#numpy" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://numpy.org/">Numerical Python</a> (Numpy) is probably the most used library for scientist due to its ability to handle arrays and use in numerical computing, making it very suitable to deal with vectors, matrices, tensors, and linear algebra in general.</p>
+</section>
+<section id="sympy">
+<h3>2.1.2 Sympy<a class="headerlink" href="#sympy" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.sympy.org/en/index.html">Symbolic Python</a> allows us to perform symbolic calculations, which we will find helpful when we have problems involving unknown variables (ever heard about finding <span class="math notranslate nohighlight">\(x\)</span>?). We will use it to solve equations, find derivatives, and calculate integrals.</p>
+</section>
+<section id="matplotlib">
+<h3>2.1.3 Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://matplotlib.org/">Matplotlib</a> is a library containing functions to help us visualize data, functions, etc. In essence, it is a library used to make a variety of plots.</p>
+</section>
+<section id="working-with-libraries">
+<h3>2.1.4 Working with Libraries<a class="headerlink" href="#working-with-libraries" title="Permalink to this heading">#</a></h3>
+<p>There are different ways of importing libraries into our Python script. The examples here are using numpy:</p>
+<section id="example-1">
+<h4>Example 1<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h4>
+<p><strong>import numpy as np</strong></p>
+<p>This is a preferred approach. This line tells our compiler that we are importing functions from numpy and <strong>each</strong> time we use a numpy function, we <strong>must</strong> use</p>
+<p><strong>np.function_name</strong></p>
+<p>For example: <strong>np.arange(0,10,0.1)</strong></p>
+<p>The reason it is a preferred method is that certain functions like sine, cosine, and pi, exist in different libraries, but may be slightly different. This way, we are very specific to which library the function comes from.</p>
+</section>
+<section id="example-2">
+<h4>Example 2<a class="headerlink" href="#example-2" title="Permalink to this heading">#</a></h4>
+<p><strong>from numpy import function_name</strong></p>
+<p>This one is great is ok as well. Instead of importing an entire library, we control what we import and is available to us. Although, if we need several functions it can become tedious.</p>
+<p>For example: <strong>from numpy import arange</strong></p>
+<p>then when we call it in the code, we can for example just say</p>
+<p><strong>arange(0,10,0.1)</strong></p>
+</section>
+<section id="example-3">
+<h4>Example 3<a class="headerlink" href="#example-3" title="Permalink to this heading">#</a></h4>
+<p><b>from numpy import *</b></p>
+<p>This one should be avoided. In this case we import everything and do <strong>not</strong> specify that the function comes from . If numpy is the only library then it is not an issue.</p>
+<p>Let us say we import two libraries:</p>
+<p><b>from numpy import *</b>
+<b>from sympy import *</b></p>
+<p>Now we want to call the sine function</p>
+<p><strong>result = sin(0.25)</strong></p>
+<p>We want to use sine from numpy. Unfortunately, sympy also have a sine function and since it was called after numpy it will overwrite the numpy sine function. See the problem?</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+</section>
+<section id="pseudo-code-and-comments">
+<h2>2.2 Pseudo Code and Comments<a class="headerlink" href="#pseudo-code-and-comments" title="Permalink to this heading">#</a></h2>
+<p>In the following, I will provide example codes as well as a cell with <strong>pseudo code</strong>. Pseudo code is simply a placeholder with comments for you to enter your program. The pseudo code does not contain any executable code, but contains detailed explanations to what goes where and what that segment of code will do. In essense, the structure guides the program and explains how it works. To many people, this is seen as an integral part of programming and help you understand the process.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="solve-single-equation">
+<h2>2.3 Solve Single Equation<a class="headerlink" href="#solve-single-equation" title="Permalink to this heading">#</a></h2>
+<p>Imagine we have a box sliding across a horizontal surface with friction. The box has a mass of 2.0 kg, the force of friction is 25 N, there is a 35 N pushing force. What is the acceleration of the box?</p>
+<p>If you have passed College or University Physics I, I hope you can solve this by hand with no issues. This time, we will use the computer to solve it for us.</p>
+<p>Newton’s 2nd law tells us that (if +x-direction is in direction of motion):</p>
+<div class="math notranslate nohighlight">
+\[ +F_{px} + F_{fx} = ma_x \]</div>
+<p>Symbolic Python solves equations in the form of</p>
+<div class="math notranslate nohighlight">
+\[ \textrm{equation} = 0 \]</div>
+<p>Hence, we need to cast out working equation into that form:</p>
+<div class="math notranslate nohighlight">
+\[ 0 = ma_x - F_{px} - F_{fx} \]</div>
+<p>Now we are ready to work some magic!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#This problem solves Newton&#39;s second problem used as example</span>
+<span class="c1"># Import libraries needed</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1"># define given parameters</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">Ffx</span> <span class="o">=</span> <span class="o">-</span><span class="mf">25.0</span>
+<span class="n">Fpx</span> <span class="o">=</span> <span class="mf">35.0</span>
+
+<span class="c1"># define unknown parameter</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">)</span>
+
+<span class="c1">#define equation to be solved</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span> <span class="o">-</span> <span class="n">Fpx</span> <span class="o">-</span> <span class="n">Ffx</span>
+
+<span class="c1">#solve the equation for the variable a</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="c1">#print the result: in this case there is only one solution</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The acceleration of the box is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The acceleration of the box is: 5.00000000000000 m/s
+</pre></div>
+</div>
+</div>
+</div>
+<section id="pseudo-code">
+<h3>Pseudo-code<a class="headerlink" href="#pseudo-code" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------</span>
+<span class="c1"># Objective of Code/script</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Import libraries needed</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define given parameters</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define unknown parameter</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1">#define equation to be solved</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1">#solve the equation for the variable a</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1">#print the result: in this case there is only one solution</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># The End</span>
+<span class="c1">#------------------------</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="solve-n-equations-and-n-unknowns">
+<h2>2.3 Solve N Equations and N Unknowns<a class="headerlink" href="#solve-n-equations-and-n-unknowns" title="Permalink to this heading">#</a></h2>
+<p>Imagine we have a box sliding across a horizontal surface with friction. The box has a mass of 2.0 kg, the coefficient of friction is 0.25, there is a 35 N pushing force. What is the acceleration of the box?</p>
+<p>Newton’s 2nd law tells us that (if +x-direction is in direction of motion):</p>
+<div class="math notranslate nohighlight">
+\[ +F_{px} + F_{fx} = ma_x \]</div>
+<p>If +y-direction is “up”, then we have in the vertical direction:</p>
+<div class="math notranslate nohighlight">
+\[ +F_{Ny} + F_{gy} = ma_y \]</div>
+<p>In this problem, we need two additional equations:</p>
+<div class="math notranslate nohighlight">
+\[F_g = mg \]</div>
+<div class="math notranslate nohighlight">
+\[ F_f = \mu F_N \]</div>
+<p>and the equation of constraint:</p>
+<div class="math notranslate nohighlight">
+\[ a_y = 0 \]</div>
+<p>I will solve this in two ways. One where we insert the additonal equations directly into the two equations from Newton’s 2nd law, and one where keep them as separate equations.</p>
+<section id="method-1">
+<h3>Method 1<a class="headerlink" href="#method-1" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------</span>
+<span class="c1"># Objective of Code/script</span>
+<span class="c1">#------------------------</span>
+<span class="c1"># Solve two equations with two unknowns</span>
+<span class="c1"># obtained by applying N2. </span>
+<span class="c1"># the unknowns are normal force and x-acceleration</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Import libraries needed</span>
+<span class="c1">#------------------------</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define given parameters</span>
+<span class="c1">#------------------------</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">Fpx</span> <span class="o">=</span> <span class="mf">35.0</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.25</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>  <span class="c1">#acceleration of gravity</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define unknown parameters</span>
+<span class="c1">#------------------------</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">)</span>
+<span class="n">Fny</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;Fny&#39;</span><span class="p">)</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1">#define equations to be solved</span>
+<span class="c1">#------------------------</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span> <span class="o">-</span> <span class="n">Fpx</span> <span class="o">+</span> <span class="n">mu</span><span class="o">*</span><span class="n">Fny</span>   <span class="c1">#inserted Ff = mu*Fny directly</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">Fny</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span>  <span class="c1">#inserted F_gy = -mg directly and used ay = 0 right away</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1">#solve the equation for the variables</span>
+<span class="c1">#------------------------</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">ax</span><span class="p">,</span><span class="n">Fny</span><span class="p">))</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1">#print the result</span>
+<span class="c1">#------------------------</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+
+<span class="c1">#make it a little nice</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="n">ax</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2&#39;</span><span class="p">)</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># The End</span>
+<span class="c1">#------------------------</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{ax: 15.0475000000000, Fny: 19.6200000000000}
+The acceleration is: 15.0475000000000 m/s^2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="method-2">
+<h3>Method 2<a class="headerlink" href="#method-2" title="Permalink to this heading">#</a></h3>
+<p>Now let us repeat it, but leaving all equations as individual equations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------</span>
+<span class="c1"># Objective of Code/script</span>
+<span class="c1">#------------------------</span>
+<span class="c1"># Solve two equations with two unknowns</span>
+<span class="c1"># obtained by applying N2. </span>
+<span class="c1"># the unknowns are normal force and x-acceleration</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Import libraries needed</span>
+<span class="c1">#------------------------</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define given parameters</span>
+<span class="c1">#------------------------</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">Fpx</span> <span class="o">=</span> <span class="mf">35.0</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.25</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>  <span class="c1">#acceleration of gravity</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define unknown parameters</span>
+<span class="c1">#------------------------</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">)</span>
+<span class="n">ay</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ay&#39;</span><span class="p">)</span>
+<span class="n">Ffx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;Ffx&#39;</span><span class="p">)</span>
+<span class="n">Fny</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;Fny&#39;</span><span class="p">)</span>
+<span class="n">Fgy</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;Fgy&#39;</span><span class="p">)</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1">#define equations to be solved</span>
+<span class="c1">#------------------------</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span> <span class="o">-</span> <span class="n">Fpx</span> <span class="o">-</span> <span class="n">Ffx</span>  
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ay</span> <span class="o">-</span> <span class="n">Fny</span> <span class="o">-</span> <span class="n">Fgy</span>  
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">Fgy</span> <span class="o">+</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span>  <span class="c1"># Fgy = -mg --&gt; 0 = Fgy + mg</span>
+<span class="n">eq4</span> <span class="o">=</span> <span class="n">Ffx</span> <span class="o">+</span> <span class="n">mu</span><span class="o">*</span><span class="n">Fny</span>  <span class="c1"># Ffx = - mu*Fny --&gt; 0 = Ffx + mu*Fny</span>
+<span class="n">eq5</span> <span class="o">=</span> <span class="n">ay</span>   <span class="c1"># 0 = ay</span>
+<span class="c1">#------------------------</span>
+<span class="c1">#solve the equation for the variables</span>
+<span class="c1">#------------------------</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">,</span><span class="n">eq4</span><span class="p">,</span><span class="n">eq5</span><span class="p">),(</span><span class="n">ax</span><span class="p">,</span><span class="n">ay</span><span class="p">,</span><span class="n">Ffx</span><span class="p">,</span><span class="n">Fny</span><span class="p">,</span><span class="n">Fgy</span><span class="p">))</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1">#print the result</span>
+<span class="c1">#------------------------</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+
+<span class="c1">#make it a little nice</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="n">ax</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2&#39;</span><span class="p">)</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># The End</span>
+<span class="c1">#------------------------</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{ax: 15.0475000000000, ay: 0.0, Ffx: -4.90500000000000, Fny: 19.6200000000000, Fgy: -19.6200000000000}
+The acceleration is: 15.0475000000000 m/s^2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h3>Pseudo code<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------</span>
+<span class="c1"># Objective of Code/script</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Import libraries needed</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define given parameters</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define unknown parameters</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1">#define equations to be solved</span>
+<span class="c1">#------------------------</span>
+
+
+
+
+<span class="c1">#------------------------</span>
+<span class="c1">#solve the equation for the variables</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1">#print the result</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># The End</span>
+<span class="c1">#------------------------</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="finding-derivatives">
+<h2>2.4 Finding Derivatives<a class="headerlink" href="#finding-derivatives" title="Permalink to this heading">#</a></h2>
+<p>Find the derivative of</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = 5.0\sin(2x) \]</div>
+<section id="id2">
+<h3>Example 1<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------</span>
+<span class="c1"># Objective of Code/script</span>
+<span class="c1">#------------------------</span>
+<span class="c1"># Find the n derivative of a function</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Import libraries needed</span>
+<span class="c1">#------------------------</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define unknown parameters</span>
+<span class="c1">#------------------------</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define function </span>
+<span class="c1">#------------------------</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">5.0</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>   <span class="c1">#use the function sine from sympy</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># find the first derivative </span>
+<span class="c1">#------------------------</span>
+<span class="n">deriv</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>  <span class="c1">#using 1 is first derivative, 2 is second derivative etc.</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1">#print the result</span>
+<span class="c1">#------------------------</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The derivative is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">deriv</span><span class="p">))</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># The End</span>
+<span class="c1">#------------------------</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The derivative is: 10.0*cos(2*x)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h3>Example 2<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>In this example, we will make the output look really pretty.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------</span>
+<span class="c1"># Objective of Code/script</span>
+<span class="c1">#------------------------</span>
+<span class="c1"># Find the n derivative of a function</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Import libraries needed</span>
+<span class="c1">#------------------------</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Make it look pretty</span>
+<span class="c1">#------------------------</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">init_printing</span><span class="p">()</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define unknown parameters</span>
+<span class="c1">#------------------------</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define function </span>
+<span class="c1">#------------------------</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">5.0</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>   <span class="c1">#use the function sine from sympy</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># find the first derivative </span>
+<span class="c1">#------------------------</span>
+<span class="n">deriv</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1">#print the result</span>
+<span class="c1">#------------------------</span>
+<span class="c1">#display the function f and its derivative</span>
+<span class="p">{</span><span class="n">sym</span><span class="o">.</span><span class="n">Derivative</span><span class="p">(</span><span class="n">f</span><span class="p">):</span> <span class="n">deriv</span><span class="p">}</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># The End</span>
+<span class="c1">#------------------------</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/583d5c4e6a9dbc0c7274fb6c958c9e34d44a91ecfb547df8863efa6b09c4397e.png" src="_images/583d5c4e6a9dbc0c7274fb6c958c9e34d44a91ecfb547df8863efa6b09c4397e.png" />
+</div>
+</div>
+</section>
+<section id="id4">
+<h3>Pseudo Code<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------</span>
+<span class="c1"># Objective of Code/script</span>
+<span class="c1">#------------------------</span>
+<span class="c1"># Find the n derivative of a function</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Import libraries needed</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define unknown parameters</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define function </span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># find the derivative </span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1">#print the result</span>
+<span class="c1">#------------------------</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># The End</span>
+<span class="c1">#------------------------</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="finding-indefinite-integrals">
+<h2>2.5 Finding Indefinite Integrals<a class="headerlink" href="#finding-indefinite-integrals" title="Permalink to this heading">#</a></h2>
+<p>Find the indefinite integral of</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = 5.0\sin(2x) \]</div>
+<section id="id5">
+<h3>Example 1<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------</span>
+<span class="c1"># Objective of Code/script</span>
+<span class="c1">#------------------------</span>
+<span class="c1"># Find the indefinite integral of a function</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Import libraries needed</span>
+<span class="c1">#------------------------</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define unknown parameters</span>
+<span class="c1">#------------------------</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define function </span>
+<span class="c1">#------------------------</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">5.0</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>   <span class="c1">#use the function sine from sympy</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># find the integral </span>
+<span class="c1">#------------------------</span>
+<span class="n">integral</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>  
+
+<span class="c1">#------------------------</span>
+<span class="c1">#print the result</span>
+<span class="c1">#------------------------</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The integral is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">integral</span><span class="p">))</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># The End</span>
+<span class="c1">#------------------------</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The integral is: -2.5*cos(2*x)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id6">
+<h3>Example 2<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------</span>
+<span class="c1"># Objective of Code/script</span>
+<span class="c1">#------------------------</span>
+<span class="c1"># Find the indefinite integral of a function</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Import libraries needed</span>
+<span class="c1">#------------------------</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Make it look pretty</span>
+<span class="c1">#------------------------</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">init_printing</span><span class="p">()</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define unknown parameters</span>
+<span class="c1">#------------------------</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define function </span>
+<span class="c1">#------------------------</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">5.0</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>   <span class="c1">#use the function sine from sympy</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># find the integral </span>
+<span class="c1">#------------------------</span>
+<span class="n">integral</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>  
+
+<span class="c1">#------------------------</span>
+<span class="c1">#print the result</span>
+<span class="c1">#------------------------</span>
+<span class="c1">#display the function f and its derivative</span>
+<span class="p">{</span><span class="n">sym</span><span class="o">.</span><span class="n">Integral</span><span class="p">(</span><span class="n">f</span><span class="p">):</span> <span class="n">integral</span><span class="p">}</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># The End</span>
+<span class="c1">#------------------------</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1f54e669e2540b35e5fcf355e60a5c25644871ac45028179bd99f8612d84cf22.png" src="_images/1f54e669e2540b35e5fcf355e60a5c25644871ac45028179bd99f8612d84cf22.png" />
+</div>
+</div>
+</section>
+<section id="id7">
+<h3>Pseudo Code<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------</span>
+<span class="c1"># Objective of Code/script</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Import libraries needed</span>
+<span class="c1">#------------------------</span>
+
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define unknown parameters</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define function </span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># find the integral </span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1">#print the result</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># The End</span>
+<span class="c1">#------------------------</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="finding-definite-integrals">
+<h2>2.6 Finding Definite Integrals<a class="headerlink" href="#finding-definite-integrals" title="Permalink to this heading">#</a></h2>
+<p>Find the definite integral of</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = 5.0\sin(2x) \]</div>
+<p>between <span class="math notranslate nohighlight">\(x = 0\)</span> and <span class="math notranslate nohighlight">\(x = 2\)</span>.</p>
+<section id="id8">
+<h3>Example 1<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------</span>
+<span class="c1"># Objective of Code/script</span>
+<span class="c1">#------------------------</span>
+<span class="c1"># Find the indefinite integral of a function</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Import libraries needed</span>
+<span class="c1">#------------------------</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Specify boundaries of integration</span>
+<span class="c1">#------------------------</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mf">2.0</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define unknown parameters</span>
+<span class="c1">#------------------------</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define function </span>
+<span class="c1">#------------------------</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">5.0</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>   <span class="c1">#use the function sine from sympy</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># find the integral </span>
+<span class="c1">#------------------------</span>
+<span class="n">integral</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">f</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span>  
+
+<span class="c1">#------------------------</span>
+<span class="c1">#print the result</span>
+<span class="c1">#------------------------</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The integral is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">integral</span><span class="p">))</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># The End</span>
+<span class="c1">#------------------------</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The integral is: 4.13410905215903
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id9">
+<h3>Example 2<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------</span>
+<span class="c1"># Objective of Code/script</span>
+<span class="c1">#------------------------</span>
+<span class="c1"># Find the indefinite integral of a function</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Import libraries needed</span>
+<span class="c1">#------------------------</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Make it look pretty</span>
+<span class="c1">#------------------------</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">init_printing</span><span class="p">()</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Specify boundaries of integration</span>
+<span class="c1">#------------------------</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mf">2.0</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define unknown parameters</span>
+<span class="c1">#------------------------</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define function </span>
+<span class="c1">#------------------------</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">5.0</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>   <span class="c1">#use the function sine from sympy</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># find the integral </span>
+<span class="c1">#------------------------</span>
+<span class="n">integral</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">f</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span>  
+
+<span class="c1">#------------------------</span>
+<span class="c1">#print the result</span>
+<span class="c1">#------------------------</span>
+<span class="c1">#display the function f and its derivative</span>
+<span class="p">{</span><span class="n">sym</span><span class="o">.</span><span class="n">Integral</span><span class="p">(</span><span class="n">f</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)):</span> <span class="n">integral</span><span class="p">}</span>
+
+<span class="c1">#------------------------</span>
+<span class="c1"># The End</span>
+<span class="c1">#------------------------</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/0842c7e667c2a59ed803a6ffebe815e1d33eb91928a2ce2b68261fe60367fc94.png" src="_images/0842c7e667c2a59ed803a6ffebe815e1d33eb91928a2ce2b68261fe60367fc94.png" />
+</div>
+</div>
+</section>
+<section id="id10">
+<h3>Pseudo Code<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------</span>
+<span class="c1"># Objective of Code/script</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Import libraries needed</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># Specify boundaries of integration</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define unknown parameters</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># define function </span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># find the integral </span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1">#print the result</span>
+<span class="c1">#------------------------</span>
+
+
+<span class="c1">#------------------------</span>
+<span class="c1"># The End</span>
+<span class="c1">#------------------------</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "executablebooks/jupyter-book",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="motivation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">1 Introduction</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-libraries">2.1 Python Libraries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">2.1.1 Numpy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sympy">2.1.2 Sympy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">2.1.3 Matplotlib</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-libraries">2.1.4 Working with Libraries</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudo-code-and-comments">2.2 Pseudo Code and Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solve-single-equation">2.3 Solve Single Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudo-code">Pseudo-code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solve-n-equations-and-n-unknowns">2.3 Solve N Equations and N Unknowns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1">Method 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2">Method 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Pseudo code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-derivatives">2.4 Finding Derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Example 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Pseudo Code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-indefinite-integrals">2.5 Finding Indefinite Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Example 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Pseudo Code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-definite-integrals">2.6 Finding Definite Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Example 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Pseudo Code</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kim Nielsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
