@@ -468,7 +468,7 @@ document.write(`
 <section id="example-2">
 <h4>Example 2<a class="headerlink" href="#example-2" title="Permalink to this heading">#</a></h4>
 <p><strong>from numpy import function_name</strong></p>
-<p>This one is great is ok as well. Instead of importing an entire library, we control what we import and is available to us. Although, if we need several functions it can become tedious.</p>
+<p>This one is ok as well. Instead of importing an entire library, we control what we import and is available to us. Although, if we need several functions it can become tedious.</p>
 <p>For example: <strong>from numpy import arange</strong></p>
 <p>then when we call it in the code, we can for example just say</p>
 <p><strong>arange(0,10,0.1)</strong></p>
@@ -476,9 +476,9 @@ document.write(`
 <section id="example-3">
 <h4>Example 3<a class="headerlink" href="#example-3" title="Permalink to this heading">#</a></h4>
 <p><b>from numpy import *</b></p>
-<p>This one should be avoided. In this case we import everything and do <strong>not</strong> specify that the function comes from . If numpy is the only library then it is not an issue.</p>
+<p>This one should be avoided. In this case we import everything and do <strong>not</strong> need specify where the function comes from when. If numpy is the only library then it is not an issue.</p>
 <p>Let us say we import two libraries:</p>
-<p><b>from numpy import *</b>
+<p><b>from numpy import *</b><br>
 <b>from sympy import *</b></p>
 <p>Now we want to call the sine function</p>
 <p><strong>result = sin(0.25)</strong></p>
