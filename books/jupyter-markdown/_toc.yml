@@ -4,8 +4,8 @@
 format: jb-book
 root: intro
 parts:
-- caption: Preample
+- caption: 
   chapters:
   - file: motivation
   - file: basic-formatting
-#  - file: Preample/Learning_Outcomes 
+ 
