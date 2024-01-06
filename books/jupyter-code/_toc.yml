@@ -6,5 +6,5 @@ root: intro
 parts:
 - caption: Preample
   chapters:
-  - file: Preample/Motivation
+  - file: Motivation
  
