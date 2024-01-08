@@ -913,8 +913,9 @@ What charge q must be placed at the origin so that the electric field vanishes a
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f 
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
 <span class="n">q1</span> <span class="o">=</span> <span class="mf">4.0E-6</span>
 <span class="n">q2</span> <span class="o">=</span> <span class="mf">4.0E-6</span>
@@ -951,17 +952,6 @@ What charge q must be placed at the origin so that the electric field vanishes a
 
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eqx</span><span class="p">,</span><span class="n">eqy</span><span class="p">),</span><span class="n">q3</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The charge at the origin must be: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">q3</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; C&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The charge at the origin must be: -2.82842712474619e-6 C
 </pre></div>
 </div>
 </div>
