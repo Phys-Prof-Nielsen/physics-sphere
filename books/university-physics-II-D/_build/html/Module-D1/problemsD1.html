@@ -726,19 +726,247 @@ Percent change in mass: 4.548813982570519e-16
 <li><p>What is the acceleration (both magnitude and direction) of the dust particle?</p></li>
 </ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/5-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#declare variable</span>
+<span class="n">E</span> <span class="o">=</span> <span class="o">-</span><span class="mf">100.0</span>   <span class="c1">#positive up</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">2.0E-18</span>
+<span class="n">q</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.602E-19</span>   
+
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="n">fgy</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span><span class="o">*</span><span class="n">g</span>
+<span class="n">fEy</span> <span class="o">=</span> <span class="n">q</span><span class="o">*</span><span class="n">E</span>   
+
+<span class="n">ratio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">fgy</span><span class="o">/</span><span class="n">fEy</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The ratio between gravitational and electric forces is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ratio</span><span class="p">))</span>
+
+<span class="n">f_net</span> <span class="o">=</span> <span class="n">fEy</span> <span class="o">+</span> <span class="n">fgy</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">f_net</span><span class="o">/</span><span class="n">m</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The ratio between gravitational and electric forces is: 1.2247191011235956
+The acceleration is: -1.8000000000000012 m/s^2
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D1.8</h2>
     </header>
 <p>What is the electric field at a point where the force on a <span class="math notranslate nohighlight">\(−2.0\times 10^{−6}\)</span> C charge is  <span class="math notranslate nohighlight">\((4.0\hat{i} − 6.0\hat{j})\times 10^{−6}\)</span> N?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/5-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.0E-6</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">4.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">6.0</span><span class="p">])</span><span class="o">*</span><span class="mf">1E-6</span>
+
+<span class="n">E</span> <span class="o">=</span> <span class="n">f</span><span class="o">/</span><span class="n">q</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The electric field vector is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">E</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N/C&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The electric field vector is: [-2.  3.] N/C
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D1.9</h2>
     </header>
 <p>Can you arrange the two point charges <span class="math notranslate nohighlight">\(q_1 = -2.0\times 10^{-6}\)</span> C and <span class="math notranslate nohighlight">\(q_2 = 4.0\times 10^{-6}\)</span> C along the x-axis so that <span class="math notranslate nohighlight">\(E = 0\)</span> at the origin?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/5-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f 
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">q1</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.0E-6</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="mf">4.0E-6</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mf">8.99E9</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x1&#39;</span><span class="p">)</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x2&#39;</span><span class="p">)</span>
+
+<span class="n">d1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">x2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">E1</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span><span class="o">/</span><span class="n">d1</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">E2</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x2</span><span class="p">)</span><span class="o">/</span><span class="n">d2</span><span class="o">**</span><span class="mi">3</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">E1</span> <span class="o">+</span> <span class="n">E2</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The E-field will be zero if the (x1, x2) = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span> <span class="s1">&#39; m&#39;</span><span class="p">)</span>
+
+<span class="n">val</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Do you want to test it? [Y/N]&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span> <span class="ow">or</span> <span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>
+    <span class="n">xb</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a x2 position (in m): &quot;</span><span class="p">)</span> 
+    <span class="n">xb</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">xb</span><span class="p">)</span>
+    <span class="n">xa</span> <span class="o">=</span> <span class="mf">0.707106781186548</span><span class="o">*</span><span class="n">xb</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">xa</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">xb</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">Ea</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">xa</span><span class="p">)</span><span class="o">/</span><span class="n">da</span><span class="o">**</span><span class="mi">3</span>
+    <span class="n">Eb</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">xb</span><span class="p">)</span><span class="o">/</span><span class="n">db</span><span class="o">**</span><span class="mi">3</span>
+
+    <span class="n">E</span> <span class="o">=</span> <span class="n">Ea</span> <span class="o">+</span> <span class="n">Eb</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The electric field at x = 0 is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">E</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N/m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The E-field will be zero if the (x1, x2) = (0.707106781186548*x2, x2) m
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="nn">Input In [9],</span> in <span class="ni">&lt;cell line: 26&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The E-field will be zero if the (x1, x2) = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span> <span class="s1">&#39; m&#39;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">26</span> <span class="n">val</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Do you want to test it? [Y/N]&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span> <span class="ow">or</span> <span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="n">xb</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a x2 position (in m): &quot;</span><span class="p">)</span> 
+
+<span class="nn">File ~/opt/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py:1072,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1065</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
+<span class="g g-Whitespace">   </span><span class="mi">1066</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1067</span><span class="sd"> Raises</span>
+<span class="g g-Whitespace">   </span><span class="mi">1068</span><span class="sd"> ------</span>
+<span class="g g-Whitespace">   </span><span class="mi">1069</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1070</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1071</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1072</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1073</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1074</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1075</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1076</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1077</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1078</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1079</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1080</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D1.10</h2>
     </header>
 <p>Point charges <span class="math notranslate nohighlight">\(q_1 = q_2 = 4.0\times 10^{-6}\)</span> C are fixed on the x-axis at <span class="math notranslate nohighlight">\(x = −3.0\)</span> m and <span class="math notranslate nohighlight">\(x = 3.0\)</span> m.
 What charge q must be placed at the origin so that the electric field vanishes at  (x,y) = (0,3) m?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/5-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">q1</span> <span class="o">=</span> <span class="mf">4.0E-6</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="mf">4.0E-6</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mf">8.99E9</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.0</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">x3</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">y3</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">3.0</span>
+
+<span class="n">d1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">y1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">x2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">y2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">d3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">x3</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">y3</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">q3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;q3&#39;</span><span class="p">)</span>
+
+<span class="n">E1x</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span><span class="o">/</span><span class="n">d1</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">E1y</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">y1</span><span class="p">)</span><span class="o">/</span><span class="n">d1</span><span class="o">**</span><span class="mi">3</span>
+
+<span class="n">E2x</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x2</span><span class="p">)</span><span class="o">/</span><span class="n">d2</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">E2y</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q2</span><span class="o">*</span><span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">y2</span><span class="p">)</span><span class="o">/</span><span class="n">d2</span><span class="o">**</span><span class="mi">3</span>
+
+<span class="n">E3x</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q3</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x3</span><span class="p">)</span><span class="o">/</span><span class="n">d3</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">E3y</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q3</span><span class="o">*</span><span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">y3</span><span class="p">)</span><span class="o">/</span><span class="n">d3</span><span class="o">**</span><span class="mi">3</span>
+
+<span class="n">eqx</span> <span class="o">=</span> <span class="n">E1x</span> <span class="o">+</span> <span class="n">E2x</span> <span class="o">+</span> <span class="n">E3x</span>
+<span class="n">eqy</span> <span class="o">=</span> <span class="n">E1y</span> <span class="o">+</span> <span class="n">E2y</span> <span class="o">+</span> <span class="n">E3y</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eqx</span><span class="p">,</span><span class="n">eqy</span><span class="p">),</span><span class="n">q3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The charge at the origin must be: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">q3</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; C&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The charge at the origin must be: -2.82842712474619e-6 C
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 
     <script type="text/x-thebe-config">
