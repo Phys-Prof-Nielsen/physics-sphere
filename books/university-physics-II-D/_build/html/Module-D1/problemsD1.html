@@ -407,7 +407,8 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">ceil</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f 
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">ceil</span>
 
 <span class="c1"># provided info</span>
 <span class="n">Q</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.0E-9</span>
@@ -455,7 +456,8 @@ Percent change in mass: 4.548813982570519e-16
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f 
+<span class="c1">#import numpy</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># provided info</span>
@@ -507,7 +509,8 @@ Percent change in mass: 4.548813982570519e-16
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import libraries</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f 
+<span class="c1">#import libraries</span>
 <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
 <span class="c1"># provided info</span>
@@ -562,7 +565,8 @@ Percent change in mass: 4.548813982570519e-16
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import library</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f 
+<span class="c1">#import library</span>
 <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -624,7 +628,8 @@ Percent change in mass: 4.548813982570519e-16
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1">#declare given parameters</span>
 <span class="n">q1</span> <span class="o">=</span> <span class="mf">2.0E-6</span>
@@ -638,9 +643,9 @@ Percent change in mass: 4.548813982570519e-16
 
 <span class="n">d12</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">r1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">r2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">r1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">r2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">r1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">r2</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>   <span class="c1">#pythagorean theorem</span>
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">r1</span> <span class="o">-</span> <span class="n">r2</span>  <span class="c1">#directed line segment from source (charge 2) to test (charge1)</span>
+<span class="n">r12</span> <span class="o">=</span> <span class="n">r1</span> <span class="o">-</span> <span class="n">r2</span>  <span class="c1">#directed line segment from source (charge 2) to test (charge1)</span>
 
-<span class="n">f12</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="p">)</span><span class="o">*</span><span class="n">r</span><span class="o">/</span><span class="n">d12</span>
+<span class="n">f12</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="p">)</span><span class="o">*</span><span class="n">r12</span><span class="o">/</span><span class="n">d12</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The force vector on q1 due to q2 is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">f12</span><span class="p">)</span><span class="o">+</span> <span class="s1">&#39; N&#39;</span><span class="p">)</span>
 </pre></div>
@@ -661,9 +666,58 @@ Percent change in mass: 4.548813982570519e-16
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D1.6</h2>
     </header>
-<p>The charges <span class="math notranslate nohighlight">\(q_1 = 2.0\times 10^{-7}\)</span> C, <span class="math notranslate nohighlight">\(q_2 = -4.0\times 10^{-7}\)</span> C, and <span class="math notranslate nohighlight">\(q_3 = -1.0\times 10^{07}\)</span> C are placed at the corners of the triangle shown below. What is the force on <span class="math notranslate nohighlight">\(q_1\)</span>?</p>
+<p>The charges <span class="math notranslate nohighlight">\(q_1 = 2.0\times 10^{-7}\)</span> C, <span class="math notranslate nohighlight">\(q_2 = -4.0\times 10^{-7}\)</span> C, and <span class="math notranslate nohighlight">\(q_3 = -1.0\times 10^{-7}\)</span> C are placed at the corners of the triangle shown below. What is the force on <span class="math notranslate nohighlight">\(q_1\)</span>?</p>
 <img src="P-D1.6.png"  width="300"/>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/5-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">q1</span> <span class="o">=</span> <span class="mf">2.0E-7</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="o">-</span><span class="mf">4.0E-7</span>
+<span class="n">q3</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0E-7</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mf">8.99E9</span>
+
+<span class="c1">#let q3 be at origin of reference frame</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">])</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+<span class="n">r3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+
+<span class="n">d12</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">r1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">r2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">r1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">r2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>   <span class="c1">#pythagorean theorem</span>
+<span class="n">d13</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">r1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">r3</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">r1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">r3</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>   <span class="c1">#pythagorean theorem</span>
+
+<span class="n">r12</span> <span class="o">=</span> <span class="n">r1</span> <span class="o">-</span> <span class="n">r2</span>
+<span class="n">r13</span> <span class="o">=</span> <span class="n">r1</span> <span class="o">=</span> <span class="n">r3</span>
+
+<span class="n">f12</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="p">)</span><span class="o">*</span><span class="n">r12</span><span class="o">/</span><span class="n">d12</span>
+<span class="n">f13</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q3</span><span class="p">)</span><span class="o">*</span><span class="n">r13</span><span class="o">/</span><span class="n">d13</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">f12</span> <span class="o">+</span> <span class="n">f13</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The force vector on q1 due to q2 and q3 is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">+</span> <span class="s1">&#39; N&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The force vector on q1 due to q2 and q3 is [ 0.00057536 -0.00043152] N
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D1.7</h2>
     </header>
 <p>On a typical clear day, the atmospheric electric field points downward and has a magnitude of approximately <span class="math notranslate nohighlight">\(100.0\)</span> N/C.</p>
