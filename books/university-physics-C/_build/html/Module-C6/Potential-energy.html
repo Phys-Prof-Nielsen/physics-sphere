@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>C6.3 Potential Energy &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -69,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="C6.4 Conservation of Energy" href="Conservation-energy.html" />
     <link rel="prev" title="C6.2 Conservative Forces" href="Conservative-forces.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -258,6 +257,37 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -420,13 +450,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="c6-3-potential-energy">
-<h1>C6.3 Potential Energy<a class="headerlink" href="#c6-3-potential-energy" title="Permalink to this heading">#</a></h1>
+<h1>C6.3 Potential Energy<a class="headerlink" href="#c6-3-potential-energy" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="c6-3-1-background">
-<h2>C6.3.1 Background<a class="headerlink" href="#c6-3-1-background" title="Permalink to this heading">#</a></h2>
+<h2>C6.3.1 Background<a class="headerlink" href="#c6-3-1-background" title="Permalink to this headline">#</a></h2>
 <p>If a force is conservative the work done by the force can be written in terms of a scalar function. This result is obtained through vector calculus and beyond the scope of this module and phase. Instead, we will show how they relate in 1D and determine the gravitational potential energy function associated with the conservative force of gravity.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="c6-3-2-conservative-force-and-potential-energy-in-1d">
-<h2>C6.3.2 Conservative Force and Potential Energy in 1D<a class="headerlink" href="#c6-3-2-conservative-force-and-potential-energy-in-1d" title="Permalink to this heading">#</a></h2>
+<h2>C6.3.2 Conservative Force and Potential Energy in 1D<a class="headerlink" href="#c6-3-2-conservative-force-and-potential-energy-in-1d" title="Permalink to this headline">#</a></h2>
 <p>The defining relationship between the work done by a conservative force <span class="math notranslate nohighlight">\(\vec{f}_C\)</span> and potential energy <span class="math notranslate nohighlight">\(u\)</span> in 1D is</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -444,7 +474,7 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="c6-3-3-gravitational-potential-energy">
-<h2>C6.3.3 Gravitational Potential Energy<a class="headerlink" href="#c6-3-3-gravitational-potential-energy" title="Permalink to this heading">#</a></h2>
+<h2>C6.3.3 Gravitational Potential Energy<a class="headerlink" href="#c6-3-3-gravitational-potential-energy" title="Permalink to this headline">#</a></h2>
 <p>We determined in the previous note that the force of gravity is a conservative force. So how does the gravitational potential energy look like?</p>
 <p>We can use Example 1 from previous note to determine the potential energy function associated with the force of gravity. Consider the displacement a block from some vertical position <span class="math notranslate nohighlight">\(y_A\)</span> to a new vertical position <span class="math notranslate nohighlight">\(y_B\)</span> upwards and let positive be upwards as well. The work done by gravity is then</p>
 <div class="math notranslate nohighlight">
@@ -470,7 +500,7 @@ document.write(`
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "executablebooks/jupyter-book",
             ref: "master",
         },
         codeMirrorConfig: {
