@@ -20,4 +20,4 @@ parts:
 - caption: Module D2 - Potential
   chapters:
   - file: Module-D2/work
-  - file: Module-D2/electri-potential
+  - file: Module-D2/electric-potential
