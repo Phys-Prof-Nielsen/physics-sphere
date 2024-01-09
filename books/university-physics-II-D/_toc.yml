@@ -17,3 +17,6 @@ parts:
   - file: Module-D1/coulombs-law
   - file: Module-D1/electric-field
   - file: Module-D1/problemsD1
+- caption: Module D2 - Potential
+  chapters:
+  - file: Module-D2/work
