@@ -14,3 +14,6 @@ parts:
   - file: Module-D1/definitions
   - file: Module-D1/differential-form
   - file: Module-D1/integral-form
+- caption: Module D2 - Linear Momentum and Impulse
+  chapters:
+  - file: Module-D2/momentum-impulse
