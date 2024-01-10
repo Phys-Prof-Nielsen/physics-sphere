@@ -17,3 +17,6 @@ parts:
 - caption: Module D2 - Linear Momentum and Impulse
   chapters:
   - file: Module-D2/momentum-impulse
+- caption: Module D3 - Newtons Laws's - Linear Motion
+  chapters:
+  - file: Module-D3/newtons-laws
