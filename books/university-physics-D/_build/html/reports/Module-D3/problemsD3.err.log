@@ -1,0 +1,85 @@
+Traceback (most recent call last):
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/kimnielsen/opt/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+```{admonition} Problem D3.2
+:class: tip, dropdown
+
+<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
+<header>
+<h3> Problem D3.2</h3>
+    </header>
+<b>Problem</b>
+    
+A 5.0E-3 kg particle is traveling in 1D with a speed of 335 m/s in the -z direction. After some elapsed time, the particle has a velocity of -875 m/s.
+
+1. What is the initial velocity of the particle?
+2. What is the initial and final momentums of the particle?
+3. Before calculating the impulse, make a prediction about the direction of impulse. Explain your reasoning.
+4. Calculate the momentum transfer for the particle. (Remember that impulse is momentum transfer.)
+
+<b>Methodology</b>
+    <br>
+With the 1D coordinate system given, we can assign directions through the +/- signs. Plug and chuck approach will allow us to compute the momentums and the impulse.
+
+<b>Solution</b>
+    <br>
+Part 1:<br>
+
+Since the speed is 335 m/s and it is traveling in the negative z-direction, the velocity must be
+
+$v_z = -335~\textrm{m/s}$
+
+Part 2:<br>
+
+The initial momentum is
+
+$ p_{zi} = (5.0\times 10^{-3})(-335) = -1.7~\textrm{kgm/s} $
+
+The final momentum is
+
+$ p_{zf} = (5.0\times 10^{-3})(-875) = -4.4~\textrm{kgm/s} $
+
+Part 3:<br>
+
+Since we are increasing the magnitude of momemtum in the negative direction, we must have an interaction directed in the negative direction. Answer: the momentum transfer (or impulse) is in the negative z-direction.
+
+Part 4:<br>
+
+The impulse is the change in momentum:
+
+$\Delta p_z = p_{zf} - p_{zi} = (-4.4) - (-1.7) = -2.7~\textrm{kgm/s} $
+
+<b>Reflection</b>
+<br>
+The impulse is negative in agreement with our prediction. It is increasing the momentum by an amount of -2.7 kgm/s. 
+
+    
+</div>
+
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+```
+------------------
+
+[0;36m  Input [0;32mIn [2][0;36m[0m
+[0;31m    ```{admonition} Problem D3.2[0m
+[0m    ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+
+SyntaxError: invalid syntax (2445580702.py, line 1)
+

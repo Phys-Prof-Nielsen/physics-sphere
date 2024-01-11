@@ -1,36 +1,6 @@
 [
     {
-        "question": "Problem D4.1: Frictional force",
-        "type": "numeric",
-        "answers": [
-            {
-                "type": "value",
-                "value": 11,
-                "correct": true,
-                "feedback": "Correct."
-            },
-            {
-                "type": "range",
-                "range": [
-                    11.00001,
-                    99999
-                ],
-                "correct": false,
-                "feedback": "False. Try again."
-            },
-            {
-                "type": "range",
-                "range": [
-                    -99999,
-                    10.9999
-                ],
-                "correct": false,
-                "feedback": "False. Try again."
-            }
-        ]
-    },
-    {
-        "question": "Problem D4.2.1: Impact force",
+        "question": "Problem D4.1.1: Impact force",
         "type": "multiple_choice",
         "answers": [
             {
@@ -56,7 +26,7 @@
         ]
     },
     {
-        "question": "Problem D4.2.2: Impact force with seat belt",
+        "question": "Problem D4.1.2: Impact force with seat belt",
         "type": "multiple_choice",
         "answers": [
             {
@@ -82,7 +52,7 @@
         ]
     },
     {
-        "question": "Problem D4.2.3: Impact force with seat belt and airbag",
+        "question": "Problem D4.1.3: Impact force with seat belt and airbag",
         "type": "multiple_choice",
         "answers": [
                     {
@@ -109,7 +79,7 @@
           
     },
     {
-        "question": "Problem D4.2.4: g-forces",
+        "question": "Problem D4.1.4: g-forces",
         "type": "multiple_choice",
         "answers": [
                     {
@@ -136,84 +106,7 @@
           
     },
     {
-        "question": "Problem D4.3.1: Impact force prediction",
-        "type": "multiple_choice",
-        "answers": [
-                    {
-                        "answer": "Bouncing collision",
-                        "correct": true,
-                        "feedback": "Correct."
-                    },
-                    {
-                        "answer": "Sticky collision",
-                        "correct": false,
-                        "feedback": "False."
-                    }
-                ]
-          
-    },
-    {
-        "question": "Problem D4.3.2: Sticky collision force",
-        "type": "numeric",
-        "answers": [
-            {
-                "type": "value",
-                "value": -2500,
-                "correct": true,
-                "feedback": "Correct."
-            },
-            {
-                "type": "range",
-                "range": [
-                    -2499.9999,
-                    999E6
-                ],
-                "correct": false,
-                "feedback": "False. Try again."
-            },
-            {
-                "type": "range",
-                "range": [
-                    -99999,
-                    -2500.00001
-                ],
-                "correct": false,
-                "feedback": "False. Try again."
-            }
-        ]
-    },
-    {
-        "question": "Problem D4.3.2: Bouncing collision force",
-        "type": "numeric",
-        "answers": [
-            {
-                "type": "value",
-                "value": -5000,
-                "correct": true,
-                "feedback": "Correct."
-            },
-            {
-                "type": "range",
-                "range": [
-                    -4999.9999,
-                    999E6
-                ],
-                "correct": false,
-                "feedback": "False. Try again."
-            },
-            {
-                "type": "range",
-                "range": [
-                    -99999,
-                    -5000.00001
-                ],
-                "correct": false,
-                "feedback": "False. Try again."
-            }
-        ]
-    },
-    {
-        "question": "Problem D4.4.1: Direction of interaction",
+        "question": "Problem D4.2.1: Direction of interaction",
         "type": "multiple_choice",
         "answers": [
             {
@@ -229,7 +122,7 @@
         ]
     },
     {
-        "question": "Problem D4.4.2: Impact time",
+        "question": "Problem D4.2.2: Impact time",
         "type": "numeric",
         "answers": [
             {
@@ -259,7 +152,7 @@
         ]
     },
     {
-        "question": "Problem D4.4.3: Acceleration",
+        "question": "Problem D4.2.3: Acceleration",
         "type": "numeric",
         "answers": [
             {
@@ -289,7 +182,7 @@
         ]
     },
     {
-        "question": "Problem D4.5.1: Direction of momentum transfer",
+        "question": "Problem D4.3.1: Direction of momentum transfer",
         "type": "multiple_choice",
         "answers": [
             {
@@ -305,7 +198,7 @@
         ]
     },
     {
-        "question": "Problem D4.5.2: Momentum transfer",
+        "question": "Problem D4.3.2: Momentum transfer",
         "type": "numeric",
         "answers": [
             {
@@ -335,7 +228,7 @@
         ]
     },
     {
-        "question": "Problem D4.5.3: Final velocity",
+        "question": "Problem D4.3.3: Final velocity",
         "type": "numeric",
         "answers": [
             {
@@ -365,7 +258,7 @@
         ]
     },
     {
-        "question": "Problem D4.5.4: Acceleration",
+        "question": "Problem D4.3.4: Acceleration",
         "type": "numeric",
         "answers": [
             {
