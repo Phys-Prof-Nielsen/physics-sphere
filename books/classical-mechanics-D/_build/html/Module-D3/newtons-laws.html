@@ -527,8 +527,13 @@ document.write(`
 <p>Consider a box sliding down a frictionless, inclined surface as shown in the figure. Find the acceleration of the block with respect to the given reference frame.
 <br>
 <img src="D3-fig1.2.png" width="300"></p>
-</div><div class="cell docutils container">
-<div class="cell_input docutils container">
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
 <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -573,6 +578,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The x-acceleration of the block is: g*sin(theta)/(sin(theta)*tan(theta) + cos(theta)) m/s^2
 The y-acceleration of the block is: -g*sin(theta)*tan(theta)/(sin(theta)*tan(theta) + cos(theta)) m/s^2
@@ -580,12 +591,18 @@ NOTE: python does not provide the answers in simplified forms. These answers can
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 3</b><br>
 <p>Use your result from Problem 1, apply a proper coordinate transform between the two coordinate systems to obtain the same acceleration as you did in Problem 2.</p>
-</div><div class="cell docutils container">
-<div class="cell_input docutils container">
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
 <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="c1"># let prime be the coordinate system oriented with the plane and the unprimed be out standard orientation. </span>
@@ -613,12 +630,19 @@ NOTE: python does not provide the answers in simplified forms. These answers can
 </pre></div>
 </div>
 </div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The x-acceleration in Problem 2 is: g*sin(theta)*cos(theta)
 The x-acceleration in Problem 2 is: -g*sin(theta)**2
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
