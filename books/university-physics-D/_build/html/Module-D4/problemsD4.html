@@ -644,6 +644,280 @@ Acceleration is: 10.0 m/s^2.
 </div>
 </details>
 </div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D4.4</h2>
+    </header>
+<p>Andrea, a <span class="math notranslate nohighlight">\(63.0\)</span> kg sprinter, starts a race with an acceleration of <span class="math notranslate nohighlight">\(+4.200\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span>. What is the net external force on her?</p>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/5-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">m</span> <span class="o">=</span> <span class="mf">63.0</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="mf">4.200</span>
+
+<span class="n">fx</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The force on Andrea is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">fx</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The force on Andrea is: 264.6 N.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#alternative method using equation solver</span>
+
+<span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mf">63.0</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="mf">4.200</span>
+
+<span class="c1">#declare unknown variable</span>
+<span class="n">fx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fx&#39;</span><span class="p">)</span>
+
+<span class="c1">#equation to solve: 0 = f - ma (comes from f = ma)</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">fx</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">fx</span><span class="p">)</span>
+<span class="n">fx</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The force on Andrea is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">fx</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The force on Andrea is: 264.600000000000 N.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D4.5</h2>
+    </header>
+<p>A cleaner pushes a <span class="math notranslate nohighlight">\(4.50\)</span> kg laundry cart in such a way that the net external force on it is <span class="math notranslate nohighlight">\(60.0\)</span> N. Calculate the magnitude of his cart’s acceleration.</p>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/5-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mf">4.50</span>
+<span class="n">fx</span> <span class="o">=</span> <span class="mf">60.0</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fx</span><span class="o">/</span><span class="n">m</span>
+
+<span class="c1">#in principle ax can be either positive or negative, so we need to use the absolute value</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The magnitude of the acceleration is: 13.333333333333334 m/s^2.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#alternative method using equation solver</span>
+
+<span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mf">4.50</span>
+<span class="n">fx</span> <span class="o">=</span> <span class="mf">60.0</span>
+
+<span class="c1">#declare unknown variable</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">)</span>
+
+<span class="c1">#equation to solve: 0 = f - ma (comes from f = ma)</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">fx</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The magnitude of the acceleration is: 13.3333333333333 m/s^2.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D4.6</h2>
+    </header>
+<p>A car with a mass of <span class="math notranslate nohighlight">\(1000.0\)</span> kg accelerates from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(+90.0\)</span> km/h in <span class="math notranslate nohighlight">\(10.0\)</span> s.</p>
+<ol class="arabic simple">
+<li><p>What is its acceleration?</p></li>
+<li><p>What is the net force on the car?</p></li>
+</ol>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/5-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">m</span> <span class="o">=</span> <span class="mf">1000.0</span>
+<span class="n">v1x</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">v2x</span> <span class="o">=</span> <span class="mf">90.0</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">10.0</span>
+
+<span class="c1">#convert v2x from km/hr to m/s</span>
+<span class="n">v2x</span> <span class="o">=</span> <span class="p">(</span><span class="mf">90.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1000.</span><span class="o">/</span><span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="mf">3600.0</span><span class="p">)</span>
+
+<span class="c1">#Part 1</span>
+<span class="c1"># -----</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="p">(</span><span class="n">v2x</span> <span class="o">-</span> <span class="n">v1x</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2.&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="c1"># ------</span>
+<span class="n">fx</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Net force is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">fx</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acceleration is: 2.5 m/s^2.
+Net force is: 2500.0 N.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#alternative method using equation solver</span>
+
+<span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mf">1000.0</span>
+<span class="n">v1x</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">v2x</span> <span class="o">=</span> <span class="mf">90.0</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">10.0</span>
+
+<span class="c1">#convert v2x from km/hr to m/s</span>
+<span class="n">v2x</span> <span class="o">=</span> <span class="p">(</span><span class="mf">90.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1000.</span><span class="o">/</span><span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="mf">3600.0</span><span class="p">)</span>
+
+<span class="c1"># Part 1</span>
+<span class="c1"># -----</span>
+<span class="c1">#declare unknown variable</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">)</span>
+
+<span class="c1">#equation to solve: 0 = a - (v2 - v1)/(t2 - t1) </span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">ax</span> <span class="o">-</span> <span class="p">(</span><span class="n">v2x</span> <span class="o">-</span> <span class="n">v1x</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sol1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2.&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="c1"># -----</span>
+<span class="c1">#declare unknown variable</span>
+<span class="n">fx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fx&#39;</span><span class="p">)</span>
+
+<span class="c1">#equation to solve</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">fx</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span>
+
+<span class="n">sol2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq2</span><span class="p">,</span><span class="n">fx</span><span class="p">)</span>
+<span class="n">fx</span> <span class="o">=</span> <span class="n">sol2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The force is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">fx</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The acceleration is: 2.50000000000000 m/s^2.
+The force is: 2500.00000000000 N.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="check-you-answers">
 <h2>Check You Answers<a class="headerlink" href="#check-you-answers" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
@@ -667,7 +941,7 @@ Acceleration is: 10.0 m/s^2.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="output text_html"><div id="aiZLOieaHZrg" data-shufflequestions="False" data-shuffleanswers="True" data-numquestions="1000000"><style>
+<div class="output text_html"><div id="cZqvUYoPJTCx" data-shufflequestions="False" data-shuffleanswers="True" data-numquestions="1000000"><style>
 :root {
     --medium-slate-blue: #6f78ffff;
     --orange-pantone: #f75c03ff;
@@ -795,7 +1069,7 @@ Acceleration is: 10.0 m/s^2.
 }
 
 
-</style><script type="text/Javascript">questionsaiZLOieaHZrg=[{"question": "Problem D4.1.1: Impact force", "type": "multiple_choice", "answers": [{"answer": "-1.9E5 N", "correct": true, "feedback": "Correct."}, {"answer": "+1.9E5 N", "correct": false, "feedback": "False."}, {"answer": "-1.875E5 N", "correct": false, "feedback": "False."}, {"answer": "+1.875E5 N", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.1.2: Impact force with seat belt", "type": "multiple_choice", "answers": [{"answer": "-9.4E4 N", "correct": true, "feedback": "Correct."}, {"answer": "+9.4E4 N", "correct": false, "feedback": "False."}, {"answer": "-9.3750E4 N", "correct": false, "feedback": "False."}, {"answer": "+9.375E4 N", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.1.3: Impact force with seat belt and airbag", "type": "multiple_choice", "answers": [{"answer": "-1.9E4 N", "correct": true, "feedback": "Correct."}, {"answer": "+1.9E4 N", "correct": false, "feedback": "False."}, {"answer": "-1.875E4 N", "correct": false, "feedback": "False."}, {"answer": "+1.875E4 N", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.1.4: g-forces", "type": "multiple_choice", "answers": [{"answer": "-260 g, -130 g, -26 g, respectively.", "correct": true, "feedback": "Correct."}, {"answer": "+260 g, + 130 g, + 38 g, respectively.", "correct": false, "feedback": "False."}, {"answer": "-260 g, - 130 g, - 55 g, respectively", "correct": false, "feedback": "False."}, {"answer": "-260, -77 g, - 38 g, respectively", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.2.1: Direction of interaction", "type": "multiple_choice", "answers": [{"answer": "Positive", "correct": true, "feedback": "Correct."}, {"answer": "Negative", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.2.2: Impact time", "type": "numeric", "answers": [{"type": "value", "value": 0.05, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [0.0500001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 0.049999], "correct": false, "feedback": "False. Try again."}]}, {"question": "Problem D4.2.3: Acceleration", "type": "numeric", "answers": [{"type": "value", "value": 600, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [600.00001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 599.99999], "correct": false, "feedback": "False. Try again."}]}, {"question": "Problem D4.3.1: Direction of momentum transfer", "type": "multiple_choice", "answers": [{"answer": "to the particle", "correct": true, "feedback": "Correct."}, {"answer": "from the particle", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.3.2: Momentum transfer", "type": "numeric", "answers": [{"type": "value", "value": 40, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [40.00001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 39.99999], "correct": false, "feedback": "False. Try again."}]}, {"question": "Problem D4.3.3: Final velocity", "type": "numeric", "answers": [{"type": "value", "value": 110, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [110.00001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 109.99999], "correct": false, "feedback": "False. Try again."}]}, {"question": "Problem D4.3.4: Acceleration", "type": "numeric", "answers": [{"type": "value", "value": 10, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [10.00001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 9.99999], "correct": false, "feedback": "False. Try again."}]}];
+</style><script type="text/Javascript">questionscZqvUYoPJTCx=[{"question": "Problem D4.1.1: Impact force", "type": "multiple_choice", "answers": [{"answer": "-1.9E5 N", "correct": true, "feedback": "Correct."}, {"answer": "+1.9E5 N", "correct": false, "feedback": "False."}, {"answer": "-1.875E5 N", "correct": false, "feedback": "False."}, {"answer": "+1.875E5 N", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.1.2: Impact force with seat belt", "type": "multiple_choice", "answers": [{"answer": "-9.4E4 N", "correct": true, "feedback": "Correct."}, {"answer": "+9.4E4 N", "correct": false, "feedback": "False."}, {"answer": "-9.3750E4 N", "correct": false, "feedback": "False."}, {"answer": "+9.375E4 N", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.1.3: Impact force with seat belt and airbag", "type": "multiple_choice", "answers": [{"answer": "-1.9E4 N", "correct": true, "feedback": "Correct."}, {"answer": "+1.9E4 N", "correct": false, "feedback": "False."}, {"answer": "-1.875E4 N", "correct": false, "feedback": "False."}, {"answer": "+1.875E4 N", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.1.4: g-forces", "type": "multiple_choice", "answers": [{"answer": "-260 g, -130 g, -26 g, respectively.", "correct": true, "feedback": "Correct."}, {"answer": "+260 g, + 130 g, + 38 g, respectively.", "correct": false, "feedback": "False."}, {"answer": "-260 g, - 130 g, - 55 g, respectively", "correct": false, "feedback": "False."}, {"answer": "-260, -77 g, - 38 g, respectively", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.2.1: Direction of interaction", "type": "multiple_choice", "answers": [{"answer": "Positive", "correct": true, "feedback": "Correct."}, {"answer": "Negative", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.2.2: Impact time", "type": "numeric", "answers": [{"type": "value", "value": 0.05, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [0.0500001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 0.049999], "correct": false, "feedback": "False. Try again."}]}, {"question": "Problem D4.2.3: Acceleration", "type": "numeric", "answers": [{"type": "value", "value": 600, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [600.00001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 599.99999], "correct": false, "feedback": "False. Try again."}]}, {"question": "Problem D4.3.1: Direction of momentum transfer", "type": "multiple_choice", "answers": [{"answer": "to the particle", "correct": true, "feedback": "Correct."}, {"answer": "from the particle", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.3.2: Momentum transfer", "type": "numeric", "answers": [{"type": "value", "value": 40, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [40.00001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 39.99999], "correct": false, "feedback": "False. Try again."}]}, {"question": "Problem D4.3.3: Final velocity", "type": "numeric", "answers": [{"type": "value", "value": 110, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [110.00001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 109.99999], "correct": false, "feedback": "False. Try again."}]}, {"question": "Problem D4.3.4: Acceleration", "type": "numeric", "answers": [{"type": "value", "value": 10, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [10.00001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 9.99999], "correct": false, "feedback": "False. Try again."}]}];
     //var mydiv=document.getElementById("testDIV");//console.log(mydiv);// Make a random ID
 function makeid(length) {
     var result           = [];
@@ -1249,7 +1523,7 @@ function show_questions (json, mydiv) {
 }
 
         {
-        show_questions(questionsaiZLOieaHZrg, aiZLOieaHZrg);
+        show_questions(questionscZqvUYoPJTCx, cZqvUYoPJTCx);
         }
         </script>
         </div></div>
