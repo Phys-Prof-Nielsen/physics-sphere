@@ -233,14 +233,14 @@
         "answers": [
             {
                 "type": "value",
-                "value": 110,
+                "value": 105,
                 "correct": true,
                 "feedback": "Correct."
             },
             {
                 "type": "range",
                 "range": [
-                    110.00001,
+                    105.00001,
                     999E6
                 ],
                 "correct": false,
@@ -250,7 +250,7 @@
                 "type": "range",
                 "range": [
                     -999,
-                    109.99999
+                    104.99999
                 ],
                 "correct": false,
                 "feedback": "False. Try again."
