@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>D3.1 Newton’s Laws - Linear Motion &#8212; A Competency Approach to Classical Mechanics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -65,9 +66,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D3/newtons-laws';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="D3.2 Problems" href="problemsD3.html" />
     <link rel="prev" title="D2.1 Linear Momentum and Impulse" href="../Module-D2/momentum-impulse.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -169,6 +171,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D3 - Newtons Laws's - Linear Motion</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">D3.1 Newton’s Laws - Linear Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problemsD3.html">D3.2 Problems</a></li>
 </ul>
 
     </div>
@@ -413,21 +416,21 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="d3-1-newton-s-laws-linear-motion">
-<h1>D3.1 Newton’s Laws - Linear Motion<a class="headerlink" href="#d3-1-newton-s-laws-linear-motion" title="Permalink to this headline">#</a></h1>
+<h1>D3.1 Newton’s Laws - Linear Motion<a class="headerlink" href="#d3-1-newton-s-laws-linear-motion" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d3-1-1-motivation">
-<h2>D3.1.1 Motivation<a class="headerlink" href="#d3-1-1-motivation" title="Permalink to this headline">#</a></h2>
+<h2>D3.1.1 Motivation<a class="headerlink" href="#d3-1-1-motivation" title="Permalink to this heading">#</a></h2>
 <p>The concept of force is a fundamental component of physics and the core of Newtonian mechanics. Newton described the interactions between objects as forces and that an object would change its motion according to the net interaction (or force) acting upon it. Later, it was realized that forces arise from field interactions (quantum fields: electric, weak, strong, and gravity: note that we do not have a verified quantum gravity theory).</p>
 <p>Newton’s Laws should be very familiar to you from <em>University Physics I and II</em>, however, it is also my experience that the majority of students have formed “bad habits” of solving these problems without paying to much attention to the solving process. While this work for simple problems, the lack of proper analysis becomes evident when presented with more complex problems. The main objective in this module is to make you aware of the bad habits and hopefully encourage you to change them.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="d3-1-2-newton-s-laws">
-<h2>D3.1.2 Newton’s Laws<a class="headerlink" href="#d3-1-2-newton-s-laws" title="Permalink to this headline">#</a></h2>
+<h2>D3.1.2 Newton’s Laws<a class="headerlink" href="#d3-1-2-newton-s-laws" title="Permalink to this heading">#</a></h2>
 <section id="first-law-n1-law-of-inertia">
-<h3>First Law: N1 :: Law of Inertia<a class="headerlink" href="#first-law-n1-law-of-inertia" title="Permalink to this headline">#</a></h3>
+<h3>First Law: N1 :: Law of Inertia<a class="headerlink" href="#first-law-n1-law-of-inertia" title="Permalink to this heading">#</a></h3>
 <p>The first law is a conceptual law that states: <em>An object in motion will remain in the same state of motion unless a net external interaction is acting on the object</em>.</p>
 <p>In this context <strong>momentum</strong> is a measure of <strong>motion</strong> and <strong>inertia</strong> is a measure of the resistance an object has to a change in motion. For linear motion inertia is <strong>mass</strong>.</p>
 </section>
 <section id="second-law-n2">
-<h3>Second Law: N2<a class="headerlink" href="#second-law-n2" title="Permalink to this headline">#</a></h3>
+<h3>Second Law: N2<a class="headerlink" href="#second-law-n2" title="Permalink to this heading">#</a></h3>
 <p>This law is a way to quantify the first law. We saw it in previous section as the <strong>momentum-impulse</strong> theorem, and in differential form it is</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -440,12 +443,12 @@ document.write(`
 </div>
 </section>
 <section id="third-law-n3-law-of-action-and-re-action">
-<h3>Third Law: N3 :: Law of Action and Re-action<a class="headerlink" href="#third-law-n3-law-of-action-and-re-action" title="Permalink to this headline">#</a></h3>
+<h3>Third Law: N3 :: Law of Action and Re-action<a class="headerlink" href="#third-law-n3-law-of-action-and-re-action" title="Permalink to this heading">#</a></h3>
 <p>This law states that forces are consequences of objects interacting with each other and <strong>always</strong> occur in pairs with one force acting on one object and the other force acting on the other object. For example, the earth pulls on the moon and the moon pulls on the earth.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="d3-1-3-solving-strategy-for-n2">
-<h2>D3.1.3 Solving Strategy for N2<a class="headerlink" href="#d3-1-3-solving-strategy-for-n2" title="Permalink to this headline">#</a></h2>
+<h2>D3.1.3 Solving Strategy for N2<a class="headerlink" href="#d3-1-3-solving-strategy-for-n2" title="Permalink to this heading">#</a></h2>
 <p>The key is increased awareness of a solving strategy. Kleppner and Kolenkow have an excellent approach, and here is a modified version of it: <a class="reference external" href="https://www.youtube.com/watch?v=hdFmHtGTmvk">YouTube Video of the Solving Strategy</a></p>
 <ol class="arabic simple">
 <li><p>Make a sketch of the problem: this demonstrate that you understand the problem. If not, the sketch may help you understand it.</p></li>
@@ -686,6 +689,15 @@ The x-acceleration in Problem 2 is: -g*sin(theta)**2
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">D2.1 Linear Momentum and Impulse</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="problemsD3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">D3.2 Problems</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   

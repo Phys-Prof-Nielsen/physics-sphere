@@ -20,4 +20,4 @@ parts:
 - caption: Module D3 - Newtons Laws's - Linear Motion
   chapters:
   - file: Module-D3/newtons-laws
-  - file: Module-D3/ProblemsD3
+  - file: Module-D3/problemsD3
