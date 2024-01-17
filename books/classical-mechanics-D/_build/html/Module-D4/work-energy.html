@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>D1.2 Kinematics - Differential Form &#8212; A Competency Approach to Classical Mechanics</title>
+    <title>D4.1 Work-Energy Theorem &#8212; A Competency Approach to Classical Mechanics</title>
   
   
   
@@ -63,11 +63,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D1/differential-form';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D4/work-energy';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="D1.3 Kinematics - Integral Form" href="integral-form.html" />
-    <link rel="prev" title="D1.1 Kinematics Definitions" href="definitions.html" />
+    <link rel="next" title="D4.2 Introduction to Line Integrals" href="line-integrals.html" />
+    <link rel="prev" title="D3.2 Problems" href="../Module-D3/problemsD3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -159,10 +159,10 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D1 - Kinematics in Cartesian Coordinates</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="definitions.html">D1.1 Kinematics Definitions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">D1.2 Kinematics - Differential Form</a></li>
-<li class="toctree-l1"><a class="reference internal" href="integral-form.html">D1.3 Kinematics - Integral Form</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/definitions.html">D1.1 Kinematics Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/differential-form.html">D1.2 Kinematics - Differential Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/integral-form.html">D1.3 Kinematics - Integral Form</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D2 - Linear Momentum and Impulse</span></p>
 <ul class="nav bd-sidenav">
@@ -174,10 +174,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-D3/problemsD3.html">D3.2 Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D4 - Energy and Work - Linear Motion</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Module-D4/work-energy.html">D4.1 Work-Energy Theorem</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-D4/line-integrals.html">D4.2 Introduction to Line Integrals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-D4/parameterization-line-integrals.html">D4.3 Parameterization of Line Integrals</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">D4.1 Work-Energy Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line-integrals.html">D4.2 Introduction to Line Integrals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameterization-line-integrals.html">D4.3 Parameterization of Line Integrals</a></li>
 
 
 </ul>
@@ -282,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-D1/differential-form.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-D4/work-energy.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -312,7 +312,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-D1/differential-form.ipynb" target="_blank"
+      <li><a href="../_sources/Module-D4/work-energy.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -394,7 +394,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>D1.2 Kinematics - Differential Form</h1>
+    <h1>D4.1 Work-Energy Theorem</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -404,11 +404,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-1-motivation">D1.2.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-2-difference-vs-differential">D1.2.2 Difference vs. Differential</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-3-velocity">D1.2.3 Velocity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-4-acceleration">D1.2.4 Acceleration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-5-applications">D1.2.5 Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d4-1-1-motivation">D4.1.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d4-1-2-kinetic-energy">D4.1.2 Kinetic Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d4-1-3-work">D4.1.3 Work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d4-1-4-work-energy-theorem">D4.1.4 Work-Energy Theorem</a></li>
 </ul>
             </nav>
         </div>
@@ -420,118 +419,64 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="d1-2-kinematics-differential-form">
-<h1>D1.2 Kinematics - Differential Form<a class="headerlink" href="#d1-2-kinematics-differential-form" title="Permalink to this heading">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d1-2-1-motivation">
-<h2>D1.2.1 Motivation<a class="headerlink" href="#d1-2-1-motivation" title="Permalink to this heading">#</a></h2>
-<p>We probably already know that Newton’s second law in fact is a second-order differential equation. As we progress further into the abyss of physics we start to realize that differentials start to play a more significant role, and physics starts to be described through differential calculus and differential geometry. So, let us take a quick review of the differential in 1D.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="d4-1-work-energy-theorem">
+<h1>D4.1 Work-Energy Theorem<a class="headerlink" href="#d4-1-work-energy-theorem" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d4-1-1-motivation">
+<h2>D4.1.1 Motivation<a class="headerlink" href="#d4-1-1-motivation" title="Permalink to this heading">#</a></h2>
+<p>We have previously defined motion through <strong>momentum</strong></p>
+<div class="math notranslate nohighlight">
+\[\vec{p} = m\vec{v} \]</div>
+<p>and then determined <strong>momentum transfer</strong> or <strong>impulse</strong> as a given <strong>force</strong> acting on the particle through time</p>
+<div class="math notranslate nohighlight">
+\[ \vec{i} = \int_{t_1}^{t_{2}}\vec{f}dt \]</div>
+<p>The <strong>net</strong> impulse was the <strong>change in momentum</strong> of the particle, which defined the <strong>impulse-momentum theorem</strong></p>
+<div class="math notranslate nohighlight">
+\[ \int_{t_1}^{t_{2}}\vec{f}_{net}dt = \Delta\vec{p} \]</div>
+<p>The impulse-momentum theorem reduces to the more commonly known Newton’s 2nd law, where the interactions between two objects are in focus.</p>
+<div class="alert alert-info">
+<p>We notice that in the above, we must have knowledge of the force as a function of time (unless it is a constant force). At times, we do not have such information. Instead, we have knowledge of the force as a function of postion. In these cases, the work-energy concept is more suitable.</p>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="d1-2-2-difference-vs-differential">
-<h2>D1.2.2 Difference vs. Differential<a class="headerlink" href="#d1-2-2-difference-vs-differential" title="Permalink to this heading">#</a></h2>
-<p>We define the gab on the x-axis between two data data points as <span class="math notranslate nohighlight">\(\Delta x\)</span>. For example, we can say that <span class="math notranslate nohighlight">\(\Delta x = x_2 - x_1\)</span>. Similarly, the gab between to data points on the y-axis is <span class="math notranslate nohighlight">\(\Delta y = y_2 - y_1\)</span>. We call these gabs for <strong>differences</strong> and use the symbol <span class="math notranslate nohighlight">\(\Delta\)</span> to denote a difference: read as “a difference in _____”.</p>
+<section id="d4-1-2-kinetic-energy">
+<h2>D4.1.2 Kinetic Energy<a class="headerlink" href="#d4-1-2-kinetic-energy" title="Permalink to this heading">#</a></h2>
+<p>Just as we defined momentum as a measure of motion, kinetic energy is also a measure of motion. We define the kinetic energy of a particle as</p>
 <div class="alert alert-success">
-<p>In all pratical applications, the difference is a number. It can be a small number, it can be a large number, there is no restrictions on it (unless you are dividing by it, then it can’t be zero of course).</p>
-</div>
-<p>Since differences are associated with numbers, we can create the ratio of differences (provided the denominator is
-not zero). For example the ratio between the differences in some dependent function <span class="math notranslate nohighlight">\(f\)</span> and its independent variable <span class="math notranslate nohighlight">\(x\)</span> is what we traditionally call the slope:</p>
 <div class="math notranslate nohighlight">
-\[ \textrm{slope} = \frac{\Delta f}{\Delta x} \]</div>
-<p>The <strong>differential</strong> is very similar to the difference, but in some sense we can say that it is the connection between
-algebra and calculus in terms of change. We will consider a small change in x. We will avoid what we mean by small
-for now, but understand that it is in fact a number and give it the symbol <span class="math notranslate nohighlight">\(dx\)</span>.</p>
+\[ k = \frac{1}{2}m\vec{v}\cdot\vec{v} \]</div>
+</div>
+<p>For a system of particles, we can define the center of mass kinetic energy as</p>
 <div class="alert alert-success">
-<p>While <span class="math notranslate nohighlight">\(dx\)</span> is considered a number, it is more of a mathematical concept as its meaning is truly a small number, in fact, so small that we will later let it approach zero, but then again…in math, what is a small number?</p>
+<div class="math notranslate nohighlight">
+\[ K = \frac{1}{2}M\vec{V}\cdot\vec{V} \]</div>
 </div>
-<p>What implications does it have for <span class="math notranslate nohighlight">\(df\)</span> vs. <span class="math notranslate nohighlight">\(\Delta f\)</span>? Let us find out. Let us use a figure to investigate
-properties of <span class="math notranslate nohighlight">\(dx\)</span> and let us just say that <span class="math notranslate nohighlight">\(dx = \Delta x\)</span>.</p>
-<img src="D1.2-fig1.png"  width="400"/>
-<p>The red line in the figure is the tangent line to the point <span class="math notranslate nohighlight">\([x, f(x)]\)</span> and is a straight line described by (remember how to write the equation of a straight line by using rise = slope times run?)</p>
-<div class="math notranslate nohighlight">
-\[y_2 - y_1 = a(x_2 - x_1) \tag{1}\]</div>
-<p>Since we know the slope, <span class="math notranslate nohighlight">\(a\)</span>, is the derivative, and we want to use grown-up notation <span class="math notranslate nohighlight">\(y \rightarrow f\)</span> and consider small differences (aka differentials), we write Equation (1) as</p>
-<div class="math notranslate nohighlight">
-\[ df = \frac{df}{dx}dx \]</div>
-<p>Here, <span class="math notranslate nohighlight">\(df\)</span> is the rise of the red, straight line and <span class="math notranslate nohighlight">\(dx\)</span> is its run. We have used the derivative <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span> as the slope of the red line. We keep in mind, that this <strong>must</strong> be the slope evalutated at the point x.</p>
-<p>We notice from the figure that <span class="math notranslate nohighlight">\(df \neq \Delta f\)</span>.</p>
-<p>We use the term <strong>differential</strong> for <span class="math notranslate nohighlight">\(df\)</span> and the term <strong>difference</strong> for <span class="math notranslate nohighlight">\(\Delta f\)</span>. Only when <span class="math notranslate nohighlight">\(dx\)</span>
-approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)</span>. Key point: both <span class="math notranslate nohighlight">\(dx\)</span> and <span class="math notranslate nohighlight">\(df\)</span> can be assigned values and we can create the ratio (provided
-<span class="math notranslate nohighlight">\(dx \neq 0\)</span>):</p>
-<div class="math notranslate nohighlight">
-\[ \frac{df}{dx} \]</div>
-<p>which we can manipulate just like other ratios.</p>
-<p><strong>NOTE: although this ratio looks like the derivative, it is not! The derivative is not a ratio, but an operator, which should be read as “derivative of <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span>”</strong>. We could write the derivative better as</p>
-<div class="math notranslate nohighlight">
-\[ \frac{d}{dx}[f] \]</div>
-<p>to clearly distinguish it from the ratio of differentials.</p>
 <div class="alert alert-danger">
-<p>We often write the derivative as <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span> and the ratio of differentials as <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span> , and we must use the context of the problem/situation to find out if we are talking about one or the other. One is an operator while the other is simply a ratio between numbers (small numbers). This confusion disappears if we use the Lagrange notation for the derivative.</p>
-</div>
-<p>To find the differential of a function, we can use the above as a definition. To avoid the confusion between ratio of differentials and the derivative, it may be more suitable to utilize the Lagrange notation:</p>
-<div class="alert alert-success">
-<p>The differential of a function <span class="math notranslate nohighlight">\(f\)</span> with respect to its independent variable <span class="math notranslate nohighlight">\(x\)</span> is:</p>
+<p>The kinetic energy of the center of mass is not necessarily the same as the kinetic energy of the system!</p>
+</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="d4-1-3-work">
+<h2>D4.1.3 Work<a class="headerlink" href="#d4-1-3-work" title="Permalink to this heading">#</a></h2>
+<p>Work is a measure of energy transfer to/from a particle by a given force and is defined as the <strong>path integral</strong></p>
 <div class="math notranslate nohighlight">
-\[ df = f'(x)dx \]</div>
+\[ w = \int_L\vec{f}\cdot d\vec{l} \]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="d4-1-4-work-energy-theorem">
+<h2>D4.1.4 Work-Energy Theorem<a class="headerlink" href="#d4-1-4-work-energy-theorem" title="Permalink to this heading">#</a></h2>
+<p>The net work is the <strong>net kinetic energy transfer</strong> and is establisged through the <strong>work-energy theorem</strong></p>
+<div class="math notranslate nohighlight">
+\[ \int_L\vec{f}_{net}\cdot d\vec{l} = \Delta k\]</div>
+<div class="alert alert-info">
+<p>It should be pointed that the impulse-momentum and work-energy theorems are consistent in the sense that one can be derived from the other. We will do that later in the course. It also leads to a somewhat philosophical question: <strong>what concept is more fundamental? Force or Energy?</strong>. In Newtonian mechanics force is certainly the more fundamental and based on observations. We will later see how a more rigorous energy approach leads to modern field theories and are based on a fundamental principle of nature.</p>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<div class="alert alert-warning">
 <b>Box 1</b><br>
-<p>The area of a circle is <span class="math notranslate nohighlight">\(A(r) = \pi r^2\)</span>. If we change the radius by a small amount <span class="math notranslate nohighlight">\(dr\)</span>, by how much will the area change?</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="cell tag_hide-input tag_hide-output docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-
-<span class="n">r</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span>
-
-<span class="c1"># dA = A&#39;*dr</span>
-<span class="n">A_prime</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The area will change by: dA = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">A_prime</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;dr&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The area will change by: dA = 2*pi*rdr
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-</section>
-<section id="d1-2-3-velocity">
-<h2>D1.2.3 Velocity<a class="headerlink" href="#d1-2-3-velocity" title="Permalink to this heading">#</a></h2>
-<p>We can define the <strong>instantaneous</strong> velocity in terms of a <strong>differential equation</strong> through the position and time differentials</p>
-<div class="alert alert-success">
+<p>Consider a block of mass <span class="math notranslate nohighlight">\(m\)</span> attached to a spring with a spring constant <span class="math notranslate nohighlight">\(k\)</span> on a frictionless horizontal surface. Derive an expression for the position of the block using the work-energy theorem.</p>
+<p>NOTE: This is a standard problem demonstrating simple harmonic motion. It is usually solved through Newton’s 2nd law leading to the 2nd order simple harmonic differential equation and found in almost every introductory textbook. This is also in <em>Kleppner and Kolenkow</em> (Example 5.2). Pay attention to the quote: <strong>The integral is listed in standard tables. It can also be generated by symbolic mathematical routines, or by the time-honored methods of “guesswork” and “playing around.” Using these methods is as respectable for a physicist as con- sulting a dictionary is for a writer. Of course, in both cases one hopes that experience gradually reduces dependence</strong>. That book is a detailed must-read for any physicists :)</p>
+</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 2</b><br>
+<p>A particle is moved around a full rectangular path with vertices at <span class="math notranslate nohighlight">\((x,y) = (0,0), (3,0), (3,2), (0,2)\)</span> m. The force is given by</p>
 <div class="math notranslate nohighlight">
-\[ d\vec{r} = \vec{v}dt \]</div>
-</div>
-<p>If we consider differences instead, then the velocity <strong>must</strong> be constant across the time interval (or consider the average velocity), and the above expression becomes a well-known kinematics equation from University Physics I:</p>
-<div class="math notranslate nohighlight">
-\[ \Delta \vec{r} = \vec{v}_{av}\Delta t \]</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="d1-2-4-acceleration">
-<h2>D1.2.4 Acceleration<a class="headerlink" href="#d1-2-4-acceleration" title="Permalink to this heading">#</a></h2>
-<p>Similarly, we define the <strong>instantaneous</strong> acceleration as</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ d\vec{v} = \vec{a}dt \]</div>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="d1-2-5-applications">
-<h2>D1.2.5 Applications<a class="headerlink" href="#d1-2-5-applications" title="Permalink to this heading">#</a></h2>
-<p>We will utilize the differentials quite a bit in this course. For example, when we explore variable mass problems it is often convenient to solve the problems in differential form. Another example is how we obtain vectors under coordinate transformations. In the next section, we will see how we progress from the differential equations to the integral equations and you will realize you have been using differentials all along. The most infamous example is the “u substitution” used to integrate composite functions.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+\[ \vec{f} = 3.5xy^2\hat{i} - 5.0y\hat{j} \]</div>
+<p>What is the work done by this force in moving the particle around the given path.</p>
+</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -547,7 +492,7 @@ approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)<
         },
         kernelOptions: {
             name: "python3",
-            path: "./Module-D1"
+            path: "./Module-D4"
         },
         predefinedOutput: true
     }
@@ -566,20 +511,20 @@ approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)<
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="definitions.html"
+       href="../Module-D3/problemsD3.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">D1.1 Kinematics Definitions</p>
+        <p class="prev-next-title">D3.2 Problems</p>
       </div>
     </a>
     <a class="right-next"
-       href="integral-form.html"
+       href="line-integrals.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">D1.3 Kinematics - Integral Form</p>
+        <p class="prev-next-title">D4.2 Introduction to Line Integrals</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -601,11 +546,10 @@ approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)<
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-1-motivation">D1.2.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-2-difference-vs-differential">D1.2.2 Difference vs. Differential</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-3-velocity">D1.2.3 Velocity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-4-acceleration">D1.2.4 Acceleration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-5-applications">D1.2.5 Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d4-1-1-motivation">D4.1.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d4-1-2-kinetic-energy">D4.1.2 Kinetic Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d4-1-3-work">D4.1.3 Work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d4-1-4-work-energy-theorem">D4.1.4 Work-Energy Theorem</a></li>
 </ul>
   </nav></div>
 
