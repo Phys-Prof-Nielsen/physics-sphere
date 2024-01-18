@@ -457,12 +457,65 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 1</b>
     <br>
-<p>Between the plates of a capacitor exists an uniform electric field directed from the positive plate towards the negative plate. The field strength is <span class="math notranslate nohighlight">\(5.0\times 10^9\)</span> N/C and the plate separation is <span class="math notranslate nohighlight">\(2.0\)</span> mm.</p>
+<p>Between the plates of a capacitor exists an uniform electric field directed from the positive plate towards the negative plate. The field strength is <span class="math notranslate nohighlight">\(5.0\times 10^9\)</span> N/C and the plate separation is <span class="math notranslate nohighlight">\(2.0\)</span> mm. A proton is moved from the positive plate to the negative plate.</p>
 <ol class="arabic simple">
 <li><p>Does the potential energy of the proton increase or decrease? Explain.</p></li>
 <li><p>By how much doe the potential energy of the proton change?</p></li>
 <li><p>Repeat (1) and (2) but for an electron.</p></li>
 </ol>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="c1"># Part 1</span>
+<span class="c1"># ------</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Since the proton is moved in the direction of the force, its potential energy decreases.&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="c1"># ------</span>
+<span class="n">q</span> <span class="o">=</span> <span class="mf">1.602E-19</span>
+<span class="n">Ex</span> <span class="o">=</span> <span class="mf">5.0E9</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">2.0E3</span>
+
+<span class="n">du</span> <span class="o">=</span> <span class="o">-</span><span class="n">q</span><span class="o">*</span><span class="n">Ex</span><span class="o">*</span><span class="n">dx</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The change in potential energy is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">du</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 3</span>
+<span class="c1"># -----</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Since the electron is moved in the opposite direction of the force, its potential energy increases.&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 4</span>
+<span class="c1"># ------</span>
+<span class="n">q</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.602E-19</span>
+<span class="n">Ex</span> <span class="o">=</span> <span class="mf">5.0E9</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">2.0E3</span>
+
+<span class="n">du</span> <span class="o">=</span> <span class="o">-</span><span class="n">q</span><span class="o">*</span><span class="n">Ex</span><span class="o">*</span><span class="n">dx</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The change in potential energy is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">du</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Since the proton is moved in the direction of the force, its potential energy decreases.
+The change in potential energy is -1.602e-06 J.
+Since the electron is moved in the opposite direction of the force, its potential energy increases.
+The change in potential energy is 1.602e-06 J.
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 2</b>
@@ -472,6 +525,105 @@ document.write(`
 <li><p>How much work is done by the electric force if the proton and electron separation distance is changed to <span class="math notranslate nohighlight">\(1.0\times 10^{-6}\)</span> m?</p></li>
 <li><p>Does the potential energy of the proton-electron system increase or decrease and by how much? Explain.</p></li>
 </ol>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">q1</span> <span class="o">=</span> <span class="mf">1.602E-19</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.602E19</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">8.99E9</span>
+
+<span class="c1">#let the proton be fixed in space and move the electron</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="mf">1.0E-3</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="mf">1.0E-6</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="n">fr</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="o">/</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span>  <span class="c1">#polar coordinates...let proton be at origin</span>
+
+<span class="c1"># work</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">fr</span><span class="p">,(</span><span class="n">r</span><span class="p">,</span><span class="n">r1</span><span class="p">,</span><span class="n">r2</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Work done by electric force is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Since change in potential energy is the negative of work, the potential energy will decrease&#39;</span><span class="p">)</span>
+
+<span class="n">du</span> <span class="o">=</span> <span class="o">-</span><span class="n">w</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The change in potential energy is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">du</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Work done by electric force is 2.30488999880400e+16 J.
+Since change in potential energy is the negative of work, the potential energy will decrease
+The change in potential energy is -2.30488999880400e+16 J.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 3</b>
+    <br>
+<p>We may recall that the value of potential energy at a given location has no meaning as we are free to assing it a value, instead it is the change in potential energy that is meaningful. Nonetheless, it is often used as a standard to assign a potential energy of 0 J at a point at infinity (no interaction). Using that reference, what would the potential energy of a <span class="math notranslate nohighlight">\(-2.0~\mu\)</span>C point charge be if it was <span class="math notranslate nohighlight">\(0.50\)</span> m from a <span class="math notranslate nohighlight">\(+5.0~\mu\)</span>C point charge?</p>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">q1</span> <span class="o">=</span> <span class="mf">5.0E-6</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.0E-6</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">8.99E9</span>
+<span class="n">u1</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="c1">#let the proton be fixed in space and move the electron</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="mf">0.50</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="n">fr</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="o">/</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span>  <span class="c1">#polar coordinates...let proton be at origin</span>
+
+<span class="c1"># work</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">fr</span><span class="p">,(</span><span class="n">r</span><span class="p">,</span><span class="n">r1</span><span class="p">,</span><span class="n">r2</span><span class="p">))</span>
+
+<span class="n">u2</span> <span class="o">=</span> <span class="n">u1</span> <span class="o">-</span> <span class="n">w</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Potential energy of electron at the given location is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">u2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Potential energy of electron at the given location is -0.179800000000000 J.
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="d2-2-4-moment-of-reflection">
@@ -505,6 +657,36 @@ document.write(`
 <b>Box 4</b>
     <br>
 <p>If there exists an electric potential difference of <span class="math notranslate nohighlight">\(1.0\times 10^3\)</span> J/C across the plates of a plate capacitor with a plate separation of <span class="math notranslate nohighlight">\(0.1\times 10^{-3}\)</span> mm, what is magnitude of the electric field between the plates?</p>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">dv</span> <span class="o">=</span> <span class="mf">1.0E3</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">0.1E-6</span>
+
+<span class="n">Ex</span> <span class="o">=</span> <span class="o">-</span><span class="n">dv</span><span class="o">/</span><span class="n">dx</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The electric field is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">Ex</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V/m.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The electric field is -10000000000.0 V/m.
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 5</b>
@@ -514,14 +696,81 @@ document.write(`
 <li><p>For a proton moving from the positive plate to the negative plate, what is the change in electric potential?</p></li>
 <li><p>For an electron moving from the positive plate to the negative plate, what is the change in electric potential?</p></li>
 </ol>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">Ex</span> <span class="o">=</span> <span class="mf">5.0E9</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">2.0E-3</span>
+
+<span class="c1"># Part 1</span>
+<span class="c1"># ------</span>
+<span class="n">dv</span> <span class="o">=</span> <span class="o">-</span><span class="n">Ex</span><span class="o">*</span><span class="n">dx</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The change in electric potential for the proton is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dv</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V.&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="c1"># ------</span>
+<span class="n">dv</span> <span class="o">=</span> <span class="o">-</span><span class="n">Ex</span><span class="o">*</span><span class="n">dx</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The change in electric potential for the electron is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dv</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The change in electric potential for the proton is -10000000.0 V.
+The change in electric potential for the electron is -10000000.0 V.
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><p>Notice how in Box 5, the change in electric potential was the same for both the positive and the negative charge, while the change in electric potential energy would have opposite signs.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 6</b>
     <br>
 <p>Between the plates of a capacitor exists an uniform electric field directed from the positive plate towards the negative plate. The field strength is <span class="math notranslate nohighlight">\(5.0\times 10^9\)</span> N/C and the plate separation is <span class="math notranslate nohighlight">\(2.0\)</span> mm. What is the electric potential difference between the two plates as measured with respect to the positive plate?</p>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">Ex</span> <span class="o">=</span> <span class="mf">5.0E9</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">2.0E-3</span>
+
+<span class="n">dv</span> <span class="o">=</span> <span class="o">-</span><span class="n">Ex</span><span class="o">*</span><span class="n">dx</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Potential difference relative to positive plate is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dv</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V.&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><p>The last Box problem may have seem a little useless, however, its sole purpose (and a very important one) is to point out that the electric potential difference is a feature assigned to the field and <strong>not</strong> associatd with an interaction!</p>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Potential difference relative to positive plate is -10000000.0 V.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><p>The last Box problem may have seem a little useless, however, its sole purpose (and a very important one) is to point out that the electric potential difference is a feature assigned to the field and <strong>not</strong> associated with an interaction!</p>
 <hr style="height:2px">
 </section>
 <section id="d2-2-6-voltage-and-electron-volt">
@@ -534,11 +783,41 @@ The electric potential difference has a different, and more commonly used, name:
 <p>The unit of volts relates as follows:</p>
 <div class="math notranslate nohighlight">
 \[ V = J/C \]</div>
-<p>Another often used unit is the <strong>electronvolt</strong> (eV), which is a new unit of energy. It is defined as the electric potential energy difference experienced by an electron being accelerated across an electric potential of <span class="math notranslate nohighlight">\(1\)</span> V.</p>
+<p>Another often used unit is the <strong>electronvolt</strong> (eV), which is a new unit of energy. It is defined as the kinetic energy gained by an electron being accelerated across an electric potential of <span class="math notranslate nohighlight">\(1\)</span> V.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 7</b>
     <br>
 <p>Use <span class="math notranslate nohighlight">\(\Delta U = q\Delta V\)</span> to find the value of <span class="math notranslate nohighlight">\(1\)</span> eV expressed in Joules.</p>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="n">q</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.602E-19</span>
+<span class="n">dv</span> <span class="o">=</span> <span class="mf">1.0</span> 
+
+<span class="c1"># qdv = du = - w = -dk</span>
+
+<span class="n">dk</span> <span class="o">=</span> <span class="o">-</span><span class="n">q</span><span class="o">*</span><span class="n">dv</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1 ev is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dk</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ev is 1.602e-19 J.
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
