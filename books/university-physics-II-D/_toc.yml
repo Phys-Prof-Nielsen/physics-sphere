@@ -22,3 +22,7 @@ parts:
   - file: Module-D2/work
   - file: Module-D2/electric-potential
   - file: Module-D2/problemsD2
+- caption: Module D3 - Capacitance
+  chapters:
+  - file: Module-D3/capacitance
+  - file: Module-D3/problemsD3
