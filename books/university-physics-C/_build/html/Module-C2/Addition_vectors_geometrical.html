@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>C2.8 Addition of Vectors: Geometric Approach &#8212; A Competency Approach to Introductory Physics</title>
+    <title>C2.7 Addition of Vectors: Geometric Approach &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -65,10 +66,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-C2/Addition_vectors_geometrical';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="C2.9 Unit Vectors" href="Unit_vectors.html" />
-    <link rel="prev" title="C2.7 Concept of Displacement Vector" href="Displacement_vector.html" />
+    <link rel="next" title="C2.8 Basic Vector Arithmetic: Analytic Approach" href="Addition_vectors_analytic.html" />
+    <link rel="prev" title="C2.6 Concept of Displacement Vector" href="Displacement_vector.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -169,10 +170,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Introduction_to_vectors.html">C2.2 Introduction to Vectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Position_vector.html">C.2.3 Position Vector</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Analytic_vector.html">C2.4 Analytic Representation of a Vector</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Addition_vectors_analytic.html">C2.5 Basic Vector Arithmetic: Analytic Approach</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Multiplication_scalar_geometrical.html">C2.6 Multiplication of a Vector by a Scalar: Geometric Approach</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Displacement_vector.html">C2.7 Concept of Displacement Vector</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">C2.8 Addition of Vectors: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Multiplication_scalar_geometrical.html">C2.5 Multiplication of a Vector by a Scalar: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Displacement_vector.html">C2.6 Concept of Displacement Vector</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">C2.7 Addition of Vectors: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Addition_vectors_analytic.html">C2.8 Basic Vector Arithmetic: Analytic Approach</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Unit_vectors.html">C2.9 Unit Vectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Dot_product.html">C2.10 Dot Product</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problemsC2.html">C2.X Problems</a></li>
@@ -425,7 +426,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>C2.8 Addition of Vectors: Geometric Approach</h1>
+    <h1>C2.7 Addition of Vectors: Geometric Approach</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -435,14 +436,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-8-1-a-visual-approach">C2.8.1 A Visual Approach</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-8-2-addition-of-vectors">C2.8.2 Addition of Vectors</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-7-1-a-visual-approach">C2.7.1 A Visual Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-7-2-addition-of-vectors">C2.7.2 Addition of Vectors</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization">Visualization</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#script-clean-up-and-comments">Script Clean-Up and Comments</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-8-3-subtraction-of-vectors">C2.8.3 Subtraction of Vectors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-axioms-of-algebra">2.8.4 Useful Axioms of Algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-7-3-subtraction-of-vectors">C2.7.3 Subtraction of Vectors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-axioms-of-algebra">2.7.4 Useful Axioms of Algebra</a></li>
 </ul>
             </nav>
         </div>
@@ -454,18 +455,18 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="c2-8-addition-of-vectors-geometric-approach">
-<h1>C2.8 Addition of Vectors: Geometric Approach<a class="headerlink" href="#c2-8-addition-of-vectors-geometric-approach" title="Permalink to this headline">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="c2-8-1-a-visual-approach">
-<h2>C2.8.1 A Visual Approach<a class="headerlink" href="#c2-8-1-a-visual-approach" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="c2-7-addition-of-vectors-geometric-approach">
+<h1>C2.7 Addition of Vectors: Geometric Approach<a class="headerlink" href="#c2-7-addition-of-vectors-geometric-approach" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="c2-7-1-a-visual-approach">
+<h2>C2.7.1 A Visual Approach<a class="headerlink" href="#c2-7-1-a-visual-approach" title="Permalink to this heading">#</a></h2>
 <p>We will learn two methods of adding vectors: geometric and analytic. The geometric is a quick approach to adding vectors for visualization but may often lack quantitative information, which is provided by the analytic approach. We will be using both approaches throughout the semester.</p>
 <p>From the previous notes, <b>Concept of Displacement Vector</b>, we applied our understanding of a change in position to geometrically explain it through vectors. In fact, we inferred the following (quote from previous notes):</p>
 <div class="alert alert-info">
 <p>“In this example, we may conclude the following. If we follow the initial position vector <span class="math notranslate nohighlight">\(\vec{x}_A\)</span> from tail to head, then continue along the displacement <span class="math notranslate nohighlight">\(\Delta\vec{x}\)</span>, we end up at the tip of the final position vector <span class="math notranslate nohighlight">\(\vec{x}_B\)</span>. This is a general rule for geometric addition of vectors, which we will cover in the next segment.”</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="c2-8-2-addition-of-vectors">
-<h2>C2.8.2 Addition of Vectors<a class="headerlink" href="#c2-8-2-addition-of-vectors" title="Permalink to this headline">#</a></h2>
+<section id="c2-7-2-addition-of-vectors">
+<h2>C2.7.2 Addition of Vectors<a class="headerlink" href="#c2-7-2-addition-of-vectors" title="Permalink to this heading">#</a></h2>
 <p>While the above was inferred from vectors in 1D, we will take this as a methodology to add two vectors in 2D and higher:</p>
 <div class="alert alert-success">
 Consider two vectors. Place the initial point (a.k.a. the tail) of the second vector at the terminal point (a.k.a. the head) of the first vector. The resulting vector is the directed line segment from the initial point of the first vector to the terminal point of the second vector.
@@ -473,7 +474,7 @@ Consider two vectors. Place the initial point (a.k.a. the tail) of the second ve
 <p>It is important here to remember that a <b>true</b> vector depends only on its length and direction, not where it is otherwise located. That implies we are free to move them around as long as the length and direction does not change.</p>
 <p>Below I will try and illustrate the process explained above through a Python script.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="visualization">
-<h3>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">#</a></h3>
+<h3>Visualization<a class="headerlink" href="#visualization" title="Permalink to this heading">#</a></h3>
 <p>First, let us copy and paste the last bit of code from the <em>Position Vector</em> notes. It was the code that could plot two (or more) position vectors. I will plot two position vectors:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \vec{r}_1 = \begin{bmatrix} 1  \\ 2  \end{bmatrix} \end{split}\]</div>
@@ -512,7 +513,7 @@ Consider two vectors. Place the initial point (a.k.a. the tail) of the second ve
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/902032c06b4df15a2708201d04154ebd67950a0acd8765c79ff3ed76d18ee792.png" src="../_images/902032c06b4df15a2708201d04154ebd67950a0acd8765c79ff3ed76d18ee792.png" />
+<img alt="../_images/7c993526eb986fc90348a606cbac89ef7551aede09296c52c4588f4b7d769c46.png" src="../_images/7c993526eb986fc90348a606cbac89ef7551aede09296c52c4588f4b7d769c46.png" />
 </div>
 </div>
 <p>We notice that these are position vectors and <b>always</b> have their initial point at the origin of the coordinate system. This is a feature that suggest that they are not a real vector, but instead a pseudo vector as they behave differently under a coordinate transformation (that is just sexy linear algebra talk that we will not worry about in this class).</p>
@@ -550,7 +551,7 @@ Consider two vectors. Place the initial point (a.k.a. the tail) of the second ve
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/52e0f6140523add9a4f8b86719ea1a18f6ce9ea988aa89a9cea9173f24149dea.png" src="../_images/52e0f6140523add9a4f8b86719ea1a18f6ce9ea988aa89a9cea9173f24149dea.png" />
+<img alt="../_images/eb1c317c1ec8ba1835d4b9b5bb32d6c28dadf73d8f455fd89d49d0fc51ac95ae.png" src="../_images/eb1c317c1ec8ba1835d4b9b5bb32d6c28dadf73d8f455fd89d49d0fc51ac95ae.png" />
 </div>
 </div>
 <p>The vectors are now just somewhere else, but they are indeed the same vectors since they have the same length and direction as before (of course, they are no longer position vectors).</p>
@@ -587,7 +588,7 @@ Consider two vectors. Place the initial point (a.k.a. the tail) of the second ve
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/2fc2bfbb14e0a58f64f0cb9afe61c8224b7b2a48a7a7a93c712489c99035f108.png" src="../_images/2fc2bfbb14e0a58f64f0cb9afe61c8224b7b2a48a7a7a93c712489c99035f108.png" />
+<img alt="../_images/408662055d0749dbe3bdef77d6fbcb4238121f4054ca2be29f447fe2209d6085.png" src="../_images/408662055d0749dbe3bdef77d6fbcb4238121f4054ca2be29f447fe2209d6085.png" />
 </div>
 </div>
 <p>If we go back to our interpretation of the displament vector, then we had the first vector being our initial position vector (red), our second vector is the displacement vector (blue), and the directed line segment from the initial position (tail of first vector) to the final position (arrow head of second vector) was the new position: or the result of the adding the two vectors. Hence, if we draw this directed line segment, we will get the result of adding the two vectors:</p>
@@ -628,13 +629,13 @@ Consider two vectors. Place the initial point (a.k.a. the tail) of the second ve
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/03ad2522b670bc14df8876f67288846b5c2271e859bf391afb698940db58aff8.png" src="../_images/03ad2522b670bc14df8876f67288846b5c2271e859bf391afb698940db58aff8.png" />
+<img alt="../_images/8699a7bec50a544263479439435a8b4909075a91ece3d3e28f8ed5db9f4dce05.png" src="../_images/8699a7bec50a544263479439435a8b4909075a91ece3d3e28f8ed5db9f4dce05.png" />
 </div>
 </div>
 <p>In the above plot, the green arrow (or vector) is the result of adding the two vectors (the red and blue). Pretty awesome, don’t ya think?</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="script-clean-up-and-comments">
-<h3>Script Clean-Up and Comments<a class="headerlink" href="#script-clean-up-and-comments" title="Permalink to this headline">#</a></h3>
+<h3>Script Clean-Up and Comments<a class="headerlink" href="#script-clean-up-and-comments" title="Permalink to this heading">#</a></h3>
 <p>At this point, I would like to clear up the code a little bit and provide some comments to the code for those of you who may be inclined to learn a bit more about what we did. We should notice that we rely heavily on the components of the vectors!</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -712,7 +713,7 @@ Consider two vectors. Place the initial point (a.k.a. the tail) of the second ve
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/03ad2522b670bc14df8876f67288846b5c2271e859bf391afb698940db58aff8.png" src="../_images/03ad2522b670bc14df8876f67288846b5c2271e859bf391afb698940db58aff8.png" />
+<img alt="../_images/8699a7bec50a544263479439435a8b4909075a91ece3d3e28f8ed5db9f4dce05.png" src="../_images/8699a7bec50a544263479439435a8b4909075a91ece3d3e28f8ed5db9f4dce05.png" />
 </div>
 </div>
 <p><strong>PHEW</strong> Give your self a pad on the back, go and cool down, let the frustration loose, grab you favorite drink and come back! Holy smoke, <strong>this is not a programming class</strong>. No, and if you are not comfortable with the code or it is completely nonsense, do not worry. I am just providing it to you to be able to illustrate the process of adding vectors. Now, we can change the numbers in the code to visualize any vector additions of two vectors. Can your textbook do that? 🤪</p>
@@ -722,8 +723,8 @@ Consider two vectors. Place the initial point (a.k.a. the tail) of the second ve
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
-<section id="c2-8-3-subtraction-of-vectors">
-<h2>C2.8.3 Subtraction of Vectors<a class="headerlink" href="#c2-8-3-subtraction-of-vectors" title="Permalink to this headline">#</a></h2>
+<section id="c2-7-3-subtraction-of-vectors">
+<h2>C2.7.3 Subtraction of Vectors<a class="headerlink" href="#c2-7-3-subtraction-of-vectors" title="Permalink to this heading">#</a></h2>
 <p>This one is actually easy! Again, it is a consequence of axioms in algebra. For each element in the algebra, there exist an element with opposite sign such that the addition of the element and its “negative” is zero. For example: 2 + (-2) = 0. We call this subtraction:</p>
 <p><span style="color:red">subtraction is the same as addition with the negative element</span></p>
 <p>Hence, if we have two vectors <span class="math notranslate nohighlight">\(\vec{A}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span>, then the subtraction <span class="math notranslate nohighlight">\(\vec{A} - \vec{B}\)</span> is the equivalent of <span class="math notranslate nohighlight">\(\vec{A} + (-\vec{B})\)</span>. To create the negative of a vector, we simply multiply all its components by (-1).</p>
@@ -819,7 +820,7 @@ Consider two vectors. Place the initial point (a.k.a. the tail) of the second ve
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/664f3a6c26fd595bbe3b488a12c8051e89a062caca841a6ddeef9627d7b9c1e4.png" src="../_images/664f3a6c26fd595bbe3b488a12c8051e89a062caca841a6ddeef9627d7b9c1e4.png" />
+<img alt="../_images/a9f43552557b4931625cff5fb97a52daf91acbb113d328cd767047b2e212afa9.png" src="../_images/a9f43552557b4931625cff5fb97a52daf91acbb113d328cd767047b2e212afa9.png" />
 </div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
@@ -833,7 +834,7 @@ Consider two vectors. Place the initial point (a.k.a. the tail) of the second ve
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="useful-axioms-of-algebra">
-<h2>2.8.4 Useful Axioms of Algebra<a class="headerlink" href="#useful-axioms-of-algebra" title="Permalink to this headline">#</a></h2>
+<h2>2.7.4 Useful Axioms of Algebra<a class="headerlink" href="#useful-axioms-of-algebra" title="Permalink to this heading">#</a></h2>
 <p>I have now touted linear algebra several times, so let us just throw some familiar (I hope) terms out there. In Linear Algebra, you will learn about the axioms of vector spaces. Some of them are similar to the axioms that
 we are familiar with from elementary school algebra (it is a travesty that they are not termed axioms at that stage
 and their importance highlighted). The axioms we may encounter in the course relates to the following:</p>
@@ -899,15 +900,15 @@ and their importance highlighted). The axioms we may encounter in the course rel
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">C2.7 Concept of Displacement Vector</p>
+        <p class="prev-next-title">C2.6 Concept of Displacement Vector</p>
       </div>
     </a>
     <a class="right-next"
-       href="Unit_vectors.html"
+       href="Addition_vectors_analytic.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C2.9 Unit Vectors</p>
+        <p class="prev-next-title">C2.8 Basic Vector Arithmetic: Analytic Approach</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -929,14 +930,14 @@ and their importance highlighted). The axioms we may encounter in the course rel
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-8-1-a-visual-approach">C2.8.1 A Visual Approach</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-8-2-addition-of-vectors">C2.8.2 Addition of Vectors</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-7-1-a-visual-approach">C2.7.1 A Visual Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-7-2-addition-of-vectors">C2.7.2 Addition of Vectors</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization">Visualization</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#script-clean-up-and-comments">Script Clean-Up and Comments</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-8-3-subtraction-of-vectors">C2.8.3 Subtraction of Vectors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-axioms-of-algebra">2.8.4 Useful Axioms of Algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c2-7-3-subtraction-of-vectors">C2.7.3 Subtraction of Vectors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-axioms-of-algebra">2.7.4 Useful Axioms of Algebra</a></li>
 </ul>
   </nav></div>
 

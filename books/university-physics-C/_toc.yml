@@ -19,10 +19,10 @@ parts:
   - file: Module-C2/Introduction_to_vectors
   - file: Module-C2/Position_vector
   - file: Module-C2/Analytic_vector
-  - file: Module-C2/Addition_vectors_analytic
   - file: Module-C2/Multiplication_scalar_geometrical
   - file: Module-C2/Displacement_vector
   - file: Module-C2/Addition_vectors_geometrical
+  - file: Module-C2/Addition_vectors_analytic
   - file: Module-C2/Unit_vectors
   - file: Module-C2/Dot_product
   - file: Module-C2/problemsC2

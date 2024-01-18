@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>C6.2 Conservative Forces &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="C6.3 Potential Energy" href="Potential-energy.html" />
     <link rel="prev" title="C6.1 Linear Work: Point Particle" href="Linear-work-particle.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -169,10 +170,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-C2/Introduction_to_vectors.html">C2.2 Introduction to Vectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-C2/Position_vector.html">C.2.3 Position Vector</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-C2/Analytic_vector.html">C2.4 Analytic Representation of a Vector</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Addition_vectors_analytic.html">C2.5 Basic Vector Arithmetic: Analytic Approach</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Multiplication_scalar_geometrical.html">C2.6 Multiplication of a Vector by a Scalar: Geometric Approach</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Displacement_vector.html">C2.7 Concept of Displacement Vector</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Addition_vectors_geometrical.html">C2.8 Addition of Vectors: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Multiplication_scalar_geometrical.html">C2.5 Multiplication of a Vector by a Scalar: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Displacement_vector.html">C2.6 Concept of Displacement Vector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Addition_vectors_geometrical.html">C2.7 Addition of Vectors: Geometric Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-C2/Addition_vectors_analytic.html">C2.8 Basic Vector Arithmetic: Analytic Approach</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-C2/Unit_vectors.html">C2.9 Unit Vectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-C2/Dot_product.html">C2.10 Dot Product</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-C2/problemsC2.html">C2.X Problems</a></li>
@@ -450,13 +451,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="c6-2-conservative-forces">
-<h1>C6.2 Conservative Forces<a class="headerlink" href="#c6-2-conservative-forces" title="Permalink to this headline">#</a></h1>
+<h1>C6.2 Conservative Forces<a class="headerlink" href="#c6-2-conservative-forces" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="c6-2-1-motivation">
-<h2>C6.2.1 Motivation<a class="headerlink" href="#c6-2-1-motivation" title="Permalink to this headline">#</a></h2>
+<h2>C6.2.1 Motivation<a class="headerlink" href="#c6-2-1-motivation" title="Permalink to this heading">#</a></h2>
 <p>In principle we do not need any more tools to fully solve a problem within the work-energy regime. However, work deals with force and displacement, which both are vectors and adds some complexity as need to consider respective directions. It turns out that vector calculus tells us that under certain conditions, some forces can be written in terms of a scalar function, which we call the <strong>potential energy</strong>. The forces associated with potential energies are called <strong>conservative forces</strong>. By introducing the potential energy concept, we can solve many problems using work-energy without having to deal with vectors.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="c6-2-2-conceptual-definition-of-conservative-force">
-<h2>C6.2.2 Conceptual Definition of Conservative Force<a class="headerlink" href="#c6-2-2-conceptual-definition-of-conservative-force" title="Permalink to this headline">#</a></h2>
+<h2>C6.2.2 Conceptual Definition of Conservative Force<a class="headerlink" href="#c6-2-2-conceptual-definition-of-conservative-force" title="Permalink to this heading">#</a></h2>
 <p>A conservative force is commonly described in two ways:</p>
 <div class="alert alert-success">
 In displacing an object from position A to position B, the work by a conservative force only depends on the start and end positions but does not depend on the path to get from A to B. 
@@ -470,7 +471,7 @@ In moving an object from position A to some other position(s) and back to A, the
 <p>The two most common conservative forces are the forces of gravity and linear spring.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="c6-2-2-qualitiative-definition-of-conservative-force">
-<h2>C6.2.2 Qualitiative Definition of Conservative Force<a class="headerlink" href="#c6-2-2-qualitiative-definition-of-conservative-force" title="Permalink to this headline">#</a></h2>
+<h2>C6.2.2 Qualitiative Definition of Conservative Force<a class="headerlink" href="#c6-2-2-qualitiative-definition-of-conservative-force" title="Permalink to this heading">#</a></h2>
 <p>This will require vector calculus and is beyond the scope of this module. While we can not definitively prove a force is conservative, we can test the premise by calculating the work done along a closed path. If the work is zero, it <strong>may</strong> be a conservative force. If it is not zero, we can conclude that it is not conservative.</p>
 <p>Hence, we will use the following definition to test whether a force may be conservative or not:</p>
 <div class="alert alert-success">
