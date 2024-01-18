@@ -422,10 +422,12 @@ document.write(`
 <div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
 
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
 <span class="n">q1</span> <span class="o">=</span> <span class="mf">5.0E-6</span>
 <span class="n">q2</span> <span class="o">=</span> <span class="mf">3.0E-6</span>
 <span class="n">m</span> <span class="o">=</span> <span class="mf">6.0E-9</span>
-<span class="n">r</span> <span class="o">=</span> <span class="mf">4.0E-2</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="mf">4.0E-2</span>
 <span class="n">k</span> <span class="o">=</span> <span class="mf">8.99E9</span>
 
 <span class="c1"># Part 1</span>
@@ -435,9 +437,26 @@ document.write(`
 
 <span class="c1"># more conventional but less smart...use du = kq1q2/r...this assumes that u = 0 at r = infinity</span>
 
-<span class="n">du</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="o">/</span><span class="n">r</span>
+<span class="n">du</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="o">/</span><span class="n">r1</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The potential energy at that location is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">du</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="c1"># ------</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="mf">8.0E-2</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">v2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v2&#39;</span><span class="p">)</span>
+
+<span class="n">k1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">k2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v2</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">du</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">r2</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="n">r1</span><span class="p">))</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="p">(</span><span class="n">k2</span> <span class="o">-</span> <span class="n">k1</span><span class="p">)</span> <span class="o">+</span> <span class="n">du</span>  <span class="c1"># -du = +dk</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">v2</span><span class="p">)</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#positive root</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The speed of the charge is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -450,6 +469,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Easy solution: the potential energy at that location is 0 J.
 The potential energy at that location is 3.3712500000000007 J.
+The speed of the charge is 23703.9026322671 m/s.
 </pre></div>
 </div>
 </div>
