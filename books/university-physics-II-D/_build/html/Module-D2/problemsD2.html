@@ -413,18 +413,187 @@ document.write(`
 <li><p>If <span class="math notranslate nohighlight">\(q_2\)</span> starts from rest from a point 4.0 cm from <span class="math notranslate nohighlight">\(q_1\)</span>, what will be its speed when it is 8.0 cm from <span class="math notranslate nohighlight">\(q_1\)</span> assuming <span class="math notranslate nohighlight">\(q_1\)</span> is fixed in its place.?</p></li>
 </ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/7-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">q1</span> <span class="o">=</span> <span class="mf">5.0E-6</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="mf">3.0E-6</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">6.0E-9</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">4.0E-2</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">8.99E9</span>
+
+<span class="c1"># Part 1</span>
+<span class="c1"># ------</span>
+<span class="c1"># easy solution: the actualy value of poetntial energy has no meaning and we are free to set our zero level</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Easy solution: the potential energy at that location is 0 J.&#39;</span><span class="p">)</span>
+
+<span class="c1"># more conventional but less smart...use du = kq1q2/r...this assumes that u = 0 at r = infinity</span>
+
+<span class="n">du</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="o">/</span><span class="n">r</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The potential energy at that location is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">du</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Easy solution: the potential energy at that location is 0 J.
+The potential energy at that location is 3.3712500000000007 J.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D2.2</h2>
     </header>
 <p>An evacuated tube uses an accelerating voltage of <span class="math notranslate nohighlight">\(40.0\)</span> kV to accelerate electrons to hit a copper plate and produce X-rays. Non-relativistically, what would be the maximum speed of these electrons?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/7-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">dv</span> <span class="o">=</span> <span class="mf">40.0E3</span>
+<span class="n">q</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1602E-19</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">9.109E-31</span>
+
+<span class="c1">#max speed happens if ALL the potential energy is converted into kinetic energy: -du = +dk</span>
+<span class="c1"># assuming they start from rest: -du = 0.5mv^2</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">)</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">q</span><span class="o">*</span><span class="n">dv</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#pick positive root</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Maximum speed is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Maximum speed is 3750946746.22673 m/s.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D2.3</h2>
     </header>
 <p>What is the strength of the electric field between two parallel conducting plates separated by <span class="math notranslate nohighlight">\(1.00\)</span> cm and having a potential difference (voltage) between them of <span class="math notranslate nohighlight">\(1.50\times 10^4\)</span> V?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/7-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">1.00E-2</span>
+<span class="n">dv</span> <span class="o">=</span> <span class="mf">1.50E4</span>
+
+<span class="c1">#just looking for magnitude</span>
+
+<span class="n">Ex</span> <span class="o">=</span> <span class="o">-</span><span class="n">dv</span><span class="o">/</span><span class="n">dx</span>
+
+<span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Ex</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Magnitude of electric field &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">E</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V/m.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Magnitude of electric field 1500000.0 V/m.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D2.4</h2>
     </header>
-<p>Two parallel conducting plates are separated by <span class="math notranslate nohighlight">\(10.0\)</span> cm, and one of them is taken to be at zero volts. (a) What is the electric field strength between them, if the potential <span class="math notranslate nohighlight">\(8.00\)</span> cm from the zero volt plate (and <span class="math notranslate nohighlight">\(2.00\)</span> cm from the other) is <span class="math notranslate nohighlight">\(450\)</span> V? (b) What is the voltage between the plates?</p>
+<p>Two parallel conducting plates are separated by <span class="math notranslate nohighlight">\(10.0\)</span> cm, and one of them is taken to be at zero volts.</p>
+<ol class="arabic simple">
+<li><p>What is the electric field strength between them, if the potential <span class="math notranslate nohighlight">\(8.00\)</span> cm from the zero volt plate (and <span class="math notranslate nohighlight">\(2.00\)</span> cm from the other) is <span class="math notranslate nohighlight">\(450\)</span> V?</p></li>
+<li><p>What is the voltage between the plates?</p></li>
+</ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/7-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">10.0E-2</span>
+<span class="n">v0</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="c1"># Part 1</span>
+<span class="c1"># ------</span>
+<span class="n">dx1</span> <span class="o">=</span> <span class="mf">8.00E-2</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="mi">450</span>
+<span class="n">Ex</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">v1</span> <span class="o">-</span> <span class="n">v0</span><span class="p">)</span><span class="o">/</span><span class="n">dx1</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Ex</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the electric field is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">E</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V/m.&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="c1"># ------</span>
+<span class="n">dv</span> <span class="o">=</span> <span class="o">-</span><span class="n">Ex</span><span class="o">*</span><span class="n">dx</span>
+<span class="n">dv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">dv</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The voltage between the plates is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dv</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The magnitude of the electric field is 5625.0 V/m.
+The voltage between the plates is 562.5 V.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D2.5</h2>
     </header>
 <ol class="arabic simple">
