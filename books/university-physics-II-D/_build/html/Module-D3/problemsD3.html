@@ -513,13 +513,82 @@ document.write(`
     </header>
 <p>A capacitor has a charge of <span class="math notranslate nohighlight">\(2.5~\mu\)</span>C when connected to a 6.0 V battery. How much energy is stored in this capacitor?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/8-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">Q</span> <span class="o">=</span> <span class="mf">2.5E-6</span>
+<span class="n">V</span> <span class="o">=</span> <span class="mf">6.00</span>
+
+<span class="c1"># U = 0.5*Q^2/(2C) = 0.5*C*V^2 = 0.5*Q*V</span>
+<span class="n">U</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">Q</span><span class="o">*</span><span class="n">V</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Potential energy stored in capacitor is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">U</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Potential energy stored in capacitor is 7.500000000000001e-06 J.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D3.5</h2>
     </header>
 <p>In open-heart surgery, a much smaller amount of energy will defibrillate the heart.</p>
 <ol class="arabic simple">
-<li><p>What voltage is applied to the <span class="math notranslate nohighlight">\(8.00~\mu\)</span>F capacitor of a heart defibrillator that stores 40.0 J of energy? 2. Find the amount of the stored charge.</p></li>
+<li><p>What voltage is applied to the <span class="math notranslate nohighlight">\(8.00~\mu\)</span>F capacitor of a heart defibrillator that stores 40.0 J of energy</p></li>
+<li><p>Find the amount of the stored charge.</p></li>
 </ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/8-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">C</span> <span class="o">=</span> <span class="mf">8.00</span>
+<span class="n">U</span> <span class="o">=</span> <span class="mf">40.0</span>
+
+<span class="c1"># U = 0.5*C*V^2 </span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;V&#39;</span><span class="p">)</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">U</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">C</span><span class="o">*</span><span class="n">V</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">V</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Voltage applied to capacitor is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; V.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Voltage applied to capacitor is 10.0000000000000 V.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D3.6</h2>
     </header>
 <p>An anxious physicist worries that the two metal shelves of a wood frame bookcase might obtain a high voltage if charged by static electricity, perhaps produced by friction.</p>
