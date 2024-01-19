@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>D3.1 Capacitance &#8212; A Competency Approach to University Physics II</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -69,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="D3.2 Problems" href="problemsD3.html" />
     <link rel="prev" title="D2.3 Problems" href="../Module-D2/problemsD2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -416,19 +415,20 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="d3-1-capacitance">
-<h1>D3.1 Capacitance<a class="headerlink" href="#d3-1-capacitance" title="Permalink to this heading">#</a></h1>
+<h1>D3.1 Capacitance<a class="headerlink" href="#d3-1-capacitance" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d3-1-1-motivation">
-<h2>D3.1.1 Motivation<a class="headerlink" href="#d3-1-1-motivation" title="Permalink to this heading">#</a></h2>
+<h2>D3.1.1 Motivation<a class="headerlink" href="#d3-1-1-motivation" title="Permalink to this headline">#</a></h2>
 <p>Capacitors plays a major role in electronic circuits as well as other electrical appliancesOne application of capacitors in circuits are to act as storage banks for electric charge that can be readily discharged as needed for example in pulsed lasers and defibrilators. Other applications are in band-pass filters, AC couplers, and
 sensor systems such as a stud finder (finding studs hidden behind drywall, not cool physics professors wandering the halls of UVU).</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Applications_of_capacitors">Wiki for more info</a></p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="d3-1-2-definition">
-<h2>D3.1.2 Definition<a class="headerlink" href="#d3-1-2-definition" title="Permalink to this heading">#</a></h2>
+<h2>D3.1.2 Definition<a class="headerlink" href="#d3-1-2-definition" title="Permalink to this headline">#</a></h2>
 <p>A <strong>capacitor</strong> is simply any two (or more) separated conductors and we can assign it a <strong>capacitance</strong> <span class="math notranslate nohighlight">\(C\)</span>:</p>
 <div class="alert alert-success">
-$$ C = \frac{Q}{\Delta V} \tag{1}$$
-    </div>
+<div class="math notranslate nohighlight">
+\[ C = \frac{Q}{\Delta V} \tag{1}\]</div>
+</div>
 <p>where <span class="math notranslate nohighlight">\(Q\)</span> is the charge stored on the conductors (we assume charges on the two conductors to be <span class="math notranslate nohighlight">\(+Q\)</span> and <span class="math notranslate nohighlight">\(-Q\)</span>, respectively) while <span class="math notranslate nohighlight">\(\Delta V\)</span> is the electric potential difference (or voltage) across the two conductors. The unit of capacitance is C/V and we define that as a <strong>Farad</strong> (F).</p>
 <div class="alert alert-info">
     Conceptually the capacitance is a measure of charge stored on the conductors provided a given voltage. Hence, capacitors are means of storing charge (and energy) in an electrical system.
@@ -440,21 +440,51 @@ $$ C = \frac{Q}{\Delta V} \tag{1}$$
 <p>There are many forms and shapes of capacitors. For now, we will focus our attention to the simplest system (which is also widely used in electronics): the <strong>parallel plate capacitor</strong>.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 1 </b>
-    <br>
-    A defibrillator is a capacitor used to establish a voltage <b>across</b> the human heart to drive a current <b>through</b> the heart to restore normal heartbeat. A specific defibrillator is charged through an electrical outlet providing a voltage of $120$ V across it. The capacitance of the defibrillator is $220$ $\mu$F. How much charge is stored on its plates?
-</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<p>A defibrillator is a capacitor used to establish a voltage <strong>across</strong> the human heart to drive a current <strong>through</strong> the heart to restore normal heartbeat. A specific defibrillator is charged through an electrical outlet providing a voltage of <span class="math notranslate nohighlight">\(120\)</span> V across it. The capacitance of the defibrillator is <span class="math notranslate nohighlight">\(220\)</span> <span class="math notranslate nohighlight">\(\mu\)</span>F. How much charge is stored on its plates?</p>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">dv</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">220E-6</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="n">c</span><span class="o">*</span><span class="n">dv</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Charge on capacitor is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; C.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Charge on capacitor is 0.0264 C.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="d3-1-3-parallel-plate-capacitor">
-<h2>D3.1.3 Parallel Plate Capacitor<a class="headerlink" href="#d3-1-3-parallel-plate-capacitor" title="Permalink to this heading">#</a></h2>
+<h2>D3.1.3 Parallel Plate Capacitor<a class="headerlink" href="#d3-1-3-parallel-plate-capacitor" title="Permalink to this headline">#</a></h2>
 <p>Later in the course, we will derive the following equations, but for now we just want to become familiar with them and practice using them.</p>
 <p>The capacitance of a parallel plate capacitor with a <strong>vacuum</strong> between the plates is</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
 \[ C = \frac{\varepsilon_0 A}{d} \tag{3}\]</div>
 </div>
-<p>where <span class="math notranslate nohighlight">\(\varepsilon = 8.854\times 10^{-12}\)</span> F/m is the <strong>vacuum permitivity</strong>, <span class="math notranslate nohighlight">\(A\)</span> is the area of one plate, and <span class="math notranslate nohighlight">\(d\)</span> is the spacing between the plates. <strong>We notice that the capacitance of the parallel plate capacitor is determined through by spatial properties only (aside from a constant)</strong>.</p>
+<p>where <span class="math notranslate nohighlight">\(\varepsilon_0 = 8.854\times 10^{-12}\)</span> F/m is the <strong>vacuum permitivity</strong>, <span class="math notranslate nohighlight">\(A\)</span> is the area of one plate, and <span class="math notranslate nohighlight">\(d\)</span> is the spacing between the plates. <strong>We notice that the capacitance of the parallel plate capacitor is determined through by spatial properties only (aside from a constant)</strong>.</p>
 <p>The electric field between the plates is constant, uniform, and given in <strong>magnitude</strong> by</p>
 <div class="math notranslate nohighlight">
-\[ E = \frac{Q}{\varepsilon A}  = \frac{\sigma}{\varepsilon} \]</div>
+\[ E = \frac{Q}{\varepsilon_0 A}  = \frac{\sigma}{\varepsilon_0} \]</div>
 <p>where <span class="math notranslate nohighlight">\(\sigma\)</span> is the <strong>surface charge density</strong>.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 2</b>
@@ -464,10 +494,80 @@ $$ C = \frac{Q}{\Delta V} \tag{1}$$
 \[ dU = Vdq \]</div>
 <p>Use Equation (2) and integrate from <span class="math notranslate nohighlight">\(q = 0\)</span> to <span class="math notranslate nohighlight">\(q = Q\)</span> and then recognize that <span class="math notranslate nohighlight">\(\Delta U = W\)</span>.</p>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">Q</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;Q&#39;</span><span class="p">)</span>
+<span class="n">q1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="n">Q</span>
+
+<span class="n">V</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;V&#39;</span><span class="p">)</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+
+<span class="n">V</span> <span class="o">=</span> <span class="n">q</span><span class="o">/</span><span class="n">C</span>
+
+<span class="n">w</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">V</span><span class="p">,(</span><span class="n">q</span><span class="p">,</span><span class="n">q1</span><span class="p">,</span><span class="n">q2</span><span class="p">))</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Work is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">w</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Work is Q**2/(2*C)
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="alert alert-warning">
 <b>Box 3</b>
     <br>
-<p>A rather large, but typical, plate capacitor in an electrical circuit has a capacitance of <span class="math notranslate nohighlight">\(2.2\times 10^{-3}\)</span> F and a gab spacing of <span class="math notranslate nohighlight">\(1.00\)</span> mm. If this capacitor is build as a standard parallel plate capacitor, what is the surface area of the plates?</p>
+<p>A rather large, but typical, plate capacitor in an electrical circuit has a capacitance of <span class="math notranslate nohighlight">\(2.2\times 10^{-3}\)</span> F and a gap spacing of <span class="math notranslate nohighlight">\(1.00\)</span> mm. If this capacitor is build as a standard parallel plate capacitor, what is the surface area of the plates?</p>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">C</span> <span class="o">=</span> <span class="mf">2.2E-3</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">1.0E-3</span>
+<span class="n">per</span> <span class="o">=</span> <span class="mf">8.854E-12</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">C</span><span class="o">*</span><span class="n">d</span><span class="o">/</span><span class="n">per</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The surface area of a plate is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m^2.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The surface area of a plate is 248475.2654167608 m^2.
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><p>Obviously, the result from Box 3 would not make sense in an electrical circuite. Instead, these capacitors have dielectric material (like paper) that have large surface areas, but are folded into very small sizes. It is the origami of electronics.</p>
 <img src="D3-fig1.1.jpg" width="300"><hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
