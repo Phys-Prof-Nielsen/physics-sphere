@@ -454,6 +454,41 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.1</h2>
     </header>
 <p>The hypotenuse of a right-angle triangle has a length of 8.6 cm. The opposite side is 4.30 cm. What is the length of the adjacent side?</p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">hyp</span> <span class="o">=</span> <span class="mf">8.6</span>
+<span class="n">opp</span> <span class="o">=</span> <span class="mf">4.30</span>
+
+<span class="n">adj</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;adj&#39;</span><span class="p">)</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">hyp</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">opp</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">adj</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">adj</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The adjacent side is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; cm.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The adjacent side is 7.44781847254617 cm.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.2</h2>
     </header>
 <p>Consider the triangle shown in the figure.
@@ -466,6 +501,57 @@ If <span class="math notranslate nohighlight">\(b = 10.0\)</span> m and <span cl
 <li><p>the length of <span class="math notranslate nohighlight">\(c\)</span>.</p></li>
 <li><p>the angle <span class="math notranslate nohighlight">\(\beta\)</span> in radians.</p></li>
 </ol>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">26.6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;beta&#39;</span><span class="p">)</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span> <span class="o">-</span> <span class="n">b</span><span class="o">/</span><span class="n">a</span>
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">sol1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lenght &quot;a&quot; is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m.&#39;</span><span class="p">)</span>
+
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span> <span class="o">-</span> <span class="n">c</span><span class="o">/</span><span class="n">a</span>
+<span class="n">sol2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq2</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">sol2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lenght &quot;c&quot; is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m.&#39;</span><span class="p">)</span>
+
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span> <span class="o">-</span> <span class="n">b</span><span class="o">/</span><span class="n">a</span>
+<span class="n">sol3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq3</span><span class="p">,</span><span class="n">beta</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">sol3</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angle &quot;beta&quot; is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; degrees.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lenght &quot;a&quot; is 11.1837528560483 m.
+Lenght &quot;c&quot; is 5.00762697743844 m.
+Angle &quot;beta&quot; is 63.4000000000000 degrees.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.3</h2>
     </header>
 <p>Consider the triangle shown in the figure.
@@ -477,6 +563,68 @@ If <span class="math notranslate nohighlight">\(c = 5.0\)</span> m and <span cla
 <li><p>the length of <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
 <li><p>the length of <span class="math notranslate nohighlight">\(b\)</span>.</p></li>
 </ol>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.4</h2>
+    </header>
+<p>An adventurous dog strays from home, runs three blocks east, two blocks north, one block east, one block north, and two blocks west. Assuming that each block is about 100 m, how far from home and in what direction is the dog? Use a graphical method.</p>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.5</h2>
+    </header>
+<p>Assuming the +x-axis is horizontal and points to the right, resolve the vectors given in the following figure to their scalar components and express them in vector component form.
+<img src="C2-P2.5.png"  width="400"/></p>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.6</h2>
+    </header>
+<p>A sledge is being pulled by two horses on a flat terrain. The net force on the sledge can be expressed in the Cartesian coordinate system as vector <span class="math notranslate nohighlight">\(\vec{F} = (-2980.0~\hat{i} + 8200.0~\hat{j})\)</span> N, where <span class="math notranslate nohighlight">\(\hat{i}\)</span> and <span class="math notranslate nohighlight">\(\hat{j}\)</span> denote directions to the east and north, respectively. Find the magnitude and direction of the pull.</p>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.7</h2>
+    </header>
+<p>Given two displacement vectors <span class="math notranslate nohighlight">\(\vec{A} = (3.00~\hat{i} - 4.00~\hat{j} + 4.00~\hat{k})\)</span> m and <span class="math notranslate nohighlight">\(\vec{B} = (2.00~\hat{i} + 3.00~\hat{j} - 7.00~\hat{k})\)</span> m, find the displacements and their magnitudes for</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\vec{C} = \vec{A} + \vec{B}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{D} = 2\vec{A} - \vec{B}\)</span></p></li>
+</ol>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.8</h2>
+    </header>
+<p>A barge is pulled by the two tugboats shown in the following figure. One tugboat pulls on the barge with a force of magnitude <span class="math notranslate nohighlight">\(4000.0\)</span> units of force at <span class="math notranslate nohighlight">\(15^\circ\)</span> above the line AB (see the figure) and the other tugboat pulls on the barge with a force of magnitude <span class="math notranslate nohighlight">\(5000.0\)</span> units of force at <span class="math notranslate nohighlight">\(12^\circ\)</span> below the line AB.</p>
+<ol class="arabic simple">
+<li><p>Resolve the pulling forces to their scalar components and find the components of the resultant force pulling on the barge.</p></li>
+<li><p>What is the magnitude of the resultant pull?</p></li>
+<li><p>What is its direction relative to the line AB?</p></li>
+</ol>
+<img src="C2-P2.8.png"  width="300"/>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.9</h2>
+    </header>
+<p>Assuming the +x-axis is horizontal to the right for the vectors in the following figure, find the following scalar products</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\vec{A}\cdot\vec{C}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{A}\cdot\vec{F}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{D}\cdot\vec{C}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{A}\cdot(\vec{F} + 2\vec{C})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{i}\cdot\vec{B}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{j}\cdot\vec{B}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((3\hat{i} - \hat{j})\cdot\vec{B}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{B}\cdot\vec{B}\)</span></p></li>
+</ol>
+<img src="C2-P2.5.png"  width="400"/>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.10</h2>
+    </header>
+<p>Find the angle between vectors for</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\vec{D} = (-3.0~\hat{i} - 4.0~\hat{j})\)</span> m and <span class="math notranslate nohighlight">\(\vec{A} = (-3.0~\hat{i} + 4.0~\hat{j})\)</span> m.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{D} = (2.0~\hat{i} - 4.0~\hat{j} + \hat{k})\)</span> m and <span class="math notranslate nohighlight">\(\vec{B} = (-2.0~\hat{i} + 3.0~\hat{j} + 2.0~\hat{k})\)</span> m.</p></li>
+</ol>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.11</h2>
+    </header>
+<p>Find the angles that vector <span class="math notranslate nohighlight">\(\vec{D} = (2.0~\hat{i} - 4.0~\hat{j} + \hat{k})\)</span> m makes with the x-, y-, and z- axes.</p>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.12</h2>
+    </header>
+<p>What is the component of the force vector <span class="math notranslate nohighlight">\(\vec{G} = (3.0~\hat{i} + 4.0~\hat{j} + 10.0~\hat{k})\)</span> N along the force vector <span class="math notranslate nohighlight">\(\vec{H} = (1.0~\hat{i} + 4.0~\hat{j})\)</span> N?</p>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="check-you-answers">
 <h2>Check You Answers<a class="headerlink" href="#check-you-answers" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
@@ -500,7 +648,7 @@ If <span class="math notranslate nohighlight">\(c = 5.0\)</span> m and <span cla
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="output text_html"><div id="WlGNWRkISrjA" data-shufflequestions="False" data-shuffleanswers="True" data-numquestions="1000000"><style>
+<div class="output text_html"><div id="SZtQYXgEkoTV" data-shufflequestions="False" data-shuffleanswers="True" data-numquestions="1000000"><style>
 :root {
     --medium-slate-blue: #6f78ffff;
     --orange-pantone: #f75c03ff;
@@ -628,7 +776,7 @@ If <span class="math notranslate nohighlight">\(c = 5.0\)</span> m and <span cla
 }
 
 
-</style><script type="text/Javascript">questionsWlGNWRkISrjA=[{"question": "Problem C2.1: Length of adjacent side", "type": "multiple_choice", "answers": [{"answer": "7.4 cm", "correct": true, "feedback": "Correct."}, {"answer": "7.45 cm", "correct": false, "feedback": "False."}, {"answer": "55 cm", "correct": false, "feedback": "False."}, {"answer": "9.6 cm", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.2.1: Length of a", "type": "multiple_choice", "answers": [{"answer": "11.2 m", "correct": true, "feedback": "Correct."}, {"answer": "22.3 m", "correct": false, "feedback": "False."}, {"answer": "8.94 m", "correct": false, "feedback": "False."}, {"answer": "4.48 m", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.2.2: Length of c", "type": "multiple_choice", "answers": [{"answer": "5.01 m", "correct": true, "feedback": "Correct."}, {"answer": "20.0 m", "correct": false, "feedback": "False."}, {"answer": "4.48 m", "correct": false, "feedback": "False."}, {"answer": "8.94 m", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.2.3: Angle beta", "type": "multiple_choice", "answers": [{"answer": "1.11 rad", "correct": true, "feedback": "Correct."}, {"answer": "0.464 rad", "correct": false, "feedback": "False."}, {"answer": "63.4 rad", "correct": false, "feedback": "False."}, {"answer": "0.363 rad", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.3.1: Length of a", "type": "multiple_choice", "answers": [{"answer": "5.2 m", "correct": true, "feedback": "Correct."}, {"answer": "4.8 m", "correct": false, "feedback": "False."}, {"answer": "20 m", "correct": false, "feedback": "False."}, {"answer": "1.2 m", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.3.2: Length of b", "type": "multiple_choice", "answers": [{"answer": "1.3 m", "correct": true, "feedback": "Correct."}, {"answer": "5.2 m", "correct": false, "feedback": "False."}, {"answer": "4.8 m", "correct": false, "feedback": "False."}, {"answer": "1.4 m", "correct": false, "feedback": "False."}]}];
+</style><script type="text/Javascript">questionsSZtQYXgEkoTV=[{"question": "Problem C2.1: Length of adjacent side", "type": "multiple_choice", "answers": [{"answer": "7.4 cm", "correct": true, "feedback": "Correct."}, {"answer": "7.45 cm", "correct": false, "feedback": "False."}, {"answer": "55 cm", "correct": false, "feedback": "False."}, {"answer": "9.6 cm", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.2.1: Length of a", "type": "multiple_choice", "answers": [{"answer": "11.2 m", "correct": true, "feedback": "Correct."}, {"answer": "22.3 m", "correct": false, "feedback": "False."}, {"answer": "8.94 m", "correct": false, "feedback": "False."}, {"answer": "4.48 m", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.2.2: Length of c", "type": "multiple_choice", "answers": [{"answer": "5.01 m", "correct": true, "feedback": "Correct."}, {"answer": "20.0 m", "correct": false, "feedback": "False."}, {"answer": "4.48 m", "correct": false, "feedback": "False."}, {"answer": "8.94 m", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.2.3: Angle beta", "type": "multiple_choice", "answers": [{"answer": "1.11 rad", "correct": true, "feedback": "Correct."}, {"answer": "0.464 rad", "correct": false, "feedback": "False."}, {"answer": "63.4 rad", "correct": false, "feedback": "False."}, {"answer": "0.363 rad", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.3.1: Length of a", "type": "multiple_choice", "answers": [{"answer": "5.2 m", "correct": true, "feedback": "Correct."}, {"answer": "4.8 m", "correct": false, "feedback": "False."}, {"answer": "20 m", "correct": false, "feedback": "False."}, {"answer": "1.2 m", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.3.2: Length of b", "type": "multiple_choice", "answers": [{"answer": "1.3 m", "correct": true, "feedback": "Correct."}, {"answer": "5.2 m", "correct": false, "feedback": "False."}, {"answer": "4.8 m", "correct": false, "feedback": "False."}, {"answer": "1.4 m", "correct": false, "feedback": "False."}]}];
     //var mydiv=document.getElementById("testDIV");//console.log(mydiv);// Make a random ID
 function makeid(length) {
     var result           = [];
@@ -1082,7 +1230,7 @@ function show_questions (json, mydiv) {
 }
 
         {
-        show_questions(questionsWlGNWRkISrjA, WlGNWRkISrjA);
+        show_questions(questionsSZtQYXgEkoTV, SZtQYXgEkoTV);
         }
         </script>
         </div></div>
