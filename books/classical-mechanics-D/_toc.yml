@@ -26,3 +26,8 @@ parts:
   - file: Module-D4/work-energy
   - file: Module-D4/line-integrals
   - file: Module-D4/parameterization-line-integrals
+- caption: Module D5 - Basic Rotational Kinematics
+  chapters:
+  - file: Module-D5/basic-relations
+  - file: Module-D5/equations-kinematics
+  - file: Module-D5/problemsD5
