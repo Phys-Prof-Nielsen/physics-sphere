@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Introduction to Line Integrals &#8212; A Competency Approach to Classical Mechanics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -67,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -432,12 +431,12 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-line-integrals">
-<h1>Introduction to Line Integrals<a class="headerlink" href="#introduction-to-line-integrals" title="Permalink to this heading">#</a></h1>
+<h1>Introduction to Line Integrals<a class="headerlink" href="#introduction-to-line-integrals" title="Permalink to this headline">#</a></h1>
 <hr style="border:1px solid gray"> </hr><p>Sometimes we need new tools to expand our capabilities in physics. In this module, we will introduce the <strong>line integrals</strong> and <strong>partial derivatives</strong>. Both are items covered in a third semester of calculus. Our main objectives in this course can be addressed without these new concepts, but it is like eating cake without ice cream. My objective for introducing them to you is: it is essential that you have a complete understanding of line integrals and partial derivatives when you enter the next level of physics. However, being introduced to it in Calculus III often leaves students with just basic application skills but very little conceptual understanding and extensive practice. Hence, the comfort level when entering Modern Physics and Classical Mechanics and/or advanced engineering courses is low and reduces the learning outcome in those classes as focus shift from the physics to the mathematical approach. By introducing the concepts and basic application level now, it is my hope that you will gain more from your Calculus III exposure and be fluent in the skills as you enter your next level of physics or engineering.</p>
 <p>So just to be clear, Calculus III is not required for this class, and I will not expect mastering of these concepts from this class, but simply expose you to them. As with the rest of the material, we will continue using it and as we progress in the semester, we will gain more confidence and ability to use it.</p>
 <p>Line integrals is used to define and calculate mechanical work, but also used to evaulate electric and magnetic fields through Faraday’s and Ampere’s laws and are part of Maxwell’s equations.</p>
 <section id="youtube-videos">
-<h2>YouTube Videos<a class="headerlink" href="#youtube-videos" title="Permalink to this heading">#</a></h2>
+<h2>YouTube Videos<a class="headerlink" href="#youtube-videos" title="Permalink to this headline">#</a></h2>
 <p>There are a few YouTube videos accompanying this topic:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://youtu.be/pDqr_Zfu9ZE">Introduction to Line Integrals</a></p></li>
@@ -446,7 +445,7 @@ document.write(`
 </ul>
 <hr style="border:1px solid gray"> </hr></section>
 <section id="line-integral-of-vector-fields">
-<h2>Line Integral of Vector Fields<a class="headerlink" href="#line-integral-of-vector-fields" title="Permalink to this heading">#</a></h2>
+<h2>Line Integral of Vector Fields<a class="headerlink" href="#line-integral-of-vector-fields" title="Permalink to this headline">#</a></h2>
 <p>From Calculus I, we have learned how to calculate the integral of a function as it varies with a single variable (in physics, often position <span class="math notranslate nohighlight">\(x\)</span> or  time <span class="math notranslate nohighlight">\(t\)</span>). For the position variable, that implies we are integrating over a straight line segment. For example, the work done by a force <span class="math notranslate nohighlight">\(\vec{F}\)</span> acting on an object that is moving over a displacement <span class="math notranslate nohighlight">\(\Delta \vec{x} = \vec{x}_2 - \vec{x}_1\)</span> is:</p>
 <div class="math notranslate nohighlight">
 \[ W = \int_{x_{1}}^{x_{2}} \vec{F}\cdot d\vec{x} \]</div>
@@ -470,10 +469,10 @@ document.write(`
 <li><p>The scalar quantities are the vector components of <span class="math notranslate nohighlight">\(\vec{F}\)</span> and <span class="math notranslate nohighlight">\(d\vec{l}\)</span>, respectively, and <b>not</b> the magnitudes.</p></li>
 </ul>
 <hr style="border:1px solid gray"> </hr><section id="example-1">
-<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h3>
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">#</a></h3>
 <p>Consider your massive physics textbook with a mass of <span class="math notranslate nohighlight">\(2.18\)</span>~kg. Its original position is <span class="math notranslate nohighlight">\(\vec{r}_0 = (0,0)\)</span>. By applying a push force with a constant magnitude of <span class="math notranslate nohighlight">\(5.0\)</span> N, we first slide it along <span class="math notranslate nohighlight">\(+x\)</span> followed by motion along <span class="math notranslate nohighlight">\(+y\)</span> to a final destination of <span class="math notranslate nohighlight">\(\vec{r} = (0.3~\textrm{m},0.2~\textrm{m})\)</span>. Our path <span class="math notranslate nohighlight">\(L\)</span> then takes the shape of two sides of a rectangle. What is the work done by our applied force?</p>
 <section id="solution">
-<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h4>
+<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h4>
 <p>According to our definition of work</p>
 <div class="math notranslate nohighlight">
 \[ W =\int_L  \vec{F}\cdot d\vec{l} \]</div>
@@ -495,10 +494,10 @@ document.write(`
 <hr style="border:1px solid gray"> </hr></section>
 </section>
 <section id="example-2">
-<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this heading">#</a></h3>
+<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">#</a></h3>
 <p>Consider a force given by <span class="math notranslate nohighlight">\(\vec{F} = 5.0(xy\hat{i} + y^2\hat{j})\)</span> acting on an object. Over two experiments, the object moves from <span class="math notranslate nohighlight">\(\vec{r}_i = (0,0)\)</span> to <span class="math notranslate nohighlight">\(\vec{r}_f = (1,1)\)</span> along two paths: Path 1: along <span class="math notranslate nohighlight">\(+x\)</span> followed by <span class="math notranslate nohighlight">\(+y\)</span> and Path 2: along <span class="math notranslate nohighlight">\(+y\)</span> followed by <span class="math notranslate nohighlight">\(+x\)</span>.</p>
 <section id="id1">
-<h4>Solution<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<h4>Solution<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
 <p><strong>Path 1</strong>
 Writing out the line integral from definition and into component to gain experience. This step can be skipped as we gain experience:</p>
 <div class="math notranslate nohighlight">
