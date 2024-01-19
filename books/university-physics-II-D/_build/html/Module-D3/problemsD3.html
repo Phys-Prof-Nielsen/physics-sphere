@@ -564,15 +564,15 @@ document.write(`
 
 <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
-<span class="n">C</span> <span class="o">=</span> <span class="mf">8.00</span>
+<span class="n">C</span> <span class="o">=</span> <span class="mf">8.00E-6</span>
 <span class="n">U</span> <span class="o">=</span> <span class="mf">40.0</span>
 
 <span class="c1"># U = 0.5*C*V^2 </span>
 <span class="n">V</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;V&#39;</span><span class="p">)</span>
-<span class="n">eq</span> <span class="o">=</span> <span class="n">U</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">C</span><span class="o">*</span><span class="n">V</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">U</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">C</span><span class="o">*</span><span class="n">V</span><span class="o">**</span><span class="mi">2</span>
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">V</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Voltage applied to capacitor is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; V.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Voltage applied to capacitor is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; V.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -583,7 +583,7 @@ document.write(`
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Voltage applied to capacitor is 10.0000000000000 V.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Voltage applied to capacitor is 3162.27766016838 V.
 </pre></div>
 </div>
 </div>
