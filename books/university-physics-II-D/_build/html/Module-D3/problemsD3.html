@@ -407,14 +407,108 @@ document.write(`
     </header>
 <p>Calculate the voltage applied to a <span class="math notranslate nohighlight">\(2.00~\mu\)</span>F capacitor when it holds <span class="math notranslate nohighlight">\(3.10~\mu\)</span>C of charge.</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/8-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">C</span> <span class="o">=</span> <span class="mf">2.00E-6</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="mf">3.10E-6</span>
+
+<span class="n">V</span> <span class="o">=</span> <span class="n">Q</span><span class="o">/</span><span class="n">C</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The voltage applied is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">V</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The voltage applied is 1.55 V.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D3.2</h2>
     </header>
 <p>What capacitance is needed to store <span class="math notranslate nohighlight">\(3.00~\mu\)</span>C of charge at a voltage of 120 V?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/8-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">Q</span> <span class="o">=</span> <span class="mf">3.00E-6</span>
+<span class="n">V</span> <span class="o">=</span> <span class="mi">120</span>
+
+<span class="n">C</span> <span class="o">=</span> <span class="n">Q</span><span class="o">/</span><span class="n">V</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Capacitance needed is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">C</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; F.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Capacitance needed is 2.5000000000000002e-08 F.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D3.3</h2>
     </header>
 <p>How much energy is stored in an <span class="math notranslate nohighlight">\(8.00~\mu\)</span>F capacitor whose plates are at a potential difference of 6.00 V?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/8-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">C</span> <span class="o">=</span> <span class="mf">8.00E-6</span>
+<span class="n">V</span> <span class="o">=</span> <span class="mf">6.00</span>
+
+<span class="c1"># U = 0.5*Q^2/(2C) = 0.5*C*V^2</span>
+<span class="n">U</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">C</span><span class="o">*</span><span class="n">V</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Potential energy stored in capacitor is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">U</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Potential energy stored in capacitor is 0.000144 J.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D3.4</h2>
     </header>
 <p>A capacitor has a charge of <span class="math notranslate nohighlight">\(2.5~\mu\)</span>C when connected to a 6.0 V battery. How much energy is stored in this capacitor?</p>

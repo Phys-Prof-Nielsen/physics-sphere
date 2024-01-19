@@ -513,7 +513,7 @@ sensor systems such as a stud finder (finding studs hidden behind drywall, not c
 <span class="n">q</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)</span>
 <span class="n">C</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
 
-<span class="n">V</span> <span class="o">=</span> <span class="n">C</span><span class="o">*</span><span class="n">q</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">q</span><span class="o">/</span><span class="n">C</span>
 
 <span class="n">w</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">V</span><span class="p">,(</span><span class="n">q</span><span class="p">,</span><span class="n">q1</span><span class="p">,</span><span class="n">q2</span><span class="p">))</span> 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Work is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">w</span><span class="p">))</span>
@@ -527,7 +527,7 @@ sensor systems such as a stud finder (finding studs hidden behind drywall, not c
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Work is C*Q**2/2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Work is Q**2/(2*C)
 </pre></div>
 </div>
 </div>
