@@ -31,3 +31,7 @@ parts:
   - file: Module-D5/basic-relations
   - file: Module-D5/equations-kinematics
   - file: Module-D5/problemsD5
+- caption: Module D6 - Momentum and Impulse - Rotational Motion
+  chapters:
+  - file: Module-D6/angular-momentum
+  - file: Module-D6/translational-rotational

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>D4.2 Introduction to Line Integrals &#8212; A Competency Approach to Classical Mechanics</title>
+    <title>D6.2 A Note on Combined Translational and Rotational Angular Speed &#8212; A Competency Approach to Classical Mechanics</title>
   
   
   
@@ -63,11 +63,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D4/line-integrals';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D6/translational-rotational';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="D4.3 Parameterization of Line Integrals" href="parameterization-line-integrals.html" />
-    <link rel="prev" title="D4.1 Work-Energy Theorem" href="work-energy.html" />
+    <link rel="prev" title="D6.1 Angular Momentum" href="angular-momentum.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,10 +173,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-D3/problemsD3.html">D3.2 Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D4 - Energy and Work - Linear Motion</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="work-energy.html">D4.1 Work-Energy Theorem</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">D4.2 Introduction to Line Integrals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="parameterization-line-integrals.html">D4.3 Parameterization of Line Integrals</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D4/work-energy.html">D4.1 Work-Energy Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D4/line-integrals.html">D4.2 Introduction to Line Integrals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D4/parameterization-line-integrals.html">D4.3 Parameterization of Line Integrals</a></li>
 
 
 </ul>
@@ -188,9 +187,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-D5/problemsD5.html">D5.3 Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D6 - Momentum and Impulse - Rotational Motion</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Module-D6/angular-momentum.html">D6.1 Angular Momentum</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-D6/translational-rotational.html">D6.2 A Note on Combined Translational and Rotational Angular Speed</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="angular-momentum.html">D6.1 Angular Momentum</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">D6.2 A Note on Combined Translational and Rotational Angular Speed</a></li>
 </ul>
 
     </div>
@@ -293,7 +292,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-D4/line-integrals.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-D6/translational-rotational.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -323,7 +322,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-D4/line-integrals.ipynb" target="_blank"
+      <li><a href="../_sources/Module-D6/translational-rotational.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -405,7 +404,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>D4.2 Introduction to Line Integrals</h1>
+    <h1>D6.2 A Note on Combined Translational and Rotational Angular Speed</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -415,8 +414,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d4-2-1-motivation">D4.2.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d4-2-2-line-integral-of-vector-fields">D4.2.2 Line Integral of Vector Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-2-1-motivation">D6.2.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-2-2-superposition-of-velocities">D6.2.2 Superposition of Velocities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pure-translational-motion">Pure Translational Motion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pure-rotational-motion">Pure Rotational Motion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-motion">Combined Motion</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -428,117 +432,63 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="d4-2-introduction-to-line-integrals">
-<h1>D4.2 Introduction to Line Integrals<a class="headerlink" href="#d4-2-introduction-to-line-integrals" title="Permalink to this heading">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d4-2-1-motivation">
-<h2>D4.2.1 Motivation<a class="headerlink" href="#d4-2-1-motivation" title="Permalink to this heading">#</a></h2>
-<p>These are notes I typically proivide an <em>University Physics</em> courses, but it may be useful to you as well as a refresher on how to calculate the work along a path. If the path consists of nice straight segments then it is relatively straight forward to calculate the line integral in Cartesian coordinates. On the other hand, if the path does not consists of straight segments, then we must employ more advanced technique as we will see here.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="d6-2-a-note-on-combined-translational-and-rotational-angular-speed">
+<h1>D6.2 A Note on Combined Translational and Rotational Angular Speed<a class="headerlink" href="#d6-2-a-note-on-combined-translational-and-rotational-angular-speed" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d6-2-1-motivation">
+<h2>D6.2.1 Motivation<a class="headerlink" href="#d6-2-1-motivation" title="Permalink to this heading">#</a></h2>
+<p>We are familiar with the following relationship</p>
+<div class="math notranslate nohighlight">
+\[ V_t = r\Omega \]</div>
+<p>which relates the <strong>tangential speed</strong> of a given location on an object to its distance from the center of rotation (<span class="math notranslate nohighlight">\(r\)</span>) and angular speed.</p>
+<p>We may also have noticed that we se the <strong>exact</strong> same relationship for the <strong>linear speed of the center of mass</strong>, despite that fact that the center of mass is not located at the edge. Shouldn’t we be using <span class="math notranslate nohighlight">\(r = 0\)</span> in that case? The answer is no and may not be intuitive, and these notes are to aid some understanding on that puzzle.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="d4-2-2-line-integral-of-vector-fields">
-<h2>D4.2.2 Line Integral of Vector Fields<a class="headerlink" href="#d4-2-2-line-integral-of-vector-fields" title="Permalink to this heading">#</a></h2>
-<p>From Calculus I, we have learned how to calculate the integral of a function as it varies with a single variable (in physics, often position <span class="math notranslate nohighlight">\(x\)</span> or  time <span class="math notranslate nohighlight">\(t\)</span>). For the position variable, that implies we are integrating over a straight line segment. For example, the work done by a force <span class="math notranslate nohighlight">\(\vec{F}\)</span> acting on an object that is moving over a displacement <span class="math notranslate nohighlight">\(\Delta \vec{x} = \vec{x}_2 - \vec{x}_1\)</span> is:</p>
+<section id="d6-2-2-superposition-of-velocities">
+<h2>D6.2.2 Superposition of Velocities<a class="headerlink" href="#d6-2-2-superposition-of-velocities" title="Permalink to this heading">#</a></h2>
+<p>Let us consider the figure below. <a class="reference external" href="https://youtu.be/8fhPLowbfgs">There is also a video on this topic</a>.</p>
+<img src="D6-fig1.png" width="800">
+<section id="pure-translational-motion">
+<h3>Pure Translational Motion<a class="headerlink" href="#pure-translational-motion" title="Permalink to this heading">#</a></h3>
+<p>Consider the top left sketch in the figure above. If the (solid) object is undergoing <strong>pure translational motion</strong> all points on the object will more at the same velocity, including the center of mass point.</p>
+</section>
+<section id="pure-rotational-motion">
+<h3>Pure Rotational Motion<a class="headerlink" href="#pure-rotational-motion" title="Permalink to this heading">#</a></h3>
+<p>Consider the top middle sketch. If the object is undergoing <strong>pure rotational motion</strong> about the center of mass point, then the <strong>magnitude</strong> of any tangential velocity vectors are given by</p>
 <div class="math notranslate nohighlight">
-\[ w = \int_{x_{1}}^{x_{2}} \vec{f}\cdot d\vec{x} \]</div>
-<p>or with the dot product written in geometric form using magnitudes of the vectors and relativive orientation:</p>
-<div class="math notranslate nohighlight">
-\[ w = \int_{x_{1}}^{x_{2}} f\cos\theta dx \]</div>
-<p>where <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(dx\)</span> are the respective magnitudes and <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between the two vectors. What this integral represent is actually a line integral over a vector field for a 1D line segment.</p>
-<p>In general, the line integral is defined as a scaled vector projection of a vector <span class="math notranslate nohighlight">\(\vec{f}\)</span> along some arbitrary path <span class="math notranslate nohighlight">\(L\)</span>. If an infinitesimal <strong>directional path length</strong> of <span class="math notranslate nohighlight">\(L\)</span> is <span class="math notranslate nohighlight">\(d\vec{l}\)</span>, then the line integral (or work) is:</p>
-<div class="math notranslate nohighlight">
-\[ w = \int_L \vec{f}\cdot d\vec{l} \]</div>
-<p>where <span class="math notranslate nohighlight">\(L\)</span> simply implies that we are integrating along a path described by <span class="math notranslate nohighlight">\(L\)</span>.</p>
-<p>Since we are not familiar with integrating vectors, we can write the dot product out in two ways. First, using the <strong>components</strong> of the two vectors (assuming we are in cartesian coordinates), later, we will go outside the cartesian room and see how big the world really is):</p>
-<div class="math notranslate nohighlight">
-\[ w = \int_L (f_{x}dx + f_{y}dy + f_{z}dz)\]</div>
-<p>We can consider this a sum of integrals along each cartesian direction and specify the limits of integration:</p>
-<div class="math notranslate nohighlight">
-\[ W = \int_{x_{1}}^{x_{2}} f_{x}dx + \int_{y_{1}}^{y_{2}} f_{y}dy + \int_{z_{1}}^{z_{2}} f_{z}dz\]</div>
-<p>We note the following:</p>
-<ul class="simple">
-<li><p>We converted our integrals involving vectors into three 1D scalar integrals. Yah for us!</p></li>
-<li><p>The scalar quantities are the vector components of <span class="math notranslate nohighlight">\(\vec{f}\)</span> and <span class="math notranslate nohighlight">\(d\vec{l}\)</span>, respectively, and <b>not</b> the magnitudes.</p></li>
-</ul>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
-<header>
-<h3> Example 1</h3>
-    </header>
-<p>Consider a massive physics textbook with a mass of <span class="math notranslate nohighlight">\(2.18\)</span> kg. Its original position is <span class="math notranslate nohighlight">\(\vec{r}_0 = (0,0)\)</span>. By applying a push force with a constant magnitude of <span class="math notranslate nohighlight">\(5.0\)</span> N, we first slide it along <span class="math notranslate nohighlight">\(+x\)</span> followed by motion along <span class="math notranslate nohighlight">\(+y\)</span> to a final destination of <span class="math notranslate nohighlight">\(\vec{r} = (0.3~\textrm{m},0.2~\textrm{m})\)</span>. Our path <span class="math notranslate nohighlight">\(L\)</span> then takes the shape of two sides of a rectangle. What is the work done by our applied force?</p>
-<p><strong>Solution</strong></p>
-<p>According to our definition of work</p>
-<div class="math notranslate nohighlight">
-\[ w =\int_L  \vec{f}\cdot d\vec{l} \]</div>
-<p>we can split this into vector component form:</p>
-<div class="math notranslate nohighlight">
-\[ w =\int_L (f_{x}dx + f_{y}dy) \]</div>
-<p>and re-write it as two integrals with the explicit limits:</p>
-<div class="math notranslate nohighlight">
-\[ w =\int_{x_{1}}^{x_{2}} f_{x}dx + \int_{y_{1}}^{y_{2}} f_{y}dy \]</div>
-<p>Inserting the numbers provided, we get</p>
-<div class="math notranslate nohighlight">
-\[ w = \int_{0}^{0.3} (5.0)dx + \int_{0}^{0.2} (5.0)dy \]</div>
-<div class="math notranslate nohighlight">
-\[  = [(5.0)x]_{0}^{0.3} + [(5.0)y]_{0}^{0.2}\]</div>
-<p>and our final result is</p>
-<div class="math notranslate nohighlight">
-\[ w = +2.5~\textrm{J} \]</div>
+\[ v_t = r\Omega \]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the radial distance of the point from the center of mass and <span class="math notranslate nohighlight">\(\omega\)</span> is the angular speed of the object.</p>
+</section>
+<section id="combined-motion">
+<h3>Combined Motion<a class="headerlink" href="#combined-motion" title="Permalink to this heading">#</a></h3>
+<p>For the combined motion we simply add the velocity vectors as shown in the top left and simplified in the bottom sketches. We now see a more complicated pattern, but we notice that the speed of the center of mass is not zero and the speed of the top tangential point is greater than <span class="math notranslate nohighlight">\(R\Omega\)</span>. The dashed line in the bottom sketch provides the answer or a hint.</p>
+<div class="alert alert-success">
+<p><strong>The point of rotation is the center of mass point but instead the contact point between the object and the surface it is rolling on</strong>.</p>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
-<header>
-<h3> Example 2</h3>
-    </header>
-<p>Consider a force given by <span class="math notranslate nohighlight">\(\vec{f} = 5.0(xy\hat{i} + y^2\hat{j})\)</span> acting on an object. Over two experiments, the object moves from <span class="math notranslate nohighlight">\(\vec{r}_i = (0,0)\)</span> to <span class="math notranslate nohighlight">\(\vec{r}_f = (1,1)\)</span> along two paths: Path 1: along <span class="math notranslate nohighlight">\(+x\)</span> followed by <span class="math notranslate nohighlight">\(+y\)</span> and Path 2: along <span class="math notranslate nohighlight">\(+y\)</span> followed by <span class="math notranslate nohighlight">\(+x\)</span>.</p>
-<p><strong>Solution</strong></p>
-<p><strong>Path 1</strong></p>
-<p>Writing out the line integral from definition and into component to gain experience. This step can be skipped as we gain experience:</p>
+<p>We can improve this image by considering the figure below, where we have drawn perpendicular lines from all velocity vectors: <strong>lines drawn from the point of rotation to any velocity vector will always be perpendicular</strong>.</p>
+<img src="D6-fig2.png" width="400">
+<p>It should now be evident that the point of rotation is at the contact point and not the center of mass point. This implies that when using</p>
 <div class="math notranslate nohighlight">
-\[ w_1 = \int_L  \vec{f}\cdot d\vec{l} \]</div>
+\[ v_t = r\Omega \]</div>
+<p>the distance from the contact point to the center of mass point is <span class="math notranslate nohighlight">\(R\)</span> and the tangential speed of the center of mass is</p>
 <div class="math notranslate nohighlight">
-\[ w = \int_L (f_{x}dx + f_{y}dy) \]</div>
+\[ V_{CM} = R\Omega\]</div>
+<p>while the tangential speed of the top point is</p>
 <div class="math notranslate nohighlight">
-\[ w = \int_{x_{1}}^{x_{2}} f_{x}dx ~+~ \int_{y_{1}}^{y_{2}} f_{y}dy \]</div>
-<p>It is no evident that we have broken our path <em>L</em> into two segments (integrals): one segment along the x-axis and a second segment along the y-axis.</p>
-<p>Now, we have to be careful as the <span class="math notranslate nohighlight">\(x\)</span>-componet of the force also depends on <span class="math notranslate nohighlight">\(y\)</span>. Hence, in the integral we must be aware of the <span class="math notranslate nohighlight">\(y\)</span>-value as we integrate <strong>along</strong> the <span class="math notranslate nohighlight">\(x\)</span>-direction. We notice, that the <span class="math notranslate nohighlight">\(y\)</span>-value will be <strong>constant</strong>. With that in mind, we can write it as</p>
+\[ V_{top} = 2R\Omega\]</div>
+<p>and the tangential speed of the contact point is</p>
 <div class="math notranslate nohighlight">
-\[ w_1 =\int_{x_{1}=0, y = 0}^{x_{2} = 1, y =0} 5.0xydx ~+~ \int_{y_{1} = 0, x =1}^{y_{2} = 1, x = 1} 5.0y^2dy \]</div>
-<p>Since <span class="math notranslate nohighlight">\(y\)</span> is constant and equal to zero in the first term, we get</p>
-<div class="math notranslate nohighlight">
-\[ w_1 = 0 ~+~ \frac{5}{3} \]</div>
-<p>and the final answer is</p>
-<div class="math notranslate nohighlight">
-\[ w_1 = + \frac{5}{3}~\textrm{J} \]</div>
-<p><strong>Path 2</strong></p>
-<p>Similarly for Path 2:
-$<span class="math notranslate nohighlight">\( w_2 =\int_{x_{1}=0, y = 1}^{x_{2} = 1, y =1} 5.0xydx ~+~ \int_{y_{1} = 0, x = 0}^{y_{2} = 1, x = 0} 5.0y^2dy \)</span>$</p>
-<div class="math notranslate nohighlight">
-\[ = \frac{5}{2} ~+~ \frac{5}{3} \]</div>
-<p>and the final answer is</p>
-<div class="math notranslate nohighlight">
-\[ w_2 = \frac{25}{6}~\textrm{J} \]</div>
-<p>We notice that the amount of work required for each path is different, which is a characteristic of a <strong>non-conservative</strong> force.</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-info">
-    <b>IMPORTANT</b>
-<p>We notice in the above example, that the work done by the force in moving the object from point <span class="math notranslate nohighlight">\(A\)</span> to point <span class="math notranslate nohighlight">\(B\)</span> depended on the chosen path. Such forces are referred to as <strong>non-conservative forces</strong>. Forces where the work in going from point <span class="math notranslate nohighlight">\(A\)</span> to point <span class="math notranslate nohighlight">\(B\)</span> does <strong>not</strong> depend on the chosen path are referred to as <b>conservative forces</b>. Conservative forces are responsible for transferring energy from one form to another within a system and associated with potential energy functions (examples: gravity and spring forces), whereas non-conservative forces are responsible for transferring energy into or out of a system (examples: pushing/pull forces and friction).</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
-    <b> Box 1 </b><br>
-<p>Consider a force given by <span class="math notranslate nohighlight">\(\vec{f} = 5.0[x^2y^2\hat{i} + (x^2 + y^2)\hat{j}]\)</span> acting on an object. Over two experiments, the object moves from <span class="math notranslate nohighlight">\(\vec{r}_i = (0,0)\)</span> to <span class="math notranslate nohighlight">\(\vec{r}_f = (1~\textrm{m},1~\textrm{m})\)</span> along two paths: Path 1: along <span class="math notranslate nohighlight">\(+x\)</span> followed by <span class="math notranslate nohighlight">\(+y\)</span> and Path 2: along <span class="math notranslate nohighlight">\(+y\)</span> followed by <span class="math notranslate nohighlight">\(+x\)</span>. What is the work done by this force along the two different paths? Comment on your result.</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
-    <b> Box 2 </b><br>
-<p>Consider a force given by <span class="math notranslate nohighlight">\(\vec{f} = 5.0(xy\hat{i} + y^2\hat{j})\)</span> acting on an object. The object moves from <span class="math notranslate nohighlight">\(\vec{r}_i = (0,0)\)</span> to <span class="math notranslate nohighlight">\(\vec{r}_f = (1~\textrm{m},1~\textrm{m})\)</span> along <span class="math notranslate nohighlight">\(+x\)</span> followed by <span class="math notranslate nohighlight">\(+y\)</span>. Then we bring it back to its original position along <span class="math notranslate nohighlight">\(-x\)</span> and <span class="math notranslate nohighlight">\(-y\)</span>. What is the work done? Is the applied force conservative or non-conservative? Explain.</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><p>In this last example, we integrated along a path  where the start and end points were the same location. This belongs to a special group of line integrals and we write them as:</p>
-<div class="math notranslate nohighlight">
-\[ W = \oint_L \vec{f}\cdot d\vec{l} \]</div>
-<p>where the circle indicates a <strong>closed path</strong> <span class="math notranslate nohighlight">\(L\)</span>.</p>
-<div class="alert alert-info">
-<p>The message from our previous info Box was really important, so let us repeat it here <b>and</b> add to it:</p>
-<p>Review from Physics I: We notice in the above example, that the work done by the force in moving the object from point <span class="math notranslate nohighlight">\(A\)</span> to point <span class="math notranslate nohighlight">\(B\)</span> depended on the chosen path. Such forces are referred to as <strong>non-conservative forces</strong>. Forces where the work in going from point <span class="math notranslate nohighlight">\(A\)</span> to point <span class="math notranslate nohighlight">\(B\)</span> does <strong>not</strong> depend on the chosen path are referred to as <strong>conservative forces</strong>. Conservative forces are responsible for transferring energy from one form to another within a system and associated with potential energy functions (examples: gravity and spring forces), whereas non-conservative forces are responsible for transferring energy into or out of a system (examples: pushing/pull forces and friction).</p>
-<p>Another way of defining a conservative force: <b>a conservative force is characterized by doing zero work along a closed path</p>
-</div>
-<p>This result has a very important consequence as it allows us to define a scalar function known as the <strong>potential energy</strong>. I hope you remember this from Physics I! If not, you may have realized that we are in the process of doing a mixture of introducing new calculus and refreshing concepts from Physics I.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+\[ V_{contact} = 0\]</div>
+<div class="alert alert-success">
+<p>The later result explains why it is <strong>static</strong> friction responsible for rotational motion.</p>
+</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 1</b><br>
+<p>Consider a solid disk of mass <span class="math notranslate nohighlight">\(25.0\)</span> kg and radius <span class="math notranslate nohighlight">\(0.25\)</span> m. The disk is on the xy-plane and rolling such that the CM moves in the +x direction. At some instant, the x-coordinate of the CM is <span class="math notranslate nohighlight">\(x = 3.0\)</span> m and the CM velocity is <span class="math notranslate nohighlight">\(+4.5\)</span> m/s.</p>
+<ol class="arabic simple">
+<li><p>The orbital angular momentum relative to the origin?</p></li>
+<li><p>The sping orbital angular momentum?</p></li>
+<li><p>The total angular momentum?</p></li>
+</ol>
+</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -554,7 +504,7 @@ $<span class="math notranslate nohighlight">\( w_2 =\int_{x_{1}=0, y = 1}^{x_{2}
         },
         kernelOptions: {
             name: "python3",
-            path: "./Module-D4"
+            path: "./Module-D6"
         },
         predefinedOutput: true
     }
@@ -573,22 +523,13 @@ $<span class="math notranslate nohighlight">\( w_2 =\int_{x_{1}=0, y = 1}^{x_{2}
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="work-energy.html"
+       href="angular-momentum.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">D4.1 Work-Energy Theorem</p>
+        <p class="prev-next-title">D6.1 Angular Momentum</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="parameterization-line-integrals.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">D4.3 Parameterization of Line Integrals</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -608,8 +549,13 @@ $<span class="math notranslate nohighlight">\( w_2 =\int_{x_{1}=0, y = 1}^{x_{2}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d4-2-1-motivation">D4.2.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d4-2-2-line-integral-of-vector-fields">D4.2.2 Line Integral of Vector Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-2-1-motivation">D6.2.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-2-2-superposition-of-velocities">D6.2.2 Superposition of Velocities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pure-translational-motion">Pure Translational Motion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pure-rotational-motion">Pure Rotational Motion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-motion">Combined Motion</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
