@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>D1.2 Kinematics - Differential Form &#8212; A Competency Approach to Classical Mechanics</title>
+    <title>D6.3 Angular Impulse &#8212; A Competency Approach to Classical Mechanics</title>
   
   
   
@@ -63,11 +63,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D1/differential-form';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D6/angular-impulse';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="D1.3 Kinematics - Integral Form" href="integral-form.html" />
-    <link rel="prev" title="D1.1 Kinematics Definitions" href="definitions.html" />
+    <link rel="prev" title="D6.2 A Note on Combined Translational and Rotational Angular Speed" href="translational-rotational.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -159,10 +158,10 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D1 - Kinematics in Cartesian Coordinates</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="definitions.html">D1.1 Kinematics Definitions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">D1.2 Kinematics - Differential Form</a></li>
-<li class="toctree-l1"><a class="reference internal" href="integral-form.html">D1.3 Kinematics - Integral Form</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/definitions.html">D1.1 Kinematics Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/differential-form.html">D1.2 Kinematics - Differential Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/integral-form.html">D1.3 Kinematics - Integral Form</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D2 - Linear Momentum and Impulse</span></p>
 <ul class="nav bd-sidenav">
@@ -188,10 +187,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-D5/problemsD5.html">D5.3 Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D6 - Momentum and Impulse - Rotational Motion</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Module-D6/angular-momentum.html">D6.1 Angular Momentum</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-D6/translational-rotational.html">D6.2 A Note on Combined Translational and Rotational Angular Speed</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-D6/angular-impulse.html">D6.3 Angular Impulse</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="angular-momentum.html">D6.1 Angular Momentum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translational-rotational.html">D6.2 A Note on Combined Translational and Rotational Angular Speed</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">D6.3 Angular Impulse</a></li>
 </ul>
 
     </div>
@@ -294,7 +293,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-D1/differential-form.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-D6/angular-impulse.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -324,7 +323,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-D1/differential-form.ipynb" target="_blank"
+      <li><a href="../_sources/Module-D6/angular-impulse.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -406,7 +405,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>D1.2 Kinematics - Differential Form</h1>
+    <h1>D6.3 Angular Impulse</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -416,11 +415,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-1-motivation">D1.2.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-2-difference-vs-differential">D1.2.2 Difference vs. Differential</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-3-velocity">D1.2.3 Velocity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-4-acceleration">D1.2.4 Acceleration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-5-applications">D1.2.5 Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-3-1-motivation">D6.3.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-3-2-definition">D6.3.2 Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-3-3-angular-momentum-impulse-theorem-newton-s-2nd-law">D6.3.3 Angular Momentum - Impulse Theorem: Newton’s 2nd Law</a></li>
 </ul>
             </nav>
         </div>
@@ -432,118 +429,46 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="d1-2-kinematics-differential-form">
-<h1>D1.2 Kinematics - Differential Form<a class="headerlink" href="#d1-2-kinematics-differential-form" title="Permalink to this heading">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d1-2-1-motivation">
-<h2>D1.2.1 Motivation<a class="headerlink" href="#d1-2-1-motivation" title="Permalink to this heading">#</a></h2>
-<p>We probably already know that Newton’s second law in fact is a second-order differential equation. As we progress further into the abyss of physics we start to realize that differentials start to play a more significant role, and physics starts to be described through differential calculus and differential geometry. So, let us take a quick review of the differential in 1D.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="d6-3-angular-impulse">
+<h1>D6.3 Angular Impulse<a class="headerlink" href="#d6-3-angular-impulse" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d6-3-1-motivation">
+<h2>D6.3.1 Motivation<a class="headerlink" href="#d6-3-1-motivation" title="Permalink to this heading">#</a></h2>
+<p>Just like linear impulse was essential to studying linear motion, the angular impulse is an important concept when applying Newton’s laws for rotational motion.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="d1-2-2-difference-vs-differential">
-<h2>D1.2.2 Difference vs. Differential<a class="headerlink" href="#d1-2-2-difference-vs-differential" title="Permalink to this heading">#</a></h2>
-<p>We define the gab on the x-axis between two data data points as <span class="math notranslate nohighlight">\(\Delta x\)</span>. For example, we can say that <span class="math notranslate nohighlight">\(\Delta x = x_2 - x_1\)</span>. Similarly, the gab between to data points on the y-axis is <span class="math notranslate nohighlight">\(\Delta y = y_2 - y_1\)</span>. We call these gabs for <strong>differences</strong> and use the symbol <span class="math notranslate nohighlight">\(\Delta\)</span> to denote a difference: read as “a difference in _____”.</p>
+<section id="d6-3-2-definition">
+<h2>D6.3.2 Definition<a class="headerlink" href="#d6-3-2-definition" title="Permalink to this heading">#</a></h2>
+<p>The <strong>angular momentum transfer</strong> experienced by a point particle due to a <strong>single rotational force</strong> acting upon the particle through some time interval is</p>
 <div class="alert alert-success">
-<p>In all pratical applications, the difference is a number. It can be a small number, it can be a large number, there is no restrictions on it (unless you are dividing by it, then it can’t be zero of course).</p>
+<div class="math notranslate nohighlight">
+\[ \vec{j} = \int_{t_1}^{t_2}\vec{\tau} dt\]</div>
 </div>
-<p>Since differences are associated with numbers, we can create the ratio of differences (provided the denominator is
-not zero). For example the ratio between the differences in some dependent function <span class="math notranslate nohighlight">\(f\)</span> and its independent variable <span class="math notranslate nohighlight">\(x\)</span> is what we traditionally call the slope:</p>
+<p>where <span class="math notranslate nohighlight">\(\vec{\tau}\)</span> is single rotational force. Rotational force is more commonly known as <strong>torque</strong>.</p>
+<p>Similarly, we can write for the CM</p>
 <div class="math notranslate nohighlight">
-\[ \textrm{slope} = \frac{\Delta f}{\Delta x} \]</div>
-<p>The <strong>differential</strong> is very similar to the difference, but in some sense we can say that it is the connection between
-algebra and calculus in terms of change. We will consider a small change in x. We will avoid what we mean by small
-for now, but understand that it is in fact a number and give it the symbol <span class="math notranslate nohighlight">\(dx\)</span>.</p>
-<div class="alert alert-success">
-<p>While <span class="math notranslate nohighlight">\(dx\)</span> is considered a number, it is more of a mathematical concept as its meaning is truly a small number, in fact, so small that we will later let it approach zero, but then again…in math, what is a small number?</p>
-</div>
-<p>What implications does it have for <span class="math notranslate nohighlight">\(df\)</span> vs. <span class="math notranslate nohighlight">\(\Delta f\)</span>? Let us find out. Let us use a figure to investigate
-properties of <span class="math notranslate nohighlight">\(dx\)</span> and let us just say that <span class="math notranslate nohighlight">\(dx = \Delta x\)</span>.</p>
-<img src="D1.2-fig1.png"  width="400"/>
-<p>The red line in the figure is the tangent line to the point <span class="math notranslate nohighlight">\([x, f(x)]\)</span> and is a straight line described by (remember how to write the equation of a straight line by using rise = slope times run?)</p>
+\[ \vec{J} = \int_{t_1}^{t_2}\vec{\mathcal{T}} dt\]</div>
+</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="d6-3-3-angular-momentum-impulse-theorem-newton-s-2nd-law">
+<h2>D6.3.3 Angular Momentum - Impulse Theorem: Newton’s 2nd Law<a class="headerlink" href="#d6-3-3-angular-momentum-impulse-theorem-newton-s-2nd-law" title="Permalink to this heading">#</a></h2>
+<p>In analogy to linear motion, the <strong>net angular momentum transfer</strong> is the net impulse:</p>
 <div class="math notranslate nohighlight">
-\[y_2 - y_1 = a(x_2 - x_1) \tag{1}\]</div>
-<p>Since we know the slope, <span class="math notranslate nohighlight">\(a\)</span>, is the derivative, and we want to use grown-up notation <span class="math notranslate nohighlight">\(y \rightarrow f\)</span> and consider small differences (aka differentials), we write Equation (1) as</p>
+\[ \Delta\vec{l} = \int_{t_1}^{t_2}\vec{\tau}_{net}dt \]</div>
+<p>or in differential form</p>
 <div class="math notranslate nohighlight">
-\[ df = \frac{df}{dx}dx \]</div>
-<p>Here, <span class="math notranslate nohighlight">\(df\)</span> is the rise of the red, straight line and <span class="math notranslate nohighlight">\(dx\)</span> is its run. We have used the derivative <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span> as the slope of the red line. We keep in mind, that this <strong>must</strong> be the slope evalutated at the point x.</p>
-<p>We notice from the figure that <span class="math notranslate nohighlight">\(df \neq \Delta f\)</span>.</p>
-<p>We use the term <strong>differential</strong> for <span class="math notranslate nohighlight">\(df\)</span> and the term <strong>difference</strong> for <span class="math notranslate nohighlight">\(\Delta f\)</span>. Only when <span class="math notranslate nohighlight">\(dx\)</span>
-approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)</span>. Key point: both <span class="math notranslate nohighlight">\(dx\)</span> and <span class="math notranslate nohighlight">\(df\)</span> can be assigned values and we can create the ratio (provided
-<span class="math notranslate nohighlight">\(dx \neq 0\)</span>):</p>
-<div class="math notranslate nohighlight">
-\[ \frac{df}{dx} \]</div>
-<p>which we can manipulate just like other ratios.</p>
-<p><strong>NOTE: although this ratio looks like the derivative, it is not! The derivative is not a ratio, but an operator, which should be read as “derivative of <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span>”</strong>. We could write the derivative better as</p>
-<div class="math notranslate nohighlight">
-\[ \frac{d}{dx}[f] \]</div>
-<p>to clearly distinguish it from the ratio of differentials.</p>
-<div class="alert alert-danger">
-<p>We often write the derivative as <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span> and the ratio of differentials as <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span> , and we must use the context of the problem/situation to find out if we are talking about one or the other. One is an operator while the other is simply a ratio between numbers (small numbers). This confusion disappears if we use the Lagrange notation for the derivative.</p>
-</div>
-<p>To find the differential of a function, we can use the above as a definition. To avoid the confusion between ratio of differentials and the derivative, it may be more suitable to utilize the Lagrange notation:</p>
-<div class="alert alert-success">
-<p>The differential of a function <span class="math notranslate nohighlight">\(f\)</span> with respect to its independent variable <span class="math notranslate nohighlight">\(x\)</span> is:</p>
-<div class="math notranslate nohighlight">
-\[ df = f'(x)dx \]</div>
-</div>
+\[ d\vec{l} = \vec{\tau}_{net}dt \]</div>
+<p>This is known as <strong>Newton’s 2nd law for rotational motion</strong>.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 1</b><br>
-<p>The area of a circle is <span class="math notranslate nohighlight">\(A(r) = \pi r^2\)</span>. If we change the radius by a small amount <span class="math notranslate nohighlight">\(dr\)</span>, by how much will the area change?</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="cell tag_hide-input tag_hide-output docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-
-<span class="n">r</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span>
-
-<span class="c1"># dA = A&#39;*dr</span>
-<span class="n">A_prime</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The area will change by: dA = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">A_prime</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;dr&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The area will change by: dA = 2*pi*rdr
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-</section>
-<section id="d1-2-3-velocity">
-<h2>D1.2.3 Velocity<a class="headerlink" href="#d1-2-3-velocity" title="Permalink to this heading">#</a></h2>
-<p>We can define the <strong>instantaneous</strong> velocity in terms of a <strong>differential equation</strong> through the position and time differentials</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ d\vec{r} = \vec{v}dt \]</div>
-</div>
-<p>If we consider differences instead, then the velocity <strong>must</strong> be constant across the time interval (or consider the average velocity), and the above expression becomes a well-known kinematics equation from University Physics I:</p>
-<div class="math notranslate nohighlight">
-\[ \Delta \vec{r} = \vec{v}_{av}\Delta t \]</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="d1-2-4-acceleration">
-<h2>D1.2.4 Acceleration<a class="headerlink" href="#d1-2-4-acceleration" title="Permalink to this heading">#</a></h2>
-<p>Similarly, we define the <strong>instantaneous</strong> acceleration as</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ d\vec{v} = \vec{a}dt \]</div>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="d1-2-5-applications">
-<h2>D1.2.5 Applications<a class="headerlink" href="#d1-2-5-applications" title="Permalink to this heading">#</a></h2>
-<p>We will utilize the differentials quite a bit in this course. For example, when we explore variable mass problems it is often convenient to solve the problems in differential form. Another example is how we obtain vectors under coordinate transformations. In the next section, we will see how we progress from the differential equations to the integral equations and you will realize you have been using differentials all along. The most infamous example is the “u substitution” used to integrate composite functions.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<p>A net torque of <span class="math notranslate nohighlight">\(+125\)</span> Nm is applied to a disk-shaped wheel. If the wheel has a mass of <span class="math notranslate nohighlight">\(25\)</span> kg, radius <span class="math notranslate nohighlight">\(0.20\)</span> m, and at <span class="math notranslate nohighlight">\(t = 0\)</span> s is rotating at a rate of <span class="math notranslate nohighlight">\(12.0\)</span> rad/s, what is its angular speed at <span class="math notranslate nohighlight">\(t = 3.0\)</span> s?</p>
+</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 2</b><br>
+<p>A net torque of <span class="math notranslate nohighlight">\(\tau_z = +125t + 0.2t^2\)</span> Nm is applied to a disk-shaped wheel over the time interval <span class="math notranslate nohighlight">\(t = [0,5]\)</span> s. The wheel has a mass of <span class="math notranslate nohighlight">\(25\)</span> kg, radius <span class="math notranslate nohighlight">\(0.20\)</span> m, and the initial angular velocity component is <span class="math notranslate nohighlight">\(\Omega_z = 8.0\)</span> rad/s.</p>
+<ol class="arabic simple">
+<li><p>Make a plot of the torque vs. time.</p></li>
+<li><p>What does the area bounded by the graph and the horizontal t-axis at <span class="math notranslate nohighlight">\(\tau_z = 0\)</span> represents?</p></li>
+<li><p>What is the angular impulse?</p></li>
+<li><p>What is the angular velocity component at <span class="math notranslate nohighlight">\(t = 3\)</span> s?</p></li>
+</ol>
+</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -559,7 +484,7 @@ approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)<
         },
         kernelOptions: {
             name: "python3",
-            path: "./Module-D1"
+            path: "./Module-D6"
         },
         predefinedOutput: true
     }
@@ -578,22 +503,13 @@ approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)<
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="definitions.html"
+       href="translational-rotational.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">D1.1 Kinematics Definitions</p>
+        <p class="prev-next-title">D6.2 A Note on Combined Translational and Rotational Angular Speed</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="integral-form.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">D1.3 Kinematics - Integral Form</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -613,11 +529,9 @@ approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)<
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-1-motivation">D1.2.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-2-difference-vs-differential">D1.2.2 Difference vs. Differential</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-3-velocity">D1.2.3 Velocity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-4-acceleration">D1.2.4 Acceleration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d1-2-5-applications">D1.2.5 Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-3-1-motivation">D6.3.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-3-2-definition">D6.3.2 Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-3-3-angular-momentum-impulse-theorem-newton-s-2nd-law">D6.3.3 Angular Momentum - Impulse Theorem: Newton’s 2nd Law</a></li>
 </ul>
   </nav></div>
 

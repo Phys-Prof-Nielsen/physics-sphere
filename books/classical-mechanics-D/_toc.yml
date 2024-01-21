@@ -35,3 +35,4 @@ parts:
   chapters:
   - file: Module-D6/angular-momentum
   - file: Module-D6/translational-rotational
+  - file: Module-D6/angular-impulse
