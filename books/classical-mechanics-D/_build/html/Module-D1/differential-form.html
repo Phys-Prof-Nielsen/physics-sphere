@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>D1.2 Kinematics - Differential Form &#8212; A Competency Approach to Classical Mechanics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="D1.3 Kinematics - Integral Form" href="integral-form.html" />
     <link rel="prev" title="D1.1 Kinematics Definitions" href="definitions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -426,13 +427,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="d1-2-kinematics-differential-form">
-<h1>D1.2 Kinematics - Differential Form<a class="headerlink" href="#d1-2-kinematics-differential-form" title="Permalink to this headline">#</a></h1>
+<h1>D1.2 Kinematics - Differential Form<a class="headerlink" href="#d1-2-kinematics-differential-form" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d1-2-1-motivation">
-<h2>D1.2.1 Motivation<a class="headerlink" href="#d1-2-1-motivation" title="Permalink to this headline">#</a></h2>
+<h2>D1.2.1 Motivation<a class="headerlink" href="#d1-2-1-motivation" title="Permalink to this heading">#</a></h2>
 <p>We probably already know that Newton’s second law in fact is a second-order differential equation. As we progress further into the abyss of physics we start to realize that differentials start to play a more significant role, and physics starts to be described through differential calculus and differential geometry. So, let us take a quick review of the differential in 1D.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="d1-2-2-difference-vs-differential">
-<h2>D1.2.2 Difference vs. Differential<a class="headerlink" href="#d1-2-2-difference-vs-differential" title="Permalink to this headline">#</a></h2>
+<h2>D1.2.2 Difference vs. Differential<a class="headerlink" href="#d1-2-2-difference-vs-differential" title="Permalink to this heading">#</a></h2>
 <p>We define the gab on the x-axis between two data data points as <span class="math notranslate nohighlight">\(\Delta x\)</span>. For example, we can say that <span class="math notranslate nohighlight">\(\Delta x = x_2 - x_1\)</span>. Similarly, the gab between to data points on the y-axis is <span class="math notranslate nohighlight">\(\Delta y = y_2 - y_1\)</span>. We call these gabs for <strong>differences</strong> and use the symbol <span class="math notranslate nohighlight">\(\Delta\)</span> to denote a difference: read as “a difference in _____”.</p>
 <div class="alert alert-success">
 <p>In all pratical applications, the difference is a number. It can be a small number, it can be a large number, there is no restrictions on it (unless you are dividing by it, then it can’t be zero of course).</p>
@@ -515,7 +516,7 @@ approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)<
 </div>
 </section>
 <section id="d1-2-3-velocity">
-<h2>D1.2.3 Velocity<a class="headerlink" href="#d1-2-3-velocity" title="Permalink to this headline">#</a></h2>
+<h2>D1.2.3 Velocity<a class="headerlink" href="#d1-2-3-velocity" title="Permalink to this heading">#</a></h2>
 <p>We can define the <strong>instantaneous</strong> velocity in terms of a <strong>differential equation</strong> through the position and time differentials</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -526,7 +527,7 @@ approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)<
 \[ \Delta \vec{r} = \vec{v}_{av}\Delta t \]</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="d1-2-4-acceleration">
-<h2>D1.2.4 Acceleration<a class="headerlink" href="#d1-2-4-acceleration" title="Permalink to this headline">#</a></h2>
+<h2>D1.2.4 Acceleration<a class="headerlink" href="#d1-2-4-acceleration" title="Permalink to this heading">#</a></h2>
 <p>Similarly, we define the <strong>instantaneous</strong> acceleration as</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -534,7 +535,7 @@ approaches zero is <span class="math notranslate nohighlight">\(\Delta f = df\)<
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="d1-2-5-applications">
-<h2>D1.2.5 Applications<a class="headerlink" href="#d1-2-5-applications" title="Permalink to this headline">#</a></h2>
+<h2>D1.2.5 Applications<a class="headerlink" href="#d1-2-5-applications" title="Permalink to this heading">#</a></h2>
 <p>We will utilize the differentials quite a bit in this course. For example, when we explore variable mass problems it is often convenient to solve the problems in differential form. Another example is how we obtain vectors under coordinate transformations. In the next section, we will see how we progress from the differential equations to the integral equations and you will realize you have been using differentials all along. The most infamous example is the “u substitution” used to integrate composite functions.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
