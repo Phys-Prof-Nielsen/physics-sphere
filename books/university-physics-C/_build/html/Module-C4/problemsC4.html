@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>C4.X Problems &#8212; A Competency Approach to Introductory Physics</title>
+    <title>C4.5 Problems &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -188,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Newtons-laws.html">C4.2 Newton’s Laws: Point Particle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Fundamental-interactions.html">C4.3 Fundamental Interactions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solving-strategy.html">C4.4 Newton’s Laws: Solving Strategy</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">C4.X Problems</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">C4.5 Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C5 - Equations of Kinematics - Average</span></p>
 <ul class="nav bd-sidenav">
@@ -425,7 +425,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>C4.X Problems</h1>
+    <h1>C4.5 Problems</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -456,53 +456,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="c4-x-problems">
-<h1>C4.X Problems<a class="headerlink" href="#c4-x-problems" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="c4-5-problems">
+<h1>C4.5 Problems<a class="headerlink" href="#c4-5-problems" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C4.1</h2>
     </header>
 <p><b>Soccer Kick</b>: A soccer player kicks a ball initially at rest with a force of 300.0 N at an angle of 35 degrees above the horizontal. If the contact time between the foot and the ball is 0.020 seconds, calculate the impulse applied to the ball.</p>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Solution C4.1</p>
-<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
-<p><strong>Solving Methodology</strong>
-We will be using the definition of impulse</p>
-<div class="math notranslate nohighlight">
-\[ \vec{j} = \vec{f}\Delta t \]</div>
-<p>to find the impulse due to the kicking force.</p>
-<p><strong>Solution</strong></p>
-<p>Using a standard xy-coordinate system with the force vector having positive components, we can write</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \vec{j} =
-\begin{bmatrix}
- f_x\Delta t
- \\
- f_y\Delta t 
-\end{bmatrix} =
-\begin{bmatrix}
- f\cos\theta\Delta t
- \\
- f\cos\theta\Delta t
-\end{bmatrix} \end{split}\]</div>
-<p>We can now insert our numbers into a calculator or use the Jupyter notebook build-in Python to our advantage. The calculations are below this cell.</p>
-<p>To proper significant figures, our answer is</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \vec{j} =
-\begin{bmatrix}
- 4.9~\textrm{kgm/s}
- \\
- 3.4~\textrm{kgm/s} 
-\end{bmatrix} 
-\end{split}\]</div>
-<p>If we want to provide the answer in same format as the problem, then we use the Pythagorean theorem to obtain the magnitude of the impulse followed by trigonometry to obtain the direction.</p>
-<div class="math notranslate nohighlight">
-\[ j = \sqrt{j_x^2 + j_y^2} \]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[ \theta = \tan^{-1}\left({\frac{j_y}{j_x}}\right) \]</div>
-<p>Calculations are in cell below.</p>
-<p>The impulse has a magnitude of 6.0 kgm/s and is directed at an angle 35 degrees above the +x-axis. The latter we could directly infer from the problem: since the initial velocity of the ball is zero, the final velocity must be in the same direction as the applied force.</p>
-</div>
-</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -510,7 +468,9 @@ We will be using the definition of impulse</p>
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">f</span> <span class="o">=</span> <span class="mf">300.0</span>
 <span class="n">angle</span> <span class="o">=</span> <span class="mf">35.</span>
@@ -519,7 +479,9 @@ We will be using the definition of impulse</p>
 <span class="n">jx</span> <span class="o">=</span> <span class="n">f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
 <span class="n">jy</span> <span class="o">=</span> <span class="n">f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">jx</span><span class="p">,</span><span class="n">jy</span><span class="p">)</span>
+<span class="n">j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">jx</span><span class="p">,</span> <span class="n">jy</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The impulse is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; kgm/s&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -530,12 +492,13 @@ We will be using the definition of impulse</p>
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.914912265733951 3.4414586181062767
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The impulse is [4.91491227 3.44145862] kgm/s
 </pre></div>
 </div>
 </div>
 </details>
 </div>
+<p>Alternatively, expressed in magnitude and diretion:</p>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -543,19 +506,22 @@ We will be using the definition of impulse</p>
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">f</span> <span class="o">=</span> <span class="mf">300.0</span>
-<span class="n">angle</span> <span class="o">=</span> <span class="mf">35.</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mf">35.0</span><span class="p">)</span>
 <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.020</span>
 
-<span class="n">jx</span> <span class="o">=</span> <span class="n">f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
-<span class="n">jy</span> <span class="o">=</span> <span class="n">f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
+<span class="n">jx</span> <span class="o">=</span> <span class="n">f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
+<span class="n">jy</span> <span class="o">=</span> <span class="n">f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
 
 <span class="n">j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">jx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">jy</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">jy</span><span class="o">/</span><span class="n">jx</span><span class="p">)</span><span class="o">*</span><span class="mf">180.</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">theta</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the impulse is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; kgm/s&#39;</span><span class="p">)</span>
+<span class="c1"># First quadrant</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The direction of the impulse is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; CCW from the +x-axis&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -566,7 +532,8 @@ We will be using the definition of impulse</p>
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.0 35.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The magnitude of the impulse is 6.0 kgm/s
+The direction of the impulse is 35.0 CCW from the +x-axis
 </pre></div>
 </div>
 </div>
@@ -576,21 +543,6 @@ We will be using the definition of impulse</p>
     </header>
 <p>A 0.50 kg particle is subjected to a net force given by <span class="math notranslate nohighlight">\(\vec{F}_{net} = (3.0\textrm{N})\hat{i} + (41~\textrm{N})\hat{j}\)</span> for 2.00 seconds. Calculate the
 impulse experienced by the particle during this time.</p>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Solution C4.2</p>
-<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
-<p><strong>Solving Methodology</strong>
-We will be using the definition of impulse with the net force</p>
-<div class="math notranslate nohighlight">
-\[ \vec{j} = \vec{f}_{net}\Delta t \]</div>
-<p>to find the net impulse.</p>
-<p><strong>Solution</strong></p>
-<p>We simply perform vector multiplication by a scalar by multiplying both components with the elapsed time (see cell below for the calculations in Symbolic Python):</p>
-<p>The impulse is</p>
-<div class="math notranslate nohighlight">
-\[ \vec{j} = (6.0~\textrm{kgm/s})~\hat{i} + (82~\textrm{kgm/s})~\hat{j} \]</div>
-</div>
-</div>
 <div class="cell tag_hide-output tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -598,14 +550,19 @@ We will be using the definition of impulse with the net force</p>
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fx</span> <span class="o">=</span> <span class="mf">3.0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">fx</span> <span class="o">=</span> <span class="mf">3.0</span>
 <span class="n">fy</span> <span class="o">=</span> <span class="mi">41</span>
 <span class="n">dt</span> <span class="o">=</span> <span class="mf">2.00</span>
 
 <span class="n">jx</span> <span class="o">=</span> <span class="n">fx</span><span class="o">*</span><span class="n">dt</span>
 <span class="n">jy</span> <span class="o">=</span> <span class="n">fy</span><span class="o">*</span><span class="n">dt</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">jx</span><span class="p">,</span> <span class="n">jy</span><span class="p">)</span>
+<span class="n">j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">jx</span><span class="p">,</span> <span class="n">jy</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The impulse is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; kgm/s&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -616,7 +573,7 @@ We will be using the definition of impulse with the net force</p>
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.0 82.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The impulse is [ 6. 82.] kgm/s
 </pre></div>
 </div>
 </div>
@@ -625,27 +582,6 @@ We will be using the definition of impulse with the net force</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C4.3</h2>
     </header>
 <p><b>Air Hockey Collision</b>: On an air hockey table, a 0.20 kg puck moving eastward at 5.0 m/s collides with a stationary 0.10 kg puck. After the collision, the first puck moves westward at 2.0 m/s. Calculate the final velocity of the second puck.</p>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Solution C4.3</p>
-<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
-<p><strong>Solving Methodology</strong>
-The nature of air hockey is to provide a near-frictionless surface. Hence, we can to a good approximation say that the net externation force on the system of pucks is zero and momentum is conserved.</p>
-<div class="math notranslate nohighlight">
-\[ \vec{P}_i = \vec{P}_f \]</div>
-<p>This approach will allow us to solve for the one unknown variable of interest.</p>
-<p><strong>Solution</strong></p>
-<p>Let eastward (or x) be positive:</p>
-<div class="math notranslate nohighlight">
-\[ p_{1_x,i} + p_{2_x,i} = p_{1_x,f} + p_{2_x,f}\]</div>
-<p>The second puck is stationary before the collision, and we have</p>
-<div class="math notranslate nohighlight">
-\[ m_{1}v_{1_x,i} = m_{1}v_{1_x,f} + m_{2}v_{2_x,f} \]</div>
-<p>Plug in values and solve for <span class="math notranslate nohighlight">\(v_{2_x,f}\)</span>. If we solve the equation using Symbolic Python (see cell below), it is convenient to cast the equation in the following form:</p>
-<div class="math notranslate nohighlight">
-\[ 0 = m_{1}v_{1_x,f} + m_{2}v_{2_x,f} - m_{1}v_{1_x,i}\]</div>
-<p>The second particle moves with a speed of <span class="math notranslate nohighlight">\(14\)</span> m/s eastward after the collision.</p>
-</div>
-</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -653,7 +589,8 @@ The nature of air hockey is to provide a near-frictionless surface. Hence, we ca
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
 <span class="n">m1</span> <span class="o">=</span> <span class="mf">0.20</span>
 <span class="n">m2</span> <span class="o">=</span> <span class="mf">0.10</span>
@@ -662,11 +599,14 @@ The nature of air hockey is to provide a near-frictionless surface. Hence, we ca
 
 <span class="n">v2f</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v2f&#39;</span><span class="p">)</span>
 
+<span class="c1">#conservation of momentum</span>
+<span class="c1"># p1_i + p2_i = p1_f + p2_f</span>
+
 <span class="n">eq</span> <span class="o">=</span> <span class="n">m1</span><span class="o">*</span><span class="n">v1f</span> <span class="o">+</span> <span class="n">m2</span><span class="o">*</span><span class="n">v2f</span> <span class="o">-</span> <span class="n">m1</span><span class="o">*</span><span class="n">v1i</span>
 
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The speed of the particle after the collision is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -677,7 +617,7 @@ The nature of air hockey is to provide a near-frictionless surface. Hence, we ca
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[14.0000000000000]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The speed of the particle after the collision is 14.0000000000000 m/s
 </pre></div>
 </div>
 </div>
@@ -685,39 +625,7 @@ The nature of air hockey is to provide a near-frictionless surface. Hence, we ca
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="problem-c4-4">
 <h2>Problem C4.4<a class="headerlink" href="#problem-c4-4" title="Permalink to this headline">#</a></h2>
-<p><b>Pool Table Collision</b>: On a pool table, a cue-ball (mass 0.17 kg) moving at 2.0 m/s in the east direction collides with a stationary 9-ball (mass 0.16 kg). After the collision, the cue-ball moves at an angle of 30.0 degrees north of east, while the 9-ball moves at an angle of 60.0 degrees south of east. Calculate the final velocity of each ball.</p>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Solution C4.4</p>
-<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
-<p><strong>Solving Methodology</strong>
-While a pool table is not even close to be frictionless, if we can consider the external forces small during the collisions compared to the collision force. This allows us to apply conservation of momentum to estimate the velocities right before and after the collision.</p>
-<div class="math notranslate nohighlight">
-\[ \vec{P}_i = \vec{P}_f \]</div>
-<p>We have two unknowns here, but the 2D nature of the problem implies that conservation of momentum will give is two equations. This approach will allow us to solve for the unknown variables of interest.</p>
-<p><strong>Solution</strong></p>
-<p>If we let the plane of the table be our xy-plane with eastward aligned with +x, we can consider the x- and y-components of the momentum to be conserved.</p>
-<div class="math notranslate nohighlight">
-\[ m_{1}v_{1_x,i} + m_{2}v_{2_x,i} = m_{1}v_{1_x,f} + m_{2}v_{2_x,f} \]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[ m_{1}v_{1_y,i} + m_{2}v_{2_y,i} = m_{1}v_{1_y,f} + m_{2}v_{2_y,f} \]</div>
-<p>The velocity components can be determined using trigonometry.</p>
-<p>Inserting the velocity components in terms of magnitude and direction:</p>
-<div class="math notranslate nohighlight">
-\[ m_{1}v_{1,i} + 0 = m_{1}v_{1,f}\cos\theta_1 + m_{2}v_{2,f}\cos\theta_2 \]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[ 0 + 0 = m_{1}v_{1,f}\sin\theta_1 - m_{2}v_{2,f}\sin\theta_2 \]</div>
-<p>We now have two equations and two unknowns. Choose your favorite method to solve the system of equations. I chose Symbolic Python (see cell below) and will cast the equations into a more suitable form:</p>
-<div class="math notranslate nohighlight">
-\[ 0 = m_{1}v_{1,f}\cos\theta_1 + m_{2}v_{2,f}\cos\theta_2 - m_{1}v_{1,i}\]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[ 0 = m_{1}v_{1,f}\sin\theta_1 - m_{2}v_{2,f}\sin\theta_2 \]</div>
-<p>where we in the last step recognized that the 9-ball moves with a component in the negative y-direction.</p>
-<p>After the collision the velocities are: 1.7 m/s in a direction 30.0 degrees north of east (cue ball) and 1.1 m/s in a direction 60.0 degrees south of east (9-ball).</p>
-</div>
-</div>
+<p><b>Pool Table Collision</b>: On a pool table, a cue-ball (mass 0.17 kg) moving at 2.0 m/s in the east direction collides with a stationary 9-ball (mass 0.16 kg). After the collision, the cue-ball moves at an angle of 30.0 degrees north of east, while the 9-ball moves at an angle of 60.0 degrees south of east. Calculate the final speed of each ball.</p>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -725,24 +633,26 @@ While a pool table is not even close to be frictionless, if we can consider the 
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">m1</span> <span class="o">=</span> <span class="mf">0.17</span>
 <span class="n">m2</span> <span class="o">=</span> <span class="mf">0.16</span>
 <span class="n">v1i</span> <span class="o">=</span> <span class="mf">2.0</span>
-<span class="n">theta1</span> <span class="o">=</span> <span class="mf">30.0</span>
-<span class="n">theta2</span> <span class="o">=</span> <span class="mf">60.0</span>
+<span class="n">theta1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mf">30.0</span><span class="p">)</span>
+<span class="n">theta2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mf">60.0</span><span class="p">)</span>
 
 <span class="n">v1f</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v1f&#39;</span><span class="p">)</span>
 <span class="n">v2f</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v2f&#39;</span><span class="p">)</span>
 
-<span class="n">eq1</span> <span class="o">=</span> <span class="n">m1</span><span class="o">*</span><span class="n">v1f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span><span class="p">)</span> <span class="o">+</span> <span class="n">m2</span><span class="o">*</span><span class="n">v2f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span><span class="p">)</span> <span class="o">-</span> <span class="n">m1</span><span class="o">*</span><span class="n">v1i</span>
-<span class="n">eq2</span> <span class="o">=</span> <span class="n">m1</span><span class="o">*</span><span class="n">v1f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span><span class="p">)</span> <span class="o">-</span> <span class="n">m2</span><span class="o">*</span><span class="n">v2f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span><span class="p">)</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">m1</span><span class="o">*</span><span class="n">v1f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta1</span><span class="p">)</span> <span class="o">+</span> <span class="n">m2</span><span class="o">*</span><span class="n">v2f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span> <span class="o">-</span> <span class="n">m1</span><span class="o">*</span><span class="n">v1i</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">m1</span><span class="o">*</span><span class="n">v1f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta1</span><span class="p">)</span> <span class="o">-</span> <span class="n">m2</span><span class="o">*</span><span class="n">v2f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span>
 
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">v1f</span><span class="p">,</span><span class="n">v2f</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;After the collision the cue moves at &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">v1f</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; m/s. The 9-ball moves at &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">v2f</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -753,7 +663,7 @@ While a pool table is not even close to be frictionless, if we can consider the 
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{v1f: 1.73205080756887, v2f: 1.06250000000000}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>After the collision the cue moves at 1.73205080756887 m/s. The 9-ball moves at 1.06250000000000 m/s
 </pre></div>
 </div>
 </div>
@@ -854,7 +764,8 @@ Next, we assume conservation of momentum and ignore relativistic effects to dete
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m2</span> <span class="o">=</span> <span class="mf">1.67E-27</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="n">m2</span> <span class="o">=</span> <span class="mf">1.67E-27</span>
 <span class="n">c</span> <span class="o">=</span> <span class="mf">2.998E8</span>
 
 <span class="n">Pi</span> <span class="o">=</span> <span class="n">m2</span><span class="o">*</span><span class="mf">0.9</span><span class="o">*</span><span class="n">c</span>
@@ -882,7 +793,8 @@ Next, we assume conservation of momentum and ignore relativistic effects to dete
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">c</span> <span class="o">=</span> <span class="mf">2.998E8</span>
@@ -923,7 +835,8 @@ Next, we assume conservation of momentum and ignore relativistic effects to dete
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m1</span> <span class="o">=</span> <span class="mf">1.67E-27</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="n">m1</span> <span class="o">=</span> <span class="mf">1.67E-27</span>
 <span class="n">m2</span> <span class="o">=</span> <span class="mf">1.67E-27</span>
 
 <span class="n">c</span> <span class="o">=</span> <span class="mf">2.998E8</span>
@@ -967,7 +880,8 @@ Next, we assume conservation of momentum and ignore relativistic effects to dete
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
 <span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">)</span>
 <span class="n">fn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fn&#39;</span><span class="p">)</span>
@@ -1011,7 +925,8 @@ Next, we assume conservation of momentum and ignore relativistic effects to dete
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1">#declare constants given</span>
@@ -1080,7 +995,8 @@ Direction is 77.00319343226477 CW from the -x axis
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1">#declare constants given</span>
@@ -1144,7 +1060,8 @@ Part 2: {fp: 111.042567981967, fn: 235.423595923570}
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">)</span>
@@ -1192,7 +1109,8 @@ Part 2: {fp: 111.042567981967, fn: 235.423595923570}
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">)</span>
@@ -1232,7 +1150,8 @@ Part 2: {fp: 111.042567981967, fn: 235.423595923570}
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">fp</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fp&#39;</span><span class="p">)</span>
@@ -1276,7 +1195,8 @@ Part 2: {fp: 111.042567981967, fn: 235.423595923570}
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="mf">70.0</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span>
@@ -1305,9 +1225,6 @@ Part 2: {fp: 111.042567981967, fn: 235.423595923570}
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Normal force = 826.700000000000
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </details>
 </div>
@@ -1328,7 +1245,8 @@ Part 2: {fp: 111.042567981967, fn: 235.423595923570}
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="mf">52.0</span>
@@ -1389,7 +1307,8 @@ Coefficient of static friction = 0.267949192431123
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
@@ -1426,9 +1345,7 @@ Coefficient of static friction = 0.267949192431123
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acceleration = 0.737392217207614
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Angle of slope = 5.710593137499643
+Angle of slope = 5.710593137499643
 </pre></div>
 </div>
 </div>
