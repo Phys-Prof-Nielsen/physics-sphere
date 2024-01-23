@@ -473,11 +473,11 @@ document.write(`
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">f</span> <span class="o">=</span> <span class="mf">300.0</span>
-<span class="n">angle</span> <span class="o">=</span> <span class="mf">35.</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mf">35.0</span><span class="p">)</span>
 <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.020</span>
 
-<span class="n">jx</span> <span class="o">=</span> <span class="n">f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
-<span class="n">jy</span> <span class="o">=</span> <span class="n">f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
+<span class="n">jx</span> <span class="o">=</span> <span class="n">f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
+<span class="n">jy</span> <span class="o">=</span> <span class="n">f</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
 
 <span class="n">j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">jx</span><span class="p">,</span> <span class="n">jy</span><span class="p">])</span>
 
@@ -1346,7 +1346,9 @@ Coefficient of static friction = 0.267949192431123
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acceleration = 0.737392217207614
-Angle of slope = 5.710593137499643
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Angle of slope = 5.710593137499643
 </pre></div>
 </div>
 </div>
