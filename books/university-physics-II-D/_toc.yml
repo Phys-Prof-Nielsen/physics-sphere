@@ -26,3 +26,10 @@ parts:
   chapters:
   - file: Module-D3/capacitance
   - file: Module-D3/problemsD3
+- caption: Module D4 - Simple DC Circuit
+  chapters:
+  - file: Module-D4/current
+  - file: Module-D4/resistance
+  - file: Module-D4/ohms-law
+  - file: Module-D4/electromotive-force
+  - file: Module-D4/problemsD4 
