@@ -492,13 +492,13 @@ document.write(`
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">R</span> <span class="o">=</span> <span class="mf">2.0E-3</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">2.0E-3</span>
 <span class="n">v_D</span> <span class="o">=</span> <span class="mf">2.5E-4</span>
 
 <span class="n">q</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.602E-19</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mf">6.00E28</span>
 
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">D</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
 
 <span class="n">I</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">v_D</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The current is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; A&#39;</span><span class="p">)</span>
@@ -517,7 +517,7 @@ document.write(`
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The current is 30.19698858630509 A
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The current is 7.549247146576272 A
  
 The elapsed time is 40000.0 s
 </pre></div>
