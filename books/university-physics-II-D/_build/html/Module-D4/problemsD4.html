@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>D4.5 Problems &#8212; A Competency Approach to University Physics II</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="D4.4 Electromotive Force and Circuit" href="electromotive-force.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -411,19 +410,52 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="d4-5-problems">
-<h1>D4.5 Problems<a class="headerlink" href="#d4-5-problems" title="Permalink to this heading">#</a></h1>
+<h1>D4.5 Problems<a class="headerlink" href="#d4-5-problems" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D4.1</h2>
     </header>
 <p>How many electrons flow through a point in a wire in <span class="math notranslate nohighlight">\(3.00\)</span> s if there is a constant current of <span class="math notranslate nohighlight">\(I = 4.00\)</span> A?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create your own solution script here</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.602E-19</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">3.00</span>
+<span class="n">I</span> <span class="o">=</span> <span class="mf">4.00</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">)</span>
+<span class="n">dQ</span> <span class="o">=</span> <span class="n">N</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">I</span> <span class="o">-</span> <span class="n">dQ</span><span class="o">/</span><span class="n">dt</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of electrons: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of electrons: 7.49063670411985e+19
 </pre></div>
 </div>
 </div>
@@ -433,14 +465,46 @@ document.write(`
     </header>
 <p>The quantity of charge through a conductor is modeled as <span class="math notranslate nohighlight">\(Q = (4.00~\textrm{C/s}^4)~t^4 - (1.00~\textrm{C/s})~t + (6.00~\textrm{mC})\)</span>. What is the current at time <span class="math notranslate nohighlight">\(t = 3.00\)</span> s?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create your own solution script here</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="mf">4.00</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">4</span> <span class="o">-</span> <span class="mf">1.00</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="mf">6.00E-3</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Current function: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">I</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="n">t3</span> <span class="o">=</span> <span class="mf">3.00</span>
+<span class="n">I3</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span><span class="n">t3</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The current at t = 3.00 s is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">I3</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; A&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current function: 16.0*t**3 - 1.0
+ 
+The current at t = 3.00 s is 431.000000000000 A
 </pre></div>
 </div>
 </div>
@@ -450,14 +514,43 @@ document.write(`
     </header>
 <p>The charge on a capacitor in a circuit is modeled as <span class="math notranslate nohighlight">\(Q(t) = Q_{max}\cos(\omega t + \phi)\)</span>. What is the current through the circuit as a function of time?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create your own solution script here</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">Q_max</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;Q_max&#39;</span><span class="p">)</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>  
+<span class="n">phi</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;phi&#39;</span><span class="p">)</span>
+
+<span class="n">Q</span> <span class="o">=</span> <span class="n">Q_max</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">)</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Current function: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">I</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current function: -Q_max*w*sin(phi + t*w)
 </pre></div>
 </div>
 </div>
@@ -467,14 +560,41 @@ document.write(`
     </header>
 <p>The current through a conductor is modeled as <span class="math notranslate nohighlight">\(I = I_{m}\sin(2\pi[60~\textrm{Hz}]~t)\)</span>. Write an equation for the charge as a function of time.</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create your own solution script here</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">I_m</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;I_m&#39;</span><span class="p">)</span>
+
+<span class="n">I</span> <span class="o">=</span> <span class="n">I_m</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="n">t</span> <span class="p">)</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Current function: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current function: -I_m*cos(120*pi*t)/(120*pi)
 </pre></div>
 </div>
 </div>
@@ -484,14 +604,39 @@ document.write(`
     </header>
 <p>What current flows through the bulb of a <span class="math notranslate nohighlight">\(3.00\)</span> V flashlight when its hot resistance is <span class="math notranslate nohighlight">\(3.60~\Omega\)</span>?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create your own solution script here</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">dV</span> <span class="o">=</span> <span class="mf">3.00</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">3.60</span>
+
+<span class="n">I</span> <span class="o">=</span> <span class="n">dV</span><span class="o">/</span><span class="n">R</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The current is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; A&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The current is 0.8333333333333333 A
 </pre></div>
 </div>
 </div>
@@ -501,28 +646,280 @@ document.write(`
     </header>
 <p>What is the resistance of a <span class="math notranslate nohighlight">\(20.0\)</span> m long piece of 12-gauge copper wire having a <span class="math notranslate nohighlight">\(2.053\)</span> mm diameter? HINT: look up the resistivity of copper.</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create your own solution script here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f 
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">2.053E-3</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mf">1.68E-8</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">D</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="n">rho</span><span class="o">*</span><span class="n">dx</span><span class="o">/</span><span class="n">A</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The resistance is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">R</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; Ohm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The resistance is 0.10150127491685025 Ohm
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D4.7</h2>
     </header>
 <p>A resistor rated at <span class="math notranslate nohighlight">\(250.0~\textrm{k}\Omega\)</span> is connected across two D cell batteries (each <span class="math notranslate nohighlight">\(1.50\)</span> V) in series, with a total voltage of <span class="math notranslate nohighlight">\(3.00\)</span> V. The manufacturer advertises that their resistors are within <span class="math notranslate nohighlight">\(5\%\)</span> of the rated value. What are the possible minimum current and maximum current through the resistor?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create your own solution script here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="mf">250.0E3</span>
+<span class="n">dV</span> <span class="o">=</span> <span class="mf">3.00</span>
+<span class="n">err</span> <span class="o">=</span> <span class="mf">0.005</span>
+
+<span class="n">R_max</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">err</span><span class="p">)</span>
+<span class="n">R_min</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">err</span><span class="p">)</span>
+
+<span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">dV</span><span class="o">/</span><span class="n">R_max</span><span class="p">,</span> <span class="n">dV</span><span class="o">/</span><span class="n">R_min</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Maximum current is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">I</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39; A&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Minimum current is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">I</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39; A&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Maximum current is 1.2060301507537688e-05 A
+Minimum current is 1.1940298507462688e-05 A
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D4.8</h2>
     </header>
 <p>A <span class="math notranslate nohighlight">\(20.00\)</span> V battery is used to supply current to a <span class="math notranslate nohighlight">\(10.0~\textrm{k}\Omega\)</span> resistor. Assume the voltage drop across any wires used for connections is negligible.</p>
 <ol class="arabic simple">
 <li><p>What is the current through the resistor?</p></li>
 <li><p>What is the power dissipated by the resistor?</p></li>
-<li><p>What is the power input from the battery, assuming all the electrical power is dissipated by the resistor? 4. What happens to the energy dissipated by the resistor?</p></li>
+<li><p>What is the power input from the battery, assuming all the electrical power is dissipated by the resistor?</p></li>
+<li><p>What happens to the energy dissipated by the resistor?</p></li>
 </ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create your own solution script here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">EMF</span> <span class="o">=</span> <span class="mf">20.00</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">10.0E3</span>
+
+<span class="c1"># Part 1</span>
+<span class="n">dV_R</span> <span class="o">=</span> <span class="n">EMF</span>
+<span class="n">I_R</span> <span class="o">=</span> <span class="n">dV_R</span><span class="o">/</span><span class="n">R</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Current through resistor: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">I_R</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; A&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="n">P_R</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="n">I_R</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Power dissipated in resistor: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">P_R</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; W&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 3</span>
+<span class="n">I_B</span> <span class="o">=</span> <span class="n">I_R</span>
+<span class="n">P_B</span> <span class="o">=</span> <span class="n">EMF</span><span class="o">*</span><span class="n">I_B</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Power delivered by battery: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">P_B</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; W&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The power dissipated in resistor is converted into heat through Joule heating and the resistor will increase its temperature.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current through resistor: 0.002 A
+ 
+Power dissipated in resistor: 0.04 W
+ 
+Power delivered by battery: 0.04 W
+ 
+The power dissipated in resistor is converted into heat through Joule heating and the resistor will increase its temperature.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D4.9</h2>
     </header>
 <p>A heater is being designed that uses a coil of 14-gauge nichrome wire to generate <span class="math notranslate nohighlight">\(300.0\)</span> W using a voltage of
 <span class="math notranslate nohighlight">\(110.0\)</span> V. How long should the engineer make the wire? HINT: look up the diameter for a 14-gauge wire and resistivity of nichrome.</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create your own solution script here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">D</span> <span class="o">=</span> <span class="mf">1.897E-3</span>  <span class="c1">#14 gauge thickness</span>
+<span class="n">P</span> <span class="o">=</span> <span class="mf">300.0</span>
+<span class="n">dV</span> <span class="o">=</span> <span class="mf">110.0</span>
+
+<span class="n">rho</span> <span class="o">=</span> <span class="mf">110E-8</span>
+
+<span class="n">dx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;dx&#39;</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">D</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">rho</span><span class="o">*</span><span class="n">dx</span><span class="o">/</span><span class="n">A</span>
+
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">P</span> <span class="o">-</span> <span class="p">(</span><span class="n">dV</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">R</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">dx</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Length of wire should be &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Length of wire should be 103.632499644136 m
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D4.10</h2>
     </header>
-<p>An alternative to CFL bulbs and incandescent bulbs are light-emitting diode (LED) bulbs. A 100-W incandescent bulb can be replaced by a 16-W LED bulb. Both produce 1600 lumens of light. Assuming the cost of electricity is <span class="math notranslate nohighlight">\(\$\)</span>0.10 per kilowatt-hour, how much does it cost to run the bulb for one year if it runs for four hours a day?</p>
+<p>An alternative to CFL bulbs and incandescent bulbs are light-emitting diode (LED) bulbs. A 100-W incandescent bulb can be replaced by a 16-W LED bulb. Both produce 1600 lumens of light. Assuming the cost of electricity is <span class="math notranslate nohighlight">\(\$\)</span>0.10 per kilowatt-hour, how much does it cost to run the bulbs for one year if they run for four hours a day?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create your own solution script here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">P_i</span> <span class="o">=</span> <span class="mf">100E-3</span> <span class="c1">#convert to kW</span>
+<span class="n">P_l</span> <span class="o">=</span> <span class="mf">16E-3</span>
+
+<span class="n">rate</span> <span class="o">=</span> <span class="mf">0.10</span>
+
+<span class="n">hpd</span> <span class="o">=</span> <span class="mf">4.00</span> <span class="c1">#hours per day</span>
+<span class="n">ann_hours</span> <span class="o">=</span> <span class="n">hpd</span><span class="o">*</span><span class="mi">365</span>
+
+<span class="n">E_i</span> <span class="o">=</span> <span class="n">P_i</span><span class="o">*</span><span class="n">ann_hours</span>
+<span class="n">E_l</span> <span class="o">=</span> <span class="n">P_l</span><span class="o">*</span><span class="n">ann_hours</span>
+
+<span class="n">cost_i</span> <span class="o">=</span> <span class="n">E_i</span><span class="o">*</span><span class="n">rate</span>
+<span class="n">cost_l</span> <span class="o">=</span> <span class="n">E_l</span><span class="o">*</span><span class="n">rate</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The cost of incandescent bulb: $&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">cost_i</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The cost of led bulb: $&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">cost_l</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Savings per year of replacing one incadescent buld with an led bulb: $&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">cost_i</span><span class="o">-</span><span class="n">cost_l</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The cost of incandescent bulb: $14.600000000000001
+The cost of led bulb: $2.336
+Savings per year of replacing one incadescent buld with an led bulb: $12.264000000000001
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D4.11</h2>
     </header>
 <p>A resistor is placed in a circuit with an adjustable voltage source. The voltage across and the current through the resistor and the measurements are shown below. Estimate the resistance of the resistor.</p>
@@ -554,8 +951,43 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/fb97f3298a93da16779235fdf54d7180286d139de2763b7ffc4d795e7b3aa740.png" src="../_images/fb97f3298a93da16779235fdf54d7180286d139de2763b7ffc4d795e7b3aa740.png" />
+<img alt="../_images/f4b8a611a28198fa5e944f4726e0bbd5e5cc190f3d24ac7ecf86200801cf4233.png" src="../_images/f4b8a611a28198fa5e944f4726e0bbd5e5cc190f3d24ac7ecf86200801cf4233.png" />
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create your own solution script here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The resistance is the slope of the graph since V/I = R&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The slope is 100 Ohm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The resistance is the slope of the graph since V/I = R
+The slope is 100 Ohm
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 
