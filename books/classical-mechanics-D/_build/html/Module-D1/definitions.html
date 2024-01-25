@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>D1.1 Kinematics Definitions &#8212; A Competency Approach to Classical Mechanics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -69,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="D1.2 Kinematics - Differential Form" href="differential-form.html" />
     <link rel="prev" title="A Competency Approach to Classical Mechanics: A Compendium to the D Exam" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -440,14 +439,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="d1-1-kinematics-definitions">
-<h1>D1.1 Kinematics Definitions<a class="headerlink" href="#d1-1-kinematics-definitions" title="Permalink to this heading">#</a></h1>
+<h1>D1.1 Kinematics Definitions<a class="headerlink" href="#d1-1-kinematics-definitions" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d1-1-1-motivation">
-<h2>D1.1.1 Motivation<a class="headerlink" href="#d1-1-1-motivation" title="Permalink to this heading">#</a></h2>
+<h2>D1.1.1 Motivation<a class="headerlink" href="#d1-1-1-motivation" title="Permalink to this headline">#</a></h2>
 <p>Newton’s laws as exposed to in University Physics I and II may appear relatively simple and straightforward to perform calculations with. Although that idyllic image will quickly turn into a horror show of worse kind when obejcts are no longer moving in straight lines and may be constrained to odd paths. The simplicity of the applicationa of Newton’s laws lay in the coordinate system we traditionally have used: the cartesian coordinate system. With the axis, or more precisely, the unit vectors spanning the system being fixed allows for very simple calculations. In this course, we will explore other systems like polar and cylindrical, as well as introduce analytical mechanics that allows for elegant calculations when objects moves under more complex constraint motions.</p>
 <p>In this module, however, we will foucs on reviewing kinematics in cartesian coordinates.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="d1-1-2-cartesian-coordinate-system">
-<h2>D1.1.2 Cartesian Coordinate System<a class="headerlink" href="#d1-1-2-cartesian-coordinate-system" title="Permalink to this heading">#</a></h2>
+<h2>D1.1.2 Cartesian Coordinate System<a class="headerlink" href="#d1-1-2-cartesian-coordinate-system" title="Permalink to this headline">#</a></h2>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system">Cartesian coordinate system</a> is a reference frame characterized by <strong>fixed, perpendicular</strong> coordinate axes describing a point in a <a class="reference external" href="https://en.wikipedia.org/wiki/Euclidean_space">Euclidean space</a> . In simple terms, a Euclidean space is a mathematical space defined through a set of axioms including a measure of length. This length can be found by using the <strong>Pythagorean theorem</strong> between two coordinate points. The Euclidean space is a <strong>flat</strong> space and you are familiar with Euclidean (or plane) geometry through, for example, triangles and trigonometry. You may also have heard of spherical geometry, which is an example of non-euclidean geomtry.</p>
 <p>If you are inclined to learn more about non-euclidean geometry and how it applies to space-time, check out the <strong>General Relativity course</strong>.</p>
 <p>In principle, we can have <span class="math notranslate nohighlight">\(n\)</span> cartesian coordinates but Newtonian mechanics is only meaningful in 3 dimensions and can be represented in a <span class="math notranslate nohighlight">\((x,y,z)\)</span> frame of reference. In the following, I will utilize a 2D Cartesian frame.</p>
@@ -488,13 +487,13 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/b759d5b288549d02f6101ae2d0b2137cb915aeb6f4c1738297d5a9ade74eaf06.png" src="../_images/b759d5b288549d02f6101ae2d0b2137cb915aeb6f4c1738297d5a9ade74eaf06.png" />
+<img alt="../_images/8da65c73e0a75dad6df5dcf0f386fefb0f81360e33af875618cc0d224dee4d53.png" src="../_images/8da65c73e0a75dad6df5dcf0f386fefb0f81360e33af875618cc0d224dee4d53.png" />
 </div>
 </div>
 <p>These unit vectors can now used to create <strong>any directed line segment</strong> in our Cartesian reference frame.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="d1-1-3-the-position-vector">
-<h2>D1.1.3 The Position Vector<a class="headerlink" href="#d1-1-3-the-position-vector" title="Permalink to this heading">#</a></h2>
+<h2>D1.1.3 The Position Vector<a class="headerlink" href="#d1-1-3-the-position-vector" title="Permalink to this headline">#</a></h2>
 <p>The position vector is a <strong>directed line segment</strong> pointing <strong>from</strong> the origin of the reference frame <strong>to</strong> some point <span class="math notranslate nohighlight">\(P\)</span>. For example, say the point <span class="math notranslate nohighlight">\(P\)</span> is given by <span class="math notranslate nohighlight">\((x,y) = (4,3)\)</span>. The position vector is then the directed line segment from <span class="math notranslate nohighlight">\((0,0)\)</span> to <span class="math notranslate nohighlight">\((4,3)\)</span>. The figure below illustrates the position vector.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -527,7 +526,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/b0aff23869e86b466ff29f848b7396eedefba8adb6df389d63ad3a6ff2efac58.png" src="../_images/b0aff23869e86b466ff29f848b7396eedefba8adb6df389d63ad3a6ff2efac58.png" />
+<img alt="../_images/150cf50cf9d173c82555d61ec0867599ed8356f379ffc1933b6c30778d03bfc7.png" src="../_images/150cf50cf9d173c82555d61ec0867599ed8356f379ffc1933b6c30778d03bfc7.png" />
 </div>
 </div>
 <p>The position vector is often represented through <span class="math notranslate nohighlight">\(\vec{r}\)</span>. The <strong>vector components</strong> of the position vector are the <strong>projected directed line segments</strong> onto the coordinate axes and are often expressed through the <strong>components</strong> <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> or <span class="math notranslate nohighlight">\(r_x\)</span> and <span class="math notranslate nohighlight">\(r_y\)</span> combined with unit vectors. Any position vector can be expressed as a linear combination of the directed components:</p>
@@ -576,19 +575,19 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/fe38b0b43a2ebfcc7d49e270666148699b9f07170bece56664cc3723179ff6f2.png" src="../_images/fe38b0b43a2ebfcc7d49e270666148699b9f07170bece56664cc3723179ff6f2.png" />
+<img alt="../_images/4bc8ba560d76073065ee7cb0038cec28a33e52cd759cbf747bec7656014674bb.png" src="../_images/4bc8ba560d76073065ee7cb0038cec28a33e52cd759cbf747bec7656014674bb.png" />
 </div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="d1-1-4-the-displacement-vector">
-<h2>D1.1.4 The Displacement Vector<a class="headerlink" href="#d1-1-4-the-displacement-vector" title="Permalink to this heading">#</a></h2>
+<h2>D1.1.4 The Displacement Vector<a class="headerlink" href="#d1-1-4-the-displacement-vector" title="Permalink to this headline">#</a></h2>
 <p>The displacement vector is defined as the directed line segment <strong>from</strong> some initial position <span class="math notranslate nohighlight">\(\vec{r}_1\)</span> to some final position <span class="math notranslate nohighlight">\(\vec{r}_2\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ \Delta\vec{r} = \vec{r}_2 - \vec{r}_1 \]</div>
 <p>If we are dealing with small displacements we may consider using the <strong>differential displacement</strong> <span class="math notranslate nohighlight">\(d\vec{r}\)</span>.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="d1-1-5-the-velocity-vector">
-<h2>D1.1.5 The Velocity Vector<a class="headerlink" href="#d1-1-5-the-velocity-vector" title="Permalink to this heading">#</a></h2>
+<h2>D1.1.5 The Velocity Vector<a class="headerlink" href="#d1-1-5-the-velocity-vector" title="Permalink to this headline">#</a></h2>
 <p>We can define the <strong>instantaneous</strong> velocity as the derivative of the position vector with respect to time (using Newton notation for time derivative):</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -606,7 +605,7 @@ document.write(`
 <p>A nice simple expression, however, this is not the case when we go to other coordinate systems like polar coordinates as we will see in PHASE C.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="d1-1-6-the-acceleration-vector">
-<h2>D1.1.6 The Acceleration Vector<a class="headerlink" href="#d1-1-6-the-acceleration-vector" title="Permalink to this heading">#</a></h2>
+<h2>D1.1.6 The Acceleration Vector<a class="headerlink" href="#d1-1-6-the-acceleration-vector" title="Permalink to this headline">#</a></h2>
 <p>We define the <strong>instantaneous</strong> acceleration as the derivative of the velocity with respect to time:</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
