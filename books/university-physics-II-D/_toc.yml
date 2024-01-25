@@ -33,3 +33,6 @@ parts:
   - file: Module-D4/ohms-law
   - file: Module-D4/electromotive-force
   - file: Module-D4/problemsD4 
+- caption: Module D5 - Magnetic Force
+  chapters:
+  - file: Module-D5/magnetic-force
