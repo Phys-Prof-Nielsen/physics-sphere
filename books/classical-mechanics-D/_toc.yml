@@ -41,3 +41,7 @@ parts:
   - file: Module-D7/torque
   - file: Module-D7/newton-rotational
   - file: Module-D7/problemsD7
+- caption: Module D8 - Energy and Work - Rotational Motion
+  chapters:
+  - file: Module-D8/rotational-work
+  - file: Module-D8/problemsD8

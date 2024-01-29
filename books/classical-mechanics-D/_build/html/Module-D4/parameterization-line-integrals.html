@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>D4.3 Parameterization of Line Integrals &#8212; A Competency Approach to Classical Mechanics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="D5.1 Rotational Kinematics - Basic Relationships" href="../Module-D5/basic-relations.html" />
     <link rel="prev" title="D4.2 Introduction to Line Integrals" href="line-integrals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -197,6 +198,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-D7/torque.html">D7.1 Angular Force - Torque</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-D7/newton-rotational.html">D7.2 Newton’s 2nd Law - Rotational Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-D7/problemsD7.html">D7.3 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D8 - Energy and Work - Rotational Motion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D8/rotational-work.html">D8.1 Work - Energy - Rotational Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D8/problemsD8.html">D8.2 Problems</a></li>
 </ul>
 
     </div>
@@ -437,14 +443,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="d4-3-parameterization-of-line-integrals">
-<h1>D4.3 Parameterization of Line Integrals<a class="headerlink" href="#d4-3-parameterization-of-line-integrals" title="Permalink to this headline">#</a></h1>
+<h1>D4.3 Parameterization of Line Integrals<a class="headerlink" href="#d4-3-parameterization-of-line-integrals" title="Permalink to this heading">#</a></h1>
 <hr style="border:1px solid gray"> </hr></section>
 <section id="d4-3-1-motivation">
-<h1>D4.3.1 Motivation<a class="headerlink" href="#d4-3-1-motivation" title="Permalink to this headline">#</a></h1>
+<h1>D4.3.1 Motivation<a class="headerlink" href="#d4-3-1-motivation" title="Permalink to this heading">#</a></h1>
 <p>In the <em>Introduction to Line Integrals</em>, we have been so fortunate that our paths were aligned well with the <span class="math notranslate nohighlight">\(xy\)</span>-directions in a cartesian coordinate system. However, often the world is not as nice and will serve us some humble pie when applying the approach above. For example, what if the path was part of a circle? Already then it appears messy to evaluate the dot product between our force and the line element. This is where <strong>parameterization</strong> comes in and saves us from mathematical humiliation (well, we may still be humiliated but then it is at least because of our own inability to do math). The approach of parameterization is a general approach to solving line integrals (or higher orders such surface and volume integrals as well.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="d4-3-2-parameterization">
-<h1>D4.3.2 Parameterization<a class="headerlink" href="#d4-3-2-parameterization" title="Permalink to this headline">#</a></h1>
+<h1>D4.3.2 Parameterization<a class="headerlink" href="#d4-3-2-parameterization" title="Permalink to this heading">#</a></h1>
 <p>For simplicity, we will introduce the parameterization for a path in the <span class="math notranslate nohighlight">\(xy\)</span>-plane, but it should be evident how to extend it to the 3D plane. The starting point is to realize that <strong>any</strong> path can be described by some equation</p>
 <div class="math notranslate nohighlight">
 \[ g(x,y) = 0 \]</div>
