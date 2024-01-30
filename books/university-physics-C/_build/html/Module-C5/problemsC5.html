@@ -718,11 +718,11 @@ Time = 1.87702607470049
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acceleration = 2.59205207857033
- 
-Speed = 7.88720482807439
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+Speed = 7.88720482807439
+ 
 Time = 3.04282407407407
  
 Work = 180.0
@@ -756,6 +756,16 @@ Work = 180.0
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
 
 <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Part 2</span>
+<span class="c1"># Let the origin of the referecen be at the table and to the left of Block A</span>
+<span class="c1"># Let the x-distance from origin to edge (or pulley) be D</span>
+<span class="c1"># Let the length of the rop be L</span>
+
+<span class="c1">#equation of constraint:</span>
+<span class="c1"># (D - xA) - yB = L</span>
+<span class="c1"># That means that accelerations relate as: aAx = -aBy</span>
 
 <span class="c1">#values giving</span>
 <span class="n">mA</span> <span class="o">=</span> <span class="mf">2.0</span>
@@ -763,142 +773,65 @@ Work = 180.0
 <span class="n">mu</span> <span class="o">=</span> <span class="mf">0.30</span>
 <span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
 
+
+<span class="c1"># Part 3</span>
 <span class="c1">#unknowns</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="n">aAx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;aAx&#39;</span><span class="p">)</span>
+<span class="n">aBy</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;aBy&#39;</span><span class="p">)</span>
 <span class="n">fn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fn&#39;</span><span class="p">)</span>
 <span class="n">ft</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ft&#39;</span><span class="p">)</span>
 
 <span class="c1">#coupled equations</span>
-<span class="n">eq1</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">a</span> <span class="o">-</span> <span class="n">ft</span> <span class="o">+</span> <span class="n">mu</span><span class="o">*</span><span class="n">fn</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">aAx</span> <span class="o">-</span> <span class="n">ft</span> <span class="o">+</span> <span class="n">mu</span><span class="o">*</span><span class="n">fn</span>
 <span class="n">eq2</span> <span class="o">=</span> <span class="n">fn</span> <span class="o">-</span> <span class="n">mA</span><span class="o">*</span><span class="n">g</span>
-<span class="n">eq3</span> <span class="o">=</span> <span class="n">mB</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="n">ft</span> <span class="o">-</span> <span class="n">mB</span><span class="o">*</span><span class="n">g</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">mB</span><span class="o">*</span><span class="n">aBy</span> <span class="o">-</span> <span class="n">ft</span> <span class="o">+</span> <span class="n">mB</span><span class="o">*</span><span class="n">g</span>
+<span class="n">eq4</span> <span class="o">=</span> <span class="n">aAx</span> <span class="o">+</span> <span class="n">aBy</span>
 
-<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">),(</span><span class="n">a</span><span class="p">,</span><span class="n">fn</span><span class="p">,</span><span class="n">ft</span><span class="p">))</span>
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">,</span><span class="n">eq4</span><span class="p">),(</span><span class="n">aAx</span><span class="p">,</span><span class="n">aBy</span><span class="p">,</span><span class="n">fn</span><span class="p">,</span><span class="n">ft</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">a</span><span class="p">]))</span>
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acceleration = 2.52257142857143
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-<div class="cell tag_hide-input tag_hide-output docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol1</span><span class="p">[</span><span class="n">aBy</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; m/s^2&#39;</span><span class="p">)</span>
 
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-
+<span class="c1"># Part 4</span>
 <span class="n">dy</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.2</span>
-<span class="n">ay</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.52257</span>
+<span class="n">aBy</span> <span class="o">=</span> <span class="n">sol1</span><span class="p">[</span><span class="n">aBy</span><span class="p">]</span>
 <span class="n">v0y</span> <span class="o">=</span> <span class="mf">0.0</span>
 
 <span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 
-<span class="n">eq</span> <span class="o">=</span> <span class="n">dy</span> <span class="o">-</span> <span class="n">v0y</span><span class="o">*</span><span class="n">t</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">ay</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">dy</span> <span class="o">-</span> <span class="n">v0y</span><span class="o">*</span><span class="n">t</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">aBy</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span>
 
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Time = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; s&#39;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Time = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time = 0.975402821669441
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-<div class="cell tag_hide-input tag_hide-output docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
-
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-
-<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.9754</span>
-<span class="n">ay</span> <span class="o">=</span> <span class="mf">2.52257</span>
+<span class="c1"># Part 5</span>
 <span class="n">v0y</span> <span class="o">=</span> <span class="mf">0.0</span>
-
 <span class="n">vy</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;vy&#39;</span><span class="p">)</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="n">eq</span> <span class="o">=</span> <span class="n">vy</span> <span class="o">-</span> <span class="n">v0y</span> <span class="o">-</span> <span class="n">ay</span><span class="o">*</span><span class="n">dt</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">vy</span> <span class="o">-</span> <span class="n">v0y</span> <span class="o">-</span> <span class="n">aBy</span><span class="o">*</span><span class="n">dt</span>
 
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">vy</span><span class="p">)</span>
+<span class="n">vy</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">vy</span><span class="p">)</span> <span class="c1"># velocity to speed</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Speed = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Speed = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Speed = 2.46051477800000
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-<div class="cell tag_hide-input tag_hide-output docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
-
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-
-<span class="c1">#values giving</span>
-<span class="n">mA</span> <span class="o">=</span> <span class="mf">2.0</span>
-<span class="n">mB</span> <span class="o">=</span> <span class="mf">1.5</span>
-<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.30</span>
-<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="c1"># Part 6</span>
+<span class="n">aAx</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">aBy</span> <span class="o">=</span> <span class="mf">0.0</span>
 
 <span class="c1">#unknowns</span>
 <span class="n">ff</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ff&#39;</span><span class="p">)</span>
-<span class="n">fn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fn&#39;</span><span class="p">)</span>
-<span class="n">ft</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ft&#39;</span><span class="p">)</span>
 
 <span class="c1">#coupled equations</span>
-<span class="n">eq1</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">a</span> <span class="o">-</span> <span class="n">ft</span> <span class="o">+</span> <span class="n">ff</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">aAx</span> <span class="o">-</span> <span class="n">ft</span> <span class="o">+</span> <span class="n">ff</span>
 <span class="n">eq2</span> <span class="o">=</span> <span class="n">fn</span> <span class="o">-</span> <span class="n">mA</span><span class="o">*</span><span class="n">g</span>
-<span class="n">eq3</span> <span class="o">=</span> <span class="n">mB</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="n">ft</span> <span class="o">-</span> <span class="n">mB</span><span class="o">*</span><span class="n">g</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">mB</span><span class="o">*</span><span class="n">aBy</span> <span class="o">-</span> <span class="n">ft</span> <span class="o">+</span> <span class="n">mB</span><span class="o">*</span><span class="n">g</span>
 
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">),(</span><span class="n">ff</span><span class="p">,</span><span class="n">fn</span><span class="p">,</span><span class="n">ft</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Force of friction (magnitude) = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">ff</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Force of friction (magnitude) = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">ff</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; N&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -909,10 +842,13 @@ Work = 180.0
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Force of friction (magnitude) = 14.7150000000000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acceleration = -2.52257142857143 m/s^2
+ 
+Time = 0.975402545476510 s
+ 
+Speed = 2.46052259257489 m/s
+ 
+Force of friction (magnitude) = 14.7150000000000 N
 </pre></div>
 </div>
 </div>
@@ -1138,7 +1074,9 @@ Range = 101.235741268337
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Part 3: Acceleration = 1.54894736842105
 Part 4: Time = 1.24478380955082
-Part 5: speed = 1.92838050000000
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Part 5: speed = 1.92838050000000
 </pre></div>
 </div>
 </div>
