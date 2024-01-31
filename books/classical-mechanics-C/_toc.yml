@@ -12,3 +12,4 @@ parts:
 - caption: Module C1 - Kinematics in Polar Coordinates
   chapters:
   - file: Module-C1/polar-coordinates
+  - file: Module-C1/problemsC1
