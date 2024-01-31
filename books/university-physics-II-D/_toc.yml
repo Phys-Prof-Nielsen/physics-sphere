@@ -37,3 +37,6 @@ parts:
   chapters:
   - file: Module-D5/magnetic-force
   - file: Module-D5/problemsD5 
+- caption: Module D6 - Geometric Optics
+  chapters:
+  - file: Module-D6/problemsD6 
