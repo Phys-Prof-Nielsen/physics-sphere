@@ -1,0 +1,14 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Preample
+  chapters:
+  - file: Preample/Motivation
+  - file: Preample/Structure
+  - file: Preample/Learning_Outcomes 
+- caption: Module C1 - Kinematics in Polar Coordinates
+  chapters:
+  - file: Module-C1/polar-coordinates
