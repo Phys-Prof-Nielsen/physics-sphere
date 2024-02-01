@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>C6.X Problems &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Equation Sheet for C Exam" href="../Equation-sheet/Equation-sheet-c-exam.html" />
     <link rel="prev" title="C6.4 Conservation of Energy" href="Conservation-energy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -438,7 +439,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="c6-x-problems">
-<h1>C6.X Problems<a class="headerlink" href="#c6-x-problems" title="Permalink to this headline">#</a></h1>
+<h1>C6.X Problems<a class="headerlink" href="#c6-x-problems" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C6.1</h2>
     </header>
 <p>A cat’s crinkle ball toy of mass 15 g is thrown straight up with an initial speed of 3.0 m/s. Assume in this problem that air drag is negligible.</p>
@@ -451,10 +452,98 @@ document.write(`
 <li><p>What is the maximum height the ball reaches?</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-problems">https://openstax.org/books/university-physics-volume-1/pages/8-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mf">15E-3</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="c1"># Part 1</span>
+<span class="n">k1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v1</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kinetic energy when it leaves hand: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="c1"># w_net = dk</span>
+<span class="c1"># w_net = fg</span>
+<span class="n">k2</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">dk</span> <span class="o">=</span> <span class="n">k2</span> <span class="o">-</span> <span class="n">k1</span>
+<span class="n">w_net</span> <span class="o">=</span> <span class="n">dk</span>
+<span class="n">w_g</span> <span class="o">=</span> <span class="n">w_net</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The work done by gravity: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">w_g</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 3</span>
+<span class="c1"># w_g = -du</span>
+<span class="n">du</span> <span class="o">=</span> <span class="o">-</span><span class="n">w_g</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Change in gravitational potential energy: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">du</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 4</span>
+<span class="n">u1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">u2</span> <span class="o">=</span> <span class="n">u1</span> <span class="o">+</span> <span class="n">du</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Gravitational potential energy at max. height: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">u2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 5</span>
+<span class="n">u2</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">u1</span> <span class="o">=</span> <span class="n">u2</span> <span class="o">-</span> <span class="n">du</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Gravitational potential energy leaving hand: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">u1</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 6</span>
+<span class="c1"># No dissipative forces so mechanical energy is conserved:</span>
+<span class="c1"># k1 + u1 + w_nc = k2 + u2</span>
+<span class="n">w_nc</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">h1</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1">#we are free to choose reference height.</span>
+<span class="n">h2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;h2&#39;</span><span class="p">)</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">h2</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v1</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">h1</span> <span class="o">-</span> <span class="n">w_nc</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">h2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Maximum height: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kinetic energy when it leaves hand: 0.0675 J
+ 
+The work done by gravity: -0.0675 J
+ 
+Change in gravitational potential energy: 0.0675 J
+ 
+Gravitational potential energy at max. height: 0.0675 J
+ 
+Gravitational potential energy leaving hand: -0.0675 J
+ 
+Maximum height: 0.458715596330275 m
+</pre></div>
+</div>
+</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C6.2</h2>
     </header>
 <p>A boy throws a ball of mass  0.25 kg straight upward with an initial speed of 20.0 m/s. When the ball returns to the boy, its speed is  17 m/s. How much much work does air resistance do on the ball during its flight?</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-problems">https://openstax.org/books/university-physics-volume-1/pages/8-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -462,7 +551,8 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
 <span class="c1">#values giving</span>
 <span class="n">m</span> <span class="o">=</span> <span class="mf">0.25</span>
@@ -507,6 +597,13 @@ document.write(`
     </header>
 <p>Using energy considerations and assuming negligible air resistance, show that a rock thrown from a bridge 20.0 m above water with an initial speed of 15.0 m/s strikes the water with a speed of 24.8 m/s independent of the direction thrown.</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-problems">https://openstax.org/books/university-physics-volume-1/pages/8-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -514,7 +611,8 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
 <span class="c1">#values giving</span>
 <span class="n">h1</span> <span class="o">=</span> <span class="mf">20.0</span>
@@ -556,6 +654,13 @@ document.write(`
 </ol>
 <img src="P-C6-fig1.png" width="400">
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-problems">https://openstax.org/books/university-physics-volume-1/pages/8-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -563,7 +668,8 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1">#values giving</span>
@@ -572,6 +678,7 @@ document.write(`
 <span class="n">dh</span> <span class="o">=</span> <span class="mf">1.8</span>
 <span class="n">ff</span> <span class="o">=</span> <span class="mf">80.0</span>
 <span class="n">d</span> <span class="o">=</span> <span class="mf">8.0</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
 
 <span class="c1">#unknown</span>
 <span class="n">v2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v2&#39;</span><span class="p">)</span>
@@ -617,6 +724,13 @@ Part 2: Speed at top plateau = 3.98547362304658
     </header>
 <p>A baseball of mass 0.25 kg is hit at home plate with a speed of 40 m/s. When it lands in a seat in the left-field bleachers a horizontal distance 120 m from home plate, it is moving at 30.0 m/s. If the ball lands 20.0 m above the spot where it was hit, how much work is done on it by air resistance?</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-problems">https://openstax.org/books/university-physics-volume-1/pages/8-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -624,7 +738,8 @@ Part 2: Speed at top plateau = 3.98547362304658
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
 <span class="c1">#values giving</span>
 <span class="n">m</span> <span class="o">=</span> <span class="mf">0.25</span>
@@ -664,6 +779,13 @@ Part 2: Speed at top plateau = 3.98547362304658
 <p>A 60.0 kg skier with an initial speed of 12.0 m/s coasts up a 2.50 m high rise as shown. Find her final speed at the top, given that the coefficient of friction between her skis and the snow is 0.80.</p>
 <img src="P-C6-fig2.png" width="400">
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-problems">https://openstax.org/books/university-physics-volume-1/pages/8-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -671,7 +793,8 @@ Part 2: Speed at top plateau = 3.98547362304658
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1">#values giving</span>
@@ -727,6 +850,13 @@ Part 2: Speed at top plateau = 3.98547362304658
 <li><p>What is the average force of friction if the hill has a slope of 2.5<span class="math notranslate nohighlight">\(^\circ\)</span> above the horizontal?</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-problems">https://openstax.org/books/university-physics-volume-1/pages/8-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -734,11 +864,15 @@ Part 2: Speed at top plateau = 3.98547362304658
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1">#given parameters</span>
 <span class="n">v1</span> <span class="o">=</span> <span class="mf">110.0</span><span class="o">*</span><span class="p">(</span><span class="mf">1000.0</span><span class="o">/</span><span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="mi">3600</span><span class="p">)</span> <span class="c1">#convert from km/hr to m/s</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">750.0</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
 
 <span class="c1">#Part 1</span>
 <span class="n">v2</span> <span class="o">=</span> <span class="mf">0.0</span>  <span class="c1">#final speed will be zero</span>
@@ -752,7 +886,6 @@ Part 2: Speed at top plateau = 3.98547362304658
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Height of hill = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 
 <span class="c1">#Part 2</span>
-<span class="n">m</span> <span class="o">=</span> <span class="mf">750.0</span>
 <span class="n">dh</span> <span class="o">=</span> <span class="mf">22.0</span>
 <span class="n">slope</span> <span class="o">=</span> <span class="mf">2.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
 
@@ -773,8 +906,10 @@ Part 2: Speed at top plateau = 3.98547362304658
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Height of hill = 47.5862372736312
-Work done by friction = -188250.740740741
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Height of hill = 47.5862372736311
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Work done by friction = -188250.740740741
 Thermal energy transferred = 188250.740740741
 </pre></div>
 </div>
@@ -786,10 +921,24 @@ Thermal energy transferred = 188250.740740741
 <p>A block leaves a frictionless inclined surface horizontally after dropping off by a height h. Find the horizontal distance D where it will land on the floor, in terms of h, H, and g.</p>
 <img src="P-C6-fig3.png" width="400">
 <p>This problem is from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-additional-problems">https://openstax.org/books/university-physics-volume-1/pages/8-additional-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C6.9</h2>
     </header>
 <p>A skier starts from rest and slides downhill. What will be the speed of the skier if he drops by 20.0 meters in vertical height? Ignore any air resistance (which will, in reality, be quite a lot), and any friction between the skis and the snow.</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-additional-problems">https://openstax.org/books/university-physics-volume-1/pages/8-additional-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -797,7 +946,8 @@ Thermal energy transferred = 188250.740740741
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
 <span class="c1">#values giving</span>
 <span class="n">v1</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -833,6 +983,13 @@ Thermal energy transferred = 188250.740740741
     </header>
 <p>Repeat the preceding problem, but this time, suppose that the work done by air resistance cannot be ignored. Let the work done by the air resistance when the skier goes from A to B along the given hilly path be −2000.0 J. The work done by air resistance is negative since the air resistance acts in the opposite direction to the displacement. Supposing the mass of the skier is 50.0 kg, what is the speed of the skier at point B?</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-additional-problems">https://openstax.org/books/university-physics-volume-1/pages/8-additional-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -840,7 +997,8 @@ Thermal energy transferred = 188250.740740741
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
 <span class="c1">#values giving</span>
 <span class="n">v1</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -879,6 +1037,13 @@ Thermal energy transferred = 188250.740740741
 <p>In an amusement park, a car rolls in a track as shown below. Find the speed of the car at A, B, and C. Note that the work done by the rolling friction is zero since the displacement of the point at which the rolling friction acts on the tires is momentarily at rest and therefore has a zero displacement. Assume the heights are given to two significant figures.</p>
 <img src="P-C6-fig4.png" width="400">
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-additional-problems">https://openstax.org/books/university-physics-volume-1/pages/8-additional-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -886,7 +1051,8 @@ Thermal energy transferred = 188250.740740741
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
 <span class="c1">#values giving</span>
 <span class="n">v1</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -927,7 +1093,9 @@ Thermal energy transferred = 188250.740740741
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Speed at A = 24.2610799429869
-Speed at B = 14.0071410359145
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Speed at B = 14.0071410359145
 Speed at C = 31.3209195267317
 </pre></div>
 </div>
@@ -943,6 +1111,13 @@ Speed at C = 31.3209195267317
 <li><p>makes an angle of 10.0<span class="math notranslate nohighlight">\(^\circ\)</span> with the vertical.</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/8-additional-problems">https://openstax.org/books/university-physics-volume-1/pages/8-additional-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -950,7 +1125,8 @@ Speed at C = 31.3209195267317
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1">#given parameters</span>
@@ -958,6 +1134,7 @@ Speed at C = 31.3209195267317
 <span class="n">m</span> <span class="o">=</span> <span class="mf">0.200</span>  <span class="c1">#in kg, but is not needed for the problem</span>
 <span class="n">l</span> <span class="o">=</span> <span class="mf">2.00</span>
 <span class="n">h1</span> <span class="o">=</span> <span class="mf">2.00</span> <span class="o">-</span> <span class="mf">2.00</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mf">30.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span><span class="p">)</span>  <span class="c1">#launch height above bottom...so bottom is h = 0</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
 
 <span class="c1">#Part 1</span>
 <span class="n">h2</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -1002,7 +1179,9 @@ Speed at C = 31.3209195267317
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Speed  = 2.29285044333437
-Speed  = 1.70020633898879
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Speed  = 1.70020633898879
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Speed  = 2.15893941177090
@@ -1021,6 +1200,13 @@ Speed  = 1.70020633898879
 <li><p>What is the mechanical energy at the bottom of the incline?</p></li>
 <li><p>How high (vertical distance) up the incline do they travel before coming to a stop?</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1028,7 +1214,8 @@ Speed  = 1.70020633898879
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1">#-----------------------</span>
