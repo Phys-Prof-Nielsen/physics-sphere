@@ -459,8 +459,13 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -517,6 +522,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kinetic energy when it leaves hand: 0.0675 J
  
@@ -532,6 +543,7 @@ Maximum height: 0.458715596330275 m
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C6.2</h2>
     </header>
@@ -714,7 +726,9 @@ Maximum height: 0.458715596330275 m
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Part 1: Speed at top plateau = 5.35574457942124
-Part 2: Speed at top plateau = 3.98547362304658
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Part 2: Speed at top plateau = 3.98547362304658
 </pre></div>
 </div>
 </div>
@@ -907,9 +921,7 @@ Part 2: Speed at top plateau = 3.98547362304658
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Height of hill = 47.5862372736311
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Work done by friction = -188250.740740741
+Work done by friction = -188250.740740741
 Thermal energy transferred = 188250.740740741
 </pre></div>
 </div>
@@ -1093,9 +1105,7 @@ Thermal energy transferred = 188250.740740741
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Speed at A = 24.2610799429869
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Speed at B = 14.0071410359145
+Speed at B = 14.0071410359145
 Speed at C = 31.3209195267317
 </pre></div>
 </div>
@@ -1182,9 +1192,7 @@ Speed at C = 31.3209195267317
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Speed  = 1.70020633898879
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Speed  = 2.15893941177090
+Speed  = 2.15893941177090
 </pre></div>
 </div>
 </div>
