@@ -13,3 +13,7 @@ parts:
   chapters:
   - file: Module-C1/polar-coordinates
   - file: Module-C1/problemsC1
+- caption: Module C2 - Newton's 2nd Law in Polar Coordinates
+  chapters:
+  - file: Module-C2/N2-polar
+  - file: Module-C2/problemsC2
