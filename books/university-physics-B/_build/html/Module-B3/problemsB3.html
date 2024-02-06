@@ -511,11 +511,10 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Instantaneous speed at t = 3 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">vx3</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
 
 <span class="c1"># Part 3</span>
-<span class="n">dvx</span> <span class="o">=</span> <span class="n">vx3</span> <span class="o">-</span> <span class="n">vx2</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="mf">1.0</span>
-<span class="n">ax_av</span> <span class="o">=</span> <span class="n">dvx</span><span class="o">/</span><span class="n">dt</span>
+<span class="n">vx_av</span> <span class="o">=</span> <span class="p">(</span><span class="n">vx2</span> <span class="o">+</span> <span class="n">vx3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average acceleration between t = 2 s and t = 3 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ax_av</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average velocity between t = 2 s and t = 3 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">vx_av</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -534,7 +533,7 @@ Instantaneous speed at t = 2 s: 2.00000000000000 m/s
  
 Instantaneous speed at t = 3 s: 2.00000000000000 m/s
  
-Average acceleration between t = 2 s and t = 3 s: -4.00000000000000 m/s^2
+Average velocity between t = 2 s and t = 3 s: 0 m/s
 </pre></div>
 </div>
 </div>
