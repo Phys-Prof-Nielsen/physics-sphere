@@ -470,6 +470,64 @@ document.write(`
 <li><p>What is the average velocity between t = 2 s and t = 3 s?</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/3-problems">https://openstax.org/books/university-physics-volume-1/pages/3-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">t</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">t</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1"># Part 1</span>
+<span class="n">vx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">vx2</span> <span class="o">=</span> <span class="n">vx</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span><span class="n">t2</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Instantaneous velocity at t = 2 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">vx2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+
+<span class="n">t3</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">vx3</span> <span class="o">=</span> <span class="n">vx</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span><span class="n">t3</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Instantaneous velocity at t = 3 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">vx3</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Instantaneous speed at t = 2 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">vx2</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Instantaneous speed at t = 3 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">vx3</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 3</span>
+<span class="n">dvx</span> <span class="o">=</span> <span class="n">vx3</span> <span class="o">-</span> <span class="n">vx2</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">ax_av</span> <span class="o">=</span> <span class="n">dvx</span><span class="o">/</span><span class="n">dt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average acceleration between t = 2 s and t = 3 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ax_av</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Instantaneous velocity at t = 2 s: 2.00000000000000 m/s
+ 
+Instantaneous velocity at t = 3 s: -2.00000000000000 m/s
+ 
+Instantaneous speed at t = 2 s: 2.00000000000000 m/s
+ 
+Instantaneous speed at t = 3 s: 2.00000000000000 m/s
+ 
+Average acceleration between t = 2 s and t = 3 s: -4.00000000000000 m/s^2
+</pre></div>
+</div>
+</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B3.2</h2>
     </header>
 <p>Between t<span class="math notranslate nohighlight">\(_0 = 0\)</span> and t = t’, a rocket moves straight upward with an acceleration given by <span class="math notranslate nohighlight">\(a(t) = A - Bt^{1/2}\)</span>, where A and B are constants.</p>
@@ -479,6 +537,51 @@ document.write(`
 <li><p>If its initial position is zero, what is the rocket’s position as a function of time during this same time interval?</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/3-problems">https://openstax.org/books/university-physics-volume-1/pages/3-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">t</span>
+
+<span class="n">t0</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">az</span> <span class="o">=</span> <span class="n">A</span> <span class="o">-</span> <span class="n">B</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mf">0.5</span>
+
+<span class="c1"># Part 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unit of A: m/s^2&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unit of B: m/s^(2.5)&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="n">v0z</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">vz</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">az</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="n">vz</span> <span class="o">=</span> <span class="n">vz</span> <span class="o">+</span> <span class="n">v0z</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocity function: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">vz</span><span class="p">))</span>
+
+<span class="c1"># Part 3</span>
+<span class="n">z0</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">vz</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">z</span> <span class="o">+</span> <span class="n">z0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Position function: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unit of A: m/s^2
+Unit of B: m/s^(2.5)
+Velocity function: A*t - 0.666666666666667*B*t**1.5
+Position function: A*t**2/2 - 0.266666666666667*B*t**2.5
+</pre></div>
+</div>
+</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B3.3</h2>
     </header>
 <p>The position of a particle moving along the x-axis varies with time according to <span class="math notranslate nohighlight">\(x(t) = (5.0t^2 - 4.0t^3)~\textrm{m}\)</span>. Find</p>
@@ -490,6 +593,69 @@ document.write(`
 <li><p>the maximum position.</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/3-problems">https://openstax.org/books/university-physics-volume-1/pages/3-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">t</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">5.0</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">4.0</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">3</span>
+
+<span class="c1"># Part 1</span>
+<span class="n">vx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocity function: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">vx</span><span class="p">))</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">vx</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration function: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ax</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">vx2</span> <span class="o">=</span> <span class="n">vx</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span><span class="n">t2</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Instantaneous velocity at t = 2 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">vx2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span><span class="n">t2</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Instantaneous velocity at t = 2 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ax2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 3</span>
+<span class="c1"># x is max when vx = 0</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">vx</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="n">t_max</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Position is a maximum at: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">t_max</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocity is zero at: t = 0 s and at t = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">t_max</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 5</span>
+<span class="n">x_max</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span><span class="n">t_max</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Maximum position: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x_max</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Velocity function: -12.0*t**2 + 10.0*t
+Acceleration function: 10.0 - 24.0*t
+ 
+Instantaneous velocity at t = 2 s: -28.0000000000000 m/s
+Instantaneous velocity at t = 2 s: -38.0000000000000 m/s^2
+ 
+Position is a maximum at: 0.833333333333333 s
+ 
+Velocity is zero at: t = 0 s and at t = 0.833333333333333 s
+Maximum position: 1.15740740740741 m
+</pre></div>
+</div>
+</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B3.4</h2>
     </header>
 <p>The position of a particle for t &gt; 0 is given by <span class="math notranslate nohighlight">\(\vec{r} = [(3.0t^2)\hat{i} + (-7.0t^3)\hat{j} + (-5.0t^{-2})\hat{k}]~\textrm{m}\)</span>.</p>
