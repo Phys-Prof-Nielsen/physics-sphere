@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>B3.5 Problems &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B4.1 Impulse-Momentum Theorem" href="../Module-B4/Impulse-momentum-theorem.html" />
     <link rel="prev" title="B3.4 Equations of Kinematics - Definite Integral Approach" href="Equations-kinematics-definite-approach.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -460,7 +461,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b3-5-problems">
-<h1>B3.5 Problems<a class="headerlink" href="#b3-5-problems" title="Permalink to this headline">#</a></h1>
+<h1>B3.5 Problems<a class="headerlink" href="#b3-5-problems" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B3.1</h2>
     </header>
 <p>A particle moves along the x-axis according to <span class="math notranslate nohighlight">\(x(t) = (10t - 2t^2)~\textrm{m}\)</span>.</p>
@@ -702,6 +703,83 @@ Maximum position: 1.15740740740741 m
 <li><p>What is the average velocity between t = 1.0 s and t = 2.0 s?</p></li>
 </ol>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/4-problems">https://openstax.org/books/university-physics-volume-1/pages/4-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Array</span><span class="p">([</span><span class="mf">3.0</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">7.0</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)])</span>
+
+<span class="c1"># Part 1</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocity function: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration function: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 3</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">ilen</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)):</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">ilen</span><span class="p">]</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span><span class="n">t2</span><span class="p">}))</span>
+    <span class="n">v2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocity at t = 2.0 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 4</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">v3</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">ilen</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)):</span>
+    <span class="n">val1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">ilen</span><span class="p">]</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span><span class="n">t1</span><span class="p">}))</span>
+    <span class="n">v1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val1</span><span class="p">)</span>
+    <span class="n">val3</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">ilen</span><span class="p">]</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span><span class="n">t3</span><span class="p">}))</span>
+    <span class="n">v3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val3</span><span class="p">)</span>
+
+<span class="n">v1_speed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">v1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">v1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">v1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">v3_speed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">v3</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">v3</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">v3</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Speed at t = 1.0 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v1_speed</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Speed at t = 3.0 s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v3_speed</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 4</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span>
+<span class="n">v_av</span> <span class="o">=</span> <span class="p">(</span><span class="n">v1</span> <span class="o">+</span> <span class="n">v2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average velocity: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v_av</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Velocity function: [6.0*t, -21.0*t**2, 10.0/t**3] m/s
+ 
+Acceleration function: [6.0, -42.0*t, -30.0/t**4] m/s^2
+ 
+Velocity at t = 2.0 s: [12.0, -84.0, 1.25] m/s
+ 
+Speed at t = 1.0 s: 24.020824298928627 m/s
+Speed at t = 3.0 s: 189.8555692472866 m/s
+ 
+Average velocity: [  9.    -52.5     5.625]m/s
+</pre></div>
+</div>
+</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B3.5</h2>
     </header>
 <ol class="arabic simple">
