@@ -451,7 +451,7 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C3.3</h2>
     </header>
-<p>Find the acceleration of the Half Atwood Machine assuming no friction between the surfaces, massless rope, and no friction between the pulley and the rope.</p>
+<p>Find the acceleration of the Half Atwood Machine assuming no friction between the surfaces, massless rope, and no friction between the pulley and the rope. Let the two masses be <span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
@@ -464,6 +464,45 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
 <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#assuming standard xy located on table</span>
+
+<span class="n">m1</span><span class="p">,</span><span class="n">m2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;m1,m2&#39;</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x1,y1,x2,y2&#39;</span><span class="p">)</span>
+<span class="n">v1x</span><span class="p">,</span><span class="n">v1y</span><span class="p">,</span><span class="n">v2x</span><span class="p">,</span><span class="n">v2y</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;v1x,v1y,v2x,v2y&#39;</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+
+<span class="n">v2y</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s1">&#39;v2y&#39;</span><span class="p">)(</span><span class="n">t</span><span class="p">)</span>
+<span class="c1"># total kinetic and potential energies</span>
+<span class="c1">#k = 0.5*m1*v1x**2 + 0.5*m1*v1y**2 + 0.5*m2*v2x**2 + 0.5*m2*v2y**2</span>
+<span class="c1">#u = m1*g*y1 + m2*g*y2</span>
+
+<span class="c1"># Lagrangian</span>
+<span class="c1">#L = k + u</span>
+
+<span class="c1"># constraints</span>
+<span class="c1">#y1 = 0</span>
+<span class="c1">#x2 = D</span>
+<span class="c1">#l = (D - x1) - y2  # l: length of rope and D: length of table from origin</span>
+
+<span class="c1">#v1y = 0</span>
+<span class="c1">#v2x = 0</span>
+<span class="c1">#v2y = -v1x</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m1</span><span class="o">*</span><span class="n">v2y</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m2</span><span class="o">*</span><span class="n">v2y</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">m2</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">y2</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="n">u</span>
+
+<span class="n">dum</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">v2y</span><span class="p">)</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span> <span class="o">-</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">dum</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-g*m2 - 1.0*m1*Derivative(v2y(t), t) - 1.0*m2*Derivative(v2y(t), t)
 </pre></div>
 </div>
 </div>
