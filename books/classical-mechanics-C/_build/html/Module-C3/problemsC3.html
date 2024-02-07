@@ -459,8 +459,13 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
 <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -501,15 +506,22 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-g*m2 - 1.0*m1*Derivative(v2y(t), t) - 1.0*m2*Derivative(v2y(t), t)
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C3.3</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C3.4</h2>
     </header>
-<p>Find the acceleration of the Half Atwood Machine assuming no friction between the surfaces, massless rope, and no friction between the pulley and the rope.</p>
+<p>Find the acceleration of the Atwood Machine assuming no friction between the surfaces, massless rope, and no friction between the pulley and the rope. Let the two masses be <span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
