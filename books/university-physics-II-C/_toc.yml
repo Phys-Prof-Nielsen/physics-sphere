@@ -11,4 +11,5 @@ parts:
   - file: Preample/Learning_Outcomes 
 - caption: Module C1 - Charge Distribtions - Electric Force and Field
   chapters:
+  - file: Module-C1/E-field-system
   - file: Module-C1/problemsC1
