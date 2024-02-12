@@ -631,7 +631,7 @@ Elapsed time is 10.9544511501033 s.
 <span class="n">w0</span> <span class="o">=</span> <span class="mf">0.0</span>
 
 <span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mf">25.0</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mf">25.0</span><span class="o">*</span><span class="n">t</span>
 
 <span class="n">w1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">a</span><span class="p">,(</span><span class="n">t</span><span class="p">,</span><span class="n">t0</span><span class="p">,</span><span class="n">t1</span><span class="p">))</span> <span class="o">+</span> <span class="n">w0</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The instantaneous velocity at t = 2.0 s is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">w1</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; rad/s.&#39;</span><span class="p">)</span>
@@ -645,7 +645,7 @@ Elapsed time is 10.9544511501033 s.
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The instantaneous velocity at t = 2.0 s is 66.6666666666667 rad/s.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The instantaneous velocity at t = 2.0 s is 50.0000000000000 rad/s.
 </pre></div>
 </div>
 </div>
