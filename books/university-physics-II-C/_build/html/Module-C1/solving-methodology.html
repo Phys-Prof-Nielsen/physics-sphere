@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>C1.X Problems &#8212; A Competency Approach to University Physics II</title>
+    <title>C1.2 Solving Methodology - Charge Distributions &#8212; A Competency Approach to University Physics II</title>
   
   
   
@@ -63,10 +63,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-C1/problemsC1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-C1/solving-methodology';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="C1.2 Solving Methodology - Charge Distributions" href="solving-methodology.html" />
+    <link rel="next" title="C1.X Problems" href="problemsC1.html" />
+    <link rel="prev" title="C1.1 Electric Field - System of Charges" href="E-field-system.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -160,8 +161,8 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module C1 - Charge Distribtions - Electric Force and Field</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="E-field-system.html">C1.1 Electric Field - System of Charges</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solving-methodology.html">C1.2 Solving Methodology - Charge Distributions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">C1.X Problems</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">C1.2 Solving Methodology - Charge Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problemsC1.html">C1.X Problems</a></li>
 </ul>
 
     </div>
@@ -264,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-C1/problemsC1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule-C1/solving-methodology.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +295,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-C1/problemsC1.ipynb" target="_blank"
+      <li><a href="../_sources/Module-C1/solving-methodology.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -363,7 +364,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -374,11 +377,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>C1.X Problems</h1>
+    <h1>C1.2 Solving Methodology - Charge Distributions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c1-2-1-set-up">C1.2.1 Set-Up</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c1-2-2-methodology">C1.2.2 Methodology</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -388,157 +400,40 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="c1-x-problems">
-<h1>C1.X Problems<a class="headerlink" href="#c1-x-problems" title="Permalink to this heading">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C1.1</h2>
-    </header>
-<p>Consider a uniformly conducting ring of radius <span class="math notranslate nohighlight">\(a\)</span> with a total charge of <span class="math notranslate nohighlight">\(Q\)</span>. The ring is situated in the <span class="math notranslate nohighlight">\(yz\)</span>-plane with the origin of reference frame at its center.</p>
-<ol class="arabic simple">
-<li><p>Show that the electric field at a point <span class="math notranslate nohighlight">\(P\)</span> along the x-axis is given by</p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="c1-2-solving-methodology-charge-distributions">
+<h1>C1.2 Solving Methodology - Charge Distributions<a class="headerlink" href="#c1-2-solving-methodology-charge-distributions" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="c1-2-1-set-up">
+<h2>C1.2.1 Set-Up<a class="headerlink" href="#c1-2-1-set-up" title="Permalink to this heading">#</a></h2>
+<p>There are various approaches to finding the electric from a charge distribution. Your textbooks will have some, on-line videos will have some and so forth. I am presented one here that I prefer using.</p>
+<p>First, let is write down the infinitesimal charge (behave like a point charge) in terms of the charge density and its infinitesimal spatial size:</p>
+<p><strong>Line Charge</strong></p>
 <div class="math notranslate nohighlight">
-\[ \vec{E} = \frac{kQx}{(x^2 + a^2)^{3/2}}\hat{i}\]</div>
-<ol class="arabic simple" start="2">
-<li><p>Show that the electric field at a point P, where <span class="math notranslate nohighlight">\(x &gt;&gt; a\)</span> is</p></li>
-</ol>
+\[ dq = \lambda dl \]</div>
+<p><strong>Surface Charge</strong></p>
 <div class="math notranslate nohighlight">
-\[ \vec{E} = \frac{kQ}{x^2}\hat{i}\]</div>
-<p>HINTS:</p>
-<ol class="arabic simple">
-<li><p>Consider the ring to consists of an infinite number of point charges dq.</p></li>
-<li><p>Find the electric field at P due to a single point charge on the ring.</p></li>
-<li><p>Express the point charge in terms of the linear charge density.</p></li>
-<li><p>Integrate.</p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-input tag_hide-output docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C1.2</h2>
-    </header>
-<p>Consider a uniformly conducting ring of radius <span class="math notranslate nohighlight">\(0.25\)</span> m with a total charge of <span class="math notranslate nohighlight">\(+4.50\)</span> nC. The ring is situated in the <span class="math notranslate nohighlight">\(yz\)</span>-plane with the origin of reference frame at its center. Find the electric field at points</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(x = 8.00\)</span> cm</p></li>
-<li><p><span class="math notranslate nohighlight">\(x = 10.0\)</span> m</p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
-</pre></div>
-</div>
-</div>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C1.3</h2>
-    </header>
-<p>A positive charge <span class="math notranslate nohighlight">\(Q\)</span> is distributed uniformly along the y=axis between <span class="math notranslate nohighlight">\(y = +a\)</span> and <span class="math notranslate nohighlight">\(y = -a\)</span>.</p>
-<ol class="arabic simple">
-<li><p>Find the electric field at point P on the x-axis at a distance x from the origin.</p></li>
-<li><p>How does the electric field at P behave if the line charge is infinitely long?</p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-input tag_hide-output docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
-
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-<span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">a</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span>
-
-<span class="n">dEx</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="p">((</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">Ex</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">dEx</span><span class="p">,(</span><span class="n">y</span><span class="p">,</span><span class="o">-</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Ex</span><span class="p">)</span>
-
-<span class="n">dEy</span> <span class="o">=</span> <span class="n">y</span><span class="o">/</span><span class="p">((</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">Ey</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">dEy</span><span class="p">,(</span><span class="n">y</span><span class="p">,</span><span class="o">-</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Ey</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.12837916709551*sqrt(pi)*a/(x**2.0*sqrt(a**2/x**2 + 1))
-0
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C1.4</h2>
-    </header>
-<p>Calculate the magnitude and direction of the electric field <span class="math notranslate nohighlight">\(2.0\)</span> m from a long wire that is charged uniformly at <span class="math notranslate nohighlight">\(\lambda = 4.0\times 10^{-6}\)</span> C/m.</p>
-<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/5-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
-</pre></div>
-</div>
-</div>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C1.5</h2>
-    </header>
-<p>The charge per unit length on the thin semicircular wire shown below is <span class="math notranslate nohighlight">\(\lambda\)</span>. What is the electric field at the point P?</p>
-<img src="P-C1.2.png" width="250">
-<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-2/pages/5-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
-</pre></div>
-</div>
-</div>
+\[ dq = \sigma dA \]</div>
+<p><strong>Volume Charge</strong></p>
+<div class="math notranslate nohighlight">
+\[ dq = \rho dV \]</div>
+<p>The form of the electric field equation I will be using is:</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ \vec{E} = kq\frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} \tag{1}\]</div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="c1-2-2-methodology">
+<h2>C1.2.2 Methodology<a class="headerlink" href="#c1-2-2-methodology" title="Permalink to this heading">#</a></h2>
+<p>Below are the steps taken to obtain the electric field. The following sections will illustrate some examples of the approach.</p>
+<ol class="arabic simple">
+<li><p>Make a sketch. Illustrate the infinitesimal charge, its size, the point P of which we want to know the electric field, and positions vectors for the charge as well as the point P.</p></li>
+<li><p>Write down the charge in terms of the density and spatial size (see section above).</p></li>
+<li><p>Write down the position vectors for the infinitesimal charge and the point P. This is usually done in a Cartesian <span class="math notranslate nohighlight">\(xyz\)</span>-coordinate system but could also be in cylindrical coordinates (<span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span>, <span class="math notranslate nohighlight">\(z\)</span>).</p></li>
+<li><p>Write down the distance between the infinitesimal charge and the point P. Express this in terms of the coordinates using Pythagorean theorem.</p></li>
+<li><p>Insert all the information into Equation 1 above.</p></li>
+<li><p>Integrate to obtain the E-field. It is acceptable to look up the integral in a table or use computational methods.</p></li>
+</ol>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -572,13 +467,22 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="solving-methodology.html"
+       href="E-field-system.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">C1.2 Solving Methodology - Charge Distributions</p>
+        <p class="prev-next-title">C1.1 Electric Field - System of Charges</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="problemsC1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">C1.X Problems</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -589,6 +493,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c1-2-1-set-up">C1.2.1 Set-Up</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c1-2-2-methodology">C1.2.2 Methodology</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
