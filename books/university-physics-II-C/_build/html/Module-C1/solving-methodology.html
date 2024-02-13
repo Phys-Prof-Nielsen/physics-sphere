@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-C1/solving-methodology';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="C1.X Problems" href="problemsC1.html" />
+    <link rel="next" title="C1.3 Examples" href="examples.html" />
     <link rel="prev" title="C1.1 Electric Field - System of Charges" href="E-field-system.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -162,6 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="E-field-system.html">C1.1 Electric Field - System of Charges</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">C1.2 Solving Methodology - Charge Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">C1.3 Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problemsC1.html">C1.X Problems</a></li>
 </ul>
 
@@ -416,9 +417,12 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[ dq = \rho dV \]</div>
 <p>The form of the electric field equation I will be using is:</p>
+<div class="math notranslate nohighlight">
+\[ \vec{E} = kq\frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} \]</div>
+<p>and the field contribution for the infinitesimal charge is</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
-\[ \vec{E} = kq\frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} \tag{1}\]</div>
+\[ d\vec{E} = kdq\frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} \tag{1}\]</div>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="c1-2-2-methodology">
@@ -476,11 +480,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="problemsC1.html"
+       href="examples.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C1.X Problems</p>
+        <p class="prev-next-title">C1.3 Examples</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

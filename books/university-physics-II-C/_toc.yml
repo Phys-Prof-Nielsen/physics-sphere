@@ -13,4 +13,5 @@ parts:
   chapters:
   - file: Module-C1/E-field-system
   - file: Module-C1/solving-methodology
+  - file: Module-C1/examples
   - file: Module-C1/problemsC1
