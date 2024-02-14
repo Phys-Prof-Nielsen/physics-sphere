@@ -15,3 +15,12 @@ parts:
   - file: Module-C1/solving-methodology
   - file: Module-C1/examples
   - file: Module-C1/problemsC1
+
+- caption: Module C3 - Capacitors
+  chapters:
+  - file: Module-C3/problemsC3
+  
+- caption: Module C4 - DC Circuits
+  chapters:
+  - file: Module-C4/problemsC4
+
