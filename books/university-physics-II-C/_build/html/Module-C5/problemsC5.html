@@ -563,6 +563,7 @@ The relationship is: a = a&#39;
 <span class="c1"># v&#39; is speed relative to wind: still air speed</span>
 
 <span class="n">u_x</span> <span class="o">=</span> <span class="mf">50.0</span><span class="o">*</span><span class="p">(</span><span class="mi">1000</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3600</span><span class="p">)</span>  <span class="c1"># + to the east</span>
+<span class="n">u_y</span> <span class="o">=</span> <span class="mf">0.0</span>
 
 <span class="n">speed_prime</span> <span class="o">=</span> <span class="mf">200.0</span><span class="o">*</span><span class="p">(</span><span class="mi">1000</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3600</span><span class="p">)</span>
 
@@ -571,18 +572,20 @@ The relationship is: a = a&#39;
 <span class="n">v_prime_y</span> <span class="o">=</span> <span class="n">speed_prime</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
 
 <span class="n">v_x</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="c1"># no east velocity relative to ground</span>
+<span class="n">v_y</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v_y&#39;</span><span class="p">)</span>
 
 <span class="n">eqx</span> <span class="o">=</span> <span class="n">v_x</span> <span class="o">-</span> <span class="n">v_prime_x</span> <span class="o">-</span> <span class="n">u_x</span>
-<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eqx</span><span class="p">,</span><span class="n">theta</span><span class="p">)</span>
-<span class="n">theta</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="n">eqy</span> <span class="o">=</span> <span class="n">v_y</span> <span class="o">-</span> <span class="n">v_prime_y</span> <span class="o">-</span> <span class="n">u_y</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eqx</span><span class="p">,</span><span class="n">eqy</span><span class="p">),(</span><span class="n">theta</span><span class="p">,</span><span class="n">v_y</span><span class="p">))</span>
 
+<span class="n">theta</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="n">v_y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
 <span class="c1"># angle measured CCWfrom east direction</span>
 <span class="c1"># make it measured CCW from north</span>
 <span class="n">angle</span> <span class="o">=</span> <span class="n">theta</span> <span class="o">-</span> <span class="mi">90</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Direction is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; west of north&#39;</span><span class="p">)</span>
 
-<span class="n">v_y</span> <span class="o">=</span> <span class="n">speed_prime</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">theta</span><span class="p">))</span>
-<span class="n">d_y</span> <span class="o">=</span> <span class="mf">300e3</span>
+<span class="n">d_y</span> <span class="o">=</span> <span class="mf">300.0e3</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">d_y</span><span class="o">/</span><span class="n">v_y</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">/</span><span class="mi">60</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
