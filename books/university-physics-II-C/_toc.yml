@@ -30,4 +30,5 @@ parts:
   - file: Module-C5/galilean-relativity-length
   - file: Module-C5/galilean-relativity-displacement
   - file: Module-C5/galilean-relativity-velocity
+  - file: Module-C5/problemsC5
 
