@@ -23,4 +23,11 @@ parts:
 - caption: Module C4 - DC Circuits
   chapters:
   - file: Module-C4/problemsC4
+  
+- caption: Module C5 - Galilean Relativity
+  chapters:
+  - file: Module-C5/galilean-relativity-coordinate
+  - file: Module-C5/galilean-relativity-length
+  - file: Module-C5/galilean-relativity-displacement
+  - file: Module-C5/galilean-relativity-velocity
 
