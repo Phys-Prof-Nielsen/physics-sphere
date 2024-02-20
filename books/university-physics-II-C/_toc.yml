@@ -36,4 +36,4 @@ parts:
   chapters:
   - file: Module-C6/intro-special-relativity
   - file: Module-C6/time-dilation
-  - file: Module-C5/length-contraction
+  - file: Module-C6/length-contraction
