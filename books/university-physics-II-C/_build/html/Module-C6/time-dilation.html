@@ -508,7 +508,7 @@ Proper time measured by Optimus Prime: 1.4676450967311543e-08 s
 \[ \Delta t = \frac{\Delta t_0}{\sqrt{ 1 - \frac{u^2}{c^2} }} \]</div>
 <p>HINT: square both sides of the equation from Box 2, isolate <span class="math notranslate nohighlight">\(\Delta t\)</span> and only consider the positive root. It is common to write <span class="math notranslate nohighlight">\(\gamma = \frac{1}{\sqrt{ 1 - \frac{u^2}{c^2} }}\)</span> to simplify the equation.</p>
 <p>This result is known as the <strong>time dilation</strong>.</p>
-</div></section>
+</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="c6-2-3-time-dilation">
 <h2>C6.2.3 Time Dilation<a class="headerlink" href="#c6-2-3-time-dilation" title="Permalink to this heading">#</a></h2>
@@ -523,7 +523,60 @@ Proper time measured by Optimus Prime: 1.4676450967311543e-08 s
 <li><p>If Optimus Prime is moving at <span class="math notranslate nohighlight">\(u = 1.00\textrm{e}5\)</span> m/s relative to Optimus, what time interval does Optimus observe between events 1 and 3?</p></li>
 <li><p>How does the elapsed time for Optimus compare to the elapsed time by Optimus Prime?</p></li>
 </ol>
-</div><div class="alert alert-warning">
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.998e8</span>
+<span class="n">u</span> <span class="o">=</span> <span class="mf">1.00e5</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">2.20</span>
+
+<span class="n">dt0</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">d</span><span class="o">/</span><span class="n">c</span>
+
+<span class="n">gamma</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">u</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="n">gamma</span><span class="o">*</span><span class="n">dt0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Optimus will observe the time interval to be: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Optimus prime will observe the time interval to be: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dt0</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Optimus observes a longer interval than Optimus Prime (not considering significant figures)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimus will observe the time interval to be: 1.467645178375823e-08 s
+ 
+Optimus prime will observe the time interval to be: 1.4676450967311543e-08 s
+ 
+Optimus observes a longer interval than Optimus Prime (not considering significant figures)
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="alert alert-warning">
 <b>Box 5</b><br>
 <p>An Boeing 787 flies from San Francisco to Tokyo (<span class="math notranslate nohighlight">\(8260.0\)</span> km) at a ground speed of <span class="math notranslate nohighlight">\(300.0\)</span> m/s.</p>
 <ol class="arabic simple">
@@ -531,7 +584,66 @@ Proper time measured by Optimus Prime: 1.4676450967311543e-08 s
 <li><p>Will a passenger on-board the plane measure a shorter or longer time interval?</p></li>
 <li><p>How much shorter or longer is the time interval for the passenger on-board the plane? Give your answer to 4 significant figures.</p></li>
 </ol>
-</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">decimal</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.998e8</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">8260.0e3</span>
+<span class="n">u</span> <span class="o">=</span> <span class="mf">300.0</span>
+
+<span class="c1"># Part 1</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">d</span><span class="o">/</span><span class="n">u</span><span class="p">)</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.30e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time by ground-observer: &#39;</span><span class="o">+</span><span class="n">dt</span><span class="o">+</span><span class="s1">&#39; s&#39;</span><span class="p">)</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">decimal</span><span class="o">.</span><span class="n">Decimal</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="n">gamma</span> <span class="o">=</span> <span class="n">decimal</span><span class="o">.</span><span class="n">Decimal</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">u</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span>
+<span class="n">dt0</span> <span class="o">=</span> <span class="n">dt</span><span class="o">/</span><span class="n">gamma</span>
+<span class="n">dt0</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.30e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time by on-board passenger: &#39;</span><span class="o">+</span><span class="n">dt0</span><span class="o">+</span><span class="s1">&#39; s. It is shorter.&#39;</span><span class="p">)</span>
+<span class="n">dt0</span> <span class="o">=</span> <span class="n">decimal</span><span class="o">.</span><span class="n">Decimal</span><span class="p">(</span><span class="n">dt0</span><span class="p">)</span>
+
+<span class="n">diff</span> <span class="o">=</span> <span class="n">dt</span> <span class="o">-</span> <span class="n">dt0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The flight is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s shorter.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Elapsed time by ground-observer: 2.753333333333333212067373096943e+04 s
+ 
+Elapsed time by on-board passenger: 2.753333333331954588925802084000e+4 s. It is shorter.
+The flight is 1.378623141571012943E-8 s shorter.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="c6-2-4-time-dilation-verified-the-hafele-keating-experiment">
 <h2>C6.2.4 Time Dilation Verified - The Hafele-Keating Experiment<a class="headerlink" href="#c6-2-4-time-dilation-verified-the-hafele-keating-experiment" title="Permalink to this heading">#</a></h2>
 <p>The time dilation between two observers, one on-board an aircraft and one on the ground was actually verified in 1971. The experiment is known as the <a class="reference external" href="https://en.wikipedia.org/wiki/Hafele%E2%80%93Keating_experiment">Hafele-Keating Experiment</a> and consisted of two atomic clocks: one on the ground and one on-board a commercial aircraft flying around the world twice.</p>
@@ -544,13 +656,144 @@ Proper time measured by Optimus Prime: 1.4676450967311543e-08 s
 <p>High-energy subatomic particles (cosmic rays) coming from space interact with atoms in the earth’s atmosphere, in some cases producing unstable particles called <strong>muons</strong>. A muon has a mean life time of <span class="math notranslate nohighlight">\(2.20~\mu\)</span>s as measured in its own reference frame before decaying into other particles. If a muon is moving at <span class="math notranslate nohighlight">\(0.990c\)</span> (<span class="math notranslate nohighlight">\(c = 2.9979\times 10^{8}\)</span> m/s) relative to earth (laboratory frame), what will an observer on earth measure its lifetime to be?</p>
 <img src="C6-fig2.4.png" width="200">
 A Feynman diagram showing a $\mu^{-}$ muon decaying into a muon neutrino, an anti electron neutrino, and an electron through the weak interaction via an intermediate heavy $W^{-}$ boson. Cosmic rays and the atmosphere provides a natural environment to study particle physics.  
-</div><div class="alert alert-warning">
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.9979e8</span>
+<span class="n">u</span> <span class="o">=</span> <span class="mf">0.990</span><span class="o">*</span><span class="n">c</span>
+
+<span class="n">dt0</span> <span class="o">=</span> <span class="mf">2.20e-6</span>
+
+<span class="n">gamma</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">u</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="n">gamma</span><span class="o">*</span><span class="n">dt0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;An observer on earth see a life time of &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>An observer on earth see a life time of 1.559538651018338e-05 s
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 7</b><br>
 <p>For the muon in Box 6, what is the greatest distance the muon potentially could travel in its reference frame before decaying?</p>
-</div><div class="alert alert-warning">
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.9979e8</span>
+<span class="n">u</span> <span class="o">=</span> <span class="mf">0.990</span><span class="o">*</span><span class="n">c</span>
+
+<span class="n">dt0</span> <span class="o">=</span> <span class="mf">2.20e-6</span>
+
+<span class="n">dx_prime</span> <span class="o">=</span> <span class="n">u</span><span class="o">*</span><span class="n">dt0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Distance traveled as observed by Muon: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dx_prime</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distance traveled as observed by Muon: 652.94262 m
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 8</b><br>
 <p>For the muon in Box 6, how far does the muon travel in the laboratory frame before decaying?</p>
-</div></section>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.9979e8</span>
+<span class="n">u</span> <span class="o">=</span> <span class="mf">0.990</span><span class="o">*</span><span class="n">c</span>
+
+<span class="n">dt0</span> <span class="o">=</span> <span class="mf">2.20e-6</span>
+
+<span class="n">gamma</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">u</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="n">gamma</span><span class="o">*</span><span class="n">dt0</span>
+
+<span class="n">dx</span> <span class="o">=</span> <span class="n">u</span><span class="o">*</span><span class="n">dt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Distance traveled as observed from ground: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distance traveled as observed from ground: 4628.587512668996 m
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 
     <script type="text/x-thebe-config">
