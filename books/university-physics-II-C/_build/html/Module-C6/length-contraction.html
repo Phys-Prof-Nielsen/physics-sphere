@@ -66,6 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-C6/length-contraction';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="C6.4 Problems" href="problemsC6.html" />
     <link rel="prev" title="C6.2 Time Dilation" href="time-dilation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -185,6 +186,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="intro-special-relativity.html">C6.1 Special Relativity -  An Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="time-dilation.html">C6.2 Time Dilation</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">C6.3 Length Contraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problemsC6.html">C6.4 Problems</a></li>
 </ul>
 
     </div>
@@ -454,8 +456,32 @@ document.write(`
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.9979e8</span>
+<span class="n">u</span> <span class="o">=</span> <span class="mf">0.990</span><span class="o">*</span><span class="n">c</span>
+
+<span class="n">l0</span> <span class="o">=</span> <span class="mf">5.00e3</span>
+
+<span class="n">gamma</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">u</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">l</span> <span class="o">=</span> <span class="n">l0</span><span class="o">/</span><span class="n">gamma</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Thickness of atmosphere from Muon perspective: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Thickness of atmosphere from Muon perspective: 705.3367989832947 m
 </pre></div>
 </div>
 </div>
@@ -507,6 +533,15 @@ document.write(`
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">C6.2 Time Dilation</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="problemsC6.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">C6.4 Problems</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
