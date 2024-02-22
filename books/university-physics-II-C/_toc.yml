@@ -38,3 +38,7 @@ parts:
   - file: Module-C6/time-dilation
   - file: Module-C6/length-contraction
   - file: Module-C6/problemsC6
+  
+- caption: Module C7 -  Photons
+  chapters:
+  - file: Module-C7/problemsC7
