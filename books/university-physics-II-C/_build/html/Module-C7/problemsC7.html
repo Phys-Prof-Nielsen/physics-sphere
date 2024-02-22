@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>C7.X Problems &#8212; A Competency Approach to University Physics II</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -61,12 +60,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-C7/problemsC7';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="C6.4 Problems" href="../Module-C6/problemsC6.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -415,10 +416,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="c7-x-problems">
-<h1>C7.X Problems<a class="headerlink" href="#c7-x-problems" title="Permalink to this heading">#</a></h1>
+<h1>C7.X Problems<a class="headerlink" href="#c7-x-problems" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C7.1</h2>
     </header>
-<p>A photon has energy 20 keV. What are its frequency and wavelength?</p>
+<p>A photon has energy 20.0 keV. What are its frequency and wavelength?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-3/pages/6-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -433,8 +434,33 @@ document.write(`
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">E_photon</span> <span class="o">=</span> <span class="mf">20.0e3</span>
+
+<span class="n">h_ev</span> <span class="o">=</span> <span class="mf">4.1357e-15</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.998e8</span>
+
+<span class="n">wave_f</span> <span class="o">=</span> <span class="n">E_photon</span><span class="o">/</span><span class="n">h_ev</span>
+<span class="n">wave_l</span> <span class="o">=</span> <span class="n">c</span><span class="o">/</span><span class="n">wave_f</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Photon frequency: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">wave_f</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; Hz&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Photon wavelength: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">wave_l</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Photon frequency: 4.835940711366879e+18 Hz
+ 
+Photon wavelength: 6.199414299999999e-11 m
 </pre></div>
 </div>
 </div>
@@ -443,7 +469,7 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C7.2</h2>
     </header>
 <ol class="arabic simple">
-<li><p>What is the longest wavelength of radiation that can eject a photoelectron from silver?</p></li>
+<li><p>What is the longest wavelength of radiation that can eject a photoelectron from silver? Use <a class="reference external" href="https://openstax.org/books/university-physics-volume-3/pages/6-2-photoelectric-effect#fs-id1163709723864">Table of work functions from OpenStax</a></p></li>
 <li><p>Is it in the visible range?</p></li>
 </ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-3/pages/6-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
@@ -460,8 +486,47 @@ document.write(`
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+
+<span class="c1"># Part 1</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="mf">4.73</span>
+
+<span class="n">k_electron</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="c1">#minimum kinetic energy</span>
+
+<span class="n">h_ev</span> <span class="o">=</span> <span class="mf">4.1357e-15</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.998e8</span>
+
+<span class="n">wave_l</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;wave_l&#39;</span><span class="p">)</span>
+
+<span class="n">E_photon</span> <span class="o">=</span> <span class="n">h_ev</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="n">wave_l</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">k_electron</span> <span class="o">-</span> <span class="n">E_photon</span> <span class="o">+</span> <span class="n">phi</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">wave_l</span><span class="p">)</span>
+<span class="n">wave_l</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">wave_l</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">wave_l</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wavelength of photon: &#39;</span><span class="o">+</span><span class="n">wave_l</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is not visible light, it is UV light.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wavelength of photon: 2.62e-07 m
+ 
+This is not visible light, it is UV light.
 </pre></div>
 </div>
 </div>
@@ -484,8 +549,39 @@ document.write(`
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">wave_l</span> <span class="o">=</span> <span class="mf">337e-9</span>
+
+<span class="n">k_electron</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="c1">#minimum kinetic energy</span>
+
+<span class="n">h_ev</span> <span class="o">=</span> <span class="mf">4.1357e-15</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.998e8</span>
+
+<span class="c1"># binding energy is the work function</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;phi&#39;</span><span class="p">)</span>
+
+<span class="n">E_photon</span> <span class="o">=</span> <span class="n">h_ev</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="n">wave_l</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">k_electron</span> <span class="o">-</span> <span class="n">E_photon</span> <span class="o">+</span> <span class="n">phi</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>
+
+<span class="n">phi</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.3}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Binding energy (work function) of magnesium is: &#39;</span><span class="o">+</span><span class="n">phi</span><span class="o">+</span><span class="s1">&#39; eV&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Binding energy (work function) of magnesium is: 3.68 eV
 </pre></div>
 </div>
 </div>
@@ -493,7 +589,11 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C7.4</h2>
     </header>
-<p>The work function for potassium is 2.24 eV. What is the cutoff frequency when this metal is used as photoelectrode? What is the stopping potential for the emitted electrons when this photoelectrode is exposed to radiation of frequency 1200.0 THz?</p>
+<p>The work function for potassium is 2.24 eV.</p>
+<ol class="arabic simple">
+<li><p>What is the cutoff frequency when this metal is used as photoelectrode?</p></li>
+<li><p>What is the stopping potential for the emitted electrons when this photoelectrode is exposed to radiation of frequency 1200.0 THz?</p></li>
+</ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-3/pages/6-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -508,8 +608,52 @@ document.write(`
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">phi</span> <span class="o">=</span> <span class="mf">2.24</span>
+
+<span class="c1"># Part 1</span>
+<span class="n">k_electron</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="c1">#no photo electrons</span>
+
+<span class="n">h_ev</span> <span class="o">=</span> <span class="mf">4.1357e-15</span>
+
+<span class="c1"># frequency</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+
+<span class="n">E_photon</span> <span class="o">=</span> <span class="n">h_ev</span><span class="o">*</span><span class="n">f</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">k_electron</span> <span class="o">-</span> <span class="n">E_photon</span> <span class="o">+</span> <span class="n">phi</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.3}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cut-off frequency is: &#39;</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="s1">&#39; Hz&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="n">e</span> <span class="o">=</span> <span class="mi">1</span>  
+<span class="n">f</span> <span class="o">=</span> <span class="mf">1200.0e12</span>
+
+<span class="n">E_photon</span> <span class="o">=</span> <span class="n">h_ev</span><span class="o">*</span><span class="n">f</span>
+<span class="n">k_max</span> <span class="o">=</span> <span class="n">E_photon</span> <span class="o">-</span> <span class="n">phi</span>   <span class="c1"># in eV</span>
+<span class="n">V_stop</span> <span class="o">=</span> <span class="n">k_max</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Stopping potential: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">V_stop</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; eV&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cut-off frequency is: 5.42e+14 Hz
+ 
+Stopping potential: 2.7228399999999997 eV
 </pre></div>
 </div>
 </div>
@@ -532,8 +676,40 @@ document.write(`
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">phi</span> <span class="o">=</span> <span class="mf">4.73</span>
+<span class="n">wave_l</span> <span class="o">=</span> <span class="mf">80.0e-9</span>
+
+<span class="n">h_ev</span> <span class="o">=</span> <span class="mf">4.1357e-15</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.998e8</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">9.109e-31</span>
+
+<span class="n">E_photon</span> <span class="o">=</span> <span class="n">h_ev</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="n">wave_l</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">)</span>
+
+<span class="n">k_electron</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mf">1.602e-19</span>  <span class="c1">#in eV</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">k_electron</span> <span class="o">-</span> <span class="n">E_photon</span> <span class="o">+</span> <span class="n">phi</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.3e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Max. speed is: &#39;</span><span class="o">+</span><span class="n">v</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Max. speed is: 1.946e+06 m/s
 </pre></div>
 </div>
 </div>
@@ -556,8 +732,159 @@ document.write(`
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">wave_l</span> <span class="o">=</span> <span class="mf">589e-9</span>
+<span class="n">P</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">6.626e-34</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.998e8</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="n">E_photon</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="n">wave_l</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="n">P</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">E_photon</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of photons: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of photons: 5.930102913965987e+18
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C7.7</h2>
+    </header>
+<p>A 400.0 nm laser beam is projected onto a calcium electrode. The power of the laser beam is 2.00 mW and the work function of calcium is 2.31 eV.</p>
+<ol class="arabic simple">
+<li><p>How many photoelectrons per second are ejected?</p></li>
+<li><p>What net power is carried away by photoelectrons?</p></li>
+</ol>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-3/pages/6-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">wave_l</span> <span class="o">=</span> <span class="mf">400.0e-9</span>
+<span class="n">P</span> <span class="o">=</span> <span class="mf">2.0e-3</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="mf">2.31</span>
+
+<span class="c1"># Part 1</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">6.626e-34</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.998e8</span>
+
+<span class="n">E_photon</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="n">wave_l</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="n">P</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">E_photon</span>
+<span class="n">N</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of electrons: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+
+<span class="c1"># Part 2</span>
+<span class="n">h_ev</span> <span class="o">=</span> <span class="mf">4.1357e-15</span>
+<span class="n">k_max</span> <span class="o">=</span> <span class="n">h_ev</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="n">wave_l</span> <span class="o">-</span> <span class="n">phi</span>
+
+<span class="n">E_electrons</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="o">*</span><span class="n">k_max</span><span class="o">*</span><span class="mf">1.602e-19</span>  <span class="c1">#convert from eV to Joules</span>
+
+<span class="n">E_electrons</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">E_electrons</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Net power carried by electrons: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">E_electrons</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; W&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of electrons: 4.03e+15
+Net power carried by electrons: 5.10e-04 W
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C7.8</h2>
+    </header>
+<ol class="arabic simple">
+<li><p>Calculate the number of photoelectrons per second that are ejected from a 1.00 mm<span class="math notranslate nohighlight">\(^2\)</span> area of sodium metal by a 500.0 nm radiation with intensity 1.30 kW/m<span class="math notranslate nohighlight">\(^2\)</span> (the intensity of sunlight above Earth’s atmosphere).</p></li>
+<li><p>Given the work function of the metal as 2.28 eV, what power is carried away by these photoelectrons?</p></li>
+</ol>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-3/pages/6-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="c1"># Part 1</span>
+<span class="n">A</span> <span class="o">=</span> <span class="mf">1.00</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">1000</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># in m^2</span>
+<span class="n">wave_l</span> <span class="o">=</span> <span class="mf">500.0e-9</span>
+<span class="n">I</span> <span class="o">=</span> <span class="mf">1.30e3</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="mf">6.626e-34</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.998e8</span>
+
+<span class="n">E_photon</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="n">wave_l</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">I</span><span class="o">*</span><span class="n">A</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">P</span><span class="o">*</span><span class="n">dt</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="n">E</span><span class="o">/</span><span class="n">E_photon</span>
+<span class="n">N</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of electrons: &#39;</span><span class="o">+</span><span class="n">N</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="mf">2.28</span><span class="o">*</span><span class="mf">1.602e-19</span>  <span class="c1"># work function in Joules</span>
+
+<span class="n">k_max</span> <span class="o">=</span> <span class="n">E_photon</span> <span class="o">-</span> <span class="n">phi</span>
+<span class="n">E_electrons</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="o">*</span><span class="n">k_max</span>
+
+<span class="n">E_electrons</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">E_electrons</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Net power carried by electrons: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">E_electrons</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; W&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of electrons: 3.27e+15
+Net power carried by electrons: 1.05e-04 W
 </pre></div>
 </div>
 </div>
