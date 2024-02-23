@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>B1.1 Working with Data &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B1.2 Plots with Constant Velocities" href="plots-constant-velocity.html" />
     <link rel="prev" title="A Competency Approach to Introductory Physics: A Compendium to the B Exam" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -473,9 +474,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b1-1-working-with-data">
-<h1>B1.1 Working with Data<a class="headerlink" href="#b1-1-working-with-data" title="Permalink to this headline">#</a></h1>
+<h1>B1.1 Working with Data<a class="headerlink" href="#b1-1-working-with-data" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b1-1-1-motivation">
-<h2>B1.1.1 Motivation<a class="headerlink" href="#b1-1-1-motivation" title="Permalink to this headline">#</a></h2>
+<h2>B1.1.1 Motivation<a class="headerlink" href="#b1-1-1-motivation" title="Permalink to this heading">#</a></h2>
 <p>Physics is the way to explain the observable nature/universe(s) surrounding us and the theories behind physics are motivated through scientific observations. These observations constitute our data sets. Often we make observations of a parameter that varies with time or position. We may call time (or position) our <strong>independent variable</strong> and the measurable parameter that is depending on time (or position) the <strong>dependent variable</strong>. However, that is not a requirement. Sometimes we have hypotheses that may suggest we make observations using different independent variable.</p>
 <p>What we do with the data sets will depend on our objectives. Here are a few options that we will explore in this course:</p>
 <ul class="simple">
@@ -484,7 +485,7 @@ document.write(`
 </ul>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b1-1-2-examples">
-<h2>B1.1.2 Examples<a class="headerlink" href="#b1-1-2-examples" title="Permalink to this headline">#</a></h2>
+<h2>B1.1.2 Examples<a class="headerlink" href="#b1-1-2-examples" title="Permalink to this heading">#</a></h2>
 <p>Based on our current established theories from previous modules, we can give a few examples:</p>
 <ul class="simple">
 <li><p>Position vs. time: we have a relationship stating that <span class="math notranslate nohighlight">\(x = x_0 + v_{0x}t + \frac{1}{2}a_{x}t^2\)</span>, which is valid for <strong>constant</strong> acceleration. In this case, time is the independent variable and position is the dependent variable.</p></li>
@@ -493,7 +494,7 @@ document.write(`
 </ul>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b1-1-3-differences">
-<h2>B1.1.3 Differences<a class="headerlink" href="#b1-1-3-differences" title="Permalink to this headline">#</a></h2>
+<h2>B1.1.3 Differences<a class="headerlink" href="#b1-1-3-differences" title="Permalink to this heading">#</a></h2>
 <p>One of the most essential objects when dealing with data sets is the <strong>difference</strong>. It is quite simple and we have seen numerous examples of it. The difference is expressed through the greek capital letter <span class="math notranslate nohighlight">\(\Delta\)</span> and simply reads as <strong>a change in</strong>. With data, we form differences in various clever ways to investigate the data set. For example, the average velocity is defined as the difference in position over the difference in time:</p>
 <div class="math notranslate nohighlight">
 \[ \vec{v}_{av} = \frac{\Delta\vec{r}}{\Delta t} \]</div>
@@ -506,7 +507,7 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b1-1-4-scientific-plots">
-<h2>B1.1.4 Scientific Plots<a class="headerlink" href="#b1-1-4-scientific-plots" title="Permalink to this headline">#</a></h2>
+<h2>B1.1.4 Scientific Plots<a class="headerlink" href="#b1-1-4-scientific-plots" title="Permalink to this heading">#</a></h2>
 <p>Graphical representation is the most straightforward way to manipulate data into a way of interrogation the observations. When plotting we often have the independent variable on the horizontal axis and the dependent variable along the vertical axis, but there is no rule against flipping them around. In this common way of plotting we say that we are plotting the <strong>dependent variable vs. the independent variable</strong>. For example, position vs. time would show time on the horizontal axis and the position along the vertical axis.</p>
 <p>Sometimes, we may also be a little inventive in terms of what we are plotting. For example, if we have a data set of position as a function of time, we may plot position vs. time square instead of position vs. time. Other times we may consider logarithmic plots. These decisions can often be made if we have some sort of a theoretical model for the data. For example, exponential growth may suggest a logarithmic plot.</p>
 <p>If we do not have a theoretical model to suggest plotting profile, the data itself can guide us in the correct direction and we may use a <strong>curve-fitting algorithm</strong> to tell us how the data behave.</p>
