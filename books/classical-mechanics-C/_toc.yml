@@ -27,3 +27,7 @@ parts:
   - file: Module-C4/galilean-relativity-length
   - file: Module-C4/galilean-relativity-displacement
   - file: Module-C4/galilean-relativity-velocity
+  
+- caption: Module C5 - Potential Energy
+  chapters:
+  - file: Module-C5/problemsC5
