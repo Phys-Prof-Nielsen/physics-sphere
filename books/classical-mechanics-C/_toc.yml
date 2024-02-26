@@ -31,3 +31,7 @@ parts:
 - caption: Module C5 - Potential Energy
   chapters:
   - file: Module-C5/problemsC5
+  
+- caption: Module C6 - Classical Grvaity
+  chapters:
+  - file: Module-C6/newton-law-gravity
