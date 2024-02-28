@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>C7.X Problems &#8212; A Competency Approach to University Physics II</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="C6.4 Problems" href="../Module-C6/problemsC6.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -417,7 +416,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="c7-x-problems">
-<h1>C7.X Problems<a class="headerlink" href="#c7-x-problems" title="Permalink to this heading">#</a></h1>
+<h1>C7.X Problems<a class="headerlink" href="#c7-x-problems" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C7.1</h2>
     </header>
 <p>A photon has energy 20.0 keV. What are its frequency and wavelength?</p>
@@ -898,17 +897,207 @@ Net power carried by electrons: 1.05e-04 W
 <li><p>If the voltage used to accelerate the electrons was 20.0 kV, what are the highest frequency photon produced?</p></li>
 <li><p>Is the photon produced an x-ray?</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">V_acc</span> <span class="o">=</span> <span class="mf">20.0e3</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="mf">6.626e-34</span>
+<span class="n">e</span> <span class="o">=</span> <span class="mf">1.602e-19</span>
+
+<span class="c1"># Part 1</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span> <span class="o">-</span> <span class="n">e</span><span class="o">*</span><span class="n">V_acc</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Frequency is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; Hz&#39;</span><span class="p">)</span>
+      
+<span class="c1"># Part 2</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.998e8</span>
+<span class="n">wave_l</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span><span class="o">/</span><span class="n">f</span><span class="p">)</span>
+<span class="n">wave_l</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">wave_l</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wavelength: &#39;</span><span class="o">+</span><span class="n">wave_l</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+ 
+<span class="c1"># This is in the x-ray domain</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The photon is an x-ray photon.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Frequency is: 4.835496528825838e+18 Hz
+Wavelength: 6.20e-11 m
+The photon is an x-ray photon.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C7.10</h2>
     </header>
 <p>What is the minimum accelerating potential required to produce a 75.0 keV x-ray?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">E_photon</span> <span class="o">=</span> <span class="mf">75.0e3</span><span class="o">*</span><span class="p">(</span><span class="mf">1.602e-19</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#convert from eV to J</span>
+
+<span class="n">e</span> <span class="o">=</span> <span class="mf">1.602e-19</span>
+
+<span class="n">V_acc</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;V_acc&#39;</span><span class="p">)</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">E_photon</span> <span class="o">-</span> <span class="n">e</span><span class="o">*</span><span class="n">V_acc</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">V_acc</span><span class="p">)</span>
+
+<span class="n">V_acc</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Accelerating potential is: &#39;</span><span class="o">+</span><span class="n">V_acc</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accelerating potential is: 7.50e+4 V
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C7.11</h2>
     </header>
 <p>What is the momentum of a 589 nm yellow photon?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-3/pages/6-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">wave_l</span> <span class="o">=</span> <span class="mf">589e-9</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="mf">6.626e-34</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">h</span><span class="o">/</span><span class="n">wave_l</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Momentum of yellow photon: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">+</span> <span class="s1">&#39; Jm/s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Momentum of yellow photon: 1.1249575551782682e-27 Jm/s
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C7.12</h2>
     </header>
 <p>For collisions with free electrons, compare the Compton shift of a photon scattered as an angle of <span class="math notranslate nohighlight">\(30.0^\circ\)</span> to that of a photon scattered at <span class="math notranslate nohighlight">\(45.0^\circ\)</span>.</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-3/pages/6-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">theta1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mf">30.0</span><span class="p">)</span>
+<span class="n">theta2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mf">45.0</span><span class="p">)</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="mf">6.626e-34</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.998e8</span>
+<span class="n">m_e</span> <span class="o">=</span> <span class="mf">9.109e-31</span>
+
+<span class="n">diff1</span><span class="p">,</span><span class="n">diff2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;diff1, diff2&#39;</span><span class="p">)</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">diff1</span> <span class="o">-</span> <span class="n">h</span><span class="o">/</span><span class="p">(</span><span class="n">m_e</span><span class="o">*</span><span class="n">c</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta1</span><span class="p">))</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">diff2</span> <span class="o">-</span> <span class="n">h</span><span class="o">/</span><span class="p">(</span><span class="n">m_e</span><span class="o">*</span><span class="n">c</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta2</span><span class="p">))</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">diff1</span><span class="p">,</span><span class="n">diff2</span><span class="p">))</span>
+
+<span class="n">diff_ratio</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="n">diff1</span><span class="p">]</span><span class="o">/</span><span class="n">sol</span><span class="p">[</span><span class="n">diff2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wavelength shift ratio: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">diff_ratio</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wavelength shift ratio: 0.457417883412629
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C7.13</h2>
     </header>
 <p>X-rays of wavelength 12.5 pm are scattered from a block of carbon. What are the wavelengths of photons scattered at</p>
@@ -918,10 +1107,110 @@ Net power carried by electrons: 1.05e-04 W
 <li><p><span class="math notranslate nohighlight">\(180.0^\circ\)</span>?</p></li>
 </ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-3/pages/6-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">lambda0</span> <span class="o">=</span> <span class="mf">12.5e-12</span>
+
+<span class="n">theta1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mf">30.0</span><span class="p">)</span>
+<span class="n">theta2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mf">90.0</span><span class="p">)</span>
+<span class="n">theta3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mf">180.0</span><span class="p">)</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="mf">6.626e-34</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.998e8</span>
+<span class="n">m_e</span> <span class="o">=</span> <span class="mf">9.109e-31</span>
+
+<span class="n">lambda1</span><span class="p">,</span> <span class="n">lambda2</span><span class="p">,</span> <span class="n">lambda3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;lambda0, lambda1, lambda2&#39;</span><span class="p">)</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">lambda1</span> <span class="o">-</span> <span class="n">lambda0</span> <span class="o">-</span> <span class="n">h</span><span class="o">/</span><span class="p">(</span><span class="n">m_e</span><span class="o">*</span><span class="n">c</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta1</span><span class="p">))</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">lambda2</span> <span class="o">-</span> <span class="n">lambda0</span> <span class="o">-</span> <span class="n">h</span><span class="o">/</span><span class="p">(</span><span class="n">m_e</span><span class="o">*</span><span class="n">c</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta2</span><span class="p">))</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">lambda3</span> <span class="o">-</span> <span class="n">lambda0</span> <span class="o">-</span> <span class="n">h</span><span class="o">/</span><span class="p">(</span><span class="n">m_e</span><span class="o">*</span><span class="n">c</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta3</span><span class="p">))</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span> <span class="n">eq2</span><span class="p">,</span> <span class="n">eq3</span><span class="p">),(</span><span class="n">lambda1</span><span class="p">,</span> <span class="n">lambda2</span><span class="p">,</span> <span class="n">lambda3</span><span class="p">))</span>
+
+<span class="n">lambda1</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">lambda1</span><span class="p">])</span>
+<span class="n">lambda2</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">lambda2</span><span class="p">])</span>
+<span class="n">lambda3</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">lambda3</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The wavelengths are: &#39;</span><span class="o">+</span><span class="n">lambda1</span><span class="o">+</span><span class="s1">&#39;, &#39;</span><span class="o">+</span><span class="n">lambda2</span><span class="o">+</span><span class="s1">&#39;, &#39;</span><span class="o">+</span><span class="n">lambda3</span><span class="o">+</span><span class="s1">&#39; m, respectivele&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The wavelengths are: 1.28e-11, 1.49e-11, 1.74e-11 m, respectivele
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C7.14</h2>
     </header>
-<p>X-rays form ionizing radiation that is dangerous to living tissue and undetectable to the human eye. Suppose that a student researcher working in an X-ray diffraction laboratory is accidentally exposed to a fatal dose of radiation. Calculate the temperature increase of the researcher under the following conditions: the energy of X-ray photons is 200 keV and the researcher absorbs  <span class="math notranslate nohighlight">\(4\times 10^{13}\)</span> photons per each kilogram of body weight during the exposure. Assume that the specific heat of the student’s body is <span class="math notranslate nohighlight">\(3.47\)</span> kJ/(kg<span class="math notranslate nohighlight">\(\cdot\)</span>C).</p>
+<p>X-rays form ionizing radiation that is dangerous to living tissue and undetectable to the human eye. Suppose that a student researcher working in an X-ray diffraction laboratory is accidentally exposed to a fatal dose of radiation. Calculate the temperature increase of the researcher under the following conditions: the energy of X-ray photons is 200.0 keV and the researcher absorbs  <span class="math notranslate nohighlight">\(4.00\times 10^{13}\)</span> photons per each kilogram of body weight during the exposure. Assume that the specific heat of the student’s body is <span class="math notranslate nohighlight">\(3.47\)</span> kJ/(kg<span class="math notranslate nohighlight">\(\cdot\)</span>C).</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-3/pages/6-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="n">E_photon</span> <span class="o">=</span> <span class="mf">200.0e3</span><span class="o">*</span><span class="p">(</span><span class="mf">1.602e-19</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#convert to joules</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mf">4.00e13</span>  <span class="c1">#photons/kg</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">3.47e3</span>
+
+<span class="n">E_per_kg</span> <span class="o">=</span> <span class="n">E_photon</span><span class="o">*</span><span class="n">n</span>
+
+<span class="c1">#Q = mc*dT --&gt; Q/m = c*dT</span>
+
+<span class="n">dT</span> <span class="o">=</span> <span class="n">E_per_kg</span><span class="o">/</span><span class="n">c</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Temperature increase is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dT</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; degrees C&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Temperature increase is: 0.00036933717579250725 degrees C
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 
     <script type="text/x-thebe-config">
