@@ -45,3 +45,7 @@ parts:
   chapters:
   - file: Module-D8/rotational-work
   - file: Module-D8/problemsD8
+  
+- caption: Module D8 - D - Exam Practice
+  chapters:
+  - file: Practice-Problems/problems
