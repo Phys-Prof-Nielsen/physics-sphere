@@ -32,7 +32,7 @@ parts:
   chapters:
   - file: Module-C5/problemsC5
   
-- caption: Module C6 - Classical Grvaity
+- caption: Module C6 - Classical Gravity
   chapters:
   - file: Module-C6/newton-law-gravity
   - file: Module-C6/mass-distributions
