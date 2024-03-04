@@ -36,4 +36,5 @@ parts:
   chapters:
   - file: Module-C6/newton-law-gravity
   - file: Module-C6/mass-distributions
+  - file: Module-C6/problemsC6
   
