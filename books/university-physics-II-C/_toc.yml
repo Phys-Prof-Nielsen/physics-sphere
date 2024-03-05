@@ -42,3 +42,7 @@ parts:
 - caption: Module C7 -  Photons
   chapters:
   - file: Module-C7/problemsC7
+  
+- caption: Module C8 - Matter Waves
+  chapters:
+  - file: Module-C8/problemsC8
