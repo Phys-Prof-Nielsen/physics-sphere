@@ -1,0 +1,18 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Preample
+  chapters:
+  - file: Preample/Motivation
+  - file: Preample/Structure
+  - file: Preample/Learning_Outcomes 
+- caption: Module B1 - Numerical Methods
+  chapters:
+  - file: Module-B1/Numerical-methods
+  - file: Module-B1/Numerical-methods-practice
+  - file: Module-B1/Project-1-Covid-19
+  - file: Module-B1/Project-2-Artillery
+
