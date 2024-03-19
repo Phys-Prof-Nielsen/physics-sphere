@@ -465,11 +465,11 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
     <b> Box 4 </b><br>
 <p>A function is given by <span class="math notranslate nohighlight">\(f(x,y) = \frac{y^2}{x^3}\)</span>. Is the function increasing or decreasing at <span class="math notranslate nohighlight">\((x,y) = (2,3)\)</span> and at what rates?</p>
-<ol>
-    <li> if $x$ is varying and $y$ is fixed.
-        <li> if $y$ is varying and $x$ is fixed.
-    </ol>
-    <br><b>Answers</b>: decreasing at a rate of $1.7$ and increasing at a rate of $0.75$, respectively.
+<ul class="simple">
+<li><p>if <span class="math notranslate nohighlight">\(x\)</span> is varying and <span class="math notranslate nohighlight">\(y\)</span> is fixed.</p></li>
+<li><p>if <span class="math notranslate nohighlight">\(y\)</span> is varying and <span class="math notranslate nohighlight">\(x\)</span> is fixed.</p></li>
+</ul>
+<p><strong>Answers</strong>: decreasing at a rate of <span class="math notranslate nohighlight">\(1.7\)</span> and increasing at a rate of <span class="math notranslate nohighlight">\(0.75\)</span>, respectively.</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
@@ -481,8 +481,6 @@ document.write(`
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
 \[ \nabla f = \frac{\partial f}{\partial x}\hat{i} + \frac{\partial f}{\partial y}\hat{j} + \frac{\partial f}{\partial z}\hat{k}\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;/div&gt;
-</pre></div>
 </div>
 <p>Of course, if we are considering three spatial dimensions, we would add a <span class="math notranslate nohighlight">\(z\)</span> term. Here we introduced the symbol <strong>nabla</strong> for the <strong>differential operator</strong> (named <strong>del</strong>):</p>
 <div class="math notranslate nohighlight">
@@ -493,8 +491,10 @@ document.write(`
 <h3>Curl<a class="headerlink" href="#curl" title="Permalink to this heading">#</a></h3>
 <p>The curl of a vector field is related to the rotation or circulation of a vector field. We will not get into the conceptual meaning of it yet, but simply define it.</p>
 <p>The curl of a vector field <span class="math notranslate nohighlight">\(\vec{f}\)</span>  is defined as</p>
+<div class="alert alert-success">
 <div class="math notranslate nohighlight">
 \[ \nabla \times \vec{f} \]</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
     <b> Box 5 </b><br>
 <p>A function is given by <span class="math notranslate nohighlight">\(f(x,y) = x^2 + y^2\)</span>. Find the gradient of this function and evaluate it at a point <span class="math notranslate nohighlight">\(P = (2,3)\)</span>
