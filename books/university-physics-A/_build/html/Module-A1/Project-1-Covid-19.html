@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>A1.4 Realistic Projectile Motion Project 1: Covid-19 &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="A1.5 Realistic Projectile Motion Project 2: Artillery" href="Project-2-Artillery.html" />
     <link rel="prev" title="A1.3 Numerical Methods - Practice" href="Numerical-methods-practice.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -167,6 +168,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module A2 - Translational + Rotational Dynamics</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-A2/angular-momentum.html">A2.1 Angular Momentum Revisited</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-A2/translational-rotational.html">A2.2 A Note on Combined Translational and Rotational Angular Speed</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-A2/problemsA2.html">A2.x Problems</a></li>
 </ul>
 
@@ -433,20 +436,20 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="a1-4-realistic-projectile-motion-project-1-covid-19">
-<h1>A1.4 Realistic Projectile Motion Project 1: Covid-19<a class="headerlink" href="#a1-4-realistic-projectile-motion-project-1-covid-19" title="Permalink to this headline">#</a></h1>
+<h1>A1.4 Realistic Projectile Motion Project 1: Covid-19<a class="headerlink" href="#a1-4-realistic-projectile-motion-project-1-covid-19" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a1-4-1-objective">
-<h2>A1.4.1 Objective<a class="headerlink" href="#a1-4-1-objective" title="Permalink to this headline">#</a></h2>
+<h2>A1.4.1 Objective<a class="headerlink" href="#a1-4-1-objective" title="Permalink to this heading">#</a></h2>
 <p>The recommendation for safe physical distancing is 6 ft to limit the spread of the SARS-CoV-2 virus also known as the COVID-19. The objective of this project is to find out of 6 ft really is a safe distance or just something put forth by scientists who barely passed physics.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="a1-4-2-background">
-<h2>A1.4.2 Background<a class="headerlink" href="#a1-4-2-background" title="Permalink to this headline">#</a></h2>
+<h2>A1.4.2 Background<a class="headerlink" href="#a1-4-2-background" title="Permalink to this heading">#</a></h2>
 <section id="physics-background">
-<h3>Physics Background<a class="headerlink" href="#physics-background" title="Permalink to this headline">#</a></h3>
+<h3>Physics Background<a class="headerlink" href="#physics-background" title="Permalink to this heading">#</a></h3>
 <p>We have explored kinematics and numerical methods on how to solve first order differential equations that can not be solved through analytical integration. This allow us to study a more realistic trajectory for the COVID-19 molecule in comparison to the textbook standard projectile motion.</p>
 <p>The trajectory of the molecule(s) can be parameterized by <span class="math notranslate nohighlight">\(x\)</span>- and <span class="math notranslate nohighlight">\(y\)</span>-positions (with <span class="math notranslate nohighlight">\(y\)</span> being our vertical direction) in a <span class="math notranslate nohighlight">\(xy\)</span>-plane with these positions dictated through accelerations and velocites. Obviously, we have the acceleration of gravity acting on the molecule(s) in the vertical direction, but we will go one step futher and include acceleration due to air drag after the molecule(s) leave the host.</p>
 </section>
 <section id="covid-19-molecule">
-<h3>Covid-19 Molecule<a class="headerlink" href="#covid-19-molecule" title="Permalink to this headline">#</a></h3>
+<h3>Covid-19 Molecule<a class="headerlink" href="#covid-19-molecule" title="Permalink to this heading">#</a></h3>
 <img src="covid.jpeg" width="300">
 <p>The Covid-19 pandemic was caused by the SARS-CoV-2 virus and predominantly spread through droplet transmission via breathing talk, cough, and sneeze. Due to its effective transmission and novel nature, it caused a pandemic and affected the life of everyone more or less. While the most severe cases resulted in deaths, a majority of people only exhibited cold-like symptoms.</p>
 <p>The novel nature of the virus implies that we do not have a clear picture of long-term effects of this virus and as such, catious behaviors are recommended to limit its transmission. The number one recommendation to spread the virus is termed <b>social distancing</b>, which is an absolutely ridiculous term as it clearly refers to <b>physical distancing</b>. The goal is to avoid physical interactions of close proximity. Social interactions can take place over large distances via phone or computer and has absolutely no capability of transmitting the virus.</p>
@@ -454,9 +457,9 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="a1-4-3-methodology">
-<h2>A1.4.3 Methodology<a class="headerlink" href="#a1-4-3-methodology" title="Permalink to this headline">#</a></h2>
+<h2>A1.4.3 Methodology<a class="headerlink" href="#a1-4-3-methodology" title="Permalink to this heading">#</a></h2>
 <section id="numerical-method">
-<h3>Numerical Method<a class="headerlink" href="#numerical-method" title="Permalink to this headline">#</a></h3>
+<h3>Numerical Method<a class="headerlink" href="#numerical-method" title="Permalink to this heading">#</a></h3>
 <p>The numerical scheme will attempt to approximate the <span class="math notranslate nohighlight">\(x\)</span>- and <span class="math notranslate nohighlight">\(y\)</span>-positions from the respective accelerations through</p>
 <div class="math notranslate nohighlight">
 \[ \vec{a} = \frac{d^2\vec{r}}{dt^2} \]</div>
@@ -504,14 +507,14 @@ document.write(`
 <p>and assume it is constant for our purpose. However, we must also incorporate the acceleration components due to air drag.</p>
 </section>
 <section id="air-drag">
-<h3>Air Drag<a class="headerlink" href="#air-drag" title="Permalink to this headline">#</a></h3>
+<h3>Air Drag<a class="headerlink" href="#air-drag" title="Permalink to this heading">#</a></h3>
 <p>These molecules leave the host at relatively high speeds and the appropriate magnitude of the acceleration due to air drag is</p>
 <div class="math notranslate nohighlight">
 \[a_{drag} = \frac{1}{2}\frac{\rho C_{D}A}{m}v^{2} \]</div>
 <p>where <span class="math notranslate nohighlight">\(\rho\)</span> is the density of the gas/fluid the object moves in. The speed of the object is <span class="math notranslate nohighlight">\(v\)</span>, <span class="math notranslate nohighlight">\(C_D\)</span> is a drag coefficient that depends on the shape of the object, <span class="math notranslate nohighlight">\(A\)</span> is the cross-sectional area of the object as it moves through the gas/fluid, and <span class="math notranslate nohighlight">\(m\)</span> is the mass of the object.</p>
 <p>We need to find the <span class="math notranslate nohighlight">\(x\)</span>- and <span class="math notranslate nohighlight">\(y\)</span>-components of this acceleration to implement into the numerical equations.</p>
 <section id="air-drag-components">
-<h4>Air Drag Components<a class="headerlink" href="#air-drag-components" title="Permalink to this headline">#</a></h4>
+<h4>Air Drag Components<a class="headerlink" href="#air-drag-components" title="Permalink to this heading">#</a></h4>
 <p>Let us try and find the x-component. We will assume a standard xy-reference system (y is upward) and an angle <span class="math notranslate nohighlight">\(\theta\)</span> measured CCW with respect to positive x-axis. We then have</p>
 <div class="math notranslate nohighlight">
 \[ a_{drag,x} = a_{drag}\cos\theta \tag{5}\]</div>
@@ -533,7 +536,7 @@ document.write(`
 </section>
 </section>
 <section id="iterative-equations">
-<h3>Iterative Equations<a class="headerlink" href="#iterative-equations" title="Permalink to this headline">#</a></h3>
+<h3>Iterative Equations<a class="headerlink" href="#iterative-equations" title="Permalink to this heading">#</a></h3>
 <p>Inserting the acceleration components into the iterativative equations and take into account the sign of the accelerations, our specific iterative equations to solve are then:</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -547,7 +550,7 @@ document.write(`
 </div>
 </section>
 <section id="auxiliary-equations-and-values">
-<h3>Auxiliary Equations and Values<a class="headerlink" href="#auxiliary-equations-and-values" title="Permalink to this headline">#</a></h3>
+<h3>Auxiliary Equations and Values<a class="headerlink" href="#auxiliary-equations-and-values" title="Permalink to this heading">#</a></h3>
 <p>We have a few more equations we need to calculate parameters in the accelerations due to air drag:</p>
 <ul class="simple">
 <li><p>Density of air: <span class="math notranslate nohighlight">\(\rho_{air} = 1.28\)</span> kg/m<span class="math notranslate nohighlight">\(^3\)</span></p></li>
@@ -582,7 +585,7 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="a1-4-4-results">
-<h2>A1.4.4 Results<a class="headerlink" href="#a1-4-4-results" title="Permalink to this headline">#</a></h2>
+<h2>A1.4.4 Results<a class="headerlink" href="#a1-4-4-results" title="Permalink to this heading">#</a></h2>
 <p>We will implement the numerical approach into a Python script below. It can also be done in an Excel sheet if desireable.</p>
 <p>We will assume the following:</p>
 <ul class="simple">
@@ -590,7 +593,7 @@ document.write(`
 <li><p>the virus is ejected horizontally.</p></li>
 </ul>
 <section id="sneeze-droplet">
-<h3>Sneeze Droplet<a class="headerlink" href="#sneeze-droplet" title="Permalink to this headline">#</a></h3>
+<h3>Sneeze Droplet<a class="headerlink" href="#sneeze-droplet" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -665,17 +668,17 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/88224900faedfb61dc96a3af821ed0043fe5e046113b3b2f2b94c94dd829d596.png" src="../_images/88224900faedfb61dc96a3af821ed0043fe5e046113b3b2f2b94c94dd829d596.png" />
+<img alt="../_images/cd598d5fde4b6920ffb55e20bfbcdf882331e107ee18dcf124cd4a774af21e46.png" src="../_images/cd598d5fde4b6920ffb55e20bfbcdf882331e107ee18dcf124cd4a774af21e46.png" />
 </div>
 </div>
 <section id="quick-observation">
-<h4>Quick Observation<a class="headerlink" href="#quick-observation" title="Permalink to this headline">#</a></h4>
+<h4>Quick Observation<a class="headerlink" href="#quick-observation" title="Permalink to this heading">#</a></h4>
 <p>The dashed line represents the 6 ft distance. It is evident that the droplet has not dropped significantly within the 6 ft distance. However, the droplet will miss the resporatory system between adults of normal heights.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 </section>
 </section>
 <section id="breathing">
-<h3>Breathing<a class="headerlink" href="#breathing" title="Permalink to this headline">#</a></h3>
+<h3>Breathing<a class="headerlink" href="#breathing" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -758,27 +761,27 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>157710.47457780084
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x_/sy1n6ycd6fj9w7wyy5k3w5qr0000gp/T/ipykernel_69414/1728733566.py:62: UserWarning: Attempting to set identical left == right == 0 results in singular transformations; automatically expanding.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/74/jtxzz5d9637f574hh5cmbq240000gn/T/ipykernel_50760/1728733566.py:62: UserWarning: Attempting to set identical low and high xlims makes transformation singular; automatically expanding.
   ax.set_xlim([0, np.max(x_arr)])
 </pre></div>
 </div>
-<img alt="../_images/af39f8a2fb5ab6410a75465a9a3b3a8fa76f0f2a6c929f158001b019aac2db67.png" src="../_images/af39f8a2fb5ab6410a75465a9a3b3a8fa76f0f2a6c929f158001b019aac2db67.png" />
+<img alt="../_images/9d5c74c6a8a55557c66f01c2885e44fbac42c6a7eb86b2437f53f5746c6926e7.png" src="../_images/9d5c74c6a8a55557c66f01c2885e44fbac42c6a7eb86b2437f53f5746c6926e7.png" />
 </div>
 </div>
 <section id="id1">
-<h4>Quick Observation<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<h4>Quick Observation<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <p>This just does not work! I inserted break statements in the code. Try and remove them so see what happens. The ratio of A/m is very large. This is causing the magnitudes of the velocity components to become very large in the first iteration. In the next iteration that results in a net positive acceleration, which is not realistic!</p>
 <p><strong>Our model does not work on the single SAR-CoV-2 molecule</strong>. This may not be surprising as other physical interactions becomes important and the air drag model we used is not suitable for this system. While our numerical iterations works just fine, it gives us erronous results due to wrong physics incorporated. The most important element here is the influence of air currents, which we have ignored. <strong>Air currents are capable of suspending these molecules in the air for several hours</strong>!</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 </section>
 <section id="a1-4-5-summary">
-<h2>A1.4.5 Summary<a class="headerlink" href="#a1-4-5-summary" title="Permalink to this headline">#</a></h2>
+<h2>A1.4.5 Summary<a class="headerlink" href="#a1-4-5-summary" title="Permalink to this heading">#</a></h2>
 <p>Our results above showed that a droplet containing thousands of SAR-CoV-2 virusses are capable of traveling a horizontal distance of ~9 meters through a sneeze from an average adult person with a height of 5’7”. The use of masks prevents these droplets to propagate and is therefore a excellent source of migitating the spread of the virus.</p>
 <p>Our results also showed that our physical model was not appropriate to work with particles sizes similar to the virus itself. Additonal physics must be implemented to properly address the propagation distance of these smaller particles.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="a1-4-6-references">
-<h2>A1.4.6 References<a class="headerlink" href="#a1-4-6-references" title="Permalink to this headline">#</a></h2>
+<h2>A1.4.6 References<a class="headerlink" href="#a1-4-6-references" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Tang J.W., et al. (2013) Airflow Dynamics of Human Jets: Sneezing and Breathing - Potential Sources of Infectious Aerosols, PLoS ONE 8(4): e59970. doi:10.1371/journal.pone.0059970</p></li>
 <li><p>Chaudhuri, S., et al. (2020) Modeling the role of respiratory droplets in Covid-19 type pandemics, Phys. Fluids 32, 063309 (2020); doi:10.1063/5.0015984</p></li>

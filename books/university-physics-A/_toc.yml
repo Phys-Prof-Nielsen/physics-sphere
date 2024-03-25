@@ -20,4 +20,6 @@ parts:
   
 - caption: Module A2 - Translational + Rotational Dynamics
   chapters:
+  - file: Module-A2/angular-momentum
+  - file: Module-A2/translational-rotational
   - file: Module-A2/problemsA2

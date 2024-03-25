@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>A1.3 Numerical Methods - Practice &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="A1.4 Realistic Projectile Motion Project 1: Covid-19" href="Project-1-Covid-19.html" />
     <link rel="prev" title="A1.2 Numerical Integration: Finite Difference Methods" href="Numerical-methods.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -167,6 +168,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module A2 - Translational + Rotational Dynamics</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-A2/angular-momentum.html">A2.1 Angular Momentum Revisited</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-A2/translational-rotational.html">A2.2 A Note on Combined Translational and Rotational Angular Speed</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-A2/problemsA2.html">A2.x Problems</a></li>
 </ul>
 
@@ -410,9 +413,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="a1-3-numerical-methods-practice">
-<h1>A1.3 Numerical Methods - Practice<a class="headerlink" href="#a1-3-numerical-methods-practice" title="Permalink to this headline">#</a></h1>
+<h1>A1.3 Numerical Methods - Practice<a class="headerlink" href="#a1-3-numerical-methods-practice" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a1-3-1-finite-difference-method">
-<h2>A1.3.1 Finite Difference Method<a class="headerlink" href="#a1-3-1-finite-difference-method" title="Permalink to this headline">#</a></h2>
+<h2>A1.3.1 Finite Difference Method<a class="headerlink" href="#a1-3-1-finite-difference-method" title="Permalink to this heading">#</a></h2>
 <p>In many real-life applications, we deal with differential equations that can not be solved through standard methods
 (for example through integration). Some examples are scenarios where acceleration (and/or velocity) is time and/or
 position dependent and we want to know something about velocity (and/or position). Other examples occur when
@@ -433,9 +436,9 @@ differences. Often our variable of interest <span class="math notranslate nohigh
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="a1-3-2-suggested-solving-strategies">
-<h2>A1.3.2 Suggested Solving Strategies<a class="headerlink" href="#a1-3-2-suggested-solving-strategies" title="Permalink to this headline">#</a></h2>
+<h2>A1.3.2 Suggested Solving Strategies<a class="headerlink" href="#a1-3-2-suggested-solving-strategies" title="Permalink to this heading">#</a></h2>
 <section id="strategy-a-equation-1">
-<h3>Strategy A: Equation 1<a class="headerlink" href="#strategy-a-equation-1" title="Permalink to this headline">#</a></h3>
+<h3>Strategy A: Equation 1<a class="headerlink" href="#strategy-a-equation-1" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Identify the derivative in the equation presented.</p></li>
 <li><p>Isolate the derivative on one side of the equation.</p></li>
@@ -448,7 +451,7 @@ differences. Often our variable of interest <span class="math notranslate nohigh
 </ol>
 </section>
 <section id="strategy-b-equation-2">
-<h3>Strategy B: Equation 2<a class="headerlink" href="#strategy-b-equation-2" title="Permalink to this headline">#</a></h3>
+<h3>Strategy B: Equation 2<a class="headerlink" href="#strategy-b-equation-2" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Identify the instantaneous slope given.</p></li>
 <li><p>Insert the instantaneous slope into Equation (2). This is our <strong>iterative equation</strong>.</p></li>
