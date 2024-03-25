@@ -31,6 +31,7 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  extra_navbar: <a href='https://phys-prof-nielsen.github.io/physics-sphere/#thesphere'>The Physics Sphere Home Page</a> # Will be displayed underneath the left navbar.
   extra_footer: |
     <div>
       <div class="mooc_add">
