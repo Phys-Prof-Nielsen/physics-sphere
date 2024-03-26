@@ -8,7 +8,9 @@ parts:
   chapters:
   - file: Preample/Motivation
   - file: Preample/Structure
-  - file: Preample/Learning_Outcomes 
+  - file: Preample/Learning_Outcomes
+  - url: https://phys-prof-nielsen.github.io/physics-sphere/university-physics/university-physics.html
+    title: University Physics Main Page
 
 - caption: Module A1 - Numerical Method
   chapters:
