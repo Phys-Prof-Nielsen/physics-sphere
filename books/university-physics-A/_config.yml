@@ -31,6 +31,7 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  google_analytics_id       : "G-MDE52R0B1Q"  # A GA id that can be used to track book views.
  
 parse:
   myst_enable_extensions:
