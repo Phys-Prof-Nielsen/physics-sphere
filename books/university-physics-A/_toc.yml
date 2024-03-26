@@ -4,13 +4,18 @@
 format: jb-book
 root: intro
 parts:
+- caption: Course Home
+  chapters:
+  - url: https://phys-prof-nielsen.github.io/physics-sphere/university-physics/university-physics.html
+    title: University Physics Main Page
+
 - caption: Preample
   chapters:
   - file: Preample/Motivation
   - file: Preample/Structure
   - file: Preample/Learning_Outcomes
-  - url: https://phys-prof-nielsen.github.io/physics-sphere/university-physics/university-physics.html
-    title: University Physics Main Page
+#  - url: https://phys-prof-nielsen.github.io/physics-sphere/university-physics/university-physics.html
+#    title: University Physics Main Page
 
 - caption: Module A1 - Numerical Method
   chapters:
