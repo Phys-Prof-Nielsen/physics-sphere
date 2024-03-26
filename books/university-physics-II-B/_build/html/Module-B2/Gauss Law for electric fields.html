@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>B1.2 Parameterization of Line Integrals &#8212; A Competency Approach to University Physics II</title>
+    <title>Gauss’s Law for Electric Fields &#8212; A Competency Approach to University Physics II</title>
   
   
   
@@ -62,11 +62,9 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B1/parameterization-line-integrals';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B2/Gauss Law for electric fields';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="B1.3 Partial Derivatives" href="partial-derivatives.html" />
-    <link rel="prev" title="B1.1 Introduction to Line Integrals" href="line-integrals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -162,16 +160,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://phys-prof-nielsen.github.io/physics-sphere/university-physics/university-physics.html">University Physics Main Page</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B1 - Vector Calculus</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="line-integrals.html">B1.1 Introduction to Line Integrals</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">B1.2 Parameterization of Line Integrals</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/line-integrals.html">B1.1 Introduction to Line Integrals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/parameterization-line-integrals.html">B1.2 Parameterization of Line Integrals</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="partial-derivatives.html">B1.3 Partial Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B1/partial-derivatives.html">B1.3 Partial Derivatives</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B2 - Gauss's Law'</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Module-B2/problemsB2.html">B2.X Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problemsB2.html">B2.X Problems</a></li>
 </ul>
 
     </div>
@@ -274,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/Phys-Prof-Nielsen/physics-sphere/issues/new?title=Issue%20on%20page%20%2FModule-B1/parameterization-line-integrals.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Phys-Prof-Nielsen/physics-sphere/issues/new?title=Issue%20on%20page%20%2FModule-B2/Gauss Law for electric fields.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -304,7 +302,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-B1/parameterization-line-integrals.ipynb" target="_blank"
+      <li><a href="../_sources/Module-B2/Gauss Law for electric fields.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -373,9 +371,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -386,22 +382,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>B1.2 Parameterization of Line Integrals</h1>
+    <h1>Gauss’s Law for Electric Fields</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">B1.2 Parameterization of Line Integrals</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#b1-2-1-motivation">B1.2.1 Motivation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#b1-2-2-parameterization">B1.2.2 Parameterization</a></li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -411,85 +396,48 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="b1-2-parameterization-of-line-integrals">
-<h1>B1.2 Parameterization of Line Integrals<a class="headerlink" href="#b1-2-parameterization-of-line-integrals" title="Permalink to this headline">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b1-2-1-motivation">
-<h1>B1.2.1 Motivation<a class="headerlink" href="#b1-2-1-motivation" title="Permalink to this headline">#</a></h1>
-<p>In the <em>Introduction to Line Integrals</em>, we have been so fortunate that our paths were aligned well with the <span class="math notranslate nohighlight">\(xy\)</span>-directions in a cartesian coordinate system. However, often the world is not as nice and will serve us some humble pie when applying the approach above. For example, what if the path was part of a circle? Already then it appears messy to evaluate the dot product between our force and the line element. This is where <strong>parameterization</strong> comes in and saves us from mathematical humiliation (well, we may still be humiliated but then it is at least because of our own inability to do math). The approach of parameterization is a general approach to solving line integrals (or higher orders such surface and volume integrals as well.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="b1-2-2-parameterization">
-<h1>B1.2.2 Parameterization<a class="headerlink" href="#b1-2-2-parameterization" title="Permalink to this headline">#</a></h1>
-<p>For simplicity, we will introduce the parameterization for a path in the <span class="math notranslate nohighlight">\(xy\)</span>-plane, but it should be evident how to extend it to the 3D plane. The starting point is to realize that <strong>any</strong> path can be described by some equation</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="gauss-s-law-for-electric-fields">
+<h1>Gauss’s Law for Electric Fields<a class="headerlink" href="#gauss-s-law-for-electric-fields" title="Permalink to this headline">#</a></h1>
+<hr style="border:1px solid gray"> </hr><p>We have reviewed Gauss’s law for gravitional fields and introduced Gauss’ law for electric fields when we discussed Coulomb’s law. Now, we will see it a third time. Gauss’s law for electric fields states: <strong>the net electric flux through a closed surface is proportional to the net charge inside the closed surface</strong>. In equation form:</p>
+<div class="alert alert-success">
+$$ \oint \vec{E}\cdot d\vec{A} = \frac{Q_{enclosed}}{\varepsilon_0} \tag{1}$$
+    </div>
+<p>or in scalar integral form</p>
+<div class="alert alert-success">
+$$ \oint E\cos\theta dA = \frac{Q_{enclosed}}{\varepsilon_0} \tag{2}$$
+    </div>
+<p>We may briefly review the concept of charge densities here as well in equation form (linear, surface, and volume charge densities, respectively):</p>
 <div class="math notranslate nohighlight">
-\[ g(x,y) = 0 \]</div>
-<p>This may not seem intuitive and we may just have to take the word of mathematicians on this one. An example is the equation of the unit circle, which can be represented by <span class="math notranslate nohighlight">\(g(x,y) = x^2 + y^2 - 1 = 0\)</span>. Each point along the path can be represented by some parameter <span class="math notranslate nohighlight">\(s\)</span>. This implies that we can write our <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> positions in terms of this parameter <span class="math notranslate nohighlight">\(s\)</span>: <span class="math notranslate nohighlight">\(x = x(s)\)</span> and <span class="math notranslate nohighlight">\(y = y(s)\)</span>. When we are moving some distance <span class="math notranslate nohighlight">\(dl\)</span>, we will also change <span class="math notranslate nohighlight">\(s\)</span> such that we have <span class="math notranslate nohighlight">\(ds\)</span> as an infinitesimal change. The position differentials can then be written as (again, review those differentials if you are not confident on this matter):</p>
+\[ Q = \int\lambda dx \]</div>
 <div class="math notranslate nohighlight">
-\[ dx = \frac{dx}{ds}ds \]</div>
-<p>and</p>
+\[ Q = \int\sigma  dA \]</div>
 <div class="math notranslate nohighlight">
-\[ dy = \frac{dy}{ds}ds \]</div>
-<p>Inserting this into our line integral for work:</p>
-<div class="math notranslate nohighlight">
-\[ w = \int_L \vec{f}\cdot d\vec{l} \]</div>
-<div class="math notranslate nohighlight">
-\[ w = \int_L (f_{x}dx + f_{y}dy) \]</div>
-<div class="math notranslate nohighlight">
-\[ w = \int_{s_{1}}^{s_{2}} \left[f_{x}(s)\frac{dx}{ds} + f_{y}(s)\frac{dy}{ds}\right]ds \]</div>
-<p>Below is an example broken into steps, which hopefully will demonstrate how to use this.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
-<header>
-<h3> Example 1</h3>
-    </header>
-<p>Consider the force from before given by <span class="math notranslate nohighlight">\(\vec{f} = 5.0(xy\hat{i} + y^2\hat{j})\)</span> applied to an object. Now let us move the object around in a half–circle, counter-clockwise from <span class="math notranslate nohighlight">\((x,y) = (R,0)\)</span> to <span class="math notranslate nohighlight">\((x,y) = (-R,0)\)</span>, where <span class="math notranslate nohighlight">\(R\)</span> is the radius of the half–circle. Find the work done by this force.</p>
-<p><strong>Step 1</strong></p>
-<p>Make a sketch and recognize the natural parameter <span class="math notranslate nohighlight">\(s\)</span> to use in the problem. Although that will not always be easy, here in Physics II, we will make it relatively straightforward. We are just taking our first steps into the big world. The natural parameter to choose here is the angle <span class="math notranslate nohighlight">\(\theta\)</span> such that <span class="math notranslate nohighlight">\(s \rightarrow \theta\)</span>.</p>
-<img src="fig1.png" width="300">
-<p><strong>Step 2</strong></p>
-<p>Write the cartesian coordinates <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> in terms of the new coordinate <span class="math notranslate nohighlight">\(\theta\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[ x = R\cos\theta \]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[ y = R\sin\theta \]</div>
-<p><strong>Step 3</strong></p>
-<p>Calculate the derivative of the cartesian coordinates with respect to the new variable:</p>
-<div class="math notranslate nohighlight">
-\[ \frac{dx}{d\theta} = -R\sin\theta \]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[ \frac{dy}{d\theta} = -R\sin\theta \]</div>
-<p><strong>Step 4</strong></p>
-<p>Express the vector field (in this case: force) in terms of the new variable:</p>
-<div class="math notranslate nohighlight">
-\[ f_x = 5.0xy = 5.0R^2\sin\theta\cos\theta \]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[ f_y = 5.0y^2 = 5.0R^2\sin^2\theta \]</div>
-<p><strong>Step 5</strong></p>
-<p>Substitute the results from steps 3 and 4 into our parameterized line integral</p>
-<div class="math notranslate nohighlight">
-\[ w = \int_{s_{1}}^{s_{2}} \left[f_{x}(s)\frac{dx}{ds} + f_{y}(s)\frac{dy}{ds}\right]ds \]</div>
-<div class="math notranslate nohighlight">
-\[ w = \int_{\theta = 0}^{\theta = \pi} [(5.0R^2\sin\theta\cos\theta)(-R\sin\theta) + (5.0R^2\sin^2\theta)(R\cos\theta)]d\theta \]</div>
-<p style="color:red;">NOTICE: we essentially re-wrote our line integral of two variables into a line integral of one variable. That is just some cool shit!</p>
-<p><strong>Step 6</strong></p>
-<p>Now, no one ever told us that parameterizing the line integral over our vector field was going to be pretty, but at least we can solve it. Solve it!</p>
-<div class="math notranslate nohighlight">
-\[ w = 5.0R^3\int_{\theta = 0}^{\theta = \pi} [(-\sin^2\theta\cos\theta) + (\sin^2\theta)\cos\theta]d\theta\]</div>
-<p>Wow, I lucked out here. The integrand adds up to zero:</p>
-<div class="math notranslate nohighlight">
-\[ w = 0~\textrm{J} \]</div>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+\[ Q = \int\rho  dV \]</div>
+<img src="fig13.png" width="400">
+<p>We now have all the tools to find electric fields within the scope of Introductory physics. Let us apply it to a few guided problems.</p>
+<p>For the gravitational field, we applied Gauss’s law to find the field both inside and outside of the Earth. We noticed that outside the Earth, the gravitational field looked like as if all the mass of the Earth was at the center: a point mass. Let us try and work through for a uniformly charged sphere and see how the electric field behave. Section 22.4 in your textbook titled <strong>Applications of Gauss’s Law</strong> does a few examples that are great to go through.</p>
+<hr style="border:1px solid gray"> </hr><div class="alert alert-warning">
     <b> Box 1 </b><br>
-<p>Consider a force given by <span class="math notranslate nohighlight">\(\vec{f} = (x\hat{i} + y^2\hat{j})\)</span> N acting on an object. The object moves clockwise from <span class="math notranslate nohighlight">\(\vec{r}_i = (0,3)\)</span> to <span class="math notranslate nohighlight">\(\vec{r}_f = (3,0)\)</span> along a quarter circle centered at <span class="math notranslate nohighlight">\((x,y) = (0,0)\)</span>. What is the work done by the force along this path?</p>
+Consider a positively, uniformly charged solid sphere as the source of an electric field. The total charge is $Q$ and the radius of the sphere is $R$.
+<img src="fig14.png" width="=100">
+<p>Place a Gaussian sphere (radius <span class="math notranslate nohighlight">\(r\)</span>) around the charged sphere such that <span class="math notranslate nohighlight">\(r \ge R\)</span>. Apply Gauss’s law to find the electric field outside the sphere.</p>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<hr style="border:1px solid gray"> </hr><div class="alert alert-warning">
     <b> Box 2 </b><br>
-<p>Consider a force given by <span class="math notranslate nohighlight">\(\vec{f} = 2.0(x^3\hat{i} + xy^2\hat{j})\)</span> acting on an object. The object moves counter-clockwise from <span class="math notranslate nohighlight">\(\vec{r}_i = (0,0)\)</span> to <span class="math notranslate nohighlight">\(\vec{r}_f = (0,2)\)</span> along a half–circle centered at <span class="math notranslate nohighlight">\((x,y) = (0,1)\)</span>. What is the work done by the force along this path?</p>
+Consider a positively, uniformly charged solid sphere as the source of an electric field. The total charge is $Q$ and the radius of the sphere is $R$.
+<img src="fig14.png" width="=100">
+<p>Place a Gaussian sphere (radius <span class="math notranslate nohighlight">\(r\)</span>) inside the charged sphere such that <span class="math notranslate nohighlight">\(r &lt; R\)</span>. Apply Gauss’s law to find the electric field inside the sphere.</p>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<hr style="border:1px solid gray"> </hr><p>A conductor is characterized by the ability of individual charges to move freely under the influence of a force. Imagine a solid spherical conductor. If a net positive charge is placed on the conductor, each charge will feel a repulsive force from the other charges and will accelerate until an equilibrium is reached. This static equilibrium is reached relatively quick within a time known as the <strong>relaxation time</strong>. The electric force arises due to the electric fields set up by the charges. When the system is in equilibrium, the net electric field must be zero. If it was not zero, charges would accelerate. Hence, <strong>inside a conductor the electric field must be zero</strong>.</p>
+<hr style="border:1px solid gray"> </hr><div class="alert alert-warning">
+    <b> Box 3 </b><br>
+Use Gauss's law to show that the charges on a solid <b>conductor</b> must reside on the <b>surface</b> of the conductor. You can illustrate the process by considering a solid, spherical conductor. HINT: you can place a Gassiuan surface <b>anywhere</b> inside the conductor.
+</div>
+<hr style="border:1px solid gray"> </hr><div class="alert alert-warning">
+    <b> Box 4 </b><br>
+Use Gauss's law to find the electric field from a long, straight wire with length $L$ and charge density $\lambda$. HINT: the symmetry suggest using a cylinder as a Gaussian surface and the field is perpendicular to the wire, which means that no flux is passing through the ends of the cylinder.
+</div>
+<hr style="border:1px solid gray"> </hr></section>
 
     <script type="text/x-thebe-config">
     {
@@ -504,7 +452,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./Module-B1"
+            path: "./Module-B2"
         },
         predefinedOutput: true
     }
@@ -522,24 +470,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="line-integrals.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">B1.1 Introduction to Line Integrals</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="partial-derivatives.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">B1.3 Partial Derivatives</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -549,23 +479,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">B1.2 Parameterization of Line Integrals</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#b1-2-1-motivation">B1.2.1 Motivation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#b1-2-2-parameterization">B1.2.2 Parameterization</a></li>
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>

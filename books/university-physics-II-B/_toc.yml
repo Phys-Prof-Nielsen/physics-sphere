@@ -4,11 +4,16 @@
 format: jb-book
 root: intro
 parts:
-- caption: Preample
+- caption: Course Home
   chapters:
-  - file: Preample/Motivation
-  - file: Preample/Structure
-  - file: Preample/Learning_Outcomes 
+  - url: https://phys-prof-nielsen.github.io/physics-sphere/university-physics/university-physics.html
+    title: University Physics Main Page
+
+#- caption: Preample
+#  chapters:
+ # - file: Preample/Motivation
+ # - file: Preample/Structure
+ # - file: Preample/Learning_Outcomes 
   
 - caption: Module B1 - Vector Calculus
   chapters:
@@ -16,3 +21,6 @@ parts:
   - file: Module-B1/parameterization-line-integrals
   - file: Module-B1/partial-derivatives
 
+- caption: Module B2 - Gauss's Law'
+  chapters:
+  - file: Module-B2/problemsB2
