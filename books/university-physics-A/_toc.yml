@@ -11,8 +11,6 @@ parts:
   - file: Preample/Learning_Outcomes
   - url: https://phys-prof-nielsen.github.io/physics-sphere/university-physics/university-physics.html
     title: University Physics Main Page
-  - url: https://phys-prof-nielsen.github.io/physics-sphere/#thesphere
-    title: The Physics Sphere 
 
 - caption: Module A1 - Numerical Method
   chapters:
