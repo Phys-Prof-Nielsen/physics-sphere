@@ -4,11 +4,17 @@
 format: jb-book
 root: intro
 parts:
-- caption: Preample
+
+- caption: Course Home
   chapters:
-  - file: Preample/Motivation
-  - file: Preample/Structure
-  - file: Preample/Learning_Outcomes 
+  - url: https://phys-prof-nielsen.github.io/physics-sphere/university-physics/university-physics.html
+    title: University Physics Main Page
+    
+#- caption: Preample
+#  chapters:
+#  - file: Preample/Motivation
+ # - file: Preample/Structure
+#  - file: Preample/Learning_Outcomes 
 - caption: Module D1 - First Steps to Doing Science
   chapters:
   - file: Module-D1/Scientific_Method
