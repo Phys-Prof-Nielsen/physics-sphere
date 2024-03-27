@@ -779,15 +779,91 @@ Orbital period: 9.26e+1 min
 </div>
 </div>
 </div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">G</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">R</span>
+
+<span class="n">U2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">K2</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">K1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">U1</span> <span class="o">=</span> <span class="o">-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="n">m</span><span class="o">/</span><span class="n">R</span>
+
+<span class="n">eq</span> <span class="o">=</span>  <span class="n">K1</span> <span class="o">+</span> <span class="n">U1</span> <span class="o">-</span> <span class="n">K2</span> <span class="o">-</span> <span class="n">U2</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Escape speed: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escape speed: 1.4142135623731*sqrt(G*M/R)
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
     <b>Box 8</b><br>
-<p>Use the result from Box 7 to find the radius of the black hole <span class="math notranslate nohighlight">\(R_S\)</span>. The surface of the sphere with radius <span class="math notranslate nohighlight">\(R_S\)</span> is known as the event horizon, and nothing can escape from inside the event horizon.</p>
+<p>Use the result from Box 7 to find the equation for the radius of the black hole <span class="math notranslate nohighlight">\(R_S\)</span>. The surface of the sphere with radius <span class="math notranslate nohighlight">\(R_S\)</span> is known as the event horizon, and nothing can escape from inside the event horizon.</p>
 </div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">G</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">R</span>
+
+<span class="n">U2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">K2</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">K1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">U1</span> <span class="o">=</span> <span class="o">-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="n">m</span><span class="o">/</span><span class="n">R</span>
+
+<span class="n">eq</span> <span class="o">=</span>  <span class="n">K1</span> <span class="o">+</span> <span class="n">U1</span> <span class="o">-</span> <span class="n">K2</span> <span class="o">-</span> <span class="n">U2</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">R</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Radius of black hole: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Radius of black hole: 2.0*G*M/c**2
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
     <b>Box 9</b><br>
@@ -799,6 +875,42 @@ Orbital period: 9.26e+1 min
 </div>
 </div>
 </div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">G</span> <span class="o">=</span> <span class="mf">6.67e-11</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.997e8</span>
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.9891e31</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">M_sun</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.3e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Radius of event horizon &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">R</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Radius of event horizon 8.863e+04 m
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
     <b>Box 10</b><br>
 <p>The mass of the observable universe is <span class="math notranslate nohighlight">\(~10^{53}\)</span> kg. Calculate the event horizon for a black hole with such a mass. Compare that to the radius of the observable universe (<span class="math notranslate nohighlight">\(4.4 \times 10^{26}\)</span> m). If they are close (within a few orders of magnitude is considered extremely close on cosmological scale), it could imply that our universe is indeed inside a black hole, in which case we would be a 3D hologram of a 2D surface inside the black hole.</p>
@@ -808,6 +920,41 @@ Orbital period: 9.26e+1 min
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">G</span> <span class="o">=</span> <span class="mf">6.67e-11</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.997e8</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mf">10e53</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.3e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Radius of event horizon &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">R</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Radius of event horizon 1.485e+27 m
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
     <b>Box 11</b><br>
@@ -819,6 +966,39 @@ Orbital period: 9.26e+1 min
 </div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">G</span> <span class="o">=</span> <span class="mf">6.67e-11</span>
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.9891e31</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="n">M_sun</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="mf">120e3</span>
+<span class="n">R1</span> <span class="o">=</span> <span class="n">R</span> <span class="o">-</span> <span class="mf">0.06</span>
+<span class="n">R2</span> <span class="o">=</span> <span class="n">R</span> <span class="o">+</span> <span class="mf">0.06</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">0.030</span>
+
+<span class="n">F1</span> <span class="o">=</span> <span class="o">-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="n">m</span><span class="o">/</span><span class="n">R1</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">F2</span> <span class="o">=</span> <span class="o">-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="n">m</span><span class="o">/</span><span class="n">R2</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">dF</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">F2</span><span class="o">-</span><span class="n">F1</span><span class="p">)</span>
+<span class="n">dF</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dF</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tension between ears &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dF</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The gravitional force is varying significantly across her head such that CG and CM are NOT at the same location.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tension between ears 2.76e+04 N
+The gravitional force is varying significantly across her head such that CG and CM are NOT at the same location.
 </pre></div>
 </div>
 </div>
