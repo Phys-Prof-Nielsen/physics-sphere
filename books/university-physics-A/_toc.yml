@@ -30,3 +30,9 @@ parts:
   - file: Module-A2/angular-momentum
   - file: Module-A2/translational-rotational
   - file: Module-A2/problemsA2
+  
+- caption: Module A3 - Gravity
+  chapters:
+  - file: Module-A3/newton-law-gravity
+  - file: Module-A3/mass-distributions
+  - file: Module-A3/problemsA3
