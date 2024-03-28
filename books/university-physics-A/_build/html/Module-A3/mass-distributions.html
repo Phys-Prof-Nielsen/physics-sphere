@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>A3.2 Newton’s Law of Gravity - Mass Distributions &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -76,7 +75,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="A3.X Problems" href="problemsA3.html" />
     <link rel="prev" title="A3.1 Newton’s Law of Gravity" href="newton-law-gravity.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -431,9 +430,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="a3-2-newton-s-law-of-gravity-mass-distributions">
-<h1>A3.2 Newton’s Law of Gravity -  Mass Distributions<a class="headerlink" href="#a3-2-newton-s-law-of-gravity-mass-distributions" title="Permalink to this heading">#</a></h1>
+<h1>A3.2 Newton’s Law of Gravity -  Mass Distributions<a class="headerlink" href="#a3-2-newton-s-law-of-gravity-mass-distributions" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a3-2-1-motivation">
-<h2>A3.2.1 Motivation<a class="headerlink" href="#a3-2-1-motivation" title="Permalink to this heading">#</a></h2>
+<h2>A3.2.1 Motivation<a class="headerlink" href="#a3-2-1-motivation" title="Permalink to this headline">#</a></h2>
 <p>To know the gravitaional interaction between objects, we will need to know the gravitational field <span class="math notranslate nohighlight">\(\vec{g}\)</span> at the location of an object subject to the field. In many cases, the source objects are spherical systems but there may be times where they are not. In those cases, we will need a tool to determine the gravitational field based on the given mass distribution. There are two approaches:</p>
 <ol class="arabic simple">
 <li><p>Apply the gravitional field from a point mass as obtained from Newton’s law of gravity and integrate over the distribution. This is a general approach.</p></li>
@@ -442,7 +441,7 @@ document.write(`
 <p>In this note, we will focus on approach 1.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="a3-2-2-gravitional-field-point-mass">
-<h2>A3.2.2 Gravitional Field - Point Mass<a class="headerlink" href="#a3-2-2-gravitional-field-point-mass" title="Permalink to this heading">#</a></h2>
+<h2>A3.2.2 Gravitional Field - Point Mass<a class="headerlink" href="#a3-2-2-gravitional-field-point-mass" title="Permalink to this headline">#</a></h2>
 <p>We saw in previous section that the gravitaional force between two objects were</p>
 <div class="math notranslate nohighlight">
 \[ \vec{F}_G = -\frac{GMm}{r^2}\hat{r} \]</div>
@@ -450,7 +449,7 @@ document.write(`
 <p>With the knowledge that the gravitaional force is also given by</p>
 <div class="math notranslate nohighlight">
 \[ \vec{F}_G = m\vec{g} \]</div>
-<p>we can define the <strong>gravitional fiel</strong> due to a <strong>point mass</strong> <span class="math notranslate nohighlight">\(m\)</span> as</p>
+<p>we can define the <strong>gravitional field</strong> due to a <strong>point mass</strong> <span class="math notranslate nohighlight">\(m\)</span> as</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
 \[ \vec{g} = -\frac{Gm}{r^2}\hat{r} \tag{1}\]</div>
@@ -470,9 +469,9 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="c6-2-3-solving-strategy">
-<h2>C6.2.3 Solving Strategy<a class="headerlink" href="#c6-2-3-solving-strategy" title="Permalink to this heading">#</a></h2>
+<h2>C6.2.3 Solving Strategy<a class="headerlink" href="#c6-2-3-solving-strategy" title="Permalink to this headline">#</a></h2>
 <section id="set-up">
-<h3>Set-Up<a class="headerlink" href="#set-up" title="Permalink to this heading">#</a></h3>
+<h3>Set-Up<a class="headerlink" href="#set-up" title="Permalink to this headline">#</a></h3>
 <p>There are various approaches to finding the gravitational field from a charge distribution. I am presenting one here that I prefer using.</p>
 <p>First, let is write down the infinitesimal mass (behave like a point mass) in terms of the mass density and its infinitesimal spatial size:</p>
 <p><strong>Line Charge</strong></p>
@@ -484,29 +483,29 @@ document.write(`
 <p><strong>Volume Charge</strong></p>
 <div class="math notranslate nohighlight">
 \[ dm = \rho dV \]</div>
-<p>The form of the gravitation field equation I will be using is:</p>
+<p>The form of the gravitational field equation I will be using is:</p>
 <div class="math notranslate nohighlight">
 \[ \vec{g} = -Gm\frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} \]</div>
-<p>and the field contribution for the infinitesimal charge is</p>
+<p>and the field contribution for the infinitesimal mass is</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
-\[ d\vec{g} = -Gdm\frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} \tag{1}\]</div>
+\[ d\vec{g} = -Gdm\frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} \tag{4}\]</div>
 </div>
 </section>
 <section id="methodology">
-<h3>Methodology<a class="headerlink" href="#methodology" title="Permalink to this heading">#</a></h3>
+<h3>Methodology<a class="headerlink" href="#methodology" title="Permalink to this headline">#</a></h3>
 <p>Below are the steps taken to obtain the gravivational field. The following sections will illustrate some examples of the approach.</p>
 <ol class="arabic simple">
 <li><p>Make a sketch. Illustrate the infinitesimal mass, its size, the point P of which we want to know the gravitational field, and positions vectors for the mass as well as the point P.</p></li>
 <li><p>Write down the mass in terms of the density and spatial size (see section above).</p></li>
 <li><p>Write down the position vectors for the infinitesimal mass and the point P. This is usually done in a Cartesian <span class="math notranslate nohighlight">\(xyz\)</span>-coordinate system but could also be in cylindrical coordinates (<span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span>, <span class="math notranslate nohighlight">\(z\)</span>).</p></li>
 <li><p>Write down the distance between the infinitesimal mass and the point P. Express this in terms of the coordinates using Pythagorean theorem.</p></li>
-<li><p>Insert all the information into Equation 1 above.</p></li>
+<li><p>Insert all the information into Equation 4 above.</p></li>
 <li><p>Integrate to obtain the g-field. It is acceptable to look up the integral in a table or use computational methods.</p></li>
 </ol>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 1</b><br>
-<p>Consider a line mass with mass <span class="math notranslate nohighlight">\(M\)</span> and length <span class="math notranslate nohighlight">\(a\)</span> along the x-axis. Find the <span class="math notranslate nohighlight">\(g\)</span>-field at some point along the x-axis outside the charge distribution.</p>
+<p>Consider a line mass with mass <span class="math notranslate nohighlight">\(M\)</span> and length <span class="math notranslate nohighlight">\(a\)</span> along the x-axis. Find the <span class="math notranslate nohighlight">\(g\)</span>-field at some point along the x-axis outside the mass distribution.</p>
 </div><div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
 <p>We consider a line mass with charge <span class="math notranslate nohighlight">\(Q\)</span> and length <span class="math notranslate nohighlight">\(a\)</span> along the x-axis. The task is to find the <span class="math notranslate nohighlight">\(g\)</span>-field at some point along the x-axis outside the mass distribution.</p>
@@ -589,7 +588,7 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
 <b>Box 2</b><br>
-<p>Consider a line mass with mass <span class="math notranslate nohighlight">\(M\)</span> and length <span class="math notranslate nohighlight">\(2a\)</span> along the y-axis. Find the <span class="math notranslate nohighlight">\(g\)</span>-field at some point along the x-axis outside the charge distribution.</p>
+<p>Consider a line mass with mass <span class="math notranslate nohighlight">\(M\)</span> and length <span class="math notranslate nohighlight">\(2a\)</span> along the y-axis. Find the <span class="math notranslate nohighlight">\(g\)</span>-field at some point along the x-axis outside the mass distribution.</p>
 </div><hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 </section>
