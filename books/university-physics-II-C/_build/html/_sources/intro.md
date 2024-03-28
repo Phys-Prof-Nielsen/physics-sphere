@@ -1,4 +1,6 @@
 # A Competency Approach to University Physics II: A Compendium to the C Exam
 
-This is the first set of notes for the Uiversity Physics II cource. The notes
+This set of notes
 covers material that is required to pass the C-level exam.
+
+<img src="university-physics-II-C.png" width="800">

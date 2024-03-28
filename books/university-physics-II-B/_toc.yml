@@ -6,7 +6,7 @@ root: intro
 parts:
 - caption: Course Home
   chapters:
-  - url: https://phys-prof-nielsen.github.io/physics-sphere/university-physics/university-physics.html
+  - url: https://phys-prof-nielsen.github.io/physics-sphere/university-physics-II/university-physics-II.html
     title: University Physics Main Page
 
 #- caption: Preample
