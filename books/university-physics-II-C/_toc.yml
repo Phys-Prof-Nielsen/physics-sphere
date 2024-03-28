@@ -7,7 +7,7 @@ parts:
 - caption: Course Home
   chapters:
   - url: https://phys-prof-nielsen.github.io/physics-sphere/university-physics-II/university-physics-II.html
-    title: University Physics Main Page
+    title: University Physics II Main Page
     
 #- caption: Preample
 #  chapters:
