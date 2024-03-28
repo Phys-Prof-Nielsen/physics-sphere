@@ -1,4 +1,6 @@
-# A Competency Approach to Introductory Physics: A Compendium to the D Exam
+# A Competency Approach to University Physics I: A Compendium to the D Exam
 
-This is the first set of notes for the introductory physics cource. The notes
+This set of notes
 covers material that is required to pass the D-level exam.
+
+<img src="university-physics-D.png" width="800">

@@ -4,7 +4,7 @@
 title: A Competency Approach to Introductory Physics
 subtitle: A Compendium to the C Exam
 author: Kim Nielsen
-logo: university-physics-C.png
+logo: logo-C.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

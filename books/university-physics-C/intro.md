@@ -1,5 +1,6 @@
-# A Competency Approach to Introductory Physics: A Compendium to the C Exam
+# A Competency Approach to University Physics I: A Compendium to the C Exam
 
-This is the first set of notes for the introductory physics cource. The notes
-covers material that is required to pass the C-level exam. This is work in progress
-and the notes may be cover all material required.
+This set of notes
+covers material that is required to pass the C-level exam.
+
+<img src="university-physics-C.png" width="800">
