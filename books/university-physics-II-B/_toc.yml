@@ -24,3 +24,7 @@ parts:
 - caption: Module B2 - Gauss's Law'
   chapters:
   - file: Module-B2/problemsB2
+  
+- caption: Module B4 - Capacitance
+  chapters:
+  - file: Module-B4/problemsB4
