@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>A3.2 Newton’s Law of Gravity - Mass Distributions &#8212; A Competency Approach to Introductory Physics</title>
+    <title>A3.3 Field Flux &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -70,11 +70,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-A3/mass-distributions';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-A3/flux';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="A3.3 Field Flux" href="flux.html" />
-    <link rel="prev" title="A3.1 Newton’s Law of Gravity" href="newton-law-gravity.html" />
+    <link rel="next" title="A3.X Problems" href="problemsA3.html" />
+    <link rel="prev" title="A3.2 Newton’s Law of Gravity - Mass Distributions" href="mass-distributions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,8 +186,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module A3 - Gravity</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="newton-law-gravity.html">A3.1 Newton’s Law of Gravity</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">A3.2 Newton’s Law of Gravity -  Mass Distributions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="flux.html">A3.3 Field Flux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mass-distributions.html">A3.2 Newton’s Law of Gravity -  Mass Distributions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">A3.3 Field Flux</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="problemsA3.html">A3.X Problems</a></li>
 </ul>
@@ -292,7 +292,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/Phys-Prof-Nielsen/physics-sphere/issues/new?title=Issue%20on%20page%20%2FModule-A3/mass-distributions.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Phys-Prof-Nielsen/physics-sphere/issues/new?title=Issue%20on%20page%20%2FModule-A3/flux.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -322,7 +322,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-A3/mass-distributions.ipynb" target="_blank"
+      <li><a href="../_sources/Module-A3/flux.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -404,7 +404,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>A3.2 Newton’s Law of Gravity -  Mass Distributions</h1>
+    <h1>A3.3 Field Flux</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -414,14 +414,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a3-2-1-motivation">A3.2.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a3-2-2-gravitional-field-point-mass">A3.2.2 Gravitional Field - Point Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c6-2-3-solving-strategy">C6.2.3 Solving Strategy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up">Set-Up</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">Methodology</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">A3.3 Field Flux</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a3-3-1-motivation">A3.3.1 Motivation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a3-3-2-field-flux">A3.3.2 Field Flux</a></li>
 </ul>
 </li>
 </ul>
+
             </nav>
         </div>
     </div>
@@ -432,167 +431,125 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="a3-2-newton-s-law-of-gravity-mass-distributions">
-<h1>A3.2 Newton’s Law of Gravity -  Mass Distributions<a class="headerlink" href="#a3-2-newton-s-law-of-gravity-mass-distributions" title="Permalink to this heading">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a3-2-1-motivation">
-<h2>A3.2.1 Motivation<a class="headerlink" href="#a3-2-1-motivation" title="Permalink to this heading">#</a></h2>
-<p>To know the gravitaional interaction between objects, we will need to know the gravitational field <span class="math notranslate nohighlight">\(\vec{g}\)</span> at the location of an object subject to the field. In many cases, the source objects are spherical systems but there may be times where they are not. In those cases, we will need a tool to determine the gravitational field based on the given mass distribution. There are two approaches:</p>
-<ol class="arabic simple">
-<li><p>Apply the gravitional field from a point mass as obtained from Newton’s law of gravity and integrate over the distribution. This is a general approach.</p></li>
-<li><p>Apply Gauss’s for gravity. This approach is only quantitatively usefull under certain distributions.</p></li>
-</ol>
-<p>In this note, we will focus on approach 1.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="a3-3-field-flux">
+<h1>A3.3 Field Flux<a class="headerlink" href="#a3-3-field-flux" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="a3-2-2-gravitional-field-point-mass">
-<h2>A3.2.2 Gravitional Field - Point Mass<a class="headerlink" href="#a3-2-2-gravitional-field-point-mass" title="Permalink to this heading">#</a></h2>
-<p>We saw in previous section that the gravitaional force between two objects were</p>
-<div class="math notranslate nohighlight">
-\[ \vec{F}_G = -\frac{GMm}{r^2}\hat{r} \]</div>
-<p>where <span class="math notranslate nohighlight">\(\hat{r}\)</span> is a unit vector of <span class="math notranslate nohighlight">\(\vec{r}\)</span>, which is the <strong>directed line segment from the source mass <span class="math notranslate nohighlight">\(M\)</span> to test mass <span class="math notranslate nohighlight">\(m\)</span></strong>.</p>
-<p>With the knowledge that the gravitaional force is also given by</p>
-<div class="math notranslate nohighlight">
-\[ \vec{F}_G = m\vec{g} \]</div>
-<p>we can define the <strong>gravitional field</strong> due to a <strong>point mass</strong> <span class="math notranslate nohighlight">\(m\)</span> as</p>
+<section class="tex2jax_ignore mathjax_ignore" id="a3-3-1-motivation">
+<h1>A3.3.1 Motivation<a class="headerlink" href="#a3-3-1-motivation" title="Permalink to this heading">#</a></h1>
+<p>We have four fundamental forces in physics due to the following interactions</p>
+<ul class="simple">
+<li><p>gravity</p></li>
+<li><p>electric</p></li>
+<li><p>strong</p></li>
+<li><p>weak</p></li>
+</ul>
+<p>Every known force we encounter can be explained in terms of these four interactions and they all arise from what we know as field interactions. Hence, the fields are more fundamental than the force interactions. We encountered the gravitational field, but focused more on its interactions through Newton’s law. In <em>University Physics II</em> we are more concerned with the electric field and will need concepts associated with fields. The <strong>field flux</strong>, or simply <strong>flux</strong>, is such a concept.</p>
+<p>The flux concept are essential to <strong>Gauss’s Law</strong>, which exist for both gravitationa, electric, and magnetic fields. Since we are somewhat familair with Newtonian gravity, we will introduce the flux concept through the gravitational field.</p>
+<p>Gauss’s Law is one of the most essential topics in <em>University Physics II</em>, and for that reason I believe it is helpful to see it first time in <em>University Physics I</em> as a repetitive way of learning. It is not super essential to master it now, but in the next course it will be.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a3-3-2-field-flux">
+<h2>A3.3.2 Field Flux<a class="headerlink" href="#a3-3-2-field-flux" title="Permalink to this heading">#</a></h2>
 <div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ \vec{g} = -\frac{Gm}{r^2}\hat{r} \tag{1}\]</div>
-</div>
-<p>Alternatively, and often more useful, we can use the definition of the unit vector:</p>
+<p>In general, the <strong>flux</strong> is defined in terms of a vector field passing through a surface per unit time. We can say that the flux is a measure of how much of a field quantity is passing through a given surface.
+</div></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 1</h3>
+    </header>
+<p>Let us consider the gravitational flux through a letter–sized paper (8.5 in by 11 in) laying flat on your table. We will assume that the gravitational field is directed straight down with a field strength of <span class="math notranslate nohighlight">\(g = 9.8\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span>. Since the field is present everywhere, the total flux through the paper is</p>
+<p>We have previously labeled the acceleration of gravity at the Earth’s surface as <span class="math notranslate nohighlight">\(g = 9.81\)</span>~m/s<span class="math notranslate nohighlight">\(^2\)</span>. However, we know that it changes as we move away from Earth. The objective of these notes is to learn how to calculate the gravitational field (the acceleration) as we move away from the Earth’s surface but also from other mass distributions that are not spherical.</p>
+<p>The tool to perform these calculations is <strong>Gauss’s law for gravity</strong> (in PHYS2220 you will encounter Gauss’s law for electric and magnetic fields as well):</p>
 <div class="alert alert-success">
+<p><strong>Gauss’s Law</strong></p>
 <div class="math notranslate nohighlight">
-\[ \vec{g} = -\frac{Gm}{r^3}\vec{r} \tag{2}\]</div>
+\[ \oint \vec{g}\cdot d\vec{A} = -4\pi Gm_{\textrm{enclosed}} \tag{1}\]</div>
 </div>
-<div class="alert alert-danger">
-<p>We must be careful applying the above equations as there is no direct connection to the positions of the source mass and the point of interest.</p>
-</div>
-<p>A more general approach that directly ties the position vectors into the gravitional field calculation is often preferred. If we use Equation (2) and insert the actual position vectors for the source <span class="math notranslate nohighlight">\(\vec{r}'\)</span> and the point of interest <span class="math notranslate nohighlight">\(P\)</span> <span class="math notranslate nohighlight">\(\vec{r}\)</span>:</p>
+<p>where <span class="math notranslate nohighlight">\(\vec{g}\)</span> is the gravitational field, <span class="math notranslate nohighlight">\(d\vec{A}\)</span> is an area element with a direction pointing <strong>out</strong> of the closed surface, known as the <strong>Gaussian surface</strong>, that we are integrating over (the circle on the integration symbol indicates that we are integrating over a closed surface), <span class="math notranslate nohighlight">\(G\)</span> is a constant known as the universal constant of gravity, and <span class="math notranslate nohighlight">\(m_{enclosed}\)</span> is the mass that is inside the closed surface. We can understand the <span class="math notranslate nohighlight">\(m_{enclosed}\)</span> to be <strong>the source of the gravitational field</strong>.</p>
+<p>We can re-write the integral in terms of the vector magnitudes using the definition of the dot product:</p>
 <div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ \vec{g} = Gm\frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} \tag{3}\]</div>
+$$  \oint g\cos\theta dA = -4\pi Gm_{\textrm{enclosed}} \tag{2}$$
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="c6-2-3-solving-strategy">
-<h2>C6.2.3 Solving Strategy<a class="headerlink" href="#c6-2-3-solving-strategy" title="Permalink to this heading">#</a></h2>
-<section id="set-up">
-<h3>Set-Up<a class="headerlink" href="#set-up" title="Permalink to this heading">#</a></h3>
-<p>There are various approaches to finding the gravitational field from a charge distribution. I am presenting one here that I prefer using.</p>
-<p>First, let is write down the infinitesimal mass (behave like a point mass) in terms of the mass density and its infinitesimal spatial size:</p>
-<p><strong>Line Charge</strong></p>
+<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between the gravitational field and the area vector (unit vector pointing out of the closed surface).</p>
+<p>For a spherical symmetric source such as the Earth (the blue planet in the Figure below), the obvious surface to integrate over is a sphere. Any point on the sphere is the same distance away from the source and the field strength is therefore the same at any point on the sphere (<span class="math notranslate nohighlight">\(g = constant\)</span>). Furthermore, since the normal area element <span class="math notranslate nohighlight">\(d\vec{A}\)</span> is pointing away from the sphere, the angle between <span class="math notranslate nohighlight">\(\vec{g}\)</span> and  <span class="math notranslate nohighlight">\(d\vec{A}\)</span> is <span class="math notranslate nohighlight">\(180^\circ\)</span>.</p>
+<img src="A3-fig3.1.png" width="300">
+<hr style="border:1px solid gray"> </hr><div class="alert alert-warning">
+    <b> Box 1 </b><br>
+	Consider the Earth to be a perfect sphere. Imagine we are enclosing a closed spherical surface encapsulating the Earth. Using equation 1, show that the gravitational field at the surface of the Earth or outside the Earth is 
 <div class="math notranslate nohighlight">
-\[ dm = \lambda dl \]</div>
-<p><strong>Surface Charge</strong></p>
-<div class="math notranslate nohighlight">
-\[ dm = \sigma dA \]</div>
-<p><strong>Volume Charge</strong></p>
-<div class="math notranslate nohighlight">
-\[ dm = \rho dV \]</div>
-<p>The form of the gravitational field equation I will be using is:</p>
-<div class="math notranslate nohighlight">
-\[ \vec{g} = -Gm\frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} \]</div>
-<p>and the field contribution for the infinitesimal mass is</p>
-<div class="alert alert-success">
-<div class="math notranslate nohighlight">
-\[ d\vec{g} = -Gdm\frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} \tag{4}\]</div>
+\[ g = \frac{GM_{Earth}}{r^2} \]</div>
+<p>where <span class="math notranslate nohighlight">\(M_{Earth}\)</span> is the mass of the Earth (the mass inside the imaginary Gaussian sphere) and <span class="math notranslate nohighlight">\(r\)</span> is the distance away from the center of the Earth (the radius of the Gaussian sphere) with the condition that <span class="math notranslate nohighlight">\(r \geq R_{Earth}\)</span>. The surface area of a sphere with radius <span class="math notranslate nohighlight">\(r\)</span> is <span class="math notranslate nohighlight">\(A_{sphere} = 4\pi r^2\)</span>.</p>
 </div>
-</section>
-<section id="methodology">
-<h3>Methodology<a class="headerlink" href="#methodology" title="Permalink to this heading">#</a></h3>
-<p>Below are the steps taken to obtain the gravivational field. The following sections will illustrate some examples of the approach.</p>
-<ol class="arabic simple">
-<li><p>Make a sketch. Illustrate the infinitesimal mass, its size, the point P of which we want to know the gravitational field, and positions vectors for the mass as well as the point P.</p></li>
-<li><p>Write down the mass in terms of the density and spatial size (see section above).</p></li>
-<li><p>Write down the position vectors for the infinitesimal mass and the point P. This is usually done in a Cartesian <span class="math notranslate nohighlight">\(xyz\)</span>-coordinate system but could also be in cylindrical coordinates (<span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span>, <span class="math notranslate nohighlight">\(z\)</span>).</p></li>
-<li><p>Write down the distance between the infinitesimal mass and the point P. Express this in terms of the coordinates using Pythagorean theorem.</p></li>
-<li><p>Insert all the information into Equation 4 above.</p></li>
-<li><p>Integrate to obtain the g-field. It is acceptable to look up the integral in a table or use computational methods.</p></li>
-</ol>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
-<b>Box 1</b><br>
-<p>Consider a line mass with mass <span class="math notranslate nohighlight">\(M\)</span> and length <span class="math notranslate nohighlight">\(a\)</span> along the x-axis. Find the <span class="math notranslate nohighlight">\(g\)</span>-field at some point along the x-axis outside the mass distribution.</p>
-</div><div class="tip dropdown admonition">
-<p class="admonition-title">Solution</p>
-<p>We consider a line mass with charge <span class="math notranslate nohighlight">\(Q\)</span> and length <span class="math notranslate nohighlight">\(a\)</span> along the x-axis. The task is to find the <span class="math notranslate nohighlight">\(g\)</span>-field at some point along the x-axis outside the mass distribution.</p>
-<p><strong>Step 1</strong></p>
-<p>Make a sketch.</p>
-<img src="A3-fig2.1.png" width="250">
-<p><strong>Step 2</strong></p>
-<p>This is a 1D line mass, so the infinitesimal mass in terms of the density is</p>
-<div class="math notranslate nohighlight">
-\[ dm = \lambda dx' \]</div>
-<p>We are given the net mass and the length of the line distribution, so the density is <span class="math notranslate nohighlight">\(\lambda = \frac{M}{a}\)</span>, and the infinitesimal mass is</p>
-<div class="math notranslate nohighlight">
-\[ dm = \frac{M}{a}dx' \]</div>
-<p><strong>Step 3</strong></p>
-<p>The position vector of the charge is (using 3D Cartesian coordinates):</p>
-<div class="math notranslate nohighlight">
-\[ \vec{r}' = x'\hat{i} + y'\hat{j} + z'\hat{k} \]</div>
-<p>All the infinitesimal charges have no <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> components, and we have</p>
-<div class="math notranslate nohighlight">
-\[ \vec{r}' = x'\hat{i}\]</div>
-<p>Similarly, the point P has position vector</p>
-<div class="math notranslate nohighlight">
-\[ \vec{r} = x\hat{i}\]</div>
-<p><strong>Step 4</strong></p>
-<p>The distance between the two is</p>
-<div class="math notranslate nohighlight">
-\[ |\vec{r} - \vec{r}'| = (x - x') \]</div>
-<p><strong>Step 5</strong></p>
-<p>The gravitational field from the infinitesimal mass is:</p>
-<div class="math notranslate nohighlight">
-\[ d\vec{g} = -Gdm\frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} \]</div>
-<p>Insert the information into the equation for the electric field:</p>
-<div class="math notranslate nohighlight">
-\[ d\vec{g} = -\frac{GMdx'}{a}\frac{x\hat{i} - x'\hat{i}}{(x - x')^3} \]</div>
-<p>We can factor out the unit vector:</p>
-<div class="math notranslate nohighlight">
-\[ d\vec{g} = -\frac{GM}{a}\frac{(x - x')dx'}{(x - x')^3}\hat{i} \]</div>
-<p>Then we divide out the <span class="math notranslate nohighlight">\((x - x')\)</span> factor:</p>
-<div class="math notranslate nohighlight">
-\[ d\vec{g} = -\frac{GM}{a}\frac{dx'}{(x - x')^2}\hat{i} \]</div>
-<p>Now we are ready to integrate.</p>
-<p><strong>Step 6</strong></p>
-<p>We integrate to obtain the full gravitational field:</p>
-<div class="math notranslate nohighlight">
-\[ \vec{g} = -\int_{x = 0}^{x = +a}\frac{GM}{a}\frac{dx'}{(x - x')^2}\hat{i} \]</div>
-<p>Let us bring all the constants outside the integral, including the unit vector. <strong>The cartesian unit vector is a constant and this step is really important to think about if we are in polar or cylindrical coordinates, where the unit vectors may vary in direction</strong>.</p>
-<div class="math notranslate nohighlight">
-\[ \vec{g} = -\frac{GM\hat{i}}{a}\int_{x' = 0}^{x' = +a}\frac{dx'}{(x - x')^2} \]</div>
-<p>The integral can be integrated relatively straightforward by making a substitution <span class="math notranslate nohighlight">\(u = (x - x')\)</span>. The differential is <span class="math notranslate nohighlight">\(du = -dx'\)</span> and we have</p>
-<div class="math notranslate nohighlight">
-\[ \vec{g} = +\frac{GM\hat{i}}{a}\int_{x' = 0}^{x' = +a}\frac{du}{(u)^2} \]</div>
-<p>Using the Power Rule for integration:</p>
-<div class="math notranslate nohighlight">
-\[ \vec{g} = -\frac{GM\hat{i}}{a}\frac{1}{u}\bigg\rvert_{x' = 0}^{x' = a} \]</div>
-<p>Inserting the expression for u back into the solution:</p>
-<div class="math notranslate nohighlight">
-\[ \vec{g} = -\frac{GM\hat{i}}{a}\frac{1}{(x - x')}\bigg\rvert_{x' = 0}^{x' = a} \]</div>
-<p>and evaluate at the limits:</p>
-<div class="math notranslate nohighlight">
-\[ \vec{g} = -\frac{GM\hat{i}}{a}\left(\frac{1}{(x - a)} - \frac{1}{(x)}\right)\]</div>
-<p>In an attempt to simplify, we can use common denominator:</p>
-<div class="math notranslate nohighlight">
-\[ \vec{g} = -\frac{GM\hat{i}}{a}\left(\frac{x}{x(x - a)} - \frac{x-a}{x(x-a)}\right)\]</div>
-<p>which simplifies to</p>
-<div class="math notranslate nohighlight">
-\[ \vec{g} = -\frac{GM}{x(x - a)}\hat{i}\]</div>
-<p><strong>Step 7</strong></p>
-<p>Several items to reflect on here.</p>
-<ol class="arabic simple">
-<li><p>There are no <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> components of the gravitional field. This makes sense due to the geometry of the problem.</p></li>
-<li><p>if the point P is far from the line mass, that is, <span class="math notranslate nohighlight">\(x &gt;&gt; a\)</span>, then we have</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[ \vec{g} = -\frac{GM}{(x)(x)\left(1 - \frac{a}{x}\right)}\hat{i}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(\frac{a}{x}\)</span> will become very small, it reduces to</p>
-<div class="math notranslate nohighlight">
-\[ \vec{g} = -\frac{GM}{x^2}\hat{i}\]</div>
-<p>That is, <strong>far away from the line mass it behaves as a point mass</strong>.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<hr style="border:1px solid gray"> </hr><div class="alert alert-warning">
+    <b> Box 2 </b><br>
+	Use your result from Box 1 to calculate the acceleration of gravity at the surface of the Earth. Use $G = 6.67 \times 10^{-11}$ Nm$^2$/kg$^2$, mass of Earth ($M_E = 5.97 \times 10^{24}$ kg), and radius of Earth ($R_E = 6.37 \times 10^6$ m).
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
-<b>Box 2</b><br>
-<p>Consider a line mass with mass <span class="math notranslate nohighlight">\(M\)</span> and length <span class="math notranslate nohighlight">\(2a\)</span> along the y-axis. Find the <span class="math notranslate nohighlight">\(g\)</span>-field at some point along the x-axis outside the mass distribution.</p>
-</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<hr style="border:1px solid gray"> </hr><div class="alert alert-warning">
+    <b> Box 3 </b><br>
+	Use your result from Box 1 to calculate the acceleration of gravity on the international space station (its altitude above surface of the Earth is $\sim 400$ km). Use $G = 6.67 \times 10^{-11}$ Nm$^2$/kg$^2$, mass of Earth ($M_E = 5.97 \times 10^{24}$ kg), and radius of Earth ($R_E = 6.37 \times 10^6$ m).
+</div>
+<hr style="border:1px solid gray"> </hr><div class="alert alert-warning">
+    <b> Box 4 </b><br>
+	Use your result from Box 1 to calculate the acceleration of gravity on a geostationary satellite (its altitude above surface of the Earth is $\sim 40,000$ km). Use $G = 6.67 \times 10^{-11}$ Nm$^2$/kg$^2$, mass of Earth ($M_E = 5.97 \times 10^{24}$ kg), and radius of Earth ($R_E = 6.37 \times 10^6$ m).
+</div>
+<hr style="border:1px solid gray"> </hr><div class="alert alert-warning">
+    <b> Box 5 </b><br>
+Show that the gravitational field inside the Earth is
+<div class="math notranslate nohighlight">
+\[ g = \frac{GM_{E}r}{R_{E}^3} \]</div>
+<p>where <span class="math notranslate nohighlight">\(M_E\)</span> is the mass of the Earth, <span class="math notranslate nohighlight">\(R_E\)</span> is the radius of the Earth, and <span class="math notranslate nohighlight">\(r\)</span> is the distance from the center of the Earth to the point of interest (<span class="math notranslate nohighlight">\(r &lt; R_E\)</span>).
+HINT: Write the density of the Earth as <span class="math notranslate nohighlight">\(\rho = \frac{M_E}{\frac{4}{3}\pi R_{E}^{3}}\)</span> and use that to find the mass enclosed inside the Gaussian surface.</p>
+</div>
+<hr style="border:1px solid gray"> </hr><div class="alert alert-warning">
+    <b> Box 6 </b><br>
+Summarize the above boxes by writing down two equations: one for the gravitational field  outside the surface of the Earth and one for the gravitational field inside the Earth.
+</div>
+<hr style="border:1px solid gray"> </hr><div class="alert alert-warning">
+    <b> Box 7 </b><br>
+Make a plot of the gravitational field of the Earth ranging from $r = 0$ to $r = 400,000$ km (the approximate distance to the moon) using a code box below here. I have made a template code but you will need to enter the equstions. If you need further help, let me know!
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Template code for making a plot</span>
+
+<span class="c1">#import functions we will need</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#given constants</span>
+<span class="n">G</span> <span class="o">=</span> <span class="mf">6.67E-11</span>
+<span class="n">M_E</span> <span class="o">=</span> <span class="mf">5.97E24</span>
+
+<span class="c1">#create a list/array of r-values for both inside and outside the Earth</span>
+<span class="n">R_E</span> <span class="o">=</span> <span class="mf">6.37E6</span>
+<span class="n">r_in</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">R_E</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">R_E</span> <span class="o">+</span> <span class="mf">4.0E7</span>
+<span class="n">r_out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">R_E</span><span class="p">,</span><span class="n">R</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1">########### INSERT YOUR TWO EQUATIONS HERE ###############</span>
+<span class="n">g_in</span> <span class="o">=</span> <span class="n">G</span><span class="o">*</span><span class="n">M_E</span><span class="o">*</span><span class="n">r_in</span><span class="o">/</span><span class="n">R_E</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">g_out</span> <span class="o">=</span> <span class="n">G</span><span class="o">*</span><span class="n">M_E</span><span class="o">/</span><span class="n">r_out</span><span class="o">**</span><span class="mi">2</span>
+<span class="c1">##########################################################</span>
+
+
+<span class="c1">#set up plotting environment</span>
+<span class="c1"># UNCOMMENT EVERYTHING BELOW TO CREATE THE PLOT</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>  <span class="c1">#fit to plotting canvas</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r_in</span><span class="p">,</span><span class="n">g_in</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r_out</span><span class="p">,</span><span class="n">g_out</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Gravity Field of Earth&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Distance from center of Earth (m)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Gravitational Field (m/s^2)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Gravitational Field (m/s^2)&#39;)
+</pre></div>
+</div>
+<img alt="../_images/560075716be7ab481b63a3b40f4d0ca7ef9285203c31329bc380b941e17ff5f6.png" src="../_images/560075716be7ab481b63a3b40f4d0ca7ef9285203c31329bc380b941e17ff5f6.png" />
+</div>
+</div>
 </section>
 </section>
 
@@ -628,20 +585,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="newton-law-gravity.html"
+       href="mass-distributions.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">A3.1 Newton’s Law of Gravity</p>
+        <p class="prev-next-title">A3.2 Newton’s Law of Gravity -  Mass Distributions</p>
       </div>
     </a>
     <a class="right-next"
-       href="flux.html"
+       href="problemsA3.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">A3.3 Field Flux</p>
+        <p class="prev-next-title">A3.X Problems</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -663,14 +620,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a3-2-1-motivation">A3.2.1 Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a3-2-2-gravitional-field-point-mass">A3.2.2 Gravitional Field - Point Mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c6-2-3-solving-strategy">C6.2.3 Solving Strategy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up">Set-Up</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">Methodology</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">A3.3 Field Flux</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a3-3-1-motivation">A3.3.1 Motivation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a3-3-2-field-flux">A3.3.2 Field Flux</a></li>
 </ul>
 </li>
 </ul>
+
   </nav></div>
 
 </div></div>

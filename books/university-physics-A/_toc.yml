@@ -35,4 +35,5 @@ parts:
   chapters:
   - file: Module-A3/newton-law-gravity
   - file: Module-A3/mass-distributions
+  - file: Module-A3/flux
   - file: Module-A3/problemsA3
