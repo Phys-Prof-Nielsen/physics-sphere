@@ -37,3 +37,7 @@ parts:
   - file: Module-A3/mass-distributions
   - file: Module-A3/flux
   - file: Module-A3/problemsA3
+  
+- caption: Module A4 - Simple Harmonic Motion
+  chapters:
+  - file: Module-A4/problemsA4
