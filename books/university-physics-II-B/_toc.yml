@@ -28,3 +28,7 @@ parts:
 - caption: Module B4 - Capacitance
   chapters:
   - file: Module-B4/problemsB4
+  
+- caption: Module B5 - Magnetic Fields
+  chapters:
+  - file: Module-B5/problemsB5
