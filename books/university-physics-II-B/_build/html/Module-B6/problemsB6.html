@@ -782,6 +782,57 @@ Induced current: 4.78792399178501e-176 A
 </div>
 </div>
 </div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">50.0e-3</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.10</span>
+<span class="n">B1</span> <span class="o">=</span> <span class="mf">200.0e-3</span>
+<span class="n">B2</span> <span class="o">=</span> <span class="mf">300.0e-3</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">flux1</span> <span class="o">=</span> <span class="n">B1</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">flux2</span> <span class="o">=</span> <span class="n">B2</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="n">emf</span> <span class="o">=</span> <span class="o">-</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">flux2</span> <span class="o">-</span> <span class="n">flux1</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced EMF: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">emf</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The B-field created by the induced current will act to impose the change.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Since the external field is getting stronger, the induced field will be opposite direction: into the page&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;An induced field into the page requires a clockwise current.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Induced EMF: -0.00785398163397448 V
+ 
+The B-field created by the induced current will act to impose the change.
+Since the external field is getting stronger, the induced field will be opposite direction: into the page
+An induced field into the page requires a clockwise current.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B6.7</h2>
     </header>
 <p>When a magnetic field is first turned on, the flux through a 20-turn loop varies with time according to <span class="math notranslate nohighlight">\(\phi_m = 5.0t^2 - 2.0t\)</span>, where <span class="math notranslate nohighlight">\(\phi_m\)</span> is in milliwebers, <span class="math notranslate nohighlight">\(t\)</span> is in seconds, and the loop is in the plane of the page with the unit normal pointing outward.</p>
