@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>B6.X Problems &#8212; A Competency Approach to University Physics II</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="B5.X Problems" href="../Module-B5/problemsB5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -411,7 +410,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b6-x-problems">
-<h1>B6.X Problems<a class="headerlink" href="#b6-x-problems" title="Permalink to this heading">#</a></h1>
+<h1>B6.X Problems<a class="headerlink" href="#b6-x-problems" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B6.1</h2>
     </header>
 <p>A 50-turn coil has a diameter of <span class="math notranslate nohighlight">\(15\)</span> cm. The coil is placed in a spatially uniform magnetic field of magnitude <span class="math notranslate nohighlight">\(0.50\)</span> T so that the face of the coil and the magnetic field are perpendicular. Find the magnitude of the emf induced in the coil if the magnetic field is reduced to zero uniformly in</p>
@@ -656,6 +655,69 @@ Induced EMF: 0.0942477796076938 V
 </div>
 </div>
 </div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">B0</span> <span class="o">=</span> <span class="mf">0.25</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">200.0</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">L</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">W</span> <span class="o">=</span> <span class="mf">0.02</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">L</span><span class="o">*</span><span class="n">W</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">B0</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">alpha</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">flux</span> <span class="o">=</span> <span class="n">B</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">emf</span> <span class="o">=</span> <span class="o">-</span><span class="n">N</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">flux</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">I</span> <span class="o">=</span> <span class="n">emf</span><span class="o">/</span><span class="n">R</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">I1</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span><span class="n">t1</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced current: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">I1</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; A&#39;</span><span class="p">)</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="mf">0.002</span>
+<span class="n">I1</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span><span class="n">t1</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced current: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">I1</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; A&#39;</span><span class="p">)</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">I1</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span><span class="n">t1</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced current: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">I1</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; A&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Induced current: 0.0204682688269495 A
+ 
+Induced current: 0.0167580011508910 A
+ 
+Induced current: 4.78792399178501e-176 A
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B6.5</h2>
     </header>
 <p>A rectangular wire loop with length a and width b lies in the <span class="math notranslate nohighlight">\(xy\)</span>-plane, as shown below. Within the loop there is a time-dependent magnetic field given by <span class="math notranslate nohighlight">\(\vec{B}(t) = C\left[x\cos(\omega t)~\hat{i} + y\sin(\omega t)~\hat{k}\right]\)</span> T. Determine the emf induced in the loop as a function of time.</p>
@@ -667,6 +729,43 @@ Induced EMF: 0.0942477796076938 V
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">C</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="n">C</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">t</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">C</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">t</span><span class="p">)]</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">]</span>
+
+<span class="n">flux</span> <span class="o">=</span> <span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">B</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">B</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">emf</span> <span class="o">=</span> <span class="o">-</span><span class="n">N</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">flux</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced emf: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">emf</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Induced emf: -C*a*b*w*y*cos(t*w) V
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B6.6</h2>
     </header>
