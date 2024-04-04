@@ -851,6 +851,35 @@ An induced field into the page requires a clockwise current.
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">t</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">flux</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.0</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span>  <span class="c1">#/1000 since it is given in mW</span>
+
+<span class="n">emf</span> <span class="o">=</span> <span class="o">-</span><span class="n">N</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">flux</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced emf: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">emf</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+
+<span class="n">t2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">emf1</span> <span class="o">=</span> <span class="n">emf</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">t</span><span class="p">:</span><span class="n">t2</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced emf: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">emf1</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Flux is decreasing, so &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Induced emf: 0.04 - 0.2*t V
+Induced emf: 0.0400000000000000 V
+Flux is decreasing, so 
+</pre></div>
+</div>
+</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B6.8</h2>
     </header>
 <p>Use Lenz’s law to determine the direction of induced current in each case.</p>
