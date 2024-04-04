@@ -428,6 +428,62 @@ document.write(`
 </div>
 </div>
 </div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">0.15</span>
+<span class="n">B1</span> <span class="o">=</span> <span class="mf">0.50</span>
+<span class="n">B2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="n">D</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">flux1</span> <span class="o">=</span> <span class="n">B1</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">flux2</span> <span class="o">=</span> <span class="n">B2</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.10</span>
+<span class="n">emf</span> <span class="o">=</span> <span class="o">-</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">flux2</span> <span class="o">-</span> <span class="n">flux1</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced EMF: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">emf</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">emf</span> <span class="o">=</span> <span class="o">-</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">flux2</span> <span class="o">-</span> <span class="n">flux1</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced EMF: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">emf</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="n">emf</span> <span class="o">=</span> <span class="o">-</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">flux2</span> <span class="o">-</span> <span class="n">flux1</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced EMF: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">emf</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Induced EMF: 4.417864669110647 V
+ 
+Induced EMF: 0.44178646691106466 V
+ 
+Induced EMF: 0.007363107781851078 V
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B6.2</h2>
     </header>
 <p>Repeat your calculations of the preceding problem’s time of 0.1 s with the plane of the coil making an angle of</p>
@@ -445,6 +501,67 @@ document.write(`
 </div>
 </div>
 </div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">0.15</span>
+<span class="n">B1</span> <span class="o">=</span> <span class="mf">0.50</span>
+<span class="n">B2</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="n">D</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">90</span> <span class="o">-</span> <span class="mf">30.0</span><span class="p">)</span>
+<span class="n">flux1</span> <span class="o">=</span> <span class="n">B1</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">flux2</span> <span class="o">=</span> <span class="n">B2</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.10</span>
+<span class="n">emf</span> <span class="o">=</span> <span class="o">-</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">flux2</span> <span class="o">-</span> <span class="n">flux1</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced EMF: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">emf</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+
+<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">90</span> <span class="o">-</span> <span class="mf">60.0</span><span class="p">)</span>
+<span class="n">flux1</span> <span class="o">=</span> <span class="n">B1</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">flux2</span> <span class="o">=</span> <span class="n">B2</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.10</span>
+<span class="n">emf</span> <span class="o">=</span> <span class="o">-</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">flux2</span> <span class="o">-</span> <span class="n">flux1</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced EMF: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">emf</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+
+
+<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">90</span> <span class="o">-</span> <span class="mf">90.0</span><span class="p">)</span>
+<span class="n">flux1</span> <span class="o">=</span> <span class="n">B1</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">flux2</span> <span class="o">=</span> <span class="n">B2</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.10</span>
+<span class="n">emf</span> <span class="o">=</span> <span class="o">-</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">flux2</span> <span class="o">-</span> <span class="n">flux1</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced EMF: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">emf</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Induced EMF: 2.208932334555324 V
+Induced EMF: 3.8259830339315535 V
+Induced EMF: 4.417864669110647 V
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B6.3</h2>
     </header>
 <p>The magnetic field through a circular loop of radius <span class="math notranslate nohighlight">\(10.0\)</span> cm varies with time as shown below. The field is perpendicular to the loop. Plot the magnitude of the induced emf in the loop as a function of time.</p>
@@ -456,6 +573,71 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.10</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1">#first segment</span>
+<span class="n">B1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">B2</span> <span class="o">=</span> <span class="mf">3.0e-3</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">2.0e-3</span>
+<span class="n">flux1</span> <span class="o">=</span> <span class="n">B1</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">flux2</span> <span class="o">=</span> <span class="n">B2</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">emf</span> <span class="o">=</span> <span class="o">-</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">flux2</span> <span class="o">-</span> <span class="n">flux1</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced EMF: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">emf</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+
+<span class="c1">#second segment</span>
+<span class="n">B1</span> <span class="o">=</span> <span class="mf">3.0e-3</span>
+<span class="n">B2</span> <span class="o">=</span> <span class="mf">3.0e-3</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">3.0e-3</span>
+<span class="n">flux1</span> <span class="o">=</span> <span class="n">B1</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">flux2</span> <span class="o">=</span> <span class="n">B2</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">emf</span> <span class="o">=</span> <span class="o">-</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">flux2</span> <span class="o">-</span> <span class="n">flux1</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced EMF: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">emf</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+
+<span class="c1">#thrid segment</span>
+<span class="n">B1</span> <span class="o">=</span> <span class="mf">3.0e-3</span>
+<span class="n">B2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">1.0e-3</span>
+<span class="n">flux1</span> <span class="o">=</span> <span class="n">B1</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">flux2</span> <span class="o">=</span> <span class="n">B2</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">emf</span> <span class="o">=</span> <span class="o">-</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">flux2</span> <span class="o">-</span> <span class="n">flux1</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Induced EMF: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">emf</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; V&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Induced EMF: -0.0471238898038469 V
+ 
+Induced EMF: -0.0 V
+ 
+Induced EMF: 0.0942477796076938 V
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B6.4</h2>
     </header>
