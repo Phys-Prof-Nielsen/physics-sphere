@@ -7,8 +7,8 @@ parts:
 
 - caption: Course Home
   chapters:
-  - url: https://phys-prof-nielsen.github.io/physics-sphere/university-physics/university-physics.html
-    title: University Physics Main Page
+  - url: https://phys-prof-nielsen.github.io/physics-sphere/classical-mechanics/classical-mechanics.html
+    title: Classical Mechanics Main Page
     
 #- caption: Preample
 #  chapters:
@@ -26,4 +26,8 @@ parts:
 - caption: Module B2 - Variable Mass
   chapters:
   - file: Module-B2/problemsB2
+  
+- caption: Module B3 - Lagrange and Hamilton Dynamics
+  chapters:
+  - file: Module-B3/problemsB3
 
