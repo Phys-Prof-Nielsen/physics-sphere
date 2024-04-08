@@ -41,3 +41,7 @@ parts:
 - caption: Module A4 - Simple Harmonic Motion
   chapters:
   - file: Module-A4/problemsA4
+  
+- caption: Module A5 - Mechanical Waves
+  chapters:
+  - file: Module-A5/problemsA5
