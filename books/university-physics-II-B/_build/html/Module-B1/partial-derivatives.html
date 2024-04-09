@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>B1.3 Partial Derivatives &#8212; A Competency Approach to University Physics II</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B2.X Problems" href="../Module-B2/problemsB2.html" />
     <link rel="prev" title="B1.2 Parameterization of Line Integrals" href="parameterization-line-integrals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -435,9 +436,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b1-3-partial-derivatives">
-<h1>B1.3 Partial Derivatives<a class="headerlink" href="#b1-3-partial-derivatives" title="Permalink to this headline">#</a></h1>
+<h1>B1.3 Partial Derivatives<a class="headerlink" href="#b1-3-partial-derivatives" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b1-3-1-conceptual-meaning">
-<h2>B1.3.1 Conceptual Meaning<a class="headerlink" href="#b1-3-1-conceptual-meaning" title="Permalink to this headline">#</a></h2>
+<h2>B1.3.1 Conceptual Meaning<a class="headerlink" href="#b1-3-1-conceptual-meaning" title="Permalink to this heading">#</a></h2>
 <p>In the previous notes, we encountered integration of more than one variable through line integrals. This time, we will explore derivatives when a function depends on more than one independent variable. For graphical simplicity, we will restrict ourself to two independent variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> and consider a function <span class="math notranslate nohighlight">\(f(x,y)\)</span>. An example of such a function is shown in the figure below where the vertical axis represents</p>
 <div class="math notranslate nohighlight">
 \[ f(x,y) = \textrm{e}^{-y^2}\sin(x) \]</div>
@@ -459,7 +460,7 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b1-3-2-partial-derivative-notation">
-<h2>B1.3.2 Partial Derivative Notation<a class="headerlink" href="#b1-3-2-partial-derivative-notation" title="Permalink to this headline">#</a></h2>
+<h2>B1.3.2 Partial Derivative Notation<a class="headerlink" href="#b1-3-2-partial-derivative-notation" title="Permalink to this heading">#</a></h2>
 <p>We should notice by now, that in the derivatives above, we have just treated <span class="math notranslate nohighlight">\(y\)</span> as a constant. This is our <strong>partial derivative</strong>. The partial derivative of a function is a measure of how the function varies as a function of one variable while the other variable(s) remains constant. We use a slightly different notation to express partial derivatives:</p>
 <div class="math notranslate nohighlight">
 \[  \frac{df}{dx} \rightarrow \frac{\partial f}{\partial x} \]</div>
@@ -469,7 +470,7 @@ document.write(`
     </header>
 <p>What is the partial derivative of <span class="math notranslate nohighlight">\(f(x,y) = \textrm{e}^{-y^2}\sin(x)\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span>?</p>
 <section id="answer">
-<h3>Answer<a class="headerlink" href="#answer" title="Permalink to this headline">#</a></h3>
+<h3>Answer<a class="headerlink" href="#answer" title="Permalink to this heading">#</a></h3>
 <p>Since we are considering <span class="math notranslate nohighlight">\(y\)</span> to be a constant, our exponential factor is simply treated as a constant value. The partial derivative with respect to <span class="math notranslate nohighlight">\(x\)</span> is then</p>
 <div class="math notranslate nohighlight">
 \[ \frac{\partial f}{\partial x} = \textrm{e}^{-y^2}\cos (x) \]</div>
@@ -494,9 +495,9 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="b1-3-3-vector-operators-gradient-and-curl">
-<h2>B1.3.3 Vector Operators: Gradient and Curl<a class="headerlink" href="#b1-3-3-vector-operators-gradient-and-curl" title="Permalink to this headline">#</a></h2>
+<h2>B1.3.3 Vector Operators: Gradient and Curl<a class="headerlink" href="#b1-3-3-vector-operators-gradient-and-curl" title="Permalink to this heading">#</a></h2>
 <section id="gradient">
-<h3>Gradient<a class="headerlink" href="#gradient" title="Permalink to this headline">#</a></h3>
+<h3>Gradient<a class="headerlink" href="#gradient" title="Permalink to this heading">#</a></h3>
 <p>From Box 4, we saw that at a single point of the function, we could assign two different slopes depending on which direction we considered. This is similar to when you are hiking a hill or mountain. You may consider the slope in one direction, but turn to another direction and the slope is different. The fact that we can assign a a slope to a direction, implies that we are talking about a <strong>vector</strong>. This vector is known as the <strong>gradient</strong>, and we define the gradient of a function <span class="math notranslate nohighlight">\(f(x,y,z)\)</span> as</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -508,7 +509,7 @@ document.write(`
 <p>which you are likely to become quite familiar with in this course.</p>
 </section>
 <section id="curl">
-<h3>Curl<a class="headerlink" href="#curl" title="Permalink to this headline">#</a></h3>
+<h3>Curl<a class="headerlink" href="#curl" title="Permalink to this heading">#</a></h3>
 <p>The curl of a vector field is related to the rotation or circulation of a vector field. We will not get into the conceptual meaning of it yet, but simply define it.</p>
 <p>The curl of a vector field <span class="math notranslate nohighlight">\(\vec{f}\)</span>  is defined as</p>
 <div class="alert alert-success">
@@ -523,13 +524,13 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="b1-3-4-applications-conservative-force-and-potential-energy">
-<h2>B1.3.4 Applications: Conservative Force and Potential Energy<a class="headerlink" href="#b1-3-4-applications-conservative-force-and-potential-energy" title="Permalink to this headline">#</a></h2>
+<h2>B1.3.4 Applications: Conservative Force and Potential Energy<a class="headerlink" href="#b1-3-4-applications-conservative-force-and-potential-energy" title="Permalink to this heading">#</a></h2>
 <p>From Physics I, we learned that if a force is <strong>conservative</strong>, then we could assign a scalar function to that force, which we called the <strong>potential energy</strong>. There existed a derivative relations between the conservative force <span class="math notranslate nohighlight">\(F\)</span> and the potential energy <span class="math notranslate nohighlight">\(U\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ \vec{F} = -\frac{dU}{dx}\hat{i} \]</div>
 <p>We only learned the one-dimensional version of it, but now we are ready for the grown-up version.</p>
 <section id="conservative-force">
-<h3>Conservative Force<a class="headerlink" href="#conservative-force" title="Permalink to this headline">#</a></h3>
+<h3>Conservative Force<a class="headerlink" href="#conservative-force" title="Permalink to this heading">#</a></h3>
 <p>A force is conservative if</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -537,7 +538,7 @@ document.write(`
 </div>
 </section>
 <section id="potential-energy">
-<h3>Potential Energy<a class="headerlink" href="#potential-energy" title="Permalink to this headline">#</a></h3>
+<h3>Potential Energy<a class="headerlink" href="#potential-energy" title="Permalink to this heading">#</a></h3>
 <p>The potential energy associated with a conservative force is defined through</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
