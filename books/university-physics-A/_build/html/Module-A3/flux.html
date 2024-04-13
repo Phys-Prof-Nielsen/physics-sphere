@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>A3.3 Field Flux &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -53,15 +52,14 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-YXTF8Z7F7R"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-CP4GJ809BQ"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){ dataLayer.push(arguments); }
                 gtag('js', new Date());
-                gtag('config', 'G-YXTF8Z7F7R');
+                gtag('config', 'G-CP4GJ809BQ');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -77,7 +75,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="A3.X Problems" href="problemsA3.html" />
     <link rel="prev" title="A3.2 Newton’s Law of Gravity - Mass Distributions" href="mass-distributions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -250,6 +248,24 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fas fa-rocket"></i>
   </button>
   <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Phys-Prof-Nielsen/physics-sphere/blob/main/books/university-physics-A/Module-A3/flux.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
       
       
       
@@ -442,10 +458,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="a3-3-field-flux">
-<h1>A3.3 Field Flux<a class="headerlink" href="#a3-3-field-flux" title="Permalink to this heading">#</a></h1>
+<h1>A3.3 Field Flux<a class="headerlink" href="#a3-3-field-flux" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section class="tex2jax_ignore mathjax_ignore" id="a3-3-1-motivation">
-<h1>A3.3.1 Motivation<a class="headerlink" href="#a3-3-1-motivation" title="Permalink to this heading">#</a></h1>
+<h1>A3.3.1 Motivation<a class="headerlink" href="#a3-3-1-motivation" title="Permalink to this headline">#</a></h1>
 <p>We have four fundamental forces in physics due to the following interactions</p>
 <ul class="simple">
 <li><p>gravity</p></li>
@@ -457,7 +473,7 @@ document.write(`
 <p>The flux concept are essential to <strong>Gauss’s Law</strong>, which exist for both gravitationa, electric, and magnetic fields. Since we are somewhat familair with Newtonian gravity, we will introduce the flux concept through the gravitational field.</p>
 <p>Gauss’s Law is one of the most essential topics in <em>University Physics II</em>, and for that reason I believe it is helpful to see it first time in <em>University Physics I</em> as a repetitive way of learning. It is not super essential to master it now, but in the next course it will be.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a3-3-2-field-flux">
-<h2>A3.3.2 Field Flux<a class="headerlink" href="#a3-3-2-field-flux" title="Permalink to this heading">#</a></h2>
+<h2>A3.3.2 Field Flux<a class="headerlink" href="#a3-3-2-field-flux" title="Permalink to this headline">#</a></h2>
 <div class="alert alert-success">
 <p>In general, the <strong>flux</strong> is defined in terms of a vector field passing through a surface per unit time. We can say that the flux is a measure of how much of a field quantity is passing through a given surface.</p>
 <div class="math notranslate nohighlight">
@@ -465,7 +481,7 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="a3-3-3-gauss-s-law">
-<h2>A3.3.3 Gauss’s Law<a class="headerlink" href="#a3-3-3-gauss-s-law" title="Permalink to this heading">#</a></h2>
+<h2>A3.3.3 Gauss’s Law<a class="headerlink" href="#a3-3-3-gauss-s-law" title="Permalink to this headline">#</a></h2>
 <p>We have previously labeled the acceleration of gravity at the Earth’s surface as <span class="math notranslate nohighlight">\(g = 9.81\)</span>~m/s<span class="math notranslate nohighlight">\(^2\)</span>. However, we know that it changes as we move away from Earth. The objective of these notes is to learn how to calculate the gravitational field (the acceleration) as we move away from the Earth’s surface but also from other mass distributions that are not spherical.</p>
 <p>The tool to perform these calculations is <strong>Gauss’s law for gravity</strong> (in PHYS2220 you will encounter Gauss’s law for electric and magnetic fields as well):</p>
 <div class="alert alert-success">
@@ -569,7 +585,7 @@ HINT: Write the density of the Earth as <span class="math notranslate nohighligh
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Gravitational Field (m/s^2)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/560075716be7ab481b63a3b40f4d0ca7ef9285203c31329bc380b941e17ff5f6.png" src="../_images/560075716be7ab481b63a3b40f4d0ca7ef9285203c31329bc380b941e17ff5f6.png" />
+<img alt="../_images/94fe7b6e5bb761ed33e0e49db9075f3723537a8cdf066cef3440f877b5bec237.png" src="../_images/94fe7b6e5bb761ed33e0e49db9075f3723537a8cdf066cef3440f877b5bec237.png" />
 </div>
 </details>
 </div>
@@ -581,7 +597,7 @@ HINT: Write the density of the Earth as <span class="math notranslate nohighligh
         requestKernel: true,
         binderOptions: {
             repo: "Phys-Prof-Nielsen/physics-sphere",
-            ref: "master",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

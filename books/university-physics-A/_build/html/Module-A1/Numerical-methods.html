@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>A1.2 Numerical Integration: Finite Difference Methods &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -53,15 +52,14 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-YXTF8Z7F7R"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-CP4GJ809BQ"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){ dataLayer.push(arguments); }
                 gtag('js', new Date());
-                gtag('config', 'G-YXTF8Z7F7R');
+                gtag('config', 'G-CP4GJ809BQ');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -77,7 +75,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="A1.3 Numerical Methods - Practice" href="Numerical-methods-practice.html" />
     <link rel="prev" title="A1.1 Taylor Expansions" href="Taylor-expansions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -250,6 +248,24 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fas fa-rocket"></i>
   </button>
   <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Phys-Prof-Nielsen/physics-sphere/blob/main/books/university-physics-A/Module-A1/Numerical-methods.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
       
       
       
@@ -447,9 +463,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="a1-2-numerical-integration-finite-difference-methods">
-<h1>A1.2 Numerical Integration: Finite Difference Methods<a class="headerlink" href="#a1-2-numerical-integration-finite-difference-methods" title="Permalink to this heading">#</a></h1>
+<h1>A1.2 Numerical Integration: Finite Difference Methods<a class="headerlink" href="#a1-2-numerical-integration-finite-difference-methods" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a1-2-1-motivation">
-<h2>A1.2.1 Motivation<a class="headerlink" href="#a1-2-1-motivation" title="Permalink to this heading">#</a></h2>
+<h2>A1.2.1 Motivation<a class="headerlink" href="#a1-2-1-motivation" title="Permalink to this headline">#</a></h2>
 <p>We will see that many examples encountered in Physics I
 come with assumptions that makes them less applicable to everyday life.
 While these examples are great at illustrating important concepts, they fail
@@ -460,7 +476,7 @@ that are correct to within a set acceptable error margin.</p>
 <p>As an example, Newton’s second law is a second order differential equation, which in many real-life applications is non-linear and only solveable through numerical methods. Under certain situations, we can transform it into coupled first order differential equations that can be solved by numerical integration methods. The objective of this note is to obtain these numerical integration schemes known as <strong>finite difference methods</strong>.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="a1-2-2-linearization">
-<h2>A1.2.2 Linearization<a class="headerlink" href="#a1-2-2-linearization" title="Permalink to this heading">#</a></h2>
+<h2>A1.2.2 Linearization<a class="headerlink" href="#a1-2-2-linearization" title="Permalink to this headline">#</a></h2>
 <p>Let us consider the graphical setup below. Assume that we have
 knowledge of a data point with
 coordinates <span class="math notranslate nohighlight">\([x_0,f(x_0)]\)</span> of a function
@@ -482,7 +498,7 @@ error with this approximation. A good, and very important, question would
 be: how big is this error? We will provide a more rigorous approach next that will help us answer that question.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="a1-2-3-taylor-series">
-<h2>A1.2.3 Taylor Series<a class="headerlink" href="#a1-2-3-taylor-series" title="Permalink to this heading">#</a></h2>
+<h2>A1.2.3 Taylor Series<a class="headerlink" href="#a1-2-3-taylor-series" title="Permalink to this headline">#</a></h2>
 <p>Calculus tells us that if we have a well-behaved function, the function can be written as the sum of an infinite series of polynomials called the <strong>Taylor series</strong> provided we have information about the function at some point <span class="math notranslate nohighlight">\(x = a\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ f(x) = f(a) + (x-a)\left.\frac{df}{dx}\right |_{x = a} + \frac{(x-a)^2}{2!}\left.\frac{d^{2}f}{dx^2}\right|_{x = a}
@@ -498,14 +514,14 @@ be: how big is this error? We will provide a more rigorous approach next that wi
 <p>At this point, we have not done anything other than re-write the Taylor series using different notation. However, it may be more evident now <strong>that our left hand-side of the equation is the function <span class="math notranslate nohighlight">\(f(x)\)</span> evaluated at a point ahead of <span class="math notranslate nohighlight">\(x\)</span> by using information about the function at <span class="math notranslate nohighlight">\(x_0\)</span> only</strong>. That is actually pretty cool!</p>
 <p>If the above feels overwhelming, please do not panic! I am only showing these steps towards our numericale scheme such that those of you with the mathematical confidence can see what is behind the door. The focus in the class will be on applying the numerical scheme, which is ahead of us yet.</p>
 <section id="mathematical-trick">
-<h3>Mathematical Trick<a class="headerlink" href="#mathematical-trick" title="Permalink to this heading">#</a></h3>
+<h3>Mathematical Trick<a class="headerlink" href="#mathematical-trick" title="Permalink to this headline">#</a></h3>
 <p>We will now make some tricks, or just plain arithmetic: subract <span class="math notranslate nohighlight">\(f(x_0)\)</span> on both sides of the equation and divide by <span class="math notranslate nohighlight">\(\Delta x\)</span> through all terms:</p>
 <div class="math notranslate nohighlight">
 \[ \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = \left.\frac{df}{dx}\right |_{x = x_0} + \frac{(\Delta x)}{2!}\left.\frac{d^{2}f}{dx^2}\right|_{x = x_0}
 + \frac{(\Delta x)^2}{3!}\left.\frac{d^{3}f}{dx^3}\right |_{x = x_0} + \cdots \]</div>
 </section>
 <section id="truncation">
-<h3>Truncation<a class="headerlink" href="#truncation" title="Permalink to this heading">#</a></h3>
+<h3>Truncation<a class="headerlink" href="#truncation" title="Permalink to this headline">#</a></h3>
 <p>The next step is to truncate the expression to only include the first derivative term (truncation simply refers to the fact that we are only considering a limited number of terms in the infinite series):</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -523,28 +539,28 @@ as such, our largest term that we ignored in the approximation above was</p>
 <p><strong>Hence, the error in our approximation is <span class="math notranslate nohighlight">\(\mathcal{O}(\Delta x)\)</span></strong> (read as: order of magnitude <span class="math notranslate nohighlight">\(\Delta x\)</span>).</p>
 </section>
 <section id="question">
-<h3>Question<a class="headerlink" href="#question" title="Permalink to this heading">#</a></h3>
+<h3>Question<a class="headerlink" href="#question" title="Permalink to this headline">#</a></h3>
 <p>Professor, why go through these lengthy steps to obtain our rise/run
 approximation for the derivative?</p>
 </section>
 <section id="answer">
-<h3>Answer<a class="headerlink" href="#answer" title="Permalink to this heading">#</a></h3>
+<h3>Answer<a class="headerlink" href="#answer" title="Permalink to this headline">#</a></h3>
 <p>This is the simplest approximation
 (linear), but we could have truncated the Taylor expansion further down
 and obtained more accurate approximations (for example <span class="math notranslate nohighlight">\(\mathcal{O}(\Delta x)^2\)</span>. We will do that as a box
 exercise. <strong>The above processes in using Taylor expansions to obtain approximations for derivatives are called finite difference methods</strong>.</p>
 </section>
 <section id="id1">
-<h3>Question<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Question<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>This is not in my textbook and I do not feel this is physics. Why do I need to know this?</p>
 </section>
 <section id="id2">
-<h3>Answer<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>Answer<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>Because it is an important element to solve realistic physics problems, and often the only way of doing it. As physicists and engineers, you do not get very far in real life by always ignoring friction or non-linear properties of materials. In software engineering, you will have to deal with discrete math and solving methods. A game engine, for example, is full of numerical methods.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 <section id="a1-2-4-first-order-forward-finite-difference-method">
-<h2>A1.2.4 First Order Forward Finite Difference Method<a class="headerlink" href="#a1-2-4-first-order-forward-finite-difference-method" title="Permalink to this heading">#</a></h2>
+<h2>A1.2.4 First Order Forward Finite Difference Method<a class="headerlink" href="#a1-2-4-first-order-forward-finite-difference-method" title="Permalink to this headline">#</a></h2>
 <p>The approximation for the derivative we obtained in Equation (2) is known
 as the <strong>first order derivative forward finite difference method</strong>. It is forward since we are applying knowledge
 of our data point <span class="math notranslate nohighlight">\(x_0\)</span> to obtain information about a point <span class="math notranslate nohighlight">\(x\)</span> laying ahead (or forward) of
@@ -606,10 +622,10 @@ this step size to obtain the most accurate solution without jeopardizing compute
 </div>
 <p>We call this our <strong>iterative equation</strong> and is the equation we will use to step forward in <span class="math notranslate nohighlight">\(x\)</span> until we reach <span class="math notranslate nohighlight">\(x = 5\)</span>.
 Let’s try and iterate it in the interval <span class="math notranslate nohighlight">\(x = [0,5]\)</span> in step sizes of 1:</p>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>x</p></th>
-<th class="head text-left"><p>y</p></th>
+<tr class="row-odd"><th class="text-left head"><p>x</p></th>
+<th class="text-left head"><p>y</p></th>
 </tr>
 </thead>
 <tbody>
@@ -644,10 +660,10 @@ a bit off. However, we used a large step
 size (<span class="math notranslate nohighlight">\(\Delta x = 1\)</span>), and the function is changing
 significantly over this large step size. <strong>We
 should choice a step size over which the function is not varying significantly</strong>. Let us try and repeat the process with a stepsize of <span class="math notranslate nohighlight">\(\Delta x = 0.1\)</span>:</p>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>x</p></th>
-<th class="head text-left"><p>y</p></th>
+<tr class="row-odd"><th class="text-left head"><p>x</p></th>
+<th class="text-left head"><p>y</p></th>
 </tr>
 </thead>
 <tbody>
@@ -758,7 +774,7 @@ should choice a step size over which the function is not varying significantly</
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Numerical Solution: 40.42500000000002
 </pre></div>
 </div>
-<img alt="../_images/df723c6ff142287870e5ec0375ef9b0b156de96db60ebab02680a1089e25e34f.png" src="../_images/df723c6ff142287870e5ec0375ef9b0b156de96db60ebab02680a1089e25e34f.png" />
+<img alt="../_images/53fe5bef86c791d3056d291dba66f913c511d6d663d19e34655ef3d4a52e86c5.png" src="../_images/53fe5bef86c791d3056d291dba66f913c511d6d663d19e34655ef3d4a52e86c5.png" />
 </div>
 </div>
 <div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
@@ -785,7 +801,7 @@ should choice a step size over which the function is not varying significantly</
         requestKernel: true,
         binderOptions: {
             repo: "Phys-Prof-Nielsen/physics-sphere",
-            ref: "master",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
