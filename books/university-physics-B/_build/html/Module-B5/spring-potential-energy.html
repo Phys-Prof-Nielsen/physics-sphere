@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>B5.3 Spring Potential Energy &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -76,7 +75,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B5.4 Power" href="Power.html" />
     <link rel="prev" title="B5.2 Deriving Work-Energy Theorem" href="work-energy-derivation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -298,6 +297,24 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
+      <li><a href="https://colab.research.google.com/github/Phys-Prof-Nielsen/physics-sphere/blob/main/books/university-physics-A/Module-B5/spring-potential-energy.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
       <li>
 <button onclick="initThebeSBT()"
   class="btn btn-sm btn-launch-thebe dropdown-item"
@@ -483,13 +500,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b5-3-spring-potential-energy">
-<h1>B5.3 Spring Potential Energy<a class="headerlink" href="#b5-3-spring-potential-energy" title="Permalink to this heading">#</a></h1>
+<h1>B5.3 Spring Potential Energy<a class="headerlink" href="#b5-3-spring-potential-energy" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b5-3-1-motivation">
-<h2>B5.3.1 Motivation<a class="headerlink" href="#b5-3-1-motivation" title="Permalink to this heading">#</a></h2>
+<h2>B5.3.1 Motivation<a class="headerlink" href="#b5-3-1-motivation" title="Permalink to this headline">#</a></h2>
 <p>Springs are often encountered in physics problems, both in textbook problems but also in everyday life applications. In principle, anything that can stretch or compress can be modeled as a spring system. For example, a concrete pillar in a construction. More direct examples of spring system in everyday life are suspension systems in construction and vehicles.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b5-3-2-hooke-s-law">
-<h2>B5.3.2  Hooke’s Law<a class="headerlink" href="#b5-3-2-hooke-s-law" title="Permalink to this heading">#</a></h2>
+<h2>B5.3.2  Hooke’s Law<a class="headerlink" href="#b5-3-2-hooke-s-law" title="Permalink to this headline">#</a></h2>
 <p>When we first began the subject of forces, we briefly introduced the spring force for a linear spring. However, due to its position-dependent nature we deferred the spring force to this phase of the course.</p>
 <p>A spring that exhibits a restoring force that varies <strong>linear</strong> with position is known to obey <strong>Hooke’s law</strong>:</p>
 <div class="alert alert-success">
@@ -500,7 +517,7 @@ document.write(`
 <p>Plenty of springs exists that do not obey Hooke’s law. It is just that Hooke’s law is relatively simple and many spring systems encountered do to a good approximation follow this law.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b5-3-3-spring-potential-energy">
-<h2>B5.3.3  Spring Potential Energy<a class="headerlink" href="#b5-3-3-spring-potential-energy" title="Permalink to this heading">#</a></h2>
+<h2>B5.3.3  Spring Potential Energy<a class="headerlink" href="#b5-3-3-spring-potential-energy" title="Permalink to this headline">#</a></h2>
 <p>From Hooke’s law, it is quite evident that it is a conservative force. For example, if we strecth the spring by an amount <span class="math notranslate nohighlight">\(x\)</span> to the right the spring force is directed to the left: negative work is done. If we then relax the spring back to its original position, the displacement is the left and the force remains to the left as well: positive work. We can also confirm it through the following integrals:</p>
 <div class="math notranslate nohighlight">
 \[ w_1 = \int_{0}^{x}(-kx')dx = -\frac{1}{2}kx^2 \]</div>
@@ -548,7 +565,7 @@ document.write(`
         requestKernel: true,
         binderOptions: {
             repo: "Phys-Prof-Nielsen/physics-sphere",
-            ref: "master",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

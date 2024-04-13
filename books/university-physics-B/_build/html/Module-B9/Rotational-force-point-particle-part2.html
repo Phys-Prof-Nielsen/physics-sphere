@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>B9.2 Rotational Force - Point Particle Part 2 &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -76,7 +75,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B9.x Problems" href="problemsB9.html" />
     <link rel="prev" title="B9.1 Rotational Force: Point Particle Part 1" href="Rotational-force-point-particle-part1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -298,6 +297,24 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
+      <li><a href="https://colab.research.google.com/github/Phys-Prof-Nielsen/physics-sphere/blob/main/books/university-physics-A/Module-B9/Rotational-force-point-particle-part2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
       <li>
 <button onclick="initThebeSBT()"
   class="btn btn-sm btn-launch-thebe dropdown-item"
@@ -484,9 +501,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b9-2-rotational-force-point-particle-part-2">
-<h1>B9.2 Rotational Force - Point Particle Part 2<a class="headerlink" href="#b9-2-rotational-force-point-particle-part-2" title="Permalink to this heading">#</a></h1>
+<h1>B9.2 Rotational Force - Point Particle Part 2<a class="headerlink" href="#b9-2-rotational-force-point-particle-part-2" title="Permalink to this headline">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b9-2-1-motivation">
-<h2>B9.2.1 Motivation<a class="headerlink" href="#b9-2-1-motivation" title="Permalink to this heading">#</a></h2>
+<h2>B9.2.1 Motivation<a class="headerlink" href="#b9-2-1-motivation" title="Permalink to this headline">#</a></h2>
 <p>If you recall, we have to approaches to define the angular momentum of a point particle :</p>
 <div class="math notranslate nohighlight">
 \[l_z = i_z\omega_z \tag{1} \]</div>
@@ -495,7 +512,7 @@ document.write(`
 <p>In the <strong>Rotational Force: Point Particle Part 1</strong>, we showed how we could define the net torque on a point particle by using Equation (1). In this note, we will see how we can use Equation (2) to define the torque, and realize a major difference in the two approaches.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b9-2-2-net-torque-in-terms-of-net-force">
-<h2>B9.2.2 Net Torque in terms of Net Force<a class="headerlink" href="#b9-2-2-net-torque-in-terms-of-net-force" title="Permalink to this heading">#</a></h2>
+<h2>B9.2.2 Net Torque in terms of Net Force<a class="headerlink" href="#b9-2-2-net-torque-in-terms-of-net-force" title="Permalink to this headline">#</a></h2>
 <p>We will start with Equation (3) from <em>Rotational Force: Point Particle Part 1</em> notes, but in vector form:</p>
 <div class="alert alert-success">
 <div class="math notranslate nohighlight">
@@ -518,7 +535,7 @@ document.write(`
 <p>Equation (4) is useful when we have direct knowledge about the net force applied to the particle instead of knowledge of its change in motion. However, Equation (4) goes beyond the net force as we will see in the next section.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b9-2-3-torque-due-to-individual-forces">
-<h2>B9.2.3 Torque due to Individual Forces<a class="headerlink" href="#b9-2-3-torque-due-to-individual-forces" title="Permalink to this heading">#</a></h2>
+<h2>B9.2.3 Torque due to Individual Forces<a class="headerlink" href="#b9-2-3-torque-due-to-individual-forces" title="Permalink to this headline">#</a></h2>
 <p>Let us write Equation (4) slightly different using summation notation:</p>
 <div class="math notranslate nohighlight">
 \[  \vec{\tau}_{net} = \vec{r} \times \sum_{i=1}^{N}\vec{f}_{i} \]</div>
@@ -617,7 +634,7 @@ document.write(`
  </div> 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="b9-2-4-the-lever-arm">
-<h2>B9.2.4 The Lever Arm<a class="headerlink" href="#b9-2-4-the-lever-arm" title="Permalink to this heading">#</a></h2>
+<h2>B9.2.4 The Lever Arm<a class="headerlink" href="#b9-2-4-the-lever-arm" title="Permalink to this headline">#</a></h2>
 <p>In engineering, the torque is sometimes referred to as the <strong>moment</strong>, but this is not the time to ridicule engineers. Another term that is often used in engineering and may be familar to you is the <strong>lever arm</strong>. The lever arm is the <strong>perpendicular vector component directed line segment from the pivot point (or POI) to the point of interaction</strong>. If we denote <span class="math notranslate nohighlight">\(\vec{r}_\perp\)</span> as the lever arm, then the magnitude of the torque around a pivot point acting on a particle due to an interaction <span class="math notranslate nohighlight">\(\vec{f}\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[ \tau = r_\perp f \]</div>
@@ -636,7 +653,7 @@ point O?</p>
         requestKernel: true,
         binderOptions: {
             repo: "Phys-Prof-Nielsen/physics-sphere",
-            ref: "master",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
