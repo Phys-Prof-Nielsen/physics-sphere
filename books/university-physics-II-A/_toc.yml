@@ -18,6 +18,11 @@ parts:
 - caption: Module A1 - Maxwell's Equations'
   chapters:
   - file: Module-A1/problemsA1
+  
 - caption: Module A2 - Wave Optics
   chapters:
   - file: Module-A2/problemsA2
+  
+- caption: Module A3 - Special Relativity Dynamics
+  chapters:
+  - file: Module-A3/problemsA3
