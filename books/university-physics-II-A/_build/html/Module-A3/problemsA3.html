@@ -546,6 +546,46 @@ At t = τ: x&#39; = -γvτ
 </div>
 </details>
 </div>
+<p>Alternatively:</p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1"># Let Planet 1 be S and Planet 2 be S&#39;</span>
+<span class="c1"># Spaceship is launched from Planet 2</span>
+<span class="c1"># then vx = -0.750c and u = -0.250c</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+
+<span class="n">vx</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.750</span><span class="o">*</span><span class="n">c</span>
+<span class="n">u</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.250</span><span class="o">*</span><span class="n">c</span>
+
+
+<span class="n">vx_prime</span> <span class="o">=</span> <span class="p">(</span><span class="n">vx</span> <span class="o">-</span> <span class="n">u</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">u</span><span class="o">*</span><span class="n">vx</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vx_prime</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.615384615384615*c
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem A3.3</h2>
     </header>
 <p>What is the relative velocity of two spaceships if one fires a missile at the other at <span class="math notranslate nohighlight">\(0.750c\)</span> and the other observes it to approach at <span class="math notranslate nohighlight">\(0.950c\)</span>?</p>
@@ -568,14 +608,12 @@ At t = τ: x&#39; = -γvτ
 
 <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
-
-
 <span class="n">c</span><span class="p">,</span><span class="n">u</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;c,u&#39;</span><span class="p">)</span>
 
-<span class="n">vx_prime</span> <span class="o">=</span> <span class="mf">0.750</span><span class="o">*</span><span class="n">c</span>
-<span class="n">vx</span> <span class="o">=</span> <span class="mf">0.950</span><span class="o">*</span><span class="n">c</span>
+<span class="n">vx_prime</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.750</span><span class="o">*</span><span class="n">c</span>
+<span class="n">vx</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.950</span><span class="o">*</span><span class="n">c</span>
 
-<span class="n">eq</span> <span class="o">=</span> <span class="n">vx</span> <span class="o">-</span> <span class="p">(</span><span class="n">vx_prime</span> <span class="o">+</span> <span class="n">u</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">u</span><span class="o">*</span><span class="n">vx_prime</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">vx_prime</span> <span class="o">-</span> <span class="p">(</span><span class="n">vx</span><span class="o">-</span><span class="n">u</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">u</span><span class="o">*</span><span class="n">vx</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">u</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
 </pre></div>
@@ -588,7 +626,7 @@ At t = τ: x&#39; = -γvτ
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.695652173913043*c]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-0.695652173913043*c]
 </pre></div>
 </div>
 </div>
