@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>A3.X Problems &#8212; A Competency Approach to University Physics II</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="A2.X Problems" href="../Module-A2/problemsA2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -416,7 +417,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="a3-x-problems">
-<h1>A3.X Problems<a class="headerlink" href="#a3-x-problems" title="Permalink to this headline">#</a></h1>
+<h1>A3.X Problems<a class="headerlink" href="#a3-x-problems" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem A3.1</h2>
     </header>
 <p>In a frame <span class="math notranslate nohighlight">\(S\)</span>, two events are observed: event 1: a pion is created at rest at the origin and event 2: the pion disintegrates after time <span class="math notranslate nohighlight">\(\tau\)</span>. Another observer in a frame <span class="math notranslate nohighlight">\(S'\)</span> is moving in the positive direction along the positive x-axis with a constant speed <span class="math notranslate nohighlight">\(v\)</span> and observes the same two events in his frame. The origins of the two frames coincide at <span class="math notranslate nohighlight">\(t = t'=0\)</span> s.</p>
@@ -507,46 +508,6 @@ At t = τ: x&#39; = -γvτ
 </div>
 </div>
 </div>
-<div class="cell tag_hide-input tag_hide-output docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
-
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-
-<span class="c1"># Let Planet 1 be S and Planet 2 be S&#39;</span>
-<span class="c1"># Spaceship is launched from Planet 2</span>
-<span class="c1"># Then u = -.250c and vx&#39; = 0.750c</span>
-
-<span class="n">c</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
-
-<span class="n">vx_prime</span> <span class="o">=</span> <span class="mf">0.750</span><span class="o">*</span><span class="n">c</span>
-<span class="n">u</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.250</span><span class="o">*</span><span class="n">c</span>
-
-
-<span class="n">vx</span> <span class="o">=</span> <span class="p">(</span><span class="n">vx_prime</span> <span class="o">+</span> <span class="n">u</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">u</span><span class="o">*</span><span class="n">vx_prime</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">vx</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.615384615384615*c
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-<p>Alternatively:</p>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
