@@ -1,0 +1,28 @@
+[
+    {
+        "question": "A proton is moving in a uniform circular motion around a 2.00 mT field. If the radius is 0.100 m, what is the speed of the proton?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "1.92e4 m/s",
+                "correct": true,
+                "feedback": "You got this!"            
+            },
+            {
+                "answer": "1.92e7 m/s",
+                "correct": false,
+                "feedback": "Did you notice it was milli-Tesla?"               
+            },
+            {
+                "answer": "2.68e3 m/s",
+                "correct": false,
+                "feedback": "Try again!"                
+            },
+            {
+                "answer": "3.52e7 m/s",
+                "correct": false,
+                "feedback": "Oh no, you used the mass of an electron instead of a proton."                 
+            }
+        ]
+    }
+]
