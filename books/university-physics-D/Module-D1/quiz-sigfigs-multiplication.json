@@ -30,7 +30,7 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "answer": "2.0e2",
+                "answer": "2e2",
                 "correct": true,
                 "feedback": "Correct"            
             },
