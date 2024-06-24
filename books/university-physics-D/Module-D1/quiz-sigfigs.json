@@ -1,0 +1,141 @@
+[
+    {
+        "question": "How many significant figures does 120.05 have?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "5",
+                "correct": true,
+                "feedback": "Correct"            
+            },
+            {
+                "answer": "3",
+                "correct": false,
+                "feedback": "Not correct"               
+            },
+            {
+                "answer": "2",
+                "correct": false,
+                "feedback": "Not correct"                
+            },
+            {
+                "answer": "4",
+                "correct": false,
+                "feedback": "Not correct"                 
+            }
+        ]
+    }
+],
+
+[
+    {
+        "question": "How many significant figures does 0.0045 have?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "2",
+                "correct": true,
+                "feedback": "Correct"            
+            },
+            {
+                "answer": "1",
+                "correct": false,
+                "feedback": "Not correct"               
+            },
+            {
+                "answer": "5",
+                "correct": false,
+                "feedback": "Not correct"                
+            },
+            {
+                "answer": "4",
+                "correct": false,
+                "feedback": "Not correct"                 
+            }
+        ]
+    }
+],
+[
+    {
+        "question": "A measured value of 2300 has how many significant figures?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "2",
+                "correct": true,
+                "feedback": "Correct"            
+            },
+            {
+                "answer": "Infinite",
+                "correct": false,
+                "feedback": "Not correct"               
+            },
+            {
+                "answer": "5",
+                "correct": false,
+                "feedback": "Not correct"                
+            },
+            {
+                "answer": "4",
+                "correct": false,
+                "feedback": "Not correct"                 
+            }
+        ]
+    }
+],
+[
+    {
+        "question": "A counted number of 435 has how many significant figures?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Infinite",
+                "correct": true,
+                "feedback": "Correct"            
+            },
+            {
+                "answer": "3",
+                "correct": false,
+                "feedback": "Not correct"               
+            },
+            {
+                "answer": "1",
+                "correct": false,
+                "feedback": "Not correct"                
+            },
+            {
+                "answer": "4",
+                "correct": false,
+                "feedback": "Not correct"                 
+            }
+        ]
+    }
+],
+[
+    {
+        "question": "How many significant figures should we apply to 250?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "2",
+                "correct": true,
+                "feedback": "Correct"            
+            },
+            {
+                "answer": "3",
+                "correct": false,
+                "feedback": "Not correct"               
+            },
+            {
+                "answer": "Infinite",
+                "correct": false,
+                "feedback": "Not correct"                
+            },
+            {
+                "answer": "1",
+                "correct": false,
+                "feedback": "Not correct"                 
+            }
+        ]
+    }
+]
