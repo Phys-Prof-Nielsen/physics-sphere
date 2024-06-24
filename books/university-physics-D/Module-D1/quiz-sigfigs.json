@@ -24,9 +24,7 @@
                 "feedback": "Not correct"                 
             }
         ]
-    }
-],
-[
+    },
     {
         "question": "How many significant figures does 0.0045 have?",
         "type": "multiple_choice",
@@ -52,9 +50,7 @@
                 "feedback": "Not correct"                 
             }
         ]
-    }
-],
-[
+    },
     {
         "question": "A measured value of 2300 has how many significant figures?",
         "type": "multiple_choice",
@@ -80,9 +76,7 @@
                 "feedback": "Not correct"                 
             }
         ]
-    }
-],
-[
+    },
     {
         "question": "A counted number of 435 has how many significant figures?",
         "type": "multiple_choice",
@@ -108,9 +102,7 @@
                 "feedback": "Not correct"                 
             }
         ]
-    }
-],
-[
+    },
     {
         "question": "How many significant figures should we apply to 250?",
         "type": "multiple_choice",
