@@ -411,9 +411,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -429,15 +427,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-you-answers">Check You Answers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-solutions">Detailed Solutions</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -466,6 +455,7 @@ document.write(`
 </summary>
 <div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
 <span class="c1"># declare given parameters</span>
 <span class="n">m</span> <span class="o">=</span> <span class="mf">75.0</span>
 <span class="c1">#let +x be in initial direction of travel</span>
@@ -479,21 +469,26 @@ document.write(`
 <span class="n">p2x</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">v2x</span>
 <span class="n">fx</span> <span class="o">=</span> <span class="p">(</span><span class="n">p2x</span> <span class="o">-</span> <span class="n">p1x</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Impact force is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">fx</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fx</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Impact force is &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; N.&#39;</span><span class="p">)</span>
 
 <span class="c1"># Part 2</span>
 <span class="c1"># ------</span>
 <span class="n">dt</span> <span class="o">=</span> <span class="mf">20.0E-3</span>
 <span class="n">fx</span> <span class="o">=</span> <span class="p">(</span><span class="n">p2x</span> <span class="o">-</span> <span class="n">p1x</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Impact force is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">fx</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fx</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Impact force is &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; N.&#39;</span><span class="p">)</span>
 
 <span class="c1"># Part 3</span>
 <span class="c1"># ------</span>
 <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.100</span>
 <span class="n">fx</span> <span class="o">=</span> <span class="p">(</span><span class="n">p2x</span> <span class="o">-</span> <span class="n">p1x</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Impact force is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">fx</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fx</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Impact force is &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; N.&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 
 <span class="c1"># Part 4</span>
 <span class="c1"># ------</span>
@@ -502,19 +497,22 @@ document.write(`
 <span class="n">ax</span> <span class="o">=</span> <span class="p">(</span><span class="n">v2x</span> <span class="o">-</span> <span class="n">v1x</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
 <span class="n">g_acc</span> <span class="o">=</span> <span class="n">ax</span><span class="o">/</span><span class="n">g</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Scenario 1: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">g_acc</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; g.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">g_acc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Scenario 1: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; g.&#39;</span><span class="p">)</span>
 
 <span class="n">dt</span> <span class="o">=</span> <span class="mf">20.0E-3</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="p">(</span><span class="n">v2x</span> <span class="o">-</span> <span class="n">v1x</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
 <span class="n">g_acc</span> <span class="o">=</span> <span class="n">ax</span><span class="o">/</span><span class="n">g</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Scenario 2: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">g_acc</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; g.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">g_acc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Scenario 2: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; g.&#39;</span><span class="p">)</span>
 
 <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.100</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="p">(</span><span class="n">v2x</span> <span class="o">-</span> <span class="n">v1x</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
 <span class="n">g_acc</span> <span class="o">=</span> <span class="n">ax</span><span class="o">/</span><span class="n">g</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Scenario 2: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">g_acc</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; g.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">g_acc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Scenario 2: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; g.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -525,12 +523,13 @@ document.write(`
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Impact force is -187500.0 N.
-Impact force is -93750.0 N.
-Impact force is -18750.0 N.
-Scenario 1: -254.841997961264 g.
-Scenario 2: -127.420998980632 g.
-Scenario 2: -25.4841997961264 g.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Impact force is -1.9e+05 N.
+Impact force is -9.4e+04 N.
+Impact force is -1.9e+04 N.
+ 
+Scenario 1: -2.55e+02 g.
+Scenario 2: -1.27e+02 g.
+Scenario 2: -2.55e+01 g.
 </pre></div>
 </div>
 </div>
@@ -552,6 +551,7 @@ Scenario 2: -25.4841997961264 g.
 </summary>
 <div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
 <span class="c1"># declare given parameters</span>
 <span class="n">m</span> <span class="o">=</span> <span class="mf">5.0</span>
 <span class="n">v1x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">35.0</span>
@@ -569,13 +569,15 @@ Scenario 2: -25.4841997961264 g.
 <span class="n">dpx</span> <span class="o">=</span> <span class="n">p2x</span> <span class="o">-</span> <span class="n">p1x</span>
 <span class="n">dt</span> <span class="o">=</span> <span class="n">dpx</span><span class="o">/</span><span class="n">fx</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The impact time was: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The impact time was: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; s.&#39;</span><span class="p">)</span>
 
 <span class="c1"># Part 3</span>
 <span class="c1"># ------</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="p">(</span><span class="n">v2x</span> <span class="o">-</span> <span class="n">v1x</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>   <span class="c1">#could also use f = ma to find acceleration.</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration was: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration was: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; m/s</span><span class="se">\u00B2</span><span class="s1">.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -587,8 +589,8 @@ Scenario 2: -25.4841997961264 g.
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Since the particle is slowing down, the interaction must be in opposite direction of motion.
-The impact time was: 0.05 s.
-Acceleration was: 600.0 m/s^2.
+The impact time was: 5.0e-02 s.
+Acceleration was: 6.0e+02 m/s².
 </pre></div>
 </div>
 </div>
@@ -640,7 +642,7 @@ Acceleration was: 600.0 m/s^2.
 <span class="c1"># ------</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="p">(</span><span class="n">v2x</span> <span class="o">-</span> <span class="n">v1x</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s</span><span class="se">\u00B2</span><span class="s1">.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -654,7 +656,7 @@ Acceleration was: 600.0 m/s^2.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Since force is positive, momentum is transferred to the particle.
 The momentum transfer is: 40.0 kgm/s.
 Final velocity is: 105.0 m/s.
-Acceleration is: 10.0 m/s^2.
+Acceleration is: 10.0 m/s².
 </pre></div>
 </div>
 </div>
@@ -758,7 +760,7 @@ Acceleration is: 10.0 m/s^2.
 <span class="c1">#in principle ax can be either positive or negative, so we need to use the absolute value</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s</span><span class="se">\u00B2</span><span class="s1">.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -769,7 +771,7 @@ Acceleration is: 10.0 m/s^2.
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The magnitude of the acceleration is: 13.333333333333334 m/s^2.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The magnitude of the acceleration is: 13.333333333333334 m/s².
 </pre></div>
 </div>
 </div>
@@ -801,7 +803,7 @@ Acceleration is: 10.0 m/s^2.
 <span class="n">ax</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s</span><span class="se">\u00B2</span><span class="s1">.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -812,7 +814,7 @@ Acceleration is: 10.0 m/s^2.
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The magnitude of the acceleration is: 13.3333333333333 m/s^2.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The magnitude of the acceleration is: 13.3333333333333 m/s².
 </pre></div>
 </div>
 </div>
@@ -847,7 +849,7 @@ Acceleration is: 10.0 m/s^2.
 <span class="c1"># -----</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="p">(</span><span class="n">v2x</span> <span class="o">-</span> <span class="n">v1x</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s</span><span class="se">\u00B2</span><span class="s1">.&#39;</span><span class="p">)</span>
 
 <span class="c1"># Part 2</span>
 <span class="c1"># ------</span>
@@ -864,7 +866,7 @@ Acceleration is: 10.0 m/s^2.
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acceleration is: 2.5 m/s^2.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acceleration is: 2.5 m/s².
 Net force is: 2500.0 N.
 </pre></div>
 </div>
@@ -903,7 +905,7 @@ Net force is: 2500.0 N.
 <span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">sol1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s^2.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The acceleration is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s</span><span class="se">\u00B2</span><span class="s1">.&#39;</span><span class="p">)</span>
 
 <span class="c1"># Part 2</span>
 <span class="c1"># -----</span>
@@ -927,760 +929,14 @@ Net force is: 2500.0 N.
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The acceleration is: 2.50000000000000 m/s^2.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The acceleration is: 2.50000000000000 m/s².
 The force is: 2500.00000000000 N.
 </pre></div>
 </div>
 </div>
 </details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="check-you-answers">
-<h2>Check You Answers<a class="headerlink" href="#check-you-answers" title="Permalink to this heading">#</a></h2>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jupyterquiz</span> <span class="kn">import</span> <span class="n">display_quiz</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;solutionsD4.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">questions</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-
-<span class="n">display_quiz</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output text_html"><div id="NAhqTHWLXPzr" data-shufflequestions="False" data-shuffleanswers="True" data-numquestions="1000000"><style>
-:root {
-    --medium-slate-blue: #6f78ffff;
-    --orange-pantone: #f75c03ff;
-    --russian-violet: #392061ff;
-    --maximum-yellow-red: #ffc857ff;
-    --viridian-green: #119da4ff;
-    --incorrect-red: #c80202;
-    --correct-green: #009113;
-}
-
-
-.Quiz {
-     max-width: 600px;
-     margin-top: 15px;
-     margin-left: auto;
-     margin-right: auto;
-     margin-bottom: 15px;
-     padding-bottom: 4px;
-     padding-top: 4px;
-     line-height: 1.1;
-     font-size: 16pt;
-}
-
-.QuizCode {
-    font-size: 14pt;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.QuizCode > pre {
-    padding: 4px;
-}
-.Answer{
-     margin: 10px 0;
-     display: grid;
-     grid-template-columns: auto auto;
-     grid-gap: 10px;
-}
-.Feedback{
-     font-size: 16pt;
-     text-align:center;
- }
-
-.Input {
-    align:left;
-    font-size: 20pt;
-}
-.Input-text {
-    display: block;
-    margin: 10px;
-    color: inherit;
-    width: 140px;
-    background-color: #c0c0c0;
-    color: #fff;
-    padding: 5px;
-    padding-left: 10px;
-
-    font-family: inherit;
-    font-size: 20px;
-    font-weight: inherit;
-    line-height: 20pt;
-    border: none;
-    border-radius: 0.2rem;
-    transition: box-shadow 0.1s);
-}
-
- .Input-text:focus {
-     outline: none;
-     background-color: #c0c0c0;
-     box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem #999999;
- }
-
- .MCButton{
-     background: #fafafa;
-     border: 1px solid #eee;
-     border-radius: 10px;
-     padding: 10px;
-     font-size: 16px;
-     cursor: pointer;
-     text-align: center;
- }
- .MultipleChoiceQn {
-     padding: 10px;
-     background: var(--medium-slate-blue);
-     color: #fafafa;
-     border-radius: 10px;
- }
- .ManyChoiceQn {
-     padding: 10px;
-     background: var(--orange-pantone);
-     color: #fafafa;
-     border-radius: 10px;
- }
- .NumericQn {
-     padding: 10px;
-     background: var(--russian-violet);
-     color: #fafafa;
-     border-radius: 10px;
- }
-.InpLabel {
-     line-height: 34px;
-     float:left;
-     margin-right: 10px;
-     color: #101010;
-     font-size: 15pt;
-}
-.incorrect {
-    color: var(--incorrect-red);
-}
-.correct {
-    color: var(--correct-green);
-}
-.correctButton {
-    background: var(--correct-green);
-    color: #fafafa;
-    box-shadow: inset 0px 0px 5px #555555;
-    outline: none;
-}
-.incorrectButton {
-    background: var(--incorrect-red);
-    color: #fafafa;
-    box-shadow: inset 0px 0px 5px #555555;
-    outline: none;
-}
-
-
-</style><script type="text/Javascript">questionsNAhqTHWLXPzr=[{"question": "Problem D4.1.1: Impact force", "type": "multiple_choice", "answers": [{"answer": "-1.9E5 N", "correct": true, "feedback": "Correct."}, {"answer": "+1.9E5 N", "correct": false, "feedback": "False."}, {"answer": "-1.875E5 N", "correct": false, "feedback": "False."}, {"answer": "+1.875E5 N", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.1.2: Impact force with seat belt", "type": "multiple_choice", "answers": [{"answer": "-9.4E4 N", "correct": true, "feedback": "Correct."}, {"answer": "+9.4E4 N", "correct": false, "feedback": "False."}, {"answer": "-9.3750E4 N", "correct": false, "feedback": "False."}, {"answer": "+9.375E4 N", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.1.3: Impact force with seat belt and airbag", "type": "multiple_choice", "answers": [{"answer": "-1.9E4 N", "correct": true, "feedback": "Correct."}, {"answer": "+1.9E4 N", "correct": false, "feedback": "False."}, {"answer": "-1.875E4 N", "correct": false, "feedback": "False."}, {"answer": "+1.875E4 N", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.1.4: g-forces", "type": "multiple_choice", "answers": [{"answer": "-260 g, -130 g, -26 g, respectively.", "correct": true, "feedback": "Correct."}, {"answer": "+260 g, + 130 g, + 38 g, respectively.", "correct": false, "feedback": "False."}, {"answer": "-260 g, - 130 g, - 55 g, respectively", "correct": false, "feedback": "False."}, {"answer": "-260, -77 g, - 38 g, respectively", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.2.1: Direction of interaction", "type": "multiple_choice", "answers": [{"answer": "Positive", "correct": true, "feedback": "Correct."}, {"answer": "Negative", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.2.2: Impact time", "type": "numeric", "answers": [{"type": "value", "value": 0.05, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [0.0500001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 0.049999], "correct": false, "feedback": "False. Try again."}]}, {"question": "Problem D4.2.3: Acceleration", "type": "numeric", "answers": [{"type": "value", "value": 600, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [600.00001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 599.99999], "correct": false, "feedback": "False. Try again."}]}, {"question": "Problem D4.3.1: Direction of momentum transfer", "type": "multiple_choice", "answers": [{"answer": "to the particle", "correct": true, "feedback": "Correct."}, {"answer": "from the particle", "correct": false, "feedback": "False."}]}, {"question": "Problem D4.3.2: Momentum transfer", "type": "numeric", "answers": [{"type": "value", "value": 40, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [40.00001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 39.99999], "correct": false, "feedback": "False. Try again."}]}, {"question": "Problem D4.3.3: Final velocity", "type": "numeric", "answers": [{"type": "value", "value": 105, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [105.00001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 104.99999], "correct": false, "feedback": "False. Try again."}]}, {"question": "Problem D4.3.4: Acceleration", "type": "numeric", "answers": [{"type": "value", "value": 10, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [10.00001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-999, 9.99999], "correct": false, "feedback": "False. Try again."}]}];
-    //var mydiv=document.getElementById("testDIV");//console.log(mydiv);// Make a random ID
-function makeid(length) {
-    var result           = [];
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-        result.push(characters.charAt(Math.floor(Math.random() *  charactersLength)));
-    }
-    return result.join('');
-}
-
-// Choose a random subset of an array. Can also be used to shuffle the array
-function getRandomSubarray(arr, size) {
-    var shuffled = arr.slice(0), i = arr.length, temp, index;
-    while (i--) {
-        index = Math.floor((i + 1) * Math.random());
-        temp = shuffled[index];
-        shuffled[index] = shuffled[i];
-        shuffled[i] = temp;
-    }
-    return shuffled.slice(0, size);
-}
-function check_mc() {
-    var id=this.id.split('-')[0];
-
-    //console.log("In check_mc(), id="+id);
-    //console.log(event.srcElement.id)           
-    //console.log(event.srcElement.dataset.correct)   
-    //console.log(event.srcElement.dataset.feedback)
-
-    var answers= event.srcElement.parentElement.children;
-    //console.log(answers);
-    
-    // Split behavior based on multiple choice vs many choice:
-    var fb = document.getElementById("fb"+id);
-    if (fb.dataset.numcorrect==1) {
-        for (var i = 0; i < answers.length; i++) {
-            var child=answers[i];
-            child.className="MCButton";
-        }
-
-
-
-        fb.textContent=event.srcElement.dataset.feedback;
-        if (event.srcElement.dataset.correct=="true")   {
-            // console.log("Correct action");
-            this.classList.add("correctButton");
-
-            fb.className="Feedback";
-            fb.classList.add("correct");
-
-        } else {
-            //console.log("Error action");
-            this.classList.add("incorrectButton");
-            fb.className="Feedback";
-            fb.classList.add("incorrect");
-        }
-    }
-    else {
-        //console.log("Many choice not implemented yet");
-        var reset = false;
-        if (event.srcElement.dataset.correct=="true" )   {
-            if (event.srcElement.dataset.answered<=0) {
-                if (fb.dataset.answeredcorrect<0) {
-                    fb.dataset.answeredcorrect=1;
-                    reset=true;
-                } else {
-                    fb.dataset.answeredcorrect++;
-                }
-                if (reset) {
-                    for (var i = 0; i < answers.length; i++) {
-                        var child=answers[i];
-                        child.className="MCButton";
-                        child.dataset.answered=0;
-                    }
-                }
-                this.classList.add("correctButton");
-                this.dataset.answered=1;
-                fb.className="Feedback";
-                fb.classList.add("correct");
-
-            }
-        } else {
-            if (fb.dataset.answeredcorrect>0) {
-                fb.dataset.answeredcorrect=-1;
-                reset=true;
-            } else {
-                fb.dataset.answeredcorrect--;
-            }
-
-            if (reset) {
-                for (var i = 0; i < answers.length; i++) {
-                    var child=answers[i];
-                    child.className="MCButton";
-                    child.dataset.answered=0;
-                }
-            }
-            this.classList.add("incorrectButton");
-            fb.className="Feedback";
-            fb.classList.add("incorrect");
-        }
-
-
-        var numcorrect=fb.dataset.numcorrect;
-        var answeredcorrect=fb.dataset.answeredcorrect;
-        if (answeredcorrect>=0) {
-            fb.textContent=event.srcElement.dataset.feedback + " ["  + answeredcorrect + "/" + numcorrect + "]";
-        } else {
-            fb.textContent=event.srcElement.dataset.feedback + "["  + 0 + "/" + numcorrect + "]";
-        }
-
-
-    }
-
-    
-
-}
-
-function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
-    var shuffled;
-    if (shuffle_answers=="True") {
-        //console.log(shuffle_answers+" read as true");
-        shuffled=getRandomSubarray(qa.answers, qa.answers.length);
-    } else {
-        //console.log(shuffle_answers+" read as false");
-        shuffled=qa.answers;
-    }
-    
-
-    var num_correct=0;
-
-
-    
-    shuffled.forEach((item, index, ans_array) => {
-        //console.log(answer);
-        
-        // Make input element
-        var inp = document.createElement("input");
-        inp.type="radio";
-        inp.id="quizo"+id+index;
-        inp.style="display:none;";
-        aDiv.append(inp);
-        
-        //Make label for input element
-        var lab = document.createElement("label");
-        lab.className="MCButton";
-        lab.id=id+ '-' +index;
-        lab.onclick=check_mc;
-        lab.textContent=item.answer;
-        
-        // Set the data attributes for the answer
-        lab.setAttribute('data-correct', item.correct);
-        if (item.correct) {
-            num_correct++;
-        }
-        lab.setAttribute('data-feedback', item.feedback);
-        lab.setAttribute('data-answered', 0);
-
-        aDiv.append(lab);
-
-    });
-
-    if (num_correct>1) {
-        outerqDiv.className="ManyChoiceQn";
-    } else {
-        outerqDiv.className="MultipleChoiceQn";
-    }
-
-    return num_correct;
-
-}
-function check_numeric(ths, event) {
-
-    if (event.keyCode === 13) {
-        ths.blur();
-
-        var id=ths.id.split('-')[0];
-
-        var submission=ths.value;
-				if (submission.indexOf('/') != -1) {
-            sub_parts=submission.split('/');
-            //console.log(sub_parts);
-            submission=sub_parts[0]/sub_parts[1];
-        }
-        console.log("Reader entered", submission);
-
-        if ("precision" in ths.dataset) {
-            precision=ths.dataset.precision;
-            // console.log("1:", submission)
-            submission=Math.round((1*submission + Number.EPSILON)*10**precision)/ 10**precision; 
-            // console.log("Rounded to ", submission, " precision=", precision  );
-        }
-
-
-        //console.log("In check_numeric(), id="+id);
-        //console.log(event.srcElement.id)           
-        //console.log(event.srcElement.dataset.feedback)
-
-        var fb = document.getElementById("fb"+id);
-        fb.style.display="none";
-        fb.textContent="Incorrect -- try again.";
-
-        answers=JSON.parse(ths.dataset.answers);
-        console.log(answers);
-
-        var defaultFB="";
-        var correct;
-        var done=false;
-        answers.every(answer => {
-            console.log(answer.type);
-
-            correct=false;
-            if (answer.type=="value"){
-                if (submission == answer.value) {
-                    fb.textContent=answer.feedback;
-                    correct=answer.correct;
-                    console.log(answer.correct);
-                    done=true;
-                }
-            } else if (answer.type=="range") {
-                console.log(answer.range);
-                if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
-                    fb.textContent=answer.feedback;
-                    correct=answer.correct;
-                    console.log(answer.correct);
-                    done=true;
-                }
-            } else if (answer.type=="default") {
-                defaultFB=answer.feedback;
-            }
-            if (done) {
-                return false; // Break out of loop if this has been marked correct
-            } else {
-                return true; // Keep looking for case that includes this as a correct answer
-            }
-        });
-
-        if ((!done) && (defaultFB != "")) {
-            fb.textContent=defaultFB;
-            console.log("Default feedback", defaultFB);
-        }
-
-        fb.style.display="block";
-        if (correct) {
-            ths.className="Input-text";
-            ths.classList.add("correctButton");
-            fb.className="Feedback";
-            fb.classList.add("correct");
-        } else {
-            ths.className="Input-text";
-            ths.classList.add("incorrectButton");
-            fb.className="Feedback";
-            fb.classList.add("incorrect");
-        }
-
-        return false;
-    }
-
-}
-
-function isValid(el,  charC) {
-		if (charC == 46) {
-				if (el.value.indexOf('.') === -1) {
-					  return true;
-				} else if (el.value.indexOf('/') != -1) {
-            parts=el.value.split('/');
-				    if (parts[1].indexOf('.') === -1) {
-					      return true;
-            }
-        }
-        else{
-					  return false;
-				}
-		} else if (charC == 47) {
-				if (el.value.indexOf('/') === -1) {
-            if ((el.value != "") && (el.value != ".")) {
-					      return true;
-            } else {
-					  return false;
-				    }
-        } else {
-            return false;
-        }
-		} else if (charC == 45) {
-        if (el.value == "" ) {
-            return true;
-        } else {
-            return false;
-        }
-    } else {
-				if (charC > 31 && (charC < 48 || charC > 57))
-					  return false;
-		}
-		return true;
-}
-
-function numeric_keypress( evnt) {
-		var charC = (evnt.which) ? evnt.which : evnt.keyCode;
-
-    if (charC==13) {
-        check_numeric(this, evnt);
-    } else{
-		    return isValid(this, charC);
-    }
-}
-
-
-
-
-
-function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
-
-
-
-        //console.log(answer);
-
-    
-    outerqDiv.className="NumericQn";
-    aDiv.style.display='block';
-
-    var lab = document.createElement("label");
-    lab.className="InpLabel";
-    lab.textContent="Type numeric answer here:";
-    aDiv.append(lab);
-
-    var inp = document.createElement("input");
-    inp.type="text";
-    //inp.id="input-"+id;
-    inp.id=id+"-0";
-    inp.className="Input-text";
-    inp.setAttribute('data-answers', JSON.stringify(qa.answers) );
-    if ("precision" in qa) {
-        inp.setAttribute('data-precision', qa.precision);
-    }
-    aDiv.append(inp);
-    console.log(inp);
-
-    //inp.addEventListener("keypress", check_numeric);
-    //inp.addEventListener("keypress", numeric_keypress);
-    /*
-    inp.addEventListener("keypress", function(event) {
-        return numeric_keypress(this, event);
-    }
-                        );
-                        */
-    //inp.onkeypress="return numeric_keypress(this, event)";
-    inp.onkeypress=numeric_keypress;
-    inp.onpaste= event => false;
-
-    inp.addEventListener("focus", function(event) {
-        this.value="";
-        return false;
-    }
-                        );
-
-
-}
-function show_questions (json, mydiv) {
-    //var mydiv=document.getElementById(myid);
-    var shuffle_questions=mydiv.dataset.shufflequestions;
-    var num_questions=mydiv.dataset.numquestions;
-    var shuffle_answers=mydiv.dataset.shuffleanswers;
-    
-    if (num_questions>json.length) {
-        num_questions=json.length;
-    }
-    
-    var questions;
-    if ( (num_questions<json.length) || (shuffle_questions=="True") ) {
-        //console.log(num_questions+","+json.length);
-        questions=getRandomSubarray(json, num_questions);
-    } else {
-        questions=json;
-    }
-    
-    //console.log("SQ: "+shuffle_questions+", NQ: " + num_questions + ", SA: ", shuffle_answers);
-    
-    // Iterate over questions
-    questions.forEach((qa, index, array) => {
-        //console.log(qa.question); 
-
-        var id = makeid(8);
-        //console.log(id);
-
-
-        // Create Div to contain question and answers
-        var iDiv = document.createElement('div');
-        iDiv.id = 'quizWrap'+id+index;
-        iDiv.className='Quiz';
-        mydiv.appendChild(iDiv);
-        // iDiv.innerHTML=qa.question;
-
-        var outerqDiv = document.createElement('div');
-        outerqDiv.id="OuterquizQn"+id+index;
-        //qDiv.textContent=qa.question;
-        iDiv.append(outerqDiv);
-
-        // Create div to contain question part
-        var qDiv = document.createElement('div');
-        qDiv.id="quizQn"+id+index;
-        //qDiv.textContent=qa.question;
-        qDiv.innerHTML=qa.question;
-        outerqDiv.append(qDiv);
-
-        // Create div for code inside question
-        var codeDiv;
-        if ("code" in qa){
-            codeDiv = document.createElement('div');
-            codeDiv.id="code"+id+index;
-            codeDiv.className="QuizCode";
-            var codePre = document.createElement('pre');
-            codeDiv.append(codePre);
-            var codeCode = document.createElement('code');
-            codePre.append(codeCode);
-            codeCode.innerHTML=qa.code;
-            outerqDiv.append(codeDiv);
-            console.log(codeDiv);
-        }
-
-
-        // Create div to contain answer part
-        var aDiv = document.createElement('div');
-        aDiv.id="quizAns"+id+index;
-        aDiv.className='Answer';
-        iDiv.append(aDiv);
-
-        console.log(qa.type);
-
-        var num_correct;
-        if (qa.type=="multiple_choice")  {
-            num_correct=make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
-        } else if   (qa.type=="many_choice"){
-            num_correct=make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
-        } else if  (qa.type=="numeric") {
-            console.log("numeric");
-            make_numeric(qa, outerqDiv, qDiv, aDiv, id);
-        }
-
-
-        //Make div for feedback
-        var fb = document.createElement("div");
-        fb.id="fb"+id;
-        //fb.style="font-size: 20px;text-align:center;";
-        fb.className="Feedback";
-        fb.setAttribute("data-answeredcorrect", 0);
-        fb.setAttribute("data-numcorrect", num_correct);
-        iDiv.append(fb);
-
-
-    });
-}
-
-        {
-        show_questions(questionsNAhqTHWLXPzr, NAhqTHWLXPzr);
-        }
-        </script>
-        </div></div>
-</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="detailed-solutions">
-<h2>Detailed Solutions<a class="headerlink" href="#detailed-solutions" title="Permalink to this heading">#</a></h2>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Problem D4.1</p>
-<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
-<header>
-<h3> Problem D4.1</h3>
-    </header>
-<b>Problem</b>
-<p>Before a crash-test collision, a car with a crash test dummy of mass 75-kg is traveling at 25.0 m/s towards a wall. The impact time is 10.00 ms. Assume the impact force is much greater than any other forces involved in the collision.</p>
-<ol class="arabic simple">
-<li><p>If the crast test dummy is fasten to the car, what impact force is experienced by the dummy?</p></li>
-<li><p>Instead of being fasten to the car, the dummy is wearing seat belts and the impact time is increased to 20.0 ms. What is the impact force then?</p></li>
-<li><p>In addition to seat belt, the car is equipped with airbags increasing the impact time to a whooping 0.100 s. What is the impact force in this scenario?</p></li>
-<li><p>The acceleration of gravity is 9.81 m/s<span class="math notranslate nohighlight">\(^2\)</span>. How many g’s did the dummy experience in each crash scenario?</p></li>
-</ol>
-<p><b>Methodology</b>
-<br>
-We assume that the dummy comes to a rest without bouncing off the wall. Then we can combine the defition of momentum</p>
-<p><span class="math notranslate nohighlight">\( p_x = mv_x \)</span></p>
-<p>and the impulse-momentum theorem</p>
-<p><span class="math notranslate nohighlight">\( \Delta p_x = f_{net,x}\Delta t \)</span></p>
-<p>to obtain the impact force. Combining the two equations, we get for the net force (the same as the impact force, since any other forces are negligible):</p>
-<p><span class="math notranslate nohighlight">\( f_{net,x} = \frac{mv_{fx} - mv_{ix}}{\Delta t} \)</span></p>
-<p>To obtain the impact forces in g’s, we use <span class="math notranslate nohighlight">\( f_{net,x} = ma_x \)</span> to find the acceleration and scale it by 9.8 to obtain the acceleration in terms of g’s.</p>
-<p><b>Solution</b>
-<br>
-In the following, we will make the initial direction of travel positive.<br />
-Part 1:<br></p>
-<p>Pluggin in values:</p>
-<p><span class="math notranslate nohighlight">\( f_{net,x} = \frac{(75)(0) - (75)(+25.0)}{10.0\times 10^{-3}} = -1.9\times 10^5~\textrm{N}\)</span></p>
-<p>Part 2:<br></p>
-<p>Pluggin in values:</p>
-<p><span class="math notranslate nohighlight">\( f_{net,x} = \frac{(75)(0) - (75)(+25.0)}{20.0\times 10^{-3}} = -9.4\times 10^4~\textrm{N}\)</span></p>
-<p>Part 3:<br></p>
-<p>Pluggin in values:</p>
-<p><span class="math notranslate nohighlight">\( f_{net,x} = \frac{(75)(0) - (75)(+25.0)}{0.100} = -1.9\times 10^4~\textrm{N}\)</span></p>
-<p>Part 4:<br></p>
-<p>The acceleration in the first collision is (re-calculate the forces above and carry enough digits through)</p>
-<p><span class="math notranslate nohighlight">\( a_x = \frac{f_{net,x}}{m} = \frac{-1.87500\times 10^5}{75} = -2,500.00~\textrm{m/s}^2 \)</span></p>
-<p>Since <span class="math notranslate nohighlight">\(\frac{1~\textrm{g}}{9.8~\textrm{m/s}^2}\)</span>, we have</p>
-<p><span class="math notranslate nohighlight">\( a_x = -260~\textrm{g} \)</span></p>
-<p>Similarly, the other accelerations are:</p>
-<p><span class="math notranslate nohighlight">\( a_x = -130~\textrm{g} \)</span></p>
-<p>and</p>
-<p><span class="math notranslate nohighlight">\( a_x = -26~\textrm{g}\)</span></p>
-<p><b>Reflection</b>
-<br>
-Any collision resulting in 50 g’s or more are considered to yield serious injuries and potentially fatal. Keep in mind that 25 m/s is equivalent to 90 km/hr or 56 mph, so we are talking about relatively high-speed head-on collision.</p>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Kenny_Br%C3%A4ck#:~:text=Br%C3%A4ck's%20crash%20saw%20the%20highest,spine%20and%20crushing%20his%20ankles.">Kenny Brack</a> experienced a record-breaking 214 g (peak, not average) during a race car accident in Texas.</p>
-<p>Dale Earnhardt experienced a fatal g-force of ~58 g during the 2001 Daytona 500.</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
-</div>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Problem D4.2</p>
-<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
-<header>
-<h3> Problem D4.2</h3>
-    </header>
-<b>Problem</b>
-<p>A 5.0 kg particle is traveling in 1D at -35 m/s when it interacts with another particle. After the interaction the velocity is -5.0 m/s.</p>
-<ol class="arabic simple">
-<li><p>Make a statement about the direction of the interaction in terms (positive or negative direction) and explain your answer.</p></li>
-<li><p>If the magnitude of the net average force during the collision was 3.0E3 N, what was the impact time?</p></li>
-<li><p>What was the acceleration of the of the particle during the interaction?</p></li>
-</ol>
-<p><b>Methodology</b>
-<br></p>
-<p>As in previous problems, we can combine the defition of momentum</p>
-<p><span class="math notranslate nohighlight">\( p_x = mv_x \)</span></p>
-<p>and the impulse-momentum theorem</p>
-<p><span class="math notranslate nohighlight">\( \Delta p_x = f_{net,x}\Delta t \)</span></p>
-<p>to obtain the impact time. Combining the two equations, we get for the impact time:</p>
-<p><span class="math notranslate nohighlight">\( \Delta t = \frac{mv_{fx} - mv_{ix}}{f_{net,x}} \)</span></p>
-<p>In the last part, we can use <span class="math notranslate nohighlight">\(F_{net,x} = ma\)</span> to find the acceleration.</p>
-<p><b>Solution</b>
-<br>
-Part 1:<br></p>
-<p>The particle is moving in the negative direction but slowing down, which can only be true if a net interaction (force) is acting in opposite direction: the interaction must be in the positive direction.</p>
-<p>Part 2:<br></p>
-<p>Pluggin in values to solve for the impact time:</p>
-<p><span class="math notranslate nohighlight">\( \Delta t = \frac{(5.0)(-5.0) - (5.0)(-35)}{+3.0\times 10^{3}} = +5.0\times 10^{-2}~\textrm{s}\)</span></p>
-<p>Part 3:<br></p>
-<p>Using Newton’s 2nd law and solve for the acceleration:</p>
-<p><span class="math notranslate nohighlight">\( a_x = \frac{f_{net,x}}{m} = \frac{3.0\times 10^3}{5.0} = 6.0\times 10^2~\textrm{m/s}^2 \)</span></p>
-<p><b>Reflection</b>
-<br>
-Our prediction was correct, the force is in the positive direction since that gave us a positive interaction time.</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
-</div>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Problem D4.3</p>
-<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
-<header>
-<h3> Problem D4.3</h3>
-    </header>
-<b>Problem</b>
-<p>A net force of <span class="math notranslate nohighlight">\(f_x = +5.0\)</span> N is in contact with a 0.50 kg particle over the duration of 8.0 s.</p>
-<ol class="arabic simple">
-<li><p>Is momentum transferred to or from the particle? Explain your answer.</p></li>
-<li><p>What is the momentum transfer experienced by the particle?</p></li>
-<li><p>If the initial velocity of the particle was +25 m/s, what is the velocity of the particle after the interaction?</p></li>
-<li><p>What acceleration did the particle experience during the interaction?</p></li>
-</ol>
-<p><b>Methodology</b>
-<br></p>
-<p>Since momentum transfer is the same as impulse or the change in momentum, we can apply the impulse-momentum theorem directly:</p>
-<p><span class="math notranslate nohighlight">\( \Delta p_x = f_{net,x}\Delta t \)</span></p>
-<p>Using the definition of momentum , we can write the impulse as:</p>
-<p><span class="math notranslate nohighlight">\( \Delta p_x = mv_{fx} - mv_{ix}  \)</span></p>
-<p>Combining the two equations allows us to solve for the final velocity:</p>
-<p><span class="math notranslate nohighlight">\( v_{fx} = v_{ix} + \frac{f_{net,x}\Delta t}{m} \)</span></p>
-<p>Since we know the initial velocity, the elapsed time, and the newly gained final velocity, we can calculate the acceleration from definition of acceleration, or we can use Newton’s 2nd law.</p>
-<p><b>Solution</b>
-<br>
-Part 1:<br></p>
-<p>Since the force is positive, the momentum will increase and the momentum transfer must be positive.</p>
-<p>Part 2:<br></p>
-<p>Plug in values to solve for the momentum transfer:</p>
-<p><span class="math notranslate nohighlight">\( \Delta p_x = (+5.0)(8.0) = +4.0\times 10^{1}~\textrm{kgm/s}\)</span></p>
-<p>Part 3:<br></p>
-<p>Solving for the final velocity:</p>
-<p><span class="math notranslate nohighlight">\( v_{fx} = (+25) + \frac{+40}{0.50} = +105~\textrm{m/s} \)</span></p>
-<p>Part 4:<br></p>
-<p>Using the definition of acceleration (use non-rounded answer from Part 3):</p>
-<p><span class="math notranslate nohighlight">\( a_{x} = \frac{\Delta v_x}{\Delta t} = \frac{(+105)-(+25)}{8.0} = +1.0E1~\textrm{m/s}^2 \)</span></p>
-<p><b>Reflection</b>
-<br>
-The result in Part 2 validates our statement that momentum is transferred to the particle.</p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1740,21 +996,6 @@ The result in Part 2 validates our statement that momentum is transferred to the
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-you-answers">Check You Answers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-solutions">Detailed Solutions</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
