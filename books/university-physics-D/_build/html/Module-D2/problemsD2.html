@@ -463,13 +463,13 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell tag_hide-input tag_hiide-output docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
 
 <span class="c1"># PART 1</span>
@@ -502,12 +502,18 @@ document.write(`
 </div>
 </div>
 </details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Linear momentum of proton: 5.01e-19 kgm/s
 Linear momentum of sedan: -6.26e+04 kgm/s
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D2.2</h2>
     </header>
@@ -522,13 +528,13 @@ Linear momentum of sedan: -6.26e+04 kgm/s
 </div>
 </div>
 </div>
-<div class="cell tag_hide-input tag_hiide-output docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  <span class="c1">#we will use the fucntion &quot;abs&quot; to find the magnitude of momentum</span>
@@ -566,6 +572,11 @@ Linear momentum of sedan: -6.26e+04 kgm/s
 </div>
 </div>
 </details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Linear momentum of semitruck: 3.49e+05 kgm/s
 Magnitude of linear momentum of semitruck: 3.49e+05 kgm/s
@@ -575,6 +586,7 @@ Magnitude of linear momentum of sedan: 9.12e+04 kgm/s
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
