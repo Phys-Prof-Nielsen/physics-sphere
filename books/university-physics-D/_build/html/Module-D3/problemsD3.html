@@ -451,7 +451,7 @@ document.write(`
 <h1>D3.2 Problems<a class="headerlink" href="#d3-2-problems" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D3.1</h2>
     </header>
-<p>Before a crash-test collision, a dummy of mass 75-kg is traveling at +25.0 m/s towards a wall. What is the impulse during the collision?</p>
+<p>Before a crash-test collision, a dummy of mass 75-kg is traveling at +25.0 m/s towards a wall. What is the net impulse during the collision?</p>
 <section id="solution">
 <h2>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -471,18 +471,18 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
 
 <span class="c1"># declare given parameters</span>
-<span class="n">m</span> <span class="o">=</span> <span class="mf">75.0</span>   <span class="c1">#mass</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">75</span>   <span class="c1">#mass</span>
 <span class="n">v1x</span> <span class="o">=</span> <span class="mf">25.0</span>  <span class="c1"># initial x-velocity</span>
 
 <span class="c1"># indirect information</span>
 <span class="c1"># in a crash test, the final velocity is zero</span>
 <span class="n">v2x</span> <span class="o">=</span> <span class="mf">0.0</span>
-<span class="c1"># impulse</span>
+<span class="c1"># net impulse</span>
 <span class="n">ix</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">v2x</span> <span class="o">-</span> <span class="n">v1x</span><span class="p">)</span>
 
 <span class="c1"># print the answer</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ix</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The impulse experienced by the dummy during the collision is: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; kgm/s.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The net impulse experienced by the dummy during the collision is: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; kgm/s.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -493,7 +493,7 @@ document.write(`
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The impulse experienced by the dummy during the collision is: -1.9e+03 kgm/s.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The net impulse experienced by the dummy during the collision is: -1.9e+03 kgm/s.
 </pre></div>
 </div>
 </div>
@@ -501,12 +501,12 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D3.2</h2>
     </header>
-<p>A 5.0E-3 kg particle is traveling in 1D with a speed of 335 m/s in the -z direction. After some elapsed time, the particle has a velocity of -875 m/s.</p>
+<p>A 5.0e-3 kg particle is traveling in 1D with a speed of 335 m/s in the -z direction. After some elapsed time, the particle has a velocity of -875 m/s along the z-direction.</p>
 <ol class="arabic simple">
 <li><p>What is the initial velocity of the particle?</p></li>
 <li><p>What is the initial and final momentums of the particle?</p></li>
-<li><p>Before calculating the impulse, make a prediction about the direction of impulse. Explain your reasoning.</p></li>
-<li><p>Calculate the momentum transfer for the particle. (Remember that impulse is momentum transfer.)</p></li>
+<li><p>Before calculating the net impulse, make a prediction about the direction of impulse. Explain your reasoning.</p></li>
+<li><p>Calculate the momentum transfer for the particle. (Remember that net impulse is momentum transfer.)</p></li>
 </ol>
 </section>
 <section id="id1">
@@ -632,7 +632,7 @@ Momentum transfer to particle is -2.7e+00 kgm/s.
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D3.4</h2>
     </header>
-<p>Consider a 2.0 kg particle traveling at 25 m/s towards the fixed wall. The particle is subject to two different collisions with the same impact time of 0.020 s:</p>
+<p>Consider two experiments where a 2.0 kg particle si traveling at 25 m/s towards the fixed wall. The two experiments have the same impact time of 0.020 s:</p>
 <ul class="simple">
 <li><p>Head-on collision where the particle stick to the collision surface.</p></li>
 <li><p>Head-on collision where the particle bounces of the collision surface with the same speed.</p></li>
