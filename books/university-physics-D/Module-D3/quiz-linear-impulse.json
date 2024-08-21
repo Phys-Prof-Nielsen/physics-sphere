@@ -1,6 +1,6 @@
 [
     {
-        "question": "A 2.0 kg particle is initially at rest. It suddenly experience an interaction that is transferring 48 kgm/s of momentum in the +x direction. What is the velocity of the particle after the momentum transfer?",
+        "question": "A 2.0 kg particle is initially at rest. It suddenly experience a net interaction that is transferring 48 kgm/s of momentum in the +x direction. What is the velocity of the particle after the momentum transfer?",
         "type": "multiple_choice",
         "answers": [
             {
@@ -26,7 +26,7 @@
         ]
     },
     {
-        "question": "A 2.5kg particle is traveling with a velocity of -25 m/s when an interaction transfers momentum such that its new velocity is +25 m/s. What was the impulse during this interaction?",
+        "question": "A 2.5kg particle is traveling with a velocity of -25 m/s when a net interaction transfers momentum such that its new velocity is +25 m/s. What was the impulse during this interaction?",
         "type": "multiple_choice",
         "answers": [
             {
@@ -52,7 +52,7 @@
         ]
     },
     {
-        "question": "A 1.5 kg particle is traveling at a velocity of -2.0 m/s initially. Some time later, it is traveling at -0.5 m/s. The impulse was",
+        "question": "A 1.5 kg particle is traveling at a velocity of -2.0 m/s initially. Some time later, it is traveling at -0.5 m/s. The momentum transfer was",
         "type": "multiple_choice",
         "answers": [
             {
@@ -68,7 +68,7 @@
         ]
     },
     {
-        "question": "A 1.5 kg particle is traveling at a velocity of -2.0 m/s initially. Some time later, it is traveling at -0.5 m/s. The impulse was (in kgm/s)?",
+        "question": "A 1.5 kg particle is traveling at a velocity of -2.0 m/s initially. Some time later, it is traveling at -0.5 m/s. The net impulse was (in kgm/s)?",
         "type": "numeric",
         "answers": [
             {
