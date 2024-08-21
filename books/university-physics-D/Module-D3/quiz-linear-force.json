@@ -26,7 +26,7 @@
         ]
     },
     {
-        "question": "A 2.00 kg particle initially at rest is subject to a 36.0 N force. After the interaction the particle is traveling at 8.0 m/s. What was the interaction time?",
+        "question": "A 2.00 kg particle initially at rest is subject to a 36.0 N  net force. After the interaction the particle is traveling at 8.0 m/s. What was the interaction time?",
         "type": "multiple_choice",
         "answers": [
             {
@@ -52,7 +52,7 @@
         ]
     },
     {
-        "question": "There can be a momentum transfer in the opposite direction to the applied net force on a particle.",
+        "question": "There can be a net momentum transfer in the opposite direction to the applied net force on a particle.",
         "type": "multiple_choice",
         "answers": [
             {
@@ -63,7 +63,7 @@
             {
                 "answer": "Yes",
                 "correct": false,
-                "feedback": "The direction of momentum transfer is dictated by the applied net force."               
+                "feedback": "The direction of net momentum transfer is dictated by the applied net force."               
             }
         ]
     },
