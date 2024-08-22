@@ -21,7 +21,7 @@
             {
                 "answer": "3.34E2",
                 "correct": false,
-                "feedback": "That sucks! The number to the left of the decimal point must be between 1-9."                 
+                "feedback": "Close! You forgot some of the digits"                 
             }
         ]
     }
