@@ -1,0 +1,54 @@
+[
+    {
+        "question": "Report the answer of 24.0 + 12.24",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "3.62e1",
+                "correct": true,
+                "feedback": "Correct"            
+            },
+            {
+                "answer": "3.624e1",
+                "correct": false,
+                "feedback": "Not correct. The first number has no digit at the hundreths decimal."               
+            },
+            {
+                "answer": "3.6e1",
+                "correct": false,
+                "feedback": "Not correct"                
+            },
+            {
+                "answer": "3.424e1",
+                "correct": false,
+                "feedback": "Hmmm, you may want to revisit kindergarten algebra."                 
+            }
+        ]
+    },
+    {
+        "question": "Report the answer of 4.5 + 120.05",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "1.246e2",
+                "correct": true,
+                "feedback": "Correct"            
+            },
+            {
+                "answer": "1.245e2",
+                "correct": false,
+                "feedback": "Not correct, there is a rounding that must take place."               
+            },
+            {
+                "answer": "1.25e2",
+                "correct": false,
+                "feedback": "Not correct. The answer must have a decimal at the tenths place."                
+            },
+            {
+                "answer": "1.2e2",
+                "correct": false,
+                "feedback": "Not correct. While 4.5 hs two significant figures, the rule for multiplication does not apply to addition."                 
+            }
+        ]
+    }
+]
