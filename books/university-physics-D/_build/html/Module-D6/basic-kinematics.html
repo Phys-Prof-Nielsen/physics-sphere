@@ -1,0 +1,768 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>D6.1 Basic Kinematics: Definitions &#8212; A Competency Approach to Introductory Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D6/basic-kinematics';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="D6.2 Equations of Kinematics" href="Equations-kinematics.html" />
+    <link rel="prev" title="D5.4 Problems" href="../Module-D5/problemsD5.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo-D.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-D.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    A Competency Approach to University Physics I: A Compendium to the D Exam
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Home</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://phys-prof-nielsen.github.io/physics-sphere/university-physics/university-physics.html">University Physics Main Page</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D1 - First Steps to Doing Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/Scientific_Method.html">D1.1 The Scientific Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/Scientific_Notation.html">D1.2 Scientific Notation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/Significant_Figures.html">D1.3 Significant Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/Unit_Conversion.html">D1.4 Units and Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/problemsD1.html">D1.5 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D2 - Point Particle and its Motion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D2/Point_Particle.html">D2.1 Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D2/Linear_Momentum_Point_Particle.html">D2.2 Linear Momentum: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D2/problemsD2.html">D2.3 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D3 - Linear Impulse of Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D3/linear-impulse-force-point-particle.html">D3.1 Impulse and Linear Force: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D3/problemsD3.html">D3.2 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D4 - Linear Newton's Laws - Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D4/Newton_Law.html">D4.1 Newton’s Laws: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D4/problemsD4.html">D4.2 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D5 - Linear Kinetic Energy of Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/Linear_Kinetic_Energy_Point_Particle.html">D5.1 Linear Kinetic Energy: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/Linear_Work_Point_Particle.html">D5.2 Linear Work: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/Work_Energy_Point_Particle.html">D5.3 Work-Energy Theorem: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/problemsD5.html">D5.4 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D6 - Linear Kinematics in 1D</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">D6.1 Basic Kinematics: Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equations-kinematics.html">D6.2 Equations of Kinematics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Phys-Prof-Nielsen/physics-sphere/blob/main/books/university-physics-D/Module-D6/basic-kinematics.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Phys-Prof-Nielsen/physics-sphere" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Phys-Prof-Nielsen/physics-sphere/issues/new?title=Issue%20on%20page%20%2FModule-D6/basic-kinematics.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Module-D6/basic-kinematics.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>D6.1 Basic Kinematics: Definitions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-1-recap-basic-concepts">D6.1.1 Recap Basic Concepts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-2-average-speed-definition">D6.1.2 Average Speed: Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-3-average-velocity-definition">D6.1.3 Average Velocity: Definition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1">Part 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-4-average-acceleration-definition">D6.1.4 Average Acceleration: Definition</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="d6-1-basic-kinematics-definitions">
+<h1>D6.1 Basic Kinematics: Definitions<a class="headerlink" href="#d6-1-basic-kinematics-definitions" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d6-1-1-recap-basic-concepts">
+<h2>D6.1.1 Recap Basic Concepts<a class="headerlink" href="#d6-1-1-recap-basic-concepts" title="Permalink to this heading">#</a></h2>
+<p>We have briefly introduced the concept of speed and velocity when we introduced momentum. Here we will dig a little deeper into the formal definitions.</p>
+<p>The concept that most people are familiar with is the speed. For example, the speedometer in a car shows how fast the car is moving. However, the speedometer does not provide <em>any</em> information about the direction the car is moving: <span style="color:red">the speed is a scalar</span>.</p>
+<p>In contrast, many people may use the the concept of velocity but not understanding the difference between speed and velocity. If we have information about how fast an object is moving <em>and</em> its direction, then we have the velocity: <span style="color:red">the velocity is a vector</span>. We will discuss vectors in details in Phase C.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="d6-1-2-average-speed-definition">
+<h2>D6.1.2 Average Speed: Definition<a class="headerlink" href="#d6-1-2-average-speed-definition" title="Permalink to this heading">#</a></h2>
+<p>The speed is a measure of the rate of change of the distance traveled by an object. I personally prefer to state it as (the reason will become more clear in more advanced phases):</p>
+<div class="alert alert-success">
+The average speed is the path length traveled by an object over an elapsed time interval.
+</div>
+<p>If we let <span class="math notranslate nohighlight">\(\Delta s\)</span> be the path length traveled and <span class="math notranslate nohighlight">\(\Delta t\)</span> be the elapsed time interval, then the average speed is</p>
+<div class="math notranslate nohighlight">
+\[ v_{av} = \frac{\Delta s}{\Delta t} \]</div>
+<p>Since we are dealing with 1D motion only in Phase D, we can also write the path length (distance) as <span class="math notranslate nohighlight">\(d\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ v_{av} = \frac{d}{\Delta t} \]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 1</h3>
+    </header>
+<p>We are traveling from Orem to Las Vegas. Our travel distance is 385 miles and it takes us exactly 6 hours to get there. What is our average speed?</p>
+<p><b>Solution</b><br>
+Inserting into the equation:</p>
+<div class="math notranslate nohighlight">
+\[ v_{av} = \frac{(385)}{(6)} = 64.2~\textrm{mph} \]</div>
+<p>We notice the following:</p>
+<ol class="arabic simple">
+<li><p>There is no indication of a direction.</p></li>
+<li><p>We have no information about how the speed varied during this time interval. We can only say something about the average speed.</p></li>
+</ol>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 2</h3>
+    </header>
+<p>During a 400.0 m spring event, a runner is finishing in a time of 45 s. What was the average speed of the runner assuming a circular 400.0-m track?</p>
+<p><b>Solution</b><br>
+Inserting into the equation:</p>
+<div class="math notranslate nohighlight">
+\[ v_{av} = \frac{(400.0)}{(45)} = 8.9~\textrm{m/s} \]</div>
+<p>We notice the following:</p>
+<ol class="arabic simple">
+<li><p>The initial and final positions do not play a role. The fact that the track was circular played no role in the problem.</p></li>
+<li><p>This person is pretty fast.</p></li>
+</ol>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="d6-1-3-average-velocity-definition">
+<h2>D6.1.3 Average Velocity: Definition<a class="headerlink" href="#d6-1-3-average-velocity-definition" title="Permalink to this heading">#</a></h2>
+<p>Velocity is the rate of change of position of an object. This may sound like the same as the definition for speed, however, path lenght (or distance traveled) is <em>not necessarily</em> the same as a change in position. The change in position is what we call <em>displacement</em>, so we can also say that <em>the velocity is the displacement over some elapsed time</em>.</p>
+<div class="alert alert-success">
+The average velocity is the displacement experienced by an object over an elapsed time interval.
+</div>
+<p>We define the displacement as <span class="math notranslate nohighlight">\(\Delta x = x_2 - x_1\)</span>, where <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> are positions at event 1 and 2, respectively, and <span class="math notranslate nohighlight">\(\Delta t\)</span> be the elapsed time interval, then the average velocity is</p>
+<div class="math notranslate nohighlight">
+\[ v_{av,x} = \frac{\Delta x}{\Delta t} \]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 3</h3>
+    </header>
+<p>We are traveling from Orem to Las Vegas. Our travel distance is 385 miles southbound and it takes us exactly 6 hours to get there. What is our average velocity?</p>
+<p><b>Solution</b><br>
+Inserting into the equation:</p>
+<div class="math notranslate nohighlight">
+\[ v_{av,x} = \frac{(385)}{(6)} = 64.2~\textrm{mph} + \textrm{direction} \]</div>
+<p>We notice the following:</p>
+<ol class="arabic simple">
+<li><p>There is no direct indication of a direction.</p></li>
+<li><p>We have no information about how the velocity varied during this time interval. We can only say something about the average velocity.</p></li>
+</ol>
+<p>Since it is average velocity, we must address the direction as well. The magnitude of the average velocity is 64.2 mph and from the problem it stated we were southbound. Hence, we can say</p>
+<p>The average velocity is 64.2 mph southbound.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 4</h3>
+    </header>
+<p>During a 200.0 m out-and-back spring event, a runner is finishing in a time of 40.0 s.</p>
+<section id="part-1">
+<h3>Part 1<a class="headerlink" href="#part-1" title="Permalink to this heading">#</a></h3>
+<p>What was the average velocity?</p>
+<p><b>Solution</b><br>
+In this case, our initial and final positions are the same position, and our displacement is therefore:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta x = x_{final} - x_{initial} = 0 \]</div>
+<p>Inserting into the equation:</p>
+<div class="math notranslate nohighlight">
+\[ v_{av,x} = \frac{0}{45} = 0.0~\textrm{m/s} \]</div>
+<p>We notice the following:</p>
+<ol class="arabic simple">
+<li><p>The initial and final positions are important!</p></li>
+<li><p>This person is still pretty fast although his average velocity is zero.</p></li>
+</ol>
+</section>
+<section id="part-2">
+<h3>Part 2<a class="headerlink" href="#part-2" title="Permalink to this heading">#</a></h3>
+<p>What was the average speed?</p>
+<p><b>Solution</b><br>
+The total distance traveled is 400.0 m, so the average speed was:</p>
+<div class="math notranslate nohighlight">
+\[ v_{av} = \frac{400.0}{40.0} = 20.0~\textrm{m/s} \]</div>
+<p>We notice the following:</p>
+<p><strong>The speed was not the magnitude of the velocity because there was a change of direction during the elapsed interval</strong>.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-danger">
+<p>We must be very mindful of distinguishing between speed and velocity.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 1</b><br>
+<p>An object is traveling from <span class="math notranslate nohighlight">\(x = 3.0\)</span> m to <span class="math notranslate nohighlight">\(x = -4.0\)</span> m in 3.0 s.
+<ol>
+<li>What is the object’s displacement?
+<li>What is the object’s average velocity?
+<li>What is the object’s distance traveled?
+<li>What is the object’s average speed?
+</ol></p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 2</b><br>
+<p>A proton in a linear particle accelerator travels with an average velocity of <span class="math notranslate nohighlight">\(2.4\times 10^6\)</span> m/s in a direction considered to be positive and starting at <span class="math notranslate nohighlight">\(x = 0.2\)</span> m.
+<ol>
+<li>What is the displacement during a time interval of <span class="math notranslate nohighlight">\(5.0\)</span> <span class="math notranslate nohighlight">\(\mu\)</span>s? </li>
+<li>What is the final position of the particle?</li>
+</ol></p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="d6-1-4-average-acceleration-definition">
+<h2>D6.1.4 Average Acceleration: Definition<a class="headerlink" href="#d6-1-4-average-acceleration-definition" title="Permalink to this heading">#</a></h2>
+<p>The approaches we made regarding the relationship between position vector and velocity can be directly applied to the concept of acceleration with the position replaced with velocity and velocity replaced with acceleration. So let us try that!</p>
+<div class="alert alert-success">
+The average acceleration is the change in velocity experienced by an object over an elapsed time interval.
+</div>
+<p>If we let <span class="math notranslate nohighlight">\(\Delta v_x\)</span> be the change in velocity and <span class="math notranslate nohighlight">\(\Delta t\)</span> be the elapsed time interval, then the average acceleration is</p>
+<div class="math notranslate nohighlight">
+\[ a_{av,x} = \frac{\Delta v_x}{\Delta t} \]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 1</h3>
+    </header>
+<p>To a physics professor, acceleration is always a fascinating concept. To get a rush of science, the professor is going to determine the accelearion of his Kawasaki ZX-14. Starting from rest at t = 0 s, the beast reaches a speed of 100.0 km/hr in mere 2.8 s. What was the magnitude of average the acceleration?</p>
+<p><b>Solution</b><br>
+We notice that since we are only given the speed, we can not determine the direction of the velocity or the direction of the acceleration, only its magnitude.</p>
+<p>The magnitude of the acceleration is (converting from km/hr to m/s):</p>
+<div class="math notranslate nohighlight">
+\[ |a_{av,x}| = \left|\frac{\Delta v_x}{\Delta t}\right|\]</div>
+<div class="math notranslate nohighlight">
+\[ |a_{av,x}| = \left|\frac{27.78 - 0}{2.8}\right| = 9.9~\textrm{m/s}^2\]</div>
+<p>Note: the acceleration due to gravity is 9.8 m/s<span class="math notranslate nohighlight">\(^2\)</span>, so the professor is experiencing an acceleration slightly over 1-g during this acceleration.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">       
+<header>
+<h3> Example 2</h3>
+    </header>
+<p>A particle is starting from rest and then starts traveling in the positive y-direction. After 5.0 s, the speed of the particle is 15 m/s. Find the average acceleration of the particle during this time interval.</p>
+<p><b>Solution</b><br>
+In this case, we can deduce that the initial velocity is <span class="math notranslate nohighlight">\(v_{1,x} = 0\)</span> and the final velocity is <span class="math notranslate nohighlight">\(v_{2,x} = +15\)</span>, both in units of m/s. The average acceleration is</p>
+<div class="math notranslate nohighlight">
+\[ a_{av,x} = \frac{[(+15) - (0)]}{5.0} = +3.0~\textrm{m/s}^2  \]</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 1</b><br>
+<p>An object is traveling in the positive x-direction. At a given time its speed is 10 m/s and 7 s later its speed is 8 m/s. What is its average acceeleration between these two instances?</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 2</b><br>
+<p>An object is at rest at t = 0 s. After 5 s, the object has sped up to 50 m/s in a negative direction. Find its average acceleration during this time interval.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-danger">
+<p>NOTE: In Box 2, even though the object was speeding up its acceleration was negative.</p>
+<p><strong>Negative acceleration does not imply a particle is slowing down</strong>. It is simply a matter of choice of reference frame (which direction is considered positive). Hence, we should avoid using a terms such as <strong>deceleration</strong>, which implies a reduction in speed.</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "Phys-Prof-Nielsen/physics-sphere",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Module-D6"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Module-D5/problemsD5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">D5.4 Problems</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Equations-kinematics.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">D6.2 Equations of Kinematics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-1-recap-basic-concepts">D6.1.1 Recap Basic Concepts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-2-average-speed-definition">D6.1.2 Average Speed: Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-3-average-velocity-definition">D6.1.3 Average Velocity: Definition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1">Part 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-4-average-acceleration-definition">D6.1.4 Average Acceleration: Definition</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kim Nielsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

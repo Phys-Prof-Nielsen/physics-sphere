@@ -42,3 +42,8 @@ parts:
   - file: Module-D5/Work_Energy_Point_Particle
   - file: Module-D5/problemsD5
   
+- caption: Module D6 - Linear Kinematics in 1D
+  chapters:
+  - file: Module-D6/basic-kinematics
+  - file: Module-D6/Equations-kinematics
+  
