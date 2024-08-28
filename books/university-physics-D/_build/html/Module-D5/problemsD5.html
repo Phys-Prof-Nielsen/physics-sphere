@@ -420,9 +420,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -438,15 +436,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-you-answers">Check You Answers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-solutions">Detailed Solutions</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -490,7 +479,8 @@ document.write(`
 <span class="n">eq1</span> <span class="o">=</span> <span class="n">w</span> <span class="o">-</span> <span class="n">fx</span><span class="o">*</span><span class="n">dx</span>
 <span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
 <span class="n">w</span> <span class="o">=</span> <span class="n">sol1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The work done on the box is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">w</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The work done on the box is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
 
 <span class="c1"># Part 2</span>
 <span class="c1"># ------</span>
@@ -498,7 +488,8 @@ document.write(`
 <span class="n">eq2</span> <span class="o">=</span> <span class="p">(</span><span class="n">k2</span> <span class="o">-</span> <span class="n">k1</span><span class="p">)</span> <span class="o">-</span> <span class="n">w</span>
 <span class="n">sol2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq2</span><span class="p">,</span> <span class="n">k2</span><span class="p">)</span>
 <span class="n">k2</span> <span class="o">=</span> <span class="n">sol2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The kinetic energy at 45 m is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">k2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The kinetic energy at 45 m is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
 
 <span class="c1"># Part 3</span>
 <span class="c1"># ------</span>
@@ -506,12 +497,13 @@ document.write(`
 <span class="n">eq3</span> <span class="o">=</span> <span class="n">k2</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">v2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">sol3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq3</span><span class="p">,</span> <span class="n">v2</span><span class="p">)</span>
 <span class="n">v2</span> <span class="o">=</span> <span class="n">sol3</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The speed at 45 m is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">v2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The speed at 45 m is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s.&#39;</span><span class="p">)</span>
 
 <span class="c1"># Part 3</span>
 <span class="c1"># ------</span>
 <span class="c1"># Since the object is moving in +x direction, the velocity is positive.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The speed at 45 m is: +&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The velocity at 45 m is: +&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -522,10 +514,10 @@ document.write(`
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The work done on the box is: 10575 J.
-The kinetic energy at 45 m is: 10575 J.
-The speed at 45 m is: 65.0384501660364 m/s.
-The speed at 45 m is: +65.0384501660364 m/s.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The work done on the box is: 1.1e+04 J.
+The kinetic energy at 45 m is: 1.1e+04 J.
+The speed at 45 m is: 6.5e+01 m/s.
+The velocity at 45 m is: +6.5e+01 m/s.
 </pre></div>
 </div>
 </div>
@@ -560,7 +552,8 @@ The speed at 45 m is: +65.0384501660364 m/s.
 <span class="n">eq</span> <span class="o">=</span> <span class="n">w</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v2</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">v2</span><span class="p">)</span>
 <span class="n">v2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The speed of the pumpkin right before impact is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">v2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The speed of the pumpkin right before impact is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -571,7 +564,7 @@ The speed at 45 m is: +65.0384501660364 m/s.
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The speed of the pumpkin right before impact is 36.2077339804633 m/s.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The speed of the pumpkin right before impact is 3.6e+01 m/s.
 </pre></div>
 </div>
 </div>
@@ -595,7 +588,8 @@ The speed at 45 m is: +65.0384501660364 m/s.
 
 <span class="n">w</span> <span class="o">=</span> <span class="n">fx</span><span class="o">*</span><span class="n">dx</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The work done is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">w</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The work done is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -606,7 +600,7 @@ The speed at 45 m is: +65.0384501660364 m/s.
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The work done is 3.0 J.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The work done is 3.00e+00 J.
 </pre></div>
 </div>
 </div>
@@ -615,7 +609,7 @@ The speed at 45 m is: +65.0384501660364 m/s.
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D5.4</h2>
     </header>
 <ol class="arabic simple">
-<li><p>Calculate the work done on a <span class="math notranslate nohighlight">\(1500\)</span> kg elevator car by its cable to lift it <span class="math notranslate nohighlight">\(40.0\)</span> m at constant speed, assuming friction averages <span class="math notranslate nohighlight">\(100.0\)</span> N. HINT: find the work done by gravity, friction, and the lift.</p></li>
+<li><p>Calculate the work done on a <span class="math notranslate nohighlight">\(1500\)</span> kg elevator car by its cable to lift it <span class="math notranslate nohighlight">\(40.0\)</span> m at constant speed, assuming friction averages <span class="math notranslate nohighlight">\(100.0\)</span> N. HINT: find the work done by gravity, friction, and the lift. The force of gravity can be found using <span class="math notranslate nohighlight">\(f_g = mg\)</span> where <span class="math notranslate nohighlight">\(g = 9.8~\textrm{m/s}^2\)</span>.</p></li>
 <li><p>What is the total work done on the elevator car?</p></li>
 </ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/7-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
@@ -654,7 +648,8 @@ The speed at 45 m is: +65.0384501660364 m/s.
 <span class="n">eq</span> <span class="o">=</span> <span class="n">w_lift</span> <span class="o">+</span> <span class="n">w_gravity</span> <span class="o">+</span> <span class="n">w_friction</span>
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">w_lift</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Work done by lift is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Work done by lift is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Since there is no change in kinetic energy (constant speed) the net work is zero.&#39;</span><span class="p">)</span>
 </pre></div>
@@ -667,7 +662,7 @@ The speed at 45 m is: +65.0384501660364 m/s.
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Work done by lift is 592600.000000000 J.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Work done by lift is 5.9e+05 J.
 Since there is no change in kinetic energy (constant speed) the net work is zero.
 </pre></div>
 </div>
@@ -704,7 +699,8 @@ Since there is no change in kinetic energy (constant speed) the net work is zero
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">v_e</span><span class="p">)</span>
 <span class="n">v_e</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>   <span class="c1">#pick the positive root</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The elephant must be moving at &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v_e</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">v_e</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The elephant must be moving at &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -715,7 +711,7 @@ Since there is no change in kinetic energy (constant speed) the net work is zero
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The elephant must be moving at 1.47196014438797 m/s.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The elephant must be moving at 1.47e+00 m/s.
 </pre></div>
 </div>
 </div>
@@ -743,12 +739,15 @@ Since there is no change in kinetic energy (constant speed) the net work is zero
 
 <span class="n">k1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v1</span><span class="o">**</span><span class="mi">2</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kinetic energy is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">k1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kinetic energy is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
 
 <span class="n">v2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">v1</span>
 
 <span class="n">k2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v2</span><span class="o">**</span><span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kinetic energy is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">k2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kinetic energy is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; J.&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The kinetic energy depends on speed squared. Hence, if the speed is cut in half, the kinetic energy is cut in 4.&#39;</span><span class="p">)</span>
 </pre></div>
@@ -761,689 +760,15 @@ Since there is no change in kinetic energy (constant speed) the net work is zero
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kinetic energy is 2560000000.0 J.
-Kinetic energy is 640000000.0 J.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kinetic energy is 2.6e+09 J.
+Kinetic energy is 6.4e+08 J.
 The kinetic energy depends on speed squared. Hence, if the speed is cut in half, the kinetic energy is cut in 4.
 </pre></div>
 </div>
 </div>
 </details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="check-you-answers">
-<h2>Check You Answers<a class="headerlink" href="#check-you-answers" title="Permalink to this heading">#</a></h2>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jupyterquiz</span> <span class="kn">import</span> <span class="n">display_quiz</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;solutionsD5.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">questions</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-
-<span class="n">display_quiz</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output text_html"><div id="RAzQyfvGtUlv" data-shufflequestions="False" data-shuffleanswers="True" data-numquestions="1000000"><style>
-:root {
-    --medium-slate-blue: #6f78ffff;
-    --orange-pantone: #f75c03ff;
-    --russian-violet: #392061ff;
-    --maximum-yellow-red: #ffc857ff;
-    --viridian-green: #119da4ff;
-    --incorrect-red: #c80202;
-    --correct-green: #009113;
-}
-
-
-.Quiz {
-     max-width: 600px;
-     margin-top: 15px;
-     margin-left: auto;
-     margin-right: auto;
-     margin-bottom: 15px;
-     padding-bottom: 4px;
-     padding-top: 4px;
-     line-height: 1.1;
-     font-size: 16pt;
-}
-
-.QuizCode {
-    font-size: 14pt;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.QuizCode > pre {
-    padding: 4px;
-}
-.Answer{
-     margin: 10px 0;
-     display: grid;
-     grid-template-columns: auto auto;
-     grid-gap: 10px;
-}
-.Feedback{
-     font-size: 16pt;
-     text-align:center;
- }
-
-.Input {
-    align:left;
-    font-size: 20pt;
-}
-.Input-text {
-    display: block;
-    margin: 10px;
-    color: inherit;
-    width: 140px;
-    background-color: #c0c0c0;
-    color: #fff;
-    padding: 5px;
-    padding-left: 10px;
-
-    font-family: inherit;
-    font-size: 20px;
-    font-weight: inherit;
-    line-height: 20pt;
-    border: none;
-    border-radius: 0.2rem;
-    transition: box-shadow 0.1s);
-}
-
- .Input-text:focus {
-     outline: none;
-     background-color: #c0c0c0;
-     box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem #999999;
- }
-
- .MCButton{
-     background: #fafafa;
-     border: 1px solid #eee;
-     border-radius: 10px;
-     padding: 10px;
-     font-size: 16px;
-     cursor: pointer;
-     text-align: center;
- }
- .MultipleChoiceQn {
-     padding: 10px;
-     background: var(--medium-slate-blue);
-     color: #fafafa;
-     border-radius: 10px;
- }
- .ManyChoiceQn {
-     padding: 10px;
-     background: var(--orange-pantone);
-     color: #fafafa;
-     border-radius: 10px;
- }
- .NumericQn {
-     padding: 10px;
-     background: var(--russian-violet);
-     color: #fafafa;
-     border-radius: 10px;
- }
-.InpLabel {
-     line-height: 34px;
-     float:left;
-     margin-right: 10px;
-     color: #101010;
-     font-size: 15pt;
-}
-.incorrect {
-    color: var(--incorrect-red);
-}
-.correct {
-    color: var(--correct-green);
-}
-.correctButton {
-    background: var(--correct-green);
-    color: #fafafa;
-    box-shadow: inset 0px 0px 5px #555555;
-    outline: none;
-}
-.incorrectButton {
-    background: var(--incorrect-red);
-    color: #fafafa;
-    box-shadow: inset 0px 0px 5px #555555;
-    outline: none;
-}
-
-
-</style><script type="text/Javascript">questionsRAzQyfvGtUlv=[{"question": "Problem D5.1.1: Work done", "type": "multiple_choice", "answers": [{"answer": "+1.1E4 J", "correct": true, "feedback": "Correct."}, {"answer": "+1.06E4 J", "correct": false, "feedback": "False."}, {"answer": "-1.1E4 J", "correct": false, "feedback": "False."}, {"answer": "-1.06E4 J", "correct": false, "feedback": "False."}]}, {"question": "Problem D5.1.2: Kinetic energy", "type": "multiple_choice", "answers": [{"answer": "+1.1E4 J", "correct": true, "feedback": "Correct."}, {"answer": "+1.06E4 J", "correct": false, "feedback": "False."}, {"answer": "-1.1E4 J", "correct": false, "feedback": "False."}, {"answer": "-1.06E4 J", "correct": false, "feedback": "False."}]}, {"question": "Problem D5.1.3: Final speed", "type": "multiple_choice", "answers": [{"answer": "65 m/s", "correct": true, "feedback": "Correct."}, {"answer": "65.0 m/s", "correct": false, "feedback": "False."}, {"answer": "66 m/s", "correct": false, "feedback": "False. Don't use the rounded number for the kinetic energy."}, {"answer": "66.3 m/s", "correct": false, "feedback": "False."}]}, {"question": "Problem D5.1.4: Final velocity", "type": "multiple_choice", "answers": [{"answer": "+65 m/s", "correct": true, "feedback": "Correct."}, {"answer": "-65 m/s", "correct": false, "feedback": "False."}, {"answer": "+65.0 m/s", "correct": false, "feedback": "False."}, {"answer": "-65.0 m/s", "correct": false, "feedback": "False."}]}, {"question": "Problem D5.2: Pumpkin speed upon impact", "type": "numeric", "answers": [{"type": "value", "value": 36, "correct": true, "feedback": "Correct."}, {"type": "range", "range": [36.0001, 999000000.0], "correct": false, "feedback": "False. Try again."}, {"type": "range", "range": [-99999, 35.99999], "correct": false, "feedback": "False. Try again."}]}];
-    //var mydiv=document.getElementById("testDIV");//console.log(mydiv);// Make a random ID
-function makeid(length) {
-    var result           = [];
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-        result.push(characters.charAt(Math.floor(Math.random() *  charactersLength)));
-    }
-    return result.join('');
-}
-
-// Choose a random subset of an array. Can also be used to shuffle the array
-function getRandomSubarray(arr, size) {
-    var shuffled = arr.slice(0), i = arr.length, temp, index;
-    while (i--) {
-        index = Math.floor((i + 1) * Math.random());
-        temp = shuffled[index];
-        shuffled[index] = shuffled[i];
-        shuffled[i] = temp;
-    }
-    return shuffled.slice(0, size);
-}
-function check_mc() {
-    var id=this.id.split('-')[0];
-
-    //console.log("In check_mc(), id="+id);
-    //console.log(event.srcElement.id)           
-    //console.log(event.srcElement.dataset.correct)   
-    //console.log(event.srcElement.dataset.feedback)
-
-    var answers= event.srcElement.parentElement.children;
-    //console.log(answers);
-    
-    // Split behavior based on multiple choice vs many choice:
-    var fb = document.getElementById("fb"+id);
-    if (fb.dataset.numcorrect==1) {
-        for (var i = 0; i < answers.length; i++) {
-            var child=answers[i];
-            child.className="MCButton";
-        }
-
-
-
-        fb.textContent=event.srcElement.dataset.feedback;
-        if (event.srcElement.dataset.correct=="true")   {
-            // console.log("Correct action");
-            this.classList.add("correctButton");
-
-            fb.className="Feedback";
-            fb.classList.add("correct");
-
-        } else {
-            //console.log("Error action");
-            this.classList.add("incorrectButton");
-            fb.className="Feedback";
-            fb.classList.add("incorrect");
-        }
-    }
-    else {
-        //console.log("Many choice not implemented yet");
-        var reset = false;
-        if (event.srcElement.dataset.correct=="true" )   {
-            if (event.srcElement.dataset.answered<=0) {
-                if (fb.dataset.answeredcorrect<0) {
-                    fb.dataset.answeredcorrect=1;
-                    reset=true;
-                } else {
-                    fb.dataset.answeredcorrect++;
-                }
-                if (reset) {
-                    for (var i = 0; i < answers.length; i++) {
-                        var child=answers[i];
-                        child.className="MCButton";
-                        child.dataset.answered=0;
-                    }
-                }
-                this.classList.add("correctButton");
-                this.dataset.answered=1;
-                fb.className="Feedback";
-                fb.classList.add("correct");
-
-            }
-        } else {
-            if (fb.dataset.answeredcorrect>0) {
-                fb.dataset.answeredcorrect=-1;
-                reset=true;
-            } else {
-                fb.dataset.answeredcorrect--;
-            }
-
-            if (reset) {
-                for (var i = 0; i < answers.length; i++) {
-                    var child=answers[i];
-                    child.className="MCButton";
-                    child.dataset.answered=0;
-                }
-            }
-            this.classList.add("incorrectButton");
-            fb.className="Feedback";
-            fb.classList.add("incorrect");
-        }
-
-
-        var numcorrect=fb.dataset.numcorrect;
-        var answeredcorrect=fb.dataset.answeredcorrect;
-        if (answeredcorrect>=0) {
-            fb.textContent=event.srcElement.dataset.feedback + " ["  + answeredcorrect + "/" + numcorrect + "]";
-        } else {
-            fb.textContent=event.srcElement.dataset.feedback + "["  + 0 + "/" + numcorrect + "]";
-        }
-
-
-    }
-
-    
-
-}
-
-function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
-    var shuffled;
-    if (shuffle_answers=="True") {
-        //console.log(shuffle_answers+" read as true");
-        shuffled=getRandomSubarray(qa.answers, qa.answers.length);
-    } else {
-        //console.log(shuffle_answers+" read as false");
-        shuffled=qa.answers;
-    }
-    
-
-    var num_correct=0;
-
-
-    
-    shuffled.forEach((item, index, ans_array) => {
-        //console.log(answer);
-        
-        // Make input element
-        var inp = document.createElement("input");
-        inp.type="radio";
-        inp.id="quizo"+id+index;
-        inp.style="display:none;";
-        aDiv.append(inp);
-        
-        //Make label for input element
-        var lab = document.createElement("label");
-        lab.className="MCButton";
-        lab.id=id+ '-' +index;
-        lab.onclick=check_mc;
-        lab.textContent=item.answer;
-        
-        // Set the data attributes for the answer
-        lab.setAttribute('data-correct', item.correct);
-        if (item.correct) {
-            num_correct++;
-        }
-        lab.setAttribute('data-feedback', item.feedback);
-        lab.setAttribute('data-answered', 0);
-
-        aDiv.append(lab);
-
-    });
-
-    if (num_correct>1) {
-        outerqDiv.className="ManyChoiceQn";
-    } else {
-        outerqDiv.className="MultipleChoiceQn";
-    }
-
-    return num_correct;
-
-}
-function check_numeric(ths, event) {
-
-    if (event.keyCode === 13) {
-        ths.blur();
-
-        var id=ths.id.split('-')[0];
-
-        var submission=ths.value;
-				if (submission.indexOf('/') != -1) {
-            sub_parts=submission.split('/');
-            //console.log(sub_parts);
-            submission=sub_parts[0]/sub_parts[1];
-        }
-        console.log("Reader entered", submission);
-
-        if ("precision" in ths.dataset) {
-            precision=ths.dataset.precision;
-            // console.log("1:", submission)
-            submission=Math.round((1*submission + Number.EPSILON)*10**precision)/ 10**precision; 
-            // console.log("Rounded to ", submission, " precision=", precision  );
-        }
-
-
-        //console.log("In check_numeric(), id="+id);
-        //console.log(event.srcElement.id)           
-        //console.log(event.srcElement.dataset.feedback)
-
-        var fb = document.getElementById("fb"+id);
-        fb.style.display="none";
-        fb.textContent="Incorrect -- try again.";
-
-        answers=JSON.parse(ths.dataset.answers);
-        console.log(answers);
-
-        var defaultFB="";
-        var correct;
-        var done=false;
-        answers.every(answer => {
-            console.log(answer.type);
-
-            correct=false;
-            if (answer.type=="value"){
-                if (submission == answer.value) {
-                    fb.textContent=answer.feedback;
-                    correct=answer.correct;
-                    console.log(answer.correct);
-                    done=true;
-                }
-            } else if (answer.type=="range") {
-                console.log(answer.range);
-                if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
-                    fb.textContent=answer.feedback;
-                    correct=answer.correct;
-                    console.log(answer.correct);
-                    done=true;
-                }
-            } else if (answer.type=="default") {
-                defaultFB=answer.feedback;
-            }
-            if (done) {
-                return false; // Break out of loop if this has been marked correct
-            } else {
-                return true; // Keep looking for case that includes this as a correct answer
-            }
-        });
-
-        if ((!done) && (defaultFB != "")) {
-            fb.textContent=defaultFB;
-            console.log("Default feedback", defaultFB);
-        }
-
-        fb.style.display="block";
-        if (correct) {
-            ths.className="Input-text";
-            ths.classList.add("correctButton");
-            fb.className="Feedback";
-            fb.classList.add("correct");
-        } else {
-            ths.className="Input-text";
-            ths.classList.add("incorrectButton");
-            fb.className="Feedback";
-            fb.classList.add("incorrect");
-        }
-
-        return false;
-    }
-
-}
-
-function isValid(el,  charC) {
-		if (charC == 46) {
-				if (el.value.indexOf('.') === -1) {
-					  return true;
-				} else if (el.value.indexOf('/') != -1) {
-            parts=el.value.split('/');
-				    if (parts[1].indexOf('.') === -1) {
-					      return true;
-            }
-        }
-        else{
-					  return false;
-				}
-		} else if (charC == 47) {
-				if (el.value.indexOf('/') === -1) {
-            if ((el.value != "") && (el.value != ".")) {
-					      return true;
-            } else {
-					  return false;
-				    }
-        } else {
-            return false;
-        }
-		} else if (charC == 45) {
-        if (el.value == "" ) {
-            return true;
-        } else {
-            return false;
-        }
-    } else {
-				if (charC > 31 && (charC < 48 || charC > 57))
-					  return false;
-		}
-		return true;
-}
-
-function numeric_keypress( evnt) {
-		var charC = (evnt.which) ? evnt.which : evnt.keyCode;
-
-    if (charC==13) {
-        check_numeric(this, evnt);
-    } else{
-		    return isValid(this, charC);
-    }
-}
-
-
-
-
-
-function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
-
-
-
-        //console.log(answer);
-
-    
-    outerqDiv.className="NumericQn";
-    aDiv.style.display='block';
-
-    var lab = document.createElement("label");
-    lab.className="InpLabel";
-    lab.textContent="Type numeric answer here:";
-    aDiv.append(lab);
-
-    var inp = document.createElement("input");
-    inp.type="text";
-    //inp.id="input-"+id;
-    inp.id=id+"-0";
-    inp.className="Input-text";
-    inp.setAttribute('data-answers', JSON.stringify(qa.answers) );
-    if ("precision" in qa) {
-        inp.setAttribute('data-precision', qa.precision);
-    }
-    aDiv.append(inp);
-    console.log(inp);
-
-    //inp.addEventListener("keypress", check_numeric);
-    //inp.addEventListener("keypress", numeric_keypress);
-    /*
-    inp.addEventListener("keypress", function(event) {
-        return numeric_keypress(this, event);
-    }
-                        );
-                        */
-    //inp.onkeypress="return numeric_keypress(this, event)";
-    inp.onkeypress=numeric_keypress;
-    inp.onpaste= event => false;
-
-    inp.addEventListener("focus", function(event) {
-        this.value="";
-        return false;
-    }
-                        );
-
-
-}
-function show_questions (json, mydiv) {
-    //var mydiv=document.getElementById(myid);
-    var shuffle_questions=mydiv.dataset.shufflequestions;
-    var num_questions=mydiv.dataset.numquestions;
-    var shuffle_answers=mydiv.dataset.shuffleanswers;
-    
-    if (num_questions>json.length) {
-        num_questions=json.length;
-    }
-    
-    var questions;
-    if ( (num_questions<json.length) || (shuffle_questions=="True") ) {
-        //console.log(num_questions+","+json.length);
-        questions=getRandomSubarray(json, num_questions);
-    } else {
-        questions=json;
-    }
-    
-    //console.log("SQ: "+shuffle_questions+", NQ: " + num_questions + ", SA: ", shuffle_answers);
-    
-    // Iterate over questions
-    questions.forEach((qa, index, array) => {
-        //console.log(qa.question); 
-
-        var id = makeid(8);
-        //console.log(id);
-
-
-        // Create Div to contain question and answers
-        var iDiv = document.createElement('div');
-        iDiv.id = 'quizWrap'+id+index;
-        iDiv.className='Quiz';
-        mydiv.appendChild(iDiv);
-        // iDiv.innerHTML=qa.question;
-
-        var outerqDiv = document.createElement('div');
-        outerqDiv.id="OuterquizQn"+id+index;
-        //qDiv.textContent=qa.question;
-        iDiv.append(outerqDiv);
-
-        // Create div to contain question part
-        var qDiv = document.createElement('div');
-        qDiv.id="quizQn"+id+index;
-        //qDiv.textContent=qa.question;
-        qDiv.innerHTML=qa.question;
-        outerqDiv.append(qDiv);
-
-        // Create div for code inside question
-        var codeDiv;
-        if ("code" in qa){
-            codeDiv = document.createElement('div');
-            codeDiv.id="code"+id+index;
-            codeDiv.className="QuizCode";
-            var codePre = document.createElement('pre');
-            codeDiv.append(codePre);
-            var codeCode = document.createElement('code');
-            codePre.append(codeCode);
-            codeCode.innerHTML=qa.code;
-            outerqDiv.append(codeDiv);
-            console.log(codeDiv);
-        }
-
-
-        // Create div to contain answer part
-        var aDiv = document.createElement('div');
-        aDiv.id="quizAns"+id+index;
-        aDiv.className='Answer';
-        iDiv.append(aDiv);
-
-        console.log(qa.type);
-
-        var num_correct;
-        if (qa.type=="multiple_choice")  {
-            num_correct=make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
-        } else if   (qa.type=="many_choice"){
-            num_correct=make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
-        } else if  (qa.type=="numeric") {
-            console.log("numeric");
-            make_numeric(qa, outerqDiv, qDiv, aDiv, id);
-        }
-
-
-        //Make div for feedback
-        var fb = document.createElement("div");
-        fb.id="fb"+id;
-        //fb.style="font-size: 20px;text-align:center;";
-        fb.className="Feedback";
-        fb.setAttribute("data-answeredcorrect", 0);
-        fb.setAttribute("data-numcorrect", num_correct);
-        iDiv.append(fb);
-
-
-    });
-}
-
-        {
-        show_questions(questionsRAzQyfvGtUlv, RAzQyfvGtUlv);
-        }
-        </script>
-        </div></div>
-</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="detailed-solutions">
-<h2>Detailed Solutions<a class="headerlink" href="#detailed-solutions" title="Permalink to this heading">#</a></h2>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Problem D5.1</p>
-<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
-<header>
-<h3> Problem D5.1</h3>
-   </header>
-<b>Problem</b>
-   <br>
-A 5.0 kg box is being pushed across a horizontal surface through a +235 N net force. The box is initially at rest. After being pushed a distance of 45 m,
-<ol class="arabic simple">
-<li><p>how much work was done on the box?</p></li>
-<li><p>what is the kinetic energy at 45 m?</p></li>
-<li><p>how fast is it traveling at 45 m?</p></li>
-<li><p>what is its velocity at 45 m?</p></li>
-</ol>
-<p><b>Methodology</b>
-<br>
-To find the work, we simply plug and chuck numbers into the definition of work. Since work is the change in kinetic energy and the box is initially at rest, the final kinetic energy must be equal the amount of work put into it. We can then use the definition of kinetic energy to find the speed. Since the force is acting in the positive direction, and the box initially was at rest, we conclude that the box must be moving in the positive direction. Hence, we can assign a direction to the speed a.k.a velocity.</p>
-<p><b>Solution</b>
-<br>
-Part 1:<br>
-The work is</p>
-<p><span class="math notranslate nohighlight">\( w = f_{net,x}\Delta x = (+235)(+45) = 10,575 \rightarrow 1.1\times 10^4~\textrm{J} \)</span></p>
-<p>Part 2:<br>
-Through the work-energy theorem we have</p>
-<p><span class="math notranslate nohighlight">\( \Delta k = w \)</span></p>
-<p>Since the particle is initially at rest (<span class="math notranslate nohighlight">\(k_i = 0\)</span>), the final kinetic energy must be the work put into the box:</p>
-<p><span class="math notranslate nohighlight">\(k_f = 1.1\times 10^4~\textrm{J} \)</span></p>
-<p>Part 3:<br>
-Since we know the kinetic energy, we can solve for the speed (use the non-rounded answer for work):</p>
-<p><span class="math notranslate nohighlight">\( \frac{1}{2}mv_f^2 = 10,575 \)</span></p>
-<p><span class="math notranslate nohighlight">\( v_f = \sqrt{ \frac{(2)(10,575)}{(5.0)} } = 65~\textrm{m/s} \)</span></p>
-<p>Part 4:<br>
-The velocity is</p>
-<p><span class="math notranslate nohighlight">\(v_x = +65~\textrm{m/s} \)</span></p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
-</div>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Problem D5.2</p>
-<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
-<header>
-<h3> Problem D5.2</h3>
-    </header>
-<b>Problem</b>
-<p>During a pumpkin drop, a 9.5 kg pumpkin is dropped from the roof of a 35 m building. The force exterted by gravity on the pumpkin is <span class="math notranslate nohighlight">\( f_g = mg \)</span>, where <span class="math notranslate nohighlight">\(g = 9.8~\textrm{m/s}^2\)</span>. Ignore air resistance. How fast is the pumpkin traveling upon impact with the ground assuming it is being thrown downwards with a speed of 25 m/s?</p>
-<p><b>Methodology</b>
-<br>
-Since we ignore friction, the force of gravity must be the net force acting on the pumpkin. We can then use the work-energy theorem to solve for the speed before impact.</p>
-<p><b>Solution</b>
-<br>
-The work-energy theorem states that</p>
-<p><span class="math notranslate nohighlight">\( \Delta k = w \)</span></p>
-<p>If we write out the kinetic energies and work, we have</p>
-<p><span class="math notranslate nohighlight">\( \frac{1}{2}mv_f^2 - \frac{1}{2}mv_i^2 = f_{net,z}\Delta z \)</span></p>
-<p>where I am choosing <span class="math notranslate nohighlight">\(z\)</span> to be the vertical direction positive downwards. Solving for the final speed and inserting numbers (and using <span class="math notranslate nohighlight">\(f_{net,z} = mg\)</span>):</p>
-<p><span class="math notranslate nohighlight">\( v_f = \sqrt{ v_{i}^2 + \frac{2mg\Delta x}{m} } = \sqrt{ (+25)^2 + \frac{(2)(9.5)(+9.8)(+35)}{(9.5)} } = 36~\textrm{m/s} \)</span></p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1503,21 +828,6 @@ The work-energy theorem states that</p>
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-you-answers">Check You Answers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-solutions">Detailed Solutions</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
