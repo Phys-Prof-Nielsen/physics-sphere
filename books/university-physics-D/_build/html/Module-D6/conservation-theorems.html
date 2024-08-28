@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>D2.1 Point Particle &#8212; A Competency Approach to Introductory Physics</title>
+    <title>D6.1 Conservation Theorems: Momentum and Kinetic Energy &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -63,11 +63,9 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D2/Point_Particle';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D6/conservation-theorems';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="D2.2 Linear Momentum: Point Particle" href="Linear_Momentum_Point_Particle.html" />
-    <link rel="prev" title="D1.5 Problems" href="../Module-D1/problemsD1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,10 +169,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-D1/problemsD1.html">D1.5 Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D2 - Point Particle and its Motion</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">D2.1 Point Particle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Linear_Momentum_Point_Particle.html">D2.2 Linear Momentum: Point Particle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="problemsD2.html">D2.3 Problems</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D2/Point_Particle.html">D2.1 Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D2/Linear_Momentum_Point_Particle.html">D2.2 Linear Momentum: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D2/problemsD2.html">D2.3 Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D3 - Linear Impulse of Point Particle</span></p>
 <ul class="nav bd-sidenav">
@@ -246,7 +244,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/Phys-Prof-Nielsen/physics-sphere/blob/main/books/university-physics-D/Module-D2/Point_Particle.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/Phys-Prof-Nielsen/physics-sphere/blob/main/books/university-physics-D/Module-D6/conservation-theorems.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -312,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/Phys-Prof-Nielsen/physics-sphere/issues/new?title=Issue%20on%20page%20%2FModule-D2/Point_Particle.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Phys-Prof-Nielsen/physics-sphere/issues/new?title=Issue%20on%20page%20%2FModule-D6/conservation-theorems.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +340,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-D2/Point_Particle.ipynb" target="_blank"
+      <li><a href="../_sources/Module-D6/conservation-theorems.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -424,7 +422,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>D2.1 Point Particle</h1>
+    <h1>D6.1 Conservation Theorems: Momentum and Kinetic Energy</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -434,13 +432,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d2-1-1-definition">D2.1.1 Definition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d2-1-2-point-mass">D2.1.2 Point Mass</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#about-mass">About Mass</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-mass-newtonian-approach">Definition of Mass: Newtonian Approach</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-1-motivation">D6.1.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-2-conservation-of-momentum">D6.1.2 Conservation of Momentum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-particle-system">Two-Particle System</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-vs-external-forces">Internal vs. external forces</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-2-conservation-of-kinetic-energy">D6.1.2 Conservation of Kinetic Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Two-Particle System</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Internal vs. external forces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collision">Elastic Collision</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inelastic-collision">Inelastic Collision</a></li>
 </ul>
 </li>
 </ul>
@@ -454,65 +456,96 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="d2-1-point-particle">
-<h1>D2.1 Point Particle<a class="headerlink" href="#d2-1-point-particle" title="Permalink to this heading">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d2-1-1-definition">
-<h2>D2.1.1 Definition<a class="headerlink" href="#d2-1-1-definition" title="Permalink to this heading">#</a></h2>
-<p>The core concepts of Newtonian physics are often listed as being forces and energy. Forces detail interactions between objects or systems, while energy details the state of an object or a system, and both can become quite complicated depending on the interaction(s),object(s), and/or system(s). To gain some basic understanding of the concepts and develop foundation skills, we employ the concept of a <b>point particle</b>.</p>
-<p>A point particle is a <b>hypothetical object</b> in the physics world that is useful for introducing the concepts used in Newtonian mechanics. The characteristics of a point particle are:
-<br></p>
-<ul>
-    <li>It has mass (we will discuss later what mass is).</li>
-    <li>Its size and shape plays no role in the context of the dynamics of the particle.</li><br>
-</ul>        
-The later is often formulated as <b>it has no spatial extension</b>, which I think is a disservice to students. I prefer the former charateristic as it allows us to consider well-known object as point particles as long as their size/shape does not influence the dynamics of object/system. For example, we may treat a car or a basketball as point objects as long as the dynamics we are considering are independent of the size/shape. 
-<p><a href="https://en.wikipedia.org/wiki/Point_particle#:~:text=A%20point%20particle%20(ideal%20particle,does%20not%20take%20up%20space)">Wikipedia has a nice short page on the point particle</a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="d6-1-conservation-theorems-momentum-and-kinetic-energy">
+<h1>D6.1 Conservation Theorems: Momentum and Kinetic Energy<a class="headerlink" href="#d6-1-conservation-theorems-momentum-and-kinetic-energy" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="d6-1-1-motivation">
+<h2>D6.1.1 Motivation<a class="headerlink" href="#d6-1-1-motivation" title="Permalink to this heading">#</a></h2>
+<p>Conservation laws in physics have many practical applications, especially when we consider applications involving collisions. We will here consider two sich conservation laws: conservation of momentum and conservation of kinetic energy. Later in Phase B we could consider conservation of energy.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="d2-1-2-point-mass">
-<h2>D2.1.2 Point Mass<a class="headerlink" href="#d2-1-2-point-mass" title="Permalink to this heading">#</a></h2>
-<section id="about-mass">
-<h3>About Mass<a class="headerlink" href="#about-mass" title="Permalink to this heading">#</a></h3>
-<p>Mass is one of the fundamental concepts in physics that we all feel like we have a good understanding of, yet surprisingly, also one of the concepts we know very little about. The concept of mass reveals itself through various definitions depending on the physical approach:</p>
-<ol class="arabic simple">
-<li><p>A measure of resistance to change in <b>linear motion</b> (Newtonian definition of <b>inertial mass</b>).</p></li>
-<li><p>A measure of amount of matter (also used as the chemistry approach).</p></li>
-<li><p>Energy and mass equivalence in general relativity where mass and energy dictates how space-time curves.</p></li>
-<li><p>A constant arising from a field, such as the Dirac field, interacting with the Higgs field in standard model of particle physics.</p></li>
-</ol>
-<p>For our purpose, we will restrict the discussion of mass to the first two in the above list as we are dealing with introductory physics. However, just to make you aware: the others are fundamental ways of defining mass and make physics absolutely fascinating!</p>
-<p>Before moving on, we may ask ourselves if the concept of a point mass even make sense. In our everyday macroscopic world it does not make sense at all. In fact, even electrons and quarks, which are some of the smallest particles we know of, are larger than a point in space. So what is a point mass? Well, according to symmetry breaking in the standard model of physics, the Higgs field interacts with bosonic and fermionic fields to provide mass to bosons and fermions (our two classes of particles). Interestingly, the broken symmetry also allows for massless particles which are known as photons. These field interactions can indeed take place at a single point, but for our purpose, the point mass or point particle is more of a conceptual feature as defined in section 1.</p>
-<img src="fig1.png" width="300">
-<p>For more information:<br>
-<a class="reference external" href="https://en.wikipedia.org/wiki/Higgs_mechanism">Wiki</a><br>
-<a class="reference external" href="https://cms.cern/">The CMS experiment at CERN</a><br>
-<a class="reference external" href="https://www.youtube.com/watch?v=gSKzgpt4HBU">The True Nature of Matter and Mass</a><br>
-<a class="reference external" href="https://www.youtube.com/watch?v=kixAljyfdqU">The Higgs Mechanism Explained</a></p>
+<section id="d6-1-2-conservation-of-momentum">
+<h2>D6.1.2 Conservation of Momentum<a class="headerlink" href="#d6-1-2-conservation-of-momentum" title="Permalink to this heading">#</a></h2>
+<p>The impulse-momentum theorem states that</p>
+<div class="math notranslate nohighlight">
+\[ \Delta p_x = f_{net,x}\Delta t \]</div>
+<p>The conclusion from this theorem must be: <strong>if there is no net force acting on the particle, then the momentum transfer is zero: its momentum is conserved</strong>.</p>
+<p>This consequence is not too interesting for a single particle. However, if we consider a collection of particles, it becomes a lot more useful.</p>
+<section id="two-particle-system">
+<h3>Two-Particle System<a class="headerlink" href="#two-particle-system" title="Permalink to this heading">#</a></h3>
+<p>Consider two particles constituting a system (we will discuss system of particles in more details in Phase B), let us say, particle A and particle B with masses <span class="math notranslate nohighlight">\(m_A\)</span> and <span class="math notranslate nohighlight">\(m_B\)</span>, respectively.</p>
+<p>The momentum of the system is the sum of individual momentums (upper case letter indicating a system of particles):</p>
+<div class="math notranslate nohighlight">
+\[ P_{x} = p_{A,x} + p_{B,x} \tag{1}\]</div>
+<p>The impulse-momentum thereom for the system is</p>
+<div class="math notranslate nohighlight">
+\[ \Delta P_{x} = F_{net,x}\Delta t \]</div>
+<p>where <span class="math notranslate nohighlight">\(F_{net,x}\)</span> is the <strong>net force acting on the system</strong>.</p>
+</section>
+<section id="internal-vs-external-forces">
+<h3>Internal vs. external forces<a class="headerlink" href="#internal-vs-external-forces" title="Permalink to this heading">#</a></h3>
+<p>For a system of particles, only the net external force is capable of changing the system’s total momentum. We won’t prove that here, but it relates to Newton’s 3rd law: action and re-action. This is helpful in colliding systems as the collision forces (which are internal) are often unknown. <strong>If there is no net external force acting on the system, then the total momentum of the system is conserved</strong>.</p>
+<p>For a two-particle system that implies that</p>
+<div class="math notranslate nohighlight">
+\[ P_{1,x} = P_{2,x} \]</div>
+<p>where subscripts <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span> represents two different states: before and after a collision (or any form of internal interaction that may have taken place).</p>
+<p>If we use Equation 1 to write out conservation of system momentum in terms of individual momentums, we have:</p>
 <div class="alert alert-success">
-FUN FACT: It is the two definitions that we are not going to dicuss that are the real physical explanations of mass. In fact, the mass of everyday objects, including you and I, arises 1% from Higgs field interactions and 99% from binding energy among particles.
+<div class="math notranslate nohighlight">
+\[ m_{A}v_{A,1_{x}} + m_{B}v_{B,1_{x}} = m_{A}v_{A,2_{x}} + m_{B}v_{B,2_{x}} \tag{2}\]</div>
 </div>
-<p>The vast majority of introductory textbooks will introduce the concept of mass together with Newton’s laws of physics for a point particle/object. In doing so, these textbooks will then swiftly apply the point particle/mass to systems like cars, balls, etc., which are obviously not point objects but without explaining why we can get away with it. From our definition of a point particle, we should now understand the implication: <b>every object can be considered a point particle as long as its size and shape does not affect the dynamical analysis</b>.</p>
-<p>Later on, we will introduce the concept of a distributed mass system and the <strong>center of mass</strong>. At that point, we will also introduce the concept of mass as a measure of amount of matter in a substance through density and volume. For now, let us briefle define inertial mass according to Newton.</p>
-</section>
-<section id="definition-of-mass-newtonian-approach">
-<h3>Definition of Mass: Newtonian Approach<a class="headerlink" href="#definition-of-mass-newtonian-approach" title="Permalink to this heading">#</a></h3>
-<p>Mass of a point particle is defined through Newton’s famous second law (with assumptions)</p>
-<div class="math notranslate nohighlight">
-\[ m = \frac{\sum F}{a}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\sum F\)</span> is the magnitude of the net force acting on an object with mass <span class="math notranslate nohighlight">\(m\)</span>, and <span class="math notranslate nohighlight">\(a\)</span> is the magnitude of the resulting acceleration. Hence, mass can be interpreted as <strong>resistance to a change in motion</strong>, and we refer to this mass as <strong>inertial mass</strong>. To date, there has been no experiment showing that inertial mass differ from other definitions of mass (like the amount of substance in an object or gravitational mass, which we will define later in the semester). While classical physics does allow for differences between e.g. gravitational and inertial mass, general relativity shows us that they are indeed the same thing and that the definition of inertial mass is a proper definition.</p>
-<p>The standard notation for the mass of a point particle is <span class="math notranslate nohighlight">\(m\)</span> (lower case <span class="math notranslate nohighlight">\(m\)</span>).</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
-<header>
-<h3> Example 1</h3>
-    </header>
-<p>A point particle is subjected to a net force of <span class="math notranslate nohighlight">\(2.0\)</span> N and experiences an acceleration of <span class="math notranslate nohighlight">\(5.0\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span>. What is the inertial mass of the particle?</p>
-<section id="solution">
-<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h4>
-<p>Inserting into Newton’s definition of mass, we have</p>
-<div class="math notranslate nohighlight">
-\[ m = \frac{\sum F}{a} = \frac{(2.0)}{(5.0)} = 0.40~\textrm{kg}\]</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 1</b><br>
+<p>An astronaut with a mass of 75 kg is holding a 5.0 kg space rock. They are both at rest. Suddenly the astronaut throws the rock at a velocity of +5.0 m/s. What is the velocity of the astronaut after throwing the rock?</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 2</b><br>
+<p>Consider two disco roller skaters A and B are on a hot date at Classic Skating and Fun Center in Orem. Skater A has a mass of 75 kg and is traveling with a velocity of +3.0 m/s. Skater B has a mass of 55 kg and is traveling at a velocity of -3.5 m/s. In a love-struck collision they stick together afterwards (ignore friction as they roll). What is the final velocity of the newly formed skating pair?</p>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
+<section id="d6-1-2-conservation-of-kinetic-energy">
+<h2>D6.1.2 Conservation of Kinetic Energy<a class="headerlink" href="#d6-1-2-conservation-of-kinetic-energy" title="Permalink to this heading">#</a></h2>
+<p>The work-energy theorem states that</p>
+<div class="math notranslate nohighlight">
+\[ \Delta k = f_{net,x}\Delta x \]</div>
+<p>The conclusion from this theorem must be: <strong>if there is no net force acting on the particle, then the kinetic energy transfer is zero: its kinetic energy is conserved</strong>.</p>
+<p>Just as with the case of momentum, this consequence is not too interesting for a single particle.</p>
+<section id="id1">
+<h3>Two-Particle System<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>As above, let us consider two particles constituting a system. The kinetic energy of the system is the sum of individual kinetic energies (upper case letter indicating a system of particles):</p>
+<div class="math notranslate nohighlight">
+\[ K = k_A + k_B \tag{3}\]</div>
+<p>The work-energy thereom for the system is</p>
+<div class="math notranslate nohighlight">
+\[ \Delta K = F_{net,x}\Delta x \]</div>
+<p>where <span class="math notranslate nohighlight">\(F_{net,x}\)</span> is the <strong>net force acting on the system</strong>.</p>
+</section>
+<section id="id2">
+<h3>Internal vs. external forces<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>Unfortunately, we cannot use the argument used in conservation of momemtum. Instead, both internal and external forces are important when considering the work. Instead, we will consider cases of collisions.</p>
+</section>
+<section id="elastic-collision">
+<h3>Elastic Collision<a class="headerlink" href="#elastic-collision" title="Permalink to this heading">#</a></h3>
+<p>An elastic collision is a collision between particles where there is no kinetic energy loss of the system due to dissipative forces (see below for inelastic collision).</p>
+<p><strong>If the collision is elastic the system kinetic energy is conserved</strong> and we have</p>
+<div class="math notranslate nohighlight">
+\[ K_1 = K_2 \]</div>
+<p>where subscripts <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span> represents two different states: before and after a collision (or any form of internal interaction that may have taken place).</p>
+<p>If we use Equation 3 to write out conservation of system kinetic energy in terms of individual kinetic energies, we have:</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ \frac{1}{2}m_{A}v^{2}_{A,1} + \frac{1}{2}m_{B}v^{2}_{B,1} = \frac{1}{2}m_{A}v^{2}_{A,2} + \frac{1}{2}m_{B}v^{2}_{B,2}\tag{4}\]</div>
+</div>
+</section>
+<section id="inelastic-collision">
+<h3>Inelastic Collision<a class="headerlink" href="#inelastic-collision" title="Permalink to this heading">#</a></h3>
+<p>This is a collision where kinetic energy of the system is <strong>not</strong> conserved.</p>
+<p>Examples are:</p>
+<ul class="simple">
+<li><p>if there are deformations of the objects work is done and kinetic energy is no conserved.</p></li>
+<li><p>if there is a sound, then energy is carried away through sound waves and kinetic energy is not conserved.</p></li>
+<li><p>if object(s) change their temperature there is energy carried away and kinetic energy is not conserved.</p></li>
+</ul>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 </section>
 
@@ -529,7 +562,7 @@ FUN FACT: It is the two definitions that we are not going to dicuss that are the
         },
         kernelOptions: {
             name: "python3",
-            path: "./Module-D2"
+            path: "./Module-D6"
         },
         predefinedOutput: true
     }
@@ -547,24 +580,6 @@ FUN FACT: It is the two definitions that we are not going to dicuss that are the
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../Module-D1/problemsD1.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">D1.5 Problems</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="Linear_Momentum_Point_Particle.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">D2.2 Linear Momentum: Point Particle</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -583,13 +598,17 @@ FUN FACT: It is the two definitions that we are not going to dicuss that are the
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d2-1-1-definition">D2.1.1 Definition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d2-1-2-point-mass">D2.1.2 Point Mass</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#about-mass">About Mass</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-mass-newtonian-approach">Definition of Mass: Newtonian Approach</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-1-motivation">D6.1.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-2-conservation-of-momentum">D6.1.2 Conservation of Momentum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-particle-system">Two-Particle System</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-vs-external-forces">Internal vs. external forces</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d6-1-2-conservation-of-kinetic-energy">D6.1.2 Conservation of Kinetic Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Two-Particle System</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Internal vs. external forces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collision">Elastic Collision</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inelastic-collision">Inelastic Collision</a></li>
 </ul>
 </li>
 </ul>
