@@ -42,11 +42,11 @@ parts:
   - file: Module-D5/Work_Energy_Point_Particle
   - file: Module-D5/problemsD5
   
-- caption: Module D6 - Linear Kinematics in 1D
+- caption: Module D6 - Conservation Theorems
   chapters:
-  - file: Module-D6/basic-kinematics
-  - file: Module-D6/Equations-kinematics
+  - file: Module-D6/conservation-theorems
   
-- caption: Module D7 - Conservation Theorems
+- caption: Module D7 - Linear Kinematics in 1D
   chapters:
-  - file: Module-D7/conservation-theorems
+  - file: Module-D7/basic-kinematics
+  - file: Module-D7/Equations-kinematics
