@@ -47,3 +47,6 @@ parts:
   - file: Module-D6/basic-kinematics
   - file: Module-D6/Equations-kinematics
   
+- caption: Module D7 - Conservation Theorems
+  chapters:
+  - file: Module-D7/conservation-theorems

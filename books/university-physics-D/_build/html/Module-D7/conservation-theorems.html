@@ -1,0 +1,686 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>D7.1 Conservation Theorems: Momentum and Kinetic Energy &#8212; A Competency Approach to Introductory Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D7/conservation-theorems';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="D6.2 Equations of Kinematics" href="../Module-D6/Equations-kinematics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo-D.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-D.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    A Competency Approach to University Physics I: A Compendium to the D Exam
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Home</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://phys-prof-nielsen.github.io/physics-sphere/university-physics/university-physics.html">University Physics Main Page</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D1 - First Steps to Doing Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/Scientific_Method.html">D1.1 The Scientific Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/Scientific_Notation.html">D1.2 Scientific Notation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/Significant_Figures.html">D1.3 Significant Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/Unit_Conversion.html">D1.4 Units and Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D1/problemsD1.html">D1.5 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D2 - Point Particle and its Motion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D2/Point_Particle.html">D2.1 Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D2/Linear_Momentum_Point_Particle.html">D2.2 Linear Momentum: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D2/problemsD2.html">D2.3 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D3 - Linear Impulse of Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D3/linear-impulse-force-point-particle.html">D3.1 Impulse and Linear Force: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D3/problemsD3.html">D3.2 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D4 - Linear Newton's Laws - Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D4/Newton_Law.html">D4.1 Newton’s Laws: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D4/problemsD4.html">D4.2 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D5 - Linear Kinetic Energy of Point Particle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/Linear_Kinetic_Energy_Point_Particle.html">D5.1 Linear Kinetic Energy: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/Linear_Work_Point_Particle.html">D5.2 Linear Work: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/Work_Energy_Point_Particle.html">D5.3 Work-Energy Theorem: Point Particle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D5/problemsD5.html">D5.4 Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D6 - Linear Kinematics in 1D</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-D6/basic-kinematics.html">D6.1 Basic Kinematics: Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D6/Equations-kinematics.html">D6.2 Equations of Kinematics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D7 - Conservation Theorems</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">D7.1 Conservation Theorems: Momentum and Kinetic Energy</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Phys-Prof-Nielsen/physics-sphere/blob/main/books/university-physics-D/Module-D7/conservation-theorems.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Phys-Prof-Nielsen/physics-sphere" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Phys-Prof-Nielsen/physics-sphere/issues/new?title=Issue%20on%20page%20%2FModule-D7/conservation-theorems.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Module-D7/conservation-theorems.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>D7.1 Conservation Theorems: Momentum and Kinetic Energy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">7.1.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d7-1-2-conservation-of-momentum">D7.1.2 Conservation of Momentum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-particle-system">Two-Particle System</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-vs-external-forces">Internal vs. external forces</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d7-1-2-conservation-of-kinetic-energy">D7.1.2 Conservation of Kinetic Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Two-Particle System</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Internal vs. external forces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collision">Elastic Collision</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inelastic-collision">Inelastic Collision</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="d7-1-conservation-theorems-momentum-and-kinetic-energy">
+<h1>D7.1 Conservation Theorems: Momentum and Kinetic Energy<a class="headerlink" href="#d7-1-conservation-theorems-momentum-and-kinetic-energy" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="motivation">
+<h2>7.1.1 Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading">#</a></h2>
+<p>Conservation laws in physics have many practical applications, especially when we consider applications involving collisions. We will here consider two sich conservation laws: conservation of momentum and conservation of kinetic energy. Later in Phase B we could consider conservation of energy.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="d7-1-2-conservation-of-momentum">
+<h2>D7.1.2 Conservation of Momentum<a class="headerlink" href="#d7-1-2-conservation-of-momentum" title="Permalink to this heading">#</a></h2>
+<p>The impulse-momentum theorem states that</p>
+<div class="math notranslate nohighlight">
+\[ \Delta p_x = f_{net,x}\Delta t \]</div>
+<p>The conclusion from this theorem must be: <strong>if there is no net force acting on the particle, then the momentum transfer is zero: its momentum is conserved</strong>.</p>
+<p>This consequence is not too interesting for a single particle. However, if we consider a collection of particles, it becomes a lot more useful.</p>
+<section id="two-particle-system">
+<h3>Two-Particle System<a class="headerlink" href="#two-particle-system" title="Permalink to this heading">#</a></h3>
+<p>Consider two particles constituting a system (we will discuss system of particles in more details in Phase B), let us say, particle A and particle B with masses <span class="math notranslate nohighlight">\(m_A\)</span> and <span class="math notranslate nohighlight">\(m_B\)</span>, respectively.</p>
+<p>The momentum of the system is the sum of individual momentums (upper case letter indicating a system of particles):</p>
+<div class="math notranslate nohighlight">
+\[ P_{x} = p_{A,x} + p_{B,x} \tag{1}\]</div>
+<p>The impulse-momentum thereom for the system is</p>
+<div class="math notranslate nohighlight">
+\[ \Delta P_{x} = F_{net,x}\Delta t \]</div>
+<p>where <span class="math notranslate nohighlight">\(F_{net,x}\)</span> is the <strong>net external force acting on the system</strong>.</p>
+</section>
+<section id="internal-vs-external-forces">
+<h3>Internal vs. external forces<a class="headerlink" href="#internal-vs-external-forces" title="Permalink to this heading">#</a></h3>
+<p>For a system of particles, only the net external force is capable of changing the system’s total momentum. We won’t prove that here, but it relates to Newton’s 3rd law: action and re-action. This is helpful in colliding systems as the collision forces (which are internal) are often unknown. <strong>If there is no net external force acting on the system, then the total momentum of the system is conserved</strong>.</p>
+<p>For a two-particle system that implies that</p>
+<div class="math notranslate nohighlight">
+\[ P_{1,x} = P_{2,x} \]</div>
+<p>where subscripts <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span> represents two different states: before and after a collision (or any form of internal interaction that may have taken place).</p>
+<p>If we use Equation 1 to write out conservation of system momentum in terms of individual momentums, we have:</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ m_{A}v_{A,1_{x}} + m_{B}v_{B,1_{x}} = m_{A}v_{A,2_{x}} + m_{B}v_{B,2_{x}} \tag{2}\]</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 1</b><br>
+<p>An astronaut with a mass of 75 kg is holding a 5.0 kg space rock. They are both at rest. Suddenly the astronaut throws the rock at a velocity of +5.0 m/s. What is the velocity of the astronaut after throwing the rock?</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 2</b><br>
+<p>Consider two disco roller skaters A and B are on a hot date at Classic Skating and Fun Center in Orem. Skater A has a mass of 75 kg and is traveling with a velocity of +3.0 m/s. Skater B has a mass of 55 kg and is traveling at a velocity of -3.5 m/s. In a love-struck collision they stick together afterwards (ignore friction as they roll). What is the final velocity of the newly formed skating pair?</p>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="d7-1-2-conservation-of-kinetic-energy">
+<h2>D7.1.2 Conservation of Kinetic Energy<a class="headerlink" href="#d7-1-2-conservation-of-kinetic-energy" title="Permalink to this heading">#</a></h2>
+<p>The work-energy theorem states that</p>
+<div class="math notranslate nohighlight">
+\[ \Delta k = f_{net,x}\Delta x \]</div>
+<p>The conclusion from this theorem must be: <strong>if there is no net force acting on the particle, then the kinetic energy transfer is zero: its kinetic energy is conserved</strong>.</p>
+<p>Just as with the case of momentum, this consequence is not too interesting for a single particle.</p>
+<section id="id1">
+<h3>Two-Particle System<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>As above, let us consider two particles constituting a system. The kinetic energy of the system is the sum of individual kinetic energies (upper case letter indicating a system of particles):</p>
+<div class="math notranslate nohighlight">
+\[ K_{x} = k_A + k_B \tag{3}\]</div>
+<p>The work-energy thereom for the system is</p>
+<div class="math notranslate nohighlight">
+\[ \Delta K = F_{net,x}\Delta x \]</div>
+<p>where <span class="math notranslate nohighlight">\(F_{net,x}\)</span> is the <strong>net external force acting on the system</strong>.</p>
+</section>
+<section id="id2">
+<h3>Internal vs. external forces<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>Unfortunately, we cannot use the argument used in conservation of momemtum. Instead, both internal and external forces are important when considering the work. Instead, we will consider cases of collisions.</p>
+</section>
+<section id="elastic-collision">
+<h3>Elastic Collision<a class="headerlink" href="#elastic-collision" title="Permalink to this heading">#</a></h3>
+<p>An elastic collision is a collision between particles where there is not kinetic energy loss of the system due to dissipative forces (see below for inelastic collision).</p>
+<p>If the collision is elastic the system kinetic energy is conserved and we have</p>
+<div class="math notranslate nohighlight">
+\[ K_1 = K_2 \]</div>
+<p>where subscripts <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span> represents two different states: before and after a collision (or any form of internal interaction that may have taken place).</p>
+<p>If we use Equation 3 to write out conservation of system kinetic energy in terms of individual kinetic energies, we have:</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ \frac{1}{2}m_{A}v^{2}_{A,1} + \frac{1}{2}m_{B}v^{2}_{B,1} = \frac{1}{2}m_{A}v^{2}_{A,2} + \frac{1}{2}m_{B}v^{2}_{B,2}\tag{2}\]</div>
+</div>
+</section>
+<section id="inelastic-collision">
+<h3>Inelastic Collision<a class="headerlink" href="#inelastic-collision" title="Permalink to this heading">#</a></h3>
+<p>This is a collision where kinetic energy of the system is <strong>not</strong> conserved.</p>
+<p>Examples are:</p>
+<ul class="simple">
+<li><p>if there are deformations of the objects work is done and kinetic energy is no conserved.</p></li>
+<li><p>if there is a sound, then energy is carried away through sound waves and kinetic energy is not conserved.</p></li>
+<li><p>if object(s) change their temperature there is energy carried away and kinetic energy is not conserved.</p></li>
+</ul>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "Phys-Prof-Nielsen/physics-sphere",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Module-D7"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Module-D6/Equations-kinematics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">D6.2 Equations of Kinematics</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">7.1.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d7-1-2-conservation-of-momentum">D7.1.2 Conservation of Momentum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-particle-system">Two-Particle System</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-vs-external-forces">Internal vs. external forces</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d7-1-2-conservation-of-kinetic-energy">D7.1.2 Conservation of Kinetic Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Two-Particle System</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Internal vs. external forces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collision">Elastic Collision</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inelastic-collision">Inelastic Collision</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kim Nielsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
