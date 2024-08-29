@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>C5.X Problems &#8212; A Competency Approach to Introductory Physics</title>
+    <title>D6.X Problems &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -191,14 +191,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-D5/Work_Energy_Point_Particle.html">D5.3 Work-Energy Theorem: Point Particle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-D5/problemsD5.html">D5.4 Problems</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D6 - Linear Kinematics in 1D</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D6 - Conservation Theorems</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="basic-kinematics.html">D6.1 Basic Kinematics: Definitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Equations-kinematics.html">D6.2 Equations of Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conservation-theorems.html">D6.1 Conservation Theorems: Momentum and Kinetic Energy</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D7 - Conservation Theorems</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D7 - Linear Kinematics in 1D</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Module-D7/conservation-theorems.html">D7.1 Conservation Theorems: Momentum and Kinetic Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D7/basic-kinematics.html">D7.1 Basic Kinematics: Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-D7/Equations-kinematics.html">D7.2 Equations of Kinematics</a></li>
 </ul>
 
     </div>
@@ -418,7 +418,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -429,11 +431,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>C5.X Problems</h1>
+    <h1>D6.X Problems</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hr-style-height-2px-border-width-0-color-gray-background-color-gray"><hr style="height:2px;border-width:0;color:gray;background-color:gray"/></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -443,11 +453,20 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="c5-x-problems">
-<h1>C5.X Problems<a class="headerlink" href="#c5-x-problems" title="Permalink to this heading">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C5.1</h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="d6-x-problems">
+<h1>D6.X Problems<a class="headerlink" href="#d6-x-problems" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D6.1</h2>
     </header>
-<p>A car accelerates from rest at a constant rate of 3.0 m/s<span class="math notranslate nohighlight">\(^2\)</span> for 10.0 seconds. Calculate its final velocity and the distance it travels during this time.</p>
+<p>The figure below shows a bullet of mass 200.0 g traveling horizontally towards the east with speed 400.0 m/s, which strikes a block of mass 1.5 kg that is initially at rest on a frictionless table.</p>
+<img src="P6-1.png" width="400">
+<p>After striking the block, the bullet is embedded in the block and the block and the bullet move together as one unit, while heat is generated between the bullet and the block due to friction.</p>
+<ol class="arabic simple">
+<li><p>What is the magnitude and direction of the velocity of the block/bullet combination immediately after the impact?</p></li>
+<li><p>What is the magnitude and direction of the impulse by the block on the bullet?</p></li>
+<li><p>What is the magnitude and direction of the impulse from the bullet on the block?</p></li>
+<li><p>If it took 3.00 ms for the bullet to change the speed from 400.0 m/s to the final speed after impact, what is the average force between the block and the bullet during this time?</p></li>
+</ol>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
@@ -464,19 +483,29 @@ document.write(`
 <div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
 
-<span class="n">ax</span> <span class="o">=</span> <span class="mf">3.0</span>
-<span class="n">t</span> <span class="o">=</span> <span class="mf">10.0</span>
-<span class="n">v0x</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">mA</span> <span class="o">=</span> <span class="mf">2.000e-3</span>
+<span class="n">vA1</span> <span class="o">=</span> <span class="mf">400.0</span>  <span class="c1">#let +x be direction of bullet motion</span>
 
-<span class="n">vx</span> <span class="o">=</span> <span class="n">v0x</span> <span class="o">+</span> <span class="n">ax</span><span class="o">*</span><span class="n">t</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The final velocity is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">vx</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+<span class="n">mB</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">vB1</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="c1">#block is at rest</span>
 
-<span class="n">dx</span> <span class="o">=</span> <span class="n">v0x</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">ax</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span>   <span class="c1">#distance is the magnitude of displacement</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The distance traveled is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+<span class="c1">#due to heat, kinetic energy is NOT conserved, but momentum is</span>
+
+<span class="c1">#conservation of momentum: (P1 = P2)</span>
+<span class="c1"># mA*vA1 + mB*mvB1 = (mA + mB)*v2</span>
+
+<span class="c1">#unknown variable is final velocity</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;v2&#39;</span><span class="p">)</span>
+
+<span class="n">P1</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">vA1</span> <span class="o">+</span> <span class="n">mB</span><span class="o">*</span><span class="n">vB1</span>
+<span class="n">P2</span> <span class="o">=</span> <span class="p">(</span><span class="n">mA</span> <span class="o">+</span> <span class="n">mB</span><span class="p">)</span><span class="o">*</span><span class="n">v2</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">P2</span> <span class="o">-</span> <span class="n">P1</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">v2</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Final speed of bullet+block system is &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -487,20 +516,19 @@ document.write(`
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The final velocity is 30.0 m/s
- 
-The distance traveled is 150.0 m
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Final speed of bullet+block system is 5.3e-01 m/s
 </pre></div>
 </div>
 </div>
 </details>
 </div>
-<h2>Problem C5.2</h2>
+<h2>Problem D6.2</h2>
     </header>
-<p>A UVU rocket is launched vertically upward. After the engine burn-out the speed of the rocket is 740.0 m/s. How high above the burn-out altitude is the speed 120.0 m/s?</p>
+<p>A 4.5 kg puffer fish expands to 40.0% of its mass by taking in water. When the puffer fish is threatened, it releases the water toward the threat to move quickly forward. What is the ratio of the speed of the puffer fish forward to the speed of the expelled water backwards?</p>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIU Cell</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
 </pre></div>
 </div>
 </div>
@@ -514,18 +542,33 @@ The distance traveled is 150.0 m
 <div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
 
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">v1y</span> <span class="o">=</span> <span class="mf">740.0</span>
-<span class="n">v2y</span> <span class="o">=</span> <span class="mf">120.0</span>
-<span class="n">ay</span> <span class="o">=</span> <span class="o">-</span><span class="mf">9.81</span>
+<span class="n">mA</span> <span class="o">=</span> <span class="mf">4.5</span>
+<span class="n">vA1</span> <span class="o">=</span> <span class="mf">0.0</span>
 
-<span class="n">dy</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;dy&#39;</span><span class="p">)</span>
+<span class="n">mB</span> <span class="o">=</span> <span class="mf">0.400</span><span class="o">*</span><span class="n">mA</span>
+<span class="n">vB1</span> <span class="o">=</span> <span class="mf">0.0</span> 
 
-<span class="n">eq</span> <span class="o">=</span> <span class="n">v2y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">v1y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">ay</span><span class="o">*</span><span class="n">dy</span>
-<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">dy</span><span class="p">)</span>
+<span class="c1">#conservation of momentum: (P1 = P2)</span>
+<span class="c1"># mA*vA1 + mB*vB1 = mA*vA2 + mB*vB2</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Altitude above burn-out height is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+<span class="c1">#unknown variables are final speeds and their ratio </span>
+<span class="n">vA2</span><span class="p">,</span><span class="n">vB2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;vA2,vB2&#39;</span><span class="p">)</span>
+
+<span class="n">P1</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">vA1</span> <span class="o">+</span> <span class="n">mB</span><span class="o">*</span><span class="n">vB1</span>
+<span class="n">P2</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">vA2</span> <span class="o">+</span> <span class="n">mB</span><span class="o">*</span><span class="n">vB2</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">P2</span> <span class="o">-</span> <span class="n">P1</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">vA2</span><span class="p">,</span><span class="n">vB2</span><span class="p">)</span>
+
+<span class="n">vA2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">vB2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ratio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">vA2</span><span class="o">/</span><span class="n">vB2</span><span class="p">)</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ratio</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ratio: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -536,13 +579,239 @@ The distance traveled is 150.0 m
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Altitude above burn-out height is 27176.3506625892 m
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ratio: 2.5e+0
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D6.3</h2>
+    </header>
+<p>In an elastic collision, a 400.0 kg bumper car collides directly from behind with a second, identical bumper car that is traveling in the same direction. The initial speed of the leading bumper car is 5.60 m/s and that of the trailing car is 6.00 m/s. Assuming that the mass of the drivers is much, much less than that of the bumper cars, what are their final speeds?</p>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">mA</span> <span class="o">=</span> <span class="mf">400.0</span>
+<span class="n">vA1</span> <span class="o">=</span> <span class="mf">6.00</span>
+
+<span class="n">mB</span> <span class="o">=</span> <span class="mf">400.0</span>
+<span class="n">vB1</span> <span class="o">=</span> <span class="mf">5.60</span> 
+
+<span class="c1"># both final speeds are unknown, so we have two unknowns</span>
+<span class="c1"># elastic collision so kinetic energy is also conserved (together with momentum)</span>
+
+<span class="c1">#conservation of momentum: (P1 = P2)</span>
+<span class="c1"># mA*vA1 + mB*vB1 = mA*vA2 + mB*vB2</span>
+
+<span class="c1">#unknown variables are final speeds</span>
+<span class="n">vA2</span><span class="p">,</span><span class="n">vB2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;vA2,vB2&#39;</span><span class="p">)</span>
+
+<span class="c1">#momentum</span>
+<span class="n">P1</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">vA1</span> <span class="o">+</span> <span class="n">mB</span><span class="o">*</span><span class="n">vB1</span>
+<span class="n">P2</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">vA2</span> <span class="o">+</span> <span class="n">mB</span><span class="o">*</span><span class="n">vB2</span>
+
+<span class="c1">#kinetic energy</span>
+<span class="n">K1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">mA</span><span class="o">*</span><span class="n">vA1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">mB</span><span class="o">*</span><span class="n">vB1</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">K2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">mA</span><span class="o">*</span><span class="n">vA2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">mB</span><span class="o">*</span><span class="n">vB2</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">P2</span> <span class="o">-</span> <span class="n">P1</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">K2</span> <span class="o">-</span> <span class="n">K1</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">vA2</span><span class="p">,</span><span class="n">vB2</span><span class="p">))</span>
+
+<span class="n">vA2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">vB2</span><span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">answer1</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vA2</span><span class="p">)</span>
+<span class="n">answer2</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vB2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;They simply swap speeds: &#39;</span><span class="o">+</span><span class="n">answer1</span><span class="o">+</span><span class="s1">&#39; m/s and &#39;</span><span class="o">+</span><span class="n">answer2</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>They simply swap speeds: 5.60e+0 m/s and 6.00e+0 m/s
+</pre></div>
+</div>
+</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D6.4</h2>
+    </header>
+<p>An alpha particle (<span class="math notranslate nohighlight">\(^{4}\)</span>He) undergoes an elastic collision with a stationary uranium nucleus (<span class="math notranslate nohighlight">\(^{235}\)</span>U). What percent of the kinetic energy of the alpha particle is transferred to the uranium nucleus? Assume the collision is one-dimensional.</p>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">mA</span> <span class="o">=</span> <span class="mf">4.</span> <span class="c1">#mass in atomic mass units</span>
+<span class="n">mB</span> <span class="o">=</span> <span class="mi">235</span>
+<span class="n">vB1</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># uranimum is initially at rest</span>
+
+<span class="c1"># elastic collision so both momentum and kinetic energy are conserved.</span>
+
+<span class="c1">#unknown variables </span>
+<span class="n">vA1</span><span class="p">,</span><span class="n">vA2</span><span class="p">,</span><span class="n">vB2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;vA1,vA2,vB2&#39;</span><span class="p">)</span>
+
+<span class="c1">#momentum</span>
+<span class="n">P1</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">vA1</span> <span class="o">+</span> <span class="n">mB</span><span class="o">*</span><span class="n">vB1</span>
+<span class="n">P2</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">vA2</span> <span class="o">+</span> <span class="n">mB</span><span class="o">*</span><span class="n">vB2</span>
+
+<span class="c1">#kinetic energy</span>
+<span class="n">K1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">mA</span><span class="o">*</span><span class="n">vA1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">mB</span><span class="o">*</span><span class="n">vB1</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">K2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">mA</span><span class="o">*</span><span class="n">vA2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">mB</span><span class="o">*</span><span class="n">vB2</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">P2</span> <span class="o">-</span> <span class="n">P1</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">K2</span> <span class="o">-</span> <span class="n">K1</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">vA1</span><span class="p">,</span><span class="n">vA2</span><span class="p">,</span><span class="n">vB2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+<span class="n">vA1</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">vA2</span><span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">vB2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="c1"># percent of alpha KE to U KE</span>
+<span class="n">k_alpha_i</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">mA</span><span class="o">*</span><span class="p">(</span><span class="n">vA1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">k_U</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">mB</span><span class="o">*</span><span class="n">vB2</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">k_U</span><span class="o">/</span><span class="n">k_alpha_i</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.0e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Percent of initial alpha particle KE transferred to Uranium nuclei: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39;%&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(29.875*vB2, -28.875*vB2, vB2)]
+Percent of initial alpha particle KE transferred to Uranium nuclei: 7e+0%
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<section id="hr-style-height-2px-border-width-0-color-gray-background-color-gray">
+<h2><hr style="height:2px;border-width:0;color:gray;background-color:gray"><a class="headerlink" href="#hr-style-height-2px-border-width-0-color-gray-background-color-gray" title="Permalink to this heading">#</a></h2>
+<h2>Problem D6.5</h2>
+    </header>
+<p>A 20.0 kg child is coasting at 3.3 m/s over flat ground in a 4.0 kg wagon.</p>
+<ol class="arabic simple">
+<li><p>If the child drops a 1.0 kg ball out the back of the wagon, what is the final speed of the child and wagon?</p></li>
+<li><p>If the child drops a 1.0kg ball out the back of the wagon so that the ball is at rest relative to the ground, what is the final speed of the child and wagon?</p></li>
+</ol>
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/9-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">mA</span> <span class="o">=</span> <span class="mf">20.0</span> <span class="o">+</span> <span class="mf">4.0</span>
+<span class="n">mB</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="n">v1</span> <span class="o">=</span> <span class="mf">3.3</span> <span class="c1">#all three are moving together initially</span>
+
+<span class="c1"># Conservation of momentum</span>
+
+<span class="c1">#-------</span>
+<span class="c1"># Part 1</span>
+<span class="c1">#-------</span>
+<span class="c1">#simply dropping the ball implies that the ball will move at the same horizontal speed as it was </span>
+<span class="c1">#moving at when dropped as long as we ignore air drag.</span>
+<span class="n">vB2</span> <span class="o">=</span> <span class="mf">3.3</span>  
+
+<span class="c1">#unknown variable </span>
+<span class="n">vA2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;vA2&#39;</span><span class="p">)</span>
+
+<span class="c1">#momentum</span>
+<span class="n">P1</span> <span class="o">=</span> <span class="p">(</span><span class="n">mA</span> <span class="o">+</span> <span class="n">mB</span><span class="p">)</span><span class="o">*</span><span class="n">v1</span> <span class="c1">#the system is child,wagon, and ball all moving together</span>
+<span class="n">P2</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">vA2</span> <span class="o">+</span> <span class="n">mB</span><span class="o">*</span><span class="n">vB2</span>
+
+<span class="n">eq</span> <span class="o">=</span><span class="n">P2</span> <span class="o">-</span> <span class="n">P1</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">vA2</span><span class="p">)</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There is no internal forces (or impact force) to change the motion of either ball or child_wagon: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+
+<span class="c1">#-------</span>
+<span class="c1"># Part 2</span>
+<span class="c1">#-------</span>
+<span class="c1">#now the child is exerting a force on the ball and there is momentum transfer between the child and ball,</span>
+<span class="c1">#but the net momentum of the system stays the same.</span>
+<span class="n">vB2</span> <span class="o">=</span> <span class="mi">0</span> 
+
+<span class="c1">#unknown variable </span>
+<span class="n">vA2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;vA2&#39;</span><span class="p">)</span>
+
+<span class="c1">#momentum</span>
+<span class="n">P1</span> <span class="o">=</span> <span class="p">(</span><span class="n">mA</span> <span class="o">+</span> <span class="n">mB</span><span class="p">)</span><span class="o">*</span><span class="n">v1</span> <span class="c1">#the system is child,wagon, and ball all moving together</span>
+<span class="n">P2</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">vA2</span> <span class="o">+</span> <span class="n">mB</span><span class="o">*</span><span class="n">vB2</span>
+
+<span class="n">eq</span> <span class="o">=</span><span class="n">P2</span> <span class="o">-</span> <span class="n">P1</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">vA2</span><span class="p">)</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Final speed of child+wagon: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There is no internal forces (or impact force) to change the motion of either ball or child_wagon: 3.3e+0m/s
+Final speed of child+wagon: 3.4e+0m/s
 </pre></div>
 </div>
 </div>
 </details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -584,6 +853,20 @@ The distance traveled is 150.0 m
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hr-style-height-2px-border-width-0-color-gray-background-color-gray"><hr style="height:2px;border-width:0;color:gray;background-color:gray"/></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
