@@ -45,6 +45,7 @@ parts:
 - caption: Module D6 - Conservation Theorems
   chapters:
   - file: Module-D6/conservation-theorems
+  - file: Module-DD/problemsD6
   
 - caption: Module D7 - Linear Kinematics in 1D
   chapters:
