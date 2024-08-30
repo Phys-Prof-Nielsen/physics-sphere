@@ -66,6 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D6/problemsD6';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="D7.1 Basic Kinematics: Definitions" href="../Module-D7/basic-kinematics.html" />
+    <link rel="prev" title="D6.1 Conservation Theorems: Momentum and Kinetic Energy" href="conservation-theorems.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -192,8 +194,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-D5/problemsD5.html">D5.4 Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D6 - Conservation Theorems</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="conservation-theorems.html">D6.1 Conservation Theorems: Momentum and Kinetic Energy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">D6.X Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D7 - Linear Kinematics in 1D</span></p>
 <ul class="nav bd-sidenav">
@@ -485,12 +488,14 @@ document.write(`
 
 <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
 
-<span class="n">mA</span> <span class="o">=</span> <span class="mf">2.000e-3</span>
+<span class="n">mA</span> <span class="o">=</span> <span class="mf">2.000e-1</span>
 <span class="n">vA1</span> <span class="o">=</span> <span class="mf">400.0</span>  <span class="c1">#let +x be direction of bullet motion</span>
 
 <span class="n">mB</span> <span class="o">=</span> <span class="mf">1.5</span>
 <span class="n">vB1</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="c1">#block is at rest</span>
 
+
+<span class="c1"># PART 1</span>
 <span class="c1">#due to heat, kinetic energy is NOT conserved, but momentum is</span>
 
 <span class="c1">#conservation of momentum: (P1 = P2)</span>
@@ -504,8 +509,34 @@ document.write(`
 
 <span class="n">eq</span> <span class="o">=</span> <span class="n">P2</span> <span class="o">-</span> <span class="n">P1</span>
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">v2</span><span class="p">)</span>
-<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Final speed of bullet+block system is &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">v2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 1: Final speed of bullet+block system is &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="c1"># impulse is delivered to the bullet from the block: final momentum - initial momentum</span>
+<span class="n">dp_bullet</span> <span class="o">=</span> <span class="n">mA</span><span class="o">*</span><span class="n">v2</span> <span class="o">-</span> <span class="n">mA</span><span class="o">*</span><span class="n">vA1</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">dp_bullet</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 2: Impulse experienced by bullet &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; kgm/s&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 3</span>
+<span class="c1"># impulse is delivered to the block from the bullet: final momentum - initial momentum</span>
+<span class="n">dp_block</span> <span class="o">=</span> <span class="n">mB</span><span class="o">*</span><span class="n">v2</span> <span class="o">-</span> <span class="n">mB</span><span class="o">*</span><span class="n">vB1</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">dp_block</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 3: Impulse experienced by block &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; kgm/s&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 4</span>
+<span class="c1"># impacy force = impulse/elapsed time</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">3.00e-3</span>
+<span class="n">f_impact</span> <span class="o">=</span> <span class="n">dp_bullet</span><span class="o">/</span><span class="n">dt</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">f_impact</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Part 4: Impact force: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; N&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -516,7 +547,13 @@ document.write(`
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Final speed of bullet+block system is 5.3e-01 m/s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Part 1: Final speed of bullet+block system is 4.7e+01 m/s
+ 
+Part 2: Impulse experienced by bullet -7.1e+01 kgm/s
+ 
+Part 3: Impulse experienced by block 7.1e+01 kgm/s
+ 
+Part 4: Impact force: -2.4e+04 N
 </pre></div>
 </div>
 </div>
@@ -688,7 +725,7 @@ document.write(`
 <span class="n">eq1</span> <span class="o">=</span> <span class="n">P2</span> <span class="o">-</span> <span class="n">P1</span>
 <span class="n">eq2</span> <span class="o">=</span> <span class="n">K2</span> <span class="o">-</span> <span class="n">K1</span>
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">vA1</span><span class="p">,</span><span class="n">vA2</span><span class="p">,</span><span class="n">vB2</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+
 <span class="n">vA1</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">vA2</span><span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">vB2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
@@ -711,8 +748,7 @@ document.write(`
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(29.875*vB2, -28.875*vB2, vB2)]
-Percent of initial alpha particle KE transferred to Uranium nuclei: 7e+0%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Percent of initial alpha particle KE transferred to Uranium nuclei: 7e+0%
 </pre></div>
 </div>
 </div>
@@ -772,7 +808,7 @@ Percent of initial alpha particle KE transferred to Uranium nuclei: 7e+0%
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">vA2</span><span class="p">)</span>
 
 <span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There is no internal forces (or impact force) to change the motion of either ball or child_wagon: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1. There is no internal forces (or impact force) to change the motion of either ball or child_wagon: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
 
 <span class="c1">#-------</span>
 <span class="c1"># Part 2</span>
@@ -792,7 +828,8 @@ Percent of initial alpha particle KE transferred to Uranium nuclei: 7e+0%
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">vA2</span><span class="p">)</span>
 
 <span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Final speed of child+wagon: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2. Final speed of child+wagon: &#39;</span><span class="o">+</span><span class="n">answer</span><span class="o">+</span> <span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -803,8 +840,9 @@ Percent of initial alpha particle KE transferred to Uranium nuclei: 7e+0%
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There is no internal forces (or impact force) to change the motion of either ball or child_wagon: 3.3e+0m/s
-Final speed of child+wagon: 3.4e+0m/s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1. There is no internal forces (or impact force) to change the motion of either ball or child_wagon: 3.3e+0 m/s
+ 
+2. Final speed of child+wagon: 3.4e+0m/s
 </pre></div>
 </div>
 </div>
@@ -844,6 +882,24 @@ Final speed of child+wagon: 3.4e+0m/s
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="conservation-theorems.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">D6.1 Conservation Theorems: Momentum and Kinetic Energy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Module-D7/basic-kinematics.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">D7.1 Basic Kinematics: Definitions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
