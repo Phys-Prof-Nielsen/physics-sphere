@@ -600,8 +600,8 @@ Part 4: Impact force: -2.4e+04 N
 <span class="n">eq</span> <span class="o">=</span> <span class="n">P2</span> <span class="o">-</span> <span class="n">P1</span>
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">vA2</span><span class="p">,</span><span class="n">vB2</span><span class="p">)</span>
 
-<span class="n">vA2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">vB2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">vA2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">vB2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">ratio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">vA2</span><span class="o">/</span><span class="n">vB2</span><span class="p">)</span>
 
 <span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ratio</span><span class="p">)</span>
@@ -616,7 +616,7 @@ Part 4: Impact force: -2.4e+04 N
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ratio: 2.5e+0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ratio: 4.0e-1
 </pre></div>
 </div>
 </div>
@@ -853,7 +853,9 @@ Part 4: Impact force: -2.4e+04 N
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1. There is no internal forces (or impact force) to change the motion of either ball or child_wagon: 3.3e+0 m/s
- 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 2. Final speed of child+wagon: 3.4e+0m/s
 </pre></div>
 </div>
