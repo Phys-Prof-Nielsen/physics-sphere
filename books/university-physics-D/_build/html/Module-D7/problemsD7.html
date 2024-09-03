@@ -66,6 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module-D7/problemsD7';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="D7.2 Equations of Kinematics" href="Equations-kinematics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -197,9 +198,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-D6/problemsD6.html">D6.X Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module D7 - Linear Kinematics in 1D</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="basic-kinematics.html">D7.1 Basic Kinematics: Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Equations-kinematics.html">D7.2 Equations of Kinematics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">D7.X Problems</a></li>
 </ul>
 
     </div>
@@ -472,12 +474,16 @@ document.write(`
 <span class="n">v0x</span> <span class="o">=</span> <span class="mf">0.0</span>
 
 <span class="n">vx</span> <span class="o">=</span> <span class="n">v0x</span> <span class="o">+</span> <span class="n">ax</span><span class="o">*</span><span class="n">t</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The final velocity is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">vx</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">vx</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The final velocity is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
 
 <span class="n">dx</span> <span class="o">=</span> <span class="n">v0x</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">ax</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span>   <span class="c1">#distance is the magnitude of displacement</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The distance traveled is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The distance traveled is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -488,9 +494,9 @@ document.write(`
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The final velocity is 30.0 m/s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The final velocity is 3.0e+01 m/s
  
-The distance traveled is 150.0 m
+The distance traveled is 1.5e+02 m
 </pre></div>
 </div>
 </div>
@@ -526,7 +532,8 @@ The distance traveled is 150.0 m
 <span class="n">eq</span> <span class="o">=</span> <span class="n">v2y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">v1y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">ay</span><span class="o">*</span><span class="n">dy</span>
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">dy</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Altitude above burn-out height is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.3e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Altitude above burn-out height is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -537,7 +544,7 @@ The distance traveled is 150.0 m
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Altitude above burn-out height is 27176.3506625892 m
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Altitude above burn-out height is 2.718e+04 m
 </pre></div>
 </div>
 </div>
@@ -551,6 +558,63 @@ The distance traveled is 150.0 m
 <li><p>What is its velocity at this same time?</p></li>
 </ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/3-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">v0x</span> <span class="o">=</span> <span class="mf">30.0</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="mf">30.0</span>
+
+<span class="c1"># PART 1</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;dx&#39;</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mf">5.0</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">dx</span> <span class="o">-</span> <span class="n">v0x</span><span class="o">*</span><span class="n">t</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">ax</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">dx</span><span class="p">)</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Displacement: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+
+<span class="c1"># PART 2</span>
+<span class="c1"># vx = v0x + ax*t</span>
+
+<span class="n">vx</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;vx&#39;</span><span class="p">)</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">vx</span> <span class="o">-</span> <span class="n">v0x</span> <span class="o">-</span> <span class="n">ax</span><span class="o">*</span><span class="n">t</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">vx</span><span class="p">)</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocity: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Displacement: 5.2e+02 m
+Velocity: 1.8e+02 m/s
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <h2>Problem D7.4</h2>
     </header>
 <ol class="arabic simple">
@@ -559,6 +623,79 @@ The distance traveled is 150.0 m
 <li><p>In emergencies, the train can accelerate opposite to the motion more rapidly, coming to rest from 80.0 km/h in 8.30 s. What is its emergency acceleration in meters per second squared?</p></li>
 </ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/3-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1"># PART 1</span>
+
+<span class="n">v1x</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">v2x</span> <span class="o">=</span> <span class="p">(</span><span class="mf">80.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1000</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3600</span><span class="p">)</span> <span class="c1">#convert from km/hr to m/s</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="mf">30.0</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;dt&#39;</span><span class="p">)</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">ax</span> <span class="o">-</span> <span class="p">(</span><span class="n">v2x</span> <span class="o">-</span> <span class="n">v1x</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">dt</span><span class="p">)</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.65</span>
+<span class="n">v1x</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">v2x</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">ax</span> <span class="o">-</span> <span class="p">(</span><span class="n">v2x</span> <span class="o">-</span> <span class="n">v1x</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">dt</span><span class="p">)</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s&#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 3</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">8.30</span>
+<span class="n">v1x</span> <span class="o">=</span> <span class="p">(</span><span class="mf">80.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1000</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3600</span><span class="p">)</span> <span class="c1">#convert from km/hr to m/s</span>
+<span class="n">v2x</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">)</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">ax</span> <span class="o">-</span> <span class="p">(</span><span class="n">v2x</span> <span class="o">-</span> <span class="n">v1x</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s</span><span class="se">\u00b2</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Elapsed time: 7.41e-01 s
+Elapsed time: 4.49e-01 s
+Acceleration: -2.68e+00 m/s²
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D7.5</h2>
     </header>
 <ol class="arabic simple">
@@ -566,35 +703,140 @@ The distance traveled is 150.0 m
 <li><p>How long a time would it take to reach the ground if it is thrown straight down with the same speed?</p></li>
 </ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/3-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D7.6</h2>
-    </header>
-<p>An electron is moving in a straight line with a velocity of <span class="math notranslate nohighlight">\(4.0\times 10^5\)</span>
-m/s. It enters a region <span class="math notranslate nohighlight">\(5.0\)</span> cm long where it undergoes an acceleration of <span class="math notranslate nohighlight">\(6.0\times 10^{12}\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span>
-along the same straight line.</p>
-<ol class="arabic simple">
-<li><p>What is the electron’s velocity when it emerges from this region?</p></li>
-<li><p>How long does the electron take to cross the region?</p></li>
-</ol>
-<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/3-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
-<h2>Problem D7.7</h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># PART 1</span>
+
+<span class="c1"># up is positive here</span>
+<span class="n">v0y</span> <span class="o">=</span> <span class="mf">8.00</span>
+<span class="n">ay</span> <span class="o">=</span> <span class="o">-</span><span class="mf">9.81</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">2.35</span>
+
+<span class="n">dy</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;dy&#39;</span><span class="p">)</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">dy</span> <span class="o">-</span> <span class="n">v0y</span><span class="o">*</span><span class="n">dt</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">ay</span><span class="o">*</span><span class="n">dt</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">dy</span><span class="p">)</span>
+<span class="n">dy</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">dy</span><span class="p">)</span> <span class="c1">#dy is displacement, we just want the height</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">H</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Height of cliff : &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+
+<span class="c1"># PART 2</span>
+
+<span class="c1"># up is positive here</span>
+<span class="n">v0y</span> <span class="o">=</span> <span class="o">-</span><span class="mf">8.00</span>
+<span class="n">ay</span> <span class="o">=</span> <span class="o">-</span><span class="mf">9.81</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;dt&#39;</span><span class="p">)</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">dy</span> <span class="o">-</span> <span class="n">v0y</span><span class="o">*</span><span class="n">dt</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">ay</span><span class="o">*</span><span class="n">dt</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">dt</span><span class="p">)</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Time elapsed : &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Height of cliff : 8.29e+00 m
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time elapsed : 7.19e-01 s
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem D7.7</h2>
     </header>
 <p>A police car waits in hiding slightly off the highway. A speeding car is spotted by the police car doing 40.0 m/s. At the instant the speeding car passes the police car, the police car accelerates from rest at 4.00 m/s<span class="math notranslate nohighlight">\(^2\)</span> to catch the speeding car. How long does it take the police car to catch the speeding car?</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/3-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
-<h2>Problem D7.8</h2>
-    </header>
-<p>In a 100-m race, the winner is timed at 11.2 s. The second-place finisher’s time is 11.6 s. How far is the second-place finisher behind the winner when she crosses the finish line? Assume the velocity of each runner is constant throughout the race.</p>
-<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/3-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
-<h2>Problem D7.9</h2>
-    </header>
-<p>A cyclist sprints at the end of a race to clinch a victory. She has an initial velocity of 11.5 m/s and accelerates at a rate of 0.500 m/s<span class="math notranslate nohighlight">\(^2\)</span> for 7.00 s.</p>
-<ol class="arabic simple">
-<li><p>What is her final velocity?</p></li>
-<li><p>The cyclist continues at this velocity to the finish line. If she is 300.0 m from the finish line when she starts to accelerate, how much time did she save?</p></li>
-<li><p>The second-place winner was 5.00 m ahead when the winner started to accelerate, but he was unable to accelerate, and traveled at 11.8 m/s until the finish line. What was the difference in finish time in seconds between the winner and runner-up?</p></li>
-<li><p>How far back was the runner-up when the winner crossed the finish line?</p></li>
-</ol>
-<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/3-problems">This problem is a slightly modified version from OpenStax. Access for free here</a></p>
-</section>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># two equations with two unknowns: where they meet and when they meet</span>
+<span class="c1"># speeding car: x = x0 + vx*t --&gt; dx = vx*t</span>
+<span class="c1"># police: x = x0 + v0x*t + 0.5*ax*t^2</span>
+
+<span class="c1"># let x0 = 0 : starting position where the overlap first.</span>
+
+<span class="n">x</span><span class="p">,</span><span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x,t&#39;</span><span class="p">)</span>
+
+<span class="c1"># speeding car</span>
+<span class="n">eq_car</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mf">40.0</span><span class="o">*</span><span class="n">t</span>
+
+<span class="c1"># police</span>
+<span class="n">eq_police</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">0</span><span class="o">*</span><span class="n">t</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="mf">4.00</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq_car</span><span class="p">,</span><span class="n">eq_police</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">answerx</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">answert</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The police catches the speeding car &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answert</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s later, and travels &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answerx</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The police catches the speeding car 2.00e+01 s later, and travels 8.00e+02 m.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 
     <script type="text/x-thebe-config">
     {
@@ -627,6 +869,15 @@ along the same straight line.</p>
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Equations-kinematics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">D7.2 Equations of Kinematics</p>
+      </div>
+    </a>
 </div></div>
   
 </div>
