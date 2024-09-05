@@ -53,6 +53,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -257,7 +258,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/Phys-Prof-Nielsen/physics-sphere/blob/main/books/university-physics-D/Module-D1/Scientific_Notation.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/Module-D1/Scientific_Notation.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,53 +289,6 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 <span class="btn__text-container">Live Code</span>
 </button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/Phys-Prof-Nielsen/physics-sphere" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/Phys-Prof-Nielsen/physics-sphere/issues/new?title=Issue%20on%20page%20%2FModule-D1/Scientific_Notation.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
 </li>
       
   </ul>
@@ -539,7 +493,7 @@ As in Example 1, we need to have a single leading digit followed by decimal digi
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="output text_html"><div id="mJDDCytSEPeW" data-shufflequestions="False" data-shuffleanswers="True" data-numquestions="1000000"><style>
+<div class="output text_html"><div id="MZFYKsQgaFqK" data-shufflequestions="False" data-shuffleanswers="True" data-numquestions="1000000"><style>
 :root {
     --medium-slate-blue: #6f78ffff;
     --orange-pantone: #f75c03ff;
@@ -667,7 +621,7 @@ As in Example 1, we need to have a single leading digit followed by decimal digi
 }
 
 
-</style><script type="text/Javascript">questionsmJDDCytSEPeW=[{"question": "Which answer is appropriate scientific notion for 334.57", "type": "multiple_choice", "answers": [{"answer": "3.3457E2", "correct": true, "feedback": "You got this!"}, {"answer": "33.4E1", "correct": false, "feedback": "What a pity! The number to the left of the decimal point must be between 1-9."}, {"answer": "0.33457E3", "correct": false, "feedback": "Aww! Close, but the leading number must be between 1 and 9."}, {"answer": "3.34E2", "correct": false, "feedback": "Close! You forgot some of the digits"}]}];
+</style><script type="text/Javascript">questionsMZFYKsQgaFqK=[{"question": "Which answer is appropriate scientific notion for 334.57", "type": "multiple_choice", "answers": [{"answer": "3.3457E2", "correct": true, "feedback": "You got this!"}, {"answer": "33.4E1", "correct": false, "feedback": "What a pity! The number to the left of the decimal point must be between 1-9."}, {"answer": "0.33457E3", "correct": false, "feedback": "Aww! Close, but the leading number must be between 1 and 9."}, {"answer": "3.34E2", "correct": false, "feedback": "Close! You forgot some of the digits"}]}];
     //var mydiv=document.getElementById("testDIV");//console.log(mydiv);// Make a random ID
 function makeid(length) {
     var result           = [];
@@ -1121,7 +1075,7 @@ function show_questions (json, mydiv) {
 }
 
         {
-        show_questions(questionsmJDDCytSEPeW, mJDDCytSEPeW);
+        show_questions(questionsMZFYKsQgaFqK, MZFYKsQgaFqK);
         }
         </script>
         </div></div>
@@ -1133,8 +1087,8 @@ function show_questions (json, mydiv) {
     {
         requestKernel: true,
         binderOptions: {
-            repo: "Phys-Prof-Nielsen/physics-sphere",
-            ref: "main",
+            repo: "executablebooks/jupyter-book",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
