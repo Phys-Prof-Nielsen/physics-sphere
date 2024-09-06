@@ -383,9 +383,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -401,15 +399,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-you-answers">Check You Answers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-solutions">Detailed Solutions</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -424,6 +413,13 @@ document.write(`
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.1</h2>
     </header>
 <p>The hypotenuse of a right-angle triangle has a length of 8.6 cm. The opposite side is 4.30 cm. What is the length of the adjacent side?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -442,7 +438,9 @@ document.write(`
 
 <span class="n">eq</span> <span class="o">=</span> <span class="n">hyp</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">opp</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">adj</span><span class="o">**</span><span class="mi">2</span>
 <span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">adj</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The adjacent side is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; cm.&#39;</span><span class="p">)</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The adjacent side is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; cm.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -453,7 +451,7 @@ document.write(`
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The adjacent side is 7.44781847254617 cm.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The adjacent side is 7.4e+0 cm.
 </pre></div>
 </div>
 </div>
@@ -471,6 +469,13 @@ If <span class="math notranslate nohighlight">\(b = 10.0\)</span> m and <span cl
 <li><p>the length of <span class="math notranslate nohighlight">\(c\)</span>.</p></li>
 <li><p>the angle <span class="math notranslate nohighlight">\(\beta\)</span> in radians.</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -493,17 +498,21 @@ If <span class="math notranslate nohighlight">\(b = 10.0\)</span> m and <span cl
 <span class="n">eq1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span> <span class="o">-</span> <span class="n">b</span><span class="o">/</span><span class="n">a</span>
 <span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">sol1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lenght &quot;a&quot; is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lenght &quot;a&quot; is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m.&#39;</span><span class="p">)</span>
 
 <span class="n">eq2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span> <span class="o">-</span> <span class="n">c</span><span class="o">/</span><span class="n">a</span>
 <span class="n">sol2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq2</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">sol2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lenght &quot;c&quot; is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m.&#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lenght &quot;c&quot; is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m.&#39;</span><span class="p">)</span>
 
 <span class="n">eq3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span> <span class="o">-</span> <span class="n">b</span><span class="o">/</span><span class="n">a</span>
 <span class="n">sol3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq3</span><span class="p">,</span><span class="n">beta</span><span class="p">)</span>
 <span class="n">beta</span> <span class="o">=</span> <span class="n">sol3</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angle &quot;beta&quot; is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; degrees.&#39;</span><span class="p">)</span>
+<span class="n">answer1</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span>
+<span class="n">answer2</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sol3</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angle &quot;beta&quot; is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer1</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; degrees or &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; radians&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -514,9 +523,11 @@ If <span class="math notranslate nohighlight">\(b = 10.0\)</span> m and <span cl
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lenght &quot;a&quot; is 11.1837528560483 m.
-Lenght &quot;c&quot; is 5.00762697743844 m.
-Angle &quot;beta&quot; is 63.4000000000000 degrees.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lenght &quot;a&quot; is 1.12e+1 m.
+Lenght &quot;c&quot; is 5.01e+0 m.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Angle &quot;beta&quot; is 6.34e+1 degrees or 1.11e+0 radians
 </pre></div>
 </div>
 </div>
@@ -533,10 +544,70 @@ If <span class="math notranslate nohighlight">\(c = 5.0\)</span> m and <span cla
 <li><p>the length of <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
 <li><p>the length of <span class="math notranslate nohighlight">\(b\)</span>.</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mf">14.3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span> <span class="o">-</span> <span class="n">c</span><span class="o">/</span><span class="n">a</span>
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">sol1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lenght &quot;a&quot; is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m.&#39;</span><span class="p">)</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span> <span class="o">-</span> <span class="n">b</span><span class="o">/</span><span class="n">c</span>
+<span class="n">sol1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">sol1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.1e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lenght &quot;b&quot; is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lenght &quot;a&quot; is 5.2e+0 m.
+Lenght &quot;b&quot; is 1.3e+0 m.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem C2.4</h2>
     </header>
 <p>An adventurous dog strays from home, runs three blocks east, two blocks north, one block east, one block north, and two blocks west. Assuming that each block is about 100 m, how far from home and in what direction is the dog? Use a graphical method.</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -565,10 +636,12 @@ If <span class="math notranslate nohighlight">\(c = 5.0\)</span> m and <span cla
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Displacement in y is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dy</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m.&#39;</span><span class="p">)</span>
 
 <span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">dy</span><span class="o">/</span><span class="n">dx</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>  <span class="c1">#first quadrant</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Distance from home: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m.&#39;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Distance from home: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m.&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Direction: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; degrees north of east.&#39;</span><span class="p">)</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">dy</span><span class="o">/</span><span class="n">dx</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>  <span class="c1">#first quadrant</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Direction: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; degrees north of east.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -581,8 +654,8 @@ If <span class="math notranslate nohighlight">\(c = 5.0\)</span> m and <span cla
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Displacement in x is: 200 m.
 Displacement in y is: 300 m.
-Distance from home: 360.5551275463989 m.
-Direction: 56.309932474020215 degrees north of east.
+Distance from home: 361 m.
+Direction: 56 degrees north of east.
 </pre></div>
 </div>
 </div>
@@ -593,6 +666,13 @@ Direction: 56.309932474020215 degrees north of east.
 <p>Assuming the +x-axis is horizontal and points to the right, resolve the vectors given in the following figure to their scalar components and express them in vector component form.
 <img src="C2-P2.5.png"  width="400"/></p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -682,6 +762,13 @@ Fy = -9.999999999999998
     </header>
 <p>A sledge is being pulled by two horses on a flat terrain. The net force on the sledge can be expressed in the Cartesian coordinate system as vector <span class="math notranslate nohighlight">\(\vec{F} = (-2980.0~\hat{i} + 8200.0~\hat{j})\)</span> N, where <span class="math notranslate nohighlight">\(\hat{i}\)</span> and <span class="math notranslate nohighlight">\(\hat{j}\)</span> denote directions to the east and north, respectively. Find the magnitude and direction of the pull.</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -726,6 +813,13 @@ Direction is 70.02811474303941 degrees clockwise from the -x axis.
 <li><p><span class="math notranslate nohighlight">\(\vec{D} = 2\vec{A} - \vec{B}\)</span></p></li>
 </ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -772,6 +866,13 @@ D = [  4. -11.  15.]
 </ol>
 <img src="C2-P2.8.png"  width="300"/>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -794,7 +895,7 @@ D = [  4. -11.  15.]
 <span class="c1">#boat 2</span>
 <span class="n">f2</span> <span class="o">=</span> <span class="mf">4000.0</span>
 <span class="n">theta2</span> <span class="o">=</span> <span class="mi">15</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
-<span class="n">f2x</span> <span class="o">=</span> <span class="o">-</span><span class="n">f2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span>
+<span class="n">f2x</span> <span class="o">=</span> <span class="n">f2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span>
 <span class="n">f2y</span> <span class="o">=</span> <span class="n">f2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span>
 
 <span class="n">fx</span> <span class="o">=</span> <span class="n">f1x</span> <span class="o">+</span> <span class="n">f2x</span>
@@ -817,9 +918,9 @@ D = [  4. -11.  15.]
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The components of the resultant force are fx = -2074.8346344988795, fy = 8754.441308825302
-The magnitude of the resultant force is 8996.95400622805
-The direction is 13.333295716122464 counterclockwise from the AB line.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The components of the resultant force are fx = -4.282273678713636, fy = 8754.441308825302
+The magnitude of the resultant force is 8754.442356171792
+The direction is 0.028026481677814463 counterclockwise from the AB line.
 </pre></div>
 </div>
 </div>
@@ -840,6 +941,13 @@ The direction is 13.333295716122464 counterclockwise from the AB line.
 </ol>
 <img src="C2-P2.5.png"  width="400"/>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -931,6 +1039,13 @@ The dot product BB is 25.0 NOTE: the dot product of a vector withitself is its m
 <li><p><span class="math notranslate nohighlight">\(\vec{C} = (2.0~\hat{i} - 4.0~\hat{j} + \hat{k})\)</span> m and <span class="math notranslate nohighlight">\(\vec{B} = (-2.0~\hat{i} + 3.0~\hat{j} + 2.0~\hat{k})\)</span> m.</p></li>
 </ol>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -982,6 +1097,13 @@ The angle between C and B is 137.81313547305282
     </header>
 <p>Find the angles that vector <span class="math notranslate nohighlight">\(\vec{D} = (2.0~\hat{i} - 4.0~\hat{j} + \hat{k})\)</span> m makes with the x-, y-, and z- axes.</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/2-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1029,709 +1151,7 @@ The angle between D and k is 77.39561735162083
 </div>
 </details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="check-you-answers">
-<h2>Check You Answers<a class="headerlink" href="#check-you-answers" title="Permalink to this heading">#</a></h2>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jupyterquiz</span> <span class="kn">import</span> <span class="n">display_quiz</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;solutionsC2.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">questions</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-
-<span class="n">display_quiz</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output text_html"><div id="XjUFesAxthTW" data-shufflequestions="False" data-shuffleanswers="True" data-numquestions="1000000"><style>
-:root {
-    --medium-slate-blue: #6f78ffff;
-    --orange-pantone: #f75c03ff;
-    --russian-violet: #392061ff;
-    --maximum-yellow-red: #ffc857ff;
-    --viridian-green: #119da4ff;
-    --incorrect-red: #c80202;
-    --correct-green: #009113;
-}
-
-
-.Quiz {
-     max-width: 600px;
-     margin-top: 15px;
-     margin-left: auto;
-     margin-right: auto;
-     margin-bottom: 15px;
-     padding-bottom: 4px;
-     padding-top: 4px;
-     line-height: 1.1;
-     font-size: 16pt;
-}
-
-.QuizCode {
-    font-size: 14pt;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.QuizCode > pre {
-    padding: 4px;
-}
-.Answer{
-     margin: 10px 0;
-     display: grid;
-     grid-template-columns: auto auto;
-     grid-gap: 10px;
-}
-.Feedback{
-     font-size: 16pt;
-     text-align:center;
- }
-
-.Input {
-    align:left;
-    font-size: 20pt;
-}
-.Input-text {
-    display: block;
-    margin: 10px;
-    color: inherit;
-    width: 140px;
-    background-color: #c0c0c0;
-    color: #fff;
-    padding: 5px;
-    padding-left: 10px;
-
-    font-family: inherit;
-    font-size: 20px;
-    font-weight: inherit;
-    line-height: 20pt;
-    border: none;
-    border-radius: 0.2rem;
-    transition: box-shadow 0.1s);
-}
-
- .Input-text:focus {
-     outline: none;
-     background-color: #c0c0c0;
-     box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem #999999;
- }
-
- .MCButton{
-     background: #fafafa;
-     border: 1px solid #eee;
-     border-radius: 10px;
-     padding: 10px;
-     font-size: 16px;
-     cursor: pointer;
-     text-align: center;
- }
- .MultipleChoiceQn {
-     padding: 10px;
-     background: var(--medium-slate-blue);
-     color: #fafafa;
-     border-radius: 10px;
- }
- .ManyChoiceQn {
-     padding: 10px;
-     background: var(--orange-pantone);
-     color: #fafafa;
-     border-radius: 10px;
- }
- .NumericQn {
-     padding: 10px;
-     background: var(--russian-violet);
-     color: #fafafa;
-     border-radius: 10px;
- }
-.InpLabel {
-     line-height: 34px;
-     float:left;
-     margin-right: 10px;
-     color: #101010;
-     font-size: 15pt;
-}
-.incorrect {
-    color: var(--incorrect-red);
-}
-.correct {
-    color: var(--correct-green);
-}
-.correctButton {
-    background: var(--correct-green);
-    color: #fafafa;
-    box-shadow: inset 0px 0px 5px #555555;
-    outline: none;
-}
-.incorrectButton {
-    background: var(--incorrect-red);
-    color: #fafafa;
-    box-shadow: inset 0px 0px 5px #555555;
-    outline: none;
-}
-
-
-</style><script type="text/Javascript">questionsXjUFesAxthTW=[{"question": "Problem C2.1: Length of adjacent side", "type": "multiple_choice", "answers": [{"answer": "7.4 cm", "correct": true, "feedback": "Correct."}, {"answer": "7.45 cm", "correct": false, "feedback": "False."}, {"answer": "55 cm", "correct": false, "feedback": "False."}, {"answer": "9.6 cm", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.2.1: Length of a", "type": "multiple_choice", "answers": [{"answer": "11.2 m", "correct": true, "feedback": "Correct."}, {"answer": "22.3 m", "correct": false, "feedback": "False."}, {"answer": "8.94 m", "correct": false, "feedback": "False."}, {"answer": "4.48 m", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.2.2: Length of c", "type": "multiple_choice", "answers": [{"answer": "5.01 m", "correct": true, "feedback": "Correct."}, {"answer": "20.0 m", "correct": false, "feedback": "False."}, {"answer": "4.48 m", "correct": false, "feedback": "False."}, {"answer": "8.94 m", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.2.3: Angle beta", "type": "multiple_choice", "answers": [{"answer": "1.11 rad", "correct": true, "feedback": "Correct."}, {"answer": "0.464 rad", "correct": false, "feedback": "False."}, {"answer": "63.4 rad", "correct": false, "feedback": "False."}, {"answer": "0.363 rad", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.3.1: Length of a", "type": "multiple_choice", "answers": [{"answer": "5.2 m", "correct": true, "feedback": "Correct."}, {"answer": "4.8 m", "correct": false, "feedback": "False."}, {"answer": "20 m", "correct": false, "feedback": "False."}, {"answer": "1.2 m", "correct": false, "feedback": "False."}]}, {"question": "Problem C2.3.2: Length of b", "type": "multiple_choice", "answers": [{"answer": "1.3 m", "correct": true, "feedback": "Correct."}, {"answer": "5.2 m", "correct": false, "feedback": "False."}, {"answer": "4.8 m", "correct": false, "feedback": "False."}, {"answer": "1.4 m", "correct": false, "feedback": "False."}]}];
-    //var mydiv=document.getElementById("testDIV");//console.log(mydiv);// Make a random ID
-function makeid(length) {
-    var result           = [];
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-        result.push(characters.charAt(Math.floor(Math.random() *  charactersLength)));
-    }
-    return result.join('');
-}
-
-// Choose a random subset of an array. Can also be used to shuffle the array
-function getRandomSubarray(arr, size) {
-    var shuffled = arr.slice(0), i = arr.length, temp, index;
-    while (i--) {
-        index = Math.floor((i + 1) * Math.random());
-        temp = shuffled[index];
-        shuffled[index] = shuffled[i];
-        shuffled[i] = temp;
-    }
-    return shuffled.slice(0, size);
-}
-function check_mc() {
-    var id=this.id.split('-')[0];
-
-    //console.log("In check_mc(), id="+id);
-    //console.log(event.srcElement.id)           
-    //console.log(event.srcElement.dataset.correct)   
-    //console.log(event.srcElement.dataset.feedback)
-
-    var answers= event.srcElement.parentElement.children;
-    //console.log(answers);
-    
-    // Split behavior based on multiple choice vs many choice:
-    var fb = document.getElementById("fb"+id);
-    if (fb.dataset.numcorrect==1) {
-        for (var i = 0; i < answers.length; i++) {
-            var child=answers[i];
-            child.className="MCButton";
-        }
-
-
-
-        fb.textContent=event.srcElement.dataset.feedback;
-        if (event.srcElement.dataset.correct=="true")   {
-            // console.log("Correct action");
-            this.classList.add("correctButton");
-
-            fb.className="Feedback";
-            fb.classList.add("correct");
-
-        } else {
-            //console.log("Error action");
-            this.classList.add("incorrectButton");
-            fb.className="Feedback";
-            fb.classList.add("incorrect");
-        }
-    }
-    else {
-        //console.log("Many choice not implemented yet");
-        var reset = false;
-        if (event.srcElement.dataset.correct=="true" )   {
-            if (event.srcElement.dataset.answered<=0) {
-                if (fb.dataset.answeredcorrect<0) {
-                    fb.dataset.answeredcorrect=1;
-                    reset=true;
-                } else {
-                    fb.dataset.answeredcorrect++;
-                }
-                if (reset) {
-                    for (var i = 0; i < answers.length; i++) {
-                        var child=answers[i];
-                        child.className="MCButton";
-                        child.dataset.answered=0;
-                    }
-                }
-                this.classList.add("correctButton");
-                this.dataset.answered=1;
-                fb.className="Feedback";
-                fb.classList.add("correct");
-
-            }
-        } else {
-            if (fb.dataset.answeredcorrect>0) {
-                fb.dataset.answeredcorrect=-1;
-                reset=true;
-            } else {
-                fb.dataset.answeredcorrect--;
-            }
-
-            if (reset) {
-                for (var i = 0; i < answers.length; i++) {
-                    var child=answers[i];
-                    child.className="MCButton";
-                    child.dataset.answered=0;
-                }
-            }
-            this.classList.add("incorrectButton");
-            fb.className="Feedback";
-            fb.classList.add("incorrect");
-        }
-
-
-        var numcorrect=fb.dataset.numcorrect;
-        var answeredcorrect=fb.dataset.answeredcorrect;
-        if (answeredcorrect>=0) {
-            fb.textContent=event.srcElement.dataset.feedback + " ["  + answeredcorrect + "/" + numcorrect + "]";
-        } else {
-            fb.textContent=event.srcElement.dataset.feedback + "["  + 0 + "/" + numcorrect + "]";
-        }
-
-
-    }
-
-    
-
-}
-
-function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
-    var shuffled;
-    if (shuffle_answers=="True") {
-        //console.log(shuffle_answers+" read as true");
-        shuffled=getRandomSubarray(qa.answers, qa.answers.length);
-    } else {
-        //console.log(shuffle_answers+" read as false");
-        shuffled=qa.answers;
-    }
-    
-
-    var num_correct=0;
-
-
-    
-    shuffled.forEach((item, index, ans_array) => {
-        //console.log(answer);
-        
-        // Make input element
-        var inp = document.createElement("input");
-        inp.type="radio";
-        inp.id="quizo"+id+index;
-        inp.style="display:none;";
-        aDiv.append(inp);
-        
-        //Make label for input element
-        var lab = document.createElement("label");
-        lab.className="MCButton";
-        lab.id=id+ '-' +index;
-        lab.onclick=check_mc;
-        lab.textContent=item.answer;
-        
-        // Set the data attributes for the answer
-        lab.setAttribute('data-correct', item.correct);
-        if (item.correct) {
-            num_correct++;
-        }
-        lab.setAttribute('data-feedback', item.feedback);
-        lab.setAttribute('data-answered', 0);
-
-        aDiv.append(lab);
-
-    });
-
-    if (num_correct>1) {
-        outerqDiv.className="ManyChoiceQn";
-    } else {
-        outerqDiv.className="MultipleChoiceQn";
-    }
-
-    return num_correct;
-
-}
-function check_numeric(ths, event) {
-
-    if (event.keyCode === 13) {
-        ths.blur();
-
-        var id=ths.id.split('-')[0];
-
-        var submission=ths.value;
-				if (submission.indexOf('/') != -1) {
-            sub_parts=submission.split('/');
-            //console.log(sub_parts);
-            submission=sub_parts[0]/sub_parts[1];
-        }
-        console.log("Reader entered", submission);
-
-        if ("precision" in ths.dataset) {
-            precision=ths.dataset.precision;
-            // console.log("1:", submission)
-            submission=Math.round((1*submission + Number.EPSILON)*10**precision)/ 10**precision; 
-            // console.log("Rounded to ", submission, " precision=", precision  );
-        }
-
-
-        //console.log("In check_numeric(), id="+id);
-        //console.log(event.srcElement.id)           
-        //console.log(event.srcElement.dataset.feedback)
-
-        var fb = document.getElementById("fb"+id);
-        fb.style.display="none";
-        fb.textContent="Incorrect -- try again.";
-
-        answers=JSON.parse(ths.dataset.answers);
-        console.log(answers);
-
-        var defaultFB="";
-        var correct;
-        var done=false;
-        answers.every(answer => {
-            console.log(answer.type);
-
-            correct=false;
-            if (answer.type=="value"){
-                if (submission == answer.value) {
-                    fb.textContent=answer.feedback;
-                    correct=answer.correct;
-                    console.log(answer.correct);
-                    done=true;
-                }
-            } else if (answer.type=="range") {
-                console.log(answer.range);
-                if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
-                    fb.textContent=answer.feedback;
-                    correct=answer.correct;
-                    console.log(answer.correct);
-                    done=true;
-                }
-            } else if (answer.type=="default") {
-                defaultFB=answer.feedback;
-            }
-            if (done) {
-                return false; // Break out of loop if this has been marked correct
-            } else {
-                return true; // Keep looking for case that includes this as a correct answer
-            }
-        });
-
-        if ((!done) && (defaultFB != "")) {
-            fb.textContent=defaultFB;
-            console.log("Default feedback", defaultFB);
-        }
-
-        fb.style.display="block";
-        if (correct) {
-            ths.className="Input-text";
-            ths.classList.add("correctButton");
-            fb.className="Feedback";
-            fb.classList.add("correct");
-        } else {
-            ths.className="Input-text";
-            ths.classList.add("incorrectButton");
-            fb.className="Feedback";
-            fb.classList.add("incorrect");
-        }
-
-        return false;
-    }
-
-}
-
-function isValid(el,  charC) {
-		if (charC == 46) {
-				if (el.value.indexOf('.') === -1) {
-					  return true;
-				} else if (el.value.indexOf('/') != -1) {
-            parts=el.value.split('/');
-				    if (parts[1].indexOf('.') === -1) {
-					      return true;
-            }
-        }
-        else{
-					  return false;
-				}
-		} else if (charC == 47) {
-				if (el.value.indexOf('/') === -1) {
-            if ((el.value != "") && (el.value != ".")) {
-					      return true;
-            } else {
-					  return false;
-				    }
-        } else {
-            return false;
-        }
-		} else if (charC == 45) {
-        if (el.value == "" ) {
-            return true;
-        } else {
-            return false;
-        }
-    } else {
-				if (charC > 31 && (charC < 48 || charC > 57))
-					  return false;
-		}
-		return true;
-}
-
-function numeric_keypress( evnt) {
-		var charC = (evnt.which) ? evnt.which : evnt.keyCode;
-
-    if (charC==13) {
-        check_numeric(this, evnt);
-    } else{
-		    return isValid(this, charC);
-    }
-}
-
-
-
-
-
-function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
-
-
-
-        //console.log(answer);
-
-    
-    outerqDiv.className="NumericQn";
-    aDiv.style.display='block';
-
-    var lab = document.createElement("label");
-    lab.className="InpLabel";
-    lab.textContent="Type numeric answer here:";
-    aDiv.append(lab);
-
-    var inp = document.createElement("input");
-    inp.type="text";
-    //inp.id="input-"+id;
-    inp.id=id+"-0";
-    inp.className="Input-text";
-    inp.setAttribute('data-answers', JSON.stringify(qa.answers) );
-    if ("precision" in qa) {
-        inp.setAttribute('data-precision', qa.precision);
-    }
-    aDiv.append(inp);
-    console.log(inp);
-
-    //inp.addEventListener("keypress", check_numeric);
-    //inp.addEventListener("keypress", numeric_keypress);
-    /*
-    inp.addEventListener("keypress", function(event) {
-        return numeric_keypress(this, event);
-    }
-                        );
-                        */
-    //inp.onkeypress="return numeric_keypress(this, event)";
-    inp.onkeypress=numeric_keypress;
-    inp.onpaste= event => false;
-
-    inp.addEventListener("focus", function(event) {
-        this.value="";
-        return false;
-    }
-                        );
-
-
-}
-function show_questions (json, mydiv) {
-    //var mydiv=document.getElementById(myid);
-    var shuffle_questions=mydiv.dataset.shufflequestions;
-    var num_questions=mydiv.dataset.numquestions;
-    var shuffle_answers=mydiv.dataset.shuffleanswers;
-    
-    if (num_questions>json.length) {
-        num_questions=json.length;
-    }
-    
-    var questions;
-    if ( (num_questions<json.length) || (shuffle_questions=="True") ) {
-        //console.log(num_questions+","+json.length);
-        questions=getRandomSubarray(json, num_questions);
-    } else {
-        questions=json;
-    }
-    
-    //console.log("SQ: "+shuffle_questions+", NQ: " + num_questions + ", SA: ", shuffle_answers);
-    
-    // Iterate over questions
-    questions.forEach((qa, index, array) => {
-        //console.log(qa.question); 
-
-        var id = makeid(8);
-        //console.log(id);
-
-
-        // Create Div to contain question and answers
-        var iDiv = document.createElement('div');
-        iDiv.id = 'quizWrap'+id+index;
-        iDiv.className='Quiz';
-        mydiv.appendChild(iDiv);
-        // iDiv.innerHTML=qa.question;
-
-        var outerqDiv = document.createElement('div');
-        outerqDiv.id="OuterquizQn"+id+index;
-        //qDiv.textContent=qa.question;
-        iDiv.append(outerqDiv);
-
-        // Create div to contain question part
-        var qDiv = document.createElement('div');
-        qDiv.id="quizQn"+id+index;
-        //qDiv.textContent=qa.question;
-        qDiv.innerHTML=qa.question;
-        outerqDiv.append(qDiv);
-
-        // Create div for code inside question
-        var codeDiv;
-        if ("code" in qa){
-            codeDiv = document.createElement('div');
-            codeDiv.id="code"+id+index;
-            codeDiv.className="QuizCode";
-            var codePre = document.createElement('pre');
-            codeDiv.append(codePre);
-            var codeCode = document.createElement('code');
-            codePre.append(codeCode);
-            codeCode.innerHTML=qa.code;
-            outerqDiv.append(codeDiv);
-            console.log(codeDiv);
-        }
-
-
-        // Create div to contain answer part
-        var aDiv = document.createElement('div');
-        aDiv.id="quizAns"+id+index;
-        aDiv.className='Answer';
-        iDiv.append(aDiv);
-
-        console.log(qa.type);
-
-        var num_correct;
-        if (qa.type=="multiple_choice")  {
-            num_correct=make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
-        } else if   (qa.type=="many_choice"){
-            num_correct=make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
-        } else if  (qa.type=="numeric") {
-            console.log("numeric");
-            make_numeric(qa, outerqDiv, qDiv, aDiv, id);
-        }
-
-
-        //Make div for feedback
-        var fb = document.createElement("div");
-        fb.id="fb"+id;
-        //fb.style="font-size: 20px;text-align:center;";
-        fb.className="Feedback";
-        fb.setAttribute("data-answeredcorrect", 0);
-        fb.setAttribute("data-numcorrect", num_correct);
-        iDiv.append(fb);
-
-
-    });
-}
-
-        {
-        show_questions(questionsXjUFesAxthTW, XjUFesAxthTW);
-        }
-        </script>
-        </div></div>
-</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="detailed-solutions">
-<h2>Detailed Solutions<a class="headerlink" href="#detailed-solutions" title="Permalink to this heading">#</a></h2>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Problem C2.1</p>
-<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
-<header>
-<h3> Problem C2.1</h3>
-    </header>
-<b>Problem</b>
-    <br>
-The hypotenuse of a right-angle triangle has a length of 8.6 cm. The opposite side is 4.30 cm. What is the length of the adjacent side?
-<p><b>Methodology</b>
-<br>
-This is plug and chuck problem using the Pythagorean theorem. Let <span class="math notranslate nohighlight">\(a = 4.30\)</span> cm and <span class="math notranslate nohighlight">\(c = 8.6\)</span> cm, then we have</p>
-<p><span class="math notranslate nohighlight">\( c^2 = a^2 + b^2 \)</span></p>
-<p><b>Solution</b>
-<br>
-Solve for b:</p>
-<p><span class="math notranslate nohighlight">\( b = \sqrt{c^2 - a^2} = \sqrt{ (8.6)^2 - (4.30)^2 } = 7.4~\textrm{cm} \)</span></p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
-</div>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Problem C2.2</p>
-<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
-<header>
-<h3> Problem C2.2</h3>
-    </header>
-<b>Problem</b>
-    <br>
-Consider the triangle shown in the figure.
-<br>
-<img src="C2-fig1p.png"  width="300"/>
-<br>
-<p>If <span class="math notranslate nohighlight">\(b = 10.0\)</span> m and <span class="math notranslate nohighlight">\(\alpha = 26.6^\circ \)</span>, find the following:</p>
-<ol class="arabic simple">
-<li><p>the length of <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
-<li><p>the length of <span class="math notranslate nohighlight">\(c\)</span>.</p></li>
-<li><p>the angle <span class="math notranslate nohighlight">\(\beta\)</span>.</p></li>
-</ol>
-<p><b>Methodology</b>
-<br>
-This is plug and chuck problem using trigonometric functions. We identify <span class="math notranslate nohighlight">\(b\)</span> as the adjacent side to angle <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(a\)</span> is the hypotenuse, and <span class="math notranslate nohighlight">\(c\)</span> is the opposite side. Lastly, the angles in a right-angle triangle adds up to <span class="math notranslate nohighlight">\(180^\circ\)</span> and we can use that to find <span class="math notranslate nohighlight">\(\beta\)</span> and then convert to radians using the fact that <span class="math notranslate nohighlight">\(360^\circ = 2\pi\)</span> or using Google.</p>
-<p><b>Solution</b>
-<br>
-Part (1)<br>
-Since we are given the adjacent and need the hypotenuse, we can use cosine:</p>
-<p><span class="math notranslate nohighlight">\( a = \frac{b}{\cos\alpha} = \frac{(10.0}{\cos(26.6)} = 11.2~\textrm{m} \)</span></p>
-<p>Part (2)<br>
-Since we are given the adjacent and need the opposite, we can use tangent:</p>
-<p><span class="math notranslate nohighlight">\( c = b\tan(\alpha) = (10.0)\tan(26.6) = 5.01~\textrm{m} \)</span></p>
-<p>Part (3)<br></p>
-<p>Since all angles in a right angle triangle adds up to 180, we have</p>
-<p><span class="math notranslate nohighlight">\(\beta = 180 - 90 - \alpha = 180 - 90 - 26.6 = 63.4^\circ \)</span></p>
-<p>We must convert from degrees to radians:</p>
-<p><span class="math notranslate nohighlight">\(\beta = (63.4^\circ)\left( \frac{2\pi}{360} \right) = 1.11~\textrm{rad} \)</span></p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
-</div>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Problem C2.3</p>
-<div style="background-color: #D0D0D0 ; padding: 10px; border: 1px solid black;">
-<header>
-<h3> Problem C2.3</h3>
-    </header>
-<b>Problem</b>
-    <br>
-Consider the triangle shown in the figure.
-<br>
-<img src="C2-fig2p.png"  width="150"/>
-<br>
-<p>If <span class="math notranslate nohighlight">\(c = 5.0\)</span> m and <span class="math notranslate nohighlight">\(\beta = 14.3^\circ \)</span>, find the following:</p>
-<ol class="arabic simple">
-<li><p>the length of <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
-<li><p>the length of <span class="math notranslate nohighlight">\(b\)</span>.</p></li>
-</ol>
-<p><b>Methodology</b>
-<br>
-This is plug and chuck problem using trigonometric functions. We identify <span class="math notranslate nohighlight">\(b\)</span> as the opposite side to angle <span class="math notranslate nohighlight">\(\beta\)</span>, <span class="math notranslate nohighlight">\(a\)</span> is the hypotenuse, and <span class="math notranslate nohighlight">\(c\)</span> is the adjacent side.</p>
-<p><b>Solution</b>
-<br>
-Part (1)<br>
-Since we are given the adjacent side (<span class="math notranslate nohighlight">\(c\)</span>) and need the hypotenuse (<span class="math notranslate nohighlight">\(a\)</span>), we can use cosine:</p>
-<p><span class="math notranslate nohighlight">\( a = \frac{b}{\cos\beta} = \frac{(5.0)}{\cos(14.3)} = 5.2~\textrm{m} \)</span></p>
-<p>Part (2)<br>
-Since we are given the adjacent (<span class="math notranslate nohighlight">\(c\)</span>) and need the opposite (<span class="math notranslate nohighlight">\(b\)</span>), we can use tangent:</p>
-<p><span class="math notranslate nohighlight">\( b = c\tan(\alpha) = (5.0)\tan(14.3) = 1.3~\textrm{m} \)</span></p>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
-</div>
-</section>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1791,21 +1211,6 @@ Since we are given the adjacent (<span class="math notranslate nohighlight">\(c\
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-you-answers">Check You Answers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-solutions">Detailed Solutions</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
