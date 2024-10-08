@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>B4.4 Problems &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -75,7 +76,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="B5.1 Linear Work and Energy" href="../Module-B5/Linear-work.html" />
     <link rel="prev" title="B4.3 Time-varying Force" href="Time-varying-force.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -488,7 +489,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="b4-4-problems">
-<h1>B4.4 Problems<a class="headerlink" href="#b4-4-problems" title="Permalink to this headline">#</a></h1>
+<h1>B4.4 Problems<a class="headerlink" href="#b4-4-problems" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B4.1</h2>
     </header>
 <p>The amateur rocket engine is labeled according to its impulse and average thrust. One such engine has a thrust curve shown below. The rocket curve is copied from <a class="reference external" href="https://aerotech-rocketry.com/products/product_83b63096-bb03-e999-143a-548a10f8c58e">Aerotech</a> and you can get the answer from the link.</p>
@@ -609,7 +610,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/c74f4f34ca9152969abc5b2e68cb3e1b65dd7125be834be7875685eb8d162096.png" src="../_images/c74f4f34ca9152969abc5b2e68cb3e1b65dd7125be834be7875685eb8d162096.png" />
+<img alt="../_images/7de56df4f3f7abc3f0e36890b5174f0d68bc37c406f41009f1dd9594c9b73806.png" src="../_images/7de56df4f3f7abc3f0e36890b5174f0d68bc37c406f41009f1dd9594c9b73806.png" />
 </div>
 </div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
@@ -1003,13 +1004,239 @@ Final position = 24.4097236380111
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time to zero acceleration: 11.8272761883619
 Speed: 4.89595617125276
 Distance up incline: 38.6038838956809
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time to exhaustion: 23.6545523767239
+Time to exhaustion: 23.6545523767239
 Distance to breaking point: 77.2077677913618
 </pre></div>
 </div>
-<img alt="../_images/5cfa6d1a5ef74a5a13015aee82926f2fcc536aaf24fafcc74999e9f3d4faebc3.png" src="../_images/5cfa6d1a5ef74a5a13015aee82926f2fcc536aaf24fafcc74999e9f3d4faebc3.png" />
+<img alt="../_images/c597b612ca15bd4f9ade6c7c9f4620648fe8736a02838332832b686e41512d0e.png" src="../_images/c597b612ca15bd4f9ade6c7c9f4620648fe8736a02838332832b686e41512d0e.png" />
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B4.7</h2>
+    </header>
+<p>The terminal velocity of a person falling in air depends upon the weight and the area of the person facing the fluid. Find the terminal velocity of an <span class="math notranslate nohighlight">\(80.0\)</span> kg skydiver falling in a headfirst position with a surface area of <span class="math notranslate nohighlight">\(0.140\)</span> m<span class="math notranslate nohighlight">\(^2\)</span>.</p>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/6-problems">https://openstax.org/books/university-physics-volume-1/pages/6-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mf">80.0</span>
+<span class="n">A</span> <span class="o">=</span> <span class="mf">0.140</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="n">rho_air</span> <span class="o">=</span> <span class="mf">1.21</span> <span class="c1">#according to google</span>
+<span class="n">C</span> <span class="o">=</span> <span class="mf">0.70</span>  <span class="c1">#according to google</span>
+
+<span class="c1"># unknown: terminal velocity</span>
+<span class="n">vt</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;vt&#39;</span><span class="p">)</span>
+
+<span class="n">fd</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">C</span><span class="o">*</span><span class="n">rho_air</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">vt</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">fg</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span>
+
+<span class="c1"># Newton&#39;s second law. At terminal velocity the acceleration is zero and the two forces must balance</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">fg</span> <span class="o">-</span> <span class="n">fd</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">vt</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Terminal velocity in m/s: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Terminal velocity in m/s: 115.050569300520 m/s
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B4.8</h2>
+    </header>
+<p>By what factor does the drag force on a car increase as it goes from <span class="math notranslate nohighlight">\(65\)</span> to <span class="math notranslate nohighlight">\(110\)</span> km/h?</p>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/6-problems">https://openstax.org/books/university-physics-volume-1/pages/6-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-output tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="c1"># the drag force goes as the speed squared.</span>
+
+<span class="n">factor</span> <span class="o">=</span> <span class="p">(</span><span class="mi">110</span><span class="o">/</span><span class="mi">65</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The air drag force increases by a factor of &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">factor</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The air drag force increases by a factor of 2.863905325443787
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B4.9</h2>
+    </header>
+<p>The weight of a particle varies with altitude such that <span class="math notranslate nohighlight">\(w = \frac{mgr_{0}^2}{r^2}\)</span> where <span class="math notranslate nohighlight">\(r_0\)</span> is the radius of Earth and <span class="math notranslate nohighlight">\(r\)</span> is the distance from Earth’s center. If the particle is fired vertically with velocity <span class="math notranslate nohighlight">\(v_0\)</span> from Earth’s surface, determine its velocity as a function of position r. (Hint: use <span class="math notranslate nohighlight">\(adr = vdv\)</span>.)</p>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/6-challenge-problems">https://openstax.org/books/university-physics-volume-1/pages/6-challenge-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="c1"># weigth is force of gravity: w = fg = mg</span>
+
+<span class="n">g</span><span class="p">,</span><span class="n">r0</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">v0</span><span class="p">,</span><span class="n">r1</span><span class="p">,</span><span class="n">v1</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;g,r0,r,v,v0,r1,v1&#39;</span><span class="p">)</span>
+
+<span class="c1"># Newton&#39;s 2nd law: w = ma --&gt; -mgr0**2/r**2 = ma</span>
+
+<span class="c1"># multiply by the differential dr on both sides (divide m out)</span>
+
+<span class="c1"># -(gr0**2/r**2)*dr = a*dr</span>
+
+<span class="c1"># Use hint</span>
+
+<span class="c1"># -(gr0**2/r**2)*dr = vdv</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="o">-</span><span class="n">g</span><span class="o">*</span><span class="n">r0</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">v</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">eq1</span><span class="p">,(</span><span class="n">r</span><span class="p">,</span><span class="n">r0</span><span class="p">,</span><span class="n">r1</span><span class="p">))</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">eq2</span><span class="p">,(</span><span class="n">v</span><span class="p">,</span><span class="n">v0</span><span class="p">,</span><span class="n">v1</span><span class="p">))</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">v1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocity function = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Velocity function = sqrt(2*g*r0**2/r1 - 2*g*r0 + v0**2)
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B4.10</h2>
+    </header>
+<p>A car of mass <span class="math notranslate nohighlight">\(1000.0\)</span> kg is traveling along a level road at <span class="math notranslate nohighlight">\(100.0\)</span> km/h when its brakes are applied. Calculate the stopping distance if the coefficient of kinetic friction of the tires is <span class="math notranslate nohighlight">\(0.500\)</span>. Neglect air resistance. (Hint: since the distance traveled is of interest rather than the time, <span class="math notranslate nohighlight">\(x\)</span> is the desired independent variable and not <span class="math notranslate nohighlight">\(t\)</span>. Use the Chain Rule to change the variable: <span class="math notranslate nohighlight">\(\frac{dv}{dt} = \frac{dv}{dx}\frac{dx}{dt}\)</span>.)</p>
+<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/6-challenge-problems">https://openstax.org/books/university-physics-volume-1/pages/6-challenge-problems</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mf">1000.0</span>
+<span class="n">v0</span> <span class="o">=</span> <span class="mf">100.0</span><span class="o">*</span><span class="p">(</span><span class="mi">1000</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3600</span><span class="p">)</span> <span class="c1">#km/hr to m/s</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.500</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="c1"># final velocity</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="c1"># let x0 = 0.0</span>
+
+<span class="n">x0</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="c1">#normal force balance force of gravity</span>
+<span class="n">fn</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span>
+
+<span class="c1">#friction force</span>
+<span class="n">ff</span> <span class="o">=</span> <span class="n">mu</span><span class="o">*</span><span class="n">fn</span>
+
+<span class="c1"># Newton&#39;s 2nd law: -ff = ma --&gt; -ff = m*dv/dt</span>
+
+<span class="c1"># Use hint</span>
+<span class="c1"># -ff/m = (dv/dx)*(dx/dt)   : dx/dt = v</span>
+
+<span class="c1"># multiply both sides by the dx differential</span>
+<span class="c1"># -ff*dx/m = v*dv</span>
+
+<span class="c1">#solve it</span>
+<span class="n">x</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">x1</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x,v,x1&#39;</span><span class="p">)</span>
+
+<span class="n">eq1</span> <span class="o">=</span> <span class="o">-</span><span class="n">ff</span><span class="o">/</span><span class="n">m</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">v</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">eq1</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">x1</span><span class="p">))</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">eq2</span><span class="p">,(</span><span class="n">v</span><span class="p">,</span><span class="n">v0</span><span class="p">,</span><span class="n">v1</span><span class="p">))</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">x1</span><span class="p">)</span>
+<span class="c1">#value = sol.evalf(subs={v0})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Distance = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distance = 78.6549376423654 m
+</pre></div>
+</div>
 </div>
 </details>
 </div>
