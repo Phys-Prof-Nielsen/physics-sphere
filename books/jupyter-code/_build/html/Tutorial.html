@@ -373,6 +373,9 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-1">5. Test 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-variables">6. Create Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-2">5. Test 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-reset-function">6. The “reset” Function</a></li>
 </ul>
             </nav>
         </div>
@@ -462,7 +465,7 @@ document.write(`
 </div>
 </div>
 <p>You should be getting an error message stating that the <em>sqrt</em> is not defined. This is because the program does not know what square root is. The basic Python compiler only have basic arithmetic functions, so we need to import stuff.</p>
-</section>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="python-and-importing-packages">
 <h2>4. Python and Importing Packages<a class="headerlink" href="#python-and-importing-packages" title="Permalink to this heading">#</a></h2>
 <p>Python is a great programming language to learn. It is relatively easy to learn basic skills but it is incredible powerful for more in-depth programming. The basic Python compiler is not that helpful for us to solve physics problems, however, additional packages exists that are developed for scientific analysis in mind.</p>
@@ -571,7 +574,7 @@ document.write(`
 </div>
 </details>
 </div>
-</section>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 </section>
 <section id="test-1">
@@ -612,7 +615,88 @@ document.write(`
 </div>
 </details>
 </div>
-</section>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="create-variables">
+<h2>6. Create Variables<a class="headerlink" href="#create-variables" title="Permalink to this heading">#</a></h2>
+<p>Some programming languages require us to declare a variable, but Pythong does not. We simply assign a value to it.</p>
+<p>For example, we can declare the following variables for mass (in kg) and angle (in degrees):</p>
+<p><em>m = 4.0</em></p>
+<p><em>angle = 12.0</em></p>
+<p>Try this for yourself and print out the value of the angle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create variables below</span>
+
+<span class="c1"># Print out the value of the variable: angle</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create variables below</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mf">4.0</span>  <span class="c1">#mass in kg</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="mf">12.0</span>  <span class="c1">#angle in degrees</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12.0
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="test-2">
+<h2>5. Test 2<a class="headerlink" href="#test-2" title="Permalink to this heading">#</a></h2>
+<p>Write a small script that will create a new variable <em>theta</em>, which is the value of <em>angle</em> but in radians. Then print out the value of <span class="math notranslate nohighlight">\(\sin(theta)\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write a script to print out the correct value of sin(theta)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theta</span> <span class="o">=</span> <span class="p">(</span><span class="n">angle</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.20791169081775934
+</pre></div>
+</div>
+</div>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="the-reset-function">
+<h2>6. The “reset” Function<a class="headerlink" href="#the-reset-function" title="Permalink to this heading">#</a></h2>
+<p>This is a very important function to implement. If you noticed, in the last two code cells, I did not import numpy, and in the last code cell I didn’t specify what <em>angle</em> was. I didn’t have to do it since the last cell will <strong>remember</strong> what was typed in the previous cells. That is both good and bad. It is good since we don’t have to keep typing the same thing over and over. However, if we are doing our activity problems on the Physics Sphere, we are doing several problems on the same web page and the following problem may arise:</p>
+<div class="alert alert-danger">
+<p>Say we have a problem where we defined the mass of particle to be 4.0 kg. Then in the following problem, we have a problem with a mass of 0.5 kg. Unfortunately, we forget to define that new mass. The program will then remember that is a variable defined as m = 4.0 and use that instead. <strong>NOT GOOD</strong>. I speak from experience :)</p>
+</div>
+<p>To circumvent this problem, we can erase all information from previous cells by using</p>
+<p><em>reset -f</em></p>
+<p>The key parameter <em>f</em> simply means we are <strong>forcing</strong> a reset.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -689,6 +773,9 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-1">5. Test 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-variables">6. Create Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-2">5. Test 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-reset-function">6. The “reset” Function</a></li>
 </ul>
   </nav></div>
 
