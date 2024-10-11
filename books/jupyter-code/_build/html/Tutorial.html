@@ -364,9 +364,15 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-print-statement">3. The Print Statement</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-and-importing-packages">4. Python and Importing Packages</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-a-python-package">Import a Python Package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-a-python-package">Import a Python Package</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1">Method 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2">Method 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3">Method 3</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-1">5. Test 1</a></li>
 </ul>
             </nav>
         </div>
@@ -468,11 +474,16 @@ document.write(`
 <section id="import-a-python-package">
 <h3>Import a Python Package<a class="headerlink" href="#import-a-python-package" title="Permalink to this heading">#</a></h3>
 <p>There are multiple ways to import a package. Below I list a few. The italic text is the script you will type in your code cell.</p>
+<section id="method-1">
+<h4>Method 1<a class="headerlink" href="#method-1" title="Permalink to this heading">#</a></h4>
 <p><i>from numpy import *</i></p>
 <p>The above statement makes <strong>all</strong> functions avaliable to you.</p>
 <div class="alert alert-danger">
 <p>This method should be avoided if using multiple packages. For example, say you import all numpy functions and subsequently import all functions from a package named <em>math</em>. Both packages contains functions of same names, and the last called package will override those functions from the first package. Unfortunately, they don’t necessarily work the same way. Hence, you may think you are using the cosine function from numpy but are really using the cosine function from math and end up not getting the answer you want.</p>
 </div>
+</section>
+<section id="method-2">
+<h4>Method 2<a class="headerlink" href="#method-2" title="Permalink to this heading">#</a></h4>
 <p>Alternatively, we can prevent the above mishap but doing something like this:</p>
 <p><em>from numpy import cos,sin,sqrt,pi</em></p>
 <p>Try and type this in the cell below, and the repeat the print statement of the square root.</p>
@@ -514,6 +525,93 @@ document.write(`
 </details>
 </div>
 </section>
+<section id="method-3">
+<h4>Method 3<a class="headerlink" href="#method-3" title="Permalink to this heading">#</a></h4>
+<p>My favorite method is to assign all functions from the package imported with a keyword associated to the specific package. For example, the keywork <strong>np</strong> could be used to describe <strong>numpy</strong>. We could also call it <strong>hamster</strong> but that is not very descriptive.</p>
+<p><em>import numpy as np</em></p>
+<p>This tells the program that any functions associated with <strong>np</strong> should be imported from <strong>numpy</strong>. For example,</p>
+<p><em>np.sqrt</em></p>
+<p>implies we are using the square root function from <strong>numpy</strong>.</p>
+<p>Try it below!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import numpy by associating a keyword to numpy</span>
+
+
+<span class="c1"># make a print statement using the square root from numpy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import numpy by associating a keyword to numpy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># make a print statement using the square root from numpy</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">666</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25.80697580112788
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+</section>
+<section id="test-1">
+<h2>5. Test 1<a class="headerlink" href="#test-1" title="Permalink to this heading">#</a></h2>
+<p>Write a small script that will print out the value of <span class="math notranslate nohighlight">\(\sin(\pi/4)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your solution to Test 1 below</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import numpy by associating a keyword to numpy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># make a print statement using the sine function and the value of pi from numpy</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7071067811865475
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 </section>
 </section>
 
@@ -582,9 +680,15 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-print-statement">3. The Print Statement</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-and-importing-packages">4. Python and Importing Packages</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-a-python-package">Import a Python Package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-a-python-package">Import a Python Package</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1">Method 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2">Method 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3">Method 3</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-1">5. Test 1</a></li>
 </ul>
   </nav></div>
 
