@@ -376,6 +376,26 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-variables">6. Create Variables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-2">5. Test 2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-reset-function">6. The “reset” Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-use-python-as-a-calculator-to-solve-physics-problem">7. Example: Use Python as a Calculator to Solve Physics Problem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem">Problem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-python-solving-an-equation-with-one-unknown">8. Symbolic Python: Solving an Equation With One Unknown</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-symbolic-python">Import Symbolic Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#declare-unknown-parameters">Declare unknown parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solve-equation">Solve equation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-python-solving-n-equations-with-n-unknowns">9. Symbolic Python: Solving N Equations With N Unknowns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Declare unknown parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solve-equations">Solve Equations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-3">10. Test 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-use-python-as-an-equation-solver-to-solve-physics-problem">11. Example: Use Python as an Equation Solver to Solve Physics Problem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Problem</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -694,9 +714,442 @@ document.write(`
 <p>Say we have a problem where we defined the mass of particle to be 4.0 kg. Then in the following problem, we have a problem with a mass of 0.5 kg. Unfortunately, we forget to define that new mass. The program will then remember that is a variable defined as m = 4.0 and use that instead. <strong>NOT GOOD</strong>. I speak from experience :)</p>
 </div>
 <p>To circumvent this problem, we can erase all information from previous cells by using</p>
-<p><em>reset -f</em></p>
+<p><em>%reset -f</em></p>
 <p>The key parameter <em>f</em> simply means we are <strong>forcing</strong> a reset.</p>
+<p>Try and type the following in the cell below:</p>
+<p><em>%reset -f</em></p>
+<p><em>print(m)</em></p>
+<p>You should get an error stating that the variable <em>m</em> is not defined.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try and use the reset function here</span>
+</pre></div>
+</div>
+</div>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="example-use-python-as-a-calculator-to-solve-physics-problem">
+<h2>7. Example: Use Python as a Calculator to Solve Physics Problem<a class="headerlink" href="#example-use-python-as-a-calculator-to-solve-physics-problem" title="Permalink to this heading">#</a></h2>
+<p>We are now ready to try and solve a physics problem. Let us consider a problem from Phase C.</p>
+<section id="problem">
+<h3>Problem<a class="headerlink" href="#problem" title="Permalink to this heading">#</a></h3>
+<p>A block is constrained to move on a horizontal surface, say x-direction. The box has a mass of 2.5 kg and there is a kinetic coefficient of friction of 0.3. If there is a pushing force of 12 N applied to the box in the +x direction, what is the acceleration of the box?</p>
+<p>In the code box below, I have made a guided approach where you fill in the code. Good luck…you can do it!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Insert the reset function here</span>
+
+<span class="c1"># Import numpy here...if needed (in this example, we do not need numpy)</span>
+
+<span class="c1">#define given parameters below as well as acceleration of gravity and the constraint acceleration in y</span>
+
+<span class="c1"># define the vector components below: force of push, force of gravity, normal force, force of friction</span>
+
+<span class="c1"># calculate the acceleration in x using Newton&#39;s second law</span>
+
+<span class="c1"># print out the answer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Insert the reset function here</span>
+<span class="o">%</span><span class="k">reset</span> -f
+
+<span class="c1"># Import numpy here...if needed (in this example, we do not need numpy)</span>
+
+<span class="c1">#define given parameters below as well as acceleration of gravity and the constraint acceleration in y</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">2.5</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">fp</span> <span class="o">=</span> <span class="mf">12.0</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<span class="n">ay</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="c1"># define the vector components below: force of push, force of gravity, normal force, force of friction</span>
+<span class="n">fpx</span> <span class="o">=</span> <span class="n">fp</span>
+<span class="n">fpy</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">fgx</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">fgy</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span><span class="o">*</span><span class="n">g</span>
+<span class="n">fnx</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">fny</span> <span class="o">=</span> <span class="o">-</span><span class="n">fgy</span>
+<span class="n">ffx</span> <span class="o">=</span> <span class="n">mu</span><span class="o">*</span><span class="n">fny</span>
+<span class="n">ffy</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># calculate the acceleration in x using Newton&#39;s second law</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="p">(</span><span class="n">fpx</span> <span class="o">-</span> <span class="n">ffx</span><span class="p">)</span><span class="o">/</span><span class="n">m</span>
+
+<span class="c1"># print out the answer</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.857
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>In this problem, we simply used Python as a calculator. The calculations in the program are probably the same ones you would do on a piece of paper. The advantage using the computer is that you are forced to think about the structure of the solution, which is exactly a solving methodology you can use for any problems no matter how complex.</p>
+<p>Next, we will try and solve the problem using <strong>symbolic python</strong> and see how it differ.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="symbolic-python-solving-an-equation-with-one-unknown">
+<h2>8. Symbolic Python: Solving an Equation With One Unknown<a class="headerlink" href="#symbolic-python-solving-an-equation-with-one-unknown" title="Permalink to this heading">#</a></h2>
+<p>Symbolic Python is a very powerful tool that allows us to solve systems of equations, taking derivatives, and perform integrals. In this approach, we declare unknown parameters that are not assigned a value and we can obtain solutions in terms of those variables.</p>
+<section id="import-symbolic-python">
+<h3>Import Symbolic Python<a class="headerlink" href="#import-symbolic-python" title="Permalink to this heading">#</a></h3>
+<p>The package is called <strong>sympy</strong>. Common nicknames to use are <strong>sp</strong> or <strong>sym</strong>:</p>
+<p><em>import sympy as sp</em></p>
+</section>
+<section id="declare-unknown-parameters">
+<h3>Declare unknown parameters<a class="headerlink" href="#declare-unknown-parameters" title="Permalink to this heading">#</a></h3>
+<p>Let us say we have an unknown parameter called <span class="math notranslate nohighlight">\(x\)</span>. We can declare it as an unknown variable as:</p>
+<p><em>x = sp.Symbol(‘x’)</em></p>
+<p>We have now assigned a symbol <span class="math notranslate nohighlight">\(x\)</span> to the unknown.</p>
+</section>
+<section id="solve-equation">
+<h3>Solve equation<a class="headerlink" href="#solve-equation" title="Permalink to this heading">#</a></h3>
+<p>We can now write the equation to be solved. For example</p>
+<div class="math notranslate nohighlight">
+\[ 6x^2 - 17x = -12 \]</div>
+<p>Symbolic Python requires the equation to be written in the format</p>
+<div class="math notranslate nohighlight">
+\[ 0 = 6x^2 - 17x + 12 \]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[ 0 = -12 - 6x^2 + 17x \]</div>
+<p>If we assign the variable <strong>eq</strong> to the equation, it would look like this in Python:</p>
+<p><i>eq = 6*x**2 - 17*x + 12</i></p>
+<p>and it can be solved using the <strong>solve</strong> function:</p>
+<p><em>sol = sp.solve(eq,x)</em></p>
+<p>Here, <strong>sol</strong> is a variable name you assign to the solution, and the <strong>solve</strong> command states that we are solving the equation <strong>eq</strong> with respect to the variable <strong>x</strong>.</p>
+<p>Try and put that together in a script below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Insert the reset function here</span>
+
+<span class="c1"># Import numpy and sympy if needed (in this example, we need sympy)</span>
+
+<span class="c1"># declare the unknown parameter</span>
+
+<span class="c1"># write out the equation to be solved</span>
+
+<span class="c1"># solve for the unknown parameter</span>
+
+<span class="c1"># print out the answer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Insert the reset function here</span>
+<span class="o">%</span><span class="k">reset</span> -f
+
+<span class="c1"># Import numpy and sympy if needed (in this example, we need sympy)</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="c1"># declare the unknown parameter</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="c1"># write out the equation to be solved</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="mi">6</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">17</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">12</span>
+
+<span class="c1"># solve for the unknown parameter\</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># print out the answer</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4/3, 3/2]
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Since this was an quadratic equation, there were two solutions. The printed output showed both of those contained in square brackets. Depending on what is being solved, Symbolic Python returns what is called a dictionary in a list or a dictionary without a list. One way to extract one solution only is</p>
+<p><em>sol[0]</em></p>
+<p>which returns the first member of the dictionary or</p>
+<p><em>sol[1]</em></p>
+<p>which returns the second member of the dictionary.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="symbolic-python-solving-n-equations-with-n-unknowns">
+<h2>9. Symbolic Python: Solving N Equations With N Unknowns<a class="headerlink" href="#symbolic-python-solving-n-equations-with-n-unknowns" title="Permalink to this heading">#</a></h2>
+<p>The structure is the same as before, but the syntax is slightly different.</p>
+<section id="id1">
+<h3>Declare unknown parameters<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Let us say we have two unknown parameters called <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>. We can declare the unknown variables as:</p>
+<p><em>x = sp.Symbol(‘x’)</em></p>
+<p><em>y = sp.Symbol(‘y’)</em></p>
+<p>This may be fine if we have just a few variables. However, we can make it shorter:</p>
+<p><em>x,y = sp.symbols(‘x, y’)</em></p>
+</section>
+<section id="solve-equations">
+<h3>Solve Equations<a class="headerlink" href="#solve-equations" title="Permalink to this heading">#</a></h3>
+<p>We define both equations just like we did before, but will need different identifiers, say <em>eq1</em> and <em>eq2</em>:</p>
+<p><em>eq1 = 2*x + y - 5</em></p>
+<p><em>eq2 = -3*x + 6*y</em></p>
+<p>The syntax for the <strong>solve</strong> function is modified to:</p>
+<p><em>sol = sp.solve((eq1,eq2),(x,y))</em></p>
+<p>Let’s try it!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Insert the reset function here</span>
+
+<span class="c1"># Import numpy and sympy if needed (in this example, we need sympy)</span>
+
+<span class="c1"># declare the unknown parameters</span>
+
+<span class="c1"># write out the equations to be solved</span>
+
+<span class="c1"># solve for the unknown parameters</span>
+
+<span class="c1"># print out the answers</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Insert the reset function here</span>
+<span class="o">%</span><span class="k">reset</span> -f
+
+<span class="c1"># Import numpy and sympy if needed (in this example, we need sympy)</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="c1"># declare the unknown parameters</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x, y&#39;</span><span class="p">)</span>
+
+<span class="c1"># write out the equations to be solved</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">-</span> <span class="mi">5</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="o">*</span><span class="n">y</span>
+
+<span class="c1"># solve for the unknown parameters</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
+
+<span class="c1"># print out the answers</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{x: 2, y: 1}
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+<section id="test-3">
+<h2>10. Test 3<a class="headerlink" href="#test-3" title="Permalink to this heading">#</a></h2>
+<p>Write a script to solve the following system of equations:</p>
+<div class="math notranslate nohighlight">
+\[ x + 2y - 3z = -3\]</div>
+<div class="math notranslate nohighlight">
+\[ 2x -5y + 4z = 13\]</div>
+<div class="math notranslate nohighlight">
+\[ 5x + 4y - z = 5\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Insert the reset function here</span>
+<span class="o">%</span><span class="k">reset</span> -f
+
+<span class="c1"># Import numpy and sympy if needed (in this example, we need sympy)</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="c1"># declare the unknown parameters</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x, y, z&#39;</span><span class="p">)</span>
+
+<span class="c1"># write out the equations to be solved</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">z</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">z</span> <span class="o">-</span> <span class="mi">13</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="n">z</span> <span class="o">-</span> <span class="mi">5</span>
+
+<span class="c1"># solve for the unknown parameters</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">))</span>
+
+<span class="c1"># print out the answers</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{x: 2, y: -1, z: 1}
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="example-use-python-as-an-equation-solver-to-solve-physics-problem">
+<h2>11. Example: Use Python as an Equation Solver to Solve Physics Problem<a class="headerlink" href="#example-use-python-as-an-equation-solver-to-solve-physics-problem" title="Permalink to this heading">#</a></h2>
+<p>Let us repeat the problem from Section 7, but now set it up as a system of equations.</p>
+<section id="id2">
+<h3>Problem<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>A block is constrained to move on a horizontal surface, say x-direction. The box has a mass of 2.5 kg and there is a kinetic coefficient of friction of 0.3. If there is a pushing force of 12 N applied to the box in the +x direction, what is the acceleration of the box?</p>
+<p>We will proceed in a very general way without skipping steps.</p>
+<p>In this case, our unknowns are now the accelerations in x and y, normal force, friction force, and force of gravity: 5 unknowns so we need 5 equations:: Newton’s 2nd law gives us an equation for <span class="math notranslate nohighlight">\(x\)</span> and one for <span class="math notranslate nohighlight">\(y\)</span>, there are helpful equations for force of gravity (<span class="math notranslate nohighlight">\(f_g = mg\)</span>) and force of friction (<span class="math notranslate nohighlight">\(f_f = \mu f_N\)</span>), and lastly, the equation of constraint <span class="math notranslate nohighlight">\(y = constant\)</span> implies that <span class="math notranslate nohighlight">\(a_y = 0\)</span>. Those are our 5 equations.</p>
+<p>Below is a guided script (we refer to that as a <strong>pseudo-code</strong>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Insert the reset function here</span>
+
+<span class="c1"># Import numpy and sympy if needed (in this example, we need sympy)</span>
+
+<span class="c1"># declare the known parameters: m, mu, fp, g</span>
+
+<span class="c1"># declare the unknown parameters: ax, ay, fn, ff, fg</span>
+
+<span class="c1"># find vector components of the forces</span>
+
+<span class="c1"># write out the equations to be solved</span>
+<span class="c1">#-------------------------------------</span>
+<span class="c1"># Newton&#39;s 2nd law in x</span>
+
+<span class="c1"># Newton&#39;s 2nd law in y</span>
+
+<span class="c1"># Helpful equations: force of gravity and friction force</span>
+
+<span class="c1"># Equation of constraint (y is constant so ay = 0)</span>
+
+<span class="c1"># solve for the unknown parameters</span>
+
+<span class="c1"># print out the answers</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Insert the reset function here</span>
+<span class="o">%</span><span class="k">reset</span> -f
+
+<span class="c1"># Import numpy and sympy if needed (in this example, we need sympy)</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="c1"># declare the known parameters: m, mu, fp, g</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">2.5</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">fp</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="c1"># declare the unknown parameters: ax, ay, fn, ff, fg</span>
+<span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">ff</span><span class="p">,</span> <span class="n">fg</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;ax,ay,fn,ff,fg&#39;</span><span class="p">)</span>
+
+<span class="c1"># find vector components of the forces</span>
+<span class="n">fnx</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">fny</span> <span class="o">=</span> <span class="n">fn</span>
+<span class="n">ffx</span> <span class="o">=</span> <span class="o">-</span><span class="n">ff</span>
+<span class="n">ffy</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">fgx</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">fgy</span> <span class="o">=</span> <span class="o">-</span><span class="n">fg</span>
+<span class="n">fpx</span> <span class="o">=</span> <span class="n">fp</span>
+<span class="n">fpy</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="c1"># write out the equations to be solved</span>
+<span class="c1"># -----------------------</span>
+<span class="c1"># Newton&#39;s second law in x: fnx + ffx + fgx + fpx = max</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ax</span> <span class="o">-</span> <span class="n">fnx</span> <span class="o">-</span> <span class="n">ffx</span> <span class="o">-</span> <span class="n">fgx</span> <span class="o">-</span> <span class="n">fpx</span>
+
+<span class="c1"># Newton&#39;s second law in y: fny + ffy + fgy + fpy = may</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">ay</span> <span class="o">-</span> <span class="n">fny</span> <span class="o">-</span> <span class="n">ffy</span> <span class="o">-</span> <span class="n">fgy</span> <span class="o">-</span> <span class="n">fpy</span>
+
+<span class="c1"># Helpful equations</span>
+<span class="c1"># ----------------</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">fg</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">g</span>
+<span class="n">eq4</span> <span class="o">=</span> <span class="n">ff</span> <span class="o">-</span> <span class="n">mu</span><span class="o">*</span><span class="n">fn</span>
+
+<span class="c1"># Equation of constraint: y = constant --&gt; ay = 0</span>
+<span class="n">eq5</span> <span class="o">=</span> <span class="n">ay</span>
+
+<span class="c1"># solve for the unknown parameters</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">,</span><span class="n">eq4</span><span class="p">,</span><span class="n">eq5</span><span class="p">),(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">ff</span><span class="p">,</span> <span class="n">fg</span><span class="p">))</span>
+
+<span class="c1"># print out the answers</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{ax: 1.85700000000000, ay: 0.0, fn: 24.5250000000000, ff: 7.35750000000000, fg: 24.5250000000000}
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>If you made it this far, you just need some practice to become star students. It is now time to go back to some of the problems you have worked through in Phase C and try to solve them using the computer.</p>
+<p>Module 2 in the Jupter Code e-book (this is Module 3 in the Jupyter Code e-book), you will find code that shows you how to perfom derivatives and integration. If you will comfortable, feel free to try solve Phase B problems.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -776,6 +1229,26 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-variables">6. Create Variables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-2">5. Test 2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-reset-function">6. The “reset” Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-use-python-as-a-calculator-to-solve-physics-problem">7. Example: Use Python as a Calculator to Solve Physics Problem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem">Problem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-python-solving-an-equation-with-one-unknown">8. Symbolic Python: Solving an Equation With One Unknown</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-symbolic-python">Import Symbolic Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#declare-unknown-parameters">Declare unknown parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solve-equation">Solve equation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-python-solving-n-equations-with-n-unknowns">9. Symbolic Python: Solving N Equations With N Unknowns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Declare unknown parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solve-equations">Solve Equations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-3">10. Test 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-use-python-as-an-equation-solver-to-solve-physics-problem">11. Example: Use Python as an Equation Solver to Solve Physics Problem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Problem</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
