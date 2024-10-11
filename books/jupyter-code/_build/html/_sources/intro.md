@@ -5,3 +5,5 @@ in the notes on the Physics Sphere. This is by no means a complete
 discussion on how to code python: it is simply covering the basics
 that may get you started and take advantage of the tools provided 
 in the courses.
+
+<img src="jupyter-code.png" width="800">

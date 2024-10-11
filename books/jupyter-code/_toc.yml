@@ -4,6 +4,12 @@
 format: jb-book
 root: intro
 parts:
+
+- caption: Course Home
+  chapters:
+  - url: https://phys-prof-nielsen.github.io/physics-sphere/jupyter/jupyter.html
+    title: Jupyter Compendium Series
+    
 - caption: 
   chapters:
   - file: motivation
