@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial: Using Jupyter to Solve Basic Physics Problems &#8212; A Competency Approach to Jupyter - Code</title>
+    <title>3. Tutorial: Using Jupyter to Solve Basic Physics Problems &#8212; A Competency Approach to Jupyter - Code</title>
   
   
   
@@ -161,7 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="motivation.html">1 Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="computational-tools.html">2 Computational Tools</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tutorial: Using Jupyter to Solve Basic Physics Problems</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Tutorial: Using Jupyter to Solve Basic Physics Problems</a></li>
 </ul>
 
     </div>
@@ -347,7 +347,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tutorial: Using Jupyter to Solve Basic Physics Problems</h1>
+    <h1>3. Tutorial: Using Jupyter to Solve Basic Physics Problems</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -358,8 +358,15 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">1. Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-step">2. The First Step</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-python">3. About Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-step">2. The First Step</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the">The ‘#’</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-print-statement">3. The Print Statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-and-importing-packages">3. Python and Importing Packages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-a-python-package">Import a Python Package</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -372,7 +379,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tutorial-using-jupyter-to-solve-basic-physics-problems">
-<h1>Tutorial: Using Jupyter to Solve Basic Physics Problems<a class="headerlink" href="#tutorial-using-jupyter-to-solve-basic-physics-problems" title="Permalink to this heading">#</a></h1>
+<h1>3. Tutorial: Using Jupyter to Solve Basic Physics Problems<a class="headerlink" href="#tutorial-using-jupyter-to-solve-basic-physics-problems" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="motivation">
 <h2>1. Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading">#</a></h2>
 <p>Early exposure to computer programming is becoming increasingly vital for the core science education and future careers. As the complexity of physical systems grows and analytical solutions become less practical, computational methods have emerged as a powerful tool for problem-solving. Introducing students to programming early allows them to approach physics problems with greater flexibility, enabling them to tackle complex equations, simulate real-world scenarios, and analyze large datasets. This skill helps bridge the gap between theoretical understanding and practical application, fostering a more comprehensive grasp of the subject. Additionally, programming provides students with immediate feedback, encouraging iterative learning and deeper exploration of physics concepts.</p>
@@ -390,15 +397,74 @@ document.write(`
 </div>
 <p>It may take a little bit of time for the activation to kick in the first time. My experience it can vary from a few seconds to a few minutes, so please be patient.</p>
 <p>When it is active, you should see three buttons: “run”, “restart”, and “restart &amp; run all” as well as being able to type into the box.</p>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
-<section id="about-python">
-<h2>3. About Python<a class="headerlink" href="#about-python" title="Permalink to this heading">#</a></h2>
+<section id="the">
+<h3>The ‘#’<a class="headerlink" href="#the" title="Permalink to this heading">#</a></h3>
+<p>You may notice that the cell is not completely empty. I inserted a comment using the “#” symbol. This is a way to make comments as Python will ignore what comes after the “#” symbol.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Empty Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="the-print-statement">
+<h2>3. The Print Statement<a class="headerlink" href="#the-print-statement" title="Permalink to this heading">#</a></h2>
+<p>This is always the first thing to do when you make your first program. If you want to print a statement to the screen, the command is simply</p>
+<p><em>print(‘’)</em></p>
+<p>where your statement goes between the quotation marks. Try it in the cell below. I made an example below in case you have problems.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a print statement here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You are my favorite student&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You are my favorite student
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="python-and-importing-packages">
+<h2>3. Python and Importing Packages<a class="headerlink" href="#python-and-importing-packages" title="Permalink to this heading">#</a></h2>
 <p>Python is a great programming language to learn. It is relatively easy to learn basic skills but it is incredible powerful for more in-depth programming. The basic Python compiler is not that helpful for us to solve physics problems, however, additional packages exists that are developed for scientific analysis in mind.</p>
 <p>We will be using two packages.</p>
 <ol class="arabic simple">
 <li><p>numpy: Numerical Python is a package that allows us to use arrays (don’t worry about what that is), trigonometric functions, the value of pi, absolute value, square roots, etc.</p></li>
 <li><p>sympy: Symbolic Python is a package that allows us to assign variables, like <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, and solve system of equations, take derivatives, and find integrals, among other things.</p></li>
 </ol>
+<section id="import-a-python-package">
+<h3>Import a Python Package<a class="headerlink" href="#import-a-python-package" title="Permalink to this heading">#</a></h3>
+<p>There are multiple ways to import a package. Below I list a few. The italic text is the script you will type in your code cell.</p>
+<p><i>from numpy import *</i></p>
+<p>The above statement makes <strong>all</strong> functions avaliable to you.</p>
+<div class="alert alert-danger">
+<p>This method should be avoided if using multiple packages. For example, say you import all numpy functions and subsequently import all functions from a package named <em>math</em>. Both packages contains functions of same names, and the last called package will override those functions from the first package. Unfortunately, they don’t necessarily work the same way. Hence, you may think you are using the cosine function from numpy but are really using the cosine function from math and end up not getting the answer you want.</p>
+</div>
+<p>Alternatively, we can prevent the above mishap but doing something like this:</p>
+<p>*from numpy import cos</p>
+</section>
 </section>
 </section>
 
@@ -461,8 +527,15 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">1. Motivation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-step">2. The First Step</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-python">3. About Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-step">2. The First Step</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the">The ‘#’</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-print-statement">3. The Print Statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-and-importing-packages">3. Python and Importing Packages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-a-python-package">Import a Python Package</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
