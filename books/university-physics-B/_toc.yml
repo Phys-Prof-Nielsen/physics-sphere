@@ -63,6 +63,7 @@ parts:
   chapters:
   - file: Module-B6/center-of-mass
   - file: Module-B6/cm-dynamics
+  - file: Module-B6/problemsB6
 
 - caption: Module B7 - Rotational Kinematics
   chapters:
