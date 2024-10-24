@@ -553,6 +553,38 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;X-coordinate of Center of Mass: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Y-coordinate of Center of Mass: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">Y</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="c1">#-------</span>
+<span class="c1"># PART 3</span>
+<span class="c1">#-------</span>
+
+<span class="c1">#Set m1 and m2 = 1.0 kg for plotting purposes</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">m1</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="n">m2</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span> 
+<span class="n">Y</span> <span class="o">=</span> <span class="n">Y</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">subs</span><span class="o">=</span><span class="p">{</span><span class="n">m1</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="n">m2</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
+
+<span class="c1">#need to convert symbolic expression into numerical python array</span>
+<span class="kn">from</span> <span class="nn">sympy.utilities.lambdify</span> <span class="kn">import</span> <span class="n">lambdify</span>
+
+<span class="n">X_array</span> <span class="o">=</span> <span class="n">lambdify</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="s1">&#39;numpy&#39;</span><span class="p">)</span>
+<span class="n">Y_array</span> <span class="o">=</span> <span class="n">lambdify</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="s1">&#39;numpy&#39;</span><span class="p">)</span>
+
+<span class="c1">#import numerical python to create time array</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">t_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span>
+
+<span class="n">X_eval</span> <span class="o">=</span> <span class="n">X_array</span><span class="p">(</span><span class="n">t_array</span><span class="p">)</span>
+<span class="n">Y_eval</span> <span class="o">=</span> <span class="n">Y_array</span><span class="p">(</span><span class="n">t_array</span><span class="p">)</span>
+
+<span class="c1"># importing the required module for plotting  </span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_eval</span><span class="p">,</span><span class="n">Y_eval</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;CM Motion&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Does not look like a circle.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -569,6 +601,10 @@ The radius of circle 2: 2 m
 X-coordinate of Center of Mass: (4*m1*cos(2*t) + 2*m2*sin(3*t))/(m1 + m2)
 Y-coordinate of Center of Mass: (4*m1*sin(2*t) - 2*m2*cos(3*t))/(m1 + m2)
  
+</pre></div>
+</div>
+<img alt="../_images/a9ab4b4181cef12e982fd6303edbf68150f1b18df474f22cbe90a8cc1d424dc0.png" src="../_images/a9ab4b4181cef12e982fd6303edbf68150f1b18df474f22cbe90a8cc1d424dc0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Does not look like a circle.
 </pre></div>
 </div>
 </div>
