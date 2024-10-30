@@ -494,104 +494,6 @@ Tangential acceleration: 8.290313946973065 m/s²
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.2</h2>
     </header>
-<p>During a very quick stop, a car decelerates at 7.00 m/s<span class="math notranslate nohighlight">\(^2\)</span>.</p>
-<ol class="arabic simple">
-<li><p>What is the angular acceleration of its 0.280 m radius tires, assuming they do not slip on the pavement?</p></li>
-<li><p>How many revolutions do the tires make before coming to rest, given their initial angular velocity is  95.0 rad/s?</p></li>
-<li><p>How long does the car take to stop completely?</p></li>
-<li><p>What distance does the car travel in this time?</p></li>
-<li><p>What was the car’s initial velocity?</p></li>
-<li><p>Do the values obtained seem reasonable, considering that this stop happens very quickly?</p></li>
-</ol>
-<p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-problems-exercises">https://openstax.org/books/college-physics-2e/pages/10-problems-exercises</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-input tag_hide-output docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
-
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">at</span> <span class="o">=</span> <span class="o">-</span><span class="mf">7.00</span>  <span class="c1">#tangential acceleration</span>
-<span class="n">wf</span> <span class="o">=</span> <span class="mf">0.0</span>  <span class="c1">#final angular speed</span>
-<span class="n">vtf</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="c1">#final tangential speed</span>
-
-<span class="c1">#-------</span>
-<span class="c1"># Part 1</span>
-<span class="c1">#-------</span>
-<span class="n">R</span> <span class="o">=</span> <span class="mf">0.280</span>
-<span class="n">alpha</span> <span class="o">=</span> <span class="n">at</span><span class="o">/</span><span class="n">R</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Angular acceleration: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; rad/s</span><span class="se">\u00b2</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-
-<span class="c1">#-------</span>
-<span class="c1"># Part 2</span>
-<span class="c1">#-------</span>
-<span class="n">wi</span> <span class="o">=</span> <span class="mf">95.0</span>
-<span class="n">dtheta</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;dtheta&#39;</span><span class="p">)</span>
-<span class="n">eq</span> <span class="o">=</span> <span class="n">wf</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">wi</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">alpha</span><span class="o">*</span><span class="n">dtheta</span>
-<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">dtheta</span><span class="p">)</span>
-<span class="n">dtheta</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">rev</span> <span class="o">=</span> <span class="n">dtheta</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of revolutions: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">rev</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-
-<span class="c1">#-------</span>
-<span class="c1"># Part 3</span>
-<span class="c1">#-------</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">wf</span> <span class="o">-</span> <span class="n">wi</span><span class="p">)</span><span class="o">/</span><span class="n">alpha</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-
-<span class="c1">#-------</span>
-<span class="c1"># Part 4</span>
-<span class="c1">#-------</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="n">dtheta</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Linear distance traveled: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-
-<span class="c1">#-------</span>
-<span class="c1"># Part 5</span>
-<span class="c1">#-------</span>
-<span class="n">vti</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="n">wi</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Initial linear speed: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">vti</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; m/s&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Angular acceleration: -24.999999999999996 rad/s²
- 
-Number of revolutions: 57.4549344561742
- 
-Elapsed time: 3.8000000000000007 s
- 
-Linear distance traveled: 50.5400000000000 m
- 
-Initial linear speed: 26.6 m/s
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.3</h2>
-    </header>
 <p>A wheel has a constant angular acceleration of 5.0 rad/s<span class="math notranslate nohighlight">\(^2\)</span>. Starting from rest, it turns through 300 rad.</p>
 <ol class="arabic simple">
 <li><p>What is its final angular velocity?</p></li>
@@ -647,7 +549,7 @@ Elapsed time: 10.9544511501033 s
 </div>
 </details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.4</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.3</h2>
     </header>
 <p>On takeoff, the propellers on a UAV (unmanned aerial vehicle) increase their angular velocity for 3.0 s from rest at a rate of <span class="math notranslate nohighlight">\(\omega = (25.0t)~\textrm{rad/s}\)</span> where t is measured in seconds.</p>
 <ol class="arabic simple">
@@ -702,7 +604,7 @@ Angular acceleration: 25.0000000000000 rad/s²
 </div>
 </details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.5</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.4</h2>
     </header>
 <p>The angular velocity vs. time for a fan on a hovercraft is shown below.</p>
 <ol class="arabic simple">
@@ -760,16 +662,14 @@ Angular acceleration: 25.0000000000000 rad/s²
 </summary>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The angular displacement is: 167.55160819145564 rad
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 Using a derived equation of kinemetics: 167.551608191456 rad
 </pre></div>
 </div>
 </div>
 </details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.6</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.5</h2>
     </header>
 <p>The angular acceleration of a rotating rigid body is given by <span class="math notranslate nohighlight">\(\alpha = (2.0 - 3.0t)~\textrm{rad/s}^2\)</span>. If the body starts rotating from rest at t = 0 s and at <span class="math notranslate nohighlight">\(\theta_0 = 0.15~\textrm{rad}\)</span>,</p>
 <ol class="arabic simple">
@@ -843,7 +743,7 @@ Angular distance (in rad): -400.000000000000
 </div>
 </details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.7</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.6</h2>
     </header>
 <p>A fairground ride spins its occupants inside a flying saucer-shaped container. If the horizontal circular path the riders follow has an 8.00 m radius, at how many revolutions per minute are the riders subjected to a centripetal acceleration equal to that of gravity?</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/4-problems">https://openstax.org/books/university-physics-volume-1/pages/4-problems</a></p>
@@ -898,7 +798,7 @@ Angular velocity in rev/min = 10.5745255826101
 </div>
 </details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.8</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.7</h2>
     </header>
 <p>What is the ideal banking angle for a gentle turn of 1.20-km radius on a highway with a 105 km/h speed limit (about 65 mi/h), assuming everyone travels at the limit?</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/6-problems">https://openstax.org/books/university-physics-volume-1/pages/6-problems</a></p>
@@ -954,10 +854,13 @@ Angular velocity in rev/min = 10.5745255826101
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ideal banking angle in degrees: 4.13325026089175
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 </div>
 </details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.9</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.8</h2>
     </header>
 <p>If a car takes a banked curve at less than the ideal speed, friction is needed to keep it from sliding toward the inside of the curve (a problem on icy mountain roads).</p>
 <ol class="arabic simple">
@@ -1052,7 +955,7 @@ Coefficient of friction: 0.234510246558863
 </div>
 </details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.10</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.9</h2>
     </header>
 <p>A car rounds an unbanked curve of radius 65 m. If the coefficient of static friction between the road and car is 0.70, what is the maximum speed at which the car can traverse the curve without slipping?</p>
 <p>This problem is a slightly modified version from OpenStax. Access for free at <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/6-problems">https://openstax.org/books/university-physics-volume-1/pages/6-problems</a></p>
@@ -1112,7 +1015,7 @@ Coefficient of friction: 0.234510246558863
 </div>
 </details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.11</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.10</h2>
     </header>
 <p>Part of riding a bicycle involves leaning at the correct angle when making a turn, as seen below. To be stable, the force exerted by the ground must be on a line going through the center of gravity. The force on the bicycle wheel can be resolved into two perpendicular components: friction parallel to the road (this must supply the centripetal force) and the vertical normal force (which must equal the system’s weight).</p>
 <ol class="arabic simple">
@@ -1141,7 +1044,7 @@ Coefficient of friction: 0.234510246558863
 </div>
 </details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.12</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.11</h2>
     </header>
 <p>Modern roller coasters have vertical loops like the one shown here. The radius of curvature is smaller at the top than on the sides so that the downward centripetal acceleration at the top will be greater than the acceleration due to gravity, keeping the passengers pressed firmly into their seats. What is the speed of the roller coaster at the top of the loop if the radius of curvature there is 15.0 m and the downward acceleration of the car is 1.50 g?</p>
 <img src="B7-P7.12.png"  width="400"/>
@@ -1188,7 +1091,7 @@ Coefficient of friction: 0.234510246558863
 </div>
 </details>
 </div>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.13</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B7.12</h2>
     </header>
 <p>A child of mass 40.0 kg is in a roller coaster car that travels in a loop of radius 7.00 m. At point A the speed of the car is 10.0 m/s, and at point B, the speed is 10.5 m/s. Assume the child is not holding on and does not wear a seat belt.</p>
 <ol class="arabic simple">
@@ -1265,9 +1168,7 @@ Coefficient of friction: 0.234510246558863
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The normal force is: 179.028571428571 N
  
 The normal force is: 290.171631554986 N
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 The minimum speed is: 8.28673639015988 m/s
 </pre></div>
 </div>
