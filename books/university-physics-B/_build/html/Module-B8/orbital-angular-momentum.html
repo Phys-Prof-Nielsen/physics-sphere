@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>B4.2 Newton’s 2nd Law &#8212; A Competency Approach to Introductory Physics</title>
+    <title>B8.1 Orbital Angular Momentum &#8212; A Competency Approach to Introductory Physics</title>
   
   
   
@@ -63,11 +63,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B4/Newton-second-law';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-B8/orbital-angular-momentum';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="B4.3 Time-varying Force" href="Time-varying-force.html" />
-    <link rel="prev" title="B4.1 Impulse-Momentum Theorem" href="Impulse-momentum-theorem.html" />
+    <link rel="next" title="B8.x Problems" href="problemsB8.html" />
+    <link rel="prev" title="B8.1 Cross Product" href="cross-product.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -191,11 +191,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B3/problemsB3.html">B3.5 Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B4 - Linear Force</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Impulse-momentum-theorem.html">B4.1 Impulse-Momentum Theorem</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">B4.2 Newton’s 2nd Law</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Time-varying-force.html">B4.3 Time-varying Force</a></li>
-<li class="toctree-l1"><a class="reference internal" href="problemsB4.html">B4.4 Problems</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Module-B4/Impulse-momentum-theorem.html">B4.1 Impulse-Momentum Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B4/Newton-second-law.html">B4.2 Newton’s 2nd Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B4/Time-varying-force.html">B4.3 Time-varying Force</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-B4/problemsB4.html">B4.4 Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B5 - Work and Energy</span></p>
 <ul class="nav bd-sidenav">
@@ -220,10 +220,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Module-B7/problemsB7.html">B7.x Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B8 - Rotational Momentum</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Module-B8/cross-product.html">B8.1 Cross Product</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-B8/orbital-angular-momentum.html">B8.1 Orbital Angular Momentum</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Module-B8/problemsB8.html">B8.x Problems</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cross-product.html">B8.1 Cross Product</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">B8.1 Orbital Angular Momentum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problemsB8.html">B8.x Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module B9 - Rotational Force</span></p>
 <ul class="nav bd-sidenav">
@@ -291,7 +291,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/Module-B4/Newton-second-law.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/Module-B8/orbital-angular-momentum.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -340,7 +340,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Module-B4/Newton-second-law.ipynb" target="_blank"
+      <li><a href="../_sources/Module-B8/orbital-angular-momentum.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -422,7 +422,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>B4.2 Newton’s 2nd Law</h1>
+    <h1>B8.1 Orbital Angular Momentum</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -432,7 +432,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b4-2-1-derivation-of-newton-s-second-law">B4.2.1 Derivation of Newton’s Second Law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-1-1-motivation">B8.1.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-1-2-orbital-angular-momentum-of-a-point-particle">B8.1.2 Orbital Angular Momentum of a Point Particle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-1-3-orbital-angular-momemtum-for-a-rigid-object">B8.1.3 Orbital Angular Momemtum for a Rigid Object</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-angular-momentum">Orbital Angular Momentum</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -444,33 +449,177 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="b4-2-newton-s-2nd-law">
-<h1>B4.2 Newton’s 2nd Law<a class="headerlink" href="#b4-2-newton-s-2nd-law" title="Permalink to this heading">#</a></h1>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b4-2-1-derivation-of-newton-s-second-law">
-<h2>B4.2.1 Derivation of Newton’s Second Law<a class="headerlink" href="#b4-2-1-derivation-of-newton-s-second-law" title="Permalink to this heading">#</a></h2>
-<p>We are now ready to fully derive Newton’s 2nd law. Our starting point is the <strong>impulse-momentum theorem</strong>, which is the differential form of Newton’s second form. We will consider it in component form:</p>
-<div class="math notranslate nohighlight">
-\[f_{net,x}dt = dp_x\]</div>
-<p>Since the <span class="math notranslate nohighlight">\(d\)</span>’s are differentials, we can divide both sides by <span class="math notranslate nohighlight">\(dt\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[f_{net,x} = \frac{dp_x}{dt}\]</div>
-<p>Since the ratio of differentials is the same as the derivative, we have that</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="b8-1-orbital-angular-momentum">
+<h1>B8.1 Orbital Angular Momentum<a class="headerlink" href="#b8-1-orbital-angular-momentum" title="Permalink to this heading">#</a></h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="b8-1-1-motivation">
+<h2>B8.1.1 Motivation<a class="headerlink" href="#b8-1-1-motivation" title="Permalink to this heading">#</a></h2>
+<p>Rotational dynamics is inherently a lot more complicated than linear dynamics as we will see shortly. Here in Phase B, we will slowly introduce the basic of rotational dynamics through <strong>pure</strong> rotational motion about a <strong>single and fixed axis</strong>.</p>
+<p>In this procees, we will encounter two forms of rotational motions:</p>
+<ol class="arabic simple">
+<li><p>orbital motion of a particle or the center of mass of a system rotating about an axis exterior to the system.</p></li>
+<li><p>spin motion of a system rotating about its center of mass (or any interior axis).</p></li>
+</ol>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="b8-1-2-orbital-angular-momentum-of-a-point-particle">
+<h2>B8.1.2 Orbital Angular Momentum of a Point Particle<a class="headerlink" href="#b8-1-2-orbital-angular-momentum-of-a-point-particle" title="Permalink to this heading">#</a></h2>
+<p>A point particle is an object where size and shape does not play a role for the dynamics of it. By this definition it does not make sense to talk about a <strong>spinning</strong> motion of the particle. Instead, we can talk about the particle <strong>rotating</strong> or <strong>orbiting</strong> a point or axis. By the virtue of a point particle, the axis of rotation <strong>must be external</strong>.</p>
+<p>We define the <strong>orbital angular momentum</strong> as</p>
 <div class="alert alert-success">
-<p><b>Newton’s 2nd law</b><br></p>
-<p>The <b>instantaneous</b> net force is causing an <b>instantaneous</b> rate of change in the particle’s momentum:</p>
 <div class="math notranslate nohighlight">
-\[\vec{f}_{net} = \frac{d\vec{p}}{dt}\]</div>
+\[ \vec{l} = \vec{r}\times\vec{p} \]</div>
 </div>
-<p>If the mass is constant as it is for a point particle, then we have</p>
-<div class="math notranslate nohighlight">
-\[f_{net,x} = \frac{dp_x}{dt} = m\frac{dv_x}{dt}\]</div>
-<p>and the more familiar version of N2:</p>
-<div class="alert alert-success">
-<b>Newton's 2nd law</b><br>
-<div class="math notranslate nohighlight">
-\[\vec{f}_{net} = m\vec{a}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\vec{r}\)</span> is the directed line segment from a point of reference (most often the origin of the coordinate system in which case <span class="math notranslate nohighlight">\(\vec{r}\)</span> is simply the position vector) to the location of the particle, and <span class="math notranslate nohighlight">\(\vec{p}\)</span> is the linear momentum of the particle.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 1</b><br>
+<p>Consider a <span class="math notranslate nohighlight">\(0.50\)</span> kg particle traveling in a straight-line motion in the (x,y) plane with a velocity of <span class="math notranslate nohighlight">\(\vec{v} = 25.0~\hat{i}\)</span> m/s. At a given instant, the particle is at <span class="math notranslate nohighlight">\((x,y) = (5.0,3.0)\)</span> m, find the particle’s orbital angular momentum about the following points:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\((x,y,z) = (0.0, 0.0, 0.0)\)</span> m.</p></li>
+<li><p><span class="math notranslate nohighlight">\((x,y,z) = (0.0 , 3.0, 0.0)\)</span> m.</p></li>
+</ol>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">cross_product</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">v1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">v2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">v1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">v2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">v1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">v2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">v1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">v2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">v1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">v2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">v1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">v2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">vector</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mf">0.50</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">r_particle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">])</span>
+
+<span class="c1"># Part 1</span>
+<span class="n">r_pivot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">r_particle</span> <span class="o">-</span> <span class="n">r_pivot</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">v</span>
+<span class="n">l</span> <span class="o">=</span> <span class="n">cross_product</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1. The orbital angular momentum is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">l</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="c1"># Part 2</span>
+<span class="n">r_pivot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">r_particle</span> <span class="o">-</span> <span class="n">r_pivot</span>
+
+<span class="n">l</span> <span class="o">=</span> <span class="n">cross_product</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2. The orbital angular momentum is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">l</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1. The orbital angular momentum is [  0.    0.  -37.5]
+ 
+2. The orbital angular momentum is [0. 0. 0.]
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 2</b><br>
+<ol class="arabic simple">
+<li><p>Based on the previous Box, can a particle moving in straight-line motion have non-zero orbital angular momentum?</p></li>
+<li><p>Under what circumstances can the orbital angular momentum be zero for a particle moving in straight-line motion?</p></li>
+</ol>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1. Yes, as shown in part 1 above.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2. When the r-vector and p-vector are along the same line.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1. Yes, as shown in part 1 above.
+ 
+2. When the r-vector and p-vector are along the same line.
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+<section id="b8-1-3-orbital-angular-momemtum-for-a-rigid-object">
+<h2>B8.1.3 Orbital Angular Momemtum for a Rigid Object<a class="headerlink" href="#b8-1-3-orbital-angular-momemtum-for-a-rigid-object" title="Permalink to this heading">#</a></h2>
+<p>A rigid object has the complexity that it can rotate about an internal axis, say an axis through the center of mass. Rotational motion about an <strong>internal</strong> axis is referred to as the <strong>spin angular momentum</strong>. In addition to this <strong>intrinsic</strong> spinning, the object’s center of mass may also move relative to a given <strong>external</strong> axis just like a point particle, and we refer to the object’s <strong>orbital angular momentum</strong>. Spin angular momentum will be the discussion of the next section. For now, we focus on the orbital angular momentum.</p>
+<section id="orbital-angular-momentum">
+<h3>Orbital Angular Momentum<a class="headerlink" href="#orbital-angular-momentum" title="Permalink to this heading">#</a></h3>
+<p>This is defined in a similar way as for the point particle, where the point particle is replaced by the <strong>Center of Mass</strong> concept of the object:</p>
+<div class="alert alert-success">
+<div class="math notranslate nohighlight">
+\[ \vec{L}_o = \vec{R}\times\vec{P} \]</div>
+</div><hr style="height:2px;border-width:0;color:gray;background-color:gray"><div class="alert alert-warning">
+<b>Box 3</b><br>
+<p>Consider the Earth’s motiong around the Sun. What is the Earth’s <strong>orbital</strong> angular momentum as measured from the center of the Sun?</p>
+</div><div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">M_e</span> <span class="o">=</span> <span class="mf">5.972E24</span>
+<span class="n">R_e</span> <span class="o">=</span> <span class="mf">6.371E6</span>
+
+<span class="c1">#orbital</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">1.4724E11</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mi">365</span><span class="o">*</span><span class="p">(</span><span class="mi">24</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">60</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">60</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">V</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">R</span><span class="o">/</span><span class="n">T</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">M_e</span><span class="o">*</span><span class="n">V</span>
+
+<span class="c1">#R and P vectors are perpendicular and provides Lo same direction as Ls</span>
+<span class="n">Lo</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="n">P</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Orbital angular momentum is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">Lo</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Orbital angular momentum is 2.5795543223110204e+40
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -486,7 +635,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./Module-B4"
+            path: "./Module-B8"
         },
         predefinedOutput: true
     }
@@ -505,20 +654,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Impulse-momentum-theorem.html"
+       href="cross-product.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">B4.1 Impulse-Momentum Theorem</p>
+        <p class="prev-next-title">B8.1 Cross Product</p>
       </div>
     </a>
     <a class="right-next"
-       href="Time-varying-force.html"
+       href="problemsB8.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">B4.3 Time-varying Force</p>
+        <p class="prev-next-title">B8.x Problems</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -540,7 +689,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b4-2-1-derivation-of-newton-s-second-law">B4.2.1 Derivation of Newton’s Second Law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-1-1-motivation">B8.1.1 Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-1-2-orbital-angular-momentum-of-a-point-particle">B8.1.2 Orbital Angular Momentum of a Point Particle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b8-1-3-orbital-angular-momemtum-for-a-rigid-object">B8.1.3 Orbital Angular Momemtum for a Rigid Object</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-angular-momentum">Orbital Angular Momentum</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

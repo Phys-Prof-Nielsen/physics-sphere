@@ -77,8 +77,9 @@ parts:
   chapters:
   - file: Module-B8/cross-product
 #  - file: Module-B8/Moment-of-inertia
-  - file: Module-B8/Rotational-momentum-part1
-  - file: Module-B8/Rotational-momentum-part2
+#  - file: Module-B8/Rotational-momentum-part1
+#  - file: Module-B8/Rotational-momentum-part2
+  - file: Module-B8/orbital-angular-momentum
   - file: Module-B8/problemsB8
   
 - caption: Module B9 - Rotational Force
