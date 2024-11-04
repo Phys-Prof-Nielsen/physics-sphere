@@ -455,7 +455,9 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># use l = r x p = rpsin(theta)</span>
 <span class="c1"># p is the linear momentum: px = m*vx</span>
@@ -515,7 +517,9 @@ Direction: negative z-direction
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># use l = r x p</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="c1"># use l = r x p</span>
 <span class="c1"># since i x i = 0, only the product jxi = -k will remain:</span>
 <span class="c1"># l = r x p = (2.0i - 3.0j) x (5.0)(3.0i) </span>
 
@@ -561,7 +565,9 @@ Direction: +z direction
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Particle 1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="c1"># Particle 1</span>
 <span class="c1"># directed line segment is from origin to (x,y) = (0,2): CW rotation</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Particle 1: -z&#39;</span><span class="p">)</span>
 
@@ -617,7 +623,8 @@ Particle 1: zero angular momentum
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># Particle 1: negative angular momentum</span>
 <span class="c1"># directed line segment is from origin to (x,y) = (0,2): </span>
@@ -677,9 +684,44 @@ Total angular momentum: 0.9499999999999998
 </div>
 </div>
 </div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">Omega</span> <span class="o">=</span> <span class="p">(</span><span class="mf">4.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mf">0.624</span> 
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.119</span>
+<span class="n">Izz</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">Lz</span> <span class="o">=</span> <span class="n">Izz</span><span class="o">*</span><span class="n">Omega</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Spin angular momentum: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">Lz</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; kgm</span><span class="se">\u00b2</span><span class="s1">/s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Spin angular momentum: 0.14805637539259026 kgm²/s
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B8.6</h2>
     </header>
-<p>The Sun’s mass is <span class="math notranslate nohighlight">\(2.0\times 10^{30}\)</span> kg, its radius is <span class="math notranslate nohighlight">\(7.0\times 10^5\)</span> km, and it has a rotational period of approximately 28 days. If the Sun should collapse into a white dwarf of radius  <span class="math notranslate nohighlight">\(3.5\times 10^3\)</span> km, what would its period be if no mass were ejected and a sphere of uniform density can model the Sun both before and after?</p>
+<p>The Sun’s mass is <span class="math notranslate nohighlight">\(2.0\times 10^{30}\)</span> kg, its radius is <span class="math notranslate nohighlight">\(7.0\times 10^5\)</span> km, and it has a rotational period of approximately 28 days. If the Sun should collapse into a white dwarf of radius  <span class="math notranslate nohighlight">\(3.5\times 10^3\)</span> km, what would its period be if no mass were ejected and a sphere of uniform density can model the Sun both before and after? In this problem, assume the angular momentum is the same before and after the collapse.</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/11-problems">This problem is a slightly modified version from OpenStax. Access for free.</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -687,10 +729,62 @@ Total angular momentum: 0.9499999999999998
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="n">M1</span> <span class="o">=</span> <span class="mf">2.0e30</span>
+<span class="n">R1</span> <span class="o">=</span> <span class="mf">7.0e8</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="mi">28</span>
+
+<span class="n">I1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="n">M1</span><span class="o">*</span><span class="n">R1</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">M2</span> <span class="o">=</span> <span class="n">M1</span>
+<span class="n">R2</span> <span class="o">=</span> <span class="mf">3.5e6</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;T2&#39;</span><span class="p">)</span>
+
+<span class="n">I2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.5</span><span class="p">)</span><span class="o">*</span><span class="n">M2</span><span class="o">*</span><span class="n">R2</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1">#conservation of angular momentum</span>
+<span class="n">L1</span> <span class="o">=</span> <span class="n">I1</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">T1</span><span class="p">)</span>  <span class="c1">#Omega = 2*pi/T</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="n">I2</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">T2</span><span class="p">)</span>
+
+<span class="n">eq</span> <span class="o">=</span> <span class="n">L2</span> <span class="o">-</span> <span class="n">L1</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">T2</span><span class="p">)</span>
+
+<span class="n">T2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Period in days: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">T2</span><span class="p">))</span>
+
+<span class="n">T_sec</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">T2</span><span class="p">)</span><span class="o">*</span><span class="mi">3600</span> <span class="c1"># period in seconds</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Period in seconds: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">T_sec</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Period in days: 0.00437500000000000
+Period in seconds: 15.750000000000002
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B8.7</h2>
     </header>
-<p>A ride at a carnival has four spokes to which pods are attached that can hold two people. The spokes are each 15 m long and are attached to a central axis. Each spoke has mass 200.0 kg, and the pods each have mass 100.0 kg. If the ride spins at 0.2 rev/s with each pod containing two 50.0 kg children, what is the new spin rate if all the children jump off the ride? Assumen the kids can be considered as point masses.</p>
+<p>A ride at a carnival has four spokes to which pods are attached that can hold two people. The spokes are each 15 m long and are attached to a central axis. Each spoke has mass 200.0 kg, and the pods each have mass 100.0 kg. If the ride spins at 0.2 rev/s with each pod containing two 50.0 kg children, what is the new spin rate if all the children jump off the ride? Assumen the kids can be considered as point masses, and assume the angular momentum is the same before and after the kids jump off.</p>
 <p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/11-problems">This problem is a slightly modified version from OpenStax. Access for free.</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -698,6 +792,62 @@ Total angular momentum: 0.9499999999999998
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="c1">#spokes</span>
+<span class="n">Ls</span> <span class="o">=</span> <span class="mf">15.0</span>
+<span class="n">Ms</span> <span class="o">=</span> <span class="mf">200.0</span>
+
+<span class="n">Is</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">Ms</span><span class="o">*</span><span class="n">Ls</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1">#Pods</span>
+<span class="n">Mp</span> <span class="o">=</span> <span class="mf">100.0</span>
+<span class="n">Rp</span> <span class="o">=</span> <span class="mf">15.0</span>
+
+<span class="n">Ip</span> <span class="o">=</span> <span class="n">Mp</span><span class="o">*</span><span class="n">Rp</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1">#children</span>
+<span class="n">Mc</span> <span class="o">=</span> <span class="mf">50.0</span>
+<span class="n">Rc</span> <span class="o">=</span> <span class="mf">15.0</span>
+
+<span class="n">Ic</span> <span class="o">=</span> <span class="n">Mc</span><span class="o">*</span><span class="n">Rc</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">I1</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">Is</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">Ip</span> <span class="o">+</span> <span class="mi">8</span><span class="o">*</span><span class="n">Ic</span>
+<span class="n">I2</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">Is</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">Ip</span>
+
+<span class="n">Omega1</span> <span class="o">=</span> <span class="mf">0.2</span>  <span class="c1">#in rev/s</span>
+
+<span class="c1">#conservation of ang. momentum</span>
+<span class="n">Omega2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;Omega2&#39;</span><span class="p">)</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">I2</span><span class="o">*</span><span class="n">Omega2</span> <span class="o">-</span> <span class="n">I1</span><span class="o">*</span><span class="n">Omega1</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span><span class="n">Omega2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;New spin rate: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; rev/s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>New spin rate: 0.320000000000000 rev/s
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B8.8</h2>
     </header>
@@ -720,7 +870,8 @@ Total angular momentum: 0.9499999999999998
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># center to center distance Sun-Earth: 1 AU = 1.496 x 10^11 m</span>
 <span class="c1"># mass of earth: 5.972 x 10^24 kg</span>
