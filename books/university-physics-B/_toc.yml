@@ -87,7 +87,7 @@ parts:
   chapters:
   - file: Module-B9/Rotational-force-point-particle
   - file: Module-B9/Calculating-torque
- # - file: Module-B9/Rotational-force-object
+  - file: Module-B9/Rotational-force-object
   - file: Module-B9/problemsB9
 
 - caption: Module B10 - Rotational Work and Energy
