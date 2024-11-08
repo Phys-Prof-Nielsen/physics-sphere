@@ -774,6 +774,293 @@ Applied Torque: 12.0
 </div>
 </details>
 </div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B9.6</h2>
+    </header>
+<p>What hanging mass must be placed on the cord to keep the pulley from rotating (see the following figure)? The mass on the frictionless plane is 5.0 kg. The mass on the plane is connected to a cord that wraps around the pulley’s inner radius of 20.0 cm. The hanging mass is connected to a cord that wraps around the pulley’s outer radius of 30.0 cm.</p>
+<img src="P-B9.6.png" width="400">
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/10-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="c1">#this is a static problem</span>
+<span class="c1">#all linear and angular accelerations must be zero</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="n">m1</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="mf">0.20</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="mf">0.30</span>
+
+<span class="n">phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mf">30.0</span><span class="p">)</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="n">M</span><span class="p">,</span> <span class="n">ft1</span><span class="p">,</span> <span class="n">ft2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;M, ft1, ft2&#39;</span><span class="p">)</span>
+
+<span class="c1">#block on incline plane</span>
+<span class="c1">#balance forces along incline</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">ft1</span> <span class="o">-</span> <span class="n">m1</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
+ 
+<span class="c1">#pulley</span>
+<span class="c1">#balance torques</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">r2</span><span class="o">*</span><span class="n">ft2</span> <span class="o">-</span> <span class="n">r1</span><span class="o">*</span><span class="n">ft1</span>
+
+<span class="c1">#hanging mass</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">M</span><span class="o">*</span><span class="n">g</span> <span class="o">-</span> <span class="n">ft2</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">),(</span><span class="n">M</span><span class="p">,</span> <span class="n">ft1</span><span class="p">,</span> <span class="n">ft2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mass: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">M</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; kg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mass: 1.66666666666667 kg
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B9.7</h2>
+    </header>
+<p>The cart shown below moves across the table top as the block falls. What is the acceleration of the cart? Neglect friction and assume the following data: <span class="math notranslate nohighlight">\(m_1 = 2.0\)</span> kg, <span class="math notranslate nohighlight">\(m_2 = 4.0\)</span> kg, <span class="math notranslate nohighlight">\(I = 0.4\)</span> kgm<span class="math notranslate nohighlight">\(^2\)</span>, <span class="math notranslate nohighlight">\(r = 0.20\)</span> m.</p>
+<img src="P-B9.7.png" width="400">
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/10-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="c1">#Application of N2</span>
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="n">m1</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="mf">4.0</span>
+<span class="n">I</span> <span class="o">=</span> <span class="mf">0.4</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">0.20</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">ft1</span><span class="p">,</span> <span class="n">ft2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;a1,a2,alpha,ft1,ft2&#39;</span><span class="p">)</span>
+
+<span class="c1">#cart</span>
+<span class="c1">#horizontal N2</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">m2</span><span class="o">*</span><span class="n">a2</span> <span class="o">-</span> <span class="n">ft2</span>
+
+<span class="c1">#pulley</span>
+<span class="c1"># + CW</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">I</span><span class="o">*</span><span class="n">alpha</span> <span class="o">-</span> <span class="n">r</span><span class="o">*</span><span class="n">ft1</span> <span class="o">+</span> <span class="n">r</span><span class="o">*</span><span class="n">ft2</span> 
+
+<span class="c1">#hanging mss</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">m1</span><span class="o">*</span><span class="n">a1</span> <span class="o">-</span> <span class="n">m1</span><span class="o">*</span><span class="n">g</span> <span class="o">+</span> <span class="n">ft1</span>
+
+<span class="c1">#equation of constraint leads to same accelerations for the two masses</span>
+<span class="n">eq4</span> <span class="o">=</span> <span class="n">a2</span> <span class="o">-</span> <span class="n">a1</span>
+
+<span class="c1">#no slip</span>
+<span class="n">eq5</span> <span class="o">=</span> <span class="n">a1</span> <span class="o">-</span> <span class="n">r</span><span class="o">*</span><span class="n">alpha</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">,</span><span class="n">eq4</span><span class="p">,</span><span class="n">eq5</span><span class="p">),(</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">ft1</span><span class="p">,</span> <span class="n">ft2</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acceleration: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">a2</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; m/s</span><span class="se">\u00b2</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acceleration: 1.22625000000000 m/s²
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B9.8</h2>
+    </header>
+<p>A uniform 40.0 kg scaffold of length 6.0 m is supported by two light cables, as shown below. An 80.0 kg painter stands 1.0 m from the left end of the scaffold, and his painting equipment is 1.5 m from the right end. If the tension in the left cable is twice that in the right cable, find the tensions in the cables and the mass of the equipment.</p>
+<img src="P-B9.8.png" width="400">
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/12-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="c1">#static problem</span>
+
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="n">ms</span> <span class="o">=</span> <span class="mf">40.0</span>
+<span class="n">mp</span> <span class="o">=</span> <span class="mf">80.0</span>
+
+<span class="n">L</span> <span class="o">=</span> <span class="mf">6.0</span>
+
+<span class="c1">#let origin be at the left point of the scaffold</span>
+<span class="n">rp</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">re</span> <span class="o">=</span> <span class="n">L</span> <span class="o">-</span> <span class="mf">1.5</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="n">ft1</span><span class="p">,</span> <span class="n">ft2</span><span class="p">,</span> <span class="n">me</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;ft1,ft2,me&#39;</span><span class="p">)</span>
+
+<span class="c1">#no horizontal forces</span>
+
+<span class="c1">#vertical forces must balance</span>
+<span class="n">fgs</span> <span class="o">=</span> <span class="n">ms</span><span class="o">*</span><span class="n">g</span>
+<span class="n">fgp</span> <span class="o">=</span> <span class="n">mp</span><span class="o">*</span><span class="n">g</span>
+<span class="n">fge</span> <span class="o">=</span> <span class="n">me</span><span class="o">*</span><span class="n">g</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">ft1</span> <span class="o">+</span> <span class="n">ft2</span> <span class="o">-</span><span class="n">fgs</span> <span class="o">-</span> <span class="n">fgp</span> <span class="o">-</span> <span class="n">fge</span>
+
+<span class="c1">#torques about origin must balance</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">L</span><span class="o">*</span><span class="n">ft2</span> <span class="o">-</span> <span class="n">rp</span><span class="o">*</span><span class="n">fgp</span> <span class="o">-</span> <span class="p">(</span><span class="n">L</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">fgs</span> <span class="o">-</span> <span class="n">re</span><span class="o">*</span><span class="n">fge</span>
+
+<span class="c1"># info about the two tension forces: rigth tension twice of left tension</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">ft1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">ft2</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">),(</span><span class="n">ft1</span><span class="p">,</span> <span class="n">ft2</span><span class="p">,</span> <span class="n">me</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mass of equipment: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">me</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; kg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mass of equipment: 16.0000000000000 kg
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"><h2>Problem B9.9</h2>
+    </header>
+<p>The uniform boom shown below weighs 700.0 N, and the object hanging from its right end weighs 400.0 N. The boom is supported by a light cable and by a hinge at the wall. Calculate the tension in the cable and the force on the hinge on the boom. Does the force on the hinge act along the boom?</p>
+<img src="P-B9.9.png" width="200">
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/12-problems">This problem is a slightly modified version from OpenStax. Access for free</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DIY Cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -f
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="n">fgb</span> <span class="o">=</span> <span class="mf">700.0</span>
+<span class="n">fgo</span> <span class="o">=</span> <span class="mf">400.0</span>
+
+<span class="n">phi1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">phi2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="c1">#unknown is the reaction force, fr, along the boom </span>
+<span class="c1">#(mixture of normal, friction, tension and what else is at the attachment)</span>
+<span class="c1">#ft is tension force</span>
+<span class="c1">#L is length of boom</span>
+<span class="n">frx</span><span class="p">,</span><span class="n">fry</span><span class="p">,</span><span class="n">ft</span><span class="p">,</span><span class="n">L</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;frx,fry,ft,L&#39;</span><span class="p">)</span>
+
+<span class="c1">#horizontal forces must balance</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">frx</span> <span class="o">-</span> <span class="n">ft</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi1</span><span class="p">)</span>
+
+<span class="c1">#vertical forces must balance</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">fry</span> <span class="o">+</span> <span class="n">ft</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi1</span><span class="p">)</span> <span class="o">-</span> <span class="n">fgb</span> <span class="o">-</span> <span class="n">fgo</span>
+
+<span class="c1">#let origin be at the attachment</span>
+<span class="c1">#torques about the origin must balance</span>
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">L</span><span class="o">*</span><span class="n">ft</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">pi</span> <span class="o">-</span> <span class="n">phi1</span> <span class="o">-</span> <span class="n">phi2</span><span class="p">)</span> <span class="o">-</span> <span class="n">L</span><span class="o">*</span><span class="n">fgo</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">phi2</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">L</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">fgb</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">phi2</span><span class="p">)</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">,</span><span class="n">eq3</span><span class="p">),(</span><span class="n">frx</span><span class="p">,</span><span class="n">fry</span><span class="p">,</span><span class="n">ft</span><span class="p">,</span><span class="n">L</span><span class="p">))</span>
+
+<span class="n">frx</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">fry</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ft</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">fr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">frx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">fry</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">fry</span><span class="o">/</span><span class="n">frx</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tension: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ft</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Reaction force: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">fr</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; N, directed at &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; degrees&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The reaction force is not along the boom.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tension: 777.627066290374 N
+ 
+Reaction force: 777.8174826072636 N, directed at 45.01402477644346 degrees
+ 
+The reaction force is not along the boom.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 
     <script type="text/x-thebe-config">
