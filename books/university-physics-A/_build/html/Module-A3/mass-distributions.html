@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>A3.2 Newton’s Law of Gravity - Mass Distributions &#8212; A Competency Approach to Introductory Physics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -75,7 +76,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="A3.3 Field Flux" href="flux.html" />
     <link rel="prev" title="A3.1 Newton’s Law of Gravity" href="newton-law-gravity.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -180,6 +181,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Module-A2/angular-momentum.html">A2.1 Angular Momentum Revisited</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-A2/translational-rotational.html">A2.2 A Note on Combined Translational and Rotational Angular Speed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-A2/torque.html">A2.3 Review Angular Force - Torque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module-A2/newton-rotational.html">A2.4 Newton’s 2nd Law - Rotational Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Module-A2/problemsA2.html">A2.x Problems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module A3 - Gravity</span></p>
@@ -458,9 +461,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="a3-2-newton-s-law-of-gravity-mass-distributions">
-<h1>A3.2 Newton’s Law of Gravity -  Mass Distributions<a class="headerlink" href="#a3-2-newton-s-law-of-gravity-mass-distributions" title="Permalink to this headline">#</a></h1>
+<h1>A3.2 Newton’s Law of Gravity -  Mass Distributions<a class="headerlink" href="#a3-2-newton-s-law-of-gravity-mass-distributions" title="Permalink to this heading">#</a></h1>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"><section id="a3-2-1-motivation">
-<h2>A3.2.1 Motivation<a class="headerlink" href="#a3-2-1-motivation" title="Permalink to this headline">#</a></h2>
+<h2>A3.2.1 Motivation<a class="headerlink" href="#a3-2-1-motivation" title="Permalink to this heading">#</a></h2>
 <p>To know the gravitaional interaction between objects, we will need to know the gravitational field <span class="math notranslate nohighlight">\(\vec{g}\)</span> at the location of an object subject to the field. In many cases, the source objects are spherical systems but there may be times where they are not. In those cases, we will need a tool to determine the gravitational field based on the given mass distribution. There are two approaches:</p>
 <ol class="arabic simple">
 <li><p>Apply the gravitional field from a point mass as obtained from Newton’s law of gravity and integrate over the distribution. This is a general approach.</p></li>
@@ -469,7 +472,7 @@ document.write(`
 <p>In this note, we will focus on approach 1.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="a3-2-2-gravitional-field-point-mass">
-<h2>A3.2.2 Gravitional Field - Point Mass<a class="headerlink" href="#a3-2-2-gravitional-field-point-mass" title="Permalink to this headline">#</a></h2>
+<h2>A3.2.2 Gravitional Field - Point Mass<a class="headerlink" href="#a3-2-2-gravitional-field-point-mass" title="Permalink to this heading">#</a></h2>
 <p>We saw in previous section that the gravitaional force between two objects were</p>
 <div class="math notranslate nohighlight">
 \[ \vec{F}_G = -\frac{GMm}{r^2}\hat{r} \]</div>
@@ -497,9 +500,9 @@ document.write(`
 </div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"></section>
 <section id="c6-2-3-solving-strategy">
-<h2>C6.2.3 Solving Strategy<a class="headerlink" href="#c6-2-3-solving-strategy" title="Permalink to this headline">#</a></h2>
+<h2>C6.2.3 Solving Strategy<a class="headerlink" href="#c6-2-3-solving-strategy" title="Permalink to this heading">#</a></h2>
 <section id="set-up">
-<h3>Set-Up<a class="headerlink" href="#set-up" title="Permalink to this headline">#</a></h3>
+<h3>Set-Up<a class="headerlink" href="#set-up" title="Permalink to this heading">#</a></h3>
 <p>There are various approaches to finding the gravitational field from a charge distribution. I am presenting one here that I prefer using.</p>
 <p>First, let is write down the infinitesimal mass (behave like a point mass) in terms of the mass density and its infinitesimal spatial size:</p>
 <p><strong>Line Charge</strong></p>
@@ -521,7 +524,7 @@ document.write(`
 </div>
 </section>
 <section id="methodology">
-<h3>Methodology<a class="headerlink" href="#methodology" title="Permalink to this headline">#</a></h3>
+<h3>Methodology<a class="headerlink" href="#methodology" title="Permalink to this heading">#</a></h3>
 <p>Below are the steps taken to obtain the gravivational field. The following sections will illustrate some examples of the approach.</p>
 <ol class="arabic simple">
 <li><p>Make a sketch. Illustrate the infinitesimal mass, its size, the point P of which we want to know the gravitational field, and positions vectors for the mass as well as the point P.</p></li>

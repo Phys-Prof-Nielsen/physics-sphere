@@ -29,6 +29,8 @@ parts:
   chapters:
   - file: Module-A2/angular-momentum
   - file: Module-A2/translational-rotational
+  - file: Module-A2/torque
+  - file: Module-A2/newton-rotational
   - file: Module-A2/problemsA2
   
 - caption: Module A3 - Gravity
